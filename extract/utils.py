@@ -5,6 +5,7 @@ from spacy.lang.de import German
 
 
 LANGUAGE = German()
+LANGUAGE.max_length = 100000000
 TOKEN_PATTERN = re.compile(r"\p{L}+\p{P}?\p{L}+")
 
 
