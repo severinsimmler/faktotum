@@ -1,1 +1,1 @@
-from extract.ontologia.model import Model
+from extract.ontologia.api import FastText

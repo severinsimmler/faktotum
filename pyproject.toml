@@ -7,9 +7,8 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-spacy = "^2.2.1"
-regex = "^2019.8.19"
 gensim = "^3.8.1"
+syntok = "^1.2.1"
 
 [tool.poetry.dev-dependencies]
 
