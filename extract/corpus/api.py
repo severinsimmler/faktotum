@@ -13,8 +13,8 @@ class Corpus:
 
     def tokens(self, **kwargs):
         for document in self.documents():
-            yield utils.tokenize(document, **kwargs)
+            yield list(utils.tokenize(document, **kwargs))
 
     def sentences(self):
         for document in self.documents():
-            yield utils.sentencize(document)
+            yield list(utils.sentencize(document))
