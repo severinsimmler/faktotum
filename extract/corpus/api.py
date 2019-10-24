@@ -12,9 +12,9 @@ class Corpus:
             yield document.read_text(encoding="utf-8")
 
     def tokens(self, **kwargs):
-        for document in self.documents:
+        for document in self.documents():
             yield utils.tokenize(document, **kwargs)
 
     def sentences(self):
-        for document in self.documents:
+        for document in self.documents():
             yield utils.sentencize(document)
