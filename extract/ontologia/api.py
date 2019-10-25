@@ -18,7 +18,7 @@ log = extract.logger(__file__)
 
 class FastText:
     def __init__(self, filepath: Path):
-        log.info("Loading fastText model...")
+        log.info("Loading pre-trained fastText model...")
         self.model = gensim.models.fasttext.load_facebook_model(filepath)
 
     def train(self, corpus: Iterable[List[str]], epochs: int = 10):
