@@ -24,7 +24,7 @@ def run():
     corpus = extract.Corpus(corpus_path)
     fasttext = extract.FastText(model_path)
 
-    tokens = corpus.tokens()
+    tokens = list(corpus.tokens())
     fasttext.train(tokens, epochs=args.epochs)
 
     now = int(time.time())
