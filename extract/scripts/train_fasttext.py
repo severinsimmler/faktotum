@@ -14,7 +14,9 @@ def run():
     parser = argparse.ArgumentParser(description="Train fastText on a custom corpus.")
     parser.add_argument("--model", help="Path to pre-trained model.", required=True)
     parser.add_argument("--corpus", help="Path to the corpus directory.", required=True)
-    parser.add_argument("--epochs", help="Number of epochs to train.", required=True)
+    parser.add_argument(
+        "--epochs", help="Number of epochs to train.", required=True, type=int
+    )
 
     args = parser.parse_args()
 
