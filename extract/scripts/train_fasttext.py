@@ -28,6 +28,6 @@ def run():
     fasttext.train(tokens, epochs=args.epochs)
 
     now = int(time.time())
-    model_path = Path(model_path.parent, f"{now}.fasttext")
+    model_path = Path(model_path.parent, f"{now}-{corpus_path.stem}.fasttext")
     log.info(f"Saving model to {model_path}...")
     fasttext.model.save(model_path)
