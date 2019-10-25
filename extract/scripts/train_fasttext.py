@@ -2,7 +2,7 @@ import argparse
 from pathlib import Path
 import time
 
-#import extract
+import extract
 
 
 log = extract.logger(__file__)
