@@ -10,6 +10,8 @@ from typing import Generator, List
 
 from extract import utils
 
+log = utils.logger(__file__)
+
 
 class Corpus:
     def __init__(self, directory: Path):
@@ -20,6 +22,7 @@ class Corpus:
     def documents(self) -> Generator[str, None, None]:
         try:
             for document in self.directory.glob("*.txt"):
+                log.debug(f"Processing {document.stem}...")
                 yield document.read_text(encoding="utf-8")
         except StopIteration:
             raise StopIteration(
