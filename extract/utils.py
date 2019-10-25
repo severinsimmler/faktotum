@@ -5,6 +5,7 @@ extract.utils
 This module provides general helper functions.
 """
 
+import logging
 from typing import Generator
 
 import syntok.segmenter
@@ -12,6 +13,12 @@ import syntok.tokenizer
 
 
 TOKENIZER = syntok.tokenizer.Tokenizer()
+
+
+def logger(name: str):
+    log = logging.getLogger(name)
+    log.setLevel(logging.INFO)
+    return log
 
 
 def tokenize(text: str) -> Generator[str, None, None]:
