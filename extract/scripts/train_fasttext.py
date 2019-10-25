@@ -9,11 +9,15 @@ log = extract.logger(__file__)
 
 
 def run():
-    log.info("👋 Hi, you are about to train fastText on your corpus.")
+    log.info("👋 Hi, you are about to train a fastText model.")
     parser = argparse.ArgumentParser(description="Train fastText on a custom corpus.")
-    parser.add_argument("--model", help="Path to the pre-trained fastText model.")
-    parser.add_argument("--corpus", help="Path to the corpus directory.")
-    parser.add_argument("--epochs", help="Number of epochs to train the model.")
+    parser.add_argument(
+        "--model", help="Path to the pre-trained fastText model.", required=True
+    )
+    parser.add_argument("--corpus", help="Path to the corpus directory.", required=True)
+    parser.add_argument(
+        "--epochs", help="Number of epochs to train the model.", required=True
+    )
 
     args = parser.parse_args()
 
