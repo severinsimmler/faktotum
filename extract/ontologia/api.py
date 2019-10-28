@@ -17,10 +17,10 @@ log = extract.logger(__file__)
 
 
 class FastText:
-    def __init__(self, filepath: Optional[Path] = None):
-        if filepath:
+    def __init__(self, pretrained_model: Optional[Path] = None):
+        if pretrained_model:
             self.pretrained = True
-            if filepath.suffix == ".bin":
+            if pretrained_model.suffix == ".bin":
                 log.info("Loading pre-trained Facebook fastText model...")
                 self.model = gensim.models.fasttext.load_facebook_model(filepath)
             else:
@@ -34,6 +34,15 @@ class FastText:
             )
 
     def train(self, corpus: Iterable[List[str]], epochs: int = 10):
+        """Train the model.
+
+        Parameters
+        ----------
+        corpus
+            The tokenized corpus.
+        epochs
+            The number of epochs to train.
+        """
         if self.pretrained:
             log.info("Updating vocabulary...")
             self.model.build_vocab(corpus, update=True)
@@ -47,4 +56,13 @@ class FastText:
         log.info("Training was successful!")
 
     def most_similar(self, token: str, n: int = 10) -> List[str]:
+        """Get the most similar words.
+
+        Paramters
+        ---------
+        token
+            The token to get similar words to.
+        n
+            The number of most similar words.
+        """
         return [token[0] for token in self.model.wv.most_similar([token], topn=n)]

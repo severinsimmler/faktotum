@@ -2,13 +2,14 @@
 extract.corpus.api
 ~~~~~~~~~~~~~~~~~~
 
-This module implements the high-level API for corpus processing.
+This module implements the high-level API to process text corpora.
 """
 
 from pathlib import Path
 from typing import Generator, List
 
 from extract import utils
+
 
 log = utils.logger(__file__)
 
@@ -20,6 +21,7 @@ class Corpus:
             raise OSError(f"The directory {self.directory} does not exist.")
 
     def documents(self) -> Generator[str, None, None]:
+        """Documents as plain strings."""
         try:
             for document in self.directory.glob("*.txt"):
                 log.debug(f"Processing {document.stem}...")
@@ -30,9 +32,11 @@ class Corpus:
             )
 
     def tokens(self, **kwargs) -> Generator[List[str], None, None]:
+        """Documents as tokens."""
         for document in self.documents():
             yield list(utils.tokenize(document, **kwargs))
 
     def sentences(self) -> Generator[List[str], None, None]:
+        """Documents as sentences."""
         for document in self.documents():
             yield list(utils.sentencize(document))

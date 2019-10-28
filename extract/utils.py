@@ -16,6 +16,17 @@ TOKENIZER = syntok.tokenizer.Tokenizer()
 
 
 def logger(name: str):
+    """Generic tokenizer.
+
+    Parameters
+    ----------
+    name
+        Name of the logger.
+
+    Returns
+    -------
+    A logger with log level INFO.
+    """
     log = logging.getLogger(name)
     log.setLevel(logging.INFO)
     return log

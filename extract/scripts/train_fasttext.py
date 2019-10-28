@@ -21,18 +21,21 @@ def run():
     corpus_path = Path(args.corpus).resolve()
     if args.model:
         model_path = Path(args.model).resolve()
+        if model_path.suffix == ".bin":
+            mode = "facebook-pretrained"
+        else:
+            mode = "custom-pretrained"
     else:
         model_path = None
+        mode = "plain"
 
     corpus = extract.Corpus(corpus_path)
     fasttext = extract.FastText(model_path)
 
+    log.info("Tokenizing corpus...")
     tokens = list(corpus.tokens())
     fasttext.train(tokens, epochs=args.epochs)
 
-    now = int(time.time())
-    model_path = str(
-        Path(model_path.parent, f"{now}-fasttext-{corpus_path.stem}.model")
-    )
+    model_path = str(Path(corpus_path.parent, f"{corpus_path.stem}-{mode}.fasttext"))
     log.info(f"Saving model to {model_path}...")
     fasttext.model.save(model_path)
