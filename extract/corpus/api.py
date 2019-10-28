@@ -36,7 +36,8 @@ class Corpus:
         for document in self.documents():
             yield list(utils.tokenize(document, **kwargs))
 
-    def sentences(self) -> Generator[List[str], None, None]:
+    def sentences(self, tokenize: bool = True) -> Generator[List[str], None, None]:
         """Documents as sentences."""
         for document in self.documents():
-            yield list(utils.sentencize(document))
+            for sentence in utils.sentencize(document, tokenize=tokenize):
+                yield sentence
