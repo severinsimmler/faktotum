@@ -45,7 +45,9 @@ def tokenize(text: str) -> Generator[str, None, None]:
     One token at a time.
     """
     for token in TOKENIZER.tokenize(text):
-        yield token.value.strip()
+        text = token.value.strip()
+        if text:
+            yield text
 
 
 def sentencize(text: str, tokenize: bool = False) -> Generator[str, None, None]:
@@ -65,6 +67,6 @@ def sentencize(text: str, tokenize: bool = False) -> Generator[str, None, None]:
     for paragraph in syntok.segmenter.process(text):
         for sentence in paragraph:
             if tokenize:
-                yield [token.value.strip() for token in sentence]
+                yield [token.value.strip() for token in sentence if token.value.strip()]
             else:
                 yield TOKENIZER.to_text(sentence).strip()
