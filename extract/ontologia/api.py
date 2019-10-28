@@ -22,10 +22,12 @@ class FastText:
             self.pretrained = True
             if pretrained_model.suffix == ".bin":
                 log.info("Loading pre-trained Facebook fastText model...")
-                self.model = gensim.models.fasttext.load_facebook_model(pretrained_model)
+                self.model = gensim.models.fasttext.load_facebook_model(
+                    str(pretrained_model)
+                )
             else:
                 log.info("Loading pre-trained custom fastText model...")
-                self.model = gensim.models.fasttext.FastText.load(pretrained_model)
+                self.model = gensim.models.fasttext.FastText.load(str(pretrained_model))
         else:
             log.info("Constructing plain fastText model...")
             self.pretrained = False
