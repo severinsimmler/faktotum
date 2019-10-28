@@ -50,7 +50,7 @@ class FastText:
             self.model.build_vocab(corpus, update=True)
         else:
             log.info("Building vocabulary...")
-            self.modle.build_vocab(corpus)
+            self.model.build_vocab(corpus)
         log.info("Start training...")
         self.model.train(
             sentences=corpus, total_examples=self.model.corpus_count, epochs=epochs
