@@ -34,7 +34,7 @@ def run():
 
     log.info("Tokenizing corpus...")
     tokens = list(corpus.tokens())
-    log.info(f"Training with {len(tokens)} sentences.")
+    log.info(f"Training with {len(tokens)} documents.")
     fasttext.train(tokens, epochs=args.epochs)
 
     model_path = str(Path(corpus_path.parent, f"{corpus_path.stem}-{mode}.fasttext"))

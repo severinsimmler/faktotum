@@ -11,6 +11,7 @@ gensim = "^3.8.1"
 syntok = "^1.2.1"
 
 [tool.poetry.dev-dependencies]
+jupyterlab = "^1.2.0"
 
 [tool.poetry.scripts]
 fasttext-training = "extract:scripts.train_fasttext.run"
