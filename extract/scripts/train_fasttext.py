@@ -14,6 +14,7 @@ def run():
     parser = argparse.ArgumentParser(description="Train fastText on a custom corpus.")
     parser.add_argument("--model", help="Path to pre-trained model.", required=False)
     parser.add_argument("--corpus", help="Path to the corpus directory.", required=True)
+    parser.add_argument("--window", help="Sliding window.", required=False, type=int)
     parser.add_argument("--epochs", help="Epochs to train.", required=True, type=int)
 
     args = parser.parse_args()
@@ -30,7 +31,7 @@ def run():
         mode = "plain"
 
     corpus = extract.Corpus(corpus_path)
-    fasttext = extract.FastText(model_path)
+    fasttext = extract.FastText(pretrained_model=model_path, window=args.window)
 
     log.info("Tokenizing corpus...")
     tokens = list(corpus.tokens())
