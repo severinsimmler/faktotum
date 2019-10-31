@@ -16,6 +16,7 @@ jupyterlab = "^1.2.0"
 [tool.poetry.scripts]
 fasttext-training = "extract:scripts.train_fasttext.run"
 tokenizer = "extract:scripts.tokenize_corpus.run"
+corpus-filter = "extract:scripts.filter_corpus.run"
 
 [build-system]
 requires = ["poetry>=0.12"]
