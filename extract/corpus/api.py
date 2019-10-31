@@ -6,7 +6,7 @@ This module implements the high-level API to process text corpora.
 """
 
 from pathlib import Path
-from typing import Generator, List
+from typing import Generator, List, Union
 
 from extract import utils
 
@@ -15,17 +15,20 @@ log = utils.logger(__file__)
 
 
 class Corpus:
-    def __init__(self, directory: Path):
-        self.directory = directory.resolve()
+    def __init__(self, directory: Union[Path, str]):
+        self.directory = Path(directory).resolve()
         if not self.directory.exists():
             raise OSError(f"The directory {self.directory} does not exist.")
 
-    def documents(self) -> Generator[str, None, None]:
+    def documents(self, yield_name: bool = False) -> Generator[str, None, None]:
         """Documents as plain strings."""
         try:
             for document in self.directory.glob("*.txt"):
                 log.debug(f"Processing {document.stem}...")
-                yield document.read_text(encoding="utf-8")
+                if yield_name:
+                    yield document.name, document.read_text(encoding="utf-8")
+                else:
+                    yield document.read_text(encoding="utf-8")
         except StopIteration:
             raise StopIteration(
                 f"The directory {self.directory} does not contain any .txt files."
