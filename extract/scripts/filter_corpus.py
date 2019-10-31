@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import time
 
+import extract
 from extract import ontologia
 
 
