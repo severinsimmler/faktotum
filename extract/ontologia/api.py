@@ -6,7 +6,7 @@ This module implements the high-level API to define an ontology.
 """
 
 from pathlib import Path
-from typing import Iterable, List, Optional
+from typing import Iterable, List, Optional, Union
 
 import gensim
 
@@ -17,10 +17,20 @@ log = extract.logger(__file__)
 
 
 class FastText:
-    def __init__(self, pretrained_model: Optional[Path] = None):
+    def __init__(
+        self,
+        pretrained_model: Optional[Union[Path, str]] = None,
+        size: int = 300,
+        window: int = 5,
+        sg: int = 0,
+        negative: int = 10,
+        min_n: int = 5,
+        max_n: int = 5,
+        seed: int = 23,
+    ):
         if pretrained_model:
             self.pretrained = True
-            if pretrained_model.suffix == ".bin":
+            if Path(pretrained_model).suffix == ".bin":
                 log.info("Loading pre-trained Facebook fastText model...")
                 self.model = gensim.models.fasttext.load_facebook_model(
                     str(pretrained_model)
@@ -32,7 +42,13 @@ class FastText:
             log.info("Constructing plain fastText model...")
             self.pretrained = False
             self.model = gensim.models.fasttext.FastText(
-                size=300, window=5, sg=0, negative=10, min_n=5, max_n=5, seed=23
+                size=size,
+                window=window,
+                sg=sg,
+                negative=negative,
+                min_n=min_n,
+                max_n=max_n,
+                seed=seed,
             )
 
     def train(self, corpus: Iterable[List[str]], epochs: int = 10):
@@ -57,7 +73,7 @@ class FastText:
         )
         log.info("Training was successful!")
 
-    def most_similar(self, token: str, n: int = 10) -> List[str]:
+    def most_similar(self, token: Union[str, List[str]], n: int = 10) -> List[str]:
         """Get the most similar words.
 
         Paramters
@@ -67,4 +83,4 @@ class FastText:
         n
             The number of most similar words.
         """
-        return [token[0] for token in self.model.wv.most_similar([token], topn=n)]
+        return [token[0] for token in self.model.wv.most_similar(token, topn=n)]
