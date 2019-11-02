@@ -16,6 +16,11 @@ import extract
 log = extract.logger(__file__)
 
 
+class TfIdf:
+    
+
+
+
 class FastText:
     def __init__(
         self,

@@ -22,13 +22,13 @@ def run():
     corpus_path = Path(args.corpus).resolve()
     words_path = Path(args.words).resolve()
 
-    log.info("Loading tokenized corpus from file...")
-    with corpus_path.open("r", encoding="utf-8") as corpus:
-        corpus = json.load(corpus)
-
     log.info("Loading words...")
     with words_path.open("r", encoding="utf-8") as words:
         words = json.load(words)
+
+    log.info("Loading tokenized corpus from file...")
+    with corpus_path.open("r", encoding="utf-8") as corpus:
+        corpus = json.load(corpus)
 
     log.info(f"Filtering corpus with {len(words)} words...")
     filtered_corpus = json.dumps(

@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "extract"
 version = "0.1.0"
-description = ""
+description = "Extracting information from unstructured text."
 authors = ["Severin Simmler <severin.simmler@stud-mail.uni-wuerzburg.de>"]
 license = "MIT"
 
