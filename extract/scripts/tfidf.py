@@ -10,7 +10,9 @@ logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=loggi
 
 
 def run():
-    logging.info("👋 Hi, you are about to calculate a TF-IDF weighted co-occurence matrix.")
+    logging.info(
+        "👋 Hi, you are about to calculate a TF-IDF weighted co-occurence matrix."
+    )
 
     parser = argparse.ArgumentParser(description="Train fastText on a custom corpus.")
     parser.add_argument("--corpus", help="Path to the corpus directory.", required=True)

@@ -30,15 +30,13 @@ def tokenize(text: str) -> Generator[str, None, None]:
         yield str(token).strip()
 
 
-def sentencize(text: str, tokenize: bool = False) -> Generator[str, None, None]:
+def sentencize(text: str) -> Generator[str, None, None]:
     """Split text into sentences.
 
     Parameters
     ----------
     text
-        The text to split into tokens.
-    tokenize
-        If True, return tokens, otherwise the full string.
+        The text to split into tokenized sentences.
 
     Yields
     ------

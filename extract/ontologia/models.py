@@ -40,6 +40,7 @@ class TfIdf:
         vocabulary_filepath.write_text(json.dumps(self.index2token), encoding="utf-8")
 
     def fit_weights(self, corpus: Corpus):
+        logging.info("Fitting TF-IDF weights...")
         texts = (document.content for document in corpus)
         self.vectorizer.fit_transform(texts)
         self.weights = dict(
@@ -47,22 +48,24 @@ class TfIdf:
         )
 
     def build_matrix(self, corpus: Corpus, window: int = 5):
+        logging.info("Bulding co-occurence matrix...")
         row = list()
         column = list()
         values = list()
         for document in corpus:
+            logging.debug(f"Processing {document.name}...")
             tokens = list(document.tokens)
             for position, token in enumerate(tokens):
                 i = self.token2index.setdefault(token, len(self.token2index))
                 start = max(0, position - window)
                 end = min(len(tokens), position + window + 1)
-                for position2 in range(start, end):
-                    if position2 == position:
+                for position_ in range(start, end):
+                    if position_ == position:
                         continue
                     j = self.token2index.setdefault(
-                        tokens[position2], len(self.token2index)
+                        tokens[position_], len(self.token2index)
                     )
-                    values.append(self.weights.get(tokens[position2], 1))
+                    values.append(self.weights.get(tokens[position_], 1))
                     row.append(i)
                     column.append(j)
         self.index2token = {
