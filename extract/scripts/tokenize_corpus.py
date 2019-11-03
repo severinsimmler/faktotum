@@ -23,7 +23,7 @@ def run():
     corpus_path = Path(args.corpus).resolve()
 
     logging.info("Tokenizing corpus...")
-    documents = json.dumps(extract.sentencize_corpus(corpus_path), ensure_ascii=False)
+    documents = json.dumps(extract.sentencize_corpus(corpus_path))
 
     export = Path(corpus_path.parent, f"{corpus_path.stem}.json")
     logging.info(f"Exporting corpus to {export}...")

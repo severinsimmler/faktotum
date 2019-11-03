@@ -13,11 +13,13 @@ def run():
     logging.info("👋 Hi, you are about to train a word2vec model.")
 
     parser = argparse.ArgumentParser(description="Train word2vec on a custom corpus.")
-    parser.add_argument("--model", help="Path to pre-trained model.", required=False)
+    parser.add_argument(
+        "--model", help="Path to pre-trained model (optional).", required=False
+    )
     parser.add_argument("--corpus", help="Path to the corpus directory.", required=True)
     parser.add_argument(
         "--algorithm",
-        help="Algorithm to use, either 'cbow' or 'skipgram'",
+        help="Algorithm to use, either 'cbow' or 'skipgram'.",
         default="cbow",
     )
     parser.add_argument("--epochs", help="Epochs to train.", required=True, type=int)

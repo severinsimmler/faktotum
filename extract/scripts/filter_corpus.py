@@ -34,9 +34,7 @@ def run():
         corpus = json.load(corpus)
 
     logging.info(f"Filtering corpus with {len(words)} words...")
-    filtered_corpus = json.dumps(
-        dict(ontologia.filter_corpus(corpus, words)), ensure_ascii=False
-    )
+    filtered_corpus = json.dumps(dict(ontologia.filter_corpus(corpus, words)))
 
     output = Path(corpus_path.parent, f"{corpus_path.stem}-filtered.json")
     output.write_text(filtered_corpus, encoding="utf-8")
