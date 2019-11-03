@@ -22,7 +22,9 @@ from extract.corpus.core import Corpus
 
 class TfIdf:
     token2index = dict()
-    vectorizer = sklearn.feature_extraction.text.TfidfVectorizer(tokenizer=utils.tokenize, lowercase=False)
+    vectorizer = sklearn.feature_extraction.text.TfidfVectorizer(
+        tokenizer=utils.tokenize, lowercase=False
+    )
 
     @classmethod
     def load(cls, matrix: Path, similarities: Path, vocabulary: Path):
@@ -35,7 +37,9 @@ class TfIdf:
 
     def save(self, filepath: Path):
         matrix_filepath = Path(filepath.parent, f"{filepath.stem}-coo.npz")
-        similarities_filepath = Path(filepath.parent, f"{filepath.stem}-similarities.npz")
+        similarities_filepath = Path(
+            filepath.parent, f"{filepath.stem}-similarities.npz"
+        )
         vocabulary_filepath = Path(filepath.parent, f"{filepath.stem}.json")
         vocabulary_filepath.write_text(json.dumps(self.index2token), encoding="utf-8")
         scipy.sparse.save_npz(matrix_filepath, self.matrix)
