@@ -21,7 +21,6 @@ def run():
     args = parser.parse_args()
 
     corpus_path = Path(args.corpus).resolve()
-    corpus = Corpus(corpus_path)
 
     logging.info("Tokenizing corpus...")
     documents = json.dumps(extract.sentencize_corpus(corpus_path), ensure_ascii=False)
