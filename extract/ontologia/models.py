@@ -22,22 +22,24 @@ from extract.corpus.core import Corpus
 
 class TfIdf:
     token2index = dict()
-    vectorizer = sklearn.feature_extraction.text.TfidfVectorizer(
-        lowercase=False, tokenizer=utils.tokenize
-    )
+    vectorizer = sklearn.feature_extraction.text.TfidfVectorizer(tokenizer=utils.tokenize, lowercase=False)
 
     @classmethod
-    def load(cls, matrix: Path, vocabulary: Path):
+    def load(cls, matrix: Path, similarities: Path, vocabulary: Path):
         tfidf = cls()
         tfidf.matrix = scipy.sparse.load_npz(matrix)
+        tfidf.similarities = scipy.sparse.load_npz(similarities)
         tfidf.index2token = json.loads(vocabulary.read_text(encoding="utf-8"))
+        tfidf.token2index = {token: index for index, token in tfidf.index2token.items()}
         return tfidf
 
-    def save(self, directory: Path):
-        matrix_filepath = Path(directory, "coo-matrix.npz")
-        vocabulary_filepath = Path(directory, "vocabulary.json")
-        scipy.sparse.save_npz(matrix_filepath, self.matrix)
+    def save(self, filepath: Path):
+        matrix_filepath = Path(filepath.parent, f"{filepath.stem}-coo.npz")
+        similarities_filepath = Path(filepath.parent, f"{filepath.stem}-similarities.npz")
+        vocabulary_filepath = Path(filepath.parent, f"{filepath.stem}.json")
         vocabulary_filepath.write_text(json.dumps(self.index2token), encoding="utf-8")
+        scipy.sparse.save_npz(matrix_filepath, self.matrix)
+        scipy.sparse.save_npz(similarities_filepath, self.similarities)
 
     def fit_weights(self, corpus: Corpus):
         logging.info("Fitting TF-IDF weights...")
@@ -72,13 +74,13 @@ class TfIdf:
             str(index): token for token, index in self.token2index.items()
         }
         self.matrix = scipy.sparse.coo_matrix((values, (row, column))).tocsr()
-
-    def most_similar(self, token: str, n: int) -> List[str]:
-        similarities = sklearn.metrics.pairwise.cosine_similarity(
+        self.similarities = sklearn.metrics.pairwise.cosine_similarity(
             self.matrix, dense_output=False
         )
+
+    def most_similar(self, token: str, n: int = 10) -> List[str]:
         token_index = self.token2index[token]
-        column = similarities[token_index].todense()
+        column = self.similarities[int(token_index)].todense()
         column = (-column).argsort()
         return [self.index2token[str(index)] for index in column[:, 1 : n + 1].A1]
 
@@ -124,6 +126,7 @@ class Word2Vec(Embedding):
         logging.info("Loading pre-trained word2vec model...")
         # source: https://devmount.github.io/GermanWordEmbeddings/
         word2vec.model = gensim.models.word2vec.Word2Vec.load(str(filepath))
+        return word2vec
 
 
 class FastText(Embedding):
