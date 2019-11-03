@@ -26,5 +26,5 @@ def run():
     corpus = extract.load_corpus(corpus_path)
     tfidf.build_matrix(corpus)
 
-    log.info(f"Saving model to {corpus_path.parent}...")
+    logging.info(f"Saving model to {corpus_path.parent}...")
     tfidf.save(corpus_path.parent)

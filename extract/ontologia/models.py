@@ -118,7 +118,7 @@ class Word2Vec(Embedding):
     def load(cls, filepath: Path):
         word2vec = cls()
         word2vec.pretrained = True
-        log.info("Loading pre-trained word2vec model...")
+        logging.info("Loading pre-trained word2vec model...")
         # source: https://devmount.github.io/GermanWordEmbeddings/
         word2vec.model = gensim.models.word2vec.Word2Vec.load(str(filepath))
 
@@ -150,9 +150,9 @@ class FastText(Embedding):
         fasttext = cls()
         fasttext.pretrained = True
         if filepath.suffix == ".bin":
-            log.info("Loading pre-trained Facebook fastText model...")
+            logging.info("Loading pre-trained Facebook fastText model...")
             # source: https://fasttext.cc/docs/en/crawl-vectors.html
             fasttext.model = gensim.models.fasttext.load_facebook_model(str(filepath))
         else:
-            log.info("Loading pre-trained custom fastText model...")
+            logging.info("Loading pre-trained custom fastText model...")
             fasttext.model = gensim.models.fasttext.FastText.load(str(filepath))
