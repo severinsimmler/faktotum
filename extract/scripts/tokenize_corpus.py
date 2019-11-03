@@ -1,13 +1,17 @@
 import argparse
 import json
+import logging
 from pathlib import Path
 import time
 
 import extract
 
 
+logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
+
+
 def run():
-    log.info("👋 Hi, you are about to sentencize, tokenize and export a corpus.")
+    logging.info("👋 Hi, you are about to sentencize, tokenize and export a corpus.")
 
     parser = argparse.ArgumentParser(
         description="Sentencize, tokenize and export a text corpus as JSON."
@@ -19,9 +23,9 @@ def run():
     corpus_path = Path(args.corpus).resolve()
     corpus = Corpus(corpus_path)
 
-    log.info("Tokenizing corpus...")
+    logging.info("Tokenizing corpus...")
     documents = json.dumps(extract.sentencize_corpus(corpus_path), ensure_ascii=False)
 
     export = Path(corpus_path.parent, f"{corpus_path.stem}.json")
-    log.info(f"Exporting corpus to {export}...")
+    logging.info(f"Exporting corpus to {export}...")
     export.write_text(documents, encoding="utf-8")

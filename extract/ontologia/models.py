@@ -65,7 +65,9 @@ class TfIdf:
                     values.append(self.weights.get(tokens[position2], 1))
                     row.append(i)
                     column.append(j)
-        self.index2token = {str(index): token for token, index in self.token2index.items()}
+        self.index2token = {
+            str(index): token for token, index in self.token2index.items()
+        }
         self.matrix = scipy.sparse.coo_matrix((values, (row, column))).tocsr()
 
     def most_similar(self, token: str, n: int) -> List[str]:
@@ -76,7 +78,6 @@ class TfIdf:
         column = similarities[token_index].todense()
         column = (-column).argsort()
         return [self.index2token[str(index)] for index in column[:, 1 : n + 1].A1]
-
 
 
 class Embedding(abc.ABC):
@@ -107,16 +108,19 @@ class Embedding(abc.ABC):
 
 
 class Word2Vec(Embedding):
-    def __init__(self, size: int = 300, window: int = 5, seed: int = 23):
+    def __init__(self, size: int = 300, sg: int = 0, window: int = 5, seed: int = 23):
         self.pretrained = False
-        self.model = gensim.models.word2vec.Word2Vec(size=size, window=window, seed=seed)
+        self.model = gensim.models.word2vec.Word2Vec(
+            size=size, sg=sg, window=window, seed=seed
+        )
 
     @classmethod
     def load(cls, filepath: Path):
-        fasttext = cls.__init__()
-        fasttext.pretrained = True
-        log.info("Loading pre-trained custom fastText model...")
-        fasttext.model = gensim.models.word2vec.Word2Vec.load(str(filepath))
+        word2vec = cls()
+        word2vec.pretrained = True
+        log.info("Loading pre-trained word2vec model...")
+        # source: https://devmount.github.io/GermanWordEmbeddings/
+        word2vec.model = gensim.models.word2vec.Word2Vec.load(str(filepath))
 
 
 class FastText(Embedding):
@@ -143,10 +147,11 @@ class FastText(Embedding):
 
     @classmethod
     def load(cls, filepath: Path):
-        fasttext = cls.__init__()
+        fasttext = cls()
         fasttext.pretrained = True
         if filepath.suffix == ".bin":
             log.info("Loading pre-trained Facebook fastText model...")
+            # source: https://fasttext.cc/docs/en/crawl-vectors.html
             fasttext.model = gensim.models.fasttext.load_facebook_model(str(filepath))
         else:
             log.info("Loading pre-trained custom fastText model...")

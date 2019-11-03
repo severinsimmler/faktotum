@@ -16,7 +16,9 @@ scipy = "^1.3.1"
 jupyterlab = "^1.2.0"
 
 [tool.poetry.scripts]
-fasttext-training = "extract:scripts.train_fasttext.run"
+fasttext-training = "extract:scripts.fasttext.run"
+word2vec-training = "extract:scripts.word2vec.run"
+tfidf = "extract:scripts.tfidf.run"
 tokenizer = "extract:scripts.tokenize_corpus.run"
 corpus-filter = "extract:scripts.filter_corpus.run"
 
