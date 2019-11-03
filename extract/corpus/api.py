@@ -2,45 +2,62 @@
 extract.corpus.api
 ~~~~~~~~~~~~~~~~~~
 
-This module implements the high-level API to process text corpora.
+This module implements the high-level API for text processing.
 """
 
 from pathlib import Path
-from typing import Generator, List, Union
+from typing import Union
 
 from extract import utils
+from extract.corpus.core import Document, Corpus
 
 
-log = utils.logger(__file__)
+def load_corpus(directory: Union[str, Path]) -> Corpus:
+    """Loads a text corpus.
+
+    Parameters
+    ----------
+    directory
+        Path to the corpus directory.
+
+    Returns
+    -------
+    A new :class:`Corpus` object.
+    """
+    documents = (Document(path) for path in Path(directory).glob("*.txt"))
+    return Corpus(documents)
 
 
-class Corpus:
-    def __init__(self, directory: Union[Path, str]):
-        self.directory = Path(directory).resolve()
-        if not self.directory.exists():
-            raise OSError(f"The directory {self.directory} does not exist.")
+def tokenize_corpus(directory):
+    """Loads and tokenizes a text corpus.
 
-    def documents(self, yield_name: bool = False) -> Generator[str, None, None]:
-        """Documents as plain strings."""
-        try:
-            for document in self.directory.glob("*.txt"):
-                log.debug(f"Processing {document.stem}...")
-                if yield_name:
-                    yield document.name, document.read_text(encoding="utf-8")
-                else:
-                    yield document.read_text(encoding="utf-8")
-        except StopIteration:
-            raise StopIteration(
-                f"The directory {self.directory} does not contain any .txt files."
-            )
+    Parameters
+    ----------
+    directory
+        Path to the corpus directory.
 
-    def tokens(self, **kwargs) -> Generator[List[str], None, None]:
-        """Documents as tokens."""
-        for document in self.documents():
-            yield list(utils.tokenize(document, **kwargs))
+    Returns
+    -------
+    A list of dictionaries with document name and tokens.
+    """
+    return [
+        {document.name: list(document.tokens)} for document in load_corpus(directory)
+    ]
 
-    def sentences(self, tokenize: bool = True) -> Generator[List[str], None, None]:
-        """Documents as sentences."""
-        for document in self.documents():
-            for sentence in utils.sentencize(document, tokenize=tokenize):
-                yield sentence
+
+def sentencize_corpus(directory):
+    """Loads, sentencizes and tokenizes a text corpus.
+
+    Parameters
+    ----------
+    directory
+        Path to the corpus directory.
+
+    Returns
+    -------
+    A list of dictionaries with document name and tokens split by sentences.
+    """
+    return [
+        {document.name: [list(sentence.tokens) for sentence in document.sentences]}
+        for document in load_corpus(directory)
+    ]

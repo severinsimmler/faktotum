@@ -5,9 +5,6 @@ import time
 import extract
 
 
-log = extract.logger(__file__)
-
-
 def run():
     log.info("👋 Hi, you are about to train a fastText model.")
 

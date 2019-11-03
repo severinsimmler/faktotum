@@ -7,9 +7,6 @@ import extract
 from extract import ontologia
 
 
-log = extract.logger(__file__)
-
-
 def run():
     log.info("👋 Hi, you are about to filter a corpus for annotation.")
 
