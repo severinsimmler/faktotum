@@ -5,7 +5,9 @@ extract.ontologia.api
 This module implements models to help defining an ontology.
 """
 
+import abc
 from pathlib import Path
+import logging
 import json
 from typing import Iterable, List, Optional, Union
 
@@ -76,7 +78,52 @@ class TfIdf:
         return [self.index2token[str(index)] for index in column[:, 1 : n + 1].A1]
 
 
-class FastText:
+
+class Embedding(abc.ABC):
+    @abc.abstractclassmethod
+    def load(self):
+        pass
+
+    def save(self, filepath: Path):
+        self.model.save(str(filepath))
+
+    def train(self, corpus: Corpus, epochs: int = 10):
+        logging.info("Tokenizing corpus...")
+        tokens = [list(document.tokens) for document in corpus]
+        if self.pretrained:
+            logging.info("Updating vocabulary...")
+            self.model.build_vocab(tokens, update=True)
+        else:
+            logging.info("Building vocabulary...")
+            self.model.build_vocab(tokens)
+        logging.info("Start training...")
+        self.model.train(
+            sentences=corpus, total_examples=self.model.corpus_count, epochs=epochs
+        )
+        logging.info("Training was successful!")
+
+    def most_similar(self, token: str, n: int = 10) -> List[str]:
+        return [token[0] for token in self.model.wv.most_similar(token, topn=n)]
+
+
+class Word2Vec(Embedding):
+    def __init__(self, size: int = 300, window: int = 5, seed: int = 23):
+        self.pretrained = False
+        self.model = gensim.models.word2vec.Word2Vec(size=size, window=window, seed=seed)
+
+    @classmethod
+    def load(cls, filepath: Path):
+        fasttext = cls.__init__()
+        fasttext.pretrained = True
+        if filepath.suffix == ".bin":
+            log.info("Loading pre-trained Facebook fastText model...")
+            fasttext.model = gensim.models.fasttext.load_facebook_model(str(filepath))
+        else:
+            log.info("Loading pre-trained custom fastText model...")
+            fasttext.model = gensim.models.fasttext.FastText.load(str(filepath))
+
+
+class FastText(Embedding):
     def __init__(
         self,
         size: int = 300,
@@ -108,24 +155,3 @@ class FastText:
         else:
             log.info("Loading pre-trained custom fastText model...")
             fasttext.model = gensim.models.fasttext.FastText.load(str(filepath))
-
-    def save(self, filepath: Path):
-        self.model.save(str(filepath))
-
-    def train(self, corpus: Corpus, epochs: int = 10):
-        logging.info("Tokenizing corpus...")
-        tokens = [list(document.tokens) for document in corpus]
-        if self.pretrained:
-            logging.info("Updating vocabulary...")
-            self.model.build_vocab(corpus, update=True)
-        else:
-            logging.info("Building vocabulary...")
-            self.model.build_vocab(corpus)
-        logging.info("Start training...")
-        self.model.train(
-            sentences=corpus, total_examples=self.model.corpus_count, epochs=epochs
-        )
-        logging.info("Training was successful!")
-
-    def most_similar(self, token: str, n: int = 10) -> List[str]:
-        return [token[0] for token in self.model.wv.most_similar(token, topn=n)]
