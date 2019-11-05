@@ -107,7 +107,7 @@ class Embedding(abc.ABC):
             self.model.build_vocab(tokens)
         logging.info("Start training...")
         self.model.train(
-            sentences=corpus, total_examples=self.model.corpus_count, epochs=epochs
+            sentences=tokens, total_examples=self.model.corpus_count, epochs=epochs
         )
         logging.info("Training was successful!")
 
