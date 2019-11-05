@@ -1,8 +1,8 @@
 #!/bin/sh
 
 echo "#### Running TF-IDF..."
-poetry run tfidf -- --corpus /mnt/data/users/simmler/corpora/plaintext/gutenberg
-poetry run tfidf -- --corpus /mnt/data/users/simmler/corpora/plaintext/pressemitteilungen
+#poetry run tfidf -- --corpus /mnt/data/users/simmler/corpora/plaintext/gutenberg
+#poetry run tfidf -- --corpus /mnt/data/users/simmler/corpora/plaintext/pressemitteilungen
 
 echo "#### Running word2vec..."
 poetry run word2vec -- --corpus /mnt/data/users/simmler/corpora/plaintext/gutenberg --epochs 100 --algorithm cbow
