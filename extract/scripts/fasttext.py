@@ -36,7 +36,16 @@ def run():
         fasttext = extract.FastText(sg=sg)
         mode = f"plain-{args.algorithm}"
 
-    corpus = extract.load_corpus(corpus_path)
+    if corpus_path.is_dir():
+        corpus = extract.load_corpus(corpus_path)
+        tokens = [list(document.tokens) for document in corpus]
+    else:
+        corpus = json.loads(corpus_path.read_text(encoding="utf-8"))
+        tokens = [
+            [token for sentence in document for token in sentence]
+            for document in corpus.values()
+        ]
+
     fasttext.train(corpus, epochs=args.epochs)
 
     model_path = Path(corpus_path.parent, f"{corpus_path.stem}-{mode}.fasttext")

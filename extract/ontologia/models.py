@@ -97,9 +97,8 @@ class Embedding(abc.ABC):
     def save(self, filepath: Path):
         self.model.save(str(filepath))
 
-    def train(self, corpus: Corpus, epochs: int = 10):
+    def train(self, tokens: List[List[str]], epochs: int = 10):
         logging.info("Tokenizing corpus...")
-        tokens = [list(document.tokens) for document in corpus]
         if self.pretrained:
             logging.info("Updating vocabulary...")
             self.model.build_vocab(tokens, update=True)

@@ -36,8 +36,17 @@ def run():
         word2vec = extract.Word2Vec(sg=sg)
         mode = f"plain-{args.algorithm}"
 
-    corpus = extract.load_corpus(corpus_path)
-    word2vec.train(corpus, epochs=args.epochs)
+    if corpus_path.is_dir():
+        corpus = extract.load_corpus(corpus_path)
+        tokens = [list(document.tokens) for document in corpus]
+    else:
+        corpus = json.loads(corpus_path.read_text(encoding="utf-8"))
+        tokens = [
+            [token for sentence in document for token in sentence]
+            for document in corpus.values()
+        ]
+
+    word2vec.train(tokens, epochs=args.epochs)
 
     model_path = Path(corpus_path.parent, f"{corpus_path.stem}-{mode}.word2vec")
     logging.info(f"Saving model to {model_path}...")
