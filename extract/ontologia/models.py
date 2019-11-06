@@ -97,17 +97,20 @@ class Embedding(abc.ABC):
     def save(self, filepath: Path):
         self.model.save(str(filepath))
 
-    def train(self, tokens: List[List[str]], epochs: int = 10):
+    def train(self, corpus: Union[Corpus, List[List[str]]], epochs: int = 10):
+        if isinstance(corpus, Corpus):
+            corpus = [list(document.tokens) for document in corpus]
+
         logging.info("Tokenizing corpus...")
         if self.pretrained:
             logging.info("Updating vocabulary...")
-            self.model.build_vocab(tokens, update=True)
+            self.model.build_vocab(corpus, update=True)
         else:
             logging.info("Building vocabulary...")
-            self.model.build_vocab(tokens)
+            self.model.build_vocab(corpus)
         logging.info("Start training...")
         self.model.train(
-            sentences=tokens, total_examples=self.model.corpus_count, epochs=epochs
+            sentences=corpus, total_examples=self.model.corpus_count, epochs=epochs
         )
         logging.info("Training was successful!")
 
