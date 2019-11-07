@@ -7,7 +7,6 @@ from pathlib import Path
 import time
 
 import sklearn.decomposition
-import numpy as np
 
 import extract
 from extract import exploration
@@ -43,7 +42,7 @@ def run():
     )
 
     pca = sklearn.decomposition.PCA(n_components=2, random_state=23)
-    reduced = pca.fit(model.document_topics).transform(model.document_topics)
+    reduced = pca.fit(model.document_topics).transform(model.document_topics.values)
     pc1, pc2 = pca.explained_variance_ratio_
     logging.info(f"PC1: {round(pc1 * 100)}%")
     logging.info(f"PC2: {round(pc2 * 100)}%")

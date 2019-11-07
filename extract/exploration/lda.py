@@ -9,7 +9,7 @@ import collections
 import json
 from pathlib import Path
 
-import numpy as np
+import pandas as pd
 
 
 class TopicModel:
@@ -28,8 +28,8 @@ class TopicModel:
             )
         else:
             self.stopwords = None
-        self.topics = np.array(list(self._read_topics()))
-        self.document_topics = np.array(list(self._read_document_topics()))
+        self.topics = pd.DataFrame(list(self._read_topics()))
+        self.document_topics = pd.DataFrame(dict(self._read_document_topics()))
 
     def _read_topics(self):
         with self.topics_filepath.open("r", encoding="utf-8") as topics_file:
@@ -51,19 +51,29 @@ class TopicModel:
             "r", encoding="utf-8"
         ) as document_topics_file:
             for line in document_topics_file:
-                yield [float(score) for score in line.split("\t")[2:]]
+                name = Path(line.split("\t")[1]).name
+                yield name, [float(score) for score in line.split("\t")[2:]]
 
     def most_frequent_words(self, n: int = 500):
         mfw = collections.Counter()
-        for topic in self.topics:
-            mfw.update(topic)
+        for _, topic in self.topics.iterrows():
+            mfw.update(list(topic))
         return mfw.most_common(n)
 
-    def dominant_topics(self):
-        for document in self.document_topics:
-            yield document.argmax()
+    def dominant_topics(self, n: int = 1, return_name: bool = False):
+        for document, values in self.document_topics.iteritems():
+            if return_name:
+                dominant = list(values.sort_values(ascending=False)[:n].index)
+                if n == 1:
+                    dominant = dominant[0]
+                yield document, dominant
+            else:
+                dominant = list(values.sort_values(ascending=False)[:n].index)
+                if n == 1:
+                    dominant = dominant[0]
+                yield dominant
 
     def count_dominant_topics(self):
         counter = collections.Counter()
-        for dominant_topic in self.dominant_topics:
+        for dominant_topic in self.dominant_topics():
             counter.update([dominant_topic])

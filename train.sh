@@ -2,6 +2,17 @@
 
 
 echo "#### Running TF-IDF..."
-poetry run tfidf -- --corpus /mnt/data/users/simmler/corpora/plaintext/gutenberg
-poetry run tfidf -- --corpus /mnt/data/users/simmler/corpora/plaintext/pressemitteilungen
+poetry run clustering -- --topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.topics --document-topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.doctopics --algorithm tsne
 
+poetry run clustering -- --topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.topics --document-topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.doctopics --algorithm tsne
+
+poetry run clustering -- --topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.topics --document-topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.doctopics --algorithm tsne
+
+
+poetry run clustering -- --topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.topics --document-topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.doctopics --algorithm tsne
+
+
+poetry run clustering -- --topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.topics --document-topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.doctopics --algorithm tsne
+
+
+poetry run clustering -- --topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.topics --document-topics /mnt/data/users/simmler/models/topic-models/gutenberg/gutenberg-10.doctopics --algorithm tsne
