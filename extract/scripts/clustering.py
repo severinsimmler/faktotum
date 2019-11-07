@@ -50,11 +50,11 @@ def run():
 
     if args.algorithm.lower() in {"tsne", "t-sne"}:
         embedded = sklearn.manifold.TSNE(n_components=2, random_state=23).fit_transform(
-            model.document_topics.values
+            model.document_topics.T.values
         )
     elif args.algorithm.lower() in {"umap"}:
         embedded = umap.UMAP(random_state=23).fit_transform(
-            model.document_topics.values
+            model.document_topics.T.values
         )
     else:
         raise ValueError(f"The algorithmm {args.algorithm} is not supported.")
