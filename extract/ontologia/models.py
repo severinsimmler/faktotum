@@ -77,6 +77,10 @@ class TfIdf:
         self.index2token = {
             str(index): token for token, index in self.token2index.items()
         }
+        logging.info("Success! Constructing sparse matrix...")
+        row = np.array(row)
+        column = np.array(column)
+        values = np.array(values)
         self.matrix = scipy.sparse.coo_matrix((values, (row, column))).tocsr()
         self.similarities = sklearn.metrics.pairwise.cosine_similarity(
             self.matrix, dense_output=False
