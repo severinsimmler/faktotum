@@ -12,6 +12,7 @@ syntok = "^1.2.1"
 scipy = "^1.3.1"
 numpy = "1.16.1"
 scikit-learn = "^0.21.3"
+umap-learn = "^0.3.10"
 
 [tool.poetry.scripts]
 fasttext = "extract:scripts.fasttext.run"
@@ -19,6 +20,8 @@ word2vec = "extract:scripts.word2vec.run"
 tfidf = "extract:scripts.tfidf.run"
 tokenizer = "extract:scripts.tokenize_corpus.run"
 corpus-filter = "extract:scripts.filter_corpus.run"
+clustering = "extract:scripts.clustering.run"
+decomposition = "extract:scripts.decomposition.run"
 
 
 [tool.poetry.dev-dependencies]

@@ -6,8 +6,7 @@ import logging
 from pathlib import Path
 import time
 
-import sklearn.manifold
-import umap
+import sklearn.decomposition
 import numpy as np
 
 import extract
@@ -18,7 +17,7 @@ logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=loggi
 
 
 def run():
-    logging.info("👋 Hi, you are about to cluster some documents.")
+    logging.info("👋 Hi, you are about to decomposite some documents.")
 
     parser = argparse.ArgumentParser(description="Filter sentences of a corpus.")
     parser.add_argument(
@@ -34,11 +33,6 @@ def run():
         help="Path to the stopwords list.",
         required=True,
     )
-    parser.add_argument(
-        "--algorithm",
-        help="Algorithm to use, either 'tsne' or 'umap'.",
-        required=True,
-    )
 
 
     args = parser.parse_args()
@@ -49,18 +43,17 @@ def run():
 
     model = exploration.TopicModel(topics_filepath, document_topics_filepath, stopwords_filepath)
 
-    if args.algorithm.lower() in {"tsne", "t-sne"}:
-        embedded = sklearn.manifold.TSNE(n_components=2, random_state=23).fit_transform(model.document_topics)
-    elif args.algorithm.lower() in {"umap"}:
-        embedded = umap.UMAP(random_state=23).fit_transform(model.document_topics)
-    else:
-        raise ValueError(f"The algorithmm {args.algorithm} is not supported.")
+    pca = sklearn.decomposition.PCA(n_components=2, random_state=23)
+    reduced = pca.fit(model.document_topics).transform(model.document_topics)
+    pc1, pc2 = pca.explained_variance_ratio_
+    logging.info(f"PC1: {round(pc1 * 100)}%")
+    logging.info(f"PC2: {round(pc2 * 100)}%")
 
-    output = Path(topics_filepath.parent, f"{topics_filepath.stem}-{args.algorithm}.csv")
+    output = Path(topics_filepath.parent, f"{topics_filepath.stem}-pca.csv")
     logging.info(f"Writing CSV file to {output.parent}...")
     with output.open("w", encoding="utf-8", newline='') as f:
         writer = csv.writer(f, delimiter=',',quoting=csv.QUOTE_MINIMAL)
         writer.writerow(["Dim1", "Dim2", "Topic"])
-        for document, dominant_topic in zip(embedded, model.dominant_topics()):
+        for document, dominant_topic in zip(reduced, model.dominant_topics()):
             words = ", ".join(model.topics[dominant_topic][:3])
             writer.writerow([document[0], document[1], words])
