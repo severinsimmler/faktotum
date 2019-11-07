@@ -12,6 +12,7 @@ import json
 from typing import Iterable, List, Optional, Union
 
 import gensim
+import numpy as np
 import sklearn.metrics
 import sklearn.feature_extraction
 import scipy
