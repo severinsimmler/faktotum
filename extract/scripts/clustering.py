@@ -30,37 +30,42 @@ def run():
         required=True,
     )
     parser.add_argument(
-        "--stopwords",
-        help="Path to the stopwords list.",
-        required=True,
+        "--stopwords", help="Path to the stopwords list.", required=False
     )
     parser.add_argument(
-        "--algorithm",
-        help="Algorithm to use, either 'tsne' or 'umap'.",
-        required=True,
+        "--algorithm", help="Algorithm to use, either 'tsne' or 'umap'.", required=True
     )
-
 
     args = parser.parse_args()
 
     topics_filepath = Path(args.topics).resolve()
     document_topics_filepath = Path(args.document_topics).resolve()
-    stopwords_filepath = Path(args.stopwords).resolve()
+    if args.stopwords:
+        stopwords_filepath = Path(args.stopwords).resolve()
+    else:
+        stopwords_filepath = None
 
-    model = exploration.TopicModel(topics_filepath, document_topics_filepath, stopwords_filepath)
+    model = exploration.TopicModel(
+        topics_filepath, document_topics_filepath, stopwords_filepath
+    )
 
     if args.algorithm.lower() in {"tsne", "t-sne"}:
-        embedded = sklearn.manifold.TSNE(n_components=2, random_state=23).fit_transform(model.document_topics)
+        embedded = sklearn.manifold.TSNE(n_components=2, random_state=23).fit_transform(
+            model.document_topics
+        )
     elif args.algorithm.lower() in {"umap"}:
         embedded = umap.UMAP(random_state=23).fit_transform(model.document_topics)
     else:
         raise ValueError(f"The algorithmm {args.algorithm} is not supported.")
 
-    output = Path(topics_filepath.parent, f"{topics_filepath.stem}-{args.algorithm}.csv")
+    output = Path(
+        topics_filepath.parent, f"{topics_filepath.stem}-{args.algorithm}.csv"
+    )
     logging.info(f"Writing CSV file to {output.parent}...")
-    with output.open("w", encoding="utf-8", newline='') as f:
-        writer = csv.writer(f, delimiter=',',quoting=csv.QUOTE_MINIMAL)
+    with output.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f, delimiter=",", quoting=csv.QUOTE_MINIMAL)
         writer.writerow(["Dim1", "Dim2", "Topic"])
         for document, dominant_topic in zip(embedded, model.dominant_topics()):
-            words = ", ".join(model.topics[dominant_topic][:3])
-            writer.writerow([document[0], document[1], words])
+            if args.stopwords:
+                dominant_topic = ", ".join(model.topics[dominant_topic][:3])
+            writer.writerow([document[0], document[1], dominant_topic])

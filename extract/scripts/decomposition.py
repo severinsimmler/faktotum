@@ -29,11 +29,8 @@ def run():
         required=True,
     )
     parser.add_argument(
-        "--stopwords",
-        help="Path to the stopwords list.",
-        required=True,
+        "--stopwords", help="Path to the stopwords list.", required=True
     )
-
 
     args = parser.parse_args()
 
@@ -41,7 +38,9 @@ def run():
     document_topics_filepath = Path(args.document_topics).resolve()
     stopwords_filepath = Path(args.stopwords).resolve()
 
-    model = exploration.TopicModel(topics_filepath, document_topics_filepath, stopwords_filepath)
+    model = exploration.TopicModel(
+        topics_filepath, document_topics_filepath, stopwords_filepath
+    )
 
     pca = sklearn.decomposition.PCA(n_components=2, random_state=23)
     reduced = pca.fit(model.document_topics).transform(model.document_topics)
@@ -51,8 +50,8 @@ def run():
 
     output = Path(topics_filepath.parent, f"{topics_filepath.stem}-pca.csv")
     logging.info(f"Writing CSV file to {output.parent}...")
-    with output.open("w", encoding="utf-8", newline='') as f:
-        writer = csv.writer(f, delimiter=',',quoting=csv.QUOTE_MINIMAL)
+    with output.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f, delimiter=",", quoting=csv.QUOTE_MINIMAL)
         writer.writerow(["Dim1", "Dim2", "Topic"])
         for document, dominant_topic in zip(reduced, model.dominant_topics()):
             words = ", ".join(model.topics[dominant_topic][:3])
