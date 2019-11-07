@@ -19,12 +19,13 @@ def evaluate_topic_model(corpus, model):
         topics, intruder = select_topics(model, document.name)
         random.shuffle(topics)
         for i, (index, _) in enumerate(topics):
-            topic = ", ".join(model.topics[index])
+            topic = ", ".join([word for word in model.topics.iloc[index][:10] if word])
             print(f"Topic {i}:", topic)
         guess = input("\nWhich topic is the intruder? ")
         print("\n##################################################\n\n\n")
         guess = topics[int(guess)][1]
         score = calculate_topic_log_odds(intruder, guess)
+        print(score)
         scores.append(score)
     print(scores)
     return scores
@@ -43,7 +44,6 @@ def select_topics(model: TopicModel, document_name: str):
     distribution = model.document_topics.loc[:, document_name]
     top3 = distribution.sort_values(ascending=False)[:3]
     bottom3 = distribution.sort_values(ascending=False)[-3:]
-
     top3 = [(index, score) for index, score in zip(top3.index, top3)]
     bottom3 = [(index, score) for index, score in zip(bottom3.index, bottom3)]
     intruder = random.choice(bottom3)

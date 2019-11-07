@@ -68,5 +68,5 @@ def run():
         writer.writerow(["Dim1", "Dim2", "Topic"])
         for document, dominant_topic in zip(embedded, model.dominant_topics()):
             if args.stopwords:
-                dominant_topic = ", ".join(model.topics[dominant_topic][:3])
+                dominant_topic = ", ".join(model.topics.iloc[dominant_topic][:3])
             writer.writerow([document[0], document[1], dominant_topic])

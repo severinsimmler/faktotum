@@ -53,5 +53,5 @@ def run():
         writer = csv.writer(f, delimiter=",", quoting=csv.QUOTE_MINIMAL)
         writer.writerow(["Dim1", "Dim2", "Topic"])
         for document, dominant_topic in zip(reduced, model.dominant_topics()):
-            words = ", ".join(model.topics[dominant_topic][:3])
+            words = ", ".join(model.topics.iloc[dominant_topic][:3])
             writer.writerow([document[0], document[1], words])
