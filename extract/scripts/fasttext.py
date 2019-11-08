@@ -47,7 +47,7 @@ def run():
             for document in corpus.values()
         ]
 
-    fasttext.train(corpus, epochs=args.epochs)
+    fasttext.train(tokens, epochs=args.epochs)
 
     model_path = Path(corpus_path.parent, f"{corpus_path.stem}-{mode}.fasttext")
     logging.info(f"Saving model to {model_path}...")
