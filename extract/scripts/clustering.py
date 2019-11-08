@@ -7,7 +7,6 @@ from pathlib import Path
 import time
 
 import sklearn.manifold
-import umap
 
 import extract
 from extract import exploration
@@ -31,9 +30,6 @@ def run():
     parser.add_argument(
         "--stopwords", help="Path to the stopwords list.", required=False
     )
-    parser.add_argument(
-        "--algorithm", help="Algorithm to use, either 'tsne' or 'umap'.", required=True
-    )
 
     args = parser.parse_args()
 
@@ -48,16 +44,9 @@ def run():
         topics_filepath, document_topics_filepath, stopwords_filepath
     )
 
-    if args.algorithm.lower() in {"tsne", "t-sne"}:
-        embedded = sklearn.manifold.TSNE(n_components=2, random_state=23).fit_transform(
+    embedded = sklearn.manifold.TSNE(n_components=2, random_state=23, perplexity=15).fit_transform(
             model.document_topics.T.values
         )
-    elif args.algorithm.lower() in {"umap"}:
-        embedded = umap.UMAP(random_state=23).fit_transform(
-            model.document_topics.T.values
-        )
-    else:
-        raise ValueError(f"The algorithmm {args.algorithm} is not supported.")
 
     output = Path(
         topics_filepath.parent, f"{topics_filepath.stem}-{args.algorithm}.csv"
