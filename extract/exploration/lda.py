@@ -77,3 +77,4 @@ class TopicModel:
         counter = collections.Counter()
         for dominant_topic in self.dominant_topics():
             counter.update([dominant_topic])
+        return counter
