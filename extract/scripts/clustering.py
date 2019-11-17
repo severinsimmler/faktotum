@@ -36,7 +36,7 @@ def run():
 
     logging.info("Loading topic model data...")
     model = exploration.TopicModel(
-        topics_filepath, document_topics_filepath, stopwords_filepath
+        topics_filepath, document_topics_filepath
     )
 
     logging.info("Clustering with k-Means...")

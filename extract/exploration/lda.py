@@ -17,7 +17,7 @@ class TopicModel:
         self,
         topics_filepath: Path,
         document_topics_filepath: Path,
-        stopword_filepath: Path,
+        stopword_filepath: Path = None,
     ):
         self.topics_filepath = topics_filepath
         self.document_topics_filepath = document_topics_filepath
