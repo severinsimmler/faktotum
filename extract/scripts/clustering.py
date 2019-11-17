@@ -7,6 +7,7 @@ from pathlib import Path
 import time
 
 import sklearn.manifold
+import sklearn.cluster
 
 import extract
 from extract import exploration
@@ -27,35 +28,36 @@ def run():
         help="Path to the document-topics file produced by MALLET.",
         required=True,
     )
-    parser.add_argument(
-        "--stopwords", help="Path to the stopwords list.", required=False
-    )
 
     args = parser.parse_args()
 
     topics_filepath = Path(args.topics).resolve()
     document_topics_filepath = Path(args.document_topics).resolve()
-    if args.stopwords:
-        stopwords_filepath = Path(args.stopwords).resolve()
-    else:
-        stopwords_filepath = None
 
+    logging.info("Loading topic model data...")
     model = exploration.TopicModel(
         topics_filepath, document_topics_filepath, stopwords_filepath
     )
 
-    embedded = sklearn.manifold.TSNE(n_components=2, random_state=23, perplexity=15).fit_transform(
-            model.document_topics.T.values
-        )
+    logging.info("Clustering with k-Means...")
+    k = sklearn.cluster.KMeans(n_clusters=10, n_jobs=-1, random_state=23)
+    k.fit(model.document_topics.T.values)
+    clusters = k.labels_
 
-    output = Path(
-        topics_filepath.parent, f"{topics_filepath.stem}-{args.algorithm}.csv"
-    )
+    logging.info("Dimension reduction...")
+    embedded = sklearn.manifold.TSNE(
+        n_components=2, random_state=23, perplexity=15
+    ).fit_transform(model.document_topics.T.values)
+
+    output = Path(topics_filepath.parent, f"{topics_filepath.stem}-2-dim.csv")
     logging.info(f"Writing CSV file to {output.parent}...")
     with output.open("w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f, delimiter=",", quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(["Dim1", "Dim2", "Topic"])
-        for document, dominant_topic in zip(embedded, model.dominant_topics()):
-            if args.stopwords:
-                dominant_topic = ", ".join(model.topics.iloc[dominant_topic][:3])
-            writer.writerow([document[0], document[1], dominant_topic])
+        writer.writerow(["Dim1", "Dim2", "Cluster"])
+        for document, cluster in zip(embedded, clusters):
+            writer.writerow([document[0], document[1], cluster])
+
+    output = Path(topics_filepath.parent, f"{topics_filepath.stem}-centers.csv")
+    logging.info(f"Writing JSON file to {output.parent}...")
+    with output.open("w", encoding="utf-8") as f:
+        f.write(json.dumps(k.cluster_centers_.tolist(), indent=2))
