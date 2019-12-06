@@ -6,7 +6,6 @@ import logging
 from pathlib import Path
 import time
 
-import sklearn.manifold
 import sklearn.cluster
 
 import extract
@@ -44,12 +43,7 @@ def run():
     k.fit(model.document_topics.T.values)
     clusters = k.labels_
 
-    logging.info("Dimension reduction...")
-    embedded = sklearn.manifold.TSNE(
-        n_components=2, random_state=23, perplexity=15
-    ).fit_transform(model.document_topics.T.values)
-
-    output = Path(topics_filepath.parent, f"{topics_filepath.stem}-2-dim.csv")
+    output = Path(topics_filepath.parent, f"{topics_filepath.stem}-clusters.csv")
     logging.info(f"Writing CSV file to {output.parent}...")
     with output.open("w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f, delimiter=",", quoting=csv.QUOTE_MINIMAL)
