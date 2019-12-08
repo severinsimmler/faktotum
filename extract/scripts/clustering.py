@@ -34,9 +34,7 @@ def run():
     document_topics_filepath = Path(args.document_topics).resolve()
 
     logging.info("Loading topic model data...")
-    model = exploration.TopicModel(
-        topics_filepath, document_topics_filepath
-    )
+    model = exploration.TopicModel(topics_filepath, document_topics_filepath)
 
     logging.info("Clustering with k-Means...")
     k = sklearn.cluster.KMeans(n_clusters=10, n_jobs=-1, random_state=23)

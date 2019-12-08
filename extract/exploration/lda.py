@@ -28,21 +28,25 @@ class TopicModel:
             )
         else:
             self.stopwords = None
-        self.topics = pd.DataFrame(list(self._read_topics()))
+        self.topics = pd.DataFrame(
+            list(self._read_topics()),
+            columns=["dirichlet"] + [f"word{i}" for i in range(20)],
+        )
         self.document_topics = pd.DataFrame(dict(self._read_document_topics()))
 
     def _read_topics(self):
         with self.topics_filepath.open("r", encoding="utf-8") as topics_file:
             for line in topics_file:
+                dirichlet = line.split("\t")[1]
                 sequence = line.split("\t")[2]
                 if self.stopwords:
-                    yield [
+                    yield [dirichlet] + [
                         token.strip()
                         for token in sequence.split(" ")
                         if token not in self.stopwords and token.strip()
                     ][:20]
                 else:
-                    yield [
+                    yield [dirichlet] + [
                         token.strip() for token in sequence.split(" ") if token.strip()
                     ][:20]
 
