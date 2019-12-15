@@ -38,9 +38,9 @@ def run():
             if not all(t["label"] == "O" for t in tagged_sentence):
                 document[idx] = tagged_sentence
             for span in sentence.get_spans("ner"):
-                span = " ".join([token.text for token in span.tokens])
-                if span not in entities:
-                    entities[span] = {"id": len(entities), "class": span.tag.value}
+                span_ = " ".join([token.text for token in span.tokens])
+                if span_ not in entities:
+                    entities[span_] = {"id": len(entities), "class": span.tag.value}
         if document:
             tagged_corpus[name] = document
             break
