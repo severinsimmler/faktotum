@@ -22,6 +22,7 @@ tokenizer = "extract:scripts.tokenize_corpus.run"
 corpus-filter = "extract:scripts.filter_corpus.run"
 clustering = "extract:scripts.clustering.run"
 decomposition = "extract:scripts.decomposition.run"
+ner = "extract:scripts.ner.run"
 
 [tool.poetry.dev-dependencies]
 jupyterlab = "^1.2.3"
