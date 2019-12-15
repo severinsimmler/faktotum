@@ -25,8 +25,9 @@ def run():
 
     tagged_corpus = dict()
     entities = dict()
-    for name, sentences in corpus.items():
-        print(name)
+    progress = len(tagged_corpus)
+    for i, (name, sentences) in enumerate(corpus.items()):
+        logging.info(f"{progress - i} documents remaining...")
         document = dict()
         for idx, sentence in sentences.items():
             text = " ".join(sentence)
@@ -56,6 +57,7 @@ def run():
                             entities[span_]["occurences"][name].append(idx)
 
         if document:
+            print(entities)
             tagged_corpus[name] = document
 
     with Path(f"{corpus_path.stem}-tagged.json").open("w", encoding="utf-8") as corpus:
