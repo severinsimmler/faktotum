@@ -11,7 +11,6 @@ logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=loggi
 
 
 def run():
-
     parser = argparse.ArgumentParser(description="Filter sentences of a corpus.")
     parser.add_argument("--corpus", help="Path to the corpus JSON.", required=True)
 
