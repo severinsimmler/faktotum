@@ -40,7 +40,7 @@ def run():
             for span in sentence.get_spans("ner"):
                 span_ = " ".join([token.text for token in span.tokens])
                 if span_ not in entities:
-                    entities[span_] = {"id": len(entities), "class": span.tag.value}
+                    entities[span_] = {"id": len(entities), "class": [span.tag], "occurences": [{name: [idx]}]}
         if document:
             tagged_corpus[name] = document
             break
