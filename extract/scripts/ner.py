@@ -37,8 +37,6 @@ def run():
                 {"text": t.text, "label": t.get_tag("ner").value, "belongs_to": None}
                 for t in sentence
             ]
-            if not all(t["label"] == "O" for t in tagged_sentence):
-                document[idx] = tagged_sentence
             for span in sentence.get_spans("ner"):
                 span_ = " ".join([token.text for token in span.tokens])
                 if span_ not in entities:
@@ -55,9 +53,17 @@ def run():
                     elif name in entities[span_]["occurences"]:
                         if idx not in entities[span_]["occurences"][name]:
                             entities[span_]["occurences"][name].append(idx)
+                indicies = [token.idx for token in span.tokens]
+                for index in indices:
+                    tagged_sentence[index]["belongs_to"] = entities[span_]["id"]
+
+            if not all(t["label"] == "O" for t in tagged_sentence):
+                document[idx] = tagged_sentence
 
         if document:
             tagged_corpus[name] = document
+            print(tagged_corpus)
+            break
 
             with Path(corpus_path.parent, f"{corpus_path.stem}-tagged.json").open("w", encoding="utf-8") as corpus:
                 corpus.write(json.dumps(tagged_corpus, indent=2, ensure_ascii=False))
