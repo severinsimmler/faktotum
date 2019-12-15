@@ -59,10 +59,10 @@ def run():
         if document:
             tagged_corpus[name] = document
 
-    with Path(corpus_path.parent, f"{corpus_path.stem}-tagged.json").open("w", encoding="utf-8") as corpus:
-        corpus.write(json.dumps(tagged_corpus, indent=2, ensure_ascii=False))
+            with Path(corpus_path.parent, f"{corpus_path.stem}-tagged.json").open("w", encoding="utf-8") as corpus:
+                corpus.write(json.dumps(tagged_corpus, indent=2, ensure_ascii=False))
 
-    with Path(corpus_path.parent, f"{corpus_path.stem}-knowledge-base.json").open(
-        "w", encoding="utf-8"
-    ) as knowledge:
-        knowledge.write(json.dumps(entities, indent=2, ensure_ascii=False))
+            with Path(corpus_path.parent, f"{corpus_path.stem}-knowledge-base.json").open(
+                "w", encoding="utf-8"
+            ) as knowledge:
+                knowledge.write(json.dumps(entities, indent=2, ensure_ascii=False))
