@@ -24,6 +24,7 @@ def run():
     tagger = SequenceTagger.load("de-ner")
 
     tagged_corpus = dict()
+    entities = dict()
     for name, sentences in corpus.items():
         document = dict()
         for idx, sentence in sentences.items():
@@ -36,8 +37,14 @@ def run():
             ]
             if not all(t["label"] == "O" for t in tagged_sentence):
                 document[idx] = tagged_sentence
+            for span in sentence.get_spans("ner"):
+                span = " ".join([token.text for token in span.tokens])
+                if span not in entities:
+                    entities[span] = len(entities)
         if document:
             tagged_corpus[name] = document
+            break
 
+    print(entities)
     with Path(f"{corpus_path.stem}-tagged.json").open("w", encoding="utf-8") as corpus:
         corpus.write(json.dumps(tagged_corpus, indent=2, ensure_ascii=False))
