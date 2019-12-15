@@ -35,15 +35,10 @@ def run():
                 {"text": t.text, "label": t.get_tag("ner").value, "belongs_to": None}
                 for t in sentence
             ]
-            for token in tagged_sentence:
-                if token["label"] != "O":
-                    if token["label"].split("-")[1] not in {"PER", "ORG"}:
-                        token["label"] = "O"
             if not all(t["label"] == "O" for t in tagged_sentence):
                 document[idx] = tagged_sentence
         if document:
             tagged_corpus[name] = document
-            break
 
     with Path(f"{corpus_path.stem}-tagged.json").open("w", encoding="utf-8") as corpus:
         corpus.write(json.dumps(tagged_corpus, indent=2, ensure_ascii=False))
