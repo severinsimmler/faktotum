@@ -26,6 +26,7 @@ def run():
     tagged_corpus = dict()
     entities = dict()
     for name, sentences in corpus.items():
+        print(name)
         document = dict()
         for idx, sentence in sentences.items():
             text = " ".join(sentence)
