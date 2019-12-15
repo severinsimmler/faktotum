@@ -22,7 +22,7 @@ def run():
     with corpus_path.open("r", encoding="utf-8") as corpus:
         corpus = json.load(corpus)
 
-    tagger = SequenceTagger.load("ner-de")
+    tagger = SequenceTagger.load("de-ner")
 
     tagged_corpus = dict()
     for name, sentences in corpus.items():
