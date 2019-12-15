@@ -53,7 +53,7 @@ def run():
                     elif name in entities[span_]["occurences"]:
                         if idx not in entities[span_]["occurences"][name]:
                             entities[span_]["occurences"][name].append(idx)
-                indices = [token.idx for token in span.tokens]
+                indices = [token.idx - 1 for token in span.tokens]
                 for index in indices:
                     tagged_sentence[index]["belongs_to"] = entities[span_]["id"]
 
