@@ -25,7 +25,7 @@ def run():
 
     tagged_corpus = dict()
     entities = dict()
-    progress = len(tagged_corpus)
+    progress = len(corpus)
     for i, (name, sentences) in enumerate(corpus.items()):
         logging.info(f"{progress - i} documents remaining...")
         document = dict()
@@ -57,13 +57,12 @@ def run():
                             entities[span_]["occurences"][name].append(idx)
 
         if document:
-            print(entities)
             tagged_corpus[name] = document
 
-    with Path(f"{corpus_path.stem}-tagged.json").open("w", encoding="utf-8") as corpus:
+    with Path(corpus_path.parent, f"{corpus_path.stem}-tagged.json").open("w", encoding="utf-8") as corpus:
         corpus.write(json.dumps(tagged_corpus, indent=2, ensure_ascii=False))
 
-    with Path(f"{corpus_path.stem}-knowledge-base.json").open(
+    with Path(corpus_path.parent, f"{corpus_path.stem}-knowledge-base.json").open(
         "w", encoding="utf-8"
     ) as knowledge:
         knowledge.write(json.dumps(entities, indent=2, ensure_ascii=False))
