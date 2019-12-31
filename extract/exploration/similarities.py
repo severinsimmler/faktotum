@@ -81,12 +81,15 @@ class Embedding:
                 sentence = " ".join(sentence)
                 yield name, self.get_vector(sentence)
             except RuntimeError:
-                logging.error("Oops! Sentence too long...")
+                logging.error("Oops! Reference sentence too long...")
 
     def process_batch(self, documents: Documents):
         for name, sentence in self.build_sentences(documents):
             logging.info(f"Processing {name}...")
-            yield name, self.get_vector(sentence)
+            try:
+                yield name, self.get_vector(sentence)
+            except RuntimeError:
+                logging.error("Oops! Reference sentence too long...")
 
     def build_sentences(self, documents: Documents):
         for name, sentences in documents.items():
