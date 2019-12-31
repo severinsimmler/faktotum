@@ -89,7 +89,7 @@ class Embedding:
             try:
                 yield name, self.get_vector(sentence)
             except RuntimeError:
-                logging.error("Oops! Reference sentence too long...")
+                logging.error("Oops! Sentence too long..")
 
     def build_sentences(self, documents: Documents):
         for name, sentences in documents.items():
