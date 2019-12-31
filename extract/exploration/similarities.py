@@ -37,6 +37,7 @@ def calculate_sentence_similarities(
     ref = dict(embedding.process_reference_sentences(ref))
     batch.update(ref)
     features = pd.DataFrame(batch).T
+    features.to_csv("features.csv")
     similarities = sklearn.metrics.pairwise.cosine_similarity(features)
     return ref, pd.DataFrame(similarities, index=features.index, columns=features.index)
 
