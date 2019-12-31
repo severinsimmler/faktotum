@@ -1,5 +1,6 @@
 import random
 from pathlib import Path
+import json
 from typing import Dict, List, Union
 
 from flair.embeddings import BertEmbeddings, DocumentPoolEmbeddings, Sentence
@@ -15,21 +16,47 @@ Documents = Dict[str, List[str]]
 random.seed(23)
 
 
-def calculate_document_similarities(
-    corpus: Union[Path, str], model: Union[Path, str], n: int = 5000
+def calculate_sentence_similarities(
+    corpus: Union[Path, str],
+    model: Union[Path, str],
+    reference_sentences: List[str],
+    n: int = 5000,
 ):
     embedding = Embedding(model)
     with Path(corpus).open("r", encoding="utf-8") as file_:
         dataset = json.load(file_)
+    with Path(reference_sentences).open("r", encoding="utf-8") as file_:
+        ref = json.load(file_)
     batch = select_documents(dataset, n)
-    features = pd.DataFrame(embedding.process_batch(batch)).T
+    batch = dict(embedding.process_batch(batch))
+    ref = dict(select_reference_sentences(dataset, ref))
+    ref = dict(embedding.process_reference_sentences(ref))
+    batch.update(ref)
+    features = pd.DataFrame(batch).T
     similarities = sklearn.metrics.pairwise.cosine_similarity(features)
-    return pd.DataFrame(similarities, index=features.index, columns=features.index)
+    return ref, pd.DataFrame(similarities, index=features.index, columns=features.index)
+
+
+def select_new_sentences(matrix, ref):
+    for name in ref:
+        yield random.choice(matrix[name].sort_values()[:50].index)
 
 
 def select_documents(dataset: Dataset, n: int = 5000):
-    selection = random.sample(dataset, n)
+    selection = random.sample(list(dataset), n)
     return {name: data for name, data in dataset.items() if name in selection}
+
+
+def select_reference_sentences(
+    dataset: Dataset, reference_sentences: Dict[str, List[str]]
+):
+    i = 0
+    for name, document in dataset.items():
+        if name in reference_sentences:
+            for index, sentence in document.items():
+                if str(index) in reference_sentences[name]:
+                    yield f"REFERENCE-{i}", sentence
+                    i += 1
 
 
 class Embedding:
@@ -37,18 +64,23 @@ class Embedding:
         self._bert = BertEmbeddings(filepath)
         self.document_embeddings = DocumentPoolEmbeddings([self._bert])
 
-    def get_vector(text: str) -> np.ndarray:
+    def get_vector(self, text: str) -> np.ndarray:
         sentence = Sentence(text, use_tokenizer=False)
         self.document_embeddings.embed(sentence)
         with torch.no_grad():
             vector = sentence.get_embedding()
             return vector.numpy()
 
-    def process_batch(documents: Documents):
+    def process_reference_sentences(self, sentences: Dict[str, List[str]]):
+        for name, sentence in sentences.items():
+            sentence = " ".join(sentence)
+            yield name, self.get_vector(sentence)
+
+    def process_batch(self, documents: Documents):
         for name, sentence in self.build_sentences(documents):
             yield name, self.get_vector(sentence)
 
-    def build_sentences(documents: Documents):
+    def build_sentences(self, documents: Documents):
         for name, sentences in documents.items():
             for index, sentence in sentences.items():
                 yield f"{name}-{index}", " ".join(sentence)
