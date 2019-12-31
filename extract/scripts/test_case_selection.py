@@ -22,7 +22,9 @@ def run():
 
     args = parser.parse_args()
 
-    ref, matrix = calculate_sentence_similarities(args.corpus, args.model, args.reference_sentences, args.n)
+    ref, matrix = calculate_sentence_similarities(
+        args.corpus, args.model, args.reference_sentences, args.n
+    )
     matrix.to_csv("similarities.csv")
     new_sentences = list(set(select_new_sentences(matrix, ref)))
     with Path("new-sentences.json").open("w", encoding="utf-8") as file_:
