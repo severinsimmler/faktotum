@@ -77,8 +77,11 @@ class Embedding:
 
     def process_reference_sentences(self, sentences: Dict[str, List[str]]):
         for name, sentence in sentences.items():
-            sentence = " ".join(sentence)
-            yield name, self.get_vector(sentence)
+            try:
+                sentence = " ".join(sentence)
+                yield name, self.get_vector(sentence)
+            except RuntimeError:
+                logging.error("Oops! Sentence too long...")
 
     def process_batch(self, documents: Documents):
         for name, sentence in self.build_sentences(documents):
