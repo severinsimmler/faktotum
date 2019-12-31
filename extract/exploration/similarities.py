@@ -1,5 +1,6 @@
 import random
 from pathlib import Path
+import logging
 import json
 from typing import Dict, List, Union
 
@@ -22,11 +23,14 @@ def calculate_sentence_similarities(
     reference_sentences: List[str],
     n: int = 5000,
 ):
+    logging.info("Constructing embedding...")
     embedding = Embedding(model)
+    logging.info("Loading corpus and reference sentences...")
     with Path(corpus).open("r", encoding="utf-8") as file_:
         dataset = json.load(file_)
     with Path(reference_sentences).open("r", encoding="utf-8") as file_:
         ref = json.load(file_)
+    logging.info("Sampling documents...")
     batch = select_documents(dataset, n)
     batch = dict(embedding.process_batch(batch))
     ref = dict(select_reference_sentences(dataset, ref))
@@ -78,6 +82,7 @@ class Embedding:
 
     def process_batch(self, documents: Documents):
         for name, sentence in self.build_sentences(documents):
+            logging.info(f"Processing {name}...")
             yield name, self.get_vector(sentence)
 
     def build_sentences(self, documents: Documents):
