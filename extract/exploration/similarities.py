@@ -47,6 +47,7 @@ def select_new_sentences(matrix, ref):
 
 
 def select_documents(dataset: Dataset, n: int = 5000):
+    dataset = {name: data for name, data in dataset.items() if "en" not in name}
     selection = random.sample(list(dataset), n)
     return {name: data for name, data in dataset.items() if name in selection}
 
