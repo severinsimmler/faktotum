@@ -18,5 +18,6 @@ def run():
 
     kb = extract.knowledge.enrich_knowledge_base(args.kb)
 
-    with Path(args.kb).open("r", encoding="utf-8") as file_:
+    output = Path(Path(args.kb).parent, "kb-enriched.json")
+    with output.open("r", encoding="utf-8") as file_:
         file_.write(json.dumps(kb, indent=2, ensure_ascii=False))
