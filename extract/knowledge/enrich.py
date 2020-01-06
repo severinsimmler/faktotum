@@ -66,5 +66,8 @@ def enrich_knowledge_base(filepath: Union[str, Path]):
         else:
             results["NAME"] = values["MENTION"]
         results["URI"] = uri
+        print(results)
+        print()
+        print()
         kb[f"{values['TYPE']}_{i}"] = results
     return kb
