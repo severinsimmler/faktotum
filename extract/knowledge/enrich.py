@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import logging
 from typing import List, Generator, Union, Tuple
 
 import SPARQLWrapper
@@ -30,6 +31,7 @@ PROPERTIES = {
 
 
 def query_dbpedia(uri: str) -> List[dict]:
+    logging.info(f"Fetching data from {uri}...")
     query = f"SELECT * WHERE {{ <{uri}> ?property ?value }}"
     SPARQL.setQuery(query)
     SPARQL.setReturnFormat(SPARQLWrapper.JSON)

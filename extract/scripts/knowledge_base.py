@@ -9,10 +9,10 @@ logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=loggi
 
 
 def run():
-    logging.info("👋 Hi")
+    logging.info("👋 Hi, enriching your knowledge base with DBpedia.")
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--kb", help="nice", required=True)
+    parser.add_argument("--kb", required=True)
 
     args = parser.parse_args()
 
