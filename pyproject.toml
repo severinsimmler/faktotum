@@ -14,6 +14,7 @@ numpy = "1.16.1"
 scikit-learn = "0.21.3"
 pandas = "0.25.3"
 flair = "0.4.4"
+SPARQLWrapper = "1.8.5"
 
 [tool.poetry.scripts]
 fasttext = "extract:scripts.fasttext.run"
@@ -25,6 +26,7 @@ clustering = "extract:scripts.clustering.run"
 decomposition = "extract:scripts.decomposition.run"
 ner = "extract:scripts.ner.run"
 test-case-selection = "extract:scripts.test_case_selection.run"
+enrich = "extract:scripts.knowledge_base.run"
 
 [tool.poetry.dev-dependencies]
 jupyterlab = "^1.2.3"

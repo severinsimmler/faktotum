@@ -5,3 +5,4 @@ from extract.scripts import decomposition
 from extract.scripts import clustering
 from extract.scripts import ner
 from extract.scripts import test_case_selection
+from extract.scripts import knowledge_base
