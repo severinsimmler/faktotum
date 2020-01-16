@@ -1,5 +1,7 @@
 from typing import Dict, Generator, Tuple, List
 import logging
+from pathlib import Path
+
 
 class KnowledgeBase:
     def __init__(self, humans, organizations, positions):
@@ -14,14 +16,19 @@ class KnowledgeBase:
             self.employed_humans = dict(self._select_employed_humans(humans))
 
     def export(self, directory):
-        with Path(directory, "positions.json").open("w", encoding="utf-8") as file_:
-            json.dump(self.positions, file_, ensure_ascii=False)
-        with Path(directory, "employed_humans.json").open(
-            "w", encoding="utf-8"
-        ) as file_:
-            json.dump(self.employed_humans, file_, ensure_ascii=False)
-        with Path(directory, "organizations.json").open("w", encoding="utf-8") as file_:
-            json.dump(self.organizations, file_, ensure_ascii=False)
+        if hasattr(self, "positions"):
+            with Path(directory, "positions.json").open("w", encoding="utf-8") as file_:
+                json.dump(self.positions, file_, ensure_ascii=False)
+        if hasattr(self, "employed_humans"):
+            with Path(directory, "employed_humans.json").open(
+                "w", encoding="utf-8"
+            ) as file_:
+                json.dump(self.employed_humans, file_, ensure_ascii=False)
+        if hasattr(self, "organizations"):
+            with Path(directory, "organizations.json").open(
+                "w", encoding="utf-8"
+            ) as file_:
+                json.dump(self.organizations, file_, ensure_ascii=False)
 
     @staticmethod
     def _select_positions(dump):
