@@ -174,5 +174,5 @@ class KnowledgeBase:
                         _values.add(value["id"])
                         yield value["id"]
                     elif "text" in value and value["text"] not in _values:
-                        _values.add(value["id"])
+                        _values.add(value["text"])
                         yield value["text"]
