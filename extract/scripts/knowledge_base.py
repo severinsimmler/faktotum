@@ -26,9 +26,9 @@ def run():
     kwargs = {
         "humans": load_dump(args.kb) if "human" in Path(args.kb).name else None,
         "organizations": load_dump(args.kb)
-        if "business" in Path(args.kb).name
+        if "organization" in Path(args.kb).name
         else None,
-        "positions": load_dump(args.kb) if "position" in Path(args.kb).name else None,
+        "positions": load_dump(args.kb) if "pos" in Path(args.kb).name else None,
     }
 
     kb = extract.knowledge.KnowledgeBase(**kwargs)
