@@ -8,17 +8,22 @@ class KnowledgeBase:
     def __init__(self, humans, organizations, positions):
         if positions:
             logging.info("Parsing positions...")
-            self.positions = dict(self._select_positions(positions))
+            self.dump = positions
+            self.positions = dict(self._select_positions())
         if organizations:
             logging.info("Parsing organizations...")
-            self.organizations = dict(self._select_organizations(organizations))
+            self.dump = organizations
+            self.organizations = dict(self._select_organizations())
         if humans:
             logging.info("Parsing humans...")
-            self.employed_humans = dict(self._select_employed_humans(humans))
+            self.dump = humans
+            self.employed_humans = dict(self._select_employed_humans())
 
     def export(self, directory):
         if hasattr(self, "positions"):
-            with Path(directory, "filtered-positions.json").open("w", encoding="utf-8") as file_:
+            with Path(directory, "filtered-positions.json").open(
+                "w", encoding="utf-8"
+            ) as file_:
                 json.dump(self.positions, file_, ensure_ascii=False)
         if hasattr(self, "employed_humans"):
             with Path(directory, "filtered-employed-humans.json").open(
@@ -31,9 +36,8 @@ class KnowledgeBase:
             ) as file_:
                 json.dump(self.organizations, file_, ensure_ascii=False)
 
-    @staticmethod
-    def _select_positions(dump):
-        for line in dump:
+    def _select_positions(self):
+        for line in self.dump:
             identifier = line["id"]
             claims = line["claims"]
             properties = dict()
@@ -57,9 +61,8 @@ class KnowledgeBase:
             if properties["MENTIONS"]:
                 yield identifier, properties
 
-    @staticmethod
-    def _select_organizations(dump):
-        for line in dump:
+    def _select_organizations(self):
+        for line in self.dump:
             identifier = line["id"]
             claims = line["claims"]
             properties = dict()
@@ -80,30 +83,27 @@ class KnowledgeBase:
             if descriptions:
                 properties["DESCRIPTION"] = descriptions["value"]
 
-            industry = list(format_property(claims, "P452"))
+            industry = list(self._format_properties(claims, "P452"))
             if industry:
                 properties["INDUSTRY"] = industry
 
-            ceo = list(format_property(claims, "P169"))
+            ceo = list(self._format_properties(claims, "P169"))
             if ceo:
                 properties["CEO"] = ceo
 
-            country = list(format_property(claims, "P17"))
+            country = list(self._format_properties(claims, "P17"))
             if country:
                 properties["COUNTRY"] = country
 
-            legal_form = list(format_property(claims, "P1454"))
+            legal_form = list(self._format_properties(claims, "P1454"))
             if legal_form:
                 properties["LEGAL_FORM"] = legal_form
 
             if properties["MENTIONS"]:
                 yield identifier, properties
 
-    @staticmethod
-    def _select_employed_humans(
-        dump: List[dict],
-    ) -> Generator[Tuple[str, str], None, None]:
-        for line in dump:
+    def _select_employed_humans(self):
+        for line in self.dump:
             # only humans that have an employer
             if "P108" in line["claims"]:
                 identifier = line["id"]
@@ -127,35 +127,35 @@ class KnowledgeBase:
 
                 claims = line["claims"]
 
-                first_names = list(format_property(claims, "P734"))
+                first_names = list(self._format_properties(claims, "P734"))
                 if first_names:
                     properties["LAST_NAMES"] = first_names
 
-                last_names = list(format_property(claims, "P735"))
+                last_names = list(self._format_properties(claims, "P735"))
                 if last_names:
                     properties["FIRST_NAMES"] = last_names
 
-                gender = list(format_property(claims, "P21"))
+                gender = list(self._format_properties(claims, "P21"))
                 if gender:
                     properties["GENDER"] = gender
 
-                occupation = list(format_property(claims, "P106"))
+                occupation = list(self._format_properties(claims, "P106"))
                 if occupation:
                     properties["OCCUPATION"] = occupation
 
-                position = list(format_property(claims, "P39"))
+                position = list(self._format_properties(claims, "P39"))
                 if position:
                     properties["POSITION"] = position
 
-                working_since = list(format_property(claims, "P2031"))
+                working_since = list(self._format_properties(claims, "P2031"))
                 if working_since:
                     properties["WORKING_SINCE"] = working_since
 
-                owner_of = list(format_property(claims, "P1830"))
+                owner_of = list(self._format_properties(claims, "P1830"))
                 if owner_of:
                     properties["OWNER_OF"] = owner_of
 
-                birth_name = list(format_property(claims, "P1477"))
+                birth_name = list(self._format_properties(claims, "P1477"))
                 if birth_name:
                     properties["MENTIONS"].extend(birth_name)
 
@@ -163,9 +163,7 @@ class KnowledgeBase:
                     yield identifier, properties
 
     @staticmethod
-    def _format_properties(
-        claims: Dict[str, list], identifier: str
-    ) -> Generator[str, None, None]:
+    def _format_properties(claims, identifier):
         properties = claims.get(identifier)
         _values = set()
         if properties:
