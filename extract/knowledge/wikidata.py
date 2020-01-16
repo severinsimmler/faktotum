@@ -17,15 +17,15 @@ class KnowledgeBase:
 
     def export(self, directory):
         if hasattr(self, "positions"):
-            with Path(directory, "positions.json").open("w", encoding="utf-8") as file_:
+            with Path(directory, "filtered-positions.json").open("w", encoding="utf-8") as file_:
                 json.dump(self.positions, file_, ensure_ascii=False)
         if hasattr(self, "employed_humans"):
-            with Path(directory, "employed_humans.json").open(
+            with Path(directory, "filtered-employed-humans.json").open(
                 "w", encoding="utf-8"
             ) as file_:
                 json.dump(self.employed_humans, file_, ensure_ascii=False)
         if hasattr(self, "organizations"):
-            with Path(directory, "organizations.json").open(
+            with Path(directory, "filtered-organizations.json").open(
                 "w", encoding="utf-8"
             ) as file_:
                 json.dump(self.organizations, file_, ensure_ascii=False)

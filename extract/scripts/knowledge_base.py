@@ -32,4 +32,4 @@ def run():
     }
 
     kb = extract.knowledge.KnowledgeBase(**kwargs)
-    kb.export(".")
+    kb.export(Path(args.kb).parent)
