@@ -83,9 +83,9 @@ class KnowledgeBase:
             if descriptions:
                 properties["DESCRIPTION"] = descriptions["value"]
 
-            industry = list(self._format_properties(claims, "P452"))
-            if industry:
-                properties["INDUSTRY"] = industry
+            #industry = list(self._format_properties(claims, "P452"))
+            #if industry:
+            #    properties["INDUSTRY"] = industry
 
             ceo = list(self._format_properties(claims, "P169"))
             if ceo:
@@ -95,9 +95,9 @@ class KnowledgeBase:
             if country:
                 properties["COUNTRY"] = country
 
-            legal_form = list(self._format_properties(claims, "P1454"))
-            if legal_form:
-                properties["LEGAL_FORM"] = legal_form
+            #legal_form = list(self._format_properties(claims, "P1454"))
+            #if legal_form:
+            #    properties["LEGAL_FORM"] = legal_form
 
             if properties["MENTIONS"]:
                 yield identifier, properties
@@ -139,9 +139,9 @@ class KnowledgeBase:
                 if gender:
                     properties["GENDER"] = gender
 
-                occupation = list(self._format_properties(claims, "P106"))
-                if occupation:
-                    properties["OCCUPATION"] = occupation
+                #occupation = list(self._format_properties(claims, "P106"))
+                #if occupation:
+                #    properties["OCCUPATION"] = occupation
 
                 employer = list(self._format_properties(claims, "P108"))
                 if employer:
