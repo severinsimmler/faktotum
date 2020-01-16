@@ -1,6 +1,7 @@
 from typing import Dict, Generator, Tuple, List
 import logging
 from pathlib import Path
+import json
 
 
 class KnowledgeBase:
