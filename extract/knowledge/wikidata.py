@@ -150,6 +150,9 @@ class KnowledgeBase:
                 position = list(self._format_properties(claims, "P39"))
                 if position:
                     properties["POSITION"] = position
+                    relations = list(self._get_relations(claims))
+                    if relations:
+                        properties["RELATIONS"] = relations
 
                 working_since = list(self._format_properties(claims, "P2031"))
                 if working_since:
@@ -180,3 +183,10 @@ class KnowledgeBase:
                     elif "text" in value and value["text"] not in _values:
                         _values.add(value["text"])
                         yield value["text"]
+
+    @staticmethod
+    def _get_relations(claims):
+        for position in claims["P39"]:
+            p = position["mainsnak"]["datavalue"]["value"]["id"]
+            for organization in position["qualifiers"]["P642"]:
+                yield [p, organization["datavalue"]["value"]["id"]]
