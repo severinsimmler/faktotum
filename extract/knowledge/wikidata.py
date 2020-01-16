@@ -1,15 +1,24 @@
 from typing import Dict, Generator, Tuple
-
+import logging
 
 class KnowledgeBase:
     def __init__(self, humans, organizations, positions):
+        logging.info("Parsing positions...")
         self.positions = dict(self._select_positions(positions))
-        self.employed_humans = dict(self._select_employed_humans(humans))
+        logging.info("Parsing organizations...")
         self.organizations = dict(self._select_organizations(organizations))
+        logging.info("Parsing humans...")
+        self.employed_humans = dict(self._select_employed_humans(humans))
 
-    def _update_human_properties(self):
-        for identifier, properties in self.employed_humans.items():
-            
+    def export(self, directory):
+        with Path(directory, "positions.json").open("w", encoding="utf-8") as file_:
+            json.dump(self.positions, file_, ensure_ascii=False)
+        with Path(directory, "employed_humans.json").open(
+            "w", encoding="utf-8"
+        ) as file_:
+            json.dump(self.employed_humans, file_, ensure_ascii=False)
+        with Path(directory, "organizations.json").open("w", encoding="utf-8") as file_:
+            json.dump(self.organizations, file_, ensure_ascii=False)
 
     def _select_positions(dump):
         for line in dump:
@@ -57,15 +66,15 @@ class KnowledgeBase:
             descriptions = line["descriptions"].get("de")
             if descriptions:
                 properties["DESCRIPTION"] = descriptions["value"]
-                
+
             industry = list(format_property(claims, "P452"))
             if industry:
                 properties["INDUSTRY"] = industry
-            
+
             ceo = list(format_property(claims, "P169"))
             if ceo:
                 properties["CEO"] = ceo
-            
+
             country = list(format_property(claims, "P17"))
             if country:
                 properties["COUNTRY"] = country
