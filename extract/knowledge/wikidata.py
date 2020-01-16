@@ -23,6 +23,7 @@ class KnowledgeBase:
         with Path(directory, "organizations.json").open("w", encoding="utf-8") as file_:
             json.dump(self.organizations, file_, ensure_ascii=False)
 
+    @staticmethod
     def _select_positions(dump):
         for line in dump:
             identifier = line["id"]
@@ -48,6 +49,7 @@ class KnowledgeBase:
             if properties["MENTIONS"]:
                 yield identifier, properties
 
+    @staticmethod
     def _select_organizations(dump):
         for line in dump:
             identifier = line["id"]
@@ -89,6 +91,7 @@ class KnowledgeBase:
             if properties["MENTIONS"]:
                 yield identifier, properties
 
+    @staticmethod
     def _select_employed_humans(
         dump: List[dict],
     ) -> Generator[Tuple[str, str], None, None]:
@@ -151,6 +154,7 @@ class KnowledgeBase:
                 if properties["MENTIONS"]:
                     yield identifier, properties
 
+    @staticmethod
     def _format_properties(
         claims: Dict[str, list], identifier: str
     ) -> Generator[str, None, None]:
