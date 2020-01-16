@@ -3,12 +3,15 @@ import logging
 
 class KnowledgeBase:
     def __init__(self, humans, organizations, positions):
-        logging.info("Parsing positions...")
-        self.positions = dict(self._select_positions(positions))
-        logging.info("Parsing organizations...")
-        self.organizations = dict(self._select_organizations(organizations))
-        logging.info("Parsing humans...")
-        self.employed_humans = dict(self._select_employed_humans(humans))
+        if positions:
+            logging.info("Parsing positions...")
+            self.positions = dict(self._select_positions(positions))
+        if organizations:
+            logging.info("Parsing organizations...")
+            self.organizations = dict(self._select_organizations(organizations))
+        if humans:
+            logging.info("Parsing humans...")
+            self.employed_humans = dict(self._select_employed_humans(humans))
 
     def export(self, directory):
         with Path(directory, "positions.json").open("w", encoding="utf-8") as file_:
