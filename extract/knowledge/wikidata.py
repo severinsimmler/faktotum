@@ -193,6 +193,4 @@ class KnowledgeBase:
                     organizations = position["qualifiers"].get("P642")
                     if organizations:
                         for organization in organizations:
-                            print([p, organization["datavalue"]["value"]["id"]])
-                            raise
                             yield [p, organization["datavalue"]["value"]["id"]]
