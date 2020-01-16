@@ -166,6 +166,10 @@ class KnowledgeBase:
                 if birth_name:
                     properties["MENTIONS"].extend(birth_name)
 
+                degree = list(self._format_properties(claims, "P512"))
+                if degree:
+                    properties["ACADEMIC_DEGREE"] = degree
+
                 if properties["MENTIONS"]:
                     yield identifier, properties
 
