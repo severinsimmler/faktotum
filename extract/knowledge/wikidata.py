@@ -1,4 +1,4 @@
-from typing import Dict, Generator, Tuple
+from typing import Dict, Generator, Tuple, List
 import logging
 
 class KnowledgeBase:
