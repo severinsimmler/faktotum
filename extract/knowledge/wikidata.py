@@ -143,6 +143,10 @@ class KnowledgeBase:
                 if occupation:
                     properties["OCCUPATION"] = occupation
 
+                employer = list(self._format_properties(claims, "P108"))
+                if employer:
+                    properties["EMPLOYER"] = employer
+
                 position = list(self._format_properties(claims, "P39"))
                 if position:
                     properties["POSITION"] = position
