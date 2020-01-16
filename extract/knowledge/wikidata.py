@@ -187,9 +187,10 @@ class KnowledgeBase:
     @staticmethod
     def _get_relations(claims):
         for position in claims["P39"]:
-            p = position["mainsnak"]["datavalue"]["value"]["id"]
-            if "qualifiers" in position:
-                organizations = position["qualifiers"].get("P642")
-                if organizations:
-                    for organization in organizations:
-                        yield [p, organization["datavalue"]["value"]["id"]]
+            if "datavalue" in position["mainsnak"]:
+                p = position["mainsnak"]["datavalue"]["value"]["id"]
+                if "qualifiers" in position:
+                    organizations = position["qualifiers"].get("P642")
+                    if organizations:
+                        for organization in organizations:
+                            yield [p, organization["datavalue"]["value"]["id"]]
