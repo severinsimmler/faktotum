@@ -1,6 +1,5 @@
-from extract.utils import tokenize, sentencize
-from extract.corpus import load_corpus, tokenize_corpus, sentencize_corpus
-from extract.ontologia import FastText, Word2Vec, TfIdf
+from extract import evaluation, scripts
+from extract.corpus import load_corpus, sentencize_corpus, tokenize_corpus
 from extract.knowledge import KnowledgeBase
-from extract import scripts
-from extract import evaluation
+from extract.ontologia import FastText, TfIdf, Word2Vec
+from extract.utils import sentencize, tokenize

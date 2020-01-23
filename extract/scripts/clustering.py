@@ -1,16 +1,15 @@
 import argparse
-import csv
 import collections
+import csv
 import json
 import logging
-from pathlib import Path
 import time
+from pathlib import Path
 
 import sklearn.cluster
 
 import extract
 from extract import exploration
-
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 

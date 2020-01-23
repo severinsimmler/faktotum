@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Union
 
 from extract import utils
-from extract.corpus.core import Document, Corpus
+from extract.corpus.core import Corpus, Document
 
 
 def load_corpus(directory: Union[str, Path]) -> Corpus:

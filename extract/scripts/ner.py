@@ -6,7 +6,6 @@ from pathlib import Path
 from flair.data import Sentence
 from flair.models import SequenceTagger
 
-
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
 

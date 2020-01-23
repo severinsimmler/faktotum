@@ -1,8 +1,4 @@
-from extract.scripts import fasttext, word2vec, tfidf
-from extract.scripts import tokenize_corpus
-from extract.scripts import filter_corpus
-from extract.scripts import decomposition
-from extract.scripts import clustering
-from extract.scripts import ner
-from extract.scripts import test_case_selection
-from extract.scripts import knowledge_base
+from extract.scripts import (clustering, decomposition, fasttext,
+                             filter_corpus, knowledge_base, ner,
+                             test_case_selection, tfidf, tokenize_corpus,
+                             word2vec)

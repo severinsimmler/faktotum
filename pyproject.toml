@@ -6,7 +6,7 @@ authors = ["Severin Simmler <severin.simmler@stud-mail.uni-wuerzburg.de>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "3.8.*"
+python = "3.7.*"
 gensim = "^3.8.1"
 syntok = "^1.2.2"
 scipy = "^1.4.1"
@@ -14,6 +14,7 @@ numpy = "^1.16.1"
 scikit-learn = "^0.22.1"
 pandas = "^0.25.3"
 flair = "^0.4.4"
+statsmodels = "^0.11.0"
 
 [tool.poetry.scripts]
 fasttext = "extract:scripts.fasttext.run"
@@ -30,6 +31,8 @@ filter-kb = "extract:scripts.knowledge_base.run"
 [tool.poetry.dev-dependencies]
 jupyterlab = "^1.2.5"
 black = "^19.10b0"
+jupyterlab-code-formatter = "^1.0.3"
+isort = "^4.3.21"
 
 [build-system]
 requires = ["poetry>=1.0.0"]

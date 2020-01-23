@@ -1,15 +1,14 @@
+import json
+import logging
 import random
 from pathlib import Path
-import logging
-import json
 from typing import Dict, List, Union
 
-from flair.embeddings import BertEmbeddings, DocumentPoolEmbeddings, Sentence
-import torch
-import pandas as pd
 import numpy as np
+import pandas as pd
 import sklearn.metrics
-
+import torch
+from flair.embeddings import BertEmbeddings, DocumentPoolEmbeddings, Sentence
 
 Dataset = Dict[str, Dict[str, List[str]]]
 Documents = Dict[str, List[str]]

@@ -9,14 +9,14 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Generator, Iterable
 
-from syntok.tokenizer import Token
+from syntok.tokenizer import Token as _Token
 
 from extract import utils
 
 
 @dataclass
 class Sentence:
-    _tokens: Iterable[Token]
+    _tokens: Iterable[_Token]
 
     @property
     def tokens(self) -> Generator[str, None, None]:
@@ -71,3 +71,15 @@ class Corpus:
     def __iter__(self):
         for document in self.documents:
             yield document
+
+@dataclass
+class Token:
+    text: str
+    index: int
+    label: str = None
+
+    def __repr__(self):
+        if self.label:
+            return f"<Token {self.index}: {self.text} ({self.label})>"
+        else:
+            return f"<Token {self.index}: {self.text}>"

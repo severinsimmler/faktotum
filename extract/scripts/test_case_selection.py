@@ -3,8 +3,8 @@ import json
 import logging
 from pathlib import Path
 
-from extract.exploration import calculate_sentence_similarities, select_new_sentences
-
+from extract.exploration import (calculate_sentence_similarities,
+                                 select_new_sentences)
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 

@@ -10,7 +10,6 @@ from typing import Generator
 import syntok.segmenter
 import syntok.tokenizer
 
-
 TOKENIZER = syntok.tokenizer.Tokenizer()
 
 

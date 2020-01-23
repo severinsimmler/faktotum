@@ -5,8 +5,7 @@ extract.ontologia.rules
 This module implements basic rules to filter text corpora.
 """
 
-from typing import Generator, Dict, List, Tuple
-
+from typing import Dict, Generator, List, Tuple
 
 PlainCorpus = Dict[str, List[List[str]]]
 

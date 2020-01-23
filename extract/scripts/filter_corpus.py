@@ -1,12 +1,11 @@
 import argparse
 import json
 import logging
-from pathlib import Path
 import time
+from pathlib import Path
 
 import extract
 from extract import ontologia
-
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 

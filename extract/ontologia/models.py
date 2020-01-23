@@ -6,16 +6,16 @@ This module implements models to help defining an ontology.
 """
 
 import abc
-from pathlib import Path
-import logging
 import json
+import logging
+from pathlib import Path
 from typing import Iterable, List, Optional, Union
 
 import gensim
 import numpy as np
-import sklearn.metrics
-import sklearn.feature_extraction
 import scipy
+import sklearn.feature_extraction
+import sklearn.metrics
 
 from extract import utils
 from extract.corpus.core import Corpus

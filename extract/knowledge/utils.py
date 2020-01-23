@@ -1,6 +1,6 @@
+import json
 from pathlib import Path
 from typing import Generator
-import json
 
 
 def load_wikidata_dump(filepath: Union[str, Path]) -> Generator[dict, None, None]:

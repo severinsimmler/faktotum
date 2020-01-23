@@ -2,6 +2,46 @@ import itertools
 from collections import defaultdict
 from typing import List
 
+import pandas as pd
+import sklearn.utils
+import statsmodels.stats.contingency_tables
+
+from extract.corpus import Token
+
+
+def compare_models(gold, pred1, pred2, alpha=0.05):
+    table = get_contingency_table(gold, pred1, pred2)
+
+    result = statsmodels.stats.contingency_tables.mcnemar(table)
+    if result.pvalue > alpha:
+        print("Same proportions of errors (fail to reject H0).")
+        return False, result.pvalue
+    else:
+        print("Different proportions of errors (reject H0).")
+        return True, result.pvalue
+
+
+def get_contingency_table(gold, pred1, pred2):
+    s1 = list()
+    s2 = list()
+
+    for _g, _p1, _p2 in zip(gold, pred1, pred2):
+        for g, p1, p2 in zip(_g, _p1, _p2):
+            if g.label != "O":
+                if g.label == p1.label:
+                    s1.append("agree")
+                elif g.label != p1.label:
+                    s1.append("disagree")
+
+                if g.label == p2.label:
+                    s2.append("agree")
+                elif g.label != p2.label:
+                    s2.append("disagree")
+
+    df = pd.DataFrame({"model1": s1, "model2": s2})
+    return pd.crosstab(df["model1"], df["model2"]).values
+
+
 class Metric:
     def __init__(self, name):
         self.name = name
@@ -160,3 +200,23 @@ class Metric:
             for class_name in all_classes
         ]
         return "\n".join(all_lines)
+
+
+def evaluate(name: str, gold: List[List[Token]], pred: List[List[Token]]) -> Metric:
+    metric = Metric(name)
+    for sentence, sentence_ in zip(gold, pred):
+        y_gold = [token for token in sentence if token.label != "O"]
+        y_pred = [token for token in sentence_ if token.label != "O"]
+        
+        for token in y_pred:
+            if token in y_gold:
+                metric.add_tp(token.label)
+            else:
+                metric.add_fp(token.label)
+
+        for token in y_gold:
+            if token not in y_pred:
+                metric.add_fn(token.label)
+            else:
+                metric.add_tn(token.label)
+    return metric

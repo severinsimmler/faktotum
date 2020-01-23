@@ -1,11 +1,10 @@
 import argparse
-import logging
 import json
-from pathlib import Path
+import logging
 import time
+from pathlib import Path
 
 import extract
-
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
