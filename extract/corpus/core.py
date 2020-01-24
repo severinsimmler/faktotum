@@ -72,6 +72,7 @@ class Corpus:
         for document in self.documents:
             yield document
 
+
 @dataclass
 class Token:
     text: str

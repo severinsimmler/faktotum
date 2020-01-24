@@ -3,15 +3,51 @@ from collections import defaultdict
 from typing import List
 
 import pandas as pd
+import numpy as np
 import sklearn.utils
 import statsmodels.stats.contingency_tables
 
 from extract.corpus import Token
 
 
+def bootstrap(dataset, modeling_function, evaluation_function, n_iterations=1000):
+    n_size = int(len(dataset) * 0.50)
+    stats = list()
+    for _ in range(n_iterations):
+        train = sklearn.utils.resample(dataset, n_samples=n_size)
+        test = np.array([x for x in dataset if x.tolist() not in train.tolist()])
+        model = modeling_function(train)
+        pred = evaluation_function(model, test)
+        metric = Metric(f"iter_{_}")
+        score = {
+            "precision": metric.precision(),
+            "recall": metric.recall(),
+            "f1": metric.f_score(),
+            "accuracy": metric.accuracy(),
+        }
+        print(f"Iteration {_}")
+        print(score)
+        stats.append(score)
+    print("Confidence intervals")
+    print(f"Precision: {confidence_intervals([score['precision'] for score in stats])}")
+    print(f"Recall: {confidence_intervals([score['recall'] for score in stats])}")
+    print(f"F1: {confidence_intervals([score['f1'] for score in stats])}")
+    print(f"Accuracy: {confidence_intervals([score['accuracy'] for score in stats])}")
+    return stats
+
+
+def confidence_intervals(stats):
+    alpha = 0.95
+    p = ((1.0 - alpha) / 2.0) * 100
+    lower = max(0.0, np.percentile(stats, p))
+    p = (alpha + ((1.0 - alpha) / 2.0)) * 100
+    upper = min(1.0, np.percentile(stats, p))
+    print(f"{alpha*100} confidence interval {lower*100} and {upper*100}")
+    return alpha * 100, lower * 100, upper * 100
+
+
 def compare_models(gold, pred1, pred2, alpha=0.05):
     table = get_contingency_table(gold, pred1, pred2)
-
     result = statsmodels.stats.contingency_tables.mcnemar(table)
     if result.pvalue > alpha:
         print("Same proportions of errors (fail to reject H0).")
@@ -24,7 +60,6 @@ def compare_models(gold, pred1, pred2, alpha=0.05):
 def get_contingency_table(gold, pred1, pred2):
     s1 = list()
     s2 = list()
-
     for _g, _p1, _p2 in zip(gold, pred1, pred2):
         for g, p1, p2 in zip(_g, _p1, _p2):
             if g.label != "O":
@@ -37,9 +72,8 @@ def get_contingency_table(gold, pred1, pred2):
                     s2.append("agree")
                 elif g.label != p2.label:
                     s2.append("disagree")
-
-    df = pd.DataFrame({"model1": s1, "model2": s2})
-    return pd.crosstab(df["model1"], df["model2"]).values
+    table = pd.DataFrame({"model1": s1, "model2": s2})
+    return pd.crosstab(table["model1"], table["model2"]).values
 
 
 class Metric:
@@ -207,7 +241,7 @@ def evaluate(name: str, gold: List[List[Token]], pred: List[List[Token]]) -> Met
     for sentence, sentence_ in zip(gold, pred):
         y_gold = [token for token in sentence if token.label != "O"]
         y_pred = [token for token in sentence_ if token.label != "O"]
-        
+
         for token in y_pred:
             if token in y_gold:
                 metric.add_tp(token.label)
