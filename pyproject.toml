@@ -15,6 +15,8 @@ scikit-learn = "^0.22.1"
 pandas = "^0.25.3"
 statsmodels = "^0.11.0"
 flair = {git = "https://github.com/flairNLP/flair.git"}
+transformers = {git = "https://github.com/huggingface/transformers.git"}
+tqdm = "^4.41.1"
 
 [tool.poetry.scripts]
 fasttext = "extract:scripts.fasttext.run"
