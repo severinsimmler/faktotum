@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import random
@@ -15,13 +16,17 @@ from flair.embeddings import FlairEmbeddings, StackedEmbeddings, WordEmbeddings
 from flair.models import SequenceTagger
 from flair.trainers import ModelTrainer
 from torch.nn import CrossEntropyLoss
-from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler,
-                              TensorDataset)
+from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, TensorDataset
 from torch.utils.data.distributed import DistributedSampler
 from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm, trange
-from transformers import (AdamW, BertConfig, BertForTokenClassification,
-                          BertTokenizer, get_linear_schedule_with_warmup)
+from transformers import (
+    AdamW,
+    BertConfig,
+    BertForTokenClassification,
+    BertTokenizer,
+    get_linear_schedule_with_warmup,
+)
 
 from extract.corpus import Token
 from extract.evaluation import evaluate
@@ -37,7 +42,13 @@ def read_examples_from_file(data_dir, mode):
         for line in f:
             if line.startswith("-DOCSTART-") or line == "" or line == "\n":
                 if words:
-                    examples.append(InputExample(guid="{}-{}".format(mode, guid_index), words=words, labels=labels))
+                    examples.append(
+                        InputExample(
+                            guid="{}-{}".format(mode, guid_index),
+                            words=words,
+                            labels=labels,
+                        )
+                    )
                     guid_index += 1
                     words = []
                     labels = []
@@ -47,11 +58,15 @@ def read_examples_from_file(data_dir, mode):
                 if len(splits) > 1:
                     labels.append(splits[-1].replace("\n", ""))
                 else:
-                    # Examples could have no label for mode = "test"
                     labels.append("O")
         if words:
-            examples.append(InputExample(guid="%s-%d".format(mode, guid_index), words=words, labels=labels))
+            examples.append(
+                InputExample(
+                    guid="%s-%d".format(mode, guid_index), words=words, labels=labels
+                )
+            )
     return examples
+
 
 def convert_examples_to_features(
     examples,
@@ -83,37 +98,17 @@ def convert_examples_to_features(
         for word, label in zip(example.words, example.labels):
             word_tokens = tokenizer.tokenize(word)
             tokens.extend(word_tokens)
-            # Use the real label id for the first token of the word, and padding ids for the remaining tokens
-            label_ids.extend([label_map[label]] + [pad_token_label_id] * (len(word_tokens) - 1))
+            label_ids.extend(
+                [label_map[label]] + [pad_token_label_id] * (len(word_tokens) - 1)
+            )
 
-        # Account for [CLS] and [SEP] with "- 2" and with "- 3" for RoBERTa.
         special_tokens_count = 3 if sep_token_extra else 2
         if len(tokens) > max_seq_length - special_tokens_count:
             tokens = tokens[: (max_seq_length - special_tokens_count)]
             label_ids = label_ids[: (max_seq_length - special_tokens_count)]
-
-        # The convention in BERT is:
-        # (a) For sequence pairs:
-        #  tokens:   [CLS] is this jack ##son ##ville ? [SEP] no it is not . [SEP]
-        #  type_ids:   0   0  0    0    0     0       0   0   1  1  1  1   1   1
-        # (b) For single sequences:
-        #  tokens:   [CLS] the dog is hairy . [SEP]
-        #  type_ids:   0   0   0   0  0     0   0
-        #
-        # Where "type_ids" are used to indicate whether this is the first
-        # sequence or the second sequence. The embedding vectors for `type=0` and
-        # `type=1` were learned during pre-training and are added to the wordpiece
-        # embedding vector (and position vector). This is not *strictly* necessary
-        # since the [SEP] token unambiguously separates the sequences, but it makes
-        # it easier for the model to learn the concept of sequences.
-        #
-        # For classification tasks, the first vector (corresponding to [CLS]) is
-        # used as as the "sentence vector". Note that this only makes sense because
-        # the entire model is fine-tuned.
         tokens += [sep_token]
         label_ids += [pad_token_label_id]
         if sep_token_extra:
-            # roberta uses an extra separator b/w pairs of sentences
             tokens += [sep_token]
             label_ids += [pad_token_label_id]
         segment_ids = [sequence_a_segment_id] * len(tokens)
@@ -129,15 +124,14 @@ def convert_examples_to_features(
 
         input_ids = tokenizer.convert_tokens_to_ids(tokens)
 
-        # The mask has 1 for real tokens and 0 for padding tokens. Only real
-        # tokens are attended to.
         input_mask = [1 if mask_padding_with_zero else 0] * len(input_ids)
 
-        # Zero-pad up to the sequence length.
         padding_length = max_seq_length - len(input_ids)
         if pad_on_left:
             input_ids = ([pad_token] * padding_length) + input_ids
-            input_mask = ([0 if mask_padding_with_zero else 1] * padding_length) + input_mask
+            input_mask = (
+                [0 if mask_padding_with_zero else 1] * padding_length
+            ) + input_mask
             segment_ids = ([pad_token_segment_id] * padding_length) + segment_ids
             label_ids = ([pad_token_label_id] * padding_length) + label_ids
         else:
@@ -161,7 +155,12 @@ def convert_examples_to_features(
             logger.info("label_ids: %s", " ".join([str(x) for x in label_ids]))
 
         features.append(
-            InputFeatures(input_ids=input_ids, input_mask=input_mask, segment_ids=segment_ids, label_ids=label_ids)
+            InputFeatures(
+                input_ids=input_ids,
+                input_mask=input_mask,
+                segment_ids=segment_ids,
+                label_ids=label_ids,
+            )
         )
     return features
 
@@ -174,9 +173,17 @@ def get_labels(path):
             labels = ["O"] + labels
         return labels
     else:
-        return ["O", "B-MISC", "I-MISC", "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC"]
-
-
+        return [
+            "O",
+            "B-MISC",
+            "I-MISC",
+            "B-PER",
+            "I-PER",
+            "B-ORG",
+            "I-ORG",
+            "B-LOC",
+            "I-LOC",
+        ]
 
 
 Dataset = List[List[Token]]
@@ -395,11 +402,12 @@ class BERT:
         num_labels = len(labels)
         pad_token_label_id = CrossEntropyLoss().ignore_index
 
-        if self.local_rank not in [-1, 0]:
-            torch.distributed.barrier()
-
         self.model_type = self.model_type.lower()
-        config_class, model_class, tokenizer_class = (BertConfig, BertForTokenClassification, BertTokenizer)
+        config_class, model_class, tokenizer_class = (
+            BertConfig,
+            BertForTokenClassification,
+            BertTokenizer,
+        )
         config = config_class.from_pretrained(
             self.config_name if self.config_name else self.model_name_or_path,
             num_labels=num_labels,
@@ -417,9 +425,6 @@ class BERT:
             cache_dir=self.cache_dir if self.cache_dir else None,
         )
 
-        if self.local_rank == 0:
-            torch.distributed.barrier()
-
         model.to(self.device)
 
         train_dataset = self._load_and_cache_examples(
@@ -430,8 +435,8 @@ class BERT:
         )
         logging.info(f" global_step = {global_step}, average loss = {tr_loss}")
 
-        if self.local_rank == -1 or torch.distributed.get_rank() == 0:
-            if not os.path.exists(self.output_dir) and self.local_rank in [-1, 0]:
+        if self.local_rank == -1:
+            if not os.path.exists(self.output_dir):
                 os.makedirs(self.output_dir)
 
             logging.info(f"Saving model checkpoint to {self.output_dir}")
@@ -515,27 +520,12 @@ class BERT:
         if os.path.isfile(
             os.path.join(self.model_name_or_path, "optimizer.pt")
         ) and os.path.isfile(os.path.join(self.model_name_or_path, "scheduler.pt")):
-            # Load in optimizer and scheduler states
             optimizer.load_state_dict(
                 torch.load(os.path.join(self.model_name_or_path, "optimizer.pt"))
             )
             scheduler.load_state_dict(
                 torch.load(os.path.join(self.model_name_or_path, "scheduler.pt"))
             )
-
-        if self.fp16:
-            try:
-                from apex import amp
-            except ImportError:
-                raise ImportError(
-                    "Please install apex from https://www.github.com/nvidia/apex to use fp16 training."
-                )
-            model, optimizer = amp.initialize(
-                model, optimizer, opt_level=self.fp16_opt_level
-            )
-
-        if self.n_gpu > 1:
-            model = torch.nn.DataParallel(model)
 
         if self.local_rank != -1:
             model = torch.nn.parallel.DistributedDataParallel(
@@ -864,6 +854,43 @@ class RuleBased:
     test: Dataset
 
     def __post_init__(self):
+        module_folder = Path(__file__).resolve().parent
+        with Path(module_folder, "data", "persons.json").open("r", encoding="utf-8") as file_:
+            self.persons = json.load(file_)
+        with Path(module_folder, "data", "organizations.json").open("r", encoding="utf-8") as file_:
+            self.organizations = json.load(file_)
+
+    def __post_init__(self):
         self._translate_labels(self.train)
         self._translate_labels(self.val)
         self._translate_labels(self.test)
+
+    def vanilla(self):
+        preds = list()
+        for sentence in self.test:
+            pred = list()
+            previous = "[START]"
+            for token in sentence:
+                if token.text in self.persons and (
+                    previous == "B-PER" or previous == "I-PER"
+                ):
+                    label = "I-PER"
+                elif token.text in self.persons and (
+                    previous != "B-PER" or previous != "I-PER"
+                ):
+                    label = "B-PER"
+                elif token.text in self.organizations and (
+                    previous == "B-ORG" or previous == "I-ORG"
+                ):
+                    label = "I-PER"
+                elif token.text in self.organizations and (
+                    previous != "B-ORG" or previous != "I-ORG"
+                ):
+                    label = "B-PER"
+                else:
+                    label = "O"
+                pred.append(Token(token.text, token.index, label))
+            preds.append(pred)
+        metric = evaluate(f"vanilla-rule-based", self.test, preds)
+        print(metric)
+        return metric
