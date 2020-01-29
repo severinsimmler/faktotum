@@ -10,7 +10,7 @@ $ poetry install
 
 ```
 poetry run bert-fine-tuning \
-    --data_dir extract/data/germeval
+    --data_dir extract/data/germeval \
     --model_type bert \
     --labels extract/data/germeval/labels.txt \
     --model_name_or_path bert-base-german-dbmdz-cased \

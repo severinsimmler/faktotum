@@ -293,8 +293,8 @@ def train(args, train_dataset, model, tokenizer, labels, pad_token_label_id):
                         model.parameters(), args.max_grad_norm
                     )
 
-                scheduler.step()  # Update learning rate schedule
                 optimizer.step()
+                scheduler.step()  # Update learning rate schedule
                 model.zero_grad()
                 global_step += 1
 
@@ -445,6 +445,8 @@ def evaluate(args, model, tokenizer, labels, pad_token_label_id, mode, prefix=""
                 out_label_list[i].append(label_map[out_label_ids[i][j]])
                 preds_list[i].append(label_map[preds[i][j]])
 
+    print(out_label_list)
+    print(preds_list)
     results = {
         "loss": eval_loss,
         "precision": precision_score(out_label_list, preds_list),
