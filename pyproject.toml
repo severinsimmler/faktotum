@@ -17,6 +17,8 @@ statsmodels = "^0.11.0"
 flair = {git = "https://github.com/flairNLP/flair.git"}
 transformers = {git = "https://github.com/huggingface/transformers.git"}
 tqdm = "^4.41.1"
+tensorboard = "^2.1.0"
+seqeval = "^0.0.12"
 
 [tool.poetry.scripts]
 fasttext = "extract:scripts.fasttext.run"
@@ -29,6 +31,7 @@ decomposition = "extract:scripts.decomposition.run"
 ner = "extract:scripts.ner.run"
 test-case-selection = "extract:scripts.test_case_selection.run"
 filter-kb = "extract:scripts.knowledge_base.run"
+bert-fine-tuning = "extract:vendor.ner.main"
 
 [tool.poetry.dev-dependencies]
 jupyterlab = "^1.2.5"
