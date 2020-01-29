@@ -276,12 +276,12 @@ def evaluate_labels(name: str, gold: List[List[str]], pred: List[List[str]]) -> 
         y_gold = [
             label
             for label in [f"{i}-{l}" for i, l in enumerate(sentence)]
-            if label != "O"
+            if label.split("-")[-1] != "O"
         ]
         y_pred = [
             label
             for label in [f"{i}-{l}" for i, l in enumerate(sentence_)]
-            if label != "O"
+            if label.split("-")[-1] != "O"
         ]
 
         for label in y_pred:
