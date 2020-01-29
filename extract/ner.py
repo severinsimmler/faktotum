@@ -12,7 +12,7 @@ import sklearn.model_selection
 import torch
 from flair.data import Sentence
 from flair.datasets import ColumnCorpus
-from flair.embeddings import FlairEmbeddings, StackedEmbeddings, WordEmbeddings
+from flair.embeddings import PooledFlairEmbeddings
 from flair.models import SequenceTagger
 from flair.trainers import ModelTrainer
 from torch.nn import CrossEntropyLoss
@@ -209,11 +209,11 @@ class Baseline:
                 ) and token.label == "B-LAST_NAME":
                     label = "I-PER"
                 else:
-                    label = self.custom2conll.get(token.label, "O")
+                    label = self.custom2germeval.get(token.label, "O")
                 previous = token.label
                 token.label = label
 
-    def _load_dataset(self):
+    def _load_custom_dataset(self):
         _train = Path(tempfile.NamedTemporaryFile().name)
         _test = Path(tempfile.NamedTemporaryFile().name)
         _val = Path(tempfile.NamedTemporaryFile().name)
@@ -249,53 +249,60 @@ class Baseline:
         _val.unlink()
         return corpus
 
-    def continued(self, name: str = "de-ner"):
-        corpus = self._load_dataset()
-        tagger = SequenceTagger.load(name)
-        trainer = ModelTrainer(tagger, corpus)
-
-        trainer.train(
-            "continued", learning_rate=0.1, mini_batch_size=32, max_epochs=100
+    def _load_germeval_dataset(self):
+        current_folder = Path(__file__).parent
+        data_folder = Path(current_folder, "data", "germeval")
+        columns = {1: "text", 2: "ner"}
+        return ColumnCorpus(
+            data_folder,
+            columns,
+            train_file="train.tsv",
+            test_file="test.tsv",
+            dev_file="dev.tsv",
         )
 
-        tagger = SequenceTagger.load("scratch/final-model.pt")
-        pred = self._prediction(tagger)
-        metric = evaluate(f"{name}-continued", self.test, pred)
-        print(metric)
-        return metric
+    def _train_flair_model(self, name, corpus, tagger=None):
+        tag_dictionary = corpus.make_tag_dictionary(tag_type="ner")
+        if not tagger:
+            tagger = SequenceTagger(
+                hidden_size=256,
+                embeddings=[PooledFlairEmbeddings("news-forward")],
+                tag_dictionary=tag_dictionary,
+                tag_type=tag_type,
+                use_crf=True,
+            )
+        trainer = ModelTrainer(tagger, corpus)
+        trainer.train(name, learning_rate=0.1, mini_batch_size=32, max_epochs=50)
+        return Path(name, "final-model.pt")
 
     def scratch(self):
-        corpus = self._load_dataset()
-        tag_type = "ner"
-        tag_dictionary = corpus.make_tag_dictionary(tag_type=tag_type)
-        embedding_types = [
-            WordEmbeddings("de"),
-            FlairEmbeddings("news-forward"),
-            FlairEmbeddings("news-backward"),
-        ]
-        embeddings = StackedEmbeddings(embeddings=embedding_types)
-        tagger = SequenceTagger(
-            hidden_size=256,
-            embeddings=embeddings,
-            tag_dictionary=tag_dictionary,
-            tag_type=tag_type,
-            use_crf=True,
-        )
-
-        trainer = ModelTrainer(tagger, corpus)
-
-        trainer.train("scratch", learning_rate=0.1, mini_batch_size=32, max_epochs=100)
-
-        tagger = SequenceTagger.load("scratch/final-model.pt")
+        """Train from scratch _only_ on custom dataset."""
+        corpus = self._load_custom_dataset()
+        model_path = _train_flair_model("scratch", corpus)
+        tagger = SequenceTagger.load(model_path)
         pred = self._prediction(tagger)
         metric = evaluate("scratch", self.test, pred)
         print(metric)
         return metric
 
-    def vanilla(self, name: str = "de-ner"):
-        tagger = SequenceTagger.load(name)
+    def vanilla(self):
+        """Train from scratch _only_ on Germeval dataset and evaluate on custom dataset."""
+        corpus = self._load_germeval_dataset()
+        model_path = _train_flair_model("vanilla", corpus)
+        tagger = SequenceTagger.load(model_path)
         pred = self._prediction(tagger)
         metric = evaluate(name, self.test, pred)
+        print(metric)
+        return metric
+
+    def continued(self, model_path):
+        """Continue training with custom dataset."""
+        corpus = self._load_custom_dataset()
+        tagger = SequenceTagger.load(model_path)
+        model_path = _train_flair_model("continued", corpus, tagger)
+        tagger = SequenceTagger.load(model_path)
+        pred = self._prediction(tagger)
+        metric = evaluate(f"{name}-continued", self.test, pred)
         print(metric)
         return metric
 
@@ -309,7 +316,7 @@ class Baseline:
                 Token(
                     token.text,
                     index,
-                    self.conll2custom.get(token.get_tag("ner").value, "O"),
+                    self.germeval2custom.get(token.get_tag("ner").value, "O"),
                 )
                 for index, token in enumerate(sentence)
             ]
@@ -317,7 +324,7 @@ class Baseline:
         return preds
 
     @property
-    def custom2conll(self):
+    def custom2germeval(self):
         return {
             "B-FIRST_NAME": "B-PER",
             "I-FIRST_NAME": "I-PER",
@@ -328,7 +335,7 @@ class Baseline:
         }
 
     @property
-    def conll2custom(self):
+    def germeval2custom(self):
         return {
             "B-PER": "B-PER",
             "I-PER": "I-PER",
@@ -341,20 +348,17 @@ class BERT:
     train: Dataset
     val: Dataset
     test: Dataset
+    labels: List[str] = ["B-PER", "I-PER", "B-ORG", "I-ORG"]
 
     data_dir: str
     model_type: str = "bert"
     model_name_or_path: str = "bert"
     output_dir: str = ""
     labels: str = ""
-    config_name: str = ""
-    tokenizer_name: str = ""
-    cache_dir: str = ""
     max_seq_length: str = 128
     do_train: bool = True
     do_predict: bool = True
     evaluate_during_training: bool = False
-    do_lower_case: bool = False
     per_gpu_train_batch_size: int = 8
     per_gpu_eval_batch_size: int = 8
     gradient_accumulation_steps: int = 1
@@ -362,7 +366,7 @@ class BERT:
     weight_decay: float = 0.0
     adam_epsilon: float = 1e-8
     max_grad_norm: float = 1.0
-    num_train_epochs: float = 3.0
+    num_train_epochs: float = 1.0
     max_steps: int = -1
     warmup_steps: int = 0
     logging_steps: int = 50
@@ -377,6 +381,7 @@ class BERT:
     local_rank: int = -1
     server_ip: str = ""
     server_port: str = ""
+    device: str = torch.device("cuda")
 
     def __post_init__(self):
         self._translate_labels(self.train)
@@ -385,53 +390,38 @@ class BERT:
 
     @property
     def labels(self):
-        l = set(self.conll2custom)
+        l = set(self.germeval2custom)
         l.add("O")
         return l
 
-    def _get_conll_labels(self):
+    def _get_germeval_labels(self):
         pass
 
     def fine_tune(self, name: str, continued=False):
         self._set_seed()
 
-        if continued:
-            labels = self._get_conll_labels() + self.labels
-        else:
-            labels = self.labels
-        num_labels = len(labels)
+        num_labels = len(self.labels)
         pad_token_label_id = CrossEntropyLoss().ignore_index
 
-        self.model_type = self.model_type.lower()
-        config_class, model_class, tokenizer_class = (
-            BertConfig,
-            BertForTokenClassification,
-            BertTokenizer,
+        config = BertConfig.from_pretrained(
+            self.model_name_or_path, num_labels=num_labels
         )
-        config = config_class.from_pretrained(
-            self.config_name if self.config_name else self.model_name_or_path,
-            num_labels=num_labels,
-            cache_dir=self.cache_dir if self.cache_dir else None,
+        tokenizer = BertTokenizer.from_pretrained(
+            self.model_name_or_path, do_lower_case=False
         )
-        tokenizer = tokenizer_class.from_pretrained(
-            self.tokenizer_name if self.tokenizer_name else self.model_name_or_path,
-            do_lower_case=self.do_lower_case,
-            cache_dir=self.cache_dir if self.cache_dir else None,
-        )
-        model = model_class.from_pretrained(
+        model = BertForTokenClassification.from_pretrained(
             self.model_name_or_path,
             from_tf=bool(".ckpt" in self.model_name_or_path),
             config=config,
-            cache_dir=self.cache_dir if self.cache_dir else None,
         )
 
         model.to(self.device)
 
         train_dataset = self._load_and_cache_examples(
-            args, tokenizer, labels, pad_token_label_id, mode="train"
+            tokenizer, labels, pad_token_label_id, mode="train"
         )
         global_step, tr_loss = self._train(
-            args, train_dataset, model, tokenizer, labels, pad_token_label_id
+            train_dataset, model, tokenizer, labels, pad_token_label_id
         )
         logging.info(f" global_step = {global_step}, average loss = {tr_loss}")
 
@@ -446,28 +436,24 @@ class BERT:
 
             torch.save(args, os.path.join(self.output_dir, "training_args.bin"))
 
-        tokenizer = tokenizer_class.from_pretrained(
-            self.output_dir, do_lower_case=self.do_lower_case
-        )
-        model = model_class.from_pretrained(self.output_dir)
+        tokenizer = BertTokenizer.from_pretrained(self.output_dir, do_lower_case=False)
+        model = BertForTokenClassification.from_pretrained(self.output_dir)
         model.to(self.device)
         result, predictions = self._evaluate(
-            args, model, tokenizer, labels, pad_token_label_id, mode="test"
+            model, tokenizer, labels, pad_token_label_id, mode="test"
         )
-
         return results
 
     def _set_seed(self):
         random.seed(23)
         np.random.seed(23)
         torch.manual_seed(23)
-        if self.n_gpu > 0:
-            torch.cuda.manual_seed_all(23)
+        torch.cuda.manual_seed_all(23)
 
     def _train(self, train_dataset, model, tokenizer, labels, pad_token_label_id):
         tb_writer = SummaryWriter()
 
-        self.train_batch_size = self.per_gpu_train_batch_size * max(1, self.n_gpu)
+        self.train_batch_size = self.per_gpu_train_batch_size
         train_sampler = (
             RandomSampler(train_dataset)
             if self.local_rank == -1
@@ -585,27 +571,16 @@ class BERT:
                 outputs = model(**inputs)
                 loss = outputs[0]
 
-                if self.n_gpu > 1:
-                    loss = loss.mean()
                 if self.gradient_accumulation_steps > 1:
                     loss = loss / self.gradient_accumulation_steps
 
-                if self.fp16:
-                    with amp.scale_loss(loss, optimizer) as scaled_loss:
-                        scaled_loss.backward()
-                else:
-                    loss.backward()
+                loss.backward()
 
                 tr_loss += loss.item()
                 if (step + 1) % self.gradient_accumulation_steps == 0:
-                    if self.fp16:
-                        torch.nn.utils.clip_grad_norm_(
-                            amp.master_params(optimizer), self.max_grad_norm
-                        )
-                    else:
-                        torch.nn.utils.clip_grad_norm_(
-                            model.parameters(), self.max_grad_norm
-                        )
+                    torch.nn.utils.clip_grad_norm_(
+                        model.parameters(), self.max_grad_norm
+                    )
 
                     scheduler.step()
                     optimizer.step()
@@ -683,10 +658,10 @@ class BERT:
 
     def _evaluate(self, model, tokenizer, labels, pad_token_label_id, mode, prefix=""):
         eval_dataset = self._load_and_cache_examples(
-            self, tokenizer, labels, pad_token_label_id, mode=mode
+            tokenizer, labels, pad_token_label_id, mode=mode
         )
 
-        self.eval_batch_size = self.per_gpu_eval_batch_size * max(1, self.n_gpu)
+        self.eval_batch_size = self.per_gpu_eval_batch_size
         eval_sampler = (
             SequentialSampler(eval_dataset)
             if self.local_rank == -1
@@ -695,9 +670,6 @@ class BERT:
         eval_dataloader = DataLoader(
             eval_dataset, sampler=eval_sampler, batch_size=self.eval_batch_size
         )
-
-        if self.n_gpu > 1:
-            model = torch.nn.DataParallel(model)
 
         logging.info("***** Running evaluation *****")
         logging.info(f"  Num examples = {len(eval_dataset)}")
@@ -817,7 +789,7 @@ class BERT:
         return dataset
 
     @property
-    def custom2conll(self):
+    def custom2germeval(self):
         return {
             "B-FIRST_NAME": "B-PER",
             "I-FIRST_NAME": "I-PER",
@@ -828,7 +800,7 @@ class BERT:
         }
 
     @property
-    def conll2custom(self):
+    def germeval2custom(self):
         return {
             "B-PER": "B-PER",
             "I-PER": "I-PER",
@@ -837,6 +809,7 @@ class BERT:
         }
 
 
+@dataclass
 class ConditionalRandomField:
     train: Dataset
     val: Dataset
@@ -848,6 +821,7 @@ class ConditionalRandomField:
         self._translate_labels(self.test)
 
 
+@dataclass
 class RuleBased:
     train: Dataset
     val: Dataset
@@ -855,9 +829,13 @@ class RuleBased:
 
     def __post_init__(self):
         module_folder = Path(__file__).resolve().parent
-        with Path(module_folder, "data", "persons.json").open("r", encoding="utf-8") as file_:
+        with Path(module_folder, "data", "persons.json").open(
+            "r", encoding="utf-8"
+        ) as file_:
             self.persons = json.load(file_)
-        with Path(module_folder, "data", "organizations.json").open("r", encoding="utf-8") as file_:
+        with Path(module_folder, "data", "organizations.json").open(
+            "r", encoding="utf-8"
+        ) as file_:
             self.organizations = json.load(file_)
 
     def __post_init__(self):
