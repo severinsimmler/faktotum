@@ -22,7 +22,7 @@ def bootstrap(dataset, modeling_function, evaluation_function, n_iterations=1000
         score = {
             "precision": metric.precision(),
             "recall": metric.recall(),
-            "f1": metric.f_score(),
+            "f1": metric.f1(),
             "accuracy": metric.accuracy(),
         }
         print(f"Iteration {_}")
@@ -62,18 +62,30 @@ def get_contingency_table(gold, pred1, pred2):
     s2 = list()
     for _g, _p1, _p2 in zip(gold, pred1, pred2):
         for g, p1, p2 in zip(_g, _p1, _p2):
-            if g.label != "O":
-                if g.label == p1.label:
-                    s1.append("agree")
-                elif g.label != p1.label:
-                    s1.append("disagree")
+            if isinstance(g, str):
+                if g != "O":
+                    if g == p1:
+                        s1.append("agree")
+                    elif g != p1:
+                        s1.append("disagree")
 
-                if g.label == p2.label:
-                    s2.append("agree")
-                elif g.label != p2.label:
-                    s2.append("disagree")
+                    if g == p2:
+                        s2.append("agree")
+                    elif g != p2:
+                        s2.append("disagree")
+            else:
+                if g.label != "O":
+                    if g.label == p1.label:
+                        s1.append("agree")
+                    elif g.label != p1.label:
+                        s1.append("disagree")
+
+                    if g.label == p2.label:
+                        s2.append("agree")
+                    elif g.label != p2.label:
+                        s2.append("disagree")
     table = pd.DataFrame({"model1": s1, "model2": s2})
-    return pd.crosstab(table["model1"], table["model2"]).values
+    return pd.crosstab(table["model1"], table["model2"])
 
 
 class Metric:
@@ -134,7 +146,7 @@ class Metric:
             )
         return 0.0
 
-    def f_score(self, class_name=None):
+    def f1(self, class_name=None):
         if self.precision(class_name) + self.recall(class_name) > 0:
             return round(
                 2
@@ -160,15 +172,15 @@ class Metric:
             )
         return 0.0
 
-    def micro_avg_f_score(self):
-        return self.f_score(None)
+    def micro_avg_f1(self):
+        return self.f1(None)
 
-    def macro_avg_f_score(self):
-        class_f_scores = [self.f_score(class_name) for class_name in self.get_classes()]
-        if len(class_f_scores) == 0:
+    def macro_avg_f1(self):
+        class_f1s = [self.f1(class_name) for class_name in self.get_classes()]
+        if len(class_f1s) == 0:
             return 0.0
-        macro_f_score = sum(class_f_scores) / len(class_f_scores)
-        return macro_f_score
+        macro_f1 = sum(class_f1s) / len(class_f1s)
+        return macro_f1
 
     def micro_avg_accuracy(self):
         return self.accuracy(None)
@@ -203,7 +215,7 @@ class Metric:
 
     def to_tsv(self):
         return "{}\t{}\t{}\t{}".format(
-            self.precision(), self.recall(), self.accuracy(), self.micro_avg_f_score()
+            self.precision(), self.recall(), self.accuracy(), self.micro_avg_f1()
         )
 
     @staticmethod
@@ -229,14 +241,14 @@ class Metric:
                 self.precision(class_name),
                 self.recall(class_name),
                 self.accuracy(class_name),
-                self.f_score(class_name),
+                self.f1(class_name),
             )
             for class_name in all_classes
         ]
         return "\n".join(all_lines)
 
 
-def evaluate(name: str, gold: List[List[Token]], pred: List[List[Token]]) -> Metric:
+def evaluate_tokens(name: str, gold: List[List[Token]], pred: List[List[Token]]) -> Metric:
     metric = Metric(name)
     for sentence, sentence_ in zip(gold, pred):
         y_gold = [token for token in sentence if token.label != "O"]
@@ -253,4 +265,24 @@ def evaluate(name: str, gold: List[List[Token]], pred: List[List[Token]]) -> Met
                 metric.add_fn(token.label)
             else:
                 metric.add_tn(token.label)
+    return metric
+
+
+def evaluate_labels(name: str, gold: List[List[str]], pred: List[List[str]]) -> Metric:
+    metric = Metric(name)
+    for sentence, sentence_ in zip(gold, pred):
+        y_gold = [label for label in sentence if label != "O"]
+        y_pred = [label for label in sentence_ if label != "O"]
+
+        for token in y_pred:
+            if token in y_gold:
+                metric.add_tp(label)
+            else:
+                metric.add_fp(label)
+
+        for token in y_gold:
+            if token not in y_pred:
+                metric.add_fn(label)
+            else:
+                metric.add_tn(label)
     return metric
