@@ -444,7 +444,7 @@ def evaluate(args, model, tokenizer, labels, pad_token_label_id, mode, prefix=""
                 out_label_list[i].append(label_map[out_label_ids[i][j]])
                 preds_list[i].append(label_map[preds[i][j]])
 
-    metric = evaluate_labels(out_label_list, preds_list)
+    metric = evaluate_labels("fine-tuned-bert", out_label_list, preds_list)
     results = {
         "loss": eval_loss,
         "precision": metric.precision,
