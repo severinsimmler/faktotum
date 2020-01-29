@@ -248,7 +248,9 @@ class Metric:
         return "\n".join(all_lines)
 
 
-def evaluate_tokens(name: str, gold: List[List[Token]], pred: List[List[Token]]) -> Metric:
+def evaluate_tokens(
+    name: str, gold: List[List[Token]], pred: List[List[Token]]
+) -> Metric:
     metric = Metric(name)
     for sentence, sentence_ in zip(gold, pred):
         y_gold = [token for token in sentence if token.label != "O"]
@@ -271,11 +273,19 @@ def evaluate_tokens(name: str, gold: List[List[Token]], pred: List[List[Token]])
 def evaluate_labels(name: str, gold: List[List[str]], pred: List[List[str]]) -> Metric:
     metric = Metric(name)
     for sentence, sentence_ in zip(gold, pred):
-        y_gold = [label for label in sentence if label != "O"]
-        y_pred = [label for label in sentence_ if label != "O"]
+        y_gold = [
+            label
+            for label in [f"{i}-{l}" for i, l in enumerate(sentence)]
+            if label != "O"
+        ]
+        y_pred = [
+            label
+            for label in [f"{i}-{l}" for i, l in enumerate(sentence_)]
+            if label != "O"
+        ]
 
-        for token in y_pred:
-            if token in y_gold:
+        for label in y_pred:
+            if label in y_gold:
                 metric.add_tp(label)
             else:
                 metric.add_fp(label)

@@ -452,7 +452,7 @@ def evaluate(args, model, tokenizer, labels, pad_token_label_id, mode, prefix=""
         "micro_f1": metric.micro_avg_f1,
         "macro_f1": metric.macro_avg_f1,
         "micro_accuracy": metric.micro_avg_accuracy,
-        "macro_accuracy": metric.macro_avg_accuracy
+        "macro_accuracy": metric.macro_avg_accuracy,
     }
     with open("predictions.json", "w", encoding="utf-8") as f:
         json.dump({"gold": out_label_list, "pred": preds_list}, f, indent=2)
