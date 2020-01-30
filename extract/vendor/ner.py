@@ -715,6 +715,8 @@ def main():
     args = parser.parse_args()
     
     logfile = Path(args.output_dir, "training.log")
+    if not logfile.parent.exists():
+        logfile.parent.mkdir()
     fh = logging.FileHandler(str(logfile))
     logger.addHandler(fh)
 
