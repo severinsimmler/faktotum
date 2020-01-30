@@ -20,13 +20,13 @@ $ poetry install
 
 ```
 poetry run bert-fine-tuning \
-    --data_dir extract/data/droc \
+    --data_dir extract/data/germeval \
     --model_type bert \
-    --labels extract/data/droc/labels.txt \
-    --model_name_or_path /mnt/data/users/simmler/ner-models/bert-multi-litbank \
-    --output_dir /mnt/data/users/simmler/ner-models/bert-multi-litbank-continued-droc \
+    --labels extract/data/germeval/labels.txt \
+    --model_name_or_path bert-base-german-dbmdz-cased \
+    --output_dir /mnt/data/users/simmler/ner-models/bert-german-germeval \
     --max_seq_length 128 \
-    --num_train_epochs 2 \
+    --num_train_epochs 1 \
     --per_gpu_train_batch_size 16 \
     --save_steps 750 \
     --seed 23 \
@@ -82,16 +82,16 @@ TODO:
         [ ] flair: droc continued litbank
         [x] bert multi: litbank
         [x] bert multi: droc
-        [ ] bert multi: droc continued litbank
+        [x] bert multi: droc continued litbank
         [x] bert german: droc
     - presse
         [ ] crf: presse (baseline)
         [x] flair: germeval
         [ ] flair: presse
         [ ] flair: presse continued germeval
-        [ ] bert multi: germeval
+        [x] bert multi: germeval
         [ ] bert multi: presse
         [ ] bert multi: presse continued germeval
-        [ ] bert german: germeval
+        [x] bert german: germeval
         [ ] bert german: presse
         [ ] bert german: presse continued germeval

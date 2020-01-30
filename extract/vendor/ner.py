@@ -460,7 +460,7 @@ def evaluate(args, model, tokenizer, labels, pad_token_label_id, mode, prefix=""
         "micro_accuracy": metric.micro_avg_accuracy(),
         "macro_accuracy": metric.macro_avg_accuracy(),
     }
-    with open("predictions.json", "w", encoding="utf-8") as f:
+    with Path(args.output_dir, "predictions.json").open("w", encoding="utf-8") as f:
         json.dump({"gold": out_label_list, "pred": preds_list}, f, indent=2)
 
     logger.info("***** Eval results %s *****", prefix)
