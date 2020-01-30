@@ -715,12 +715,6 @@ def main():
     )
     args = parser.parse_args()
     
-    logfile = Path(args.output_dir, "training.log")
-    if not logfile.parent.exists():
-        logfile.parent.mkdir()
-    fh = logging.FileHandler(str(logfile))
-    logger.addHandler(fh)
-
     if (
         os.path.exists(args.output_dir)
         and os.listdir(args.output_dir)
@@ -732,6 +726,12 @@ def main():
                 args.output_dir
             )
         )
+
+    logfile = Path(args.output_dir, "training.log")
+    if not logfile.parent.exists():
+        logfile.parent.mkdir()
+    fh = logging.FileHandler(str(logfile))
+    logger.addHandler(fh)
 
     # Setup distant debugging if needed
     if args.server_ip and args.server_port:
