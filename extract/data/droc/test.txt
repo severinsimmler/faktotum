@@ -863,6 +863,7 @@ vor O -
 Gelächter O -
 und O -
 Schmerz O -
+
 zuckender O -
 Leib O -
 zwei O -
@@ -22451,6 +22452,7 @@ launisch O -
 trotzig O -
 seine O -
 eigenen O -
+
 Pfade O -
 seitwärts O -
 trabte O -
@@ -23549,6 +23551,7 @@ Knechtungen O -
 über O -
 grinsende O -
 Laster O -
+
 schleift O -
 , O -
 vor O -
@@ -26929,6 +26932,7 @@ diese O -
 dumpfe O -
 Verdrossenheit O -
 war O -
+
 treu O -
 , O -
 daß O -
@@ -30874,6 +30878,7 @@ schmachte O -
 ruhen O -
 und O -
 schlafen O -
+
 in O -
 dem O -
 Bewußtsein O -
@@ -32170,6 +32175,7 @@ zu O -
 geben O -
 , O -
 diese O -
+
 Tränenflut O -
 , O -
 in O -
@@ -32369,6 +32375,7 @@ seinen O -
 edlen O -
 Zügen O -
 sich O -
+
 malt O -
 . O -
 
