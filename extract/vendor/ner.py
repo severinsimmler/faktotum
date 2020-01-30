@@ -63,6 +63,7 @@ except ImportError:
 
 logger = logging.getLogger(__name__)
 
+
 ALL_MODELS = sum(
     (
         tuple(conf.pretrained_config_archive_map.keys())
@@ -712,6 +713,10 @@ def main():
         "--server_port", type=str, default="", help="For distant debugging."
     )
     args = parser.parse_args()
+    
+    logfile = Path(args.output_dir, "training.log")
+    fh = logging.FileHandler(str(logfile))
+    logger.addHandler(fh)
 
     if (
         os.path.exists(args.output_dir)

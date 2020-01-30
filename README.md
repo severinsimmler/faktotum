@@ -24,7 +24,7 @@ poetry run bert-fine-tuning \
     --model_type bert \
     --labels extract/data/germeval/labels.txt \
     --model_name_or_path bert-base-german-dbmdz-cased \
-    --output_dir german-germeval \
+    --output_dir /mnt/data/simmler/ner-models/bert-germeval \
     --max_seq_length 128 \
     --num_train_epochs 1 \
     --per_gpu_train_batch_size 32 \
