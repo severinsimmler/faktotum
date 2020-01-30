@@ -290,8 +290,8 @@ def evaluate_labels(name: str, gold: List[List[str]], pred: List[List[str]]) -> 
             else:
                 metric.add_fp(label.split("-")[-1])
 
-        for token in y_gold:
-            if token not in y_pred:
+        for label in y_gold:
+            if label not in y_pred:
                 metric.add_fn(label.split("-")[-1])
             else:
                 metric.add_tn(label.split("-")[-1])
