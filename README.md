@@ -23,14 +23,78 @@ poetry run bert-fine-tuning \
     --data_dir extract/data/germeval \
     --model_type bert \
     --labels extract/data/germeval/labels.txt \
-    --model_name_or_path bert-base-german-dbmdz-cased \
-    --output_dir /mnt/data/users/simmler/ner-models/bert-german-germeval \
+    --model_name_or_path bert-base-multilingual-cased \
+    --output_dir /mnt/data/users/simmler/ner-models/presse/bert-multi-germeval \
     --max_seq_length 128 \
     --num_train_epochs 1 \
     --per_gpu_train_batch_size 16 \
     --save_steps 750 \
     --seed 23 \
-    --do_train \
+    --do_eval \
+    --do_predict && \
+    poetry run bert-fine-tuning \
+    --data_dir extract/data/germeval \
+    --model_type bert \
+    --labels extract/data/germeval/labels.txt \
+    --model_name_or_path bert-base-german-dbmdz-cased \
+    --output_dir /mnt/data/users/simmler/ner-models/presse/bert-german-germeval \
+    --max_seq_length 128 \
+    --num_train_epochs 1 \
+    --per_gpu_train_batch_size 16 \
+    --save_steps 750 \
+    --seed 23 \
+    --do_eval \
+    --do_predict && \
+    poetry run bert-fine-tuning \
+    --data_dir extract/data/litbank \
+    --model_type bert \
+    --labels extract/data/litbank/labels.txt \
+    --model_name_or_path bert-base-multilingual-cased \
+    --output_dir /mnt/data/users/simmler/ner-models/gutenberg/bert-multi-litbank \
+    --max_seq_length 128 \
+    --num_train_epochs 1 \
+    --per_gpu_train_batch_size 16 \
+    --save_steps 750 \
+    --seed 23 \
+    --do_eval \
+    --do_predict && \
+    poetry run bert-fine-tuning \
+    --data_dir extract/data/droc \
+    --model_type bert \
+    --labels extract/data/droc/labels.txt \
+    --model_name_or_path bert-base-multilingual-cased \
+    --output_dir /mnt/data/users/simmler/ner-models/gutenberg/bert-multi-droc \
+    --max_seq_length 128 \
+    --num_train_epochs 2 \
+    --per_gpu_train_batch_size 16 \
+    --save_steps 750 \
+    --seed 23 \
+    --do_eval \
+    --do_predict && \
+    poetry run bert-fine-tuning \
+    --data_dir extract/data/droc \
+    --model_type bert \
+    --labels extract/data/gutenberg/labels.txt \
+    --model_name_or_path bert-base-german-dbmdz-cased \
+    --output_dir /mnt/data/users/simmler/ner-models/gutenberg/bert-german-droc \
+    --max_seq_length 128 \
+    --num_train_epochs 2 \
+    --per_gpu_train_batch_size 16 \
+    --save_steps 750 \
+    --seed 23 \
+    --do_eval \
+    --do_predict && \
+    poetry run bert-fine-tuning \
+    --data_dir extract/data/droc \
+    --model_type bert \
+    --labels extract/data/gutenberg/labels.txt \
+    --model_name_or_path /mnt/data/users/simmler/ner-models/gutenberg/bert-multi-litbank \
+    --output_dir /mnt/data/users/simmler/ner-models/gutenberg/bert-german-litbank-continued-droc \
+    --max_seq_length 128 \
+    --num_train_epochs 2 \
+    --per_gpu_train_batch_size 16 \
+    --save_steps 750 \
+    --seed 23 \
     --do_eval \
     --do_predict
 ```
@@ -82,7 +146,7 @@ TODO:
         [ ] flair: droc continued litbank
         [x] bert multi: litbank
         [x] bert multi: droc
-        [x] bert multi: droc continued litbank
+        [ ] bert multi: droc continued litbank
         [x] bert german: droc
     - presse
         [ ] crf: presse (baseline)

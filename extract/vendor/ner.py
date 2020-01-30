@@ -895,34 +895,6 @@ def main():
         with open(output_test_results_file, "w") as writer:
             for key in sorted(result.keys()):
                 writer.write("{} = {}\n".format(key, str(result[key])))
-        # Save predictions
-        output_test_predictions_file = os.path.join(
-            args.output_dir, "test_predictions.txt"
-        )
-        with open(output_test_predictions_file, "w") as writer:
-            with open(os.path.join(args.data_dir, "test.txt"), "r") as f:
-                example_id = 0
-                for line in f:
-                    if line.startswith("#"):
-                        continue
-                    if line.startswith("-DOCSTART-") or line == "" or line == "\n":
-                        writer.write(line)
-                        if not predictions[example_id]:
-                            example_id += 1
-                    elif predictions[example_id]:
-                        output_line = (
-                            line.split()[0]
-                            + " "
-                            + predictions[example_id].pop(0)
-                            + "\n"
-                        )
-                        writer.write(output_line)
-                    else:
-                        logger.warning(
-                            "Maximum sequence length exceeded: No prediction for '%s'.",
-                            line.split()[0],
-                        )
-
     return results
 
 
