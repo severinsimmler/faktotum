@@ -461,7 +461,7 @@ def evaluate(args, model, tokenizer, labels, pad_token_label_id, mode, prefix=""
         json.dump({"gold": out_label_list, "pred": preds_list}, f, indent=2)
 
     logger.info("***** Eval results %s *****", prefix)
-    print(metric)
+    logger.info(metric)
     return results, preds_list
 
 
