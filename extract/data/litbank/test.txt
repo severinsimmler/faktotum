@@ -340,6 +340,7 @@ its O -
 relationship O -
 to O -
 her O -
+
 , O -
 you O -
 may O -
@@ -1203,6 +1204,7 @@ unaccountably O -
 infatuated O -
 , O -
 of O -
+
 unblemished O -
 conduct O -
 . O -
@@ -9130,6 +9132,7 @@ a O -
 polish O -
 and O -
 three O -
+
 inches O -
 high O -
 , O -
@@ -9747,6 +9750,7 @@ expense O -
 of O -
 repair O -
 or O -
+
 decisive O -
 abandonment O -
 in O -
@@ -21100,6 +21104,7 @@ are O -
 only O -
 horses B-PER (55)
 , O -
+
 and O -
 do O -
 n’t O -
@@ -21485,6 +21490,7 @@ might O -
 scrutinise O -
 the O -
 transient O -
+
 creatures O -
 that O -
 swarm O -
@@ -22120,6 +22126,7 @@ country O -
 and O -
 narrow O -
 , O -
+
 navy-crowded O -
 seas O -
 . O -
@@ -23848,6 +23855,7 @@ drug O -
 , O -
 and O -
 the O -
+
 fierce O -
 energy O -
 of O -
@@ -28656,6 +28664,7 @@ the B-PER (27
 little I-PER -
 old I-PER -
 man I-PER 27)
+
 and O -
 little B-PER (28
 old I-PER -
@@ -28803,6 +28812,7 @@ to O -
 those O -
 whom O -
 she O -
+
 delighted O -
 to O -
 honour O -
@@ -29161,6 +29171,7 @@ side O -
 ) O -
 " O -
 have O -
+
 stupidity O -
 thrust O -
 upon O -
