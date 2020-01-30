@@ -1,125 +1,87 @@
-import json
-import logging
-import os
-import random
-import tempfile
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Union
+from typing import Dict, Union
 
-import numpy as np
-import sklearn.model_selection
-import torch
-from flair.data import Sentence
 from flair.datasets import ColumnCorpus
 from flair.embeddings import PooledFlairEmbeddings
 from flair.models import SequenceTagger
 from flair.trainers import ModelTrainer
-from torch.nn import CrossEntropyLoss
-from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, TensorDataset
-from torch.utils.data.distributed import DistributedSampler
-
-# from torch.utils.tensorboard import SummaryWriter
-from tqdm import tqdm, trange
-from transformers import (
-    AdamW,
-    BertConfig,
-    BertForTokenClassification,
-    BertTokenizer,
-    get_linear_schedule_with_warmup,
-)
-
-from extract.corpus import Token
-from extract.evaluation import evaluate
-
-Dataset = List[List[Token]]
 
 
 @dataclass
 class Baseline:
-    train: Dataset
-    val: Dataset
-    test: Dataset
+    directory: Union[str, Path]
+    train_file: str
+    test_file: str
+    dev_file: str
+    column_format: Dict[int, str] = {0: "text", 1: "ner"}
 
-    def __post_init__(self):
-        self._translate_labels(self.train)
-        self._translate_labels(self.val)
-        self._translate_labels(self.test)
-
-    def _translate_labels(self, data):
-        for sentence in data:
-            previous = "[START]"
-            for token in sentence:
-                if (
-                    previous == "I-FIRST_NAME" or previous == "B-FIRST_NAME"
-                ) and token.label == "B-LAST_NAME":
-                    label = "I-PER"
-                else:
-                    label = self.custom2germeval.get(token.label, "O")
-                previous = token.label
-                token.label = label
-
-    def _load_custom_dataset(self):
-        _train = Path(tempfile.NamedTemporaryFile().name)
-        _test = Path(tempfile.NamedTemporaryFile().name)
-        _val = Path(tempfile.NamedTemporaryFile().name)
-
-        with _train.open("w", encoding="utf-8") as file_:
-            sentences = [
-                "\n".join([f"{token.text} {token.label}" for token in sentence]).strip()
-                for sentence in self.train
-            ]
-            file_.write("\n\n".join(sentences))
-        with _test.open("w", encoding="utf-8") as file_:
-            sentences = [
-                "\n".join([f"{token.text} {token.label}" for token in sentence]).strip()
-                for sentence in self.test
-            ]
-            file_.write("\n\n".join(sentences))
-        with _val.open("w", encoding="utf-8") as file_:
-            sentences = [
-                "\n".join([f"{token.text} {token.label}" for token in sentence]).strip()
-                for sentence in self.val
-            ]
-            file_.write("\n\n".join(sentences))
-
-        corpus = ColumnCorpus(
-            _train.parent,
-            {0: "text", 1: "ner"},
-            train_file=_train.name,
-            test_file=_test.name,
-            dev_file=_val.name,
-        )
-        _train.unlink()
-        _test.unlink()
-        _val.unlink()
-        return corpus
-
-    def _load_germeval_dataset(self):
-        current_folder = Path(__file__).parent
-        data_folder = Path(current_folder, "data", "germeval")
-        columns = {1: "text", 2: "ner"}
+    @property
+    def corpus(self) -> ColumnCorpus:
         return ColumnCorpus(
-            data_folder,
-            columns,
-            train_file="train.tsv",
-            test_file="test.tsv",
-            dev_file="dev.tsv",
+            data_folder=self.directory,
+            column_format=self.column_format,
+            train_file=self.train_file,
+            test_file=self.test_file,
+            dev_file=self.dev_file,
         )
 
-    def _train_flair_model(self, name, corpus, tagger=None):
-        tag_dictionary = corpus.make_tag_dictionary(tag_type="ner")
+    def _train(
+        self,
+        directory: Union[str, Path],
+        tagger: Optional[SequenceTagger] = None,
+        hidden_size: int = 256,
+        learning_rate: float = 0.1,
+        mini_batch_size: int = 32,
+        max_epochs: int = 100,
+        use_crf: bool = True,
+    ) -> SequenceTagger:
+        tag_dictionary = self.corpus.make_tag_dictionary(tag_type="ner")
         if not tagger:
             tagger = SequenceTagger(
-                hidden_size=256,
+                hidden_size=hidden_size,
                 embeddings=[PooledFlairEmbeddings("news-forward")],
                 tag_dictionary=tag_dictionary,
-                tag_type=tag_type,
-                use_crf=True,
+                tag_type="ner",
+                use_crf=use_crf,
             )
-        trainer = ModelTrainer(tagger, corpus)
-        trainer.train(name, learning_rate=0.1, mini_batch_size=32, max_epochs=50)
-        return Path(name, "final-model.pt")
+        trainer = ModelTrainer(tagger, self.corpus)
+        trainer.train(
+            directory,
+            learning_rate=learning_rate,
+            mini_batch_size=mini_batch_size,
+            max_epochs=max_epochs,
+        )
+        model_path = Path(directory, "final-model.pt")
+        return SequenceTagger.load(model_path)
+
+    def _predict(self, tagger: SequenceTagger):
+        preds = list()
+        for sentence in self.test:
+            text = " ".join([token.text for token in sentence])
+            sentence = Sentence(text, use_tokenizer=False)
+            tagger.predict(sentence)
+            pred = [
+                Token(
+                    token.text,
+                    index,
+                    self.germeval2custom.get(token.get_tag("ner").value, "O"),
+                )
+                for index, token in enumerate(sentence)
+            ]
+            preds.append(pred)
+        return preds
+
+    def vanilla(self):
+        model_path = _train_flair_model("vanilla", corpus)
+        tagger = SequenceTagger.load(model_path)
+        pred = self._prediction(tagger)
+        metric = evaluate(name, self.test, pred)
+        print(metric)
+        return metric
+
+
+'''
 
     def scratch(self):
         """Train from scratch _only_ on custom dataset."""
@@ -169,25 +131,6 @@ class Baseline:
             preds.append(pred)
         return preds
 
-    @property
-    def custom2germeval(self):
-        return {
-            "B-FIRST_NAME": "B-PER",
-            "I-FIRST_NAME": "I-PER",
-            "B-LAST_NAME": "B-PER",
-            "I-LAST_NAME": "I-PER",
-            "B-ORGANIZATION": "B-ORG",
-            "I-ORGANIZATION": "I-ORG",
-        }
-
-    @property
-    def germeval2custom(self):
-        return {
-            "B-PER": "B-PER",
-            "I-PER": "I-PER",
-            "B-ORG": "B-ORG",
-            "I-ORG": "I-ORG",
-        }
 
 
 @dataclass
@@ -253,3 +196,4 @@ class RuleBased:
         metric = evaluate(f"vanilla-rule-based", self.test, preds)
         print(metric)
         return metric
+'''
