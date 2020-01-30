@@ -900,6 +900,8 @@ def main():
             with open(os.path.join(args.data_dir, "test.txt"), "r") as f:
                 example_id = 0
                 for line in f:
+                    if line.startswith("#"):
+                        continue
                     if line.startswith("-DOCSTART-") or line == "" or line == "\n":
                         writer.write(line)
                         if not predictions[example_id]:
