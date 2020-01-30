@@ -75,7 +75,7 @@ def read_examples_from_file(data_dir, mode):
                 splits = line.split(" ")
                 words.append(splits[0])
                 if len(splits) > 1:
-                    labels.append(splits[-1].replace("\n", ""))
+                    labels.append(splits[1].replace("\n", ""))
                 else:
                     # Examples could have no label for mode = "test"
                     labels.append("O")
