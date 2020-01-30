@@ -20,13 +20,13 @@ $ poetry install
 
 ```
 poetry run bert-fine-tuning \
-    --data_dir extract/data/litbank \
+    --data_dir extract/data/droc \
     --model_type bert \
-    --labels extract/data/litbank/labels.txt \
-    --model_name_or_path bert-base-multilingual-cased \
-    --output_dir /mnt/data/users/simmler/ner-models/bert-multi-litbank \
+    --labels extract/data/droc/labels.txt \
+    --model_name_or_path /mnt/data/users/simmler/ner-models/bert-multi-litbank \
+    --output_dir /mnt/data/users/simmler/ner-models/bert-multi-litbank-continued-droc \
     --max_seq_length 128 \
-    --num_train_epochs 1 \
+    --num_train_epochs 2 \
     --per_gpu_train_batch_size 16 \
     --save_steps 750 \
     --seed 23 \
@@ -65,24 +65,25 @@ ner-models
 TODO:
 - language modeling
     - gutenberg
-        [x] german gutenberg
-        [x] multi gutenberg
+        [x] bert german gutenberg
+        [x] bert multi gutenberg
+        [ ] flair multi gutenberg
+        [ ] flair historic gutenberg
     - presse
-        [x] german presse
-        [x] multi presse
+        [x] bert german presse
+        [x] bert multi presse
+        [ ] flair multi presse
 
 - ner
     - gutenberg
         [ ] crf: droc (baseline)
         [x] flair: litbank
-        [ ] flair: droc
+        [x] flair: droc
         [ ] flair: droc continued litbank
-        [ ] bert multi: litbank
-        [ ] bert multi: droc
+        [x] bert multi: litbank
+        [x] bert multi: droc
         [ ] bert multi: droc continued litbank
-        [ ] bert german: litbank
-        [ ] bert german: droc
-        [ ] bert german: droc continued litbank
+        [x] bert german: droc
     - presse
         [ ] crf: presse (baseline)
         [x] flair: germeval
