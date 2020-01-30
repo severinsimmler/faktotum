@@ -1029,6 +1029,7 @@ the B-PER (5
 waltzers I-PER 5)
 perforce O -
 ceased O -
+
 their O -
 evolutions O -
 ; O -
@@ -1188,6 +1189,7 @@ disconcert O -
 and O -
 tremulousness O -
 and O -
+
 meditation O -
 as O -
 before O -
@@ -30288,6 +30290,7 @@ front O -
 of O -
 the O -
 huge O -
+
 window O -
 , O -
 producing O -
@@ -32852,6 +32855,7 @@ towards O -
 the O -
 setting O -
 sun O -
+
 is O -
 like O -
 going O -
@@ -33529,6 +33533,7 @@ October O -
 , O -
 the O -
 very O -
+
 roof O -
 was O -
 wreathed O -
@@ -36153,6 +36158,7 @@ not O -
 and O -
 some O -
 on O -
+
 my O -
 face O -
 , O -
@@ -36434,6 +36440,7 @@ who O -
 seemed O -
 to O -
 be O -
+
 a B-PER (101
 person I-PER -
 of I-PER -
@@ -45756,6 +45763,7 @@ our B-PER (33|(34)
 younger I-PER -
 dramatists I-PER -
 , I-PER -
+
 who I-PER -
 would I-PER -
 visit I-PER -
@@ -47934,6 +47942,7 @@ two O -
 pair O -
 of O -
 stairs O -
+
 ’ O -
 window O -
 . O -
@@ -48371,6 +48380,7 @@ her O -
 , O -
 when O -
 , O -
+
 lifting O -
 her O -
 eyes O -
@@ -53469,6 +53479,7 @@ titles O -
 like O -
 _ O -
 The O -
+
 Torch O -
 _ O -
 , O -
@@ -71348,6 +71359,7 @@ sedge O -
 , O -
 and O -
 the O -
+
 ghastly O -
 tree-stems O -
 , O -
@@ -71853,6 +71865,7 @@ the O -
 quaint O -
 and O -
 equivocal O -
+
 appellation O -
 of O -
 the O -
@@ -73005,6 +73018,7 @@ up O -
 altogether O -
 a O -
 countenance O -
+
 not O -
 easily O -
 to O -
@@ -77389,6 +77403,7 @@ I O -
 need O -
 not O -
 trouble O -
+
 myself O -
 to O -
 repeat O -
@@ -79212,6 +79227,7 @@ world O -
 and O -
 there O -
 gathered O -
+
 to O -
 the B-PER (44
 fathers I-PER -
@@ -79902,6 +79918,7 @@ number O -
 of O -
 persons B-PER (20
 who I-PER -
+
 esteemed I-PER -
 themselves I-PER (20)
 fortunate I-PER -
@@ -81183,6 +81200,7 @@ line I-PER -
 , I-PER -
 the I-PER -
 high I-PER -
+
 finish I-PER -
 , I-PER -
 as I-PER -
@@ -102079,6 +102097,7 @@ knowledge O -
 or O -
 showed O -
 any O -
+
 skill O -
 in O -
 handicraft O -
@@ -102361,6 +102380,7 @@ along O -
 with O -
 the O -
 bent O -
+
 , O -
 tread-mill O -
 attitude O -
@@ -103014,6 +103034,7 @@ but O -
 that O -
 there O -
 were O -
+
 several O -
 chiefs O -
 in O -
@@ -103359,6 +103380,7 @@ him O -
 , O -
 and O -
 his O -
+
 limbs O -
 were O -
 stiff O -
@@ -109568,6 +109590,7 @@ of O -
 wild O -
 flowers O -
 and O -
+
 aromatic O -
 plants O -
 , O -
@@ -110771,6 +110794,7 @@ who I-PER -
 is I-PER -
 not I-PER -
 to I-PER -
+
 be I-PER -
 taken I-PER -
 in I-PER 2)
@@ -115152,6 +115176,7 @@ the O -
 miseries O -
 and O -
 hardships O -
+
 , O -
 the O -
 labour O -
@@ -115386,6 +115411,7 @@ mean I-PER -
 or I-PER -
 insufficient I-PER -
 diet I-PER -
+
 on I-PER -
 the I-PER -
 other I-PER -
@@ -115490,6 +115516,7 @@ with O -
 the O -
 labours O -
 of O -
+
 the O -
 hands O -
 or O -
@@ -115699,6 +115726,7 @@ fault O -
 that O -
 must O -
 hinder O -
+
 it O -
 ; O -
 and O -
@@ -115817,6 +115845,7 @@ wars O -
 but O -
 could O -
 not O -
+
 prevail O -
 , O -
 his O -
@@ -116202,6 +116231,7 @@ should O -
 never O -
 serve O -
 out O -
+
 my O -
 time O -
 , O -
@@ -116400,6 +116430,7 @@ consent O -
 to O -
 it O -
 ; O -
+
 that O -
 for O -
 her O -
@@ -116691,6 +116722,7 @@ or O -
 my O -
 father B-PER (4)
 ’s O -
+
 , O -
 without O -
 any O -
@@ -119098,6 +119130,7 @@ was O -
 a O -
 quiet O -
 , O -
+
 well-conducted O -
 little O -
 stream O -
@@ -124347,6 +124380,7 @@ day I-PER -
 , I-PER -
 with I-PER -
 the I-PER -
+
 like I-PER -
 regularity I-PER -
 and I-PER -
@@ -124853,6 +124887,7 @@ come O -
 to O -
 my O -
 chambers O -
+
 after O -
 twelve O -
 o'clock O -
@@ -128304,6 +128339,7 @@ old I-PER -
 seaman I-PER 1)
 with O -
 the O -
+
 sabre O -
 cut O -
 first O -
@@ -133161,6 +133197,7 @@ beyond O -
 was O -
 the O -
 river O -
+
 ; O -
 and O -
 that O -
@@ -135439,6 +135476,7 @@ smiled O -
 and O -
 their O -
 eyes O -
+
 frowned O -
 . O -
 
@@ -139161,6 +139199,7 @@ and O -
 there O -
 , O -
 if O -
+
 every O -
 other O -
 leaf O -
@@ -139477,6 +139516,7 @@ Somerset O -
 and O -
 Sir B-PER (0
 Walter O -
+
 's O -
 handwriting O -
 again O -
@@ -142155,6 +142195,7 @@ no O -
 light O -
 in O -
 it O -
+
 and O -
 where O -
 the O -
@@ -142264,6 +142305,7 @@ heart O -
 that O -
 there O -
 is O -
+
 not O -
 an B-PER (61
 honourable I-PER -
@@ -154502,6 +154544,7 @@ found O -
 , O -
 as O -
 she O -
+
 fancied O -
 , O -
 that O -
@@ -157311,6 +157354,7 @@ or O -
 ( O -
 as O -
 at O -
+
 a O -
 later O -
 period O -
@@ -161734,6 +161778,7 @@ them O -
 , O -
 and O -
 would O -
+
 have O -
 been O -
 a O -
@@ -163312,6 +163357,7 @@ assist O -
 at O -
 dear B-PER (8
 papa I-PER 8)
+
 's O -
 breakfast O -
 , O -
@@ -165425,6 +165471,7 @@ doing O -
 , O -
 he O -
 was O -
+
 putting O -
 a O -
 knife O -
@@ -172915,6 +172962,7 @@ as O -
 besides O -
 being O -
 more O -
+
 than O -
 commonly O -
 thick O -
@@ -175723,6 +175771,7 @@ bestowed O -
 by O -
 the B-PER (49
 disinterested I-PER -
+
 instructor I-PER 49)
 . O -
 
@@ -175885,6 +175934,7 @@ ladies O -
 in O -
 the O -
 Mall O -
+
 . O -
 
 She O -
@@ -176341,6 +176391,7 @@ canary-bird O -
 ; O -
 or O -
 over O -
+
 a O -
 mouse O -
 , O -
