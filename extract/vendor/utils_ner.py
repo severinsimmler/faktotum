@@ -57,6 +57,8 @@ def read_examples_from_file(data_dir, mode):
         words = []
         labels = []
         for line in f:
+            if line.startswith("#"):
+                continue
             if line.startswith("-DOCSTART-") or line == "" or line == "\n":
                 if words:
                     examples.append(

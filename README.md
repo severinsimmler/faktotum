@@ -20,14 +20,14 @@ $ poetry install
 
 ```
 poetry run bert-fine-tuning \
-    --data_dir extract/data/germeval \
+    --data_dir extract/data/litbank \
     --model_type bert \
-    --labels extract/data/germeval/labels.txt \
-    --model_name_or_path bert-base-german-dbmdz-cased \
-    --output_dir /mnt/data/simmler/ner-models/bert-germeval \
+    --labels extract/data/litbank/labels.txt \
+    --model_name_or_path bert-base-multilingual-cased \
+    --output_dir /mnt/data/users/simmler/ner-models/bert-multi-litbank \
     --max_seq_length 128 \
     --num_train_epochs 1 \
-    --per_gpu_train_batch_size 32 \
+    --per_gpu_train_batch_size 16 \
     --save_steps 750 \
     --seed 23 \
     --do_train \
