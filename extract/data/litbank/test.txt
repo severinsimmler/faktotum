@@ -333,6 +333,7 @@ placed O -
 , O -
 will O -
 procure O -
+
 authentic O -
 proofs O -
 of O -
@@ -1200,6 +1201,7 @@ and O -
 , O -
 till O -
 thus O -
+
 unaccountably O -
 infatuated O -
 , O -
@@ -9125,6 +9127,7 @@ a O -
 torturing O -
 cylindrical O -
 collar O -
+
 , O -
 laundered O -
 to O -
@@ -9334,6 +9337,7 @@ the O -
 ornament O -
 distinguished O -
 enough O -
+
 to O -
 warrant O -
 a O -
@@ -9742,6 +9746,7 @@ downstairs O -
 but O -
 not O -
 enough O -
+
 to O -
 justify O -
 either O -
@@ -10560,6 +10565,7 @@ forth O -
 from O -
 the O -
 house O -
+
 . O -
 
 The B-PER (120
@@ -17792,6 +17798,7 @@ the O -
 big O -
 Parliamentary O -
 Buildings O -
+
 . O -
 
 The O -
@@ -17893,6 +17900,7 @@ most O -
 of O -
 her O -
 early O -
+
 illusions O -
 . O -
 
@@ -18718,6 +18726,7 @@ the O -
 Bank O -
 of O -
 Leichardt O -
+
 's O -
 Land O -
 . O -
@@ -21094,6 +21103,7 @@ could O -
 get O -
 more O -
 easily O -
+
 some O -
 other O -
 way O -
@@ -21484,6 +21494,7 @@ as O -
 a B-PER (5
 man I-PER -
 with I-PER -
+
 a I-PER -
 microscope I-PER 5)
 might O -
@@ -22120,6 +22131,7 @@ wisps O -
 of O -
 broad O -
 stretches O -
+
 of O -
 populous O -
 country O -
@@ -23848,6 +23860,7 @@ and O -
 ambition O -
 , O -
 the O -
+
 drowsiness O -
 of O -
 the O -
@@ -28656,6 +28669,7 @@ snowy O -
 night O -
 , O -
 also O -
+
 by O -
 Mr B-PER (1
 Pontifex O -
@@ -28803,6 +28817,7 @@ and O -
 of O -
 which O -
 she O -
+
 would O -
 present O -
 a O -
@@ -29163,6 +29178,7 @@ head O -
 and O -
 ear O -
 were O -
+
 swayed O -
 from O -
 side O -
@@ -29660,6 +29676,7 @@ a O -
 job O -
 in O -
 the O -
+
 whole O -
 course O -
 of O -
