@@ -20,9 +20,9 @@ $ poetry install
 
 ```
 poetry run bert-fine-tuning \
-    --data_dir extract/data/ner/germeval \
+    --data_dir extract/data/germeval \
     --model_type bert \
-    --labels extract/data/ner/germeval/labels.txt \
+    --labels extract/data/germeval/labels.txt \
     --model_name_or_path bert-base-german-dbmdz-cased \
     --output_dir german-germeval \
     --max_seq_length 128 \
@@ -74,7 +74,7 @@ TODO:
 - ner
     - gutenberg
         [ ] crf: droc (baseline)
-        [ ] flair: litbank
+        [x] flair: litbank
         [ ] flair: droc
         [ ] flair: droc continued litbank
         [ ] bert multi: litbank
@@ -85,7 +85,7 @@ TODO:
         [ ] bert german: droc continued litbank
     - presse
         [ ] crf: presse (baseline)
-        [ ] flair: germeval
+        [x] flair: germeval
         [ ] flair: presse
         [ ] flair: presse continued germeval
         [ ] bert multi: germeval
