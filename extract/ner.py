@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Dict, Optional, Union
 
 import flair
+import sklearn_crfsuite
 import torch
 from flair.data import Sentence, MultiCorpus
 from flair.datasets import ColumnCorpus

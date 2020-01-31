@@ -1119,6 +1119,14 @@ testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xm
 
 [[package]]
 category = "main"
+description = "Python binding for CRFsuite"
+name = "python-crfsuite"
+optional = false
+python-versions = "*"
+version = "0.9.6"
+
+[[package]]
+category = "main"
 description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
 optional = false
@@ -1325,6 +1333,20 @@ name = "six"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 version = "1.14.0"
+
+[[package]]
+category = "main"
+description = "CRFsuite (python-crfsuite) wrapper which provides interface simlar to scikit-learn"
+name = "sklearn-crfsuite"
+optional = false
+python-versions = "*"
+version = "0.3.6"
+
+[package.dependencies]
+python-crfsuite = ">=0.8.3"
+six = "*"
+tabulate = "*"
+tqdm = ">=2.0"
 
 [[package]]
 category = "main"
@@ -1620,7 +1642,7 @@ more-itertools = "*"
 docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 
 [metadata]
-content-hash = "0efa0054738cf7f33a8d5ac632112e1db3cb4cb25b317fb69a3c194cec3989d6"
+content-hash = "821302ba3814a34761568a7def90d19d0ee18226e4a96b4f2649a2e7766f1484"
 python-versions = "3.7.*"
 
 [metadata.files]
@@ -2209,6 +2231,46 @@ pytest = [
     {file = "pytest-5.3.4-py3-none-any.whl", hash = "sha256:c13d1943c63e599b98cf118fcb9703e4d7bde7caa9a432567bcdcae4bf512d20"},
     {file = "pytest-5.3.4.tar.gz", hash = "sha256:1d122e8be54d1a709e56f82e2d85dcba3018313d64647f38a91aec88c239b600"},
 ]
+python-crfsuite = [
+    {file = "python-crfsuite-0.9.6.tar.gz", hash = "sha256:a56d2b38e257614b1006c04fb9b0e22c63a177add487e5a64e8eb61f038342cd"},
+    {file = "python_crfsuite-0.9.6-cp27-cp27m-macosx_10_13_x86_64.whl", hash = "sha256:fd638f3aebbdc05299f7abd443419bce9d9df18637787576036a45e04cdb0817"},
+    {file = "python_crfsuite-0.9.6-cp27-cp27m-manylinux1_i686.whl", hash = "sha256:f0f9dce13ddbdf1b1bba7b8b8eadaa87819cdbbe511f2240ac9f63c7753a1da8"},
+    {file = "python_crfsuite-0.9.6-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:155f7329ba87bfc6fae47871ba4e59d3d897ac18f49c6b99e612fc74fd50ed32"},
+    {file = "python_crfsuite-0.9.6-cp27-cp27m-win32.whl", hash = "sha256:138f26301af254e87892ae1cf582503e638d1864ff67457f67eb5278bcececac"},
+    {file = "python_crfsuite-0.9.6-cp27-cp27m-win_amd64.whl", hash = "sha256:ac97939a6cd23a5357c3e496410da6922aef4a62ad1e4833e9252f4b2a080952"},
+    {file = "python_crfsuite-0.9.6-cp27-cp27mu-manylinux1_i686.whl", hash = "sha256:d13b0b6cfd754243ebeda8c601ce6388d76e2a8c3dbadf9ece217e290345ea31"},
+    {file = "python_crfsuite-0.9.6-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:bd88d24d930d8fe4b9050a2171a965f85cae3d0eae0edcc20efe50d05aa74a66"},
+    {file = "python_crfsuite-0.9.6-cp34-cp34m-macosx_10_13_x86_64.whl", hash = "sha256:e477f3efbf34f5233df001c570e5552e492160c6ded803138208cd6391793d26"},
+    {file = "python_crfsuite-0.9.6-cp34-cp34m-manylinux1_i686.whl", hash = "sha256:3791d430e09d76e972a0eb7fde79a23a6517ddfe69b74375703261929d9cd331"},
+    {file = "python_crfsuite-0.9.6-cp34-cp34m-manylinux1_x86_64.whl", hash = "sha256:b1e3e355773c621f4499d3531ecf25aafee62005ee5bb76f6f413af66df712b9"},
+    {file = "python_crfsuite-0.9.6-cp34-cp34m-win32.whl", hash = "sha256:6aaa526be8158c31814baad1d0175d97c345c57436ca19165fde717361ddd64d"},
+    {file = "python_crfsuite-0.9.6-cp34-cp34m-win_amd64.whl", hash = "sha256:50075a8c6c4a72e1c90978cca618e1f9e43a695ec42da6f515ff62490e44a805"},
+    {file = "python_crfsuite-0.9.6-cp35-cp35m-macosx_10_13_x86_64.whl", hash = "sha256:87ad5718050185f087a4c6ab223a5d5d842f9eeda7f4500762c64a0e7c42ba68"},
+    {file = "python_crfsuite-0.9.6-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:e42b33e698d054cb844cbb5bdcd5113e4938466888cccd7697a269a8008b94cd"},
+    {file = "python_crfsuite-0.9.6-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:73b2cddb591097e89a795a53e3c2642cdcbcbf50497fb26a57564212e273d95c"},
+    {file = "python_crfsuite-0.9.6-cp35-cp35m-win32.whl", hash = "sha256:85ffa9cb7c8df3d66925904000b3f35980c9d17a4a2a0ff3c18de91dfb3ae3d9"},
+    {file = "python_crfsuite-0.9.6-cp35-cp35m-win_amd64.whl", hash = "sha256:277e96bc3e5b0ca7317aa3b08da59a9d52ea25b4faf4276952de7b233da0d2fd"},
+    {file = "python_crfsuite-0.9.6-cp36-cp36m-macosx_10_13_x86_64.whl", hash = "sha256:604c1e00bf48a33291ee4a325fbe188f9a934cb4729c93695994125460329040"},
+    {file = "python_crfsuite-0.9.6-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:91e6a0e01056dccee56cdfb75e5e461af7247c52918a2c69c1512173c182e40d"},
+    {file = "python_crfsuite-0.9.6-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:65b68da29e565cae25ad3b0ac72316eda2f7b2e1e8b97960ece84af972e16b97"},
+    {file = "python_crfsuite-0.9.6-cp36-cp36m-win32.whl", hash = "sha256:ad8d81483503c1f62a050b87617032be1a1a2710836990cf190a03ac547f929d"},
+    {file = "python_crfsuite-0.9.6-cp36-cp36m-win_amd64.whl", hash = "sha256:c2f638bdc1913e37339292351a8e81710b89c2fb6fd87489c88e3bb0e85a6b96"},
+    {file = "python_crfsuite-0.9.6-cp37-cp37m-macosx_10_13_x86_64.whl", hash = "sha256:98d5b16dfcebbb87d71cdec6b72d6c84d5522770f1880e15487db973afb6b2e6"},
+    {file = "python_crfsuite-0.9.6-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:50969893f2e61287863e529ed8ef4495b81046dd652f1bfc2f4738ab73c37091"},
+    {file = "python_crfsuite-0.9.6-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:cee79c713892b89a02f8213e62c270039718b2d909cc2f994c86f5f12f3537c6"},
+    {file = "python_crfsuite-0.9.6-cp37-cp37m-win32.whl", hash = "sha256:1a53550d506fc1c77720267204e54d1f3e4affa75c558d9718cfdd65e9413715"},
+    {file = "python_crfsuite-0.9.6-cp37-cp37m-win_amd64.whl", hash = "sha256:88256c0bb76d2178ea4060dcc97096612dee4c8d929cbc604bfc98a48ca9311f"},
+    {file = "python_crfsuite-0.9.6-py2.7-win-amd64.egg", hash = "sha256:2d63e4e30facc9a885fea1977f38c7ee76cf06e781fb7e745b950d31cf9935a2"},
+    {file = "python_crfsuite-0.9.6-py2.7-win32.egg", hash = "sha256:5b24e6c15e11ef9f02987adb61313a44ae5742c57757cce8f6dbb2d533d9c9af"},
+    {file = "python_crfsuite-0.9.6-py3.4-win-amd64.egg", hash = "sha256:b5cf6c8e376668ef46eade729e7098a2c1ef5fd3e96284d99f822ed98e076c54"},
+    {file = "python_crfsuite-0.9.6-py3.4-win32.egg", hash = "sha256:7856dfb4aebfc9e472f5199f31db418a393fe82048aa07ab98bda6dadacd3ad8"},
+    {file = "python_crfsuite-0.9.6-py3.5-win-amd64.egg", hash = "sha256:ada96688973a7ab20e8d2c5e157f64adccc848ce7cf157efd20dec177f87c94d"},
+    {file = "python_crfsuite-0.9.6-py3.5-win32.egg", hash = "sha256:98e7344c37d8942cd8e24c57375aeb47fcc5601a64c8591ab6d7c8e21d179134"},
+    {file = "python_crfsuite-0.9.6-py3.6-win-amd64.egg", hash = "sha256:72a0fb8204e1fb64bd23c62aeeb675dc7d4584c670bc77a491479deb43ceabf0"},
+    {file = "python_crfsuite-0.9.6-py3.6-win32.egg", hash = "sha256:6b2aa0072935a76f54c7f34b4b252a4c0ff3531b73e8968f7a8e1c506bace00a"},
+    {file = "python_crfsuite-0.9.6-py3.7-win-amd64.egg", hash = "sha256:95f9775a64ce8f05c28821e93cdcd0544704b3102f444ac8d03fc4bcd61dfdea"},
+    {file = "python_crfsuite-0.9.6-py3.7-win32.egg", hash = "sha256:25b66bc3b6011fd5ea52e0852e5bca608423dcd6f1daad358cedc6bfc418a1c1"},
+]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
     {file = "python_dateutil-2.8.1-py2.py3-none-any.whl", hash = "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"},
@@ -2415,6 +2477,10 @@ seqeval = [
 six = [
     {file = "six-1.14.0-py2.py3-none-any.whl", hash = "sha256:8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"},
     {file = "six-1.14.0.tar.gz", hash = "sha256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"},
+]
+sklearn-crfsuite = [
+    {file = "sklearn-crfsuite-0.3.6.tar.gz", hash = "sha256:2f59aad3055e01a778a79a6352891cac04788e8b52688aa5bc8b11be7717861e"},
+    {file = "sklearn_crfsuite-0.3.6-py2.py3-none-any.whl", hash = "sha256:6e9a42bc3de96941d5f7262335130955b8c380b1356147622368f385075705d9"},
 ]
 smart-open = [
     {file = "smart_open-1.9.0.tar.gz", hash = "sha256:e64c2b5e62a452fa7fc4d21aecbada826ca21097bbe117841f8f4fc53dbab676"},
