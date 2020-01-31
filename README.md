@@ -2,7 +2,7 @@
 
 ## Getting started
 
-Use [Poetry](https://python-poetry.org/) to manage dependencies and a virtual environment. To set up a deterministic build (e.g. to [reproduce numbers](reproducing-numbers)), run:
+Please use [Poetry](https://python-poetry.org/) to manage dependencies and a virtual environment. This is necessary (or at least recommended) to set up a deterministic build (e.g. to [reproduce numbers](#reproducing-numbers)).
 
 ```
 $ poetry install
