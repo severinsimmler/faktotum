@@ -70,22 +70,25 @@ class Baseline:
                 yield sentence
 
     def evaluate(self, name: str, tagger: SequenceTagger):
-        flair.device = torch.device("cpu")
-
         preds = list()
         golds = list()
-
         test = Path(self.directory, self.test_file)
-        for sentence in self._parse_data(test):
+        for i, sentence in enumerate(self._parse_data(test)):
+            print(i)
             s = Sentence(" ".join([token for token, _ in sentence]), use_tokenizer=False)
             tagger.predict(s)
             preds.append([t.get_tag("ner").value for t in s])
             golds.append([label for _, label in sentence])
+            if i == 100:
+                break
 
         with Path("prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": golds, "pred": preds}, file_, indent=2)
 
         return evaluate_labels(name, golds, preds)
+
+    def scratch(self)
+
 
 '''
 
