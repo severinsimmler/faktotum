@@ -80,7 +80,6 @@ class Baseline:
             "word.lower()": word.lower(),
             "word[-3:]": word[-3:],
             "word.isupper()": word.isupper(),
-            "word.islower()": word.islower(),
             "word.istitle()": word.istitle(),
             "word.isdigit()": word.isdigit(),
             "postag": postag,
