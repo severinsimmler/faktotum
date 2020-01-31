@@ -5,10 +5,13 @@ from typing import Dict, Optional, Union
 
 import flair
 import torch
+from flair.data import Sentence
 from flair.datasets import ColumnCorpus
 from flair.embeddings import PooledFlairEmbeddings
 from flair.models import SequenceTagger
 from flair.trainers import ModelTrainer
+
+from extract.evaluation import evaluate_labels
 
 
 @dataclass
