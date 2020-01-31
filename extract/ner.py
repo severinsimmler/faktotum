@@ -58,6 +58,18 @@ class Baseline:
 
         metric = evaluate_labels("crf-baseline", y_test, y_pred)
         print(metric)
+
+        results = {
+            "precision": metric.precision(),
+            "recall": metric.recall(),
+            "micro_f1": metric.micro_avg_f1(),
+            "macro_f1": metric.macro_avg_f1(),
+            "micro_accuracy": metric.micro_avg_accuracy(),
+            "macro_accuracy": metric.macro_avg_accuracy(),
+        }
+
+        with Path("results.json").open("w", encoding="utf-8") as file_:
+            json.dump(results, file_, indent=2)
         return metric
 
     def _word2features(self, sent, i):
