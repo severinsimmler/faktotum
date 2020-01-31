@@ -78,7 +78,9 @@ class Baseline:
         golds = list()
         test = Path(self.directory, self.test_file)
         for sentence in self._parse_data(test):
-            s = Sentence(" ".join([token for token, _ in sentence]), use_tokenizer=False)
+            s = Sentence(
+                " ".join([token for token, _ in sentence]), use_tokenizer=False
+            )
             tagger.predict(s)
             preds.append([t.get_tag("ner").value for t in s])
             golds.append([label for _, label in sentence])
@@ -103,7 +105,7 @@ class Baseline:
         print(metric)
         return metric
 
-    def multi_corpus(self,first_corpus: str = "germeval"):
+    def multi_corpus(self, first_corpus: str = "germeval"):
         data_dir = Path(Path(self.directory).parent, first_corpus)
         first = self._load_corpus(data_dir)
         second = self._load_corpus()
@@ -134,8 +136,8 @@ class BaselineNeu:
                 sentence = list()
 
     def from_scratch(self):
-        train_sents = self._parse_data(Path(self.directory, self.train_file))
-        test_sents = self._parse_data(Path(self.directory, self.test_file))
+        train_sents = list(self._parse_data(Path(self.directory, self.train_file)))
+        test_sents = list(self._parse_data(Path(self.directory, self.test_file)))
 
         X_train = [self._sent2features(s) for s in train_sents]
         y_train = [self._sent2labels(s) for s in train_sents]
@@ -143,16 +145,13 @@ class BaselineNeu:
         X_test = [self._sent2features(s) for s in test_sents]
         y_test = [self._sent2labels(s) for s in test_sents]
 
-        crf = sklearn_crfsuite.CRF(
-            algorithm='lbfgs',
-            c1=0.1,
-            c2=0.1,
-            max_iterations=100,
-            all_possible_transitions=True
-        )
+        crf = sklearn_crfsuite.CRF(algorithm="l2sgd", verbose=True)
         crf.fit(X_train, y_train)
 
         y_pred = crf.predict(X_test)
+
+        with Path("prediction.json").open("w", encoding="utf-8") as file_:
+            json.dump({"gold": y_test, "pred": y_pred}, file_, indent=2)
 
         metric = evaluate_labels("crf-baseline", y_test, y_pred)
         print(metric)
@@ -163,43 +162,46 @@ class BaselineNeu:
         postag = sent[i][3]
 
         features = {
-            'bias': 1.0,
-            'word.lower()': word.lower(),
-            'word[-3:]': word[-3:],
-            'word.isupper()': word.isupper(),
-            'word.istitle()': word.istitle(),
-            'word.isdigit()': word.isdigit(),
-            'postag': postag,
-            'postag[:2]': postag[:2],
+            "word.lower()": word.lower(),
+            "word[-3:]": word[-3:],
+            "word.isupper()": word.isupper(),
+            "word.islower()": word.islower(),
+            "word.istitle()": word.istitle(),
+            "word.isdigit()": word.isdigit(),
+            "postag": postag,
+            "postag[:2]": postag[:2],
         }
         if i > 0:
-            word1 = sent[i-1][0]
-            postag1 = sent[i-1][1]
-            features.update({
-                '-1:word.lower()': word1.lower(),
-                '-1:word.istitle()': word1.istitle(),
-                '-1:word.isupper()': word1.isupper(),
-                '-1:postag': postag1,
-                '-1:postag[:2]': postag1[:2],
-            })
+            word1 = sent[i - 1][0]
+            postag1 = sent[i - 1][1]
+            features.update(
+                {
+                    "-1:word.lower()": word1.lower(),
+                    "-1:word.istitle()": word1.istitle(),
+                    "-1:word.isupper()": word1.isupper(),
+                    "-1:postag": postag1,
+                    "-1:postag[:2]": postag1[:2],
+                }
+            )
         else:
-            features['BOS'] = True
+            features["BOS"] = True
 
-        if i < len(sent)-1:
-            word1 = sent[i+1][0]
-            postag1 = sent[i+1][1]
-            features.update({
-                '+1:word.lower()': word1.lower(),
-                '+1:word.istitle()': word1.istitle(),
-                '+1:word.isupper()': word1.isupper(),
-                '+1:postag': postag1,
-                '+1:postag[:2]': postag1[:2],
-            })
+        if i < len(sent) - 1:
+            word1 = sent[i + 1][0]
+            postag1 = sent[i + 1][1]
+            features.update(
+                {
+                    "+1:word.lower()": word1.lower(),
+                    "+1:word.istitle()": word1.istitle(),
+                    "+1:word.isupper()": word1.isupper(),
+                    "+1:postag": postag1,
+                    "+1:postag[:2]": postag1[:2],
+                }
+            )
         else:
-            features['EOS'] = True
+            features["EOS"] = True
 
         return features
-
 
     def _sent2features(self, sent):
         return [self._word2features(sent, i) for i in range(len(sent))]
@@ -209,6 +211,7 @@ class BaselineNeu:
 
     def _sent2tokens(self, sent):
         return [token for token, _, _, _ in sent]
+
 
 '''
 first_corpus

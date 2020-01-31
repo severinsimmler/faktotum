@@ -717,7 +717,7 @@ def main():
         "--server_port", type=str, default="", help="For distant debugging."
     )
     args = parser.parse_args()
-    
+
     if (
         os.path.exists(args.output_dir)
         and os.listdir(args.output_dir)
