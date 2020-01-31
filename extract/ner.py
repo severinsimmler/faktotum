@@ -87,9 +87,6 @@ class Baseline:
 
         return evaluate_labels(name, golds, preds)
 
-    def scratch(self)
-
-
 '''
 
     def scratch(self):
