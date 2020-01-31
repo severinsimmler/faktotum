@@ -5,7 +5,7 @@ from typing import Dict, Optional, Union
 
 import flair
 import torch
-from flair.data import Sentence
+from flair.data import Sentence, MultiCorpus
 from flair.datasets import ColumnCorpus
 from flair.embeddings import PooledFlairEmbeddings
 from flair.models import SequenceTagger
@@ -21,10 +21,9 @@ class Baseline:
     test_file: str
     dev_file: str
 
-    @property
-    def _corpus(self) -> ColumnCorpus:
+    def _load_corpus(self, data_folder: Union[str, Path] = None) -> ColumnCorpus:
         return ColumnCorpus(
-            data_folder=self.directory,
+            data_folder=data_folder if data_folder else self.directory,
             column_format={0: "text", 1: "ner"},
             train_file=self.train_file,
             test_file=self.test_file,
@@ -34,6 +33,7 @@ class Baseline:
     def _train(
         self,
         output_dir: Union[str, Path],
+        corpus: Optional[ColumnCorpus] = None,
         tagger: Optional[SequenceTagger] = None,
         hidden_size: int = 256,
         learning_rate: float = 0.1,
@@ -41,7 +41,7 @@ class Baseline:
         max_epochs: int = 100,
         use_crf: bool = True,
     ) -> SequenceTagger:
-        tag_dictionary = self._corpus.make_tag_dictionary(tag_type="ner")
+        tag_dictionary = corpus.make_tag_dictionary(tag_type="ner")
         if not tagger:
             tagger = SequenceTagger(
                 hidden_size=hidden_size,
@@ -50,7 +50,7 @@ class Baseline:
                 tag_type="ner",
                 use_crf=use_crf,
             )
-        trainer = ModelTrainer(tagger, self._corpus)
+        trainer = ModelTrainer(tagger, corpus)
         trainer.train(
             output_dir,
             learning_rate=learning_rate,
@@ -64,6 +64,8 @@ class Baseline:
     def _parse_data(filepath):
         sentence = list()
         for row in Path(filepath).read_text(encoding="utf-8").split("\n"):
+            if row.startswith("# "):
+                continue
             if row != "":
                 sentence.append(row.split(" ")[:2])
             else:
@@ -75,7 +77,6 @@ class Baseline:
         golds = list()
         test = Path(self.directory, self.test_file)
         for sentence in self._parse_data(test):
-            print(sentence)
             s = Sentence(" ".join([token for token, _ in sentence]), use_tokenizer=False)
             tagger.predict(s)
             preds.append([t.get_tag("ner").value for t in s])
@@ -86,11 +87,33 @@ class Baseline:
 
         return evaluate_labels(name, golds, preds)
 
+    def from_scratch(self):
+        corpus = self._load_corpus()
+        tagger = self._train("from-scratch-model", corpus)
+        metric = self._evaluate("from-scratch-model", tagger)
+        print(metric)
+        return metric
 
+    def vanilla(self, training_corpus: str = "germeval"):
+        data_dir = Path(Path(self.directory).parent, training_corpus)
+        training = self._load_corpus(data_dir)
+        tagger = self._train("vanilla-model", training)
+        metric = self._evaluate("vanilla-model", tagger)
+        print(metric)
+        return metric
 
+    def multi_corpus(self,first_corpus: str = "germeval"):
+        data_dir = Path(Path(self.directory).parent, first_corpus)
+        first = self._load_corpus(data_dir)
+        second = self._load_corpus()
+        corpus = MultiCorpus([first, second])
+        tagger = self._train("multi-corpus-model", corpus)
+        metric = self._evaluate("multi-corpus-model", tagger)
+        print(metric)
+        return metric
 
 '''
-
+first_corpus
     def scratch(self):
         """Train from scratch _only_ on custom dataset."""
         corpus = self._load_custom_dataset()
