@@ -83,7 +83,7 @@ class Baseline:
             golds.append([label for _, label in sentence], pred)
 
         with Path("prediction.json").open("w", encoding="utf-8") as file_:
-            json.dump({"gold": gold, "pred": pred}, file_, indent=2)
+            json.dump({"gold": golds, "pred": preds}, file_, indent=2)
 
         return evaluate_labels(name, golds, preds)
 
