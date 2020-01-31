@@ -22,7 +22,7 @@ class Baseline:
     dev_file: str
 
     @property
-    def corpus(self) -> ColumnCorpus:
+    def _corpus(self) -> ColumnCorpus:
         return ColumnCorpus(
             data_folder=self.directory,
             column_format={0: "text", 1: "ner"},
@@ -31,7 +31,7 @@ class Baseline:
             dev_file=self.dev_file,
         )
 
-    def train(
+    def _train(
         self,
         output_dir: Union[str, Path],
         tagger: Optional[SequenceTagger] = None,
@@ -41,7 +41,7 @@ class Baseline:
         max_epochs: int = 100,
         use_crf: bool = True,
     ) -> SequenceTagger:
-        tag_dictionary = self.corpus.make_tag_dictionary(tag_type="ner")
+        tag_dictionary = self._corpus.make_tag_dictionary(tag_type="ner")
         if not tagger:
             tagger = SequenceTagger(
                 hidden_size=hidden_size,
@@ -50,7 +50,7 @@ class Baseline:
                 tag_type="ner",
                 use_crf=use_crf,
             )
-        trainer = ModelTrainer(tagger, self.corpus)
+        trainer = ModelTrainer(tagger, self._corpus)
         trainer.train(
             output_dir,
             learning_rate=learning_rate,
@@ -68,24 +68,25 @@ class Baseline:
                 sentence.append(row.split(" ")[:2])
             else:
                 yield sentence
+                sentence = list()
 
-    def evaluate(self, name: str, tagger: SequenceTagger):
+    def _evaluate(self, name: str, tagger: SequenceTagger):
         preds = list()
         golds = list()
         test = Path(self.directory, self.test_file)
-        for i, sentence in enumerate(self._parse_data(test)):
-            print(i)
+        for sentence in self._parse_data(test):
             s = Sentence(" ".join([token for token, _ in sentence]), use_tokenizer=False)
             tagger.predict(s)
             preds.append([t.get_tag("ner").value for t in s])
             golds.append([label for _, label in sentence])
-            if i == 100:
-                break
 
         with Path("prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": golds, "pred": preds}, file_, indent=2)
 
         return evaluate_labels(name, golds, preds)
+
+
+
 
 '''
 
