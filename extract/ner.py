@@ -2,6 +2,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Union
 
+import flair
+import torch
 from flair.datasets import ColumnCorpus
 from flair.embeddings import PooledFlairEmbeddings
 from flair.models import SequenceTagger
@@ -14,21 +16,20 @@ class Baseline:
     train_file: str
     test_file: str
     dev_file: str
-    column_format: Dict[int, str] = {0: "text", 1: "ner"}
 
     @property
     def corpus(self) -> ColumnCorpus:
         return ColumnCorpus(
             data_folder=self.directory,
-            column_format=self.column_format,
+            column_format={0: "text", 1: "ner"},
             train_file=self.train_file,
             test_file=self.test_file,
             dev_file=self.dev_file,
         )
 
-    def _train(
+    def train(
         self,
-        directory: Union[str, Path],
+        output_dir: Union[str, Path],
         tagger: Optional[SequenceTagger] = None,
         hidden_size: int = 256,
         learning_rate: float = 0.1,
@@ -40,46 +41,46 @@ class Baseline:
         if not tagger:
             tagger = SequenceTagger(
                 hidden_size=hidden_size,
-                embeddings=[PooledFlairEmbeddings("news-forward")],
+                embeddings=PooledFlairEmbeddings("news-forward"),
                 tag_dictionary=tag_dictionary,
                 tag_type="ner",
                 use_crf=use_crf,
             )
         trainer = ModelTrainer(tagger, self.corpus)
         trainer.train(
-            directory,
+            output_dir,
             learning_rate=learning_rate,
             mini_batch_size=mini_batch_size,
             max_epochs=max_epochs,
         )
-        model_path = Path(directory, "final-model.pt")
+        model_path = Path(output_dir, "best-model.pt")
         return SequenceTagger.load(model_path)
 
-    def _predict(self, tagger: SequenceTagger):
+    @staticmethod
+    def _parse_data(filepath):
+        sentence = list()
+        for row in Path(filepath).read_text(encoding="utf-8").split("\n"):
+            if row != "":
+                sentence.append(row.split(" ")[:2])
+            else:
+                yield sentence
+
+    def evaluate(self, name: str, tagger: SequenceTagger):
+        flair.device = torch.device("cpu")
+
         preds = list()
-        for sentence in self.test:
-            text = " ".join([token.text for token in sentence])
-            sentence = Sentence(text, use_tokenizer=False)
-            tagger.predict(sentence)
-            pred = [
-                Token(
-                    token.text,
-                    index,
-                    self.germeval2custom.get(token.get_tag("ner").value, "O"),
-                )
-                for index, token in enumerate(sentence)
-            ]
-            preds.append(pred)
-        return preds
+        golds = list()
 
-    def vanilla(self):
-        model_path = _train_flair_model("vanilla", corpus)
-        tagger = SequenceTagger.load(model_path)
-        pred = self._prediction(tagger)
-        metric = evaluate(name, self.test, pred)
-        print(metric)
-        return metric
+        for sentence in self._parse_data(self.test):
+            s = Sentence(" ".join([token, _ for token in sentence]), use_tokenizer=False)
+            tagger.predict(s)
+            preds.append([t.get_tag("ner").value for t in s])
+            golds.append([_, label for label in sentence], pred)
 
+        with Path("prediction.json").open("w", encoding="utf-8") as file_:
+            json.dump({"gold": gold, "pred": pred}, file_, indent=2)
+
+        return evaluate_labels(name, golds, preds)
 
 '''
 
