@@ -80,7 +80,7 @@ class Baseline:
             s = Sentence(" ".join([token for token, _ in sentence]), use_tokenizer=False)
             tagger.predict(s)
             preds.append([t.get_tag("ner").value for t in s])
-            golds.append([label for _, label in sentence], pred)
+            golds.append([label for _, label in sentence])
 
         with Path("prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": golds, "pred": preds}, file_, indent=2)
