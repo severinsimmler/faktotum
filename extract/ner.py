@@ -115,7 +115,7 @@ class Baseline:
 
 
 @dataclass
-class Baseline:
+class BaselineNeu:
     directory: Union[str, Path]
     train_file: str
     test_file: str
@@ -158,7 +158,7 @@ class Baseline:
         print(metric)
         return metric
 
-    def _word2features(sent, i):
+    def _word2features(self, sent, i):
         word = sent[i][0]
         postag = sent[i][3]
 
@@ -201,13 +201,13 @@ class Baseline:
         return features
 
 
-    def _sent2features(sent):
+    def _sent2features(self, sent):
         return [self._word2features(sent, i) for i in range(len(sent))]
 
-    def _sent2labels(sent):
+    def _sent2labels(self, sent):
         return [label for _, label, _, _ in sent]
 
-    def _sent2tokens(sent):
+    def _sent2tokens(self, sent):
         return [token for token, _, _, _ in sent]
 
 '''
