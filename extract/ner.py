@@ -72,7 +72,8 @@ class Baseline:
         preds = list()
         golds = list()
 
-        for sentence in self._parse_data(self.test):
+        test = Path(self.directory, self.test_file)
+        for sentence in self._parse_data(test):
             s = Sentence(" ".join([token for token, _ in sentence]), use_tokenizer=False)
             tagger.predict(s)
             preds.append([t.get_tag("ner").value for t in s])
