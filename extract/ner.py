@@ -73,10 +73,10 @@ class Baseline:
         golds = list()
 
         for sentence in self._parse_data(self.test):
-            s = Sentence(" ".join([token, _ for token, _ in sentence]), use_tokenizer=False)
+            s = Sentence(" ".join([token for token, _ in sentence]), use_tokenizer=False)
             tagger.predict(s)
             preds.append([t.get_tag("ner").value for t in s])
-            golds.append([_, label for _, label in sentence], pred)
+            golds.append([label for _, label in sentence], pred)
 
         with Path("prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": gold, "pred": pred}, file_, indent=2)
