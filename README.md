@@ -91,6 +91,10 @@ or:
         [x] bert multi: droc
         [x] bert multi: droc continued litbank
         [x] bert german: droc
+        [x] bert fine-tuned multi: droc
+        [x] bert fine-tuned german: droc
+        [x] bert fine-tuned multi: litbank
+        [x] bert fine-tuned multi: droc continued litbank
     - presse
         [ ] crf: presse (baseline)
         [x] flair: germeval
@@ -102,4 +106,8 @@ or:
         [x] bert german: germeval
         [ ] bert german: presse
         [ ] bert german: presse continued germeval
+        [ ] bert fine-tuned multi: presse
+        [ ] bert fine-tuned german: presse
+        [ ] bert fine-tuned multi: germeval
+        [ ] bert fine-tuned multi: presse continued germeval
 ```
