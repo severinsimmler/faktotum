@@ -1,9 +1,11 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
+import subprocess
 from typing import Dict, Optional, Union
 
 import flair
+import joblib
 import sklearn_crfsuite
 import torch
 from flair.data import Sentence, MultiCorpus
@@ -17,6 +19,105 @@ from extract.evaluation import evaluate_labels
 
 @dataclass
 class Baseline:
+    directory: Union[str, Path]
+    train_file: str
+    test_file: str
+    dev_file: str
+
+    @staticmethod
+    def _parse_data(filepath):
+        sentence = list()
+        for row in Path(filepath).read_text(encoding="utf-8").split("\n"):
+            if row.startswith("# "):
+                continue
+            if row != "":
+                sentence.append(row.split(" "))
+            else:
+                yield sentence
+                sentence = list()
+
+    def from_scratch(self):
+        train_sents = list(self._parse_data(Path(self.directory, self.train_file)))
+        test_sents = list(self._parse_data(Path(self.directory, self.test_file)))
+
+        X_train = [self._sent2features(s) for s in train_sents]
+        y_train = [self._sent2labels(s) for s in train_sents]
+
+        X_test = [self._sent2features(s) for s in test_sents]
+        y_test = [self._sent2labels(s) for s in test_sents]
+
+        crf = sklearn_crfsuite.CRF(algorithm="l2sgd", verbose=True)
+        crf.fit(X_train, y_train)
+
+        y_pred = crf.predict(X_test)
+
+        joblib.dump(crf, "crf-baseline.joblib")
+
+        with Path("prediction.json").open("w", encoding="utf-8") as file_:
+            json.dump({"gold": y_test, "pred": y_pred}, file_, indent=2)
+
+        metric = evaluate_labels("crf-baseline", y_test, y_pred)
+        print(metric)
+        return metric
+
+    def _word2features(self, sent, i):
+        word = sent[i][0]
+        postag = sent[i][3]
+
+        features = {
+            "word.lower()": word.lower(),
+            "word[-3:]": word[-3:],
+            "word.isupper()": word.isupper(),
+            "word.islower()": word.islower(),
+            "word.istitle()": word.istitle(),
+            "word.isdigit()": word.isdigit(),
+            "postag": postag,
+            "postag[:2]": postag[:2],
+        }
+        if i > 0:
+            word1 = sent[i - 1][0]
+            postag1 = sent[i - 1][1]
+            features.update(
+                {
+                    "-1:word.lower()": word1.lower(),
+                    "-1:word.istitle()": word1.istitle(),
+                    "-1:word.isupper()": word1.isupper(),
+                    "-1:postag": postag1,
+                    "-1:postag[:2]": postag1[:2],
+                }
+            )
+        else:
+            features["BOS"] = True
+
+        if i < len(sent) - 1:
+            word1 = sent[i + 1][0]
+            postag1 = sent[i + 1][1]
+            features.update(
+                {
+                    "+1:word.lower()": word1.lower(),
+                    "+1:word.istitle()": word1.istitle(),
+                    "+1:word.isupper()": word1.isupper(),
+                    "+1:postag": postag1,
+                    "+1:postag[:2]": postag1[:2],
+                }
+            )
+        else:
+            features["EOS"] = True
+
+        return features
+
+    def _sent2features(self, sent):
+        return [self._word2features(sent, i) for i in range(len(sent))]
+
+    def _sent2labels(self, sent):
+        return [label for _, label, _, _ in sent]
+
+    def _sent2tokens(self, sent):
+        return [token for token, _, _, _ in sent]
+
+
+@dataclass
+class Flair:
     directory: Union[str, Path]
     train_file: str
     test_file: str
@@ -117,215 +218,40 @@ class Baseline:
 
 
 @dataclass
-class BaselineNeu:
+class BERT:
     directory: Union[str, Path]
     train_file: str
     test_file: str
     dev_file: str
 
-    @staticmethod
-    def _parse_data(filepath):
-        sentence = list()
-        for row in Path(filepath).read_text(encoding="utf-8").split("\n"):
-            if row.startswith("# "):
-                continue
-            if row != "":
-                sentence.append(row.split(" "))
-            else:
-                yield sentence
-                sentence = list()
-
-    def from_scratch(self):
-        train_sents = list(self._parse_data(Path(self.directory, self.train_file)))
-        test_sents = list(self._parse_data(Path(self.directory, self.test_file)))
-
-        X_train = [self._sent2features(s) for s in train_sents]
-        y_train = [self._sent2labels(s) for s in train_sents]
-
-        X_test = [self._sent2features(s) for s in test_sents]
-        y_test = [self._sent2labels(s) for s in test_sents]
-
-        crf = sklearn_crfsuite.CRF(algorithm="l2sgd", verbose=True)
-        crf.fit(X_train, y_train)
-
-        y_pred = crf.predict(X_test)
-
-        with Path("prediction.json").open("w", encoding="utf-8") as file_:
-            json.dump({"gold": y_test, "pred": y_pred}, file_, indent=2)
-
-        metric = evaluate_labels("crf-baseline", y_test, y_pred)
-        print(metric)
-        return metric
-
-    def _word2features(self, sent, i):
-        word = sent[i][0]
-        postag = sent[i][3]
-
-        features = {
-            "word.lower()": word.lower(),
-            "word[-3:]": word[-3:],
-            "word.isupper()": word.isupper(),
-            "word.islower()": word.islower(),
-            "word.istitle()": word.istitle(),
-            "word.isdigit()": word.isdigit(),
-            "postag": postag,
-            "postag[:2]": postag[:2],
-        }
-        if i > 0:
-            word1 = sent[i - 1][0]
-            postag1 = sent[i - 1][1]
-            features.update(
-                {
-                    "-1:word.lower()": word1.lower(),
-                    "-1:word.istitle()": word1.istitle(),
-                    "-1:word.isupper()": word1.isupper(),
-                    "-1:postag": postag1,
-                    "-1:postag[:2]": postag1[:2],
-                }
-            )
-        else:
-            features["BOS"] = True
-
-        if i < len(sent) - 1:
-            word1 = sent[i + 1][0]
-            postag1 = sent[i + 1][1]
-            features.update(
-                {
-                    "+1:word.lower()": word1.lower(),
-                    "+1:word.istitle()": word1.istitle(),
-                    "+1:word.isupper()": word1.isupper(),
-                    "+1:postag": postag1,
-                    "+1:postag[:2]": postag1[:2],
-                }
-            )
-        else:
-            features["EOS"] = True
-
-        return features
-
-    def _sent2features(self, sent):
-        return [self._word2features(sent, i) for i in range(len(sent))]
-
-    def _sent2labels(self, sent):
-        return [label for _, label, _, _ in sent]
-
-    def _sent2tokens(self, sent):
-        return [token for token, _, _, _ in sent]
-
-
-'''
-first_corpus
-    def scratch(self):
-        """Train from scratch _only_ on custom dataset."""
-        corpus = self._load_custom_dataset()
-        model_path = _train_flair_model("scratch", corpus)
-        tagger = SequenceTagger.load(model_path)
-        pred = self._prediction(tagger)
-        metric = evaluate("scratch", self.test, pred)
-        print(metric)
-        return metric
-
-    def vanilla(self):
-        """Train from scratch _only_ on Germeval dataset and evaluate on custom dataset."""
-        corpus = self._load_germeval_dataset()
-        model_path = _train_flair_model("vanilla", corpus)
-        tagger = SequenceTagger.load(model_path)
-        pred = self._prediction(tagger)
-        metric = evaluate(name, self.test, pred)
-        print(metric)
-        return metric
-
-    def continued(self, model_path):
-        """Continue training with custom dataset."""
-        corpus = self._load_custom_dataset()
-        tagger = SequenceTagger.load(model_path)
-        model_path = _train_flair_model("continued", corpus, tagger)
-        tagger = SequenceTagger.load(model_path)
-        pred = self._prediction(tagger)
-        metric = evaluate(f"{name}-continued", self.test, pred)
-        print(metric)
-        return metric
-
-    def _prediction(self, tagger: SequenceTagger) -> Dataset:
-        preds = list()
-        for sentence in self.test:
-            text = " ".join([token.text for token in sentence])
-            sentence = Sentence(text, use_tokenizer=False)
-            tagger.predict(sentence)
-            pred = [
-                Token(
-                    token.text,
-                    index,
-                    self.germeval2custom.get(token.get_tag("ner").value, "O"),
-                )
-                for index, token in enumerate(sentence)
-            ]
-            preds.append(pred)
-        return preds
-
-
-
-@dataclass
-class ConditionalRandomField:
-    train: Dataset
-    val: Dataset
-    test: Dataset
-
-    def __post_init__(self):
-        self._translate_labels(self.train)
-        self._translate_labels(self.val)
-        self._translate_labels(self.test)
-
-
-@dataclass
-class RuleBased:
-    train: Dataset
-    val: Dataset
-    test: Dataset
-
-    def __post_init__(self):
-        module_folder = Path(__file__).resolve().parent
-        with Path(module_folder, "data", "persons.json").open(
-            "r", encoding="utf-8"
-        ) as file_:
-            self.persons = json.load(file_)
-        with Path(module_folder, "data", "organizations.json").open(
-            "r", encoding="utf-8"
-        ) as file_:
-            self.organizations = json.load(file_)
-
-    def __post_init__(self):
-        self._translate_labels(self.train)
-        self._translate_labels(self.val)
-        self._translate_labels(self.test)
-
-    def vanilla(self):
-        preds = list()
-        for sentence in self.test:
-            pred = list()
-            previous = "[START]"
-            for token in sentence:
-                if token.text in self.persons and (
-                    previous == "B-PER" or previous == "I-PER"
-                ):
-                    label = "I-PER"
-                elif token.text in self.persons and (
-                    previous != "B-PER" or previous != "I-PER"
-                ):
-                    label = "B-PER"
-                elif token.text in self.organizations and (
-                    previous == "B-ORG" or previous == "I-ORG"
-                ):
-                    label = "I-PER"
-                elif token.text in self.organizations and (
-                    previous != "B-ORG" or previous != "I-ORG"
-                ):
-                    label = "B-PER"
-                else:
-                    label = "O"
-                pred.append(Token(token.text, token.index, label))
-            preds.append(pred)
-        metric = evaluate(f"vanilla-rule-based", self.test, preds)
-        print(metric)
-        return metric
-'''
+    def fine_tune(self, model_name_or_path: str, epochs=2):
+        module = Path(__file__).resolve().parent
+        script = Path(module, "vendor", "ner.py")
+        command = [
+            sys.executable,
+            str(script),
+            "--data_dir",
+            str(self.directory),
+            "--model_type",
+            "bert",
+            "--labels",
+            str(Path(self.directory, "labels.txt")),
+            "--model_name_or_path",
+            model_name_or_path,
+            "--output_dir",
+            "bert-fine-tuned",
+            "--max_seq_length",
+            "128",
+            "--num_train_epochs",
+            str(epochs),
+            "--per_gpu_train_batch_size",
+            str(16),
+            "--save_steps",
+            "500",
+            "--seed",
+            "23",
+            "--do_train",
+            "--do_eval",
+            "--do_predict",
+        ]
+        subprocess.check_call(command)

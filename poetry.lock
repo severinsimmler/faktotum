@@ -1642,7 +1642,7 @@ more-itertools = "*"
 docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 
 [metadata]
-content-hash = "821302ba3814a34761568a7def90d19d0ee18226e4a96b4f2649a2e7766f1484"
+content-hash = "bcf0606a1892d11689d6fa56f95298002f25925b5da4156749d85ddce0ce309c"
 python-versions = "3.7.*"
 
 [metadata.files]
