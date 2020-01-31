@@ -2,119 +2,88 @@
 
 ## Getting started
 
-Use [Poetry](https://python-poetry.org/) to manage dependencies and a virtual environment.
-
+Use [Poetry](https://python-poetry.org/) to manage dependencies and a virtual environment. To set up a deterministic build (e.g. to [reproduce numbers](reproducing-numbers)), run:
 
 ```
 $ poetry install
 ```
 
-## How to reproduce the numbers?
+## Reproducing numbers
 
 ### Named entity recognition
 
+Easy as:
 
-
-
-
-
+```python
+>>> from extract.ner import Baseline
+>>> baseline = Baseline("droc",
+...                     train_file="train.txt",
+...                     dev_file="dev.txt",
+...                     test_file="test.txt")
+>>> baseline.from_scratch()
+{
+  'precision': 0.892,
+  'recall': 0.7199,
+  'micro_f1': 0.7968,
+  'macro_f1': 0.7968,
+  'micro_accuracy': 0.6622,
+  'macro_accuracy': 0.6622
+}
 ```
-poetry run bert-fine-tuning \
-    --data_dir extract/data/litbank \
-    --model_type bert \
-    --labels extract/data/litbank/labels.txt \
-    --model_name_or_path bert-base-multilingual-cased \
-    --output_dir /mnt/data/users/simmler/ner-models/gutenberg/bert-multi-litbank \
-    --max_seq_length 128 \
-    --num_train_epochs 1 \
-    --per_gpu_train_batch_size 16 \
-    --save_steps 754440 \
-    --seed 23 --do_train \
-    --do_eval \
-    --do_predict && \
-    poetry run bert-fine-tuning \
-    --data_dir extract/data/droc \
-    --model_type bert \
-    --labels extract/data/droc/labels.txt \
-    --model_name_or_path bert-base-multilingual-cased \
-    --output_dir /mnt/data/users/simmler/ner-models/gutenberg/bert-multi-droc \
-    --max_seq_length 128 \
-    --num_train_epochs 2 \
-    --per_gpu_train_batch_size 16 \
-    --save_steps 5000744450 \
-    --seed 23 --do_train \
-    --do_eval \
-    --do_predict && \
-    poetry run bert-fine-tuning \
-    --data_dir extract/data/droc \
-    --model_type bert \
-    --labels extract/data/droc/labels.txt \
-    --model_name_or_path bert-base-german-dbmdz-cased \
-    --output_dir /mnt/data/users/simmler/ner-models/gutenberg/bert-german-droc \
-    --max_seq_length 128 \
-    --num_train_epochs 2 \
-    --per_gpu_train_batch_size 16 \
-    --save_steps 11744450 \
-    --seed 23 --do_train \
-    --do_eval \
-    --do_predict && \
-    poetry run bert-fine-tuning \
-    --data_dir extract/data/droc \
-    --model_type bert \
-    --labels extract/data/droc/labels.txt \
-    --model_name_or_path /mnt/data/users/simmler/ner-models/gutenberg/bert-multi-litbank \
-    --output_dir /mnt/data/users/simmler/ner-models/gutenberg/bert-german-litbank-continued-droc \
-    --max_seq_length 128 \
-    --num_train_epochs 2 \
-    --per_gpu_train_batch_size 16 \
-    --save_steps 117544440 \
-    --seed 23 --do_train \
-    --do_eval \
-    --do_predict
+
+or:
+
+```python
+>>> from extract.ner import Flair
+>>> flair = Flair("droc",
+...               train_file="train.txt",
+...               dev_file="dev.txt",
+...               test_file="test.txt")
+>>> flair.from_scratch()
+{
+  'precision': 0.8755,
+  'recall': 0.6784,
+  'micro_f1': 0.7644,
+  'macro_f1': 0.7644,
+  'micro_accuracy': 0.6187,
+  'macro_accuracy': 0.6187
+}
+```
+
+or:
+
+```python
+>>> from extract.ner import BERT
+>>> bert = BERT("droc",
+...             train_file="train.txt",
+...             dev_file="dev.txt",
+...             test_file="test.txt")
+>>> bert.fine_tune("bert-base-german-dbmdz-cased")
+{
+  'precision': 0.921,
+  'recall': 0.9544,
+  'micro_f1': 0.9374,
+  'macro_f1': 0.9374,
+  'micro_accuracy': 0.8822,
+  'macro_accuracy': 0.8822
+}
 ```
 
 
+## Todo
 
-language-models
-    presse
-        - multi
-        - german
-    gutenberg
-        - multi
-        - german
-
-ner-models
-    baseline
-        - trained on custom -> test on custom
-        - trained on complete germeval/litbank -> test on custom
-        - continued with custom on trained germeval/litbank -> test on custom
-    conditional random field
-        - classic features (POS-tags etc.)
-    fine-tuned bert
-        - multi
-            - trained on custom -> test on custom
-            - domain-adapted and trained on custom -> test on custom
-        - german
-            - trained on custom -> test on custom
-            - domain-adapted and trained on custom -> test on custom
-                -> the better: first germeval/litbank, then custom
-
-
-TODO:
+```
 - language modeling
     - gutenberg
         [x] bert german gutenberg
         [x] bert multi gutenberg
-        [ ] flair multi gutenberg
-        [ ] flair historic gutenberg
     - presse
         [x] bert german presse
         [x] bert multi presse
-        [ ] flair multi presse
 
 - ner
     - gutenberg
-        [ ] crf: droc (baseline)
+        [x] crf: droc (baseline)
         [x] flair: litbank
         [x] flair: droc
         [x] flair: droc plus litbank
@@ -133,3 +102,4 @@ TODO:
         [x] bert german: germeval
         [ ] bert german: presse
         [ ] bert german: presse continued germeval
+```
