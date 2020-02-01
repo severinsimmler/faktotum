@@ -24,6 +24,12 @@ class Baseline:
     test_file: str
     dev_file: str
 
+    def __post_init__(self):
+        if "droc" in str(self.directory):
+            module_folder = Path(__file__).parent
+            features_file = Path(module_folder, "data", "kallimachos.json")
+            self.kallimachos = json.loads(features_file.read_text(encoding="utf-8"))
+
     @staticmethod
     def _parse_data(filepath):
         sentence = list()
@@ -115,6 +121,7 @@ class Baseline:
         else:
             features["EOS"] = True
 
+        features.update(self.kallimachos.get(word, dict()))
         return features
 
     def _sent2features(self, sent):
