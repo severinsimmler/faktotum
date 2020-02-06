@@ -25,6 +25,9 @@ class Baseline:
     dev_file: str
 
     def __post_init__(self):
+        if not Path(self.directory).exists():
+            module_folder = Path(__file__).parent
+            self.directory = Path(module_folder, "data", self.directory)
         if "droc" in str(self.directory):
             module_folder = Path(__file__).parent
             features_file = Path(module_folder, "data", "kallimachos.json")
@@ -141,6 +144,11 @@ class Flair:
     test_file: str
     dev_file: str
 
+    def __post_init__(self):
+        if not Path(self.directory).exists():
+            module_folder = Path(__file__).parent
+            self.directory = Path(module_folder, "data", self.directory)
+
     def _load_corpus(self, data_folder: Union[str, Path] = None) -> ColumnCorpus:
         return ColumnCorpus(
             data_folder=data_folder if data_folder else self.directory,
@@ -241,6 +249,11 @@ class BERT:
     train_file: str
     test_file: str
     dev_file: str
+
+    def __post_init__(self):
+        if not Path(self.directory).exists():
+            module_folder = Path(__file__).parent
+            self.directory = Path(module_folder, "data", self.directory)
 
     def fine_tune(self, model_name_or_path: str, epochs=2):
         module = Path(__file__).resolve().parent
