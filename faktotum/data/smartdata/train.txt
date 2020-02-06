@@ -8664,7 +8664,6 @@ der O - ART
 Publisher O - NN
 zu O - APPR
 Wort O - NN
- O - $(
 so O - ADV
 erklärte O - VVFIN
 Jason B-PERSON - NE
@@ -10242,6 +10241,7 @@ Startseite O - NN
 % O - NN
 59 O - CARD
 % O - NN
+
 60 O - CARD
 % O - NN
 61 O - CARD
@@ -11758,6 +11758,7 @@ Startseite O - NN
 % O - NN
 59 O - CARD
 % O - NN
+
 60 O - CARD
 % O - NN
 61 O - CARD
@@ -20865,6 +20866,7 @@ mit O - APPR
 dem O - ART
 Ziel O - NN
 einer O - ART
+
 europaweiten O - ADJA
 Verbreitung O - NN
 . O - $.
@@ -20895,6 +20897,7 @@ FLEX I-ORG - NE
 AN O - FM
 STRATEGISCHEN O - ADJA
 INVESTOR O - NN
+
 - O - $(
 KLARE O - ADJA
 WEICHENSTELLUNG O - NN
@@ -20944,6 +20947,7 @@ Post I-ORG - NN
 hat O - VAFIN
 sich O - PRF
 mit O - APPR
+
 einem O - ART
 strategischen O - ADJA
 Investor O - NN
@@ -27697,9 +27701,7 @@ haben O - VAFIN
 die O - ART
 Mitglieder O - NN
 der O - ART
- O - $(
 neuen O - ADJA
- O - $(
 Sängervereinigung O - NN
 Eintracht B-ORG - NE
 - I-ORG - $(
@@ -28182,7 +28184,6 @@ platzsparend O - ADJD
 hinter O - APPR
 der O - ART
 Wand O - NN
- O - $(
 für O - APPR
 großzügigere O - ADJA
 Gestaltungsmöglichkeiten O - NN
@@ -28256,7 +28257,6 @@ geben O - VVINF
 Sanitärinstallateure O - NN
 empfehlen O - VVFIN
 deshalb O - PROAV
- O - $(
 neben O - APPR
 großem O - ADJA
 Augenmerk O - NN
@@ -28264,7 +28264,6 @@ auf O - APPR
 Raumplanung O - NN
 und O - KON
 Materialauswahl O - NN
- O - $(
 spezielle O - ADJA
 Unterputz O - NN
 - O - $(
@@ -34491,6 +34490,7 @@ etwas O - ADV
 höher O - ADJD
 als O - KOKOM
 gedacht O - VVPP
+
 DBKDeutsche O - ADJA
 Bank O - NN
 behält O - VVFIN
@@ -34605,6 +34605,7 @@ dem O - ART
 Gesinnungsterror O - NN
 und O - KON
 sagt O - VVFIN
+
 eine O - ART
 Veranstaltung O - NN
 zur O - APPRART
@@ -49527,6 +49528,7 @@ eiSos I-ORG - NE
 GmbH I-ORG - NN
 & I-ORG - KON
 Co I-ORG - NN
+
 . I-ORG - $.
 
 KG B-ORG - NE
@@ -52765,6 +52767,7 @@ zu O - PTKZU
 sammeln O - VVINF
 , O - $,
 war O - VAFIN
+
 vom O - APPRART
 08 O - CARD
 . O - $.
@@ -60839,13 +60842,11 @@ Euro O - NN
 beziffert O - VVPP
 . O - $.
 
- O - $(
 Endlich O - ADJD
 ist O - VAFIN
 die O - ART
 Straße O - NN
 fertig O - ADJD
- O - $(
 , O - $,
 freuten O - VVFIN
 sich O - PRF
@@ -61096,6 +61097,7 @@ die O - ART
 Akquisition O - NN
 des O - ART
 Treibstoffterminals O - NN
+
 Jarrow O - NE
 von O - APPR
 Shell B-ORG - NE
@@ -75395,6 +75397,7 @@ Startseite O - NN
 % O - NN
 59 O - CARD
 % O - NN
+
 60 O - CARD
 % O - NN
 61 O - CARD
@@ -78232,6 +78235,7 @@ Startseite O - NN
 % O - NN
 59 O - CARD
 % O - NN
+
 60 O - CARD
 % O - NN
 61 O - CARD
@@ -86009,6 +86013,7 @@ erhöhen O - VVINF
 der O - ART
 Versandhandelsriese O - NN
 zeigt O - VVFIN
+
 sich O - PRF
 aber O - ADV
 weiter O - ADV
@@ -91282,9 +91287,7 @@ April O - NN
 sämtliche O - PIDAT
 Verbindungen O - NN
 Zürich O - NE
- O - $(
 München O - NE
- O - $(
 Z O - NN
 Erste B-ORG - ADJA
 Oderfelder I-ORG - NN

@@ -9199,7 +9199,6 @@ gestatte O - VVFIN
 der O - ART
 Mediengruppe O - NN
 Oberfranken O - NE
- O - $(
 Zeitungsverlage O - NN
 GmbH O - NN
 & O - KON

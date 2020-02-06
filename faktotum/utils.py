@@ -57,7 +57,7 @@ def normalize_bert_dataset(dataset, model_name_or_path, max_len=128):
                 yield line
                 subword_len_counter = 0
                 continue
-            token = line.split("\t")[1]
+            token = line.split(" ")[0]
             current_subwords_len = len(tokenizer.tokenize(token))
             if current_subwords_len == 0:
                 continue
