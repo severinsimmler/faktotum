@@ -1,4760 +1,4741 @@
-11.01.2016 O -
-14:31 O -
-Ich O -
-habe O -
-solche O -
-Situationen O -
-in O -
-Cuba O -
-bisher O -
-zweimal O -
-erlebt O -
-. O -
-
-Einmal O -
-mit O -
-der O -
-Cubana B-ORG -
-, O -
-einmal O -
-mit O -
-Condor B-ORG -
-. O -
-
-Ich O -
-kann O -
-nur O -
-sagen O -
-.... O -
-. O -
-
-als O -
-das O -
-mit O -
-der O -
-Cubana B-ORG -
-( O -
-Triebwerkschaden O -
-über O -
-dem O -
-Atlantik O -
-, O -
-Rückflug O -
-nach O -
-Havanna O -
-) O -
-passierte O -
-, O -
-wurde O -
-sich O -
-optimal O -
-um O -
-uns O -
-gekümmert O -
-. O -
-
-Am O -
-Flughafen O -
-in O -
-Habana O -
-war O -
-wohl O -
-die O -
-Versorgung O -
-mit O -
-Essen O -
-schwierig O -
-. O -
-
-Das O -
-Essen O -
-wurde O -
-aus O -
-dem O -
-Flugzeug O -
-geholt O -
-und O -
-serviert O -
-. O -
-
-Nach O -
-höchstens O -
-3 O -
-Stunden O -
-fuhren O -
-Busse O -
-vor O -
-und O -
-brachten O -
-uns O -
-ins O -
-Habana B-ORG -
-libre I-ORG -
-. O -
-
-Da O -
-bekamen O -
-wir O -
-sofort O -
-Zimmer O -
-und O -
-Essen O -
-und O -
-Getränkegutscheine O -
-( O -
-die O -
-sehr O -
-ausreichend O -
-waren O -
-) O -
-. O -
-
-Im O -
-Hotel O -
-bekamen O -
-wir O -
-durch O -
-einen O -
-Betreuer O -
-immer O -
-wieder O -
-Infos O -
-, O -
-wann O -
-es O -
-nach O -
-Deutschland O -
-geht O -
-( O -
-Das O -
-kaputte O -
-Teil O -
-musste O -
-aus O -
-Moskau O -
-geliefert O -
-werde O -
-) O -
-. O -
-
-Um O -
-uns O -
-hat O -
-man O -
-sich O -
-wirklich O -
-richtig O -
-gekümmert O -
-. O -
-
-Ich O -
-wäre O -
-danach O -
-nie O -
-auf O -
-die O -
-Idee O -
-gekommen O -
-, O -
-eine O -
-Ausgleichszahlung O -
-zu O -
-verlangen O -
-. O -
-
-Mit O -
-der O -
-Condor B-ORG -
-. O -
-
-Landung O -
-in O -
-Nassau O -
-und O -
-da O -
-standen O -
-wir O -
-dann O -
-auf O -
-dem O -
-Flughafen O -
-... O -
-NationslExpress O -
-Ersatzzug O -
-auf O -
-der O -
-RB48 O -
-( O -
-Aktueller O -
-Betrieb O -
-) O -
-kimba2k O -
-, O -
-Wuppertal O -
-- O -
-Frankfurt O -
-am O -
-Main O -
-, O -
-Montag O -
-, O -
-14 O -
-. O -
-
-Dezember O -
-2015 O -
-, O -
-18:28 O -
-( O -
-vor O -
-36 O -
-Tagen O -
-) O -
-@ O -
-moonglum O -
-Und O -
-seit O -
-gestern O -
-teils O -
-grausige O -
-Verspätungen O -
-beim O -
-RE7 O -
-zwischen O -
-15 O -
-und O -
-40 O -
-Minuten O -
-... O -
-RE7 O -
-und O -
-weniger O -
-als O -
-15 O -
-Minuten O -
-Verspätung O -
-? O -
-
-Das O -
-wäre O -
-ein O -
-Wunder O -
-. O -
-
-Falsche O -
-Vornamen O -
-auf O -
-200 O -
-000 O -
-Stimmzetteln O -
-Artikel O -
-per O -
-E-Mail O -
-empfehlen O -
-Falsche O -
-Vornamen O -
-auf O -
-200 O -
-000 O -
-Stimmzetteln O -
-Empfänger O -
-E-Mail O -
-Tipp O -
-: O -
-
-mehrere O -
-E-Mailadressen O -
-mit O -
-Komma O -
-trennen O -
-persönliche O -
-Nachrichtoptional O -
-Bitte O -
-tragen O -
-Sie O -
-den O -
-Code O -
-in O -
-das O -
-Eingabefeld O -
-ein O -
-. O -
-
-Tipp O -
-: O -
-
-das O -
-Bild O -
-anklicken O -
-um O -
-den O -
-Code O -
-neu O -
-zu O -
-generieren O -
-Empfänger O -
-E-Mail O -
-Twittern O -
-Gießen O -
-( O -
-dpa B-ORG -
-/ O -
-lhe B-ORG -
-) O -
-- O -
-Nach O -
-einer O -
-Panne O -
-müssen O -
-im O -
-Kreis O -
-Gießen O -
-200 O -
-000 O -
-Stimmzettel O -
-für O -
-die O -
-Kommunalwahl O -
-neu O -
-gedruckt O -
-werden O -
-. O -
-
-Grund O -
-seien O -
-fehlerhafte O -
-Vornamen O -
-auf O -
-der O -
-FDP B-ORG -
-- O -
-Kandidatenliste O -
-für O -
-die O -
-Kreistagswahl O -
-, O -
-teilte O -
-die O -
-Kreisverwaltung O -
-am O -
-Montag O -
-mit O -
-. O -
-
-In O -
-dem O -
-einen O -
-Fall O -
-habe O -
-ein O -
-Kandidat O -
-irrtümlicherweise O -
-einen O -
-weiblichen O -
-Vornamen O -
-erhalten O -
-. O -
-
-Im O -
-anderen O -
-schlich O -
-sich O -
-demnach O -
-ein O -
-Schreibfehler O -
-ein O -
-. O -
-
-Die O -
-Stimmzettel O -
-werden O -
-nun O -
-nachgedruckt O -
-. O -
-
-« O -
-Die O -
-mit O -
-den O -
-Briefwahlunterlagen O -
-in O -
-einigen O -
-Kommunen O -
-bereits O -
-verschickten O -
-Stimmzettel O -
-behalten O -
-ihre O -
-Gültigkeit O -
-» O -
-, O -
-sagte O -
-der O -
-Mitteilung O -
-zufolge O -
-Wahlleiter O -
-Ingo B-PERSON -
-Happel I-PER -
-. O -
-
-© O -
-We O -
-Von O -
-Torsten B-PERSON -
-Weigelt I-PER -
-Die O -
-Kirche O -
-Sankt O -
-Peter O -
-und O -
-Paul O -
-in O -
-Hochheim O -
-. O -
-
-Die O -
-Gemeinde O -
-soll O -
-sich O -
-mit O -
-St. O -
-Gallus O -
-in O -
-Flörsheim O -
-zusammentun O -
-. O -
-
-Foto O -
-: O -
-
-Rolf B-PERSON -
-Oeser I-PER -
-Das O -
-Bistum O -
-hat O -
-der O -
-Forderung O -
-aus O -
-dem O -
-Main O -
-- O -
-Taunus O -
-nachgegeben O -
-und O -
-seine O -
-Fusions O -
-- O -
-Pläne O -
-korrigiert O -
-. O -
-
-St. O -
-Martinus O -
-bleibt O -
-eigenständig O -
-. O -
-
-Aufgeschoben O -
-ist O -
-aber O -
-nicht O -
-aufgehoben O -
-, O -
-heißt O -
-es O -
-. O -
-
-Drucken O -
-per O -
-Mail O -
-Der O -
-Protest O -
-hat O -
-gewirkt O -
-. O -
-
-Im O -
-vergangenen O -
-Herbst O -
-hatten O -
-die O -
-Pfarrgemeinderäte O -
-der O -
-katholischen O -
-Gemeinden O -
-Sankt O -
-Peter O -
-und O -
-Paul O -
-, O -
-Sankt O -
-Gallus O -
-und O -
-Sankt O -
-Martinus O -
-heftig O -
-gegen O -
-die O -
-Pläne O -
-des O -
-Bistums O -
-Limburg O -
-protestiert O -
-, O -
-sie O -
-zu O -
-einem O -
-Pastoralen O -
-Raum O -
-zusammenzufassen O -
-oder O -
-gar O -
-zu O -
-einer O -
-„ O -
-Pfarrei O -
-neuen O -
-Typs O -
-“ O -
-zu O -
-fusionieren O -
-. O -
-
-Nun O -
-hat O -
-das O -
-Bistum O -
-dieser O -
-Forderung O -
-nachgegeben O -
-. O -
-
-So O -
-wird O -
-die O -
-Hattersheimer O -
-Gemeinde O -
-St. O -
-Martinus O -
-vorerst O -
-eigenständig O -
-bleiben O -
-, O -
-während O -
-St. O -
-Peter O -
-und O -
-Paul O -
-( O -
-Hochheim O -
-) O -
-sowie O -
-St. O -
-Gallus O -
-( O -
-Flörsheim O -
-) O -
-sich O -
-bis O -
-2020 O -
-zu O -
-einem O -
-Pastoralen O -
-Raum O -
-weiterentwickeln O -
-sollen O -
-. O -
-
-„ O -
-Das O -
-Bistum O -
-hat O -
-sich O -
-darauf O -
-ein O -
-16 O -
-/ O -
-02 O -
-01:38 O -
-Der O -
-ehemalige O -
-UN-Generalsekretär O -
-Boutros B-PERSON -
-Boutros I-PER -
-- I-PER -
-Ghali I-PER -
-ist O -
-tot O -
-. O -
-
-Boutros B-PERSON -
-- I-PER -
-Ghali I-PER -
-starb O -
-im O -
-Alter O -
-von O -
-93 O -
-Jahren O -
-im O -
-Al O -
-- O -
-Salam O -
-- O -
-Krankenhaus O -
-von O -
-Giseh O -
-. O -
-
-In O -
-New O -
-York O -
-gedachte O -
-der O -
-UN-Sicherheitsrat O -
-des O -
-einstigen O -
-Chefs O -
-der O -
-Weltorganisation O -
-mit O -
-einer O -
-Schweigeminute O -
-. O -
-
-Der O -
-Ägypter O -
-war O -
-als O -
-Nachfolger O -
-von O -
-Javier B-PERSON -
-Pérez I-PER -
-de I-PER -
-Cuéllar I-PER -
-von O -
-1992 O -
-bis O -
-1996 O -
-der O -
-sechste O -
-Generalsekretär O -
-der O -
-Vereinten B-ORG -
-Nationen I-ORG -
-. O -
-
-Der O -
-koptische O -
-Christ O -
-war O -
-der O -
-erste O -
-Afrikaner O -
-an O -
-der O -
-Spitze O -
-der O -
-Weltorganisation O -
-. O -
-
-Boutros B-PERSON -
-- I-PER -
-Ghali I-PER -
-organisierte O -
-den O -
-Einsatz O -
-der O -
-Weltorganisation O -
-gegen O -
-die O -
-Hungersnot O -
-am O -
-Horn O -
-von O -
-Afrika O -
-. O -
-
-In O -
-seine O -
-Amtszeit O -
-fielen O -
-der O -
-Völkermord O -
-in O -
-Ruanda O -
-und O -
-der O -
-Zerfall O -
-Jugoslawiens O -
-. O -
-
-Die O -
-USA O -
-verhinderten O -
-mit O -
-ihrem O -
-Veto O -
-eine O -
-zweite O -
-Amtszeit O -
-für O -
-Boutros B-PERSON -
-- I-PER -
-Ghali I-PER -
-. O -
-
-Sie O -
-störten O -
-sich O -
-dem O -
-Vernehmen O -
-nach O -
-daran O -
-, O -
-dass O -
-er O -
-NATO B-ORG -
-- O -
-Luftangriffen O -
-auf O -
-Ziele O -
-in O -
-Bosnien O -
-- O -
-Herzegowina O -
-während O -
-des O -
-Bosnienkrieges O -
-1995 O -
-zögernd O -
-gegenüberstand O -
-. O -
-
-Innerhalb O -
-der O -
-Vereinten B-ORG -
-Nationen I-ORG -
-machte O -
-Boutros B-PERSON -
-- I-PER -
-Ghali I-PER -
-sich O -
-einen O -
-Vorlesen O -
-Bei O -
-einem O -
-Erdbeben O -
-der O -
-Stärke O -
-6,4 O -
-im O -
-Süden O -
-Taiwans O -
-sind O -
-in O -
-der O -
-Stadt O -
-Tainan O -
-mehrere O -
-Wohnhäuser O -
-eingestürzt O -
-oder O -
-beschädigt O -
-worden O -
-. O -
-
-In O -
-den O -
-Trümmern O -
-werden O -
-Opfer O -
-befürchtet O -
-. O -
-
-Feuerwehr O -
-und O -
-Rettungskräfte O -
-suchen O -
-nach O -
-Verschütteten O -
-. O -
-
-Die O -
-Erdstöße O -
-waren O -
-auf O -
-der O -
-ganzen O -
-Insel O -
-zu O -
-spüren O -
-. O -
-
-Das O -
-Erdbeben O -
-überraschte O -
-auch O -
-Superstar O -
-Madonna B-PERSON -
-und O -
-ihre O -
-Musiker O -
-, O -
-die O -
-in O -
-Taiwan O -
-auf O -
-Tour O -
-sind O -
-. O -
-
-Ihr O -
-Manager O -
-Guy B-PERSON -
-Oseary I-PER -
-schrieb O -
-aus O -
-Taipeh O -
-auf O -
-Instagram O -
-: O -
-
-Wir O -
-sind O -
-alle O -
-OK O -
-... O -
-Hoffe O -
-, O -
-dass O -
-es O -
-vorbei O -
-ist O -
-. O -
-
-WPP O -
-- O -
-Tochter O -
-kauft O -
-deutsche O -
-Digitalagentur O -
-: O -
-
-Aus O -
-Conrad B-ORG -
-Caine I-ORG -
-wird O -
-Possible B-ORG -
-WPP B-ORG -
-- O -
-Tochter O -
-kauft O -
-deutsche O -
-Digitalagentur O -
-: O -
-
-Aus O -
-Conrad B-ORG -
-Caine I-ORG -
-wird O -
-Possible B-ORG -
-22 O -
-. O -
-
-Januar O -
-2016 O -
-, O -
-aktualisiert O -
-22 O -
-. O -
-
-Januar O -
-2016 O -
-, O -
-11:40 O -
-Uhr O -
-Mit O -
-14 O -
-Jahren O -
-die O -
-eigene O -
-Firma O -
-gegründet O -
-. O -
-
-Bild O -
-: O -
-
-PR O -
-von O -
-Axel B-PERSON -
-Höpner I-PER -
-und O -
-Catrin B-PERSON -
-Bialek I-PER -
-Quelle O -
-: O -
-
-Handelsblatt B-ORG -
-Online I-ORG -
-Der O -
-Werbegigant O -
-WPP B-ORG -
-schnappt O -
-sich O -
-die O -
-deutsche O -
-Digitalagentur O -
-Conrad B-ORG -
-Caine I-ORG -
-. O -
-
-Bei O -
-Siemens B-ORG -
-und O -
-der O -
-Deutschen B-ORG -
-Bahn I-ORG -
-zum O -
-Beispiel O -
-genießt O -
-der O -
-Gründer O -
-einen O -
-guten O -
-Ruf O -
-. O -
-
-Was O -
-Caine B-ORG -
-sich O -
-von O -
-der O -
-neuen O -
-Mutter O -
-verspricht O -
-. O -
-
-München O -
-/ O -
-DüsseldorfDer O -
-weltgrößte O -
-Werbekonzern O -
-WPP B-ORG -
-kauft O -
-die O -
-bei O -
-vielen O -
-deutschen O -
-Großkonzernen O -
-bestens O -
-verdrahtete O -
-Digitalagentur O -
-Conrad B-ORG -
-Caine I-ORG -
-. O -
-
-Der O -
-Branchenriese O -
-bestätigte O -
-am O -
-Freitagmorgen O -
-an O -
-der O -
-Londoner B-ORG -
-Börse I-ORG -
-einen O -
-Bericht O -
-des O -
-Handelsblatts B-ORG -
-. O -
-
-Mit O -
-der O -
-Akquisition O -
-setze O -
-man O -
-die O -
-Strategie O -
-fort O -
-, O -
-in O -
-schnell O -
-wachsende O -
-digitale O -
-Märkte O -
-zu O -
-investieren O -
-. O -
-
-WPP B-ORG -
-machte O -
-zuletzt O -
-6,9 O -
-Milliarden O -
-Dollar O -
-digitale O -
-Umsätze O -
-, O -
-das O -
-ent O -
-Aktualisiert O -
-am O -
-10.11.15 O -
-, O -
-um O -
-14:27 O -
-von O -
-Tumasch B-PERSON -
-Clalüna I-PER -
-Wissen O -
-was O -
-in O -
-der O -
-Region O -
-läuft O -
-? O -
-
-Hier O -
-anmelden O -
-für O -
-den O -
-täglichen O -
-Newsletter O -
-. O -
-
-Kommentare O -
-« O -
-Das O -
-können O -
-Sie O -
-gerne O -
-so O -
-schreiben O -
-» O -
-, O -
-sagt O -
-Martin B-PERSON -
-Künzel I-PER -
-. O -
-
-« O -
-Wir O -
-eröffnen O -
-ohne O -
-Bewilligung O -
-vom O -
-Bau O -
-- O -
-und O -
-Gewerbeinspektorat O -
-. O -
-
-Und O -
-wenn O -
-sie O -
-uns O -
-eine O -
-Busse O -
-aufbrummen O -
-wollen O -
-, O -
-dann O -
-fechten O -
-wir O -
-die O -
-an O -
-. O -
-
-» O -
-Die O -
-gestrige O -
-Eröffnung O -
-der O -
-Plaza O -
-Lounge O -
-ist O -
-das O -
-nächste O -
-Kapitel O -
-in O -
-einer O -
-Geschichte O -
-, O -
-die O -
-bereits O -
-im O -
-vergangenen O -
-Jahr O -
-in O -
-einem O -
-Riesenknatsch O -
-gipfelte O -
-. O -
-
-Ein O -
-kurzer O -
-Rückblick O -
-: O -
-
-Anfang O -
-August O -
-wurde O -
-bekannt O -
-, O -
-dass O -
-Tobias B-PERSON -
-Zeindler I-PER -
-mit O -
-seiner O -
-Eventagentur O -
-Zappzoom B-ORG -
-den O -
-Plaza O -
-Club O -
-am O -
-Messeplatz O -
-übernehmen O -
-und O -
-in O -
-« O -
-Playboxx O -
-» O -
-umtaufen O -
-wollte O -
-. O -
-
-Er O -
-sollte O -
-den O -
-Club O -
-von O -
-Sadik B-PERSON -
-und O -
-Burhan B-PERSON -
-Arslan I-PER -
-übernehmen O -
-, O -
-die O -
-ihrerseits O -
-aufgrund O -
-von O -
-ausbleibenden O -
-Gästen O -
-und O -
-Erfolg O -
-acht O -
-Monatsmieten O -
-nicht O -
-mehr O -
-gezahlt O -
-hatten O -
-. O -
-
-Deshalb O -
-wurde O -
-ein O -
-neuer O -
-Mieter O -
-gesucht O -
-, O -
-Zeindler B-PERSON -
-sah O -
-sich O -
-in O -
-der O -
-Poleposition O -
-, O -
-verkündete O -
-stolz O -
-die O -
-Eröffnung O -
-im O -
-August O -
-. O -
-
-Tweet O -
-Der O -
-Chip O -
-- O -
-Riese O -
-Intel B-ORG -
-streicht O -
-12.000 O -
-Jobs O -
-, O -
-um O -
-sich O -
-schneller O -
-aus O -
-der O -
-Abhängigkeit O -
-vom O -
-schrumpfenden O -
-PC O -
-- O -
-Geschäft O -
-zu O -
-lösen O -
-. O -
-
-Bis O -
-Mitte O -
-2017 O -
-sollen O -
-damit O -
-elf O -
-Prozent O -
-der O -
-Belegschaft O -
-gehen O -
-. O -
-
-Intel B-ORG -
-- O -
-Chef B-POS -
-Brian B-PERSON -
-Krzanich I-PER -
-will O -
-stärker O -
-auf O -
-Chips O -
-für O -
-Rechenzentren O -
-und O -
-Cloud O -
-- O -
-Computing O -
-sowie O -
-die O -
-Vernetzung O -
-von O -
-Alltagstechnik O -
-und O -
-Maschinen O -
-im O -
-Internet O -
-der O -
-Dinge O -
-setzen O -
-. O -
-
-Zuletzt O -
-machten O -
-PC O -
-- O -
-Prozessoren O -
-noch O -
-über O -
-die O -
-Hälfte O -
-des O -
-Intel B-ORG -
-- O -
-Geschäfts O -
-aus O -
-, O -
-während O -
-die O -
-Verkäufe O -
-der O -
-Notebooks O -
-und O -
-Desktops O -
-seit O -
-Jahren O -
-sinken O -
-und O -
-allein O -
-im O -
-vergangenen O -
-Quartal O -
-laut O -
-Marktforschern O -
-erneut O -
-um O -
-etwa O -
-ein O -
-Zehntel O -
-einbrachen O -
-. O -
-
-Die O -
-meisten O -
-vom O -
-Stellenabbau O -
-betroffenen O -
-Angestellten O -
-sollen O -
-innerhalb O -
-der O -
-nächsten O -
-60 O -
-Tage O -
-informiert O -
-werden O -
-, O -
-kündigte O -
-Intel O -
-an O -
-. O -
-
-Zunächst O -
-werden O -
-die O -
-Abfindungen O -
-ins O -
-Geld O -
-gehen O -
-- O -
-im O -
-zweiten O -
-Quartal O -
-rechnet O -
-der O -
-Konzern O -
-mit O -
-einem O -
-Sonderaufwand O -
-von O -
-etwa O -
-1,2 O -
-Milliarden O -
-Dollar O -
-. O -
-
-Die O -
-Sparmaßnahmen O -
-sollen O -
-aber O -
-1,4 O -
-Milliarden O -
-Dollar O -
-( O -
-aktuell O -
-1,2 O -
-Sie O -
-sind O -
-hier O -
-: O -
-
-Home O -
-> O -
-Nachrichten O -
-> O -
-Ausland O -
-> O -
-Idomeni O -
-: O -
-
-Flüchtlinge O -
-fliehen O -
-vor O -
-Elend O -
-in O -
-Griechenland O -
-... O -
-t O -
-- O -
-online.de O -
-ist O -
-ein O -
-Angebot O -
-der O -
-Ströer B-ORG -
-Content I-ORG -
-Group I-ORG -
-Migration O -
-Flüchtlinge O -
-fliehen O -
-vor O -
-Elend O -
-in O -
-Griechenland O -
-14.03.2016 O -
-, O -
-17:56 O -
-Uhr O -
-| O -
-dpa O -
-Chamilo O -
-/ O -
-Skopje O -
-( O -
-dpa O -
-) O -
-- O -
-Angesichts O -
-der O -
-dramatischen O -
-Lage O -
-für O -
-Flüchtlinge O -
-in O -
-Nordgriechenland O -
-suchen O -
-sich O -
-immer O -
-mehr O -
-Menschen O -
-lebensgefährliche O -
-Schleichwege O -
-nach O -
-Mazedonien O -
-. O -
-
-Top O -
-- O -
-Nachrichten O -
-Unsere O -
-wichtigsten O -
-Themen O -
-Vom O -
-Flüchtlingslager O -
-Idomeni O -
-aus O -
-brachen O -
-Hunderte O -
-auf O -
-und O -
-durchquerten O -
-einen O -
-reißenden O -
-Fluss O -
-, O -
-während O -
-auf O -
-der O -
-anderen O -
-Seite O -
-schon O -
-die O -
-griechische O -
-Bereitschaftspolizei O -
-aufzog O -
-. O -
-
-Drei O -
-afghanische O -
-Flüchtlinge O -
-gelangten O -
-andernorts O -
-zwar O -
-illegal O -
-nach O -
-Mazedonien O -
-, O -
-ertranken O -
-dort O -
-aber O -
-in O -
-einem O -
-Hochwasser O -
-führenden O -
-Fluss O -
-. O -
-
-Über O -
-die O -
-Ägäis O -
-strömen O -
-derweil O -
-weiter O -
-verzweifelte O -
-Menschen O -
-nach O -
-, O -
-weitere O -
-Todesopfer O -
-sind O -
-zu O -
-befürchten O -
-. O -
-
-Nach O -
-einem O -
-acht O -
-Kilometer O -
-langen O -
-Marsch O -
-kämpften O -
-sich O -
-einige O -
-hundert O -
-07.01.2016 O -
-| O -
-23:00 O -
-Uhr O -
-2016-01-07T23:00:00 O -
-+01:00 O -
-So O -
-soll O -
-die O -
-neue O -
-Straße O -
-aussehen.Foto O -
-: O -
-
-Bahn O -
-Dinslaken O -
-. O -
-
-Landesbetrieb O -
-stellt O -
-die O -
-Planung O -
-für O -
-die O -
-Jägerstraße O -
-vor O -
-. O -
-
-Ein O -
-Wohnhaus O -
-muss O -
-abgerissen O -
-werden O -
-. O -
-
-Die O -
-Baukosten O -
-betragen O -
-3,4 O -
-Millionen O -
-Euro O -
-Der O -
-Bau O -
-des O -
-dritten O -
-Gleises O -
-auf O -
-der O -
-Strecke O -
-zwischen O -
-Oberhausen O -
-und O -
-Emmerich O -
-bringt O -
-erhebliche O -
-Veränderungen O -
-mit O -
-sich O -
-. O -
-
-Nicht O -
-nur O -
-das O -
-entlang O -
-der O -
-Betuwe O -
-- O -
-Strecke O -
-Schallschutzwände O -
-errichtet O -
-werden O -
-, O -
-auch O -
-Bahnübergänge O -
-fallen O -
-weg O -
-. O -
-
-Das O -
-plant O -
-die O -
-Bahn O -
-auch O -
-für O -
-den O -
-Übergang O -
-an O -
-der O -
-Jäger O -
-- O -
-/ O -
-Sterkrader O -
-Straße O -
-. O -
-
-Für O -
-den O -
-Autoverkehr O -
-baut O -
-der O -
-Landesbetrieb B-ORG -
-Straßenbau I-ORG -
-NRW I-ORG -
-als O -
-Ersatz O -
-für O -
-den O -
-Bahnübergang O -
-eine O -
-neue O -
-Straße O -
-. O -
-
-Sie O -
-führt O -
-entlang O -
-der O -
-Bahntrasse O -
-von O -
-der O -
-Emmericher O -
-Straße O -
-( O -
-L4 O -
-) O -
-bis O -
-zur O -
-Brinkstraße O -
-( O -
-B8 O -
-) O -
-. O -
-
-Für O -
-diesen O -
-Neubau O -
-ist O -
-ein O -
-Planfeststellungsverfahren O -
-notwendig O -
-. O -
-
-Verantwortlich O -
-ist O -
-für O -
-den O -
-Straßenneubau O -
-die O -
-Weseler O -
-Niederlassung O -
-des O -
-Landesbetriebs B-ORG -
-, O -
-die O -
-am O -
-20 O -
-. O -
-
-Januar O -
-zu O -
-einer O -
-Informationsveranstaltung O -
-einl O -
-Nieding B-ORG -
-+ I-ORG -
-Barth I-ORG -
-: O -
-
-German B-ORG -
-Pellets I-ORG -
-Insolvenz O -
-zieht O -
-immer O -
-weitere O -
-Kreise O -
-25.02.16 O -
-12:58 O -
-anleihencheck.de O -
-Bad O -
-Marienberg O -
-( O -
-www.anleihencheck.de O -
-) O -
-- O -
-Die O -
-Insolvenz O -
-der O -
-German B-ORG -
-Pellets I-ORG -
-GmbH I-ORG -
-wird O -
-immer O -
-undurchsichtiger O -
-, O -
-so O -
-die O -
-Nieding B-ORG -
-+ I-ORG -
-Barth I-ORG -
-Rechtsanwaltsaktiengesellschaft O -
-in O -
-einer O -
-aktuellen O -
-Pressemitteilung O -
-. O -
-
-Näheres O -
-entnehmen O -
-Sie O -
-bitte O -
-dem O -
-Wortlaut O -
-der O -
-folgenden O -
-Pressemeldung O -
-: O -
-
-Jetzt O -
-hat O -
-das O -
-zuständige O -
-Gericht O -
-auch O -
-bei O -
-etlichen O -
-Tochterunternehmen O -
-die O -
-vorläufige O -
-Insolvenzverwaltung O -
-angeordnet O -
-. O -
-
-Betroffen O -
-sind O -
-die O -
-German B-ORG -
-Pellets I-ORG -
-Genussrechte I-ORG -
-GmbH I-ORG -
-, O -
-die O -
-German B-ORG -
-Pellets I-ORG -
-Beteiligungs I-ORG -
-GmbH I-ORG -
-, O -
-die O -
-German B-ORG -
-Pellets I-ORG -
-Supply I-ORG -
-GmbH I-ORG -
-& I-ORG -
-Co I-ORG -
-. I-ORG -
-
-KG B-ORG -
-und O -
-die O -
-German B-ORG -
-Pellets I-ORG -
-Sachsen I-ORG -
-. O -
-
-Nach O -
-wie O -
-vor O -
-tappen O -
-die O -
-Anleger O -
-völlig O -
-im O -
-Dunkeln O -
-, O -
-wie O -
-die O -
-finanzielle O -
-Situation O -
-bei O -
-German B-ORG -
-Pellets I-ORG -
-wirklich O -
-aussieht O -
-. O -
-
-Es O -
-ist O -
-daher O -
-wichtig O -
-, O -
-dass O -
-die O -
-Anleger O -
-sich O -
-organisieren O -
-, O -
-um O -
-ihre O -
-Rechte O -
-im O -
-Insolvenzverfahren O -
-zu O -
-wahren O -
-, O -
-sagt O -
-Klaus B-PERSON 4391
-Nieding I-PER 4391
-, O -
-Vorstand B-POS 4391
-der O -
-Nieding B-ORG -
-+ I-ORG -
-Barth I-ORG -
-Rechtsanwaltsaktiengesell O -
-Venezuelas O -
-Präsident O -
-Maduro B-PERSON -
-erklärt O -
-Freitage O -
-zu O -
-Feiertagen O -
-07.04.2016 O -
-, O -
-08:59 O -
-Energiekrise O -
-Venezuelas O -
-Präsident O -
-Maduro O -
-erklärt O -
-Freitage O -
-zu O -
-Feiertagen O -
-Foto O -
-: O -
-
-MARCO O -
-BELLO O -
-/ O -
-REUTERS O -
-Venezuela O -
-leidet O -
-unter O -
-einer O -
-schweren O -
-Wirtschafts O -
-- O -
-und O -
-Energiekrise O -
-. O -
-
-Der O -
-sozialistische O -
-Präsident O -
-Nicolas B-PERSON -
-Maduro I-PER -
-. O -
-
-0 O -
-0 O -
-Um O -
-Strom O -
-zu O -
-sparen O -
-, O -
-greift O -
-die O -
-Regierung O -
-von O -
-Venezuela O -
-zu O -
-besonderen O -
-Mitteln O -
-. O -
-
-Das O -
-von O -
-Wasserkraft O -
-abhängige O -
-Land O -
-leidet O -
-unter O -
-Dürre O -
-. O -
-
-Caracas O -
-. O -
-
-Wegen O -
-notorischen O -
-Strommangels O -
-hat O -
-Venezuela O -
-alle O -
-Freitage O -
-der O -
-nächsten O -
-beiden O -
-Monate O -
-zu O -
-Feiertagen O -
-erklärt O -
-. O -
-
-Das O -
-Vorhaben O -
-ist O -
-Teil O -
-eines O -
-60 O -
-- O -
-Tage O -
-- O -
-Plans O -
-, O -
-mit O -
-dem O -
-das O -
-rezessionsgeplagte O -
-Opec O -
-- O -
-Land O -
-angesichts O -
-häufiger O -
-Stromausfälle O -
-Energie O -
-sparen O -
-will O -
-. O -
-
-Wir O -
-werden O -
-lange O -
-Wochenenden O -
-haben O -
-, O -
-sagte O -
-der O -
-linke O -
-Präsident O -
-Nicolas O -
-Maduro O -
-am O -
-Mittwochabend O -
-im O -
-staatlichen O -
-Fernsehen O -
-. O -
-
-Konkrete O -
-Pläne O -
-sollten O -
-an O -
-diesem O -
-Donnerstag O -
-vorgestellt O -
-werden O -
-. O -
-
-Die O -
-Opposition O -
-kritisierte O -
-, O -
-angesichts O -
-von O -
-Wirtschaftskrise O -
-, O -
-e O -
-Sie O -
-sind O -
-hier O -
-: O -
-
-Home O -
-> O -
-Nachrichten O -
-> O -
-Ausland O -
-> O -
-Konflikte O -
-- O -
-YPG B-ORG -
-: O -
-
-Türkische O -
-Vorwürfe O -
-sind O -
-Vorwand O -
-für O -
-Syrien O -
-- O -
-Einmarsch O -
-... O -
-t O -
-- O -
-online.de O -
-ist O -
-ein O -
-Angebot O -
-der O -
-Ströer B-ORG -
-Content I-ORG -
-Group I-ORG -
-Konflikte O -
-YPG O -
-: O -
-
-Türkische O -
-Vorwürfe O -
-sind O -
-Vorwand O -
-für O -
-Syrien O -
-- O -
-Einmarsch O -
-19.02.2016 O -
-, O -
-13:48 O -
-Uhr O -
-| O -
-dpa B-ORG -
-Istanbul O -
-( O -
-dpa B-ORG -
-) O -
-- O -
-Die O -
-kurdischen O -
-YPG B-ORG -
-- O -
-Milizen O -
-in O -
-Syrien O -
-haben O -
-die O -
-türkischen O -
-Anschuldigungen O -
-zum O -
-Anschlag O -
-von O -
-Ankara O -
-als O -
-Vorwand O -
-für O -
-einen O -
-Einmarsch O -
-in O -
-Nordsyrien O -
-bezeichnet O -
-. O -
-
-Top O -
-- O -
-Nachrichten O -
-Unsere O -
-wichtigsten O -
-Themen O -
-Das O -
-erste O -
-, O -
-was O -
-sie O -
-nach O -
-dem O -
-Anschlag O -
-gemacht O -
-haben O -
-, O -
-war O -
-, O -
-uns O -
-wegen O -
-des O -
-Vorfalls O -
-zu O -
-beschuldigen O -
-, O -
-sagte O -
-YPG B-ORG -
-- O -
-Sprecher O -
-Redur B-PERSON -
-Xelil I-PER -
-der O -
-kurdischen O -
-Agentur O -
-Firat B-ORG -
-. O -
-
-Damit O -
-erfinden O -
-sie O -
-einen O -
-Vorwand O -
-, O -
-um O -
-in O -
-Rojava O -
-einzudringen O -
-. O -
-
-Rojava O -
-ist O -
-die O -
-kurdische O -
-Bezeichnung O -
-für O -
-die O -
-Gebiete O -
-in O -
-Nordsyrien O -
-unter O -
-YPG B-ORG -
-- O -
-Kontrolle O -
-. O -
-
-Xelil B-PERSON -
-wies O -
-erneut O -
-jede O -
-Verantwortung O -
-für O -
-den O -
-Anschlag O -
-in O -
-Ankara O -
-zurück O -
-. O -
-
-Wir O -
-haben O -
-bereits O -
-zuvor O -
-mitgeteilt O -
-, O -
-dass O -
-wir O -
-keine O -
-Angriffe O -
-auf O -
-den O -
-türkis O -
-DGAP B-ORG -
-- O -
-Stimmrechte O -
-: O -
-
-Brenntag B-ORG -
-AG I-ORG -
-( O -
-deutsch O -
-) O -
-Brenntag B-ORG -
-AG I-ORG -
-: O -
-
-Veröffentlichung O -
-gemäß O -
-§ O -
-26 O -
-Abs O -
-. O -
-
-1 O -
-WpHG O -
-mit O -
-dem O -
-Ziel O -
-der O -
-europaweiten O -
-Verbreitung O -
-Brenntag B-ORG -
-AG I-ORG -
-23.03.2016 O -
-15:47 O -
-Veröffentlichung O -
-einer O -
-Stimmrechtsmitteilung O -
-, O -
-übermittelt O -
-durch O -
-DGAP B-ORG -
-- O -
-ein O -
-Service O -
-der O -
-EQS B-ORG -
-Group I-ORG -
-AG I-ORG -
-. O -
-
-Für O -
-den O -
-Inhalt O -
-der O -
-Mitteilung O -
-ist O -
-der O -
-Emittent O -
-verantwortlich O -
-. O -
-
-Stimmrechtsmitteilung O -
-Brenntag B-ORG -
-AG I-ORG -
-Stinnes B-ORG -
-Platz O -
-1 O -
-45472 O -
-Mülheim O -
-an O -
-der O -
-Ruhr O -
-Deutschland O -
-2 O -
-. O -
-
-Grund O -
-der O -
-Mitteilung O -
-X O -
-Erwerb O -
-/ O -
-Veräußerung O -
-von O -
-Aktien O -
-mit O -
-Stimmrechten O -
-Erwerb O -
-/ O -
-Veräußerung O -
-von O -
-Instrumenten O -
-Änderung O -
-der O -
-Gesamtzahl O -
-der O -
-Stimmrechte O -
-Sonstiger O -
-Grund O -
-: O -
-
-3 O -
-. O -
-
-Angaben O -
-zum O -
-Mitteilungspflichtigen O -
-Name O -
-: O -
-
-Registrierter O -
-Sitz O -
-und O -
-Staat O -
-: O -
-
-BlackRock B-ORG -
-, I-ORG -
-Inc I-ORG -
-. I-ORG -
-
-Wilmington O -
-, O -
-DE O -
-Vereinigte O -
-Staaten O -
-von O -
-Amerika O -
-4 O -
-. O -
-
-Namen O -
-der O -
-Aktionäre O -
-mit O -
-3 O -
-% O -
-oder O -
-mehr O -
-Stimmrechten O -
-, O -
-wenn O -
-abweichend O -
-von O -
-3 O -
-. O -
-
-5 O -
-. O -
-
-Datum O -
-der O -
-Schwellenberührung O -
-18.03.2016 O -
-6 O -
-. O -
-
-Gesamtstimmrechtsanteile O -
-An O -
-« O -
-Star O -
-Wars O -
-» O -
-an O -
-US O -
-- O -
-Kinokassen O -
-weiter O -
-in O -
-Führung O -
-11 O -
-. O -
-
-Januar O -
-2016 O -
-06:15 O -
-Uhr O -
-« O -
-Star O -
-Wars O -
-» O -
-an O -
-US O -
-- O -
-Kinokassen O -
-weiter O -
-in O -
-Führung O -
-Los O -
-Angeles O -
-- O -
-« O -
-Star O -
-Wars O -
-» O -
-liegt O -
-an O -
-den O -
-nordamerikanischen O -
-Kinokassen O -
-weiter O -
-in O -
-Führung O -
-. O -
-
-Das O -
-Weltraum O -
-- O -
-Abenteuer O -
-« O -
-Das O -
-Erwachen O -
-der O -
-Macht O -
-» O -
-belegte O -
-auch O -
-an O -
-seinem O -
-vierten O -
-Wochenende O -
-den O -
-Spitzenplatz O -
-der O -
-Kinocharts O -
-in O -
-den O -
-USA O -
-und O -
-Kanada O -
-. O -
-
-Fullscreen O -
-Daisy B-PERSON -
-Ridley I-PER -
-bei O -
-der O -
-« O -
-Star O -
-Wars O -
-» O -
-- O -
-Premiere O -
-in O -
-Hollywood O -
-. O -
-
-Foto O -
-: O -
-
-Eugene B-PERSON -
-Garcia I-PER -
-© O -
-dpa O -
-- O -
-infocom O -
-GmbH O -
-« O -
-Star O -
-Wars O -
-» O -
-liegt O -
-an O -
-den O -
-nordamerikanischen O -
-Kinokassen O -
-weiter O -
-in O -
-Führung O -
-. O -
-
-Das O -
-Weltraum O -
-- O -
-Abenteuer O -
-« O -
-Das O -
-Erwachen O -
-der O -
-Macht O -
-» O -
-belegte O -
-auch O -
-an O -
-seinem O -
-vierten O -
-Wochenende O -
-den O -
-Spitzenplatz O -
-der O -
-Kinocharts O -
-in O -
-den O -
-USA O -
-und O -
-Kanada O -
-. O -
-
-Studioschätzungen O -
-zufolge O -
-verdiente O -
-der O -
-siebte O -
-Teil O -
-der O -
-Sternenkriegersaga O -
-weitere O -
-41,6 O -
-Millionen O -
-Dollar O -
-dazu O -
-. O -
-
-Damit O -
-kletterten O -
-die O -
-bisherigen O -
-Einnahmen O -
-in O -
-Nordamerika O -
-auf O -
-812 O -
-Millionen O -
-Dollar O -
-( O -
-gut O -
-740 O -
-Mio O -
-. O -
-
-Euro O -
-) O -
-, O -
-ein O -
-Rekord O -
-in O -
-der O -
-US O -
-- O -
-Geschichte O -
-. O -
-
-Mit O -
-dem O -
-Rachedrama O -
-« O -
-The O -
-Revenan O -
-CTS B-ORG -
-Composite I-ORG -
-Technologie I-ORG -
-Systeme I-ORG -
-GmbH I-ORG -
-AGB O -
-| O -
-Impressum O -
-| O -
-bauportal O -
-- O -
-deutschland.de O -
-, O -
-© O -
-INLOCON B-ORG -
-AG I-ORG -
-, O -
-2004 O -
--2016 O -
-, O -
-Zugriffe O -
-: O -
-
-heute O -
-: O -
-
-165890 O -
-, O -
-gesamt O -
-: O -
-
-465026881 O -
-0.598105 O -
-, O -
-81 O -
-, O -
-602 O -
-, O -
-8895952 O -
-Massenkarambolage O -
-bei O -
-Paderborn O -
-mit O -
-einem O -
-Toten O -
-01 O -
-. O -
-
-Januar O -
-2016 O -
-19:17 O -
-Uhr O -
-Massenkarambolage O -
-bei O -
-Paderborn O -
-mit O -
-einem O -
-Toten O -
-Paderborn O -
-- O -
-Bei O -
-einer O -
-Massenkarambolage O -
-auf O -
-der O -
-Autobahn O -
-33 O -
-bei O -
-Paderborn O -
-sind O -
-am O -
-Neujahrsmorgen O -
-ein O -
-Mann O -
-getötet O -
-und O -
-zahlreichen O -
-Menschen O -
-verletzt O -
-worden O -
-. O -
-
-Bis O -
-zum O -
-Nachmittag O -
-hatte O -
-die O -
-Polizei O -
-von O -
-über O -
-60 O -
-zum O -
-Teil O -
-schwer O -
-Verletzten O -
-gesprochen O -
-. O -
-
-Am O -
-Abend O -
-korrigierte O -
-die O -
-Polizei O -
-diese O -
-Angabe O -
-nach O -
-unten O -
-. O -
-
-Eine O -
-konkrete O -
-Zahl O -
-liege O -
-aber O -
-noch O -
-nicht O -
-vor O -
-, O -
-hieß O -
-es O -
-. O -
-
-24 O -
-Fahrzeuge O -
-waren O -
-in O -
-den O -
-Unfall O -
-verwickelt O -
-. O -
-
-Als O -
-Ursache O -
-nannte O -
-ei O -
-Polizeisprecher O -
-plötzlich O -
-auftretenden O -
-Nebel O -
-. O -
-
-Nach O -
-ersten O -
-Ermittlungen O -
-lag O -
-die O -
-Sichtweite O -
-eine O -
-Stunde O -
-nach O -
-Mitternacht O -
-an O -
-der O -
-Unfallstelle O -
-unter O -
-25 O -
-Metern O -
-. O -
-
-Bei O -
-einer O -
-Massenkarambolage O -
-auf O -
-der O -
-Autobahn O -
-33 O -
-bei O -
-Paderborn O -
-sind O -
-am O -
-Neujahrsmorgen O -
-ein O -
-Mann O -
-getötet O -
-und O -
-zahlreichen O -
-Menschen O -
-verletzt O -
-worden O -
-. O -
-
-Bis O -
-zum O -
-Nachmittag O -
-hatte O -
-die O -
-Polizei O -
-von O -
-über O -
-60 O -
-zum O -
-Teil O -
-schwer O -
-Verletzten O -
-gesprochen O -
-. O -
-
-Am O -
-Abend O -
-korrigi O -
-Polizeipräsenz O -
-im O -
-Kreis O -
-Euskirchen O -
-: O -
-
-„ O -
-Nur O -
-fünf O -
-Streifenwagen O -
-im O -
-Einsatz O -
-“ O -
-Erstellt O -
-11.02.2016 O -
-Schwerpunktkontrollen O -
-können O -
-die O -
-Beamten O -
-im O -
-Kreis O -
-Euskirchen O -
-nur O -
-noch O -
-mit O -
-Hilfe O -
-ihrer O -
-Kollegen O -
-der O -
-Bereitschaftspolizei O -
-durchführen O -
-. O -
-
-Gewerkschaftler O -
-führen O -
-die O -
-dünne O -
-Personaldecke O -
-als O -
-Grund O -
-an O -
-. O -
-
-Foto O -
-: O -
-
-Zimmermann B-PERSON -
-Die O -
-Sicherheit O -
-stand O -
-im O -
-Fokus O -
-des O -
-politischen O -
-Aschermittwochs O -
-der O -
-Jungen B-ORG -
-Union I-ORG -
-. O -
-
-Die O -
-Sehnsucht O -
-nach O -
-Sicherheit O -
-sei O -
-nach O -
-den O -
-Vorfällen O -
-in O -
-Köln O -
-in O -
-der O -
-Bevölkerung O -
-deutlich O -
-größer O -
-geworden O -
-. O -
-
-Von O -
-Kirsten B-PERSON -
-Röder I-PER -
-Drucken O -
-per O -
-Mail O -
-Mechernich O -
-- O -
-Kommern O -
-. O -
-
-Alles O -
-andere O -
-als O -
-beruhigend O -
-war O -
-das O -
-, O -
-was O -
-Markus B-PERSON -
-Hilgers I-PER -
-, O -
-Vize O -
-- O -
-Kreisvorsitzender O -
-der O -
-Polizeigewerkschaft B-ORG -
-und O -
-Personalratsvorsitzender O -
-der O -
-Euskirchener B-ORG -
-Polizei I-ORG -
-, O -
-skizzierte O -
-. O -
-
-„ O -
-Sicher O -
-im O -
-Kreis O -
-!? O -
-Oder O -
-hat O -
-Silvester O -
-doch O -
-alles O -
-verändert O -
-? O -
-
-“ O -
-lautete O -
-das O -
-Thema O -
-des O -
-politischen O -
-Aschermittwochs O -
-der O -
-Jungen B-ORG -
-Union I-ORG -
-( O -
-JU B-ORG -
-) O -
-im O -
-Kommerner O -
-Bistro O -
-Classico O -
-. O -
-
-Von O -
-ihren O -
-Erfahrungen O -
-berichteten O -
-neben O -
-Hilgers B-PERSON -
-DRK O -
-- O -
-Kreisg O -
-Abmahnung O -
-Waldorf B-ORG -
-Frommer I-ORG -
-- O -
-Jupiter O -
-Ascending O -
-- O -
-Warner B-ORG -
-Bros I-ORG -
-. I-ORG -
-
-Entertainment B-ORG -
-GmbH I-ORG -
-wegen O -
-Filesharing O -
-Fachartikel O -
-aus O -
-dem O -
-Bereich O -
-Abmahnung O -
-und O -
-Filesharing O -
-- O -
-16.01.2016 O -
-- O -
-32 O -
-mal O -
-gelesen O -
-. O -
-
-Hilfreiche O -
-Tipps O -
-bei O -
-Filesharingabmahnung O -
-. O -
-
-Beratung O -
-auch O -
-am O -
-Wochenende O -
-! O -
-
-Die O -
-Münchener O -
-Anwaltskanzlei O -
-Waldorf B-ORG -
-Frommer I-ORG -
-mahnt O -
-nach O -
-wie O -
-vor O -
-Internetanschlussinhaber O -
-wegen O -
-des O -
-sog O -
-. O -
-
-Filesharings O -
-ab O -
-. O -
-
-Konkret O -
-wird O -
-den O -
-Anschlussinhabern O -
-vorgeworfen O -
-, O -
-über O -
-Filesharingportale O -
-wie O -
-z.B. O -
-BitTorrent O -
-Filme O -
-wie O -
-„ O -
-Jupiter O -
-Ascending O -
-“ O -
-bereitgestellt O -
-und O -
-zum O -
-Download O -
-angeboten O -
-zu O -
-haben O -
-. O -
-
-Der O -
-Rechteinhaber O -
-ist O -
-hier O -
-die O -
-Warner B-ORG -
-Bros I-ORG -
-. I-ORG -
-
-Entertainment B-ORG -
-GmbH I-ORG -
-. O -
-
-Jupiter O -
-Ascending O -
-ist O -
-ein O -
-US O -
-- O -
-amerikanischer O -
-Science O -
-- O -
-Fiction O -
-- O -
-Film O -
-unter O -
-der O -
-Regie O -
-der O -
-Wachowski B-PERSON -
-- I-PER -
-Geschwister I-PER -
-. O -
-
-In O -
-den O -
-Hauptrollen O -
-sind O -
-Channing B-PERSON -
-Tatum I-PER -
-, O -
-Mila B-PERSON -
-Kunis I-PER -
-und O -
-Sean B-PERSON -
-Bean I-PER -
-zu O -
-sehen O -
-. O -
-
-Was O -
-wird O -
-verlangt O -
-? O -
-
-1 O -
-) O -
-eine O -
-Abgabe O -
-einer O -
-strafbewehrten O -
-Unterlassungserklärung O -
-( O -
-eine O -
-vorgefertigte O -
-liegt O -
-dem O -
-Schreiben O -
-bei O -
-) O -
-2 O -
-) O -
-die O -
-Begleichun O -
-Star O -
-Wars O -
-: O -
-
-Trials O -
-of O -
-Tatooine O -
-VR O -
-gezeigt O -
-Für O -
-HTC O -
-Vive O -
-15 O -
-. O -
-
-Mär O -
-/ O -
-10:00 O -
-Michael B-PERSON -
-Sosinka I-PER -
-Star O -
-Wars O -
-: O -
-
-Trials O -
-of O -
-Tatooine O -
-VR O -
-sieht O -
-vielversprechend O -
-aus O -
-. O -
-
-Erstes O -
-Videomaterial O -
-steht O -
-bereits O -
-zur O -
-Ansicht O -
-bereit O -
-. O -
-
-Man O -
-kann O -
-gespannt O -
-sein O -
-. O -
-
-Star O -
-Wars O -
-: O -
-
-Trials O -
-of O -
-Tatooine O -
-VR O -
-ist O -
-wohl O -
-das O -
-nächste O -
-erwähnenswerte O -
-Virtual O -
-- O -
-Reality O -
-- O -
-Projekt O -
-, O -
-das O -
-sich O -
-in O -
-Richtung O -
-Valve B-ORG -
-und O -
-HTC B-ORG -
-Vive O -
-aufmacht O -
-. O -
-
-Ein O -
-passendes O -
-Video O -
-wurde O -
-auf O -
-dem O -
-YouTube B-ORG -
-- O -
-Channel O -
-von O -
-ILMxLab O -
-veröffentlicht O -
-, O -
-jedoch O -
-schnell O -
-wieder O -
-entfernt O -
-. O -
-
-Ihr O -
-könnt O -
-euch O -
-bei O -
-uns O -
-dennoch O -
-das O -
-passende O -
-Videomaterial O -
-anschauen O -
-. O -
-
-Wir O -
-sehen O -
-den O -
-Millennium O -
-Falken O -
-, O -
-Sturmtruppen O -
-, O -
-R2D2 O -
-, O -
-etwas O -
-Laserschwert O -
-- O -
-Action O -
-und O -
-mehr O -
-. O -
-
-Das O -
-Ganze O -
-wird O -
-als O -
-Cinematic O -
-Virtual O -
-Reality O -
-Experiment O -
-bezeichnet O -
-, O -
-weswegen O -
-noch O -
-unklar O -
-ist O -
-, O -
-ob O -
-es O -
-sich O -
-hierbei O -
-um O -
-ein O -
-echtes O -
-Spiel O -
-oder O -
-nur O -
-eine O -
-Tech O -
-- O -
-Demo O -
-handelt O -
-. O -
-
-Zudem O -
-ist O -
-unbekannt O -
-, O -
-ob O -
-und O -
-wann O -
-Star O -
-Wars O -
-: O -
-
-Trials O -
-of O -
-Tatooine O -
-VR O -
-offiziell O -
-veröffentlicht O -
-wird O -
-. O -
-
-Wenn O -
-sich O -
-aber O -
-LucasArts B-ORG -
-sowie O -
-Industrial O -
-Light O -
-Twittern O -
-( O -
-neu O -
-: O -
-
-mehr O -
-Details O -
-und O -
-Hintergrund O -
-) O -
-HANNOVER O -
-( O -
-dpa B-ORG -
-- I-ORG -
-AFX I-ORG -
-) O -
-- O -
-Die O -
-kurzfristig O -
-angekündigte O -
-Sperrung O -
-der O -
-ICE O -
-- O -
-Schnellfahrstrecke O -
-Hannover O -
-- O -
-Kassel O -
-in O -
-drei O -
-Wochen O -
-soll O -
-nach O -
-einem O -
-Kompromissvorschlag O -
-Niedersachsens O -
-zeitweise O -
-ausgesetzt O -
-werden O -
-. O -
-
-Die O -
-Arbeiten O -
-könnten O -
-zwar O -
-wie O -
-geplant O -
-am O -
-23 O -
-. O -
-
-April O -
-beginnen O -
-, O -
-würden O -
-aber O -
-während O -
-der O -
-Hannover B-ORG -
-- I-ORG -
-Messe I-ORG -
-morgens O -
-und O -
-abends O -
-für O -
-je O -
-zwei O -
-Stunden O -
-ruhen O -
-. O -
-
-Auf O -
-diese O -
-Weise O -
-könnte O -
-zumindest O -
-der O -
-Hauptmesseverkehr O -
-ohne O -
-Verzögerungen O -
-abgewickelt O -
-werden O -
-und O -
-man O -
-würde O -
-wohl O -
-auch O -
-nicht O -
-den O -
-Pfingstreiseverkehr O -
-tangieren O -
-, O -
-sagte O -
-Niedersachsens O -
-Wirtschaftsminister O -
-Olaf B-PERSON -
-Lies I-PER -
-( O -
-SPD B-ORG -
-) O -
-. O -
-
-Er O -
-reagierte O -
-auch O -
-auf O -
-empörte O -
-Reaktionen O -
-der O -
-Wirtschaft O -
-, O -
-die O -
-einen O -
-enormen O -
-Imageschaden O -
-befürchtet O -
-. O -
-
-Lies B-PERSON -
-hatte O -
-seinen O -
-Vorschlag O -
-Bahnchef O -
-Rüdiger B-PERSON 4463
-Grube I-PER 4463
-und O -
-Vorstand B-POS -
-Volker B-PERSON -
-Kefer I-PER -
-am O -
-Freitag O -
-unterbreitet O -
-. O -
-
-Herr B-PERSON -
-Grube I-PER -
-und O -
-dann O -
-auch O -
-Herr B-PERSON -
-Kefer I-PER -
-in O -
-einem O -
-weiteren O -
-Telefonat O -
-haben O -
-mir O -
-zugesagt O -
-, O -
-diese O -
-Idee O -
-zu O -
-prüfen O -
-, O -
-sagte O -
-Lies B-PERSON -
-. O -
-
-Auf O -
-der O -
-wichtigen O -
-Str O -
-Mehr O -
-Straftaten O -
-und O -
-geringere O -
-Aufklärungsquote O -
-im O -
-Land O -
-Artikel O -
-per O -
-E-Mail O -
-empfehlen O -
-Mehr O -
-Straftaten O -
-und O -
-geringere O -
-Aufklärungsquote O -
-im O -
-Land O -
-Empfänger O -
-E-Mail O -
-Tipp O -
-: O -
-
-mehrere O -
-E-Mailadressen O -
-mit O -
-Komma O -
-trennen O -
-persönliche O -
-Nachrichtoptional O -
-Bitte O -
-tragen O -
-Sie O -
-den O -
-Code O -
-in O -
-das O -
-Eingabefeld O -
-ein O -
-. O -
-
-Tipp O -
-: O -
-
-das O -
-Bild O -
-anklicken O -
-um O -
-den O -
-Code O -
-neu O -
-zu O -
-generieren O -
-Empfänger O -
-E-Mail O -
-Twittern O -
-Foto O -
-: O -
-
-dpa B-ORG -
-Magdeburg O -
-( O -
-dpa B-ORG -
-/ O -
-sa O -
-) O -
-- O -
-In O -
-Sachsen O -
-- O -
-Anhalt O -
-sind O -
-im O -
-vergangenen O -
-Jahr O -
-zum O -
-vierten O -
-Mal O -
-in O -
-Folge O -
-mehr O -
-Straftaten O -
-registriert O -
-worden O -
-. O -
-
-Die O -
-Zahl O -
-der O -
-Delikte O -
-stieg O -
-im O -
-Vergleich O -
-zu O -
-2014 O -
-um O -
-2,2 O -
-Prozent O -
-auf O -
-rund O -
-198 O -
-800 O -
-. O -
-
-Dies O -
-geht O -
-aus O -
-der O -
-Kriminalstatistik O -
-hervor O -
-, O -
-die O -
-Innenminister O -
-Holger B-PERSON -
-Stahlknecht I-PER -
-( O -
-CDU B-ORG -
-) O -
-am O -
-Dienstag O -
-in O -
-Magdeburg O -
-vorstellte O -
-. O -
-
-Vor O -
-allem O -
-gab O -
-es O -
-mehr O -
-Diebstähle O -
-. O -
-
-Die O -
-Aufklärungsquote O -
-sank O -
-gleichzeitig O -
-um O -
-2,3 O -
-Punkte O -
-auf O -
-54,8 O -
-Prozent O -
-und O -
-damit O -
-auf O -
-den O -
-niedrigsten O -
-Stand O -
-seit O -
-sieben O -
-Jahren O -
-. O -
-
-Die O -
-Polizei O -
-sei O -
-im O -
-vergangenen O -
-Jahr O -
-enormen O -
-Belastungen O -
-ausgeset O -
-Von O -
-Sven B-PERSON -
-Flohr I-PER -
-Sven B-PERSON -
-Flohr I-PER -
-Biografie O -
-und O -
-alle O -
-Artikel O -
-des O -
-Autors O -
-Twitter O -
-Stv O -
-. O -
-
-Ressortleiter O -
-Sport O -
-Foto O -
-: O -
-
-pa O -
-/ O -
-augenklick O -
-/ O -
-firo O -
-Sportphoto O -
-Felix O -
-Passlack O -
-spielt O -
-ab O -
-sofort O -
-bei O -
-den O -
-Profis O -
-des O -
-BVB B-ORG -
-mit O -
-Besondere O -
-Gäste O -
-beim O -
-Trainingsauftakt O -
-des O -
-BVB B-ORG -
-. O -
-
-Am O -
-Dienstag O -
-versammelten O -
-sich O -
-Borussia B-ORG -
-Dortmunds I-ORG -
-Spieler O -
-erstmals O -
-im O -
-neuen O -
-Jahr O -
-auf O -
-dem O -
-Platz O -
-. O -
-
-Mit O -
-dabei O -
-: O -
-
-zwei O -
-17 O -
-- O -
-Jährige O -
-. O -
-
-Felix B-PERSON -
-Passlack I-PER -
-und O -
-Christian B-PERSON -
-Pulisic I-PER -
-wurden O -
-von O -
-Trainer O -
-Thomas B-PERSON -
-Tuchel I-PER -
-befördert O -
-und O -
-trainieren O -
-von O -
-nun O -
-an O -
-fest O -
-mit O -
-den O -
-Profis O -
-. O -
-
-Vor O -
-wenigen O -
-Tagen O -
-hatte O -
-der O -
-BVB B-ORG -
-Jonas B-PERSON -
-Hofmann I-PER -
-für O -
-rund O -
-acht O -
-Millionen O -
-Euro O -
-Ablöse O -
-an O -
-Borussia B-ORG -
-Mönchengladbach I-ORG -
-verkauft O -
-. O -
-
-Offenbar O -
-soll O -
-für O -
-ihn O -
-kein O -
-Ersatz O -
-von O -
-außen O -
-geholt O -
-werden O -
-. O -
-
-Denn O -
-gerade O -
-Passlack O -
-gilt O -
-als O -
-Versprechen O -
-auf O -
-eine O -
-herausragende O -
-Zukunft O -
-. O -
-
-Vorbereitung O -
-So O -
-trainiert O -
-die O -
-Bundesliga B-ORG -
-für O -
-die O -
-Rückrunde O -
-Ich O -
-sehe O -
-ich O -
-mich O -
-im O -
-rechten O -
-offensiven O -
-Mittelfeld O -
-. O -
-
-Da O -
-fühle O -
-ich O -
-mich O -
-am O -
-wohlsten O -
-, O -
-sagte O -
-der O -
-Hochtalentierte O -
-im O -
-Oktober O -
-im O -
-Interview O -
-mit O -
-Weitere O -
-Informationen O -
-finden O -
-Sie O -
-hier O -
-. O -
-
-* O -
-Übernahme O -
-von O -
-StarCapital B-ORG -
-AG I-ORG -
-, O -
-einem O -
-in O -
-Oberursel O -
-bei O -
-Frankfurt O -
-/ O -
-Main O -
-ansässigen O -
-, O -
-unabhängigen O -
-Asset O -
-Manager O -
-, O -
-mit O -
-betreuten O -
-Kundenvermögen O -
-in O -
-Höhe O -
-von O -
-rund O -
-CHF O -
-2 O -
-5 O -
-Mrd O -
-23.02.16 O -
-| O -
-17:45 O -
-Uhr O -
-| O -
-1 O -
-mal O -
-gelesen O -
-| O -
-hugingroup.com O -
-Bellevue B-ORG -
-Group I-ORG -
-erwirbt O -
-deutsche O -
-StarCapital B-ORG -
-AG I-ORG -
-und O -
-diversifiziert O -
-Produktpalette O -
-im O -
-Asset O -
-Management O -
-- O -
-Kapitalerhöhung O -
-geplant O -
-* O -
-Übernahme O -
-von O -
-StarCapital B-ORG -
-AG I-ORG -
-, O -
-einem O -
-in O -
-Oberursel O -
-bei O -
-Frankfurt O -
-/ O -
-Main O -
-ansässigen O -
-, O -
-unabhängigen O -
-Asset O -
-Manager O -
-, O -
-mit O -
-betreuten O -
-Kundenvermögen O -
-in O -
-Höhe O -
-von O -
-rund O -
-CHF O -
-2.5 O -
-Mrd O -
-. O -
-
-* O -
-Verwaltetes O -
-Kundenvermögen O -
-der O -
-Bellevue B-ORG -
-Group I-ORG -
-steigt O -
-auf O -
-CHF O -
-7.8 O -
-Mrd O -
-. O -
-
-* O -
-Etablierte O -
-Anlagekompetenz O -
-von O -
-StarCapital B-ORG -
-im O -
-Bereich O -
-gemischter O -
-Anlagen O -
-sowie O -
-festverzinslicher O -
-Strategien O -
-ermöglicht O -
-gezielte O -
-Diversifikation O -
-in O -
-neue O -
-Assetklassen O -
-und O -
-Angebotserweiterung O -
-im O -
-Non-Healthcare-Bereich O -
-* O -
-Standort O -
-bei O -
-Frankfurt O -
-/ O -
-Main O -
-stärkt O -
-Position O -
-der O -
-Bellevue B-ORG -
-Group I-ORG -
-in O -
-einem O -
-europäischen O -
-Schlüsselmark O -
-- O -
-von O -
-Andreas B-PERSON -
-Framke I-PER -
-und O -
-Peter B-PERSON -
-Maushagen I-PER -
-Frankfurt O -
-( O -
-Reuters O -
-) O -
-- O -
-Die O -
-Flugbegleitergewerkschaft O -
-Ufo B-ORG 4492
-weitet O -
-ihren O -
-Streik O -
-bei O -
-der O -
-Lufthansa B-ORG -
-zu O -
-Wochenbeginn O -
-massiv O -
-aus O -
-. O -
-
-Wie O -
-die O -
-Gewerkschaft O -
-am O -
-Sonntag O -
-in O -
-Frankfurt O -
-mitteilte O -
-, O -
-ruft O -
-sie O -
-ihre O -
-Mitglieder O -
-an O -
-den O -
-Standorten O -
-Frankfurt O -
-, O -
-Düsseldorf O -
-und O -
-München O -
-für O -
-Montag O -
-zu O -
-ganztägigen O -
-Streiks O -
-auf O -
-. O -
-
-Diese O -
-betreffen O -
-Flüge O -
-auf O -
-der O -
-Kurz O -
-- O -
-, O -
-Mittel O -
-- O -
-und O -
-Langstrecke O -
-. O -
-
-Passagiere O -
-müssen O -
-deshalb O -
-erneut O -
-mit O -
-Hunderten O -
-Flugausfällen O -
-und O -
-massiven O -
-Verspätungen O -
-rechnen O -
-. O -
-
-Am O -
-Samstag O -
-waren O -
-bereits O -
-mehr O -
-als O -
-500 O -
-Flüge O -
-ausgefallen O -
-. O -
-
-Ufo B-ORG 4489
-- O -
-Chef B-POS 4489
-Nicoley B-PERSON 4489
-Baublies I-PER 4489
-machte O -
-die O -
-Lufthansa B-ORG -
-dafür O -
-verantwortlich O -
-, O -
-dass O -
-der O -
-Streik O -
-nun O -
-an O -
-Intensität O -
-zunimmt O -
-. O -
-
-Seit O -
-Donnerstagnachmittag O -
-habe O -
-die O -
-Airline O -
-den O -
-Kontakt O -
-mit O -
-der O -
-Gewerkschaft O -
-angebrochen O -
-. O -
-
-Dieser O -
-Darstellung O -
-widersprach O -
-eine O -
-Lufthansa B-ORG -
-- O -
-Sprecherin O -
-. O -
-
-Sie O -
-kündigte O -
-zugleich O -
-an O -
-, O -
-im O -
-Laufe O -
-des O -
-Tages O -
-werde O -
-einen O -
-Sonderflugplan O -
-für O -
-Montag O -
-erarbeitet O -
-. O -
-
-Der O -
-Streik O -
-, O -
-der O -
-die O -
-ganze O -
-Woche O -
-dauern O -
-soll O -
-, O -
-hatte O -
-Lufthansa B-ORG -
-- O -
-Flugbegleiter O -
-streiken O -
-auch O -
-am O -
-Dienstag O -
-Frankfurt O -
-- O -
-Die O -
-Flugbegleiter O -
-der O -
-Lufthansa B-ORG -
-setzen O -
-ihren O -
-Streik O -
-leicht O -
-abgeschwächt O -
-am O -
-Dienstag O -
-fort O -
-. O -
-
-An O -
-den O -
-beiden O -
-Grossflughäfen O -
-Frankfurt O -
-und O -
-München O -
-sollen O -
-im O -
-Unterschied O -
-zum O -
-Montag O -
-nur O -
-die O -
-Langstrecken O -
-bestreikt O -
-werden O -
-, O -
-wie O -
-die O -
-Gewerkschaft O -
-Ufo B-ORG -
-am O -
-Montag O -
-mitteilte O -
-. O -
-
-In O -
-Düsseldorf O -
-bleibt O -
-es O -
-wie O -
-in O -
-den O -
-Tagen O -
-zuvor O -
-dabei O -
-, O -
-dass O -
-sich O -
-der O -
-Arbeitskampf O -
-auch O -
-auf O -
-Kurz O -
-- O -
-und O -
-Mittelstrecken O -
-erstreckt O -
-. O -
-
-In O -
-Frankfurt O -
-würden O -
-von O -
-04.30 O -
-Uhr O -
-bis O -
-23.00 O -
-Uhr O -
-alle O -
-Langstreckenflüge O -
-, O -
-in O -
-München O -
-von O -
-05.00 O -
-Uhr O -
-bis O -
-24.00 O -
-Uhr O -
-ebenfalls O -
-alle O -
-Langstreckenflüge O -
-und O -
-in O -
-Düsseldorf O -
-alle O -
-Kurz O -
-- O -
-und O -
-Langstreckenflüge O -
-von O -
-4.30 O -
-Uhr O -
-bis O -
-23.00 O -
-Uhr O -
-bestreikt O -
-, O -
-teilte O -
-Ufo B-ORG -
-mit O -
-. O -
-
-Arbeitskampf O -
-und O -
-kein O -
-Ende O -
-in O -
-Sicht O -
-Der O -
-in O -
-der O -
-vergangenen O -
-Woche O -
-begonnene O -
-Streik O -
-soll O -
-noch O -
-bis O -
-einschliesslich O -
-... O -
-Den O -
-vollständigen O -
-Artikel O -
-lesen O -
-... O -
-Impressum O -
-Kurse O -
-werden O -
-bei O -
-Verfügbarkeit O -
-für O -
-NASDAQ O -
-, O -
-NYSE O -
-und O -
-NYSEAmex O -
-in O -
-Echtzeit O -
-angezeigt O -
-. O -
-
-Siehe O -
-auch O -
-Zeitverzögerungen O -
-für O -
-andere O -
-Börsen O -
-. O -
-
-Kurse O -
-und O -
-Informationen O -
-, O -
-die O -
-durch O -
-unabhängige O -
-Anbieter O -
-auf O -
-der O -
-Partnerseite O -
-von O -
-Yahoo! B-ORG -
-Finanzen O -
-bereitgestellt O -
-wurden O -
-. O -
-
-Die O -
-Kurse O -
-werden O -
-automatisch O -
-aktualisiert O -
-und O -
-nach O -
-25 O -
-Minuten O -
-ohne O -
-Aktivität O -
-ausgeschaltet O -
-. O -
-
-Die O -
-Kurse O -
-werden O -
-mit O -
-einer O -
-Verspätung O -
-von O -
-mindestens O -
-15 O -
-Minuten O -
-angezeigt O -
-. O -
-
-Alle O -
-Angaben O -
-sind O -
-ohne O -
-Gewähr O -
-, O -
-dienen O -
-lediglich O -
-der O -
-Information O -
-und O -
-sind O -
-nicht O -
-für O -
-Handelszwecke O -
-oder O -
-als O -
-Empfehlung O -
-gedacht O -
-. O -
-
-Weder O -
-Yahoo! B-ORG -
-noch O -
-einer O -
-der O -
-unabhängigen O -
-Anbieter O -
-können O -
-für O -
-Richtigkeit O -
-, O -
-Vollständigkeit O -
-oder O -
-Verspätungen O -
-sowie O -
-Handlungen O -
-, O -
-die O -
-durch O -
-die O -
-Nutzung O -
-der O -
-hier O -
-enthaltenen O -
-Informationen O -
-vorgenommen O -
-wurden O -
-, O -
-haftbar O -
-gemacht O -
-werden O -
-. O -
-
-Durch O -
-Ihren O -
-Besuch O -
-der O -
-Website O -
-von O -
-Yahoo! B-ORG -
-erklären O -
-Sie O -
-sich O -
-damit O -
-einverstanden O -
-, O -
-die O -
-darauf O -
-enthaltenen O -
-Informationen O -
-nicht O -
-weiterzugeben O -
-. O -
-
-F O -
-US O -
-- O -
-Flair O -
-in O -
-Oberbayern O -
-Ein O -
-1967er O -
-Ford B-ORG -
-Galaxie O -
-500 O -
-Frank B-PERSON -
-Auerswald I-PER -
-hat O -
-sich O -
-einen O -
-Traum O -
-erfüllt O -
-: O -
-
-Der O -
-31 O -
-- O -
-Jährige O -
-holte O -
-sich O -
-amerikanischen O -
-Flair O -
-nach O -
-Oberbayern O -
-und O -
-lebt O -
-nun O -
-seine O -
-Leidenschaft O -
-für O -
-Autos O -
-aus O -
-. O -
-
-Hurrikan O -
-Alex O -
-: O -
-
-Besonderer O -
-Sturm O -
-im O -
-Atlantik O -
-Satellitenbild O -
-der O -
-Woche O -
-: O -
-
-Alex O -
-, O -
-was O -
-machst O -
-du O -
-denn O -
-hier O -
-? O -
-
-AP B-ORG -
-Foto O -
-von O -
-der O -
-Internationalen O -
-Raumstation O -
-: O -
-
-Staunen O -
-ber O -
-den O -
-Sturm O -
-Ein O -
-halbes O -
-Jahr O -
-zu O -
-fr O -
-h O -
-, O -
-viel O -
-zu O -
-weit O -
-stlich O -
-: O -
-
-Hurrikane O -
-gibt O -
-es O -
-normalerweise O -
-im O -
-Sommer O -
-und O -
-Herbst O -
-ber O -
-dem O -
-West O -
-- O -
-Atlantik O -
-. O -
-
-Warum O -
-hat O -
-Alex O -
-diese O -
-Woche O -
-die O -
-Gesetze O -
-gebrochen O -
-? O -
-
-Das O -
-Ereignis O -
-ist O -
-vergleichbar O -
-mit O -
-Schnee O -
-im O -
-August O -
-oder O -
-mit O -
-Kirschbl O -
-te O -
-im O -
-Dezember O -
-. O -
-
-Saison O -
-f O -
-r O -
-Hurrikane O -
-ist O -
-eigentlich O -
-vom O -
-1 O -
-. O -
-
-Juni O -
-bis O -
-zum O -
-30 O -
-. O -
-
-November O -
-, O -
-wenn O -
-sich O -
-die O -
-subtropischen O -
-Meere O -
-auf O -
-der O -
-Nordhalbkugel O -
-aufgeheizt O -
-haben O -
-, O -
-ihre O -
-W O -
-rme O -
-die O -
-St O -
-rme O -
-entfachen O -
-kann O -
-. O -
-
-Doch O -
-diese O -
-Woche O -
-drehte O -
-Alex O -
-auf O -
-. O -
-
-Alex O -
-war O -
-der O -
-fr O -
-heste O -
-Hurrikan O -
-seit O -
-1938 O -
-. O -
-
-Und O -
-es O -
-war O -
-berhaupt O -
-erst O -
-das O -
-vierte O -
-Mal O -
-seit O -
-1851 O -
-, O -
-dass O -
-in O -
-einem O -
-Januar O -
-ein O -
-Hurrikan O -
-im O -
-Nordatlantik O -
-aufzieht O -
-- O -
-und O -
-das O -
-erste O -
-Mal O -
-seit O -
-1978 O -
-. O -
-
-Am O -
-Donnerstag O -
-um O -
-16 O -
-Uhr O -
-deutscher O -
-Zeit O -
-war O -
-die O -
-Sensation O -
-perfekt O -
-, O -
-die O -
-US O -
-- O -
-Wetterbeh O -
-rde O -
-stufte O -
-den O -
-Sturmwirbel O -
-, O -
-der O -
-et O -
-Tweet O -
-ROUNDUP O -
-2 O -
-: O -
-
-Anlegerflucht O -
-und O -
-Börsenturbulenzen O -
-bremsen O -
-Allianz B-ORG -
-im O -
-Sommer O -
-MÜNCHEN O -
-- O -
-Börsenturbulenzen O -
-, O -
-höhere O -
-Schäden O -
-und O -
-die O -
-anhaltende O -
-Flucht O -
-von O -
-Fondskunden O -
-haben O -
-der O -
-Allianz B-ORG -
-im O -
-Sommer O -
-überraschend O -
-stark O -
-zu O -
-schaffen O -
-gemacht O -
-. O -
-
-Mit O -
-2,45 O -
-Milliarden O -
-Euro O -
-fiel O -
-der O -
-operative O -
-Gewinn O -
-im O -
-dritten O -
-Quartal O -
-um O -
-7,5 O -
-Prozent O -
-geringer O -
-aus O -
-als O -
-ein O -
-Jahr O -
-zuvor O -
-. O -
-
-Finanzvorstand B-POS -
-Dieter B-PERSON -
-Wemmer I-PER -
-zeigte O -
-sich O -
-zwar O -
-optimistisch O -
-, O -
-dass O -
-Europas O -
-größter O -
-Versicherer O -
-sein O -
-operatives O -
-Ergebnis O -
-im O -
-Gesamtjahr O -
-auf O -
-etwa O -
-10,8 O -
-Milliarden O -
-Euro O -
-steigert O -
-. O -
-
-Allerdings O -
-könnten O -
-erneute O -
-Schwankungen O -
-an O -
-den O -
-Börsen O -
-dabei O -
-für O -
-Rundungsdifferenzen O -
-sorgen O -
-, O -
-warnte O -
-er O -
-am O -
-Freitag O -
-in O -
-München O -
-. O -
-
-ROUNDUP O -
-2 O -
-: O -
-
-Streik O -
-bei O -
-Lufthansa B-ORG -
-geht O -
-am O -
-Samstag O -
-weiter O -
-- O -
-17 O -
-Stunden O -
-Ausstand O -
-FRANKFURT O -
-/ O -
-DÜSSELDORF O -
-- O -
-Die O -
-Flugbegleiter B-PERSON 4513
-der O -
-Lufthansa B-ORG -
-( O -
-Deutsche B-ORG -
-Lufthansa I-ORG -
-) O -
-setzen O -
-ihren O -
-Streik O -
-am O -
-Samstag O -
-am O -
-Drehkreuz O -
-Frankfurt O -
-und O -
-in O -
-Düsseldorf O -
-fort O -
-. O -
-
-Sie O -
-seien O -
-von O -
-6.00 O -
-Uhr O -
-bis O -
-23.00 O -
-Uhr O -
-zur O -
-Arbeitsniederlegu O -
-Jahrestag O -
-des O -
-Anschlags O -
-auf O -
-Charlie O -
-Hebdo O -
-: O -
-
-Satiremagazin O -
-feiert O -
-Überleben O -
-mit O -
-bissiger O -
-Ausgabe O -
-05.01.16 O -
-Terror O -
-Charlie O -
-Hebdo O -
-feiert O -
-Überleben O -
-mit O -
-bissiger O -
-Sonderausgabe O -
-Von O -
-Peter B-PERSON -
-Heusch I-PER -
-Foto O -
-: O -
-
-BENOIT O -
-TESSIER O -
-/ O -
-REUTERS B-ORG -
-Gott O -
-als O -
-Täter O -
-auf O -
-der O -
-Flucht O -
-: O -
-
-So O -
-gestaltete O -
-die O -
-Redaktion O -
-der O -
-Satirezeitschrift O -
-„ O -
-Charlie O -
-Hebdo O -
-“ O -
-ihre O -
-Sonderausgabe O -
-ein O -
-Jahr O -
-nach O -
-dem O -
-blutigen O -
-Anschlag O -
-auf O -
-das O -
-Magazin O -
-. O -
-
-0 O -
-0 O -
-Zum O -
-Jahrestag O -
-des O -
-Anschlags O -
-erscheint O -
-das O -
-französische O -
-Magazin O -
-Charlie O -
-Hebdo O -
-mit O -
-einer O -
-Sonderausgabe O -
-– O -
-und O -
-gibt O -
-sich O -
-extrem O -
-boshaft O -
-. O -
-
-Paris O -
-. O -
-
-Ein O -
-Jahr O -
-nach O -
-dem O -
-Terroranschlag O -
-feiert O -
-das O -
-französische O -
-Satiremagazin O -
-Charlie O -
-Hebdo O -
-sein O -
-Überleben O -
-mit O -
-einer O -
-bissigen O -
-Sonderausgabe O -
-. O -
+11.01.2016 O - FM
+14:31 O - CARD
+Ich O - PPER
+habe O - VAFIN
+solche O - PIDAT
+Situationen O - NN
+in O - APPR
+Cuba O - NE
+bisher O - ADV
+zweimal O - ADV
+erlebt O - VVPP
+. O - $.
+
+Einmal O - ADV
+mit O - APPR
+der O - ART
+Cubana B-ORG - NE
+, O - $,
+einmal O - ADV
+mit O - APPR
+Condor B-ORG - NE
+. O - $.
+
+Ich O - PPER
+kann O - VMFIN
+nur O - ADV
+sagen O - VVINF
+.... O - $.
+. O - $.
+
+als O - KOKOM
+das O - PDS
+mit O - APPR
+der O - ART
+Cubana B-ORG - NE
+( O - $(
+Triebwerkschaden O - NN
+über O - APPR
+dem O - ART
+Atlantik O - NN
+, O - $,
+Rückflug O - NN
+nach O - APPR
+Havanna O - NE
+) O - $(
+passierte O - VVFIN
+, O - $,
+wurde O - VAFIN
+sich O - PRF
+optimal O - ADJD
+um O - APPR
+uns O - PPER
+gekümmert O - VVPP
+. O - $.
+
+Am O - APPRART
+Flughafen O - NN
+in O - APPR
+Habana O - NE
+war O - VAFIN
+wohl O - ADV
+die O - ART
+Versorgung O - NN
+mit O - APPR
+Essen O - NN
+schwierig O - ADJD
+. O - $.
+
+Das O - ART
+Essen O - NN
+wurde O - VAFIN
+aus O - APPR
+dem O - ART
+Flugzeug O - NN
+geholt O - VVPP
+und O - KON
+serviert O - VVPP
+. O - $.
+
+Nach O - APPR
+höchstens O - ADV
+3 O - CARD
+Stunden O - NN
+fuhren O - VVFIN
+Busse O - NN
+vor O - PTKVZ
+und O - KON
+brachten O - VVFIN
+uns O - PPER
+ins O - APPRART
+Habana B-ORG - NN
+libre I-ORG - FM
+. O - $.
+
+Da O - ADV
+bekamen O - VVFIN
+wir O - PPER
+sofort O - ADV
+Zimmer O - NN
+und O - KON
+Essen O - NN
+und O - KON
+Getränkegutscheine O - NN
+( O - $(
+die O - PRELS
+sehr O - ADV
+ausreichend O - ADJD
+waren O - VAFIN
+) O - $(
+. O - $.
+
+Im O - APPRART
+Hotel O - NN
+bekamen O - VVFIN
+wir O - PPER
+durch O - APPR
+einen O - ART
+Betreuer O - NN
+immer O - ADV
+wieder O - ADV
+Infos O - NN
+, O - $,
+wann O - PWAV
+es O - PPER
+nach O - APPR
+Deutschland O - NE
+geht O - VVFIN
+( O - $(
+Das O - ART
+kaputte O - ADJA
+Teil O - NN
+musste O - VMFIN
+aus O - APPR
+Moskau O - NE
+geliefert O - VVPP
+werde O - VAFIN
+) O - $(
+. O - $.
+
+Um O - APPR
+uns O - PPER
+hat O - VAFIN
+man O - PIS
+sich O - PRF
+wirklich O - ADJD
+richtig O - ADJD
+gekümmert O - VVPP
+. O - $.
+
+Ich O - PPER
+wäre O - VAFIN
+danach O - PROAV
+nie O - ADV
+auf O - APPR
+die O - ART
+Idee O - NN
+gekommen O - VVPP
+, O - $,
+eine O - ART
+Ausgleichszahlung O - NN
+zu O - PTKZU
+verlangen O - VVINF
+. O - $.
+
+Mit O - APPR
+der O - ART
+Condor B-ORG - NN
+. O - $.
+
+Landung O - NN
+in O - APPR
+Nassau O - NE
+und O - KON
+da O - ADV
+standen O - VVFIN
+wir O - PPER
+dann O - ADV
+auf O - APPR
+dem O - ART
+Flughafen O - NN
+... O - $.
+NationslExpress O - NE
+Ersatzzug O - NN
+auf O - APPR
+der O - ART
+RB48 O - NE
+( O - $(
+Aktueller O - ADJA
+Betrieb O - NN
+) O - $(
+kimba2k O - NE
+, O - $,
+Wuppertal O - NE
+- O - $(
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+, O - $,
+Montag O - NN
+, O - $,
+14 O - CARD
+. O - $.
+
+Dezember O - NN
+2015 O - CARD
+, O - $,
+18:28 O - CARD
+( O - $(
+vor O - APPR
+36 O - CARD
+Tagen O - NN
+) O - $(
+@ O - $.
+moonglum O - FM
+Und O - KON
+seit O - APPR
+gestern O - ADV
+teils O - ADV
+grausige O - ADJA
+Verspätungen O - NN
+beim O - APPRART
+RE7 O - NE
+zwischen O - APPR
+15 O - CARD
+und O - KON
+40 O - CARD
+Minuten O - NN
+... O - $.
+RE7 O - FM
+und O - KON
+weniger O - ADV
+als O - KOKOM
+15 O - CARD
+Minuten O - NN
+Verspätung O - NN
+? O - $.
+
+Das O - PDS
+wäre O - VAFIN
+ein O - ART
+Wunder O - NN
+. O - $.
+
+Falsche O - ADJA
+Vornamen O - NN
+auf O - APPR
+200 O - CARD
+000 O - CARD
+Stimmzetteln O - NN
+Artikel O - NN
+per O - APPR
+E-Mail O - NE
+empfehlen O - VVINF
+Falsche O - ADJA
+Vornamen O - NN
+auf O - APPR
+200 O - CARD
+000 O - CARD
+Stimmzetteln O - NN
+Empfänger O - NN
+E-Mail O - NE
+Tipp O - NN
+: O - $.
+
+mehrere O - PIAT
+E-Mailadressen O - NN
+mit O - APPR
+Komma O - NN
+trennen O - VVFIN
+persönliche O - ADJA
+Nachrichtoptional O - NN
+Bitte O - ADJD
+tragen O - VVFIN
+Sie O - PPER
+den O - ART
+Code O - NN
+in O - APPR
+das O - ART
+Eingabefeld O - NN
+ein O - PTKVZ
+. O - $.
+
+Tipp O - NN
+: O - $.
+
+das O - ART
+Bild O - NN
+anklicken O - VVINF
+um O - KOUI
+den O - ART
+Code O - NN
+neu O - ADJD
+zu O - PTKZU
+generieren O - VVINF
+Empfänger O - NN
+E-Mail O - NN
+Twittern O - NN
+Gießen O - NN
+( O - $(
+dpa B-ORG - NE
+/ O - $(
+lhe B-ORG - FM
+) O - $(
+- O - $(
+Nach O - APPR
+einer O - ART
+Panne O - NN
+müssen O - VMFIN
+im O - APPRART
+Kreis O - NN
+Gießen O - NE
+200 O - CARD
+000 O - CARD
+Stimmzettel O - NN
+für O - APPR
+die O - ART
+Kommunalwahl O - NN
+neu O - ADJD
+gedruckt O - VVPP
+werden O - VAINF
+. O - $.
+
+Grund O - NN
+seien O - VAFIN
+fehlerhafte O - ADJA
+Vornamen O - NN
+auf O - APPR
+der O - ART
+FDP B-ORG - NE
+- O - $(
+Kandidatenliste O - NN
+für O - APPR
+die O - ART
+Kreistagswahl O - NN
+, O - $,
+teilte O - VVFIN
+die O - ART
+Kreisverwaltung O - NN
+am O - APPRART
+Montag O - NN
+mit O - PTKVZ
+. O - $.
+
+In O - APPR
+dem O - ART
+einen O - ART
+Fall O - NN
+habe O - VAFIN
+ein O - ART
+Kandidat O - NN
+irrtümlicherweise O - ADV
+einen O - ART
+weiblichen O - ADJA
+Vornamen O - NN
+erhalten O - VVPP
+. O - $.
+
+Im O - APPRART
+anderen O - PIS
+schlich O - VVFIN
+sich O - PRF
+demnach O - PROAV
+ein O - ART
+Schreibfehler O - NN
+ein O - PTKVZ
+. O - $.
+
+Die O - ART
+Stimmzettel O - NN
+werden O - VAFIN
+nun O - ADV
+nachgedruckt O - VVPP
+. O - $.
+
+« O - $(
+Die O - ART
+mit O - APPR
+den O - ART
+Briefwahlunterlagen O - NN
+in O - APPR
+einigen O - PIAT
+Kommunen O - NN
+bereits O - ADV
+verschickten O - ADJA
+Stimmzettel O - NN
+behalten O - VVFIN
+ihre O - PPOSAT
+Gültigkeit O - NN
+» O - $(
+, O - $,
+sagte O - VVFIN
+der O - ART
+Mitteilung O - NN
+zufolge O - APPO
+Wahlleiter O - NN
+Ingo B-PERSON - NE
+Happel I-PER - NE
+. O - $.
+
+© O - FM
+We O - FM
+Von O - APPR
+Torsten B-PERSON - NE
+Weigelt I-PER - NE
+Die O - ART
+Kirche O - NN
+Sankt O - NN
+Peter O - NE
+und O - KON
+Paul O - NE
+in O - APPR
+Hochheim O - NE
+. O - $.
+
+Die O - ART
+Gemeinde O - NN
+soll O - VMFIN
+sich O - PRF
+mit O - APPR
+St. O - NE
+Gallus O - NE
+in O - APPR
+Flörsheim O - NE
+zusammentun O - VVINF
+. O - $.
+
+Foto O - NN
+: O - $.
+
+Rolf B-PERSON - NE
+Oeser I-PER - NE
+Das O - ART
+Bistum O - NN
+hat O - VAFIN
+der O - ART
+Forderung O - NN
+aus O - APPR
+dem O - ART
+Main O - NE
+- O - $(
+Taunus O - NN
+nachgegeben O - VVPP
+und O - KON
+seine O - PPOSAT
+Fusions O - NN
+- O - $(
+Pläne O - NN
+korrigiert O - VVPP
+. O - $.
+
+St. O - NE
+Martinus O - NE
+bleibt O - VVFIN
+eigenständig O - ADJD
+. O - $.
+
+Aufgeschoben O - VVPP
+ist O - VAFIN
+aber O - ADV
+nicht O - PTKNEG
+aufgehoben O - VVPP
+, O - $,
+heißt O - VVFIN
+es O - PPER
+. O - $.
+
+Drucken O - NN
+per O - APPR
+Mail O - NE
+Der O - ART
+Protest O - NN
+hat O - VAFIN
+gewirkt O - VVPP
+. O - $.
+
+Im O - APPRART
+vergangenen O - ADJA
+Herbst O - NN
+hatten O - VAFIN
+die O - ART
+Pfarrgemeinderäte O - NN
+der O - ART
+katholischen O - ADJA
+Gemeinden O - NN
+Sankt O - NN
+Peter O - NE
+und O - KON
+Paul O - NE
+, O - $,
+Sankt O - NN
+Gallus O - NE
+und O - KON
+Sankt O - NN
+Martinus O - NE
+heftig O - ADJD
+gegen O - APPR
+die O - ART
+Pläne O - NN
+des O - ART
+Bistums O - NN
+Limburg O - NE
+protestiert O - VVPP
+, O - $,
+sie O - PPER
+zu O - APPR
+einem O - ART
+Pastoralen O - ADJA
+Raum O - NN
+zusammenzufassen O - VVIZU
+oder O - KON
+gar O - ADV
+zu O - APPR
+einer O - ART
+„ O - $(
+Pfarrei O - NN
+neuen O - ADJA
+Typs O - NN
+“ O - $(
+zu O - PTKZU
+fusionieren O - VVINF
+. O - $.
+
+Nun O - ADV
+hat O - VAFIN
+das O - ART
+Bistum O - NN
+dieser O - PDAT
+Forderung O - NN
+nachgegeben O - VVPP
+. O - $.
+
+So O - ADV
+wird O - VAFIN
+die O - ART
+Hattersheimer O - ADJA
+Gemeinde O - NN
+St. O - NE
+Martinus O - NE
+vorerst O - ADV
+eigenständig O - ADJD
+bleiben O - VVINF
+, O - $,
+während O - KOUS
+St. O - NE
+Peter O - NE
+und O - KON
+Paul O - NE
+( O - $(
+Hochheim O - NE
+) O - $(
+sowie O - KON
+St. O - NE
+Gallus O - NE
+( O - $(
+Flörsheim O - NE
+) O - $(
+sich O - PRF
+bis O - APPR
+2020 O - CARD
+zu O - APPR
+einem O - ART
+Pastoralen O - ADJA
+Raum O - NN
+weiterentwickeln O - VVINF
+sollen O - VMFIN
+. O - $.
+
+„ O - $(
+Das O - ART
+Bistum O - NN
+hat O - VAFIN
+sich O - PRF
+darauf O - PROAV
+ein O - PTKVZ
+16 O - CARD
+/ O - FM
+02 O - CARD
+01:38 O - CARD
+Der O - ART
+ehemalige O - ADJA
+UN-Generalsekretär O - NN
+Boutros B-PERSON - NE
+Boutros I-PER - NE
+- I-PER - $(
+Ghali I-PER - NE
+ist O - VAFIN
+tot O - ADJD
+. O - $.
+
+Boutros B-PERSON - NE
+- I-PER - $(
+Ghali I-PER - NE
+starb O - VVFIN
+im O - APPRART
+Alter O - NN
+von O - APPR
+93 O - CARD
+Jahren O - NN
+im O - APPRART
+Al O - NE
+- O - $(
+Salam O - NE
+- O - $(
+Krankenhaus O - NN
+von O - APPR
+Giseh O - NE
+. O - $.
+
+In O - APPR
+New O - NE
+York O - NE
+gedachte O - VVFIN
+der O - ART
+UN-Sicherheitsrat O - NN
+des O - ART
+einstigen O - ADJA
+Chefs O - NN
+der O - ART
+Weltorganisation O - NN
+mit O - APPR
+einer O - ART
+Schweigeminute O - NN
+. O - $.
+
+Der O - ART
+Ägypter O - NN
+war O - VAFIN
+als O - KOKOM
+Nachfolger O - NN
+von O - APPR
+Javier B-PERSON - NE
+Pérez I-PER - NE
+de I-PER - NE
+Cuéllar I-PER - NE
+von O - APPR
+1992 O - CARD
+bis O - APPR
+1996 O - CARD
+der O - ART
+sechste O - ADJA
+Generalsekretär O - NN
+der O - ART
+Vereinten B-ORG - ADJA
+Nationen I-ORG - NN
+. O - $.
+
+Der O - ART
+koptische O - ADJA
+Christ O - NN
+war O - VAFIN
+der O - ART
+erste O - ADJA
+Afrikaner O - NN
+an O - APPR
+der O - ART
+Spitze O - NN
+der O - ART
+Weltorganisation O - NN
+. O - $.
+
+Boutros B-PERSON - NE
+- I-PER - $(
+Ghali I-PER - NE
+organisierte O - VVFIN
+den O - ART
+Einsatz O - NN
+der O - ART
+Weltorganisation O - NN
+gegen O - APPR
+die O - ART
+Hungersnot O - NN
+am O - APPRART
+Horn O - NN
+von O - APPR
+Afrika O - NE
+. O - $.
+
+In O - APPR
+seine O - PPOSAT
+Amtszeit O - NN
+fielen O - VVFIN
+der O - ART
+Völkermord O - NN
+in O - APPR
+Ruanda O - NE
+und O - KON
+der O - ART
+Zerfall O - NN
+Jugoslawiens O - NE
+. O - $.
+
+Die O - ART
+USA O - NE
+verhinderten O - VVFIN
+mit O - APPR
+ihrem O - PPOSAT
+Veto O - NN
+eine O - ART
+zweite O - ADJA
+Amtszeit O - NN
+für O - APPR
+Boutros B-PERSON - NE
+- I-PER - $(
+Ghali I-PER - NE
+. O - $.
+
+Sie O - PPER
+störten O - VVFIN
+sich O - PRF
+dem O - ART
+Vernehmen O - NN
+nach O - APPO
+daran O - PROAV
+, O - $,
+dass O - KOUS
+er O - PPER
+NATO B-ORG - NE
+- O - $(
+Luftangriffen O - NN
+auf O - APPR
+Ziele O - NN
+in O - APPR
+Bosnien O - NE
+- O - $(
+Herzegowina O - NE
+während O - APPR
+des O - ART
+Bosnienkrieges O - NN
+1995 O - CARD
+zögernd O - ADJD
+gegenüberstand O - VVFIN
+. O - $.
+
+Innerhalb O - APPR
+der O - ART
+Vereinten B-ORG - ADJA
+Nationen I-ORG - NN
+machte O - VVFIN
+Boutros B-PERSON - NE
+- I-PER - $(
+Ghali I-PER - NE
+sich O - PRF
+einen O - ART
+Vorlesen O - NN
+Bei O - APPR
+einem O - ART
+Erdbeben O - NN
+der O - ART
+Stärke O - NN
+6,4 O - CARD
+im O - APPRART
+Süden O - NN
+Taiwans O - NE
+sind O - VAFIN
+in O - APPR
+der O - ART
+Stadt O - NN
+Tainan O - NE
+mehrere O - PIAT
+Wohnhäuser O - NN
+eingestürzt O - VVPP
+oder O - KON
+beschädigt O - VVPP
+worden O - VAPP
+. O - $.
+
+In O - APPR
+den O - ART
+Trümmern O - NN
+werden O - VAFIN
+Opfer O - NN
+befürchtet O - VVPP
+. O - $.
+
+Feuerwehr O - NN
+und O - KON
+Rettungskräfte O - NN
+suchen O - VVFIN
+nach O - APPR
+Verschütteten O - NN
+. O - $.
+
+Die O - ART
+Erdstöße O - NN
+waren O - VAFIN
+auf O - APPR
+der O - ART
+ganzen O - ADJA
+Insel O - NN
+zu O - PTKZU
+spüren O - VVINF
+. O - $.
+
+Das O - ART
+Erdbeben O - NN
+überraschte O - VVFIN
+auch O - ADV
+Superstar O - NN
+Madonna B-PERSON - NE
+und O - KON
+ihre O - PPOSAT
+Musiker O - NN
+, O - $,
+die O - PRELS
+in O - APPR
+Taiwan O - NE
+auf O - APPR
+Tour O - NN
+sind O - VAFIN
+. O - $.
+
+Ihr O - PPOSAT
+Manager O - NN
+Guy B-PERSON - NE
+Oseary I-PER - NE
+schrieb O - VVFIN
+aus O - APPR
+Taipeh O - NE
+auf O - APPR
+Instagram O - NE
+: O - $.
+
+Wir O - PPER
+sind O - VAFIN
+alle O - PIDAT
+OK O - NN
+... O - $.
+Hoffe O - VVFIN
+, O - $,
+dass O - KOUS
+es O - PPER
+vorbei O - ADV
+ist O - VAFIN
+. O - $.
+
+WPP O - NE
+- O - $(
+Tochter O - NN
+kauft O - VVFIN
+deutsche O - ADJA
+Digitalagentur O - NN
+: O - $.
+
+Aus O - APPR
+Conrad B-ORG - NE
+Caine I-ORG - NE
+wird O - VAFIN
+Possible B-ORG - NE
+WPP B-ORG - NE
+- O - $(
+Tochter O - NN
+kauft O - VVFIN
+deutsche O - ADJA
+Digitalagentur O - NN
+: O - $.
+
+Aus O - APPR
+Conrad B-ORG - NE
+Caine I-ORG - NE
+wird O - VAFIN
+Possible B-ORG - NE
+22 O - CARD
+. O - $.
+
+Januar O - NN
+2016 O - CARD
+, O - $,
+aktualisiert O - VVPP
+22 O - CARD
+. O - $.
+
+Januar O - NN
+2016 O - CARD
+, O - $,
+11:40 O - CARD
+Uhr O - NN
+Mit O - APPR
+14 O - CARD
+Jahren O - NN
+die O - ART
+eigene O - ADJA
+Firma O - NN
+gegründet O - VVPP
+. O - $.
+
+Bild O - NN
+: O - $.
+
+PR O - NN
+von O - APPR
+Axel B-PERSON - NE
+Höpner I-PER - NE
+und O - KON
+Catrin B-PERSON - NE
+Bialek I-PER - NE
+Quelle O - NN
+: O - $.
+
+Handelsblatt B-ORG - NN
+Online I-ORG - FM
+Der O - ART
+Werbegigant O - NN
+WPP B-ORG - NE
+schnappt O - VVFIN
+sich O - PRF
+die O - ART
+deutsche O - ADJA
+Digitalagentur O - NN
+Conrad B-ORG - NE
+Caine I-ORG - NE
+. O - $.
+
+Bei O - APPR
+Siemens B-ORG - NE
+und O - KON
+der O - ART
+Deutschen B-ORG - ADJA
+Bahn I-ORG - NN
+zum O - APPRART
+Beispiel O - NN
+genießt O - VVFIN
+der O - ART
+Gründer O - NN
+einen O - ART
+guten O - ADJA
+Ruf O - NN
+. O - $.
+
+Was O - PWS
+Caine B-ORG - NE
+sich O - PRF
+von O - APPR
+der O - ART
+neuen O - ADJA
+Mutter O - NN
+verspricht O - VVFIN
+. O - $.
+
+München O - NE
+/ O - KON
+DüsseldorfDer O - ART
+weltgrößte O - ADJA
+Werbekonzern O - NN
+WPP B-ORG - NE
+kauft O - VVFIN
+die O - ART
+bei O - APPR
+vielen O - PIDAT
+deutschen O - ADJA
+Großkonzernen O - NN
+bestens O - ADV
+verdrahtete O - ADJA
+Digitalagentur O - NN
+Conrad B-ORG - NE
+Caine I-ORG - NE
+. O - $.
+
+Der O - ART
+Branchenriese O - NN
+bestätigte O - VVFIN
+am O - APPRART
+Freitagmorgen O - NN
+an O - APPR
+der O - ART
+Londoner B-ORG - ADJA
+Börse I-ORG - NN
+einen O - ART
+Bericht O - NN
+des O - ART
+Handelsblatts B-ORG - NN
+. O - $.
+
+Mit O - APPR
+der O - ART
+Akquisition O - NN
+setze O - VVFIN
+man O - PIS
+die O - ART
+Strategie O - NN
+fort O - PTKVZ
+, O - $,
+in O - APPR
+schnell O - ADJD
+wachsende O - ADJA
+digitale O - ADJA
+Märkte O - NN
+zu O - PTKZU
+investieren O - VVINF
+. O - $.
+
+WPP B-ORG - NE
+machte O - VVFIN
+zuletzt O - ADV
+6,9 O - CARD
+Milliarden O - NN
+Dollar O - NN
+digitale O - ADJA
+Umsätze O - NN
+, O - $,
+das O - ART
+ent O - NE
+Aktualisiert O - VVPP
+am O - APPRART
+10.11.15 O - NN
+, O - $,
+um O - APPR
+14:27 O - CARD
+von O - APPR
+Tumasch B-PERSON - NE
+Clalüna I-PER - NE
+Wissen O - NN
+was O - PWS
+in O - APPR
+der O - ART
+Region O - NN
+läuft O - VVFIN
+? O - $.
+
+Hier O - ADV
+anmelden O - VVINF
+für O - APPR
+den O - ART
+täglichen O - ADJA
+Newsletter O - NN
+. O - $.
+
+Kommentare O - NN
+« O - $(
+Das O - PDS
+können O - VMFIN
+Sie O - PPER
+gerne O - ADV
+so O - ADV
+schreiben O - VVINF
+» O - $(
+, O - $,
+sagt O - VVFIN
+Martin B-PERSON - NE
+Künzel I-PER - NE
+. O - $.
+
+« O - $(
+Wir O - PPER
+eröffnen O - VVFIN
+ohne O - APPR
+Bewilligung O - NN
+vom O - APPRART
+Bau O - NN
+- O - $(
+und O - KON
+Gewerbeinspektorat O - NN
+. O - $.
+
+Und O - KON
+wenn O - KOUS
+sie O - PPER
+uns O - PPER
+eine O - ART
+Busse O - NN
+aufbrummen O - VVINF
+wollen O - VMFIN
+, O - $,
+dann O - ADV
+fechten O - VVFIN
+wir O - PPER
+die O - PDS
+an O - PTKVZ
+. O - $.
+
+» O - $(
+Die O - ART
+gestrige O - ADJA
+Eröffnung O - NN
+der O - ART
+Plaza O - NE
+Lounge O - FM
+ist O - VAFIN
+das O - ART
+nächste O - ADJA
+Kapitel O - NN
+in O - APPR
+einer O - ART
+Geschichte O - NN
+, O - $,
+die O - PRELS
+bereits O - ADV
+im O - APPRART
+vergangenen O - ADJA
+Jahr O - NN
+in O - APPR
+einem O - ART
+Riesenknatsch O - NN
+gipfelte O - VVFIN
+. O - $.
+
+Ein O - ART
+kurzer O - ADJA
+Rückblick O - NN
+: O - $.
+
+Anfang O - NN
+August O - NN
+wurde O - VAFIN
+bekannt O - ADJD
+, O - $,
+dass O - KOUS
+Tobias B-PERSON - NE
+Zeindler I-PER - NE
+mit O - APPR
+seiner O - PPOSAT
+Eventagentur O - NN
+Zappzoom B-ORG - NE
+den O - ART
+Plaza O - FM
+Club O - FM
+am O - APPRART
+Messeplatz O - NN
+übernehmen O - VVINF
+und O - KON
+in O - APPR
+« O - $(
+Playboxx O - NE
+» O - $(
+umtaufen O - VVINF
+wollte O - VMFIN
+. O - $.
+
+Er O - PPER
+sollte O - VMFIN
+den O - ART
+Club O - NN
+von O - APPR
+Sadik B-PERSON - NE
+und O - KON
+Burhan B-PERSON - NE
+Arslan I-PER - NE
+übernehmen O - VVINF
+, O - $,
+die O - PRELS
+ihrerseits O - ADV
+aufgrund O - APPR
+von O - APPR
+ausbleibenden O - ADJA
+Gästen O - NN
+und O - KON
+Erfolg O - NN
+acht O - CARD
+Monatsmieten O - NN
+nicht O - PTKNEG
+mehr O - ADV
+gezahlt O - VVPP
+hatten O - VAFIN
+. O - $.
+
+Deshalb O - PROAV
+wurde O - VAFIN
+ein O - ART
+neuer O - ADJA
+Mieter O - NN
+gesucht O - VVPP
+, O - $,
+Zeindler B-PERSON - NE
+sah O - VVFIN
+sich O - PRF
+in O - APPR
+der O - ART
+Poleposition O - NN
+, O - $,
+verkündete O - VVFIN
+stolz O - ADJD
+die O - ART
+Eröffnung O - NN
+im O - APPRART
+August O - NN
+. O - $.
+
+Tweet O - NE
+Der O - ART
+Chip O - NN
+- O - $(
+Riese O - NN
+Intel B-ORG - NE
+streicht O - VVFIN
+12.000 O - CARD
+Jobs O - NN
+, O - $,
+um O - KOUI
+sich O - PRF
+schneller O - ADJD
+aus O - APPR
+der O - ART
+Abhängigkeit O - NN
+vom O - APPRART
+schrumpfenden O - ADJA
+PC O - NN
+- O - $(
+Geschäft O - NN
+zu O - PTKZU
+lösen O - VVINF
+. O - $.
+
+Bis O - APPR
+Mitte O - NN
+2017 O - CARD
+sollen O - VMFIN
+damit O - PROAV
+elf O - CARD
+Prozent O - NN
+der O - ART
+Belegschaft O - NN
+gehen O - VVINF
+. O - $.
+
+Intel B-ORG - NE
+- O - $(
+Chef B-POS - NN
+Brian B-PERSON - NE
+Krzanich I-PER - NE
+will O - VMFIN
+stärker O - ADJD
+auf O - APPR
+Chips O - NN
+für O - APPR
+Rechenzentren O - NN
+und O - KON
+Cloud O - FM
+- O - $(
+Computing O - FM
+sowie O - KON
+die O - ART
+Vernetzung O - NN
+von O - APPR
+Alltagstechnik O - NN
+und O - KON
+Maschinen O - NN
+im O - APPRART
+Internet O - NN
+der O - ART
+Dinge O - NN
+setzen O - VVINF
+. O - $.
+
+Zuletzt O - ADV
+machten O - VVFIN
+PC O - NN
+- O - $(
+Prozessoren O - NN
+noch O - ADV
+über O - ADV
+die O - ART
+Hälfte O - NN
+des O - ART
+Intel B-ORG - NE
+- O - $(
+Geschäfts O - NN
+aus O - PTKVZ
+, O - $,
+während O - KOUS
+die O - ART
+Verkäufe O - NN
+der O - ART
+Notebooks O - NN
+und O - KON
+Desktops O - NN
+seit O - APPR
+Jahren O - NN
+sinken O - VVFIN
+und O - KON
+allein O - ADV
+im O - APPRART
+vergangenen O - ADJA
+Quartal O - NN
+laut O - APPR
+Marktforschern O - NN
+erneut O - ADJD
+um O - APPR
+etwa O - ADV
+ein O - ART
+Zehntel O - NN
+einbrachen O - VVFIN
+. O - $.
+
+Die O - ART
+meisten O - PIDAT
+vom O - APPRART
+Stellenabbau O - NN
+betroffenen O - ADJA
+Angestellten O - NN
+sollen O - VMFIN
+innerhalb O - APPR
+der O - ART
+nächsten O - ADJA
+60 O - CARD
+Tage O - NN
+informiert O - VVPP
+werden O - VAINF
+, O - $,
+kündigte O - VVFIN
+Intel O - NE
+an O - PTKVZ
+. O - $.
+
+Zunächst O - ADV
+werden O - VAFIN
+die O - ART
+Abfindungen O - NN
+ins O - APPRART
+Geld O - NN
+gehen O - VVINF
+- O - $(
+im O - APPRART
+zweiten O - ADJA
+Quartal O - NN
+rechnet O - VVFIN
+der O - ART
+Konzern O - NN
+mit O - APPR
+einem O - ART
+Sonderaufwand O - NN
+von O - APPR
+etwa O - ADV
+1,2 O - CARD
+Milliarden O - NN
+Dollar O - NN
+. O - $.
+
+Die O - ART
+Sparmaßnahmen O - NN
+sollen O - VMFIN
+aber O - ADV
+1,4 O - CARD
+Milliarden O - NN
+Dollar O - NN
+( O - $(
+aktuell O - ADJD
+1,2 O - CARD
+Sie O - NN
+sind O - VAFIN
+hier O - ADV
+: O - $.
+
+Home O - FM
+> O - FM
+Nachrichten O - NN
+> O - FM
+Ausland O - NN
+> O - FM
+Idomeni O - NE
+: O - $.
+
+Flüchtlinge O - NN
+fliehen O - VVFIN
+vor O - APPR
+Elend O - NN
+in O - APPR
+Griechenland O - NE
+... O - $.
+t O - NE
+- O - $(
+online.de O - FM
+ist O - VAFIN
+ein O - ART
+Angebot O - NN
+der O - ART
+Ströer B-ORG - NE
+Content I-ORG - FM
+Group I-ORG - FM
+Migration O - FM
+Flüchtlinge O - NN
+fliehen O - VVFIN
+vor O - APPR
+Elend O - NN
+in O - APPR
+Griechenland O - NE
+14.03.2016 O - FM
+, O - $,
+17:56 O - CARD
+Uhr O - NN
+| O - FM
+dpa O - NE
+Chamilo O - NE
+/ O - $(
+Skopje O - NE
+( O - $(
+dpa O - NE
+) O - $(
+- O - $(
+Angesichts O - APPR
+der O - ART
+dramatischen O - ADJA
+Lage O - NN
+für O - APPR
+Flüchtlinge O - NN
+in O - APPR
+Nordgriechenland O - NE
+suchen O - VVFIN
+sich O - PRF
+immer O - ADV
+mehr O - PIAT
+Menschen O - NN
+lebensgefährliche O - ADJA
+Schleichwege O - NN
+nach O - APPR
+Mazedonien O - NE
+. O - $.
+
+Top O - FM
+- O - $(
+Nachrichten O - NN
+Unsere O - PPOSAT
+wichtigsten O - ADJA
+Themen O - NN
+Vom O - APPRART
+Flüchtlingslager O - NN
+Idomeni O - NE
+aus O - APZR
+brachen O - VVFIN
+Hunderte O - NN
+auf O - PTKVZ
+und O - KON
+durchquerten O - VVFIN
+einen O - ART
+reißenden O - ADJA
+Fluss O - NN
+, O - $,
+während O - KOUS
+auf O - APPR
+der O - ART
+anderen O - ADJA
+Seite O - NN
+schon O - ADV
+die O - ART
+griechische O - ADJA
+Bereitschaftspolizei O - NN
+aufzog O - VVFIN
+. O - $.
+
+Drei O - CARD
+afghanische O - ADJA
+Flüchtlinge O - NN
+gelangten O - VVFIN
+andernorts O - ADV
+zwar O - ADV
+illegal O - ADJD
+nach O - APPR
+Mazedonien O - NE
+, O - $,
+ertranken O - VVFIN
+dort O - ADV
+aber O - ADV
+in O - APPR
+einem O - ART
+Hochwasser O - NN
+führenden O - ADJA
+Fluss O - NN
+. O - $.
+
+Über O - APPR
+die O - ART
+Ägäis O - NN
+strömen O - VVFIN
+derweil O - ADV
+weiter O - ADV
+verzweifelte O - ADJA
+Menschen O - NN
+nach O - PTKVZ
+, O - $,
+weitere O - ADJA
+Todesopfer O - NN
+sind O - VAFIN
+zu O - PTKZU
+befürchten O - VVINF
+. O - $.
+
+Nach O - APPR
+einem O - ART
+acht O - CARD
+Kilometer O - NN
+langen O - ADJA
+Marsch O - NN
+kämpften O - VVFIN
+sich O - PRF
+einige O - PIAT
+hundert O - CARD
+07.01.2016 O - NN
+| O - APPR
+23:00 O - CARD
+Uhr O - NN
+2016-01-07T23:00:00 O - CARD
++01:00 O - FM
+So O - ADV
+soll O - VMFIN
+die O - ART
+neue O - ADJA
+Straße O - NN
+aussehen.Foto O - VVINF
+: O - $.
+
+Bahn O - NN
+Dinslaken O - NE
+. O - $.
+
+Landesbetrieb O - NN
+stellt O - VVFIN
+die O - ART
+Planung O - NN
+für O - APPR
+die O - ART
+Jägerstraße O - NN
+vor O - PTKVZ
+. O - $.
+
+Ein O - ART
+Wohnhaus O - NN
+muss O - VMFIN
+abgerissen O - VVPP
+werden O - VAINF
+. O - $.
+
+Die O - ART
+Baukosten O - NN
+betragen O - VVFIN
+3,4 O - CARD
+Millionen O - NN
+Euro O - NN
+Der O - ART
+Bau O - NN
+des O - ART
+dritten O - ADJA
+Gleises O - NN
+auf O - APPR
+der O - ART
+Strecke O - NN
+zwischen O - APPR
+Oberhausen O - NE
+und O - KON
+Emmerich O - NE
+bringt O - VVFIN
+erhebliche O - ADJA
+Veränderungen O - NN
+mit O - APPR
+sich O - PRF
+. O - $.
+
+Nicht O - PTKNEG
+nur O - ADV
+das O - PDS
+entlang O - APPR
+der O - ART
+Betuwe O - NN
+- O - $(
+Strecke O - NN
+Schallschutzwände O - NN
+errichtet O - VVPP
+werden O - VAFIN
+, O - $,
+auch O - ADV
+Bahnübergänge O - NN
+fallen O - VVFIN
+weg O - PTKVZ
+. O - $.
+
+Das O - PDS
+plant O - VVFIN
+die O - ART
+Bahn O - NN
+auch O - ADV
+für O - APPR
+den O - ART
+Übergang O - NN
+an O - APPR
+der O - ART
+Jäger O - NN
+- O - $(
+/ O - $(
+Sterkrader O - ADJA
+Straße O - NN
+. O - $.
+
+Für O - APPR
+den O - ART
+Autoverkehr O - NN
+baut O - VVFIN
+der O - ART
+Landesbetrieb B-ORG - NN
+Straßenbau I-ORG - NN
+NRW I-ORG - NE
+als O - KOKOM
+Ersatz O - NN
+für O - APPR
+den O - ART
+Bahnübergang O - NN
+eine O - ART
+neue O - ADJA
+Straße O - NN
+. O - $.
+
+Sie O - PPER
+führt O - VVFIN
+entlang O - APPR
+der O - ART
+Bahntrasse O - NN
+von O - APPR
+der O - ART
+Emmericher O - ADJA
+Straße O - NN
+( O - $(
+L4 O - FM
+) O - $(
+bis O - APPR
+zur O - APPRART
+Brinkstraße O - NN
+( O - $(
+B8 O - NE
+) O - $(
+. O - $.
+
+Für O - APPR
+diesen O - PDAT
+Neubau O - NN
+ist O - VAFIN
+ein O - ART
+Planfeststellungsverfahren O - NN
+notwendig O - ADJD
+. O - $.
+
+Verantwortlich O - ADJD
+ist O - VAFIN
+für O - APPR
+den O - ART
+Straßenneubau O - NN
+die O - ART
+Weseler O - ADJA
+Niederlassung O - NN
+des O - ART
+Landesbetriebs B-ORG - NN
+, O - $,
+die O - PRELS
+am O - APPRART
+20 O - CARD
+. O - $.
+
+Januar O - NN
+zu O - APPR
+einer O - ART
+Informationsveranstaltung O - NN
+einl O - NE
+Nieding B-ORG - NE
++ I-ORG - KON
+Barth I-ORG - NE
+: O - $.
+
+German B-ORG - NE
+Pellets I-ORG - NE
+Insolvenz O - NN
+zieht O - VVFIN
+immer O - ADV
+weitere O - ADJA
+Kreise O - NN
+25.02.16 O - FM
+12:58 O - CARD
+anleihencheck.de O - FM
+Bad O - NE
+Marienberg O - NE
+( O - $(
+www.anleihencheck.de O - FM
+) O - $(
+- O - $(
+Die O - ART
+Insolvenz O - NN
+der O - ART
+German B-ORG - FM
+Pellets I-ORG - NE
+GmbH I-ORG - NN
+wird O - VAFIN
+immer O - ADV
+undurchsichtiger O - ADJD
+, O - $,
+so O - ADV
+die O - ART
+Nieding B-ORG - NE
++ I-ORG - KON
+Barth I-ORG - NE
+Rechtsanwaltsaktiengesellschaft O - NN
+in O - APPR
+einer O - ART
+aktuellen O - ADJA
+Pressemitteilung O - NN
+. O - $.
+
+Näheres O - ADJA
+entnehmen O - VVFIN
+Sie O - PPER
+bitte O - ADV
+dem O - ART
+Wortlaut O - NN
+der O - ART
+folgenden O - ADJA
+Pressemeldung O - NN
+: O - $.
+
+Jetzt O - ADV
+hat O - VAFIN
+das O - ART
+zuständige O - ADJA
+Gericht O - NN
+auch O - ADV
+bei O - APPR
+etlichen O - ADJA
+Tochterunternehmen O - NN
+die O - ART
+vorläufige O - ADJA
+Insolvenzverwaltung O - NN
+angeordnet O - VVPP
+. O - $.
+
+Betroffen O - VVPP
+sind O - VAFIN
+die O - ART
+German B-ORG - FM
+Pellets I-ORG - NE
+Genussrechte I-ORG - NN
+GmbH I-ORG - NN
+, O - $,
+die O - ART
+German B-ORG - FM
+Pellets I-ORG - NE
+Beteiligungs I-ORG - NN
+GmbH I-ORG - NN
+, O - $,
+die O - ART
+German B-ORG - FM
+Pellets I-ORG - NE
+Supply I-ORG - FM
+GmbH I-ORG - NN
+& I-ORG - KON
+Co I-ORG - NN
+. I-ORG - $.
+
+KG B-ORG - NE
+und O - KON
+die O - ART
+German B-ORG - FM
+Pellets I-ORG - NE
+Sachsen I-ORG - NE
+. O - $.
+
+Nach O - ADV
+wie O - KOKOM
+vor O - ADV
+tappen O - VVFIN
+die O - ART
+Anleger O - NN
+völlig O - ADJD
+im O - APPRART
+Dunkeln O - NN
+, O - $,
+wie O - PWAV
+die O - ART
+finanzielle O - ADJA
+Situation O - NN
+bei O - APPR
+German B-ORG - NE
+Pellets I-ORG - NE
+wirklich O - ADJD
+aussieht O - VVFIN
+. O - $.
+
+Es O - PPER
+ist O - VAFIN
+daher O - PROAV
+wichtig O - ADJD
+, O - $,
+dass O - KOUS
+die O - ART
+Anleger O - NN
+sich O - PRF
+organisieren O - VVFIN
+, O - $,
+um O - KOUI
+ihre O - PPOSAT
+Rechte O - NN
+im O - APPRART
+Insolvenzverfahren O - NN
+zu O - PTKZU
+wahren O - VVINF
+, O - $,
+sagt O - VVFIN
+Klaus B-PERSON 4391 NE
+Nieding I-PER 4391 NE
+, O - $,
+Vorstand B-POS 4391 NN
+der O - ART
+Nieding B-ORG - NE
++ I-ORG - KON
+Barth I-ORG - NE
+Rechtsanwaltsaktiengesell O - NN
+Venezuelas O - NE
+Präsident O - NN
+Maduro B-PERSON - NE
+erklärt O - VVFIN
+Freitage O - NN
+zu O - APPR
+Feiertagen O - NN
+07.04.2016 O - FM
+, O - $,
+08:59 O - CARD
+Energiekrise O - NN
+Venezuelas O - NE
+Präsident O - NN
+Maduro O - NE
+erklärt O - VVFIN
+Freitage O - NN
+zu O - APPR
+Feiertagen O - NN
+Foto O - NN
+: O - $.
+
+MARCO O - NE
+BELLO O - NE
+/ O - $(
+REUTERS O - NE
+Venezuela O - NE
+leidet O - VVFIN
+unter O - APPR
+einer O - ART
+schweren O - ADJA
+Wirtschafts O - NN
+- O - TRUNC
+und O - KON
+Energiekrise O - NN
+. O - $.
+
+Der O - ART
+sozialistische O - ADJA
+Präsident O - NN
+Nicolas B-PERSON - NE
+Maduro I-PER - NE
+. O - $.
+
+0 O - CARD
+0 O - CARD
+Um O - KOUI
+Strom O - NN
+zu O - PTKZU
+sparen O - VVINF
+, O - $,
+greift O - VVFIN
+die O - ART
+Regierung O - NN
+von O - APPR
+Venezuela O - NE
+zu O - APPR
+besonderen O - ADJA
+Mitteln O - NN
+. O - $.
+
+Das O - ART
+von O - APPR
+Wasserkraft O - NN
+abhängige O - ADJA
+Land O - NN
+leidet O - VVFIN
+unter O - APPR
+Dürre O - NN
+. O - $.
+
+Caracas O - NE
+. O - $.
+
+Wegen O - APPR
+notorischen O - ADJA
+Strommangels O - NN
+hat O - VAFIN
+Venezuela O - NE
+alle O - PIDAT
+Freitage O - NN
+der O - ART
+nächsten O - ADJA
+beiden O - PIDAT
+Monate O - NN
+zu O - APPR
+Feiertagen O - NN
+erklärt O - VVPP
+. O - $.
+
+Das O - ART
+Vorhaben O - NN
+ist O - VAFIN
+Teil O - NN
+eines O - ART
+60 O - CARD
+- O - $(
+Tage O - NN
+- O - $(
+Plans O - NN
+, O - $,
+mit O - APPR
+dem O - PRELS
+das O - ART
+rezessionsgeplagte O - ADJA
+Opec O - NE
+- O - $(
+Land O - NN
+angesichts O - APPR
+häufiger O - ADJA
+Stromausfälle O - NN
+Energie O - NN
+sparen O - VVINF
+will O - VMFIN
+. O - $.
+
+Wir O - PPER
+werden O - VAFIN
+lange O - ADJA
+Wochenenden O - NN
+haben O - VAINF
+, O - $,
+sagte O - VVFIN
+der O - ART
+linke O - ADJA
+Präsident O - NN
+Nicolas O - NE
+Maduro O - NE
+am O - APPRART
+Mittwochabend O - NN
+im O - APPRART
+staatlichen O - ADJA
+Fernsehen O - NN
+. O - $.
+
+Konkrete O - ADJA
+Pläne O - NN
+sollten O - VMFIN
+an O - APPR
+diesem O - PDAT
+Donnerstag O - NN
+vorgestellt O - VVPP
+werden O - VAINF
+. O - $.
+
+Die O - ART
+Opposition O - NN
+kritisierte O - VVFIN
+, O - $,
+angesichts O - APPR
+von O - APPR
+Wirtschaftskrise O - NN
+, O - $,
+e O - NN
+Sie O - PPER
+sind O - VAFIN
+hier O - ADV
+: O - $.
+
+Home O - FM
+> O - FM
+Nachrichten O - NN
+> O - FM
+Ausland O - NN
+> O - $(
+Konflikte O - NN
+- O - $(
+YPG B-ORG - NE
+: O - $.
+
+Türkische O - ADJA
+Vorwürfe O - NN
+sind O - VAFIN
+Vorwand O - NN
+für O - APPR
+Syrien O - NE
+- O - $(
+Einmarsch O - NN
+... O - $.
+t O - NE
+- O - $(
+online.de O - FM
+ist O - VAFIN
+ein O - ART
+Angebot O - NN
+der O - ART
+Ströer B-ORG - NE
+Content I-ORG - FM
+Group I-ORG - FM
+Konflikte O - NN
+YPG O - NE
+: O - $.
+
+Türkische O - ADJA
+Vorwürfe O - NN
+sind O - VAFIN
+Vorwand O - NN
+für O - APPR
+Syrien O - NE
+- O - $(
+Einmarsch O - NN
+19.02.2016 O - FM
+, O - $,
+13:48 O - CARD
+Uhr O - NN
+| O - FM
+dpa B-ORG - NE
+Istanbul O - NE
+( O - $(
+dpa B-ORG - NE
+) O - $(
+- O - $(
+Die O - ART
+kurdischen O - ADJA
+YPG B-ORG - NE
+- O - $(
+Milizen O - NN
+in O - APPR
+Syrien O - NE
+haben O - VAFIN
+die O - ART
+türkischen O - ADJA
+Anschuldigungen O - NN
+zum O - APPRART
+Anschlag O - NN
+von O - APPR
+Ankara O - NE
+als O - KOKOM
+Vorwand O - NN
+für O - APPR
+einen O - ART
+Einmarsch O - NN
+in O - APPR
+Nordsyrien O - NE
+bezeichnet O - VVPP
+. O - $.
+
+Top O - FM
+- O - $(
+Nachrichten O - NN
+Unsere O - PPOSAT
+wichtigsten O - ADJA
+Themen O - NN
+Das O - ART
+erste O - ADJA
+, O - $,
+was O - PRELS
+sie O - PPER
+nach O - APPR
+dem O - ART
+Anschlag O - NN
+gemacht O - VVPP
+haben O - VAFIN
+, O - $,
+war O - VAFIN
+, O - $,
+uns O - PPER
+wegen O - APPR
+des O - ART
+Vorfalls O - NN
+zu O - PTKZU
+beschuldigen O - VVINF
+, O - $,
+sagte O - VVFIN
+YPG B-ORG - NE
+- O - $(
+Sprecher O - NN
+Redur B-PERSON - NE
+Xelil I-PER - NE
+der O - ART
+kurdischen O - ADJA
+Agentur O - NN
+Firat B-ORG - NE
+. O - $.
+
+Damit O - PROAV
+erfinden O - VVFIN
+sie O - PPER
+einen O - ART
+Vorwand O - NN
+, O - $,
+um O - KOUI
+in O - APPR
+Rojava O - NE
+einzudringen O - VVIZU
+. O - $.
+
+Rojava O - NE
+ist O - VAFIN
+die O - ART
+kurdische O - ADJA
+Bezeichnung O - NN
+für O - APPR
+die O - ART
+Gebiete O - NN
+in O - APPR
+Nordsyrien O - NE
+unter O - APPR
+YPG B-ORG - NE
+- O - $(
+Kontrolle O - NN
+. O - $.
+
+Xelil B-PERSON - NE
+wies O - VVFIN
+erneut O - ADJD
+jede O - PIDAT
+Verantwortung O - NN
+für O - APPR
+den O - ART
+Anschlag O - NN
+in O - APPR
+Ankara O - NE
+zurück O - PTKVZ
+. O - $.
+
+Wir O - PPER
+haben O - VAFIN
+bereits O - ADV
+zuvor O - ADV
+mitgeteilt O - VVPP
+, O - $,
+dass O - KOUS
+wir O - PPER
+keine O - PIAT
+Angriffe O - NN
+auf O - APPR
+den O - ART
+türkis O - NE
+DGAP B-ORG - NE
+- O - $(
+Stimmrechte O - NN
+: O - $.
+
+Brenntag B-ORG - NN
+AG I-ORG - NN
+( O - $(
+deutsch O - ADJD
+) O - $(
+Brenntag B-ORG - NN
+AG I-ORG - NN
+: O - $.
+
+Veröffentlichung O - NN
+gemäß O - APPR
+§ O - NN
+26 O - CARD
+Abs O - NN
+. O - $.
+
+1 O - CARD
+WpHG O - NN
+mit O - APPR
+dem O - ART
+Ziel O - NN
+der O - ART
+europaweiten O - ADJA
+Verbreitung O - NN
+Brenntag B-ORG - NN
+AG I-ORG - NN
+23.03.2016 O - FM
+15:47 O - CARD
+Veröffentlichung O - NN
+einer O - ART
+Stimmrechtsmitteilung O - NN
+, O - $,
+übermittelt O - VVPP
+durch O - APPR
+DGAP B-ORG - NE
+- O - $(
+ein O - ART
+Service O - NN
+der O - ART
+EQS B-ORG - NE
+Group I-ORG - FM
+AG I-ORG - NN
+. O - $.
+
+Für O - APPR
+den O - ART
+Inhalt O - NN
+der O - ART
+Mitteilung O - NN
+ist O - VAFIN
+der O - ART
+Emittent O - NN
+verantwortlich O - ADJD
+. O - $.
+
+Stimmrechtsmitteilung O - NN
+Brenntag B-ORG - NN
+AG I-ORG - NN
+Stinnes B-ORG - NE
+Platz O - NN
+1 O - CARD
+45472 O - CARD
+Mülheim O - NE
+an O - APPR
+der O - ART
+Ruhr O - NE
+Deutschland O - NE
+2 O - CARD
+. O - $.
+
+Grund O - NN
+der O - ART
+Mitteilung O - NN
+X O - CARD
+Erwerb O - NN
+/ O - $(
+Veräußerung O - NN
+von O - APPR
+Aktien O - NN
+mit O - APPR
+Stimmrechten O - NN
+Erwerb O - NN
+/ O - $(
+Veräußerung O - NN
+von O - APPR
+Instrumenten O - NN
+Änderung O - NN
+der O - ART
+Gesamtzahl O - NN
+der O - ART
+Stimmrechte O - NN
+Sonstiger O - ADJA
+Grund O - NN
+: O - $.
+
+3 O - CARD
+. O - $.
+
+Angaben O - NN
+zum O - APPRART
+Mitteilungspflichtigen O - NN
+Name O - NN
+: O - $.
+
+Registrierter O - ADJA
+Sitz O - NN
+und O - KON
+Staat O - NN
+: O - $.
+
+BlackRock B-ORG - NE
+, I-ORG - $,
+Inc I-ORG - NE
+. I-ORG - $.
+
+Wilmington O - NE
+, O - $,
+DE O - NE
+Vereinigte O - ADJA
+Staaten O - NN
+von O - APPR
+Amerika O - NE
+4 O - CARD
+. O - $.
+
+Namen O - NN
+der O - ART
+Aktionäre O - NN
+mit O - APPR
+3 O - CARD
+% O - NN
+oder O - KON
+mehr O - PIAT
+Stimmrechten O - NN
+, O - $,
+wenn O - KOUS
+abweichend O - ADJD
+von O - APPR
+3 O - CARD
+. O - $.
+
+5 O - CARD
+. O - $.
+
+Datum O - NN
+der O - ART
+Schwellenberührung O - NN
+18.03.2016 O - FM
+6 O - CARD
+. O - $.
+
+Gesamtstimmrechtsanteile O - NN
+An O - APPR
+« O - $(
+Star O - FM
+Wars O - FM
+» O - $(
+an O - APPR
+US O - NE
+- O - $(
+Kinokassen O - NN
+weiter O - ADV
+in O - APPR
+Führung O - NN
+11 O - CARD
+. O - $.
+
+Januar O - NN
+2016 O - CARD
+06:15 O - CARD
+Uhr O - NN
+« O - $(
+Star O - FM
+Wars O - FM
+» O - $(
+an O - APPR
+US O - NE
+- O - $(
+Kinokassen O - NN
+weiter O - ADV
+in O - APPR
+Führung O - NN
+Los O - NE
+Angeles O - NE
+- O - $(
+« O - $(
+Star O - FM
+Wars O - FM
+» O - $(
+liegt O - VVFIN
+an O - APPR
+den O - ART
+nordamerikanischen O - ADJA
+Kinokassen O - NN
+weiter O - ADV
+in O - APPR
+Führung O - NN
+. O - $.
+
+Das O - ART
+Weltraum O - NN
+- O - $(
+Abenteuer O - NN
+« O - $(
+Das O - ART
+Erwachen O - NN
+der O - ART
+Macht O - NN
+» O - $(
+belegte O - VVFIN
+auch O - ADV
+an O - APPR
+seinem O - PPOSAT
+vierten O - ADJA
+Wochenende O - NN
+den O - ART
+Spitzenplatz O - NN
+der O - ART
+Kinocharts O - NN
+in O - APPR
+den O - ART
+USA O - NE
+und O - KON
+Kanada O - NE
+. O - $.
+
+Fullscreen O - NN
+Daisy B-PERSON - NE
+Ridley I-PER - NE
+bei O - APPR
+der O - ART
+« O - $(
+Star O - FM
+Wars O - FM
+» O - $(
+- O - $(
+Premiere O - NN
+in O - APPR
+Hollywood O - NE
+. O - $.
+
+Foto O - NN
+: O - $.
+
+Eugene B-PERSON - NE
+Garcia I-PER - NE
+© O - $,
+dpa O - NE
+- O - $(
+infocom O - NE
+GmbH O - NN
+« O - $(
+Star O - FM
+Wars O - FM
+» O - $(
+liegt O - VVFIN
+an O - APPR
+den O - ART
+nordamerikanischen O - ADJA
+Kinokassen O - NN
+weiter O - ADV
+in O - APPR
+Führung O - NN
+. O - $.
+
+Das O - ART
+Weltraum O - NN
+- O - $(
+Abenteuer O - NN
+« O - $(
+Das O - ART
+Erwachen O - NN
+der O - ART
+Macht O - NN
+» O - $(
+belegte O - VVFIN
+auch O - ADV
+an O - APPR
+seinem O - PPOSAT
+vierten O - ADJA
+Wochenende O - NN
+den O - ART
+Spitzenplatz O - NN
+der O - ART
+Kinocharts O - NN
+in O - APPR
+den O - ART
+USA O - NE
+und O - KON
+Kanada O - NE
+. O - $.
+
+Studioschätzungen O - NN
+zufolge O - APPO
+verdiente O - VVFIN
+der O - ART
+siebte O - ADJA
+Teil O - NN
+der O - ART
+Sternenkriegersaga O - NN
+weitere O - ADJA
+41,6 O - CARD
+Millionen O - NN
+Dollar O - NN
+dazu O - PROAV
+. O - $.
+
+Damit O - PROAV
+kletterten O - VVFIN
+die O - ART
+bisherigen O - ADJA
+Einnahmen O - NN
+in O - APPR
+Nordamerika O - NE
+auf O - APPR
+812 O - CARD
+Millionen O - NN
+Dollar O - NN
+( O - $(
+gut O - ADJD
+740 O - CARD
+Mio O - NN
+. O - $.
+
+Euro O - NN
+) O - $(
+, O - $,
+ein O - ART
+Rekord O - NN
+in O - APPR
+der O - ART
+US O - FM
+- O - $(
+Geschichte O - NN
+. O - $.
+
+Mit O - APPR
+dem O - ART
+Rachedrama O - NN
+« O - $(
+The O - FM
+Revenan O - NE
+CTS B-ORG - NE
+Composite I-ORG - FM
+Technologie I-ORG - NN
+Systeme I-ORG - NN
+GmbH I-ORG - NN
+AGB O - NN
+| O - FM
+Impressum O - NN
+| O - FM
+bauportal O - FM
+- O - $(
+deutschland.de O - FM
+, O - $,
+© O - FM
+INLOCON B-ORG - NE
+AG I-ORG - NN
+, O - $,
+2004 O - CARD
+-2016 O - CARD
+, O - $,
+Zugriffe O - NN
+: O - $.
+
+heute O - ADV
+: O - $.
+
+165890 O - CARD
+, O - $,
+gesamt O - ADJD
+: O - $.
+
+465026881 O - CARD
+0.598105 O - CARD
+, O - $,
+81 O - CARD
+, O - $,
+602 O - CARD
+, O - $,
+8895952 O - CARD
+Massenkarambolage O - NN
+bei O - APPR
+Paderborn O - NE
+mit O - APPR
+einem O - ART
+Toten O - NN
+01 O - CARD
+. O - $.
+
+Januar O - NN
+2016 O - CARD
+19:17 O - CARD
+Uhr O - NN
+Massenkarambolage O - NN
+bei O - APPR
+Paderborn O - NE
+mit O - APPR
+einem O - ART
+Toten O - NN
+Paderborn O - NE
+- O - $(
+Bei O - APPR
+einer O - ART
+Massenkarambolage O - NN
+auf O - APPR
+der O - ART
+Autobahn O - NN
+33 O - CARD
+bei O - APPR
+Paderborn O - NE
+sind O - VAFIN
+am O - APPRART
+Neujahrsmorgen O - NN
+ein O - ART
+Mann O - NN
+getötet O - VVPP
+und O - KON
+zahlreichen O - ADJA
+Menschen O - NN
+verletzt O - VVPP
+worden O - VAPP
+. O - $.
+
+Bis O - APPR
+zum O - APPRART
+Nachmittag O - NN
+hatte O - VAFIN
+die O - ART
+Polizei O - NN
+von O - APPR
+über O - ADV
+60 O - CARD
+zum O - APPRART
+Teil O - NN
+schwer O - ADJD
+Verletzten O - NN
+gesprochen O - VVPP
+. O - $.
+
+Am O - APPRART
+Abend O - NN
+korrigierte O - VVFIN
+die O - ART
+Polizei O - NN
+diese O - PDAT
+Angabe O - NN
+nach O - APPR
+unten O - ADV
+. O - $.
+
+Eine O - ART
+konkrete O - ADJA
+Zahl O - NN
+liege O - VVFIN
+aber O - ADV
+noch O - ADV
+nicht O - PTKNEG
+vor O - PTKVZ
+, O - $,
+hieß O - VVFIN
+es O - PPER
+. O - $.
+
+24 O - CARD
+Fahrzeuge O - NN
+waren O - VAFIN
+in O - APPR
+den O - ART
+Unfall O - NN
+verwickelt O - VVPP
+. O - $.
+
+Als O - KOKOM
+Ursache O - NN
+nannte O - VVFIN
+ei O - PIDAT
+Polizeisprecher O - NN
+plötzlich O - ADJD
+auftretenden O - ADJA
+Nebel O - NN
+. O - $.
+
+Nach O - APPR
+ersten O - ADJA
+Ermittlungen O - NN
+lag O - VVFIN
+die O - ART
+Sichtweite O - NN
+eine O - ART
+Stunde O - NN
+nach O - APPR
+Mitternacht O - NN
+an O - APPR
+der O - ART
+Unfallstelle O - NN
+unter O - APPR
+25 O - CARD
+Metern O - NN
+. O - $.
+
+Bei O - APPR
+einer O - ART
+Massenkarambolage O - NN
+auf O - APPR
+der O - ART
+Autobahn O - NN
+33 O - CARD
+bei O - APPR
+Paderborn O - NE
+sind O - VAFIN
+am O - APPRART
+Neujahrsmorgen O - NN
+ein O - ART
+Mann O - NN
+getötet O - VVPP
+und O - KON
+zahlreichen O - ADJA
+Menschen O - NN
+verletzt O - VVPP
+worden O - VAPP
+. O - $.
+
+Bis O - APPR
+zum O - APPRART
+Nachmittag O - NN
+hatte O - VAFIN
+die O - ART
+Polizei O - NN
+von O - APPR
+über O - ADV
+60 O - CARD
+zum O - APPRART
+Teil O - NN
+schwer O - ADJD
+Verletzten O - NN
+gesprochen O - VVPP
+. O - $.
+
+Am O - APPRART
+Abend O - NN
+korrigi O - ADJD
+Polizeipräsenz O - NN
+im O - APPRART
+Kreis O - NN
+Euskirchen O - NE
+: O - $.
+
+„ O - $(
+Nur O - ADV
+fünf O - CARD
+Streifenwagen O - NN
+im O - APPRART
+Einsatz O - NN
+“ O - $(
+Erstellt O - VVPP
+11.02.2016 O - NN
+Schwerpunktkontrollen O - NN
+können O - VMFIN
+die O - ART
+Beamten O - NN
+im O - APPRART
+Kreis O - NN
+Euskirchen O - NE
+nur O - ADV
+noch O - ADV
+mit O - APPR
+Hilfe O - NN
+ihrer O - PPOSAT
+Kollegen O - NN
+der O - ART
+Bereitschaftspolizei O - NN
+durchführen O - VVINF
+. O - $.
+
+Gewerkschaftler O - NN
+führen O - VVFIN
+die O - ART
+dünne O - ADJA
+Personaldecke O - NN
+als O - KOKOM
+Grund O - NN
+an O - PTKVZ
+. O - $.
+
+Foto O - NN
+: O - $.
+
+Zimmermann B-PERSON - NE
+Die O - ART
+Sicherheit O - NN
+stand O - VVFIN
+im O - APPRART
+Fokus O - NN
+des O - ART
+politischen O - ADJA
+Aschermittwochs O - NN
+der O - ART
+Jungen B-ORG - ADJA
+Union I-ORG - NN
+. O - $.
+
+Die O - ART
+Sehnsucht O - NN
+nach O - APPR
+Sicherheit O - NN
+sei O - VAFIN
+nach O - APPR
+den O - ART
+Vorfällen O - NN
+in O - APPR
+Köln O - NE
+in O - APPR
+der O - ART
+Bevölkerung O - NN
+deutlich O - ADJD
+größer O - ADJD
+geworden O - VAPP
+. O - $.
+
+Von O - APPR
+Kirsten B-PERSON - NE
+Röder I-PER - NE
+Drucken O - NN
+per O - APPR
+Mail O - NN
+Mechernich O - NE
+- O - $(
+Kommern O - NN
+. O - $.
+
+Alles O - PIS
+andere O - PIS
+als O - KOKOM
+beruhigend O - ADJD
+war O - VAFIN
+das O - PDS
+, O - $,
+was O - PRELS
+Markus B-PERSON - NE
+Hilgers I-PER - NE
+, O - $,
+Vize O - NE
+- O - $(
+Kreisvorsitzender O - NN
+der O - ART
+Polizeigewerkschaft B-ORG - NN
+und O - KON
+Personalratsvorsitzender O - NN
+der O - ART
+Euskirchener B-ORG - ADJA
+Polizei I-ORG - NN
+, O - $,
+skizzierte O - VVFIN
+. O - $.
+
+„ O - $(
+Sicher O - ADJD
+im O - APPRART
+Kreis O - NN
+!? O - $.
+Oder O - KON
+hat O - VAFIN
+Silvester O - NE
+doch O - ADV
+alles O - PIS
+verändert O - VVPP
+? O - $.
+
+“ O - $(
+lautete O - VVFIN
+das O - ART
+Thema O - NN
+des O - ART
+politischen O - ADJA
+Aschermittwochs O - NN
+der O - ART
+Jungen B-ORG - ADJA
+Union I-ORG - NN
+( O - $(
+JU B-ORG - NE
+) O - $(
+im O - APPRART
+Kommerner O - ADJA
+Bistro O - NN
+Classico O - NE
+. O - $.
+
+Von O - APPR
+ihren O - PPOSAT
+Erfahrungen O - NN
+berichteten O - VVFIN
+neben O - APPR
+Hilgers B-PERSON - NE
+DRK O - NE
+- O - $(
+Kreisg O - NE
+Abmahnung O - NN
+Waldorf B-ORG - NE
+Frommer I-ORG - NE
+- O - $(
+Jupiter O - NE
+Ascending O - FM
+- O - $(
+Warner B-ORG - NE
+Bros I-ORG - NE
+. I-ORG - $.
+
+Entertainment B-ORG - NE
+GmbH I-ORG - NN
+wegen O - APPR
+Filesharing O - NN
+Fachartikel O - NN
+aus O - APPR
+dem O - ART
+Bereich O - NN
+Abmahnung O - NN
+und O - KON
+Filesharing O - NN
+- O - $(
+16.01.2016 O - FM
+- O - $(
+32 O - CARD
+mal O - ADV
+gelesen O - VVPP
+. O - $.
+
+Hilfreiche O - ADJA
+Tipps O - NN
+bei O - APPR
+Filesharingabmahnung O - NN
+. O - $.
+
+Beratung O - NN
+auch O - ADV
+am O - APPRART
+Wochenende O - NN
+! O - $.
+
+Die O - ART
+Münchener O - ADJA
+Anwaltskanzlei O - NN
+Waldorf B-ORG - NE
+Frommer I-ORG - NE
+mahnt O - VVFIN
+nach O - ADV
+wie O - KOKOM
+vor O - ADV
+Internetanschlussinhaber O - NN
+wegen O - APPR
+des O - ART
+sog O - ADJD
+. O - $.
+
+Filesharings O - NN
+ab O - PTKVZ
+. O - $.
+
+Konkret O - ADJD
+wird O - VAFIN
+den O - ART
+Anschlussinhabern O - NN
+vorgeworfen O - VVPP
+, O - $,
+über O - APPR
+Filesharingportale O - NN
+wie O - KOKOM
+z.B. O - ADV
+BitTorrent O - NE
+Filme O - NN
+wie O - KOKOM
+„ O - $(
+Jupiter O - FM
+Ascending O - FM
+“ O - $(
+bereitgestellt O - VVPP
+und O - KON
+zum O - APPRART
+Download O - NN
+angeboten O - VVPP
+zu O - PTKZU
+haben O - VAINF
+. O - $.
+
+Der O - ART
+Rechteinhaber O - NN
+ist O - VAFIN
+hier O - ADV
+die O - ART
+Warner B-ORG - NE
+Bros I-ORG - NE
+. I-ORG - $.
+
+Entertainment B-ORG - FM
+GmbH I-ORG - NN
+. O - $.
+
+Jupiter O - NE
+Ascending O - NE
+ist O - VAFIN
+ein O - ART
+US O - FM
+- O - $(
+amerikanischer O - ADJA
+Science O - FM
+- O - $(
+Fiction O - FM
+- O - $(
+Film O - NN
+unter O - APPR
+der O - ART
+Regie O - NN
+der O - ART
+Wachowski B-PERSON - NE
+- I-PER - $(
+Geschwister I-PER - NN
+. O - $.
+
+In O - APPR
+den O - ART
+Hauptrollen O - NN
+sind O - VAFIN
+Channing B-PERSON - NE
+Tatum I-PER - NE
+, O - $,
+Mila B-PERSON - NE
+Kunis I-PER - NE
+und O - KON
+Sean B-PERSON - NE
+Bean I-PER - NE
+zu O - PTKZU
+sehen O - VVINF
+. O - $.
+
+Was O - PWS
+wird O - VAFIN
+verlangt O - VVPP
+? O - $.
+
+1 O - CARD
+) O - $(
+eine O - ART
+Abgabe O - NN
+einer O - ART
+strafbewehrten O - ADJA
+Unterlassungserklärung O - NN
+( O - $(
+eine O - ART
+vorgefertigte O - ADJA
+liegt O - VVFIN
+dem O - ART
+Schreiben O - NN
+bei O - PTKVZ
+) O - $(
+2 O - CARD
+) O - $(
+die O - ART
+Begleichun O - NN
+Star O - FM
+Wars O - FM
+: O - $.
+
+Trials O - FM
+of O - FM
+Tatooine O - FM
+VR O - NE
+gezeigt O - VVPP
+Für O - APPR
+HTC O - NE
+Vive O - NE
+15 O - CARD
+. O - $.
+
+Mär O - NN
+/ O - $(
+10:00 O - CARD
+Michael B-PERSON - NE
+Sosinka I-PER - NE
+Star O - FM
+Wars O - FM
+: O - $.
+
+Trials O - FM
+of O - FM
+Tatooine O - FM
+VR O - NE
+sieht O - VVFIN
+vielversprechend O - ADJD
+aus O - PTKVZ
+. O - $.
+
+Erstes O - ADJA
+Videomaterial O - NN
+steht O - VVFIN
+bereits O - ADV
+zur O - APPRART
+Ansicht O - NN
+bereit O - PTKVZ
+. O - $.
+
+Man O - PIS
+kann O - VMFIN
+gespannt O - VVPP
+sein O - VAINF
+. O - $.
+
+Star O - FM
+Wars O - FM
+: O - $.
+
+Trials O - FM
+of O - FM
+Tatooine O - FM
+VR O - FM
+ist O - VAFIN
+wohl O - ADV
+das O - ART
+nächste O - ADJA
+erwähnenswerte O - ADJA
+Virtual O - FM
+- O - $(
+Reality O - FM
+- O - $(
+Projekt O - NN
+, O - $,
+das O - PRELS
+sich O - PRF
+in O - APPR
+Richtung O - NN
+Valve B-ORG - NE
+und O - KON
+HTC B-ORG - NE
+Vive O - NE
+aufmacht O - VVFIN
+. O - $.
+
+Ein O - ART
+passendes O - ADJA
+Video O - NN
+wurde O - VAFIN
+auf O - APPR
+dem O - ART
+YouTube B-ORG - NE
+- O - $(
+Channel O - FM
+von O - APPR
+ILMxLab O - NE
+veröffentlicht O - VVPP
+, O - $,
+jedoch O - ADV
+schnell O - ADJD
+wieder O - ADV
+entfernt O - VVPP
+. O - $.
+
+Ihr O - PPER
+könnt O - VMFIN
+euch O - PRF
+bei O - APPR
+uns O - PPER
+dennoch O - ADV
+das O - ART
+passende O - ADJA
+Videomaterial O - NN
+anschauen O - VVINF
+. O - $.
+
+Wir O - PPER
+sehen O - VVFIN
+den O - ART
+Millennium O - NE
+Falken O - NN
+, O - $,
+Sturmtruppen O - NN
+, O - $,
+R2D2 O - NE
+, O - $,
+etwas O - PIAT
+Laserschwert O - NN
+- O - $(
+Action O - NN
+und O - KON
+mehr O - PIS
+. O - $.
+
+Das O - ART
+Ganze O - NN
+wird O - VAFIN
+als O - KOKOM
+Cinematic O - FM
+Virtual O - FM
+Reality O - FM
+Experiment O - FM
+bezeichnet O - VVPP
+, O - $,
+weswegen O - PWAV
+noch O - ADV
+unklar O - ADJD
+ist O - VAFIN
+, O - $,
+ob O - KOUS
+es O - PPER
+sich O - PRF
+hierbei O - PROAV
+um O - APPR
+ein O - ART
+echtes O - ADJA
+Spiel O - NN
+oder O - KON
+nur O - ADV
+eine O - ART
+Tech O - FM
+- O - $(
+Demo O - NN
+handelt O - VVFIN
+. O - $.
+
+Zudem O - PROAV
+ist O - VAFIN
+unbekannt O - ADJD
+, O - $,
+ob O - KOUS
+und O - KON
+wann O - PWAV
+Star O - FM
+Wars O - FM
+: O - $.
+
+Trials O - FM
+of O - FM
+Tatooine O - FM
+VR O - NE
+offiziell O - ADJD
+veröffentlicht O - VVPP
+wird O - VAFIN
+. O - $.
+
+Wenn O - KOUS
+sich O - PRF
+aber O - ADV
+LucasArts B-ORG - NE
+sowie O - KON
+Industrial O - FM
+Light O - FM
+Twittern O - FM
+( O - $(
+neu O - ADJD
+: O - $.
+
+mehr O - PIAT
+Details O - NN
+und O - KON
+Hintergrund O - NN
+) O - $(
+HANNOVER O - NE
+( O - $(
+dpa B-ORG - NE
+- I-ORG - $(
+AFX I-ORG - NE
+) O - $(
+- O - $(
+Die O - ART
+kurzfristig O - ADJD
+angekündigte O - ADJA
+Sperrung O - NN
+der O - ART
+ICE O - NE
+- O - $(
+Schnellfahrstrecke O - NN
+Hannover O - NE
+- O - $(
+Kassel O - NE
+in O - APPR
+drei O - CARD
+Wochen O - NN
+soll O - VMFIN
+nach O - APPR
+einem O - ART
+Kompromissvorschlag O - NN
+Niedersachsens O - NE
+zeitweise O - ADV
+ausgesetzt O - VVPP
+werden O - VAINF
+. O - $.
+
+Die O - ART
+Arbeiten O - NN
+könnten O - VMFIN
+zwar O - ADV
+wie O - KOKOM
+geplant O - VVPP
+am O - APPRART
+23 O - CARD
+. O - $.
+
+April O - NN
+beginnen O - VVFIN
+, O - $,
+würden O - VAFIN
+aber O - ADV
+während O - APPR
+der O - ART
+Hannover B-ORG - NE
+- I-ORG - $(
+Messe I-ORG - NN
+morgens O - ADV
+und O - KON
+abends O - ADV
+für O - APPR
+je O - ADV
+zwei O - CARD
+Stunden O - NN
+ruhen O - VVINF
+. O - $.
+
+Auf O - APPR
+diese O - PDAT
+Weise O - NN
+könnte O - VMFIN
+zumindest O - ADV
+der O - ART
+Hauptmesseverkehr O - NN
+ohne O - APPR
+Verzögerungen O - NN
+abgewickelt O - VVPP
+werden O - VAINF
+und O - KON
+man O - PIS
+würde O - VAFIN
+wohl O - ADV
+auch O - ADV
+nicht O - PTKNEG
+den O - ART
+Pfingstreiseverkehr O - NN
+tangieren O - VVINF
+, O - $,
+sagte O - VVFIN
+Niedersachsens O - NE
+Wirtschaftsminister O - NN
+Olaf B-PERSON - NE
+Lies I-PER - NE
+( O - $(
+SPD B-ORG - NE
+) O - $(
+. O - $.
+
+Er O - PPER
+reagierte O - VVFIN
+auch O - ADV
+auf O - APPR
+empörte O - ADJA
+Reaktionen O - NN
+der O - ART
+Wirtschaft O - NN
+, O - $,
+die O - PRELS
+einen O - ART
+enormen O - ADJA
+Imageschaden O - NN
+befürchtet O - VVFIN
+. O - $.
+
+Lies B-PERSON - NE
+hatte O - VAFIN
+seinen O - PPOSAT
+Vorschlag O - NN
+Bahnchef O - NN
+Rüdiger B-PERSON 4463 NE
+Grube I-PER 4463 NE
+und O - KON
+Vorstand B-POS - NN
+Volker B-PERSON - NE
+Kefer I-PER - NE
+am O - APPRART
+Freitag O - NN
+unterbreitet O - VVPP
+. O - $.
+
+Herr B-PERSON - NN
+Grube I-PER - NE
+und O - KON
+dann O - ADV
+auch O - ADV
+Herr B-PERSON - NN
+Kefer I-PER - NE
+in O - APPR
+einem O - ART
+weiteren O - ADJA
+Telefonat O - NN
+haben O - VAFIN
+mir O - PPER
+zugesagt O - VVPP
+, O - $,
+diese O - PDAT
+Idee O - NN
+zu O - PTKZU
+prüfen O - VVINF
+, O - $,
+sagte O - VVFIN
+Lies B-PERSON - NE
+. O - $.
+
+Auf O - APPR
+der O - ART
+wichtigen O - ADJA
+Str O - NE
+Mehr O - PIAT
+Straftaten O - NN
+und O - KON
+geringere O - ADJA
+Aufklärungsquote O - NN
+im O - APPRART
+Land O - NN
+Artikel O - NN
+per O - APPR
+E-Mail O - NE
+empfehlen O - VVFIN
+Mehr O - PIAT
+Straftaten O - NN
+und O - KON
+geringere O - ADJA
+Aufklärungsquote O - NN
+im O - APPRART
+Land O - NN
+Empfänger O - NN
+E-Mail O - NE
+Tipp O - NN
+: O - $.
+
+mehrere O - PIAT
+E-Mailadressen O - NN
+mit O - APPR
+Komma O - NN
+trennen O - VVFIN
+persönliche O - ADJA
+Nachrichtoptional O - NN
+Bitte O - ADJD
+tragen O - VVFIN
+Sie O - PPER
+den O - ART
+Code O - NN
+in O - APPR
+das O - ART
+Eingabefeld O - NN
+ein O - PTKVZ
+. O - $.
+
+Tipp O - NN
+: O - $.
+
+das O - ART
+Bild O - NN
+anklicken O - VVINF
+um O - KOUI
+den O - ART
+Code O - NN
+neu O - ADJD
+zu O - PTKZU
+generieren O - VVINF
+Empfänger O - NN
+E-Mail O - NE
+Twittern O - NN
+Foto O - NN
+: O - $.
+
+dpa B-ORG - NE
+Magdeburg O - NE
+( O - $(
+dpa B-ORG - NE
+/ O - $(
+sa O - NE
+) O - $(
+- O - $(
+In O - APPR
+Sachsen O - NE
+- O - $(
+Anhalt O - NE
+sind O - VAFIN
+im O - APPRART
+vergangenen O - ADJA
+Jahr O - NN
+zum O - APPRART
+vierten O - ADJA
+Mal O - NN
+in O - APPR
+Folge O - NN
+mehr O - PIAT
+Straftaten O - NN
+registriert O - VVPP
+worden O - VAPP
+. O - $.
+
+Die O - ART
+Zahl O - NN
+der O - ART
+Delikte O - NN
+stieg O - VVFIN
+im O - APPRART
+Vergleich O - NN
+zu O - APPR
+2014 O - CARD
+um O - APPR
+2,2 O - CARD
+Prozent O - NN
+auf O - APPR
+rund O - ADV
+198 O - CARD
+800 O - CARD
+. O - $.
+
+Dies O - PDS
+geht O - VVFIN
+aus O - APPR
+der O - ART
+Kriminalstatistik O - NN
+hervor O - PTKVZ
+, O - $,
+die O - PRELS
+Innenminister O - NN
+Holger B-PERSON - NE
+Stahlknecht I-PER - NE
+( O - $(
+CDU B-ORG - NE
+) O - $(
+am O - APPRART
+Dienstag O - NN
+in O - APPR
+Magdeburg O - NE
+vorstellte O - VVFIN
+. O - $.
+
+Vor O - APPR
+allem O - PIS
+gab O - VVFIN
+es O - PPER
+mehr O - PIAT
+Diebstähle O - NN
+. O - $.
+
+Die O - ART
+Aufklärungsquote O - NN
+sank O - VVFIN
+gleichzeitig O - ADJD
+um O - APPR
+2,3 O - CARD
+Punkte O - NN
+auf O - APPR
+54,8 O - CARD
+Prozent O - NN
+und O - KON
+damit O - PROAV
+auf O - APPR
+den O - ART
+niedrigsten O - ADJA
+Stand O - NN
+seit O - APPR
+sieben O - CARD
+Jahren O - NN
+. O - $.
+
+Die O - ART
+Polizei O - NN
+sei O - VAFIN
+im O - APPRART
+vergangenen O - ADJA
+Jahr O - NN
+enormen O - ADJA
+Belastungen O - NN
+ausgeset O - ADJD
+Von O - APPR
+Sven B-PERSON - NE
+Flohr I-PER - NE
+Sven B-PERSON - NE
+Flohr I-PER - NE
+Biografie O - NN
+und O - KON
+alle O - PIDAT
+Artikel O - NN
+des O - ART
+Autors O - NN
+Twitter O - NE
+Stv O - NE
+. O - $.
+
+Ressortleiter O - NN
+Sport O - NN
+Foto O - NN
+: O - $.
+
+pa O - FM
+/ O - $(
+augenklick O - FM
+/ O - $(
+firo O - FM
+Sportphoto O - NN
+Felix O - NE
+Passlack O - NE
+spielt O - VVFIN
+ab O - APPR
+sofort O - ADV
+bei O - APPR
+den O - ART
+Profis O - NN
+des O - ART
+BVB B-ORG - NE
+mit O - APPR
+Besondere O - ADJA
+Gäste O - NN
+beim O - APPRART
+Trainingsauftakt O - NN
+des O - ART
+BVB B-ORG - NE
+. O - $.
+
+Am O - APPRART
+Dienstag O - NN
+versammelten O - VVFIN
+sich O - PRF
+Borussia B-ORG - NE
+Dortmunds I-ORG - NE
+Spieler O - NN
+erstmals O - ADV
+im O - APPRART
+neuen O - ADJA
+Jahr O - NN
+auf O - APPR
+dem O - ART
+Platz O - NN
+. O - $.
+
+Mit O - ADV
+dabei O - PROAV
+: O - $.
+
+zwei O - CARD
+17 O - CARD
+- O - $(
+Jährige O - NN
+. O - $.
+
+Felix B-PERSON - NE
+Passlack I-PER - NE
+und O - KON
+Christian B-PERSON - NE
+Pulisic I-PER - NE
+wurden O - VAFIN
+von O - APPR
+Trainer O - NN
+Thomas B-PERSON - NE
+Tuchel I-PER - NE
+befördert O - VVPP
+und O - KON
+trainieren O - VVFIN
+von O - APPR
+nun O - ADV
+an O - APZR
+fest O - ADJD
+mit O - APPR
+den O - ART
+Profis O - NN
+. O - $.
+
+Vor O - APPR
+wenigen O - PIDAT
+Tagen O - NN
+hatte O - VAFIN
+der O - ART
+BVB B-ORG - NN
+Jonas B-PERSON - NE
+Hofmann I-PER - NE
+für O - APPR
+rund O - ADV
+acht O - CARD
+Millionen O - NN
+Euro O - NN
+Ablöse O - NN
+an O - APPR
+Borussia B-ORG - NE
+Mönchengladbach I-ORG - NE
+verkauft O - VVPP
+. O - $.
+
+Offenbar O - ADJD
+soll O - VMFIN
+für O - APPR
+ihn O - PPER
+kein O - PIAT
+Ersatz O - NN
+von O - APPR
+außen O - ADV
+geholt O - VVPP
+werden O - VAINF
+. O - $.
+
+Denn O - KON
+gerade O - ADV
+Passlack O - NE
+gilt O - VVFIN
+als O - KOKOM
+Versprechen O - NN
+auf O - APPR
+eine O - ART
+herausragende O - ADJA
+Zukunft O - NN
+. O - $.
+
+Vorbereitung O - NN
+So O - ADV
+trainiert O - VVFIN
+die O - ART
+Bundesliga B-ORG - NN
+für O - APPR
+die O - ART
+Rückrunde O - NN
+Ich O - PPER
+sehe O - VVFIN
+ich O - PPER
+mich O - PRF
+im O - APPRART
+rechten O - ADJA
+offensiven O - ADJA
+Mittelfeld O - NN
+. O - $.
+
+Da O - ADV
+fühle O - VVFIN
+ich O - PPER
+mich O - PRF
+am O - PTKA
+wohlsten O - ADJD
+, O - $,
+sagte O - VVFIN
+der O - ART
+Hochtalentierte O - NN
+im O - APPRART
+Oktober O - NN
+im O - APPRART
+Interview O - NN
+mit O - APPR
+Weitere O - ADJA
+Informationen O - NN
+finden O - VVFIN
+Sie O - PPER
+hier O - ADV
+. O - $.
+
+* O - $(
+Übernahme O - NN
+von O - APPR
+StarCapital B-ORG - NE
+AG I-ORG - NN
+, O - $,
+einem O - ART
+in O - APPR
+Oberursel O - NE
+bei O - APPR
+Frankfurt O - NE
+/ O - $(
+Main O - NE
+ansässigen O - ADJA
+, O - $,
+unabhängigen O - ADJA
+Asset O - FM
+Manager O - FM
+, O - $,
+mit O - APPR
+betreuten O - ADJA
+Kundenvermögen O - NN
+in O - APPR
+Höhe O - NN
+von O - APPR
+rund O - ADV
+CHF O - NN
+2 O - CARD
+5 O - CARD
+Mrd O - NN
+23.02.16 O - NN
+| O - APPR
+17:45 O - CARD
+Uhr O - NN
+| O - NN
+1 O - CARD
+mal O - ADV
+gelesen O - VVPP
+| O - KON
+hugingroup.com O - NE
+Bellevue B-ORG - NE
+Group I-ORG - FM
+erwirbt O - VVFIN
+deutsche O - ADJA
+StarCapital B-ORG - NE
+AG I-ORG - NN
+und O - KON
+diversifiziert O - VVFIN
+Produktpalette O - NN
+im O - APPRART
+Asset O - FM
+Management O - FM
+- O - $(
+Kapitalerhöhung O - NN
+geplant O - VVPP
+* O - $(
+Übernahme O - NN
+von O - APPR
+StarCapital B-ORG - NE
+AG I-ORG - NN
+, O - $,
+einem O - ART
+in O - APPR
+Oberursel O - NE
+bei O - APPR
+Frankfurt O - NE
+/ O - $(
+Main O - NE
+ansässigen O - ADJA
+, O - $,
+unabhängigen O - ADJA
+Asset O - FM
+Manager O - FM
+, O - $,
+mit O - APPR
+betreuten O - ADJA
+Kundenvermögen O - NN
+in O - APPR
+Höhe O - NN
+von O - APPR
+rund O - ADV
+CHF O - NN
+2.5 O - CARD
+Mrd O - NN
+. O - $.
+
+* O - $(
+Verwaltetes O - ADJA
+Kundenvermögen O - NN
+der O - ART
+Bellevue B-ORG - NE
+Group I-ORG - NE
+steigt O - VVFIN
+auf O - APPR
+CHF O - NN
+7.8 O - CARD
+Mrd O - NN
+. O - $.
+
+* O - $(
+Etablierte O - ADJA
+Anlagekompetenz O - NN
+von O - APPR
+StarCapital B-ORG - NE
+im O - APPRART
+Bereich O - NN
+gemischter O - ADJA
+Anlagen O - NN
+sowie O - KON
+festverzinslicher O - ADJA
+Strategien O - NN
+ermöglicht O - VVFIN
+gezielte O - ADJA
+Diversifikation O - NN
+in O - APPR
+neue O - ADJA
+Assetklassen O - NN
+und O - KON
+Angebotserweiterung O - NN
+im O - APPRART
+Non-Healthcare-Bereich O - NN
+* O - $(
+Standort O - NN
+bei O - APPR
+Frankfurt O - NE
+/ O - $(
+Main O - NE
+stärkt O - VVFIN
+Position O - NN
+der O - ART
+Bellevue B-ORG - NE
+Group I-ORG - NE
+in O - APPR
+einem O - ART
+europäischen O - ADJA
+Schlüsselmark O - NN
+- O - $(
+von O - APPR
+Andreas B-PERSON - NE
+Framke I-PER - NE
+und O - KON
+Peter B-PERSON - NE
+Maushagen I-PER - NE
+Frankfurt O - NE
+( O - $(
+Reuters O - NE
+) O - $(
+- O - $(
+Die O - ART
+Flugbegleitergewerkschaft O - NN
+Ufo B-ORG 4492 NE
+weitet O - VVFIN
+ihren O - PPOSAT
+Streik O - NN
+bei O - APPR
+der O - ART
+Lufthansa B-ORG - NE
+zu O - APPR
+Wochenbeginn O - NN
+massiv O - ADJD
+aus O - PTKVZ
+. O - $.
+
+Wie O - PWAV
+die O - ART
+Gewerkschaft O - NN
+am O - APPRART
+Sonntag O - NN
+in O - APPR
+Frankfurt O - NE
+mitteilte O - VVFIN
+, O - $,
+ruft O - VVFIN
+sie O - PPER
+ihre O - PPOSAT
+Mitglieder O - NN
+an O - APPR
+den O - ART
+Standorten O - NN
+Frankfurt O - NE
+, O - $,
+Düsseldorf O - NE
+und O - KON
+München O - NE
+für O - APPR
+Montag O - NN
+zu O - APPR
+ganztägigen O - ADJA
+Streiks O - NN
+auf O - PTKVZ
+. O - $.
+
+Diese O - PDS
+betreffen O - VVFIN
+Flüge O - NN
+auf O - APPR
+der O - ART
+Kurz O - NN
+- O - $(
+, O - $,
+Mittel O - NN
+- O - $(
+und O - KON
+Langstrecke O - NN
+. O - $.
+
+Passagiere O - NN
+müssen O - VMFIN
+deshalb O - PROAV
+erneut O - ADJD
+mit O - APPR
+Hunderten O - NN
+Flugausfällen O - NN
+und O - KON
+massiven O - ADJA
+Verspätungen O - NN
+rechnen O - VVINF
+. O - $.
+
+Am O - APPRART
+Samstag O - NN
+waren O - VAFIN
+bereits O - ADV
+mehr O - ADV
+als O - KOKOM
+500 O - CARD
+Flüge O - NN
+ausgefallen O - VVPP
+. O - $.
+
+Ufo B-ORG 4489 NE
+- O - $(
+Chef B-POS 4489 NN
+Nicoley B-PERSON 4489 NE
+Baublies I-PER 4489 NE
+machte O - VVFIN
+die O - ART
+Lufthansa B-ORG - NE
+dafür O - PROAV
+verantwortlich O - ADJD
+, O - $,
+dass O - KOUS
+der O - ART
+Streik O - NN
+nun O - ADV
+an O - APPR
+Intensität O - NN
+zunimmt O - VVFIN
+. O - $.
+
+Seit O - APPR
+Donnerstagnachmittag O - NN
+habe O - VAFIN
+die O - ART
+Airline O - NN
+den O - ART
+Kontakt O - NN
+mit O - APPR
+der O - ART
+Gewerkschaft O - NN
+angebrochen O - VVPP
+. O - $.
+
+Dieser O - PDAT
+Darstellung O - NN
+widersprach O - VVFIN
+eine O - ART
+Lufthansa B-ORG - NE
+- O - $(
+Sprecherin O - NN
+. O - $.
+
+Sie O - PPER
+kündigte O - VVFIN
+zugleich O - ADV
+an O - PTKVZ
+, O - $,
+im O - APPRART
+Laufe O - NN
+des O - ART
+Tages O - NN
+werde O - VAFIN
+einen O - ART
+Sonderflugplan O - NN
+für O - APPR
+Montag O - NN
+erarbeitet O - VVPP
+. O - $.
+
+Der O - ART
+Streik O - NN
+, O - $,
+der O - PRELS
+die O - ART
+ganze O - ADJA
+Woche O - NN
+dauern O - VVINF
+soll O - VMFIN
+, O - $,
+hatte O - VAFIN
+Lufthansa B-ORG - NE
+- O - $(
+Flugbegleiter O - NN
+streiken O - VVFIN
+auch O - ADV
+am O - APPRART
+Dienstag O - NN
+Frankfurt O - NE
+- O - $(
+Die O - ART
+Flugbegleiter O - NN
+der O - ART
+Lufthansa B-ORG - NE
+setzen O - VVFIN
+ihren O - PPOSAT
+Streik O - NN
+leicht O - ADJD
+abgeschwächt O - ADJD
+am O - APPRART
+Dienstag O - NN
+fort O - PTKVZ
+. O - $.
+
+An O - APPR
+den O - ART
+beiden O - PIDAT
+Grossflughäfen O - NN
+Frankfurt O - NE
+und O - KON
+München O - NE
+sollen O - VMFIN
+im O - APPRART
+Unterschied O - NN
+zum O - APPRART
+Montag O - NN
+nur O - ADV
+die O - ART
+Langstrecken O - NN
+bestreikt O - VVPP
+werden O - VAINF
+, O - $,
+wie O - PWAV
+die O - ART
+Gewerkschaft O - NN
+Ufo B-ORG - NE
+am O - APPRART
+Montag O - NN
+mitteilte O - VVFIN
+. O - $.
+
+In O - APPR
+Düsseldorf O - NE
+bleibt O - VVFIN
+es O - PPER
+wie O - KOKOM
+in O - APPR
+den O - ART
+Tagen O - NN
+zuvor O - ADV
+dabei O - PROAV
+, O - $,
+dass O - KOUS
+sich O - PRF
+der O - ART
+Arbeitskampf O - NN
+auch O - ADV
+auf O - APPR
+Kurz O - NN
+- O - TRUNC
+und O - KON
+Mittelstrecken O - NN
+erstreckt O - VVFIN
+. O - $.
+
+In O - APPR
+Frankfurt O - NE
+würden O - VAFIN
+von O - APPR
+04.30 O - CARD
+Uhr O - NN
+bis O - APPR
+23.00 O - CARD
+Uhr O - NN
+alle O - PIDAT
+Langstreckenflüge O - NN
+, O - $,
+in O - APPR
+München O - NE
+von O - APPR
+05.00 O - CARD
+Uhr O - NN
+bis O - APPR
+24.00 O - CARD
+Uhr O - NN
+ebenfalls O - ADV
+alle O - PIDAT
+Langstreckenflüge O - NN
+und O - KON
+in O - APPR
+Düsseldorf O - NE
+alle O - PIDAT
+Kurz O - NN
+- O - TRUNC
+und O - KON
+Langstreckenflüge O - NN
+von O - APPR
+4.30 O - CARD
+Uhr O - NN
+bis O - APPR
+23.00 O - CARD
+Uhr O - NN
+bestreikt O - VVPP
+, O - $,
+teilte O - VVFIN
+Ufo B-ORG - NE
+mit O - PTKVZ
+. O - $.
+
+Arbeitskampf O - NN
+und O - KON
+kein O - PIAT
+Ende O - NN
+in O - APPR
+Sicht O - NN
+Der O - ART
+in O - APPR
+der O - ART
+vergangenen O - ADJA
+Woche O - NN
+begonnene O - ADJA
+Streik O - NN
+soll O - VMFIN
+noch O - ADV
+bis O - APPR
+einschliesslich O - APPR
+... O - $.
+Den O - ART
+vollständigen O - ADJA
+Artikel O - NN
+lesen O - VVINF
+... O - $.
+Impressum O - NN
+Kurse O - NN
+werden O - VAFIN
+bei O - APPR
+Verfügbarkeit O - NN
+für O - APPR
+NASDAQ O - NE
+, O - $,
+NYSE O - NE
+und O - KON
+NYSEAmex O - NE
+in O - APPR
+Echtzeit O - NN
+angezeigt O - VVPP
+. O - $.
+
+Siehe O - VVIMP
+auch O - ADV
+Zeitverzögerungen O - NN
+für O - APPR
+andere O - ADJA
+Börsen O - NN
+. O - $.
+
+Kurse O - NN
+und O - KON
+Informationen O - NN
+, O - $,
+die O - PRELS
+durch O - APPR
+unabhängige O - ADJA
+Anbieter O - NN
+auf O - APPR
+der O - ART
+Partnerseite O - NN
+von O - APPR
+Yahoo! B-ORG - NE
+Finanzen O - NN
+bereitgestellt O - VVPP
+wurden O - VAFIN
+. O - $.
+
+Die O - ART
+Kurse O - NN
+werden O - VAFIN
+automatisch O - ADJD
+aktualisiert O - VVPP
+und O - KON
+nach O - APPR
+25 O - CARD
+Minuten O - NN
+ohne O - APPR
+Aktivität O - NN
+ausgeschaltet O - VVPP
+. O - $.
+
+Die O - ART
+Kurse O - NN
+werden O - VAFIN
+mit O - APPR
+einer O - ART
+Verspätung O - NN
+von O - APPR
+mindestens O - ADV
+15 O - CARD
+Minuten O - NN
+angezeigt O - VVPP
+. O - $.
+
+Alle O - PIDAT
+Angaben O - NN
+sind O - VAFIN
+ohne O - APPR
+Gewähr O - NN
+, O - $,
+dienen O - VVFIN
+lediglich O - ADV
+der O - ART
+Information O - NN
+und O - KON
+sind O - VAFIN
+nicht O - PTKNEG
+für O - APPR
+Handelszwecke O - NN
+oder O - KON
+als O - KOKOM
+Empfehlung O - NN
+gedacht O - VVPP
+. O - $.
+
+Weder O - ADV
+Yahoo! B-ORG - NE
+noch O - KON
+einer O - PIS
+der O - ART
+unabhängigen O - ADJA
+Anbieter O - NN
+können O - VMFIN
+für O - APPR
+Richtigkeit O - NN
+, O - $,
+Vollständigkeit O - NN
+oder O - KON
+Verspätungen O - NN
+sowie O - KON
+Handlungen O - NN
+, O - $,
+die O - PRELS
+durch O - APPR
+die O - ART
+Nutzung O - NN
+der O - ART
+hier O - ADV
+enthaltenen O - ADJA
+Informationen O - NN
+vorgenommen O - VVPP
+wurden O - VAFIN
+, O - $,
+haftbar O - ADJD
+gemacht O - VVPP
+werden O - VAINF
+. O - $.
+
+Durch O - APPR
+Ihren O - PPOSAT
+Besuch O - NN
+der O - ART
+Website O - NN
+von O - APPR
+Yahoo! B-ORG - NE
+erklären O - VVFIN
+Sie O - PPER
+sich O - PRF
+damit O - PROAV
+einverstanden O - ADJD
+, O - $,
+die O - ART
+darauf O - PROAV
+enthaltenen O - ADJA
+Informationen O - NN
+nicht O - PTKNEG
+weiterzugeben O - VVIZU
+. O - $.
+
+F O - NN
+US O - FM
+- O - $(
+Flair O - NN
+in O - APPR
+Oberbayern O - NE
+Ein O - ART
+1967er O - ADJA
+Ford B-ORG - NE
+Galaxie O - NN
+500 O - CARD
+Frank B-PERSON - NE
+Auerswald I-PER - NE
+hat O - VAFIN
+sich O - PRF
+einen O - ART
+Traum O - NN
+erfüllt O - VVPP
+: O - $.
+
+Der O - ART
+31 O - CARD
+- O - $(
+Jährige O - NN
+holte O - VVFIN
+sich O - PRF
+amerikanischen O - ADJA
+Flair O - NN
+nach O - APPR
+Oberbayern O - NE
+und O - KON
+lebt O - VVFIN
+nun O - ADV
+seine O - PPOSAT
+Leidenschaft O - NN
+für O - APPR
+Autos O - NN
+aus O - PTKVZ
+. O - $.
+
+Hurrikan O - NN
+Alex O - NE
+: O - $.
+
+Besonderer O - ADJA
+Sturm O - NN
+im O - APPRART
+Atlantik O - NN
+Satellitenbild O - NN
+der O - ART
+Woche O - NN
+: O - $.
+
+Alex O - NE
+, O - $,
+was O - PWS
+machst O - VVFIN
+du O - PPER
+denn O - ADV
+hier O - ADV
+? O - $.
+
+AP B-ORG - NE
+Foto O - NN
+von O - APPR
+der O - ART
+Internationalen O - ADJA
+Raumstation O - NN
+: O - $.
+
+Staunen O - NN
+ber O - APPR
+den O - ART
+Sturm O - NN
+Ein O - ART
+halbes O - ADJA
+Jahr O - NN
+zu O - APPR
+fr O - NE
+h O - NE
+, O - $,
+viel O - ADV
+zu O - PTKA
+weit O - ADJD
+stlich O - ADJD
+: O - $.
+
+Hurrikane O - NN
+gibt O - VVFIN
+es O - PPER
+normalerweise O - ADV
+im O - APPRART
+Sommer O - NN
+und O - KON
+Herbst O - NN
+ber O - APPR
+dem O - ART
+West O - NN
+- O - $(
+Atlantik O - NN
+. O - $.
+
+Warum O - PWAV
+hat O - VAFIN
+Alex O - NE
+diese O - PDAT
+Woche O - NN
+die O - ART
+Gesetze O - NN
+gebrochen O - VVPP
+? O - $.
+
+Das O - ART
+Ereignis O - NN
+ist O - VAFIN
+vergleichbar O - ADJD
+mit O - APPR
+Schnee O - NN
+im O - APPRART
+August O - NN
+oder O - KON
+mit O - APPR
+Kirschbl O - NE
+te O - FM
+im O - APPRART
+Dezember O - NN
+. O - $.
+
+Saison O - NN
+f O - FM
+r O - FM
+Hurrikane O - NN
+ist O - VAFIN
+eigentlich O - ADV
+vom O - APPRART
+1 O - CARD
+. O - $.
+
+Juni O - NN
+bis O - APPR
+zum O - APPRART
+30 O - CARD
+. O - $.
+
+November O - NN
+, O - $,
+wenn O - KOUS
+sich O - PRF
+die O - ART
+subtropischen O - ADJA
+Meere O - NN
+auf O - APPR
+der O - ART
+Nordhalbkugel O - NN
+aufgeheizt O - VVPP
+haben O - VAFIN
+, O - $,
+ihre O - PPOSAT
+W O - NN
+rme O - FM
+die O - ART
+St O - NE
+rme O - FM
+entfachen O - VVINF
+kann O - VMFIN
+. O - $.
+
+Doch O - KON
+diese O - PDAT
+Woche O - NN
+drehte O - VVFIN
+Alex O - NE
+auf O - PTKVZ
+. O - $.
+
+Alex O - NE
+war O - VAFIN
+der O - ART
+fr O - ADJD
+heste O - ADJA
+Hurrikan O - NN
+seit O - APPR
+1938 O - CARD
+. O - $.
+
+Und O - KON
+es O - PPER
+war O - VAFIN
+berhaupt O - ADV
+erst O - ADV
+das O - ART
+vierte O - ADJA
+Mal O - NN
+seit O - APPR
+1851 O - CARD
+, O - $,
+dass O - KOUS
+in O - APPR
+einem O - ART
+Januar O - NN
+ein O - ART
+Hurrikan O - NN
+im O - APPRART
+Nordatlantik O - NN
+aufzieht O - VVFIN
+- O - $(
+und O - KON
+das O - ART
+erste O - ADJA
+Mal O - NN
+seit O - APPR
+1978 O - CARD
+. O - $.
+
+Am O - APPRART
+Donnerstag O - NN
+um O - APPR
+16 O - CARD
+Uhr O - NN
+deutscher O - ADJA
+Zeit O - NN
+war O - VAFIN
+die O - ART
+Sensation O - NN
+perfekt O - ADJD
+, O - $,
+die O - ART
+US O - FM
+- O - $(
+Wetterbeh O - NE
+rde O - NE
+stufte O - VVFIN
+den O - ART
+Sturmwirbel O - NN
+, O - $,
+der O - PRELS
+et O - FM
+Tweet O - FM
+ROUNDUP O - NE
+2 O - CARD
+: O - $.
+
+Anlegerflucht O - NN
+und O - KON
+Börsenturbulenzen O - NN
+bremsen O - VVFIN
+Allianz B-ORG - NN
+im O - APPRART
+Sommer O - NN
+MÜNCHEN O - NE
+- O - $(
+Börsenturbulenzen O - NN
+, O - $,
+höhere O - ADJA
+Schäden O - NN
+und O - KON
+die O - ART
+anhaltende O - ADJA
+Flucht O - NN
+von O - APPR
+Fondskunden O - NN
+haben O - VAFIN
+der O - ART
+Allianz B-ORG - NN
+im O - APPRART
+Sommer O - NN
+überraschend O - ADJD
+stark O - ADJD
+zu O - PTKZU
+schaffen O - VVINF
+gemacht O - VVPP
+. O - $.
+
+Mit O - APPR
+2,45 O - CARD
+Milliarden O - NN
+Euro O - NN
+fiel O - VVFIN
+der O - ART
+operative O - ADJA
+Gewinn O - NN
+im O - APPRART
+dritten O - ADJA
+Quartal O - NN
+um O - APPR
+7,5 O - CARD
+Prozent O - NN
+geringer O - ADJD
+aus O - PTKVZ
+als O - KOKOM
+ein O - ART
+Jahr O - NN
+zuvor O - ADV
+. O - $.
+
+Finanzvorstand B-POS - NN
+Dieter B-PERSON - NE
+Wemmer I-PER - NE
+zeigte O - VVFIN
+sich O - PRF
+zwar O - ADV
+optimistisch O - ADJD
+, O - $,
+dass O - KOUS
+Europas O - NE
+größter O - ADJA
+Versicherer O - NN
+sein O - PPOSAT
+operatives O - ADJA
+Ergebnis O - NN
+im O - APPRART
+Gesamtjahr O - NN
+auf O - APPR
+etwa O - ADV
+10,8 O - CARD
+Milliarden O - NN
+Euro O - NN
+steigert O - VVFIN
+. O - $.
+
+Allerdings O - ADV
+könnten O - VMFIN
+erneute O - ADJA
+Schwankungen O - NN
+an O - APPR
+den O - ART
+Börsen O - NN
+dabei O - PROAV
+für O - APPR
+Rundungsdifferenzen O - NN
+sorgen O - VVINF
+, O - $,
+warnte O - VVFIN
+er O - PPER
+am O - APPRART
+Freitag O - NN
+in O - APPR
+München O - NE
+. O - $.
+
+ROUNDUP O - NE
+2 O - CARD
+: O - $.
+
+Streik O - NN
+bei O - APPR
+Lufthansa B-ORG - NE
+geht O - VVFIN
+am O - APPRART
+Samstag O - NN
+weiter O - PTKVZ
+- O - $(
+17 O - CARD
+Stunden O - NN
+Ausstand O - NN
+FRANKFURT O - NE
+/ O - $(
+DÜSSELDORF O - NE
+- O - $(
+Die O - ART
+Flugbegleiter B-PERSON 4513 NN
+der O - ART
+Lufthansa B-ORG - NE
+( O - $(
+Deutsche B-ORG - ADJA
+Lufthansa I-ORG - NE
+) O - $(
+setzen O - VVFIN
+ihren O - PPOSAT
+Streik O - NN
+am O - APPRART
+Samstag O - NN
+am O - APPRART
+Drehkreuz O - NN
+Frankfurt O - NE
+und O - KON
+in O - APPR
+Düsseldorf O - NE
+fort O - PTKVZ
+. O - $.
+
+Sie O - PPER
+seien O - VAFIN
+von O - APPR
+6.00 O - CARD
+Uhr O - NN
+bis O - APPR
+23.00 O - CARD
+Uhr O - NN
+zur O - APPRART
+Arbeitsniederlegu O - NN
+Jahrestag O - NN
+des O - ART
+Anschlags O - NN
+auf O - APPR
+Charlie O - NE
+Hebdo O - NE
+: O - $.
+
+Satiremagazin O - NN
+feiert O - VVFIN
+Überleben O - NN
+mit O - APPR
+bissiger O - ADJA
+Ausgabe O - NN
+05.01.16 O - FM
+Terror O - NN
+Charlie O - NE
+Hebdo O - NE
+feiert O - VVFIN
+Überleben O - NN
+mit O - APPR
+bissiger O - ADJA
+Sonderausgabe O - NN
+Von O - APPR
+Peter B-PERSON - NE
+Heusch I-PER - NE
+Foto O - NN
+: O - $.
+
+BENOIT O - NE
+TESSIER O - NE
+/ O - $(
+REUTERS B-ORG - NE
+Gott O - NN
+als O - KOKOM
+Täter O - NN
+auf O - APPR
+der O - ART
+Flucht O - NN
+: O - $.
+
+So O - ADV
+gestaltete O - VVFIN
+die O - ART
+Redaktion O - NN
+der O - ART
+Satirezeitschrift O - NN
+„ O - $(
+Charlie O - NE
+Hebdo O - NE
+“ O - $(
+ihre O - PPOSAT
+Sonderausgabe O - NN
+ein O - ART
+Jahr O - NN
+nach O - APPR
+dem O - ART
+blutigen O - ADJA
+Anschlag O - NN
+auf O - APPR
+das O - ART
+Magazin O - NN
+. O - $.
+
+0 O - CARD
+0 O - CARD
+Zum O - APPRART
+Jahrestag O - NN
+des O - ART
+Anschlags O - NN
+erscheint O - VVFIN
+das O - ART
+französische O - ADJA
+Magazin O - NN
+Charlie O - NE
+Hebdo O - NE
+mit O - APPR
+einer O - ART
+Sonderausgabe O - NN
+– O - $(
+und O - KON
+gibt O - VVFIN
+sich O - PRF
+extrem O - ADJD
+boshaft O - ADJD
+. O - $.
+
+Paris O - NE
+. O - $.
