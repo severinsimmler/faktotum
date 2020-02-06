@@ -3740,8 +3740,8 @@ hatte O - VAFIN
 SPD B-ORG 4730 NE
 - O - $(
 Fraktions O 4730 NN
-- I-POS 4730 $(
-Chef I-POS 4730 NN
+- O 4730 $(
+Chef O 4730 NN
 Herbert B-PER 4730 NE
 Mettler I-PER 4730 NE
 zeigt O - VVFIN

@@ -24354,10 +24354,10 @@ CD B-ORG - NE
 - I-ORG - $(
 adapcos I-ORG - FM
 Senior O - FM
-VP I-POS - FM
-of I-POS - FM
-Product I-POS - FM
-Management I-POS - FM
+VP O - FM
+of O - FM
+Product O - FM
+Management O - FM
 , O - $,
 Jean B-PER - NE
 - I-PER - $(
@@ -25930,8 +25930,8 @@ leisten O - VVINF
 sagte O - VVFIN
 der O - ART
 Vorsitzende O 1355 NN
-der I-POS 1355 ART
-Geschäftsführung I-POS 1355 NN
+der O 1355 ART
+Geschäftsführung O 1355 NN
 von O - APPR
 DB B-ORG - NE
 International I-ORG - FM
@@ -35048,7 +35048,7 @@ Knut B-PER 1573 NE
 Eichholz I-PER 1573 NE
 , O - $,
 kaufmännischer O 1573 ADJA
-Geschäftsführer I-POS 1573 NN
+Geschäftsführer O 1573 NN
 der O - ART
 TeDaPro B-ORG - NE
 GmbH I-ORG - NN
@@ -50376,7 +50376,7 @@ Quelle O - NE
 : O - $.
 
 Manfred O - NE
-Hensel I-POS - NE
+Hensel O - NE
 Tweet O - NE
 AZ O - NE
 / O - $(
@@ -61141,7 +61141,7 @@ gelagert O - VVPP
 . O - $.
 
 Managing O 2638 FM
-Director I-POS 2638 FM
+Director O 2638 FM
 Sanjeev B-PER 2638 NE
 Kumar I-PER 2638 NE
 von O - APPR
@@ -67848,7 +67848,7 @@ Claudio B-PER 2794 NE
 Senn I-PER 2794 NE
 ( O - $(
 stv O 2794 NE
-. I-POS 2794 $.
+. O 2794 $.
 
 Leiter O 2794 NN
 Rheinunternehmen B-ORG - NN
@@ -69001,7 +69001,7 @@ Stefani B-ORG - NE
 Bode I-ORG - NE
 , O 2823 $,
 Leiterin O 2823 NN
-Marketing I-POS 2823 NN
+Marketing O 2823 NN
 bei O - APPR
 Heinz B-ORG - NE
 von I-ORG - APPR
@@ -83066,8 +83066,8 @@ Sven B-PER 3199 NE
 Stricker I-PER 3199 NE
 , O - $,
 Head O 3199 FM
-of I-POS 3199 FM
-Investment I-POS 3199 FM
+of O 3199 FM
+Investment O 3199 FM
 bei O - APPR
 BNPPRE B-ORG - NE
 . O - $.
