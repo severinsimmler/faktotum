@@ -1,4 +1,4 @@
-# Extract information from unstructured text
+# faktotum information from unstructured text
 
 ## Getting started
 
@@ -15,7 +15,7 @@ $ poetry install
 Easy as:
 
 ```python
->>> from extract.ner import Baseline
+>>> from faktotum.ner import Baseline
 >>> baseline = Baseline("droc",
 ...                     train_file="train.txt",
 ...                     dev_file="dev.txt",
@@ -34,7 +34,7 @@ Easy as:
 or:
 
 ```python
->>> from extract.ner import Flair
+>>> from faktotum.ner import Flair
 >>> flair = Flair("droc",
 ...               train_file="train.txt",
 ...               dev_file="dev.txt",
@@ -53,7 +53,7 @@ or:
 or:
 
 ```python
->>> from extract.ner import BERT
+>>> from faktotum.ner import BERT
 >>> bert = BERT("droc",
 ...             train_file="train.txt",
 ...             dev_file="dev.txt",
@@ -96,18 +96,18 @@ or:
         [x] bert fine-tuned multi: litbank
         [x] bert fine-tuned multi: droc continued litbank
     - presse
-        [ ] crf: presse (baseline)
+        [x] crf: presse (baseline)
         [x] flair: germeval
-        [ ] flair: presse
-        [ ] flair: presse continued germeval
+        [x] flair: presse
+        [x] flair: presse continued germeval
         [x] bert multi: germeval
-        [ ] bert multi: presse
-        [ ] bert multi: presse continued germeval
+        [x] bert multi: presse
+        [x] bert multi: presse continued germeval
         [x] bert german: germeval
-        [ ] bert german: presse
-        [ ] bert german: presse continued germeval
-        [ ] bert fine-tuned multi: presse
-        [ ] bert fine-tuned german: presse
-        [ ] bert fine-tuned multi: germeval
-        [ ] bert fine-tuned multi: presse continued germeval
+        [x] bert german: presse
+        [x] bert german: presse continued germeval
+        [x] bert fine-tuned multi: presse
+        [x] bert fine-tuned german: presse
+        [x] bert fine-tuned multi: germeval
+        [x] bert fine-tuned multi: presse continued germeval
 ```
