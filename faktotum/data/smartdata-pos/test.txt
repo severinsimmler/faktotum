@@ -290,7 +290,7 @@ ist O - VAFIN
 für O - APPR
 Facebook B-ORG - NE
 - O - $(
-Chef O 4523 NN
+Chef B-POS 4523 NN
 Zuckerberg B-PER 4523 NE
 eigentlich O - ADV
 ein O - ART
@@ -1934,7 +1934,7 @@ Dr. B-PER 4667 NN
 Stefan I-PER 4667 NE
 Sommer I-PER 4667 NE
 , O - $,
-Vorstandvorsitzender O 4667 NN
+Vorstandvorsitzender B-POS 4667 NN
 von O - APPR
 ZF B-ORG - NE
 : O - $.
@@ -2643,7 +2643,7 @@ Vorbild O - NN
 Frank B-PER 4686 NE
 Roselieb I-PER 4686 NE
 ist O - VAFIN
-Direktor O 4689 NN
+Direktor B-POS 4689 NN
 des O - ART
 Krisennavigator B-ORG 4689 NN
 - I-ORG 4689 $(
@@ -2659,7 +2659,7 @@ der O - ART
 Universität B-ORG 4698 NN
 Kiel I-ORG 4698 NE
 und O - KON
-Vorstandsmitglied O 4686 NN
+Vorstandsmitglied B-POS 4686 NN
 der O - ART
 Deutschen B-ORG 4686 ADJA
 Gesellschaft I-ORG 4686 NN
@@ -2697,7 +2697,7 @@ Frank B-PER 4692 NE
 Roselieb I-PER 4692 NE
 : O - $.
 
-Direktor O 4692 NN
+Direktor B-POS 4692 NN
 des O - ART
 Krisennavigator B-ORG 4692 NN
 - I-ORG 4692 $(
@@ -2714,7 +2714,7 @@ Universität B-ORG 4701 NN
 Kiel I-ORG 4701 NE
 , O - $,
 und O - KON
-Vorstandsmitglied O 4695 NN
+Vorstandsmitglied B-POS 4695 NN
 der O - ART
 Deutschen B-ORG 4695 ADJA
 Gesellschaft I-ORG 4695 NN
@@ -2874,7 +2874,7 @@ Ken B-PER - NE
 Wolter I-PER - NE
 - O - $(
 shutterstock.com O - NE
-Vorstandschefin O - NN
+Vorstandschefin B-POS - NN
 Marissa B-PER - NE
 Mayer I-PER - NE
 dürfte O - VMFIN
@@ -3396,7 +3396,7 @@ totalen O - ADJA
 Schräglage O - NN
 beschrieb O - VVFIN
 die O - ART
-Landesvorsitzende O 4727 NN
+Landesvorsitzende B-POS 4727 NN
 des O - ART
 Bundes B-ORG 4727 NN
 der I-ORG 4727 ART
@@ -3739,7 +3739,7 @@ hatte O - VAFIN
 
 SPD B-ORG 4730 NE
 - O - $(
-Fraktions O 4730 NN
+Fraktions B-POS 4730 NN
 - I-POS 4730 $(
 Chef I-POS 4730 NN
 Herbert B-PER 4730 NE
@@ -5560,7 +5560,7 @@ gab O - VVFIN
 Michael B-PER 4815 NE
 Peters I-PER 4815 NE
 , O - $,
-CEO O 4815 NN
+CEO B-POS 4815 NN
 von O - APPR
 Euronews B-ORG - NE
 und O - KON
@@ -6497,7 +6497,7 @@ Deutsche B-ORG - ADJA
 - I-ORG - $(
 Bank I-ORG - NN
 - O - $(
-Aufsichtsratschef O 4833 NN
+Aufsichtsratschef B-POS 4833 NN
 Paul B-PER 4833 NE
 Achleitner I-PER 4833 NE
 bringt O - VVFIN
@@ -6578,7 +6578,7 @@ sechs O - CARD
 neue O - ADJA
 Namen O - NN
 hat O - VAFIN
-Co-Vorstandschef O - NN
+Co-Vorstandschef B-POS - NN
 John B-PER - NE
 Cryan I-PER - NE
 mit O - APPR
@@ -10083,7 +10083,7 @@ TV I-ORG - FM
 am O - APPRART
 Montag O - NN
 den O - ART
-Vorsitzenden O 5119 NN
+Vorsitzenden B-POS 5119 NN
 des O - ART
 Hohen B-ORG 5119 ADJA
 Verhandlungsrats I-ORG 5119 NN
@@ -11228,7 +11228,7 @@ Schumacher I-PER - NE
 beten O - VVINF
 FIA B-ORG 5126 NE
 - O - $(
-Präsident O 5126 NN
+Präsident B-POS 5126 NN
 Jean B-PER 5126 NE
 Todt I-PER 5126 NE
 hat O - VAFIN
@@ -11264,7 +11264,7 @@ der O - ART
 ehemalige O - ADJA
 Ferrari B-ORG - NE
 - O - $(
-Teamchef O - NN
+Teamchef B-POS - NN
 Jean O - NE
 Todt O - NE
 nach O - APPR
@@ -12628,7 +12628,7 @@ abzubrechen O - VVIZU
 , O - $,
 erklärte O - VVFIN
 der O - ART
-Chef O 5136 NN
+Chef B-POS 5136 NN
 der O - ART
 Gewerkschaft O - NN
 Ufo B-ORG 5136 NE
@@ -12784,7 +12784,7 @@ für O - APPR
 2015 O - CARD
 setzte O - VVFIN
 sich O - PRF
-Vorstandschef O - NN
+Vorstandschef B-POS - NN
 Herbert B-PER - NE
 Haas I-PER - NE
 am O - APPRART
@@ -13826,7 +13826,7 @@ Mittelpunkt O - NN
 stellt O - VVFIN
 , O - $,
 unterstrich O - VVFIN
-Kreisvorsitzender O 5152 NN
+Kreisvorsitzender B-POS 5152 NN
 Hermann B-PER 5152 NE
 Stadler I-PER 5152 NE
 bei O - APPR
@@ -15775,7 +15775,7 @@ unter O - APPR
 mildem O - ADJA
 Wetter O - NN
 - O - $(
-CEO O - NN
+CEO B-POS - NN
 verlässt O - VVFIN
 Zurich B-ORG - NE
 Insurance I-ORG - FM
@@ -16185,7 +16185,7 @@ empfohlen O - VVPP
 sagte O - VVFIN
 GEW B-ORG 5196 NE
 - O - $(
-Vorstandsmitglied O 5196 NN
+Vorstandsmitglied B-POS 5196 NN
 Udo B-PER 5196 NE
 Mertens I-PER 5196 NE
 am O - APPRART

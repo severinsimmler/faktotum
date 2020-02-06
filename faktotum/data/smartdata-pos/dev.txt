@@ -1213,7 +1213,7 @@ gehen O - VVINF
 
 Intel B-ORG - NE
 - O - $(
-Chef O - NN
+Chef B-POS - NN
 Brian B-PER - NE
 Krzanich I-PER - NE
 will O - VMFIN
@@ -1789,7 +1789,7 @@ sagt O - VVFIN
 Klaus B-PER 4391 NE
 Nieding I-PER 4391 NE
 , O - $,
-Vorstand O 4391 NN
+Vorstand B-POS 4391 NN
 der O - ART
 Nieding B-ORG - NE
 + I-ORG - KON
@@ -3298,7 +3298,7 @@ Bahnchef O - NN
 Rüdiger B-PER 4463 NE
 Grube I-PER 4463 NE
 und O - KON
-Vorstand O - NN
+Vorstand B-POS - NN
 Volker B-PER - NE
 Kefer I-PER - NE
 am O - APPRART
@@ -3906,7 +3906,7 @@ ausgefallen O - VVPP
 
 Ufo B-ORG 4489 NE
 - O - $(
-Chef O 4489 NN
+Chef B-POS 4489 NN
 Nicoley B-PER 4489 NE
 Baublies I-PER 4489 NE
 machte O - VVFIN
@@ -4554,7 +4554,7 @@ Jahr O - NN
 zuvor O - ADV
 . O - $.
 
-Finanzvorstand O - NN
+Finanzvorstand B-POS - NN
 Dieter B-PER - NE
 Wemmer I-PER - NE
 zeigte O - VVFIN

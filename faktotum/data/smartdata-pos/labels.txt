@@ -2,4 +2,6 @@ B-ORG
 B-PER
 I-ORG
 I-PER
+B-POS
+I-POS
 O
