@@ -4,7 +4,7 @@ import logging
 import time
 from pathlib import Path
 
-import extract
+import faktotum
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
@@ -29,15 +29,15 @@ def run():
     corpus_path = Path(args.corpus).resolve()
     if args.model:
         model_path = Path(args.model).resolve()
-        fasttext = extract.FastText.load(model_path)
+        fasttext = faktotum.FastText.load(model_path)
         mode = "pretrained-cbow"
     else:
         sg = {"skipgram": 1, "cbow": 0}.get(args.algorithm, 0)
-        fasttext = extract.FastText(sg=sg)
+        fasttext = faktotum.FastText(sg=sg)
         mode = f"plain-{args.algorithm}"
 
     if corpus_path.is_dir():
-        corpus = extract.load_corpus(corpus_path)
+        corpus = faktotum.load_corpus(corpus_path)
         tokens = [list(document.tokens) for document in corpus]
     else:
         corpus = json.loads(corpus_path.read_text(encoding="utf-8"))

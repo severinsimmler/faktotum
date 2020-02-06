@@ -1,5 +1,5 @@
 """
-extract.exploration.lda
+faktotum.exploration.lda
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 This module implements classes to process MALLET-produced topic models.

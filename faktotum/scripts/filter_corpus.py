@@ -4,8 +4,8 @@ import logging
 import time
 from pathlib import Path
 
-import extract
-from extract import ontologia
+import faktotum
+from faktotum import ontologia
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 

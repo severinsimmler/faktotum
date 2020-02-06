@@ -4,7 +4,7 @@ import logging
 import time
 from pathlib import Path
 
-import extract
+import faktotum
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
@@ -22,7 +22,7 @@ def run():
     corpus_path = Path(args.corpus).resolve()
 
     logging.info("Tokenizing corpus...")
-    documents = json.dumps(extract.sentencize_corpus(corpus_path))
+    documents = json.dumps(faktotum.sentencize_corpus(corpus_path))
 
     export = Path(corpus_path.parent, f"{corpus_path.stem}.json")
     logging.info(f"Exporting corpus to {export}...")

@@ -1,5 +1,5 @@
 """
-extract.ontologia.api
+faktotum.ontologia.api
 ~~~~~~~~~~~~~~~~~~~~~
 
 This module implements models to help defining an ontology.
@@ -17,8 +17,8 @@ import scipy
 import sklearn.feature_extraction
 import sklearn.metrics
 
-from extract import utils
-from extract.corpus.core import Corpus
+from faktotum import utils
+from faktotum.corpus.core import Corpus
 
 
 class TfIdf:

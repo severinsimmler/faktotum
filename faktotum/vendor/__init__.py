@@ -1,2 +1,2 @@
-from extract.vendor import ner
-from extract.vendor import utils_ner
+from faktotum.vendor import ner
+from faktotum.vendor import utils_ner

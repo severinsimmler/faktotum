@@ -1,5 +1,5 @@
 """
-extract.corpus.core
+faktotum.corpus.core
 ~~~~~~~~~~~~~~~~~~~
 
 This module implements basic classes to process text corpora.
@@ -11,7 +11,7 @@ from typing import Generator, Iterable
 
 from syntok.tokenizer import Token as _Token
 
-from extract import utils
+from faktotum import utils
 
 
 @dataclass

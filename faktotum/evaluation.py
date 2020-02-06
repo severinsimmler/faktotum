@@ -7,7 +7,7 @@ import numpy as np
 import sklearn.utils
 import statsmodels.stats.contingency_tables
 
-from extract.corpus import Token
+from faktotum.corpus import Token
 
 
 def bootstrap(dataset, modeling_function, evaluation_function, n_iterations=1000):

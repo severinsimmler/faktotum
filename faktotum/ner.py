@@ -14,7 +14,7 @@ from flair.embeddings import PooledFlairEmbeddings
 from flair.models import SequenceTagger
 from flair.trainers import ModelTrainer
 
-from extract.evaluation import evaluate_labels
+from faktotum.evaluation import evaluate_labels
 
 
 @dataclass

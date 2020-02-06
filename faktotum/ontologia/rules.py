@@ -1,5 +1,5 @@
 """
-extract.ontologia.rules
+faktotum.ontologia.rules
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 This module implements basic rules to filter text corpora.

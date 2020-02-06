@@ -1,8 +1,8 @@
 import math
 import random
 
-from extract.corpus.core import Corpus
-from extract.exploration import TopicModel
+from faktotum.corpus.core import Corpus
+from faktotum.exploration import TopicModel
 
 random.seed(23)
 

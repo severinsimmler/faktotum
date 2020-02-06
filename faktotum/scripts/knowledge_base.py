@@ -3,7 +3,7 @@ import json
 import logging
 from pathlib import Path
 
-import extract
+import faktotum
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
@@ -30,5 +30,5 @@ def run():
         "positions": load_dump(args.kb) if "pos" in Path(args.kb).name else None,
     }
 
-    kb = extract.knowledge.KnowledgeBase(**kwargs)
+    kb = faktotum.knowledge.KnowledgeBase(**kwargs)
     kb.export(Path(args.kb).parent)

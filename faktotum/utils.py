@@ -1,5 +1,5 @@
 """
-extract.utils
+faktotum.utils
 ~~~~~~~~~~~~~
 
 This module provides general helper functions.

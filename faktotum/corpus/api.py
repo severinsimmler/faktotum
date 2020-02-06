@@ -1,5 +1,5 @@
 """
-extract.corpus.api
+faktotum.corpus.api
 ~~~~~~~~~~~~~~~~~~
 
 This module implements the high-level API for text processing.
@@ -8,8 +8,8 @@ This module implements the high-level API for text processing.
 from pathlib import Path
 from typing import Union
 
-from extract import utils
-from extract.corpus.core import Corpus, Document
+from faktotum import utils
+from faktotum.corpus.core import Corpus, Document
 
 
 def load_corpus(directory: Union[str, Path]) -> Corpus:

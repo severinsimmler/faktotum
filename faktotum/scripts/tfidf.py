@@ -3,7 +3,7 @@ import logging
 import time
 from pathlib import Path
 
-import extract
+import faktotum
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
@@ -19,12 +19,12 @@ def run():
     args = parser.parse_args()
 
     corpus_path = Path(args.corpus).resolve()
-    corpus = extract.load_corpus(corpus_path)
+    corpus = faktotum.load_corpus(corpus_path)
 
-    tfidf = extract.TfIdf()
+    tfidf = faktotum.TfIdf()
     tfidf.fit_weights(corpus)
 
-    corpus = extract.load_corpus(corpus_path)
+    corpus = faktotum.load_corpus(corpus_path)
     tfidf.build_matrix(corpus)
 
     output = Path(corpus_path.parent, corpus_path.stem)

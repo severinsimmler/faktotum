@@ -1,1 +1,1 @@
-from extract.knowledge.wikidata import KnowledgeBase
+from faktotum.knowledge.wikidata import KnowledgeBase

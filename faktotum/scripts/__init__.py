@@ -1,4 +1,4 @@
-from extract.scripts import (
+from faktotum.scripts import (
     clustering,
     decomposition,
     fasttext,

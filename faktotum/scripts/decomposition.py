@@ -8,8 +8,8 @@ from pathlib import Path
 
 import sklearn.decomposition
 
-import extract
-from extract import exploration
+import faktotum
+from faktotum import exploration
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
