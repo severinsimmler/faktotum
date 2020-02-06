@@ -16,8 +16,6 @@ pandas = "^0.25.3"
 statsmodels = "^0.11.0"
 flair = {git = "https://github.com/flairNLP/flair.git"}
 transformers = {git = "https://github.com/huggingface/transformers.git"}
-flair = "*"
-transformers = "*"
 tqdm = "^4.41.1"
 tensorboard = "^2.1.0"
 seqeval = "^0.0.12"
