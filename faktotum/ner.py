@@ -124,7 +124,8 @@ class Baseline:
         else:
             features["EOS"] = True
 
-        features.update(self.kallimachos.get(word, dict()))
+        if hasattr(self, "kallimachos"):
+            features.update(self.kallimachos.get(word, dict()))
         return features
 
     def _sent2features(self, sent):
