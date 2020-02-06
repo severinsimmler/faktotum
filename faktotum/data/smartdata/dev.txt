@@ -393,14 +393,14 @@ der O - ART
 Mitteilung O - NN
 zufolge O - APPO
 Wahlleiter O - NN
-Ingo B-PERSON - NE
+Ingo B-PER - NE
 Happel I-PER - NE
 . O - $.
 
 © O - FM
 We O - FM
 Von O - APPR
-Torsten B-PERSON - NE
+Torsten B-PER - NE
 Weigelt I-PER - NE
 Die O - ART
 Kirche O - NN
@@ -427,7 +427,7 @@ zusammentun O - VVINF
 Foto O - NN
 : O - $.
 
-Rolf B-PERSON - NE
+Rolf B-PER - NE
 Oeser I-PER - NE
 Das O - ART
 Bistum O - NN
@@ -579,7 +579,7 @@ ein O - PTKVZ
 Der O - ART
 ehemalige O - ADJA
 UN-Generalsekretär O - NN
-Boutros B-PERSON - NE
+Boutros B-PER - NE
 Boutros I-PER - NE
 - I-PER - $(
 Ghali I-PER - NE
@@ -587,7 +587,7 @@ ist O - VAFIN
 tot O - ADJD
 . O - $.
 
-Boutros B-PERSON - NE
+Boutros B-PER - NE
 - I-PER - $(
 Ghali I-PER - NE
 starb O - VVFIN
@@ -628,7 +628,7 @@ war O - VAFIN
 als O - KOKOM
 Nachfolger O - NN
 von O - APPR
-Javier B-PERSON - NE
+Javier B-PER - NE
 Pérez I-PER - NE
 de I-PER - NE
 Cuéllar I-PER - NE
@@ -658,7 +658,7 @@ der O - ART
 Weltorganisation O - NN
 . O - $.
 
-Boutros B-PERSON - NE
+Boutros B-PER - NE
 - I-PER - $(
 Ghali I-PER - NE
 organisierte O - VVFIN
@@ -699,7 +699,7 @@ eine O - ART
 zweite O - ADJA
 Amtszeit O - NN
 für O - APPR
-Boutros B-PERSON - NE
+Boutros B-PER - NE
 - I-PER - $(
 Ghali I-PER - NE
 . O - $.
@@ -736,7 +736,7 @@ der O - ART
 Vereinten B-ORG - ADJA
 Nationen I-ORG - NN
 machte O - VVFIN
-Boutros B-PERSON - NE
+Boutros B-PER - NE
 - I-PER - $(
 Ghali I-PER - NE
 sich O - PRF
@@ -796,7 +796,7 @@ Erdbeben O - NN
 überraschte O - VVFIN
 auch O - ADV
 Superstar O - NN
-Madonna B-PERSON - NE
+Madonna B-PER - NE
 und O - KON
 ihre O - PPOSAT
 Musiker O - NN
@@ -811,7 +811,7 @@ sind O - VAFIN
 
 Ihr O - PPOSAT
 Manager O - NN
-Guy B-PERSON - NE
+Guy B-PER - NE
 Oseary I-PER - NE
 schrieb O - VVFIN
 aus O - APPR
@@ -888,10 +888,10 @@ Bild O - NN
 
 PR O - NN
 von O - APPR
-Axel B-PERSON - NE
+Axel B-PER - NE
 Höpner I-PER - NE
 und O - KON
-Catrin B-PERSON - NE
+Catrin B-PER - NE
 Bialek I-PER - NE
 Quelle O - NN
 : O - $.
@@ -1006,7 +1006,7 @@ am O - APPRART
 um O - APPR
 14:27 O - CARD
 von O - APPR
-Tumasch B-PERSON - NE
+Tumasch B-PER - NE
 Clalüna I-PER - NE
 Wissen O - NN
 was O - PWS
@@ -1035,7 +1035,7 @@ schreiben O - VVINF
 » O - $(
 , O - $,
 sagt O - VVFIN
-Martin B-PERSON - NE
+Martin B-PER - NE
 Künzel I-PER - NE
 . O - $.
 
@@ -1104,7 +1104,7 @@ wurde O - VAFIN
 bekannt O - ADJD
 , O - $,
 dass O - KOUS
-Tobias B-PERSON - NE
+Tobias B-PER - NE
 Zeindler I-PER - NE
 mit O - APPR
 seiner O - PPOSAT
@@ -1130,9 +1130,9 @@ sollte O - VMFIN
 den O - ART
 Club O - NN
 von O - APPR
-Sadik B-PERSON - NE
+Sadik B-PER - NE
 und O - KON
-Burhan B-PERSON - NE
+Burhan B-PER - NE
 Arslan I-PER - NE
 übernehmen O - VVINF
 , O - $,
@@ -1159,7 +1159,7 @@ neuer O - ADJA
 Mieter O - NN
 gesucht O - VVPP
 , O - $,
-Zeindler B-PERSON - NE
+Zeindler B-PER - NE
 sah O - VVFIN
 sich O - PRF
 in O - APPR
@@ -1214,7 +1214,7 @@ gehen O - VVINF
 Intel B-ORG - NE
 - O - $(
 Chef B-POS - NN
-Brian B-PERSON - NE
+Brian B-PER - NE
 Krzanich I-PER - NE
 will O - VMFIN
 stärker O - ADJD
@@ -1786,7 +1786,7 @@ zu O - PTKZU
 wahren O - VVINF
 , O - $,
 sagt O - VVFIN
-Klaus B-PERSON 4391 NE
+Klaus B-PER 4391 NE
 Nieding I-PER 4391 NE
 , O - $,
 Vorstand B-POS 4391 NN
@@ -1797,7 +1797,7 @@ Barth I-ORG - NE
 Rechtsanwaltsaktiengesell O - NN
 Venezuelas O - NE
 Präsident O - NN
-Maduro B-PERSON - NE
+Maduro B-PER - NE
 erklärt O - VVFIN
 Freitage O - NN
 zu O - APPR
@@ -1834,7 +1834,7 @@ Energiekrise O - NN
 Der O - ART
 sozialistische O - ADJA
 Präsident O - NN
-Nicolas B-PERSON - NE
+Nicolas B-PER - NE
 Maduro I-PER - NE
 . O - $.
 
@@ -2061,7 +2061,7 @@ sagte O - VVFIN
 YPG B-ORG - NE
 - O - $(
 Sprecher O - NN
-Redur B-PERSON - NE
+Redur B-PER - NE
 Xelil I-PER - NE
 der O - ART
 kurdischen O - ADJA
@@ -2097,7 +2097,7 @@ YPG B-ORG - NE
 Kontrolle O - NN
 . O - $.
 
-Xelil B-PERSON - NE
+Xelil B-PER - NE
 wies O - VVFIN
 erneut O - ADJD
 jede O - PIDAT
@@ -2355,7 +2355,7 @@ Kanada O - NE
 . O - $.
 
 Fullscreen O - NN
-Daisy B-PERSON - NE
+Daisy B-PER - NE
 Ridley I-PER - NE
 bei O - APPR
 der O - ART
@@ -2372,7 +2372,7 @@ Hollywood O - NE
 Foto O - NN
 : O - $.
 
-Eugene B-PERSON - NE
+Eugene B-PER - NE
 Garcia I-PER - NE
 © O - $,
 dpa O - NE
@@ -2716,7 +2716,7 @@ an O - PTKVZ
 Foto O - NN
 : O - $.
 
-Zimmermann B-PERSON - NE
+Zimmermann B-PER - NE
 Die O - ART
 Sicherheit O - NN
 stand O - VVFIN
@@ -2749,7 +2749,7 @@ geworden O - VAPP
 . O - $.
 
 Von O - APPR
-Kirsten B-PERSON - NE
+Kirsten B-PER - NE
 Röder I-PER - NE
 Drucken O - NN
 per O - APPR
@@ -2767,7 +2767,7 @@ war O - VAFIN
 das O - PDS
 , O - $,
 was O - PRELS
-Markus B-PERSON - NE
+Markus B-PER - NE
 Hilgers I-PER - NE
 , O - $,
 Vize O - NE
@@ -2821,7 +2821,7 @@ ihren O - PPOSAT
 Erfahrungen O - NN
 berichteten O - VVFIN
 neben O - APPR
-Hilgers B-PERSON - NE
+Hilgers B-PER - NE
 DRK O - NE
 - O - $(
 Kreisg O - NE
@@ -2941,7 +2941,7 @@ unter O - APPR
 der O - ART
 Regie O - NN
 der O - ART
-Wachowski B-PERSON - NE
+Wachowski B-PER - NE
 - I-PER - $(
 Geschwister I-PER - NN
 . O - $.
@@ -2950,13 +2950,13 @@ In O - APPR
 den O - ART
 Hauptrollen O - NN
 sind O - VAFIN
-Channing B-PERSON - NE
+Channing B-PER - NE
 Tatum I-PER - NE
 , O - $,
-Mila B-PERSON - NE
+Mila B-PER - NE
 Kunis I-PER - NE
 und O - KON
-Sean B-PERSON - NE
+Sean B-PER - NE
 Bean I-PER - NE
 zu O - PTKZU
 sehen O - VVINF
@@ -3004,7 +3004,7 @@ Vive O - NE
 Mär O - NN
 / O - $(
 10:00 O - CARD
-Michael B-PERSON - NE
+Michael B-PER - NE
 Sosinka I-PER - NE
 Star O - FM
 Wars O - FM
@@ -3267,7 +3267,7 @@ tangieren O - VVINF
 sagte O - VVFIN
 Niedersachsens O - NE
 Wirtschaftsminister O - NN
-Olaf B-PERSON - NE
+Olaf B-PER - NE
 Lies I-PER - NE
 ( O - $(
 SPD B-ORG - NE
@@ -3290,28 +3290,28 @@ Imageschaden O - NN
 befürchtet O - VVFIN
 . O - $.
 
-Lies B-PERSON - NE
+Lies B-PER - NE
 hatte O - VAFIN
 seinen O - PPOSAT
 Vorschlag O - NN
 Bahnchef O - NN
-Rüdiger B-PERSON 4463 NE
+Rüdiger B-PER 4463 NE
 Grube I-PER 4463 NE
 und O - KON
 Vorstand B-POS - NN
-Volker B-PERSON - NE
+Volker B-PER - NE
 Kefer I-PER - NE
 am O - APPRART
 Freitag O - NN
 unterbreitet O - VVPP
 . O - $.
 
-Herr B-PERSON - NN
+Herr B-PER - NN
 Grube I-PER - NE
 und O - KON
 dann O - ADV
 auch O - ADV
-Herr B-PERSON - NN
+Herr B-PER - NN
 Kefer I-PER - NE
 in O - APPR
 einem O - ART
@@ -3327,7 +3327,7 @@ zu O - PTKZU
 prüfen O - VVINF
 , O - $,
 sagte O - VVFIN
-Lies B-PERSON - NE
+Lies B-PER - NE
 . O - $.
 
 Auf O - APPR
@@ -3447,7 +3447,7 @@ hervor O - PTKVZ
 , O - $,
 die O - PRELS
 Innenminister O - NN
-Holger B-PERSON - NE
+Holger B-PER - NE
 Stahlknecht I-PER - NE
 ( O - $(
 CDU B-ORG - NE
@@ -3498,9 +3498,9 @@ enormen O - ADJA
 Belastungen O - NN
 ausgeset O - ADJD
 Von O - APPR
-Sven B-PERSON - NE
+Sven B-PER - NE
 Flohr I-PER - NE
-Sven B-PERSON - NE
+Sven B-PER - NE
 Flohr I-PER - NE
 Biografie O - NN
 und O - KON
@@ -3568,15 +3568,15 @@ zwei O - CARD
 Jährige O - NN
 . O - $.
 
-Felix B-PERSON - NE
+Felix B-PER - NE
 Passlack I-PER - NE
 und O - KON
-Christian B-PERSON - NE
+Christian B-PER - NE
 Pulisic I-PER - NE
 wurden O - VAFIN
 von O - APPR
 Trainer O - NN
-Thomas B-PERSON - NE
+Thomas B-PER - NE
 Tuchel I-PER - NE
 befördert O - VVPP
 und O - KON
@@ -3596,7 +3596,7 @@ Tagen O - NN
 hatte O - VAFIN
 der O - ART
 BVB B-ORG - NN
-Jonas B-PERSON - NE
+Jonas B-PER - NE
 Hofmann I-PER - NE
 für O - APPR
 rund O - ADV
@@ -3812,10 +3812,10 @@ europäischen O - ADJA
 Schlüsselmark O - NN
 - O - $(
 von O - APPR
-Andreas B-PERSON - NE
+Andreas B-PER - NE
 Framke I-PER - NE
 und O - KON
-Peter B-PERSON - NE
+Peter B-PER - NE
 Maushagen I-PER - NE
 Frankfurt O - NE
 ( O - $(
@@ -3907,7 +3907,7 @@ ausgefallen O - VVPP
 Ufo B-ORG 4489 NE
 - O - $(
 Chef B-POS 4489 NN
-Nicoley B-PERSON 4489 NE
+Nicoley B-PER 4489 NE
 Baublies I-PER 4489 NE
 machte O - VVFIN
 die O - ART
@@ -4270,7 +4270,7 @@ Ein O - ART
 Ford B-ORG - NE
 Galaxie O - NN
 500 O - CARD
-Frank B-PERSON - NE
+Frank B-PER - NE
 Auerswald I-PER - NE
 hat O - VAFIN
 sich O - PRF
@@ -4555,7 +4555,7 @@ zuvor O - ADV
 . O - $.
 
 Finanzvorstand B-POS - NN
-Dieter B-PERSON - NE
+Dieter B-PER - NE
 Wemmer I-PER - NE
 zeigte O - VVFIN
 sich O - PRF
@@ -4619,7 +4619,7 @@ FRANKFURT O - NE
 DÜSSELDORF O - NE
 - O - $(
 Die O - ART
-Flugbegleiter B-PERSON 4513 NN
+Flugbegleiter B-PER 4513 NN
 der O - ART
 Lufthansa B-ORG - NE
 ( O - $(
@@ -4674,7 +4674,7 @@ mit O - APPR
 bissiger O - ADJA
 Sonderausgabe O - NN
 Von O - APPR
-Peter B-PERSON - NE
+Peter B-PER - NE
 Heusch I-PER - NE
 Foto O - NN
 : O - $.

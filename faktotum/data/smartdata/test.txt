@@ -223,7 +223,7 @@ vor O - APPR
 Minuten O - NN
 : O - $.
 
-Mark B-PERSON - NE
+Mark B-PER - NE
 Zuckerberg I-PER - NE
 räumt O - VVFIN
 Fehler O - NN
@@ -233,7 +233,7 @@ mit O - APPR
 Hasskommentaren O - NN
 ein O - PTKVZ
 Von O - APPR
-Christoph B-PERSON - NE
+Christoph B-PER - NE
 Dernbach I-PER - NE
 , O - $,
 dpa B-ORG - NE
@@ -255,7 +255,7 @@ haben O - VAFIN
 Facebook B-ORG - NE
 - O - $(
 Gründer O - NN
-Zuckerberg B-PERSON - NE
+Zuckerberg B-PER - NE
 räumt O - VVFIN
 Versäumnisse O - NN
 im O - APPRART
@@ -274,7 +274,7 @@ ein O - PTKVZ
 Foto O - NN
 : O - $.
 
-Kay B-PERSON - NE
+Kay B-PER - NE
 Nietfeld I-PER - NE
 Bild O - NN
 : O - $.
@@ -291,7 +291,7 @@ für O - APPR
 Facebook B-ORG - NE
 - O - $(
 Chef B-POS 4523 NN
-Zuckerberg B-PERSON 4523 NE
+Zuckerberg B-PER 4523 NE
 eigentlich O - ADV
 ein O - ART
 schwieriges O - ADJA
@@ -359,7 +359,7 @@ lassen O - VVINF
 Zum O - APPRART
 einen O - PIS
 lobte O - VVFIN
-Mark B-PERSON - NN
+Mark B-PER - NN
 Zuckerberg I-PER - NE
 Deutschland O - NE
 und O - KON
@@ -719,15 +719,15 @@ YouTube B-ORG - FM
 Version O - NN
 : O - $.
 
-Yo B-PERSON - FM
+Yo B-PER - FM
 Preston I-PER - NE
 ! I-PER - $.
 
 und O - KON
-Kelly B-PERSON - NE
+Kelly B-PER - NE
 Kiara I-PER - NE
 singen O - VVFIN
-Justin B-PERSON - NE
+Justin B-PER - NE
 Biebers I-PER - NE
 Love O - FM
 Yourself O - FM
@@ -736,22 +736,22 @@ YouTube O - FM
 Version O - NN
 : O - $.
 
-Yo B-PERSON - FM
+Yo B-PER - FM
 Preston I-PER - NE
 ! I-PER - $.
 
 und O - KON
-Kelly B-PERSON - NE
+Kelly B-PER - NE
 Kiara I-PER - NE
 singen O - VVFIN
-Justin B-PERSON - NE
+Justin B-PER - NE
 Biebers I-PER - NE
 Love O - FM
 Yourself O - FM
-Yo B-PERSON - FM
+Yo B-PER - FM
 Preston I-PER - NE
 und O - KON
-Kelly B-PERSON - NE
+Kelly B-PER - NE
 Kiara I-PER - NE
 : O - $.
 
@@ -761,7 +761,7 @@ YouTube O - NE
 - O - $(
 Stars O - FM
 covern O - FM
-Justin B-PERSON - NE
+Justin B-PER - NE
 Bieber I-PER - NE
 Quelle O - NN
 : O - $.
@@ -777,7 +777,7 @@ Nach O - APPR
 dem O - ART
 Erfolg O - NN
 von O - APPR
-Justin B-PERSON - NE
+Justin B-PER - NE
 Biebers I-PER - NE
 Trennungssong O - NN
 Love O - FM
@@ -813,7 +813,7 @@ Song O - FM
 Love O - FM
 Yourself O - FM
 ist O - VAFIN
-Justin B-PERSON - NE
+Justin B-PER - NE
 Bieber I-PER - NE
 einmal O - ADV
 mehr O - ADV
@@ -841,10 +841,10 @@ beiden O - PIDAT
 YouTube B-ORG - NE
 - O - $(
 Stars O - NN
-Kelly B-PERSON - NE
+Kelly B-PER - NE
 Kiara I-PER - NE
 und O - KON
-Yo B-PERSON - NE
+Yo B-PER - NE
 Preston I-PER - NE
 ! I-PER - $.
 
@@ -859,7 +859,7 @@ enthüllt O - VVPP
 . O - $.
 
 Während O - KOUS
-Justin B-PERSON - NE
+Justin B-PER - NE
 Bieber I-PER - NE
 in O - APPR
 seinem O - PPOSAT
@@ -907,7 +907,7 @@ erhofft O - VVPP
 Foto O - NN
 : O - $.
 
-Holger B-PERSON - NE
+Holger B-PER - NE
 Hollemann I-PER - NE
 dpa B-ORG - NE
 Im O - APPRART
@@ -923,7 +923,7 @@ erhofft O - VVPP
 Foto O - NN
 : O - $.
 
-Holger B-PERSON - NE
+Holger B-PER - NE
 Hollemann I-PER - NE
 Hannover O - NE
 ( O - $(
@@ -980,7 +980,7 @@ für O - APPR
 2016 O - CARD
 schraubte O - VVFIN
 Vorstandschef O - NN
-Herbert B-PERSON - NE
+Herbert B-PER - NE
 Haas I-PER - NE
 bei O - APPR
 der O - ART
@@ -1282,7 +1282,7 @@ Post O - NN
 Foto O - NN
 : O - $.
 
-Laurent B-PERSON - NE
+Laurent B-PER - NE
 Antonelli I-PER - NE
 ( O - $(
 las O - FM
@@ -1458,7 +1458,7 @@ vereinbart O - VVPP
 0 O - CARD
 0 O - CARD
 Von O - APPR
-Sabine B-PERSON - NE
+Sabine B-PER - NE
 Gundlach I-PER - NE
 Die O - ART
 Arbeiten O - NN
@@ -1537,7 +1537,7 @@ für O - APPR
 den O - ART
 Berliner O - ADJA
 Bauherrn O - NN
-Wilfried B-PERSON - NE
+Wilfried B-PER - NE
 Euler I-PER - NE
 managt O - VVFIN
 . O - $.
@@ -1564,7 +1564,7 @@ dass O - KOUS
 - O - $(
 01:59 O - CARD
 Uhr O - NN
-Robert B-PERSON - NE
+Robert B-PER - NE
 Sasse I-PER - NE
 , O - $,
 YES B-ORG - NE
@@ -1728,7 +1728,7 @@ schlossen O - VVFIN
 sich O - PRF
 auch O - ADV
 die O - ART
-Fluglotsen B-PERSON 4649 NN
+Fluglotsen B-PER 4649 NN
 an O - PTKVZ
 . O - $.
 
@@ -1758,7 +1758,7 @@ Rentenkürzungen O - NN
 Foto O - NN
 : O - $.
 
-Friso B-PERSON - NE
+Friso B-PER - NE
 Gentsch I-PER - NE
 / O - $(
 Archiv O - NN
@@ -1930,7 +1930,7 @@ vollständig O - ADJD
 erworben O - VVPP
 . O - $.
 
-Dr. B-PERSON 4667 NN
+Dr. B-PER 4667 NN
 Stefan I-PER 4667 NE
 Sommer I-PER 4667 NE
 , O - $,
@@ -2158,7 +2158,7 @@ Kreishaus O - NN
 Auch O - ADV
 Reservisten O - NN
 eingebunden O - ADJD
-Kerstin B-PERSON - NE
+Kerstin B-PER - NE
 Schumann I-PER - NE
 Westerstede O - NE
 Massive O - ADJA
@@ -2240,7 +2240,7 @@ erläuterte O - VVFIN
 KVK B-ORG - NE
 - O - $(
 Leiter O - NN
-Thomas B-PERSON - NE
+Thomas B-PER - NE
 Bünting I-PER - NE
 . O - $.
 
@@ -2307,7 +2307,7 @@ Rückenwind O - NN
 » O - $(
 , O - $,
 sagte O - VVFIN
-Hörmann B-PERSON - NE
+Hörmann B-PER - NE
 geknickt O - VVPP
 und O - KON
 gestand O - VVFIN
@@ -2328,9 +2328,9 @@ vorbereitet O - VVPP
 . O - $.
 
 » O - $(
-Scholz B-PERSON - NE
+Scholz B-PER - NE
 schaute O - VVFIN
-Hörmann B-PERSON - NE
+Hörmann B-PER - NE
 bedauernd O - ADJD
 an O - PTKVZ
 und O - KON
@@ -2373,7 +2373,7 @@ intensive O - ADJA
 Diskussion O - NN
 , O - $,
 orakelte O - VVFIN
-Hörmann B-PERSON - NE
+Hörmann B-PER - NE
 . O - $.
 
 Thema O - NN
@@ -2421,7 +2421,7 @@ gereicht O - VVPP
 » O - $(
 , O - $,
 konstatierte O - VVFIN
-Hörmann B-PERSON - NE
+Hörmann B-PER - NE
 demoralisiert O - VVPP
 . O - $.
 
@@ -2467,7 +2467,7 @@ Winterspiele O - NN
 2022 O - CARD
 vot O - APPR
 Verbraucherschutzminister O - NN
-Reinhold B-PERSON - NE
+Reinhold B-PER - NE
 Jost I-PER - NE
 : O - $.
 
@@ -2496,7 +2496,7 @@ Freizeit O - NN
 2016 O - CARD
 erinnert O - VVFIN
 Verbraucherschutzminister O - NN
-Reinhold B-PERSON - NE
+Reinhold B-PER - NE
 Jost I-PER - NE
 an O - APPR
 die O - ART
@@ -2640,7 +2640,7 @@ der O - ART
 Elchtest O - NN
 als O - KOKOM
 Vorbild O - NN
-Frank B-PERSON 4686 NE
+Frank B-PER 4686 NE
 Roselieb I-PER 4686 NE
 ist O - VAFIN
 Direktor B-POS 4689 NN
@@ -2689,11 +2689,11 @@ Unternehmen O - NN
 . O - $.
 
 Von O - APPR
-Karl B-PERSON - NE
+Karl B-PER - NE
 - I-PER - $(
 Heinz I-PER - NE
 Patzer I-PER - NE
-Frank B-PERSON 4692 NE
+Frank B-PER 4692 NE
 Roselieb I-PER 4692 NE
 : O - $.
 
@@ -2735,7 +2735,7 @@ in O - APPR
 Hamburg O - NE
 . O - $.
 
-Herr B-PERSON - NN
+Herr B-PER - NN
 Roselieb I-PER - NE
 , O - $,
 was O - PWS
@@ -2870,12 +2870,12 @@ hat O - VAFIN
 Foto O - NN
 : O - $.
 
-Ken B-PERSON - NE
+Ken B-PER - NE
 Wolter I-PER - NE
 - O - $(
 shutterstock.com O - NE
 Vorstandschefin B-POS - NN
-Marissa B-PERSON - NE
+Marissa B-PER - NE
 Mayer I-PER - NE
 dürfte O - VMFIN
 nach O - APPR
@@ -2933,7 +2933,7 @@ zunächst O - ADV
 nicht O - PTKNEG
 . O - $.
 
-Mayer B-PERSON - NE
+Mayer B-PER - NE
 war O - VAFIN
 vor O - APPR
 rund O - ADV
@@ -3105,7 +3105,7 @@ bestätigt O - VVPP
 Foto O - NN
 : O - $.
 
-Antonio B-PERSON - NE
+Antonio B-PER - NE
 Lacerda I-PER - NE
 © O - $,
 dpa B-ORG - NE
@@ -3231,7 +3231,7 @@ auch O - ADV
 der O - ART
 damalige O - ADJA
 Vorstandschef O - NN
-Martin B-PERSON - NE
+Martin B-PER - NE
 Winterkorn I-PER - NE
 sei O - VAFIN
 beteiligt O - VVPP
@@ -3251,10 +3251,10 @@ York O - NE
 und O - KON
 Massachusetts O - NE
 , O - $,
-Eric B-PERSON - NE
+Eric B-PER - NE
 Schneiderman I-PER - NE
 und O - KON
-Maura B-PERSON - NE
+Maura B-PER - NE
 Healey I-PER - NE
 vom O - APPRART
 Dienstag O - NN
@@ -3406,7 +3406,7 @@ Hessen I-ORG 4727 NE
 BSBD B-ORG - NE
 ) O - $(
 , O - $,
-Birgit B-PERSON 4727 NE
+Birgit B-PER 4727 NE
 Kannegießer I-PER 4727 NE
 , O - $,
 in O - APPR
@@ -3698,7 +3698,7 @@ und O - KON
 die O - ART
 von O - APPR
 Regierungspräsidentin O - NN
-Anne B-PERSON - NE
+Anne B-PER - NE
 Lütkes I-PER - NE
 gewünschte O - ADJA
 effizienteren O - ADJA
@@ -3714,7 +3714,7 @@ Essen O - NE
 Wie O - KOKOM
 berichtet O - VVPP
 hat O - VAFIN
-Lütkes B-PERSON - NE
+Lütkes B-PER - NE
 die O - ART
 drei O - CARD
 OB O - NN
@@ -3742,7 +3742,7 @@ SPD B-ORG 4730 NE
 Fraktions B-POS 4730 NN
 - I-POS 4730 $(
 Chef I-POS 4730 NN
-Herbert B-PERSON 4730 NE
+Herbert B-PER 4730 NE
 Mettler I-PER 4730 NE
 zeigt O - VVFIN
 sich O - PRF
@@ -3752,7 +3752,7 @@ die O - ART
 Äußerungen O - NN
 von O - APPR
 Regierungspräsidentin O - NN
-Lütkes B-PERSON - NE
+Lütkes B-PER - NE
 und O - KON
 erklärt O - VVFIN
 im O - APPRART
@@ -3765,7 +3765,7 @@ Ich O - PPER
 vermute O - VVFIN
 , O - $,
 Frau O - NN
-Lütkes B-PERSON - NE
+Lütkes B-PER - NE
 scheint O - VVFIN
 im O - APPRART
 Fall O - NN
@@ -3859,7 +3859,7 @@ ausgelöst O - VVPP
 
 Kommentar O - NN
 von O - APPR
-Jürg B-PERSON - NE
+Jürg B-PER - NE
 Bischoff I-PER - NE
 14.1.2016 O - FM
 , O - $,
@@ -4220,7 +4220,7 @@ verletzt O - VVPP
 Foto O - NN
 : O - $.
 
-Peter B-PERSON - NE
+Peter B-PER - NE
 Kneffel I-PER - NE
 , O - $,
 dpa B-ORG - NE
@@ -5049,7 +5049,7 @@ AFX I-ORG - NE
 - O - $(
 Rund O - ADV
 2000 O - CARD
-Krankenhaus B-PERSON - NN
+Krankenhaus B-PER - NN
 - I-PER - $(
 Beschäftigte I-PER - NN
 wollen O - VMFIN
@@ -5557,7 +5557,7 @@ Headquarters O - NN
 im O - APPRART
 Oktober O - NN
 gab O - VVFIN
-Michael B-PERSON 4815 NE
+Michael B-PER 4815 NE
 Peters I-PER 4815 NE
 , O - $,
 CEO B-POS 4815 NN
@@ -5767,7 +5767,7 @@ sein O - VAINF
 Bild O - NN
 : O - $.
 
-Herbert B-PERSON - NE
+Herbert B-PER - NE
 Guth I-PER - NE
 Hier O - ADV
 klicken O - VVFIN
@@ -6029,7 +6029,7 @@ auf O - APPR
 Probleme O - NN
 . O - $.
 
-Martin B-PERSON - NE
+Martin B-PER - NE
 Zielke I-PER - NE
 wird O - VAFIN
 angeblich O - ADJD
@@ -6142,7 +6142,7 @@ Kleine O - ADJA
 - O - $(
 Ruse O - NE
 Von O - APPR
-Rolf B-PERSON - NE
+Rolf B-PER - NE
 Masselink I-PER - NE
 Vor O - APPR
 einer O - ART
@@ -6160,7 +6160,7 @@ Nordhorn O - NE
 Range O - NN
 hat O - VAFIN
 Landrat O - NN
-Friedrich B-PERSON - NE
+Friedrich B-PER - NE
 Kethorn I-PER - NE
 gewarnt O - VVPP
 . O - $.
@@ -6498,7 +6498,7 @@ Deutsche B-ORG - ADJA
 Bank I-ORG - NN
 - O - $(
 Aufsichtsratschef B-POS 4833 NN
-Paul B-PERSON 4833 NE
+Paul B-PER 4833 NE
 Achleitner I-PER 4833 NE
 bringt O - VVFIN
 den O - ART
@@ -6579,10 +6579,10 @@ neue O - ADJA
 Namen O - NN
 hat O - VAFIN
 Co-Vorstandschef B-POS - NN
-John B-PERSON - NE
+John B-PER - NE
 Cryan I-PER - NE
 mit O - APPR
-Achleitner B-PERSON - NE
+Achleitner B-PER - NE
 für O - APPR
 den O - ART
 Vorstand O - NN
@@ -6668,7 +6668,7 @@ worden O - VAPP
 Foto O - NN
 : O - $.
 
-Frank B-PERSON - NE
+Frank B-PER - NE
 Rumpenhorst I-PER - NE
 Frankfurt O - NE
 / O - KON
@@ -7261,7 +7261,7 @@ Lügenpresse O - NN
 ' O - $(
 “ O - $(
 von O - APPR
-Martin B-PERSON - NE
+Martin B-PER - NE
 Niewendick I-PER - NE
 Ich O - PPER
 bin O - VAFIN
@@ -7301,7 +7301,7 @@ von O - APPR
 rechts O - ADV
 . O - $.
 
-Alexander B-PERSON - NE
+Alexander B-PER - NE
 Böhm I-PER - NE
 steht O - VVFIN
 mal O - ADV
@@ -7355,7 +7355,7 @@ gepostet O - VVPP
 in O - APPR
 dem O - PRELS
 sich O - PRF
-Böhm B-PERSON - NE
+Böhm B-PER - NE
 gegen O - APPR
 den O - ART
 „ O - $(
@@ -7425,7 +7425,7 @@ Aufmärsche O - NN
 gilt O - VVFIN
 al O - KOKOM
 Von O - APPR
-Patrick B-PERSON - NE
+Patrick B-PER - NE
 D. I-PER - NE
 - O - $(
 10 O - CARD
@@ -7612,7 +7612,7 @@ Bocholt O - NE
 Foto O - NN
 : O - $.
 
-Sven B-PERSON - NE
+Sven B-PER - NE
 Betz I-PER - NE
 Bocholt O - NE
 - O - $(
@@ -7652,7 +7652,7 @@ vor O - PTKVZ
 . O - $.
 
 Von O - APPR
-Ludwig B-PERSON - NE
+Ludwig B-PER - NE
 van I-PER - NE
 der I-PER - NE
 Linde I-PER - NE
@@ -7815,7 +7815,7 @@ verantwortlich O - ADJD
 
 --------------------------------------------------------------------------- O - $(
 Herr O - NN
-Friedhelm B-PERSON - NE
+Friedhelm B-PER - NE
 Loh I-PER - NE
 , O - $,
 Deutschland O - NE
@@ -7883,7 +7883,7 @@ Stimmrechten O - NN
 ) O - $(
 sind O - VAFIN
 Herrn O - NN
-Loh B-PERSON - NE
+Loh B-PER - NE
 gemäß O - APPR
 § O - NN
 22 O - CARD
@@ -8143,11 +8143,11 @@ Ransomware O - NN
 . O - $.
 
 Von O - APPR
-Helmut B-PERSON - NE
+Helmut B-PER - NE
 Martin I-PER - NE
 - I-PER - $(
 Jung I-PER - NN
-Helmut B-PERSON - NE
+Helmut B-PER - NE
 Martin I-PER - NE
 - I-PER - $(
 Jung I-PER - NE
@@ -8638,13 +8638,13 @@ die O - ART
 bessere O - ADJA
 Balance O - NN
 Stuttgarts O - NE
-Daniel B-PERSON - NE
+Daniel B-PER - NE
 Didavi I-PER - NE
 ( O - $(
 l. O - NE
 ) O - $(
 und O - KON
-Timo B-PERSON - NE
+Timo B-PER - NE
 Werner I-PER - NE
 freuen O - VVFIN
 sich O - PRF
@@ -8662,7 +8662,7 @@ In O - APPR
 der O - ART
 Winterpause O - NN
 ließ O - VVFIN
-Jürgen B-PERSON - NE
+Jürgen B-PER - NE
 Kramny I-PER - NE
 das O - ART
 4 O - CARD
@@ -8688,7 +8688,7 @@ Anwendung O - NN
 Im O - APPRART
 Mittelfeld O - NN
 gab O - VVFIN
-Serey B-PERSON - NE
+Serey B-PER - NE
 Dié I-PER - NE
 den O - ART
 Staubsauger O - NN
@@ -9426,11 +9426,11 @@ Mitarbeiter O - NN
 Foto O - NN
 : O - $.
 
-Alexander B-PERSON - NE
+Alexander B-PER - NE
 Müller I-PER - NE
 BILDER O - NE
 von O - APPR
-ALEXANDER B-PERSON - NE
+ALEXANDER B-PER - NE
 MÜLLER I-PER - NE
 Der O - ART
 Hersteller O - NN
@@ -9473,9 +9473,9 @@ Pressegespräch O - NN
 betonten O - VVFIN
 die O - ART
 Geschäftsführer O - NN
-Rainer B-PERSON - NE
+Rainer B-PER - NE
 und O - KON
-Mark B-PERSON - NE
+Mark B-PER - NE
 Töpfer I-PER - NE
 , O - $,
 dass O - KOUS
@@ -9582,7 +9582,7 @@ fordert O - VVFIN
 Schauspiel O - NN
 - O - $(
 Ikone O - NN
-Iris B-PERSON - NE
+Iris B-PER - NE
 Berben I-PER - NE
 ( O - $(
 65 O - CARD
@@ -9599,7 +9599,7 @@ mal O - ADV
 gelesen O - VVPP
 | O - FM
 presseportal.de O - FM
-Iris B-PERSON - NE
+Iris B-PER - NE
 Berben I-PER - NE
 : O - $.
 
@@ -9653,7 +9653,7 @@ fordert O - VVFIN
 Schauspiel O - NN
 - O - $(
 Ikone O - NN
-Iris B-PERSON - NE
+Iris B-PER - NE
 Berben I-PER - NE
 ( O - $(
 65 O - CARD
@@ -9710,7 +9710,7 @@ fordert O - VVFIN
 Schauspiel O - NN
 - O - $(
 Ikone O - NN
-Iris B-PERSON - NE
+Iris B-PER - NE
 Berben I-PER - NE
 ( O - $(
 65 O - CARD
@@ -9802,7 +9802,7 @@ des O - ART
 Landesverwaltungsamts O - NN
 warnt O - VVFIN
 Präsident O - NN
-Frank B-PERSON - NE
+Frank B-PER - NE
 Roßner I-PER - NE
 vor O - APPR
 Schnellschüssen O - NN
@@ -10088,7 +10088,7 @@ des O - ART
 Hohen B-ORG 5119 ADJA
 Verhandlungsrats I-ORG 5119 NN
 , O - $,
-Riad B-PERSON 5119 NE
+Riad B-PER 5119 NE
 Hidschab I-PER 5119 NE
 . O - $.
 
@@ -10343,7 +10343,7 @@ werde O - VAFIN
 . O - $.
 
 Fraktionsmitglied O - NN
-Oliver B-PERSON - NE
+Oliver B-PER - NE
 Kalusch I-PER - NE
 appellierte O - VVFIN
 a O - FM
@@ -10396,7 +10396,7 @@ gehen O - VVINF
 Intel B-ORG - NE
 - O - $(
 Chef O - NN
-Brian B-PERSON - NE
+Brian B-PER - NE
 Krzanich I-PER - NE
 will O - VMFIN
 stärker O - ADJD
@@ -10757,11 +10757,11 @@ KitaPlus O - NE
 , O - $,
 das O - PRELS
 Bundesfamilienministerin O - NN
-Manuela B-PERSON - NE
+Manuela B-PER - NE
 Schwesig I-PER - NE
 und O - KON
 Arbeitsministerin O - NN
-Andrea B-PERSON - NE
+Andrea B-PER - NE
 Nahles I-PER - NE
 ( O - $(
 beide O - PIDAT
@@ -11200,10 +11200,10 @@ Formel B-ORG - NE
 Todt O - NN
 : O - $.
 
-Papst B-PERSON - NN
+Papst B-PER - NN
 will O - VMFIN
 für O - APPR
-Michael B-PERSON - NE
+Michael B-PER - NE
 Schumacher I-PER - NE
 beten O - VVINF
 Möchten O - VMFIN
@@ -11220,20 +11220,20 @@ NEIN O - NE
 Todt O - NE
 : O - $.
 
-Papst B-PERSON - NN
+Papst B-PER - NN
 will O - VMFIN
 für O - APPR
-Michael B-PERSON - NE
+Michael B-PER - NE
 Schumacher I-PER - NE
 beten O - VVINF
 FIA B-ORG 5126 NE
 - O - $(
 Präsident B-POS 5126 NN
-Jean B-PERSON 5126 NE
+Jean B-PER 5126 NE
 Todt I-PER 5126 NE
 hat O - VAFIN
 mit O - APPR
-Papst B-PERSON - NN
+Papst B-PER - NN
 Franziskus I-PER - NE
 gesprochen O - VVPP
 . O - $.
@@ -11247,13 +11247,13 @@ dpa B-ORG - NE
 ) O - $(
 - O - $(
 Der O - ART
-Papst B-PERSON - NN
+Papst B-PER - NN
 will O - VMFIN
 für O - APPR
 die O - ART
 Genesung O - NN
 von O - APPR
-Michael B-PERSON - NE
+Michael B-PER - NE
 Schumacher I-PER - NE
 beten O - VVINF
 . O - $.
@@ -11308,7 +11308,7 @@ Der O - ART
 siebenfache O - ADJA
 Formel O - NN
 -1-Weltmeister O - NN
-Schumacher B-PERSON - NE
+Schumacher B-PER - NE
 war O - VAFIN
 2013 O - CARD
 beim O - APPRART
@@ -11330,9 +11330,9 @@ nicht O - PTKNEG
 bekannt O - ADJD
 . O - $.
 
-Franziskus B-PERSON - NE
+Franziskus B-PER - NE
 kenne O - VVFIN
-Schumacher B-PERSON - NE
+Schumacher B-PER - NE
 und O - KON
 habe O - VAFIN
 auch O - ADV
@@ -11342,7 +11342,7 @@ Unfall O - NN
 gehört O - VVPP
 , O - $,
 erklärte O - VVFIN
-Todt B-PERSON - NE
+Todt B-PER - NE
 . O - $.
 
 spoods.de B-ORG - NE
@@ -11374,7 +11374,7 @@ AFP O - NE
 / O - $(
 Getty B-ORG - NE
 Images I-ORG - FM
-Lukas B-PERSON - NE
+Lukas B-PER - NE
 Podolski I-PER - NE
 stand O - VVFIN
 nach O - APPR
@@ -11436,7 +11436,7 @@ seit O - APPR
 sechs O - CARD
 Wochen O - NN
 stand O - VVFIN
-Podolski B-PERSON - NE
+Podolski B-PER - NE
 wieder O - ADV
 in O - APPR
 der O - ART
@@ -11483,14 +11483,14 @@ Drama O - NN
 gleich O - PTKVZ
 . O - $.
 
-Lukas B-PERSON - NE
+Lukas B-PER - NE
 Podolski I-PER - NE
 verkauft O - VVFIN
 jetzt O - ADV
 in O - APPR
 Köln O - NE
 Klamotten O - NN
-Lukas B-PERSON - NE
+Lukas B-PER - NE
 Podolski I-PER - NE
 hat O - VAFIN
 in O - APPR
@@ -11720,7 +11720,7 @@ Die O - ART
 international O - ADJD
 erfolgreiche O - ADJA
 Bauunternehmerin O - NN
-Jelena B-PERSON - NE
+Jelena B-PER - NE
 Baturina I-PER - NE
 und O - KON
 Fir O - NE
@@ -11756,7 +11756,7 @@ die O - ART
 international O - ADJD
 erfolgreiche O - ADJA
 Bauunternehmerin O - NN
-Jelena B-PERSON - NE
+Jelena B-PER - NE
 Baturina I-PER - NE
 mit O - APPR
 der O - ART
@@ -11768,7 +11768,7 @@ der O - ART
 Firmenanteile O - NN
 gemeinsam O - ADJD
 mit O - APPR
-Klaus B-PERSON - NE
+Klaus B-PER - NE
 - I-PER - $(
 Michael I-PER - NE
 Koch I-PER - NE
@@ -11792,7 +11792,7 @@ Hightex B-ORG - NE
 . O - $.
 
 Firmengründer O - NN
-Koch B-PERSON 5129 NE
+Koch B-PER 5129 NE
 steht O - VVFIN
 seit O - APPR
 November O - NN
@@ -11944,7 +11944,7 @@ beifügen O - VVINF
 
 1 O - CARD
 Bundeswirtschaftsminister O - NN
-Sigmar B-PERSON - NE
+Sigmar B-PER - NE
 Gabriel I-PER - NE
 weilt O - VVFIN
 derzeit O - ADV
@@ -12035,7 +12035,7 @@ um O - PTKVZ
 Foto O - NN
 : O - $.
 
-Christian B-PERSON - NE
+Christian B-PER - NE
 Charisius I-PER - NE
 HSV B-ORG - NE
 - O - $(
@@ -12053,7 +12053,7 @@ Hinterlasse O - VVIMP
 einen O - ART
 Kommentar O - NN
 Von O - APPR
-Benjamin B-PERSON - NE
+Benjamin B-PER - NE
 Haller I-PER - NE
 , O - $,
 dpa B-ORG - NE
@@ -12399,7 +12399,7 @@ ing O - NE
 ( O - $(
 fh O - NE
 ) O - $(
-franziska B-PERSON - NE
+franziska B-PER - NE
 theissen I-PER - FM
 vor O - APPR
 5 O - CARD
@@ -12470,7 +12470,7 @@ zu O - PTKZU
 unterbieten O - VVINF
 . O - $.
 
-Thomas B-PERSON - NE
+Thomas B-PER - NE
 Schmidt I-PER - NE
 vor O - APPR
 2 O - CARD
@@ -12506,7 +12506,7 @@ einem O - ART
 Schlaglöcherweg O - NN
 . O - $.
 
-Gerard B-PERSON - NE
+Gerard B-PER - NE
 Schumann I-PER - NE
 vor O - APPR
 3 O - CARD
@@ -12586,14 +12586,14 @@ vom O - APPRART
 18:26 O - CARD
 Lufthansa B-ORG - NE
 - O - $(
-Flugbegleiter B-PERSON 5139 NN
+Flugbegleiter B-PER 5139 NN
 ziehen O - VVFIN
 Streik O - NN
 bis O - APPR
 Freitagnacht O - NN
 durch O - APPR
 Die O - ART
-Flugbegleiter B-PERSON 5143 NN
+Flugbegleiter B-PER 5143 NN
 der O - ART
 Lufthansa B-ORG - NE
 ziehen O - VVFIN
@@ -12633,7 +12633,7 @@ der O - ART
 Gewerkschaft O - NN
 Ufo B-ORG 5136 NE
 , O - $,
-Nicoley B-PERSON 5136 NE
+Nicoley B-PER 5136 NE
 Baublies I-PER 5136 NE
 . O - $.
 
@@ -12785,7 +12785,7 @@ für O - APPR
 setzte O - VVFIN
 sich O - PRF
 Vorstandschef B-POS - NN
-Herbert B-PERSON - NE
+Herbert B-PER - NE
 Haas I-PER - NE
 am O - APPRART
 Donnerstag O - NN
@@ -12925,7 +12925,7 @@ Januar O - NN
 in O - APPR
 Business O - FM
 von O - APPR
-Regine B-PERSON - NE
+Regine B-PER - NE
 Lettow I-PER - NE
 Neue O - ADJA
 Zielgruppe O - NN
@@ -13268,7 +13268,7 @@ März O - NN
 2016 O - CARD
 1 O - CARD
 Staatssekretär O - NN
-Roland B-PERSON - NE
+Roland B-PER - NE
 Krämer I-PER - NE
 ( O - $(
 Mitte O - NN
@@ -13284,7 +13284,7 @@ Ortsteil O - NN
 Eitzweiler O - NE
 an O - APPR
 Ortsvorsteher O - NN
-Gerald B-PERSON - NE
+Gerald B-PER - NE
 Linn I-PER - NE
 ( O - $(
 li O - NE
@@ -13293,7 +13293,7 @@ li O - NE
 ) O - $(
 und O - KON
 Bürgermeister O - NN
-Karl B-PERSON - NE
+Karl B-PER - NE
 Josef I-PER - NE
 Scheer I-PER - NE
 . O - $.
@@ -13339,7 +13339,7 @@ der O - ART
 Gemeinde O - NN
 Freisen O - NE
 , O - $,
-Karl B-PERSON - NE
+Karl B-PER - NE
 Josef I-PER - NE
 Scheer I-PER - NE
 . O - $.
@@ -13357,7 +13357,7 @@ Wirkung O - NN
 , O - $,
 betont O - VVFIN
 Staatssekretär O - NN
-Krämer B-PERSON - NE
+Krämer B-PER - NE
 . O - $.
 
 „ O - $(
@@ -13395,7 +13395,7 @@ gesenkt O - VVPP
 “ O - $(
 , O - $,
 erläutert O - VVFIN
-Krämer B-PERSON - NE
+Krämer B-PER - NE
 im O - APPRART
 Hinblick O - NN
 auf O - APPR
@@ -13827,7 +13827,7 @@ stellt O - VVFIN
 , O - $,
 unterstrich O - VVFIN
 Kreisvorsitzender B-POS 5152 NN
-Hermann B-PERSON 5152 NE
+Hermann B-PER 5152 NE
 Stadler I-PER 5152 NE
 bei O - APPR
 der O - ART
@@ -13842,7 +13842,7 @@ Ost I-ORG 5152 NN
 Dabei O - PROAV
 stellte O - VVFIN
 Vorsitzende O - NN
-Christa B-PERSON - NE
+Christa B-PER - NE
 Burzer I-PER - NE
 das O - ART
 Leitthema O - NN
@@ -14786,7 +14786,7 @@ sondern O - KON
 Journalismus O - NN
 : O - $.
 
-Matthias B-PERSON - NE
+Matthias B-PER - NE
 Dell I-PER - NE
 über O - APPR
 den O - ART
@@ -14885,7 +14885,7 @@ SR B-ORG - NE
 Redaktion O - NN
 : O - $.
 
-Christian B-PERSON - NE
+Christian B-PER - NE
 Bauer I-PER - NE
 ) O - $(
 der O - ART
@@ -14893,9 +14893,9 @@ nassforsch O - ADJD
 - O - $(
 dropsige O - ADJA
 Kommissar O - NN
-Stellbrink B-PERSON - NE
+Stellbrink B-PER - NE
 ( O - $(
-Devid B-PERSON - NE
+Devid B-PER - NE
 Striesow I-PER - NE
 ) O - $(
 so O - ADV
@@ -15134,7 +15134,7 @@ Mai O - NE
 ( O - $(
 Thailand O - NE
 ) O - $(
-Christian B-PERSON - NE
+Christian B-PER - NE
 Mihatsch I-PER - NE
 Der O - ART
 Ölpreis O - NN
@@ -15240,9 +15240,9 @@ seit O - APPR
 13.01.2016 O - FM
 17:08 O - CARD
 UhrVon O - NN
-Cay B-PERSON - NE
+Cay B-PER - NE
 Dobberke I-PER - NE
-Harald B-PERSON - NE
+Harald B-PER - NE
 Huth I-PER - NE
 hat O - VAFIN
 die O - ART
@@ -15319,7 +15319,7 @@ Tag O - NN
 , O - $,
 hat O - VAFIN
 Shoppingcenterspezialist O - NN
-Harald B-PERSON - NE
+Harald B-PER - NE
 Huth I-PER - NE
 einmal O - ADV
 gesagt O - VVPP
@@ -15607,7 +15607,7 @@ Tagebuch O - NN
 “ O - $(
 - O - $(
 von O - APPR
-Nikolai B-PERSON - NE
+Nikolai B-PER - NE
 Starikow I-PER - NE
 Felsen O - NE
 in O - APPR
@@ -15694,7 +15694,7 @@ Krieges O - NN
 , O - $,
 von O - APPR
 dem O - PRELS
-Medwedew B-PERSON - NE
+Medwedew B-PER - NE
 auf O - APPR
 der O - ART
 Münchener O - ADJA
@@ -15728,14 +15728,14 @@ haben O - VAFIN
 bereits O - ADV
 die O - ART
 Autoren O - NN
-Wolfgang B-PERSON - NE
+Wolfgang B-PER - NE
 Bittner I-PER - NE
 , O - $,
-Brigitte B-PERSON - NE
+Brigitte B-PER - NE
 Queck I-PER - NE
 oder O - KON
 auch O - ADV
-Peter B-PERSON - NE
+Peter B-PER - NE
 Strutynski I-PER - NE
 ( O - $(
 Hrsg O - NE
@@ -15936,7 +15936,7 @@ scheitern O - VVINF
 ? O - $.
 
 Landrat O - NN
-Walch B-PERSON - NE
+Walch B-PER - NE
 wehrt O - VVFIN
 … O - $.
 . O - $.
@@ -15948,11 +15948,11 @@ scheitern O - VVINF
 ? O - $.
 
 Landrat O - NN
-Walch B-PERSON - NE
+Walch B-PER - NE
 wehrt O - VVFIN
 ab O - PTKVZ
 von O - APPR
-Robert B-PERSON - NE
+Robert B-PER - NE
 Seifert I-PER - NE
 Artikel O - NN
 Artikel O - NN
@@ -15961,7 +15961,7 @@ Artikel O - NN
 104 O - CARD
 Traunsteins O - NE
 Landrat O - NN
-Siegfried B-PERSON - NE
+Siegfried B-PER - NE
 Walch I-PER - NE
 wehrt O - VVFIN
 sich O - PRF
@@ -15987,7 +15987,7 @@ Chiemgau B-ORG - NE
 Tourismus I-ORG - NN
 Traunsteins O - NE
 Landrat O - NN
-Siegfried B-PERSON - NE
+Siegfried B-PER - NE
 Walch I-PER - NE
 wehrt O - VVFIN
 sich O - PRF
@@ -16012,7 +16012,7 @@ Foto O - NN
 Chiemgau B-ORG - NE
 Tourismus I-ORG - NN
 Landrat O - NN
-Siegfried B-PERSON - NE
+Siegfried B-PER - NE
 Walch I-PER - NE
 ( O - $(
 CSU B-ORG - NE
@@ -16044,7 +16044,7 @@ Demnach O - PROAV
 habe O - VAFIN
 sein O - PPOSAT
 Amtskollege O - NN
-Wolfgang B-PERSON - NE
+Wolfgang B-PER - NE
 Berthaler I-PER - NE
 das O - ART
 Rosenheimer O - ADJA
@@ -16058,7 +16058,7 @@ in O - APPR
 einem O - ART
 Anruf O - NN
 in O - APPR
-Walchs B-PERSON - NE
+Walchs B-PER - NE
 Vorzimmer O - NN
 und O - KON
 tags O - ADV
@@ -16080,7 +16080,7 @@ bereits O - ADV
 abgeschlossen O - VVPP
 , O - $,
 verdeutlichte O - VVFIN
-Walch B-PERSON - NE
+Walch B-PER - NE
 . O - $.
 
 Trotz O - APPR
@@ -16170,7 +16170,7 @@ einem O - ART
 Gespräch O - NN
 mit O - APPR
 Finanzsenator O - NN
-Matthias B-PERSON - NE
+Matthias B-PER - NE
 Kollatz I-PER - NE
 - I-PER - $(
 Ahnen I-PER - NN
@@ -16186,7 +16186,7 @@ sagte O - VVFIN
 GEW B-ORG 5196 NE
 - O - $(
 Vorstandsmitglied B-POS 5196 NN
-Udo B-PERSON 5196 NE
+Udo B-PER 5196 NE
 Mertens I-PER 5196 NE
 am O - APPRART
 Mittwoch O - NN
@@ -16304,7 +16304,7 @@ Foto O - NN
 picture B-ORG - FM
 alliance I-ORG - FM
 / O - $(
-Sven B-PERSON - NE
+Sven B-PER - NE
 Simon I-PER - NE
 Fluggäste O - NN
 in O - APPR
@@ -16624,7 +16624,7 @@ an O - PTKVZ
 , O - $,
 sagt O - VVFIN
 Baudirektor O - NN
-Peter B-PERSON - NE
+Peter B-PER - NE
 Pesch I-PER - NE
 . O - $.
 
