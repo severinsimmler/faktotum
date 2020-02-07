@@ -46,7 +46,7 @@ class Baseline:
                 yield sentence
                 sentence = list()
 
-    def from_scratch(self):
+    def from_scratch(self, output: Union[str, Path]):
         train_sents = list(self._parse_data(Path(self.directory, self.train_file)))
         test_sents = list(self._parse_data(Path(self.directory, self.test_file)))
 
@@ -219,14 +219,14 @@ class Flair:
 
         return evaluate_labels(name, golds, preds)
 
-    def from_scratch(self):
+    def from_scratch(self, output: Union[str, Path]):
         corpus = self._load_corpus()
         tagger = self._train("from-scratch-model", corpus)
         metric = self._evaluate("from-scratch-model", tagger)
         print(metric)
         return metric
 
-    def vanilla(self, training_corpus: str = "germeval"):
+    def vanilla(self, output: Union[str, Path], training_corpus: str = "germeval"):
         data_dir = Path(Path(self.directory).parent, training_corpus)
         training = self._load_corpus(data_dir)
         tagger = self._train("vanilla-model", training)
@@ -234,7 +234,7 @@ class Flair:
         print(metric)
         return metric
 
-    def multi_corpus(self, first_corpus: str = "germeval"):
+    def multi_corpus(self, output: Union[str, Path], first_corpus: str = "germeval"):
         data_dir = Path(Path(self.directory).parent, first_corpus)
         first = self._load_corpus(data_dir)
         second = self._load_corpus()
@@ -257,7 +257,7 @@ class BERT:
             module_folder = Path(__file__).parent
             self.directory = Path(module_folder, "data", self.directory)
 
-    def fine_tune(self, model_name_or_path: str, epochs=2):
+    def fine_tune(self, model_name_or_path: str, output: Union[str, Path], epochs=2):
         module = Path(__file__).resolve().parent
         script = Path(module, "vendor", "ner.py")
         command = [
@@ -280,7 +280,7 @@ class BERT:
             "--per_gpu_train_batch_size",
             str(16),
             "--save_steps",
-            "500",
+            "50000000",
             "--seed",
             "23",
             "--do_train",
@@ -288,3 +288,77 @@ class BERT:
             "--do_predict",
         ]
         subprocess.check_call(command)
+
+
+def reproduce_numbers(corpus: str) -> None:
+    baseline = Baseline(
+        corpus, train_file="train.txt", dev_file="dev.txt", test_file="test.txt"
+    )
+    flair_ = Flair(
+        corpus, train_file="train.txt", dev_file="dev.txt", test_file="test.txt"
+    )
+    bert = BERT(
+        corpus, train_file="train.txt", dev_file="dev.txt", test_file="test.txt"
+    )
+
+    output = Path(f"{corpus}-models")
+
+    # Baseline
+    path = Path(output, "baseline")
+    baseline_stats = baseline.from_scratch(path)
+
+    # Flair
+    path = Path(output, "flair")
+    flair_stats = flair_.from_scratch(path)
+
+    path = Path(output, "flair-multicorpus")
+    if corpus in {"droc"}:
+        first_corpus = "litbank"
+    else:
+        first_corpus = "germeval"
+    flair_multi_stats = flair_.multi_corpus(path, first_corpus)
+
+    # BERT
+    path = Path(output, "bert-german")
+    bert_german_stats = BERT.fine_tune("bert-base-german-dbmdz-cased", path, epochs=2)
+
+    path = Path(output, "bert-multi")
+    bert_german_stats = BERT.fine_tune("bert-base-multilingual-cased", path, epochs=2)
+
+    path = Path(output, "bert-german-tuned")
+    if corpus in {"droc"}:
+        model_path = "/mnt/data/users/simmler/language-models/gutenberg/german"
+    else:
+        model_path = "/mnt/data/users/simmler/language-models/presse/german"
+    bert_german_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+
+    path = Path(output, "bert-multi-tuned")
+    if corpus in {"droc"}:
+        model_path = "/mnt/data/users/simmler/language-models/gutenberg/multi"
+    else:
+        model_path = "/mnt/data/users/simmler/language-models/presse/multi"
+    bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+
+    path = Path(output, "bert-multi-continued")
+    if corpus in {"droc"}:
+        model_path = "/mnt/data/users/simmler/ner-models/gutenberg/bert-multi-litbank"
+    else:
+        model_path = "/mnt/data/users/simmler/language-models/presse/bert-multi-germeval"
+    bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+
+    path = Path(output, "bert-multi-tuned-continued")
+    if corpus in {"droc"}:
+        model_path = "/mnt/data/users/simmler/ner-models/gutenberg/bert-tuned-multi-litbank"
+    else:
+        model_path = "/mnt/data/users/simmler/language-models/presse/bert-tuned-multi-germeval"
+    bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+
+
+    if corpus in {"smartdata"}:
+        path = Path(output, "bert-german-continued")
+        model_path = "/mnt/data/users/simmler/language-models/presse/bert-german-germeval"
+        bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+
+        path = Path(output, "bert-german-tuned-continued")
+        model_path = "/mnt/data/users/simmler/language-models/presse/bert-tuned-german-germeval"
+        bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
