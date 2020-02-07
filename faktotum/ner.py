@@ -61,9 +61,9 @@ class Baseline:
 
         y_pred = crf.predict(X_test)
 
-        joblib.dump(crf, "crf-baseline.joblib")
+        joblib.dump(crf, Path(output, "crf-baseline.joblib"))
 
-        with Path("prediction.json").open("w", encoding="utf-8") as file_:
+        with Path(output, "prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": y_test, "pred": y_pred}, file_, indent=2)
 
         metric = evaluate_labels("crf-baseline", y_test, y_pred)
@@ -78,7 +78,7 @@ class Baseline:
             "macro_accuracy": metric.macro_avg_accuracy(),
         }
 
-        with Path("results.json").open("w", encoding="utf-8") as file_:
+        with Path(output, "results.json").open("w", encoding="utf-8") as file_:
             json.dump(results, file_, indent=2)
         return metric
 
@@ -202,7 +202,7 @@ class Flair:
                 yield sentence
                 sentence = list()
 
-    def _evaluate(self, name: str, tagger: SequenceTagger):
+    def _evaluate(self, output: str, tagger: SequenceTagger):
         preds = list()
         golds = list()
         test = Path(self.directory, self.test_file)
@@ -214,17 +214,17 @@ class Flair:
             preds.append([t.get_tag("ner").value for t in s])
             golds.append([label for _, label in sentence])
 
-        with Path("prediction.json").open("w", encoding="utf-8") as file_:
+        with Path(output, "prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": golds, "pred": preds}, file_, indent=2)
 
         return evaluate_labels(name, golds, preds)
 
     def from_scratch(self, output: Union[str, Path]):
         corpus = self._load_corpus()
-        tagger = self._train("from-scratch-model", corpus)
-        metric = self._evaluate("from-scratch-model", tagger)
-        print(metric)
-        return metric
+        tagger = self._train(output, corpus)
+        #metric = self._evaluate(output, tagger)
+        #print(metric)
+        #return metric
 
     def vanilla(self, output: Union[str, Path], training_corpus: str = "germeval"):
         data_dir = Path(Path(self.directory).parent, training_corpus)
@@ -239,10 +239,10 @@ class Flair:
         first = self._load_corpus(data_dir)
         second = self._load_corpus()
         corpus = MultiCorpus([first, second])
-        tagger = self._train("multi-corpus-model", corpus)
-        metric = self._evaluate("multi-corpus-model", tagger)
-        print(metric)
-        return metric
+        tagger = self._train(output, corpus)
+        #metric = self._evaluate("multi-corpus-model", tagger)
+        #print(metric)
+        #return metric
 
 
 @dataclass
@@ -272,7 +272,7 @@ class BERT:
             "--model_name_or_path",
             model_name_or_path,
             "--output_dir",
-            "bert-fine-tuned",
+            str(output),
             "--max_seq_length",
             "128",
             "--num_train_epochs",
