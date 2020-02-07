@@ -302,6 +302,7 @@ def reproduce_numbers(corpus: str) -> None:
     )
 
     output = Path(f"{corpus}-models")
+    output.mkdir()
 
     # Baseline
     path = Path(output, "baseline")
