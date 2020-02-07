@@ -217,7 +217,7 @@ class Flair:
         with Path(output, "prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": golds, "pred": preds}, file_, indent=2)
 
-        return evaluate_labels(name, golds, preds)
+        return evaluate_labels("flair", golds, preds)
 
     def from_scratch(self, output: Union[str, Path]):
         corpus = self._load_corpus()
