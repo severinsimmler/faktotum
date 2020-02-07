@@ -302,6 +302,7 @@ def reproduce_numbers(corpus: str) -> None:
     )
 
     output = Path(f"{corpus}-models")
+    """
     output.mkdir(exist_ok=True)
 
     # Baseline
@@ -312,13 +313,17 @@ def reproduce_numbers(corpus: str) -> None:
     # Flair
     path = Path(output, "flair")
     flair_stats = flair_.from_scratch(path)
-
+    """
     path = Path(output, "flair-multicorpus")
     if corpus in {"droc"}:
         first_corpus = "litbank"
     else:
         first_corpus = "germeval"
-    flair_multi_stats = flair_.multi_corpus(path, first_corpus)
+    try:
+        flair_multi_stats = flair_.multi_corpus(path, first_corpus)
+    except:
+        pass
+
 
     # BERT
     path = Path(output, "bert-german")
