@@ -302,10 +302,11 @@ def reproduce_numbers(corpus: str) -> None:
     )
 
     output = Path(f"{corpus}-models")
-    output.mkdir()
+    output.mkdir(exist_ok=True)
 
     # Baseline
     path = Path(output, "baseline")
+    path.mkdir(exist_ok=True)
     baseline_stats = baseline.from_scratch(path)
 
     # Flair
