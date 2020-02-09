@@ -63,7 +63,7 @@ def kfold_ner(corpus: str, baseline=False):
         data_folder = Path(Path(__file__).parent, "data", corpus, "kfold", str(k))
         if baseline:
             baseline = Baseline(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
-            baseline.from_scratch()
+            baseline.from_scratch("kfold-evaluation")
         else:
             bert = BERT(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
             bert.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/german", "kfold-evaluation", epochs=1)
