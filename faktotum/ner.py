@@ -15,7 +15,7 @@ from flair.embeddings import PooledFlairEmbeddings
 from flair.models import SequenceTagger
 from flair.trainers import ModelTrainer
 
-from faktotum.evaluation import evaluate_labels
+from faktotum import evaluation
 
 
 @dataclass
@@ -66,7 +66,7 @@ class Baseline:
         with Path(output, "prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": y_test, "pred": y_pred}, file_, indent=2)
 
-        metric = evaluate_labels("crf-baseline", y_test, y_pred)
+        metric = evaluation.evaluate_labels("crf-baseline", y_test, y_pred)
         print(metric)
 
         results = {
@@ -217,7 +217,7 @@ class Flair:
         with Path(output, "prediction.json").open("w", encoding="utf-8") as file_:
             json.dump({"gold": golds, "pred": preds}, file_, indent=2)
 
-        return evaluate_labels("flair", golds, preds)
+        return evaluation.evaluate_labels("flair", golds, preds)
 
     def from_scratch(self, output: Union[str, Path]):
         corpus = self._load_corpus()
