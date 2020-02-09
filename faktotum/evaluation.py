@@ -66,7 +66,7 @@ def kfold_ner(corpus: str, baseline=False):
             baseline.from_scratch("kfold-evaluation")
         else:
             bert = BERT(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
-            bert.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/german", "kfold-evaluation", epochs=1)
+            bert.fine_tune("/mnt/data/users/simmler/ner-models/smartdata-models/bert-tuned-multi-germeval-continued-smartdata", "kfold-evaluation", epochs=1)
 
 
 def get_contingency_table(gold, pred1, pred2):
