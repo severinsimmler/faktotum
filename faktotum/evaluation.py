@@ -8,6 +8,7 @@ import sklearn.utils
 import statsmodels.stats.contingency_tables
 
 from faktotum.corpus import Token
+from faktotum.ner import BERT
 
 
 def bootstrap(dataset, modeling_function, evaluation_function, n_iterations=1000):
