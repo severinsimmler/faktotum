@@ -348,16 +348,15 @@ def reproduce_numbers(corpus: str) -> None:
         model_path = "/mnt/data/users/simmler/language-models/presse/multi"
     bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
-    """
     path = Path(output, "bert-multi-continued")
     litbank_path = Path(output, "bert-multi-litbank")
     lit.fine_tune("bert-base-multilingual-cased", litbank_path, epochs=1)
     bert_multi_tuned_stats = bert.fine_tune(litbank_path, path, epochs=2)
-
+    """
     path = Path(output, "bert-multi-tuned-continued")
-    litbank_path = Path(output, "bert-multi-litbank")
+    litbank_path = Path(output, "bert-tuned-multi-litbank")
     lit.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/multi", litbank_path, epochs=1)
-    bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
+    bert_multi_tuned_stats = bert.fine_tune(litbank_path, path, epochs=2)
 
 
     if corpus in {"smartdata"}:
