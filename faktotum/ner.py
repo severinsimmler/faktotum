@@ -327,45 +327,45 @@ def reproduce_numbers(corpus: str) -> None:
 
     # BERT
     path = Path(output, "bert-german")
-    bert_german_stats = BERT.fine_tune("bert-base-german-dbmdz-cased", path, epochs=2)
+    bert_german_stats = bert.fine_tune("bert-base-german-dbmdz-cased", path, epochs=2)
 
     path = Path(output, "bert-multi")
-    bert_german_stats = BERT.fine_tune("bert-base-multilingual-cased", path, epochs=2)
+    bert_german_stats = bert.fine_tune("bert-base-multilingual-cased", path, epochs=2)
 
     path = Path(output, "bert-german-tuned")
     if corpus in {"droc"}:
         model_path = "/mnt/data/users/simmler/language-models/gutenberg/german"
     else:
         model_path = "/mnt/data/users/simmler/language-models/presse/german"
-    bert_german_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+    bert_german_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
     path = Path(output, "bert-multi-tuned")
     if corpus in {"droc"}:
         model_path = "/mnt/data/users/simmler/language-models/gutenberg/multi"
     else:
         model_path = "/mnt/data/users/simmler/language-models/presse/multi"
-    bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+    bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
     path = Path(output, "bert-multi-continued")
     if corpus in {"droc"}:
         model_path = "/mnt/data/users/simmler/ner-models/gutenberg/bert-multi-litbank"
     else:
         model_path = "/mnt/data/users/simmler/language-models/presse/bert-multi-germeval"
-    bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+    bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
     path = Path(output, "bert-multi-tuned-continued")
     if corpus in {"droc"}:
         model_path = "/mnt/data/users/simmler/ner-models/gutenberg/bert-tuned-multi-litbank"
     else:
         model_path = "/mnt/data/users/simmler/language-models/presse/bert-tuned-multi-germeval"
-    bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+    bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
 
     if corpus in {"smartdata"}:
         path = Path(output, "bert-german-continued")
         model_path = "/mnt/data/users/simmler/language-models/presse/bert-german-germeval"
-        bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+        bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
         path = Path(output, "bert-german-tuned-continued")
         model_path = "/mnt/data/users/simmler/language-models/presse/bert-tuned-german-germeval"
-        bert_multi_tuned_stats = BERT.fine_tune(model_path, path, epochs=2)
+        bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
