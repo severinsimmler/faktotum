@@ -286,6 +286,7 @@ class BERT:
             "--do_train",
             "--do_eval",
             "--do_predict",
+            "--overwrite_cache"
         ]
         if overwrite_output_dir:
             command.append("--overwrite_output_dir")
