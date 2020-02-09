@@ -313,7 +313,7 @@ def reproduce_numbers(corpus: str) -> None:
     # Flair
     path = Path(output, "flair")
     flair_stats = flair_.from_scratch(path)
-    """
+
     path = Path(output, "flair-multicorpus")
     if corpus in {"droc"}:
         first_corpus = "litbank"
@@ -323,7 +323,7 @@ def reproduce_numbers(corpus: str) -> None:
         flair_multi_stats = flair_.multi_corpus(path, first_corpus)
     except:
         pass
-
+    """
 
     # BERT
     path = Path(output, "bert-german")
