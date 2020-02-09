@@ -60,7 +60,7 @@ def compare_models(gold, pred1, pred2, alpha=0.05):
 
 def kfold_ner(corpus: str):
     for k in range(10):
-        data_folder = Path(Path(__file__).parent, "data", corpus, "kfold", k)
+        data_folder = Path(Path(__file__).parent, "data", corpus, "kfold", str(k))
         bert = BERT(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
         bert.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/german", "kfold-evaluation")
 

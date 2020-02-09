@@ -255,10 +255,7 @@ class BERT:
     def __post_init__(self):
         if not Path(self.directory).exists():
             module_folder = Path(__file__).parent
-            if "kfold" in self.directory:
-                self.directory = Path(module_folder, "data", self.directory.split("-")[0], "kfold")
-            else:
-                self.directory = Path(module_folder, "data", self.directory)
+            self.directory = Path(module_folder, "data", self.directory)
 
     def fine_tune(self, model_name_or_path: str, output: Union[str, Path], epochs=2, overwrite_output_dir=True):
         module = Path(__file__).resolve().parent
