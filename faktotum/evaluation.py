@@ -9,7 +9,7 @@ import sklearn.utils
 import statsmodels.stats.contingency_tables
 
 from faktotum.corpus import Token
-from faktotum.ner import BERT
+from faktotum.ner import BERT, Baseline
 
 
 def bootstrap(dataset, modeling_function, evaluation_function, n_iterations=1000):
@@ -58,11 +58,15 @@ def compare_models(gold, pred1, pred2, alpha=0.05):
         print("Different proportions of errors (reject H0).")
         return True, result.pvalue
 
-def kfold_ner(corpus: str):
+def kfold_ner(corpus: str, baseline=False):
     for k in range(10):
         data_folder = Path(Path(__file__).parent, "data", corpus, "kfold", str(k))
-        bert = BERT(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
-        bert.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/german", "kfold-evaluation", epochs=1)
+        if baseline:
+            baseline = Baseline(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
+            baseline.from_scratch()
+        else:
+            bert = BERT(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
+            bert.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/german", "kfold-evaluation", epochs=1)
 
 
 def get_contingency_table(gold, pred1, pred2):

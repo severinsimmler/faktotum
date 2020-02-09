@@ -56,7 +56,7 @@ class Baseline:
         X_test = [self._sent2features(s) for s in test_sents]
         y_test = [self._sent2labels(s) for s in test_sents]
 
-        crf = sklearn_crfsuite.CRF(algorithm="l2sgd", verbose=True)
+        crf = sklearn_crfsuite.CRF(algorithm="l2sgd")
         crf.fit(X_train, y_train)
 
         y_pred = crf.predict(X_test)
