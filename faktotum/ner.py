@@ -300,6 +300,9 @@ def reproduce_numbers(corpus: str) -> None:
     bert = BERT(
         corpus, train_file="train.txt", dev_file="dev.txt", test_file="test.txt"
     )
+    lit = BERT(
+        "litbank", train_file="train.txt", dev_file="dev.txt", test_file="test.txt"
+    )
 
     output = Path(f"{corpus}-models")
     """
@@ -323,7 +326,6 @@ def reproduce_numbers(corpus: str) -> None:
         flair_multi_stats = flair_.multi_corpus(path, first_corpus)
     except:
         pass
-    """
 
     # BERT
     path = Path(output, "bert-german")
@@ -346,18 +348,15 @@ def reproduce_numbers(corpus: str) -> None:
         model_path = "/mnt/data/users/simmler/language-models/presse/multi"
     bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
+    """
     path = Path(output, "bert-multi-continued")
-    if corpus in {"droc"}:
-        model_path = "/mnt/data/users/simmler/ner-models/gutenberg/bert-multi-litbank"
-    else:
-        model_path = "/mnt/data/users/simmler/language-models/presse/bert-multi-germeval"
-    bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
+    litbank_path = Path(output, "bert-multi-litbank")
+    lit.fine_tune("bert-base-multilingual-cased", litbank_path, epochs=1)
+    bert_multi_tuned_stats = bert.fine_tune(litbank_path, path, epochs=2)
 
     path = Path(output, "bert-multi-tuned-continued")
-    if corpus in {"droc"}:
-        model_path = "/mnt/data/users/simmler/ner-models/gutenberg/bert-tuned-multi-litbank"
-    else:
-        model_path = "/mnt/data/users/simmler/language-models/presse/bert-tuned-multi-germeval"
+    litbank_path = Path(output, "bert-multi-litbank")
+    lit.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/multi", litbank_path, epochs=1)
     bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
 
