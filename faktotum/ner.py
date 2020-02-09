@@ -257,7 +257,7 @@ class BERT:
             module_folder = Path(__file__).parent
             self.directory = Path(module_folder, "data", self.directory)
 
-    def fine_tune(self, model_name_or_path: str, output: Union[str, Path], epochs=2):
+    def fine_tune(self, model_name_or_path: str, output: Union[str, Path], epochs=2, overwrite_output_dir=True):
         module = Path(__file__).resolve().parent
         script = Path(module, "vendor", "ner.py")
         command = [
@@ -287,6 +287,8 @@ class BERT:
             "--do_eval",
             "--do_predict",
         ]
+        if overwrite_output_dir:
+            command.append("--overwrite_output_dir")
         subprocess.check_call(command)
 
 
@@ -305,7 +307,7 @@ def reproduce_numbers(corpus: str) -> None:
     )
 
     output = Path(f"{corpus}-models")
-    """
+    
     output.mkdir(exist_ok=True)
 
     # Baseline
@@ -352,7 +354,7 @@ def reproduce_numbers(corpus: str) -> None:
     litbank_path = Path(output, "bert-multi-litbank")
     lit.fine_tune("bert-base-multilingual-cased", litbank_path, epochs=1)
     bert_multi_tuned_stats = bert.fine_tune(litbank_path, path, epochs=2)
-    """
+
     path = Path(output, "bert-multi-tuned-continued")
     litbank_path = Path(output, "bert-tuned-multi-litbank")
     lit.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/multi", litbank_path, epochs=1)
