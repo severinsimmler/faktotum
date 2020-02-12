@@ -879,6 +879,7 @@ da O - KOUS
 niemand O - PIS
 es O - PPER
 für O - APPR
+
 lebensfähig O - ADJD
 hielt O - VVFIN
 , O - $,
@@ -22460,6 +22461,7 @@ sah O - VVFIN
 sie O - PPER
 ja O - ADV
 immerfort O - ADV
+
 vor O - APPR
 sich O - PRF
 , O - $,
@@ -23562,6 +23564,7 @@ in O - APPR
 Geifer O - NN
 und O - KON
 in O - APPR
+
 Fäulnis O - NN
 stinkender O - ADJA
 Sümpfe O - NN
@@ -26937,6 +26940,7 @@ eine O - ART
 eklige O - ADJA
 und O - KON
 schmierige O - ADJA
+
 Sache O - NN
 um O - APPR
 das O - ART
@@ -32194,6 +32198,7 @@ aufsteigen O - VVINF
 würden O - VAFIN
 , O - $,
 mir O - PPER
+
 das O - ART
 Herz O - NN
 zerreißen O - VVFIN

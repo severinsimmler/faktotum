@@ -1099,6 +1099,7 @@ angezogen O - ADJD
 zusammenrinnen O - VVFIN
 und O - KON
 je O - ADV
+
 näher O - ADJD
 sie O - PPER
 sich O - PRF
@@ -11228,6 +11229,7 @@ machen O - VVINF
 , O - $,
 so O - ADV
 nennt O - VVFIN
+
 er O - PPER
 mich O - PPER
 seitdem O - PROAV
@@ -13131,6 +13133,7 @@ tragisch O - ADJD
 Ermattende O - ADJA
 , O - $,
 bald O - ADV
+
 das O - ART
 von O - APPR
 göttlichem O - ADJA
@@ -13341,6 +13344,7 @@ hesperischen O - ADJA
 das O - PDS
 sei O - VAFIN
 der O - ART
+
 Geist O - NN
 der O - ART
 Beobachtungen O - NN
@@ -65572,6 +65576,7 @@ angefangen O - VVPP
 , O - $,
 diese O - PDS
 meine O - PPOSAT
+
 Geschicht O - NN
 zu O - PTKZU
 entwerfen O - VVINF
@@ -90046,6 +90051,7 @@ jagdfreien O - ADJA
 Tieren O - NN
 , O - $,
 wie O - KOKOM
+
 Maulwürfe O - NN
 und O - KON
 Stachelschweine O - NN
@@ -92841,6 +92847,7 @@ den O - ART
 Geisterruf O - NN
 des O - ART
 Gartenhauses O - NN
+
 bestärkten O - VVFIN
 . O - $.
 
@@ -94158,6 +94165,7 @@ ihre O - PPOSAT
 lange O - ADJA
 Anwesenheit O - NN
 im O - APPRART
+
 Zählen O - NN
 der O - ART
 Minuten O - NN
@@ -101831,6 +101839,7 @@ welche O - PWAT
 Tollheit O - NN
 ... O - $.
 Nein O - PTKANT
+
 ! O - $.
 
 Und O - KON
@@ -102870,6 +102879,7 @@ neben O - APPR
 ihr O - PPER
 saß O - VVFIN
 vornübergebeugt O - ADJD
+
 ein O - ART
 Mann B-PER 32_79 NN
 und O - KON
@@ -127641,6 +127651,7 @@ lange O - ADJD
 unter O - APPR
 der O - ART
 Asche O - NN
+
 geglimmt O - VVPP
 hatte O - VAFIN
 , O - $,
@@ -127813,6 +127824,7 @@ Herrschaft O - NN
 gegen O - APPR
 jeden O - PIDAT
 Zwang O - NN
+
 erbittert O - VVFIN
 , O - $,
 alle O - PIDAT
@@ -127967,6 +127979,7 @@ daß O - KOUS
 er O - PPER
 , O - $,
 statt O - KOUI
+
 sich O - PRF
 geduldig O - ADJD
 schinden O - VVINF
@@ -129929,6 +129942,7 @@ edler O - ADJA
 Männer B-PER 43_281 NN
 , O - $,
 die O - PRELS
+
 das O - ART
 Unglück O - NN
 hatten O - VAFIN
@@ -131511,6 +131525,7 @@ kann O - VMFIN
 wen O - PWS
 kann O - VMFIN
 es O - PPER
+
 befremden O - VVINF
 , O - $,
 wenn O - KOUS
@@ -171195,6 +171210,7 @@ wo O - PWAV
 für O - APPR
 nunmehro O - ADV
 100 O - CARD
+
 Jahren O - NN
 die O - ART
 Stände O - NN
@@ -177298,6 +177314,7 @@ Glocken O - NN
 ward O - VAFIN
 der O - ART
 Winter O - NN
+
 verbrannt O - VVPP
 , O - $,
 der O - ART
@@ -183721,6 +183738,7 @@ Ton O - NN
 , O - $,
 – O - $(
 – O - $(
+
 Worte O - NN
 , O - $,
 die O - PRELS
@@ -202435,6 +202453,7 @@ ihn O - PPER
 mahnte O - VVFIN
 , O - $,
 daß O - KOUS
+
 schleunige O - ADJA
 Flucht O - NN
 heilsamer O - ADJD
@@ -203583,6 +203602,7 @@ hing O - VVFIN
 , O - $,
 und O - KON
 als O - KOUS
+
 Hausgenossin B-PER 63_237 NN
 ihr O - PPER
 stets O - ADV
@@ -203753,6 +203773,7 @@ allen O - PIDAT
 irrdischen O - ADJA
 Banden O - NN
 , O - $,
+
 in O - APPR
 unbekannte O - ADJA
 Regionen O - NN
@@ -205307,6 +205328,7 @@ immer O - ADV
 weinend O - ADJD
 , O - $,
 sich O - PRF
+
 bemühte O - VVFIN
 , O - $,
 an O - APPR
@@ -206683,6 +206705,7 @@ werde O - VAFIN
 ihn O - PPER
 öfterer O - ADJD
 zu O - PTKZU
+
 sehen O - VVINF
 . O - $.
 
@@ -223042,6 +223065,7 @@ Drohungen O - NN
 von O - APPR
 denen O - PRELS
 Niemand O - PIS
+
 begriff O - VVFIN
 , O - $,
 wem O - PWS
