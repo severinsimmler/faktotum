@@ -311,6 +311,7 @@ def reproduce_numbers(corpus: str) -> None:
     
     output.mkdir(exist_ok=True)
 
+    """
     # Baseline
     path = Path(output, "baseline")
     path.mkdir(exist_ok=True)
@@ -319,6 +320,7 @@ def reproduce_numbers(corpus: str) -> None:
     # BERT
     path = Path(output, "bert-german")
     bert_german_stats = bert.fine_tune("bert-base-german-dbmdz-cased", path, epochs=2)
+    """
 
     path = Path(output, "bert-multi")
     bert_german_stats = bert.fine_tune("bert-base-multilingual-cased", path, epochs=2)
