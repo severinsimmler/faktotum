@@ -74,7 +74,6 @@ def get_contingency_table(gold, pred1, pred2):
     s1 = list()
     s2 = list()
     for _g, _p1, _p2 in zip(gold, pred1, pred2):
-        assert len(_g) == len(_p1) == len(_p2)
         for g, p1, p2 in zip(_g, _p1, _p2):
             if isinstance(g, str):
                 if g != "O":
