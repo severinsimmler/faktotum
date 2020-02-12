@@ -316,20 +316,6 @@ def reproduce_numbers(corpus: str) -> None:
     path.mkdir(exist_ok=True)
     baseline_stats = baseline.from_scratch(path)
 
-    # Flair
-    path = Path(output, "flair")
-    flair_stats = flair_.from_scratch(path)
-
-    path = Path(output, "flair-multicorpus")
-    if corpus in {"droc"}:
-        first_corpus = "litbank"
-    else:
-        first_corpus = "germeval"
-    try:
-        flair_multi_stats = flair_.multi_corpus(path, first_corpus)
-    except:
-        pass
-
     # BERT
     path = Path(output, "bert-german")
     bert_german_stats = bert.fine_tune("bert-base-german-dbmdz-cased", path, epochs=2)
@@ -361,6 +347,19 @@ def reproduce_numbers(corpus: str) -> None:
     lit.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/multi", litbank_path, epochs=1)
     bert_multi_tuned_stats = bert.fine_tune(litbank_path, path, epochs=2)
 
+    # Flair
+    path = Path(output, "flair")
+    flair_stats = flair_.from_scratch(path)
+
+    path = Path(output, "flair-multicorpus")
+    if corpus in {"droc"}:
+        first_corpus = "litbank"
+    else:
+        first_corpus = "germeval"
+    try:
+        flair_multi_stats = flair_.multi_corpus(path, first_corpus)
+    except:
+        pass
 
     if corpus in {"smartdata"}:
         path = Path(output, "bert-german-continued")
