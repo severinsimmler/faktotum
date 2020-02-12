@@ -320,7 +320,6 @@ def reproduce_numbers(corpus: str) -> None:
     # BERT
     path = Path(output, "bert-german")
     bert_german_stats = bert.fine_tune("bert-base-german-dbmdz-cased", path, epochs=2)
-    """
 
     path = Path(output, "bert-multi")
     bert_german_stats = bert.fine_tune("bert-base-multilingual-cased", path, epochs=2)
@@ -339,6 +338,7 @@ def reproduce_numbers(corpus: str) -> None:
         model_path = "/mnt/data/users/simmler/language-models/presse/multi"
     bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
+    """
     path = Path(output, "bert-multi-continued")
     litbank_path = Path(output, "bert-multi-litbank")
     lit.fine_tune("bert-base-multilingual-cased", litbank_path, epochs=1)
