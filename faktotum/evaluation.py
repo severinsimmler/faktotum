@@ -58,6 +58,7 @@ def compare_models(gold, pred1, pred2, alpha=0.05):
         print("Different proportions of errors (reject H0).")
         return True, result.pvalue
 
+
 def kfold_ner(corpus: str, baseline=False):
     for k in range(10):
         data_folder = Path(Path(__file__).parent, "data", corpus, "kfold", str(k))
@@ -84,6 +85,11 @@ def get_contingency_table(gold, pred1, pred2):
                     if g == p2:
                         s2.append("agree")
                     elif g != p2:
+                        s2.append("disagree")
+                else:
+                    if p1 != "O":
+                        s1.append("disagree")
+                    if p2 != "O":
                         s2.append("disagree")
             else:
                 if g.label != "O":
