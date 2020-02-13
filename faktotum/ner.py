@@ -310,7 +310,7 @@ def reproduce_numbers(corpus: str) -> None:
     output = Path(f"{corpus}-models")
     
     output.mkdir(exist_ok=True)
-
+    """
     # Baseline
     path = Path(output, "baseline")
     path.mkdir(exist_ok=True)
@@ -350,7 +350,7 @@ def reproduce_numbers(corpus: str) -> None:
     # Flair
     path = Path(output, "flair")
     flair_stats = flair_.from_scratch(path)
-
+    """
     path = Path(output, "flair-multicorpus")
     if corpus in {"droc"}:
         first_corpus = "litbank"
