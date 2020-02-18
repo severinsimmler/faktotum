@@ -222,9 +222,9 @@ class Flair:
     def from_scratch(self, output: Union[str, Path]):
         corpus = self._load_corpus()
         tagger = self._train(output, corpus)
-        #metric = self._evaluate(output, tagger)
-        #print(metric)
-        #return metric
+        # metric = self._evaluate(output, tagger)
+        # print(metric)
+        # return metric
 
     def vanilla(self, output: Union[str, Path], training_corpus: str = "germeval"):
         data_dir = Path(Path(self.directory).parent, training_corpus)
@@ -240,9 +240,9 @@ class Flair:
         second = self._load_corpus()
         corpus = MultiCorpus([first, second])
         tagger = self._train(output, corpus)
-        #metric = self._evaluate("multi-corpus-model", tagger)
-        #print(metric)
-        #return metric
+        # metric = self._evaluate("multi-corpus-model", tagger)
+        # print(metric)
+        # return metric
 
 
 @dataclass
@@ -257,7 +257,13 @@ class BERT:
             module_folder = Path(__file__).parent
             self.directory = Path(module_folder, "data", self.directory)
 
-    def fine_tune(self, model_name_or_path: str, output: Union[str, Path], epochs=2, overwrite_output_dir=True):
+    def fine_tune(
+        self,
+        model_name_or_path: str,
+        output: Union[str, Path],
+        epochs=2,
+        overwrite_output_dir=True,
+    ):
         module = Path(__file__).resolve().parent
         script = Path(module, "vendor", "ner.py")
         command = [
@@ -286,7 +292,7 @@ class BERT:
             "--do_train",
             "--do_eval",
             "--do_predict",
-            "--overwrite_cache"
+            "--overwrite_cache",
         ]
         if overwrite_output_dir:
             command.append("--overwrite_output_dir")
@@ -308,7 +314,7 @@ def reproduce_numbers(corpus: str) -> None:
     )
 
     output = Path(f"{corpus}-models")
-    
+
     output.mkdir(exist_ok=True)
     """
     # Baseline
@@ -363,9 +369,13 @@ def reproduce_numbers(corpus: str) -> None:
 
     if corpus in {"smartdata"}:
         path = Path(output, "bert-german-continued")
-        model_path = "/mnt/data/users/simmler/language-models/presse/bert-german-germeval"
+        model_path = (
+            "/mnt/data/users/simmler/language-models/presse/bert-german-germeval"
+        )
         bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)
 
         path = Path(output, "bert-german-tuned-continued")
-        model_path = "/mnt/data/users/simmler/language-models/presse/bert-tuned-german-germeval"
+        model_path = (
+            "/mnt/data/users/simmler/language-models/presse/bert-tuned-german-germeval"
+        )
         bert_multi_tuned_stats = bert.fine_tune(model_path, path, epochs=2)

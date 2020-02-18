@@ -63,11 +63,25 @@ def kfold_ner(corpus: str, baseline=False):
     for k in range(10):
         data_folder = Path(Path(__file__).parent, "data", corpus, "kfold", str(k))
         if baseline:
-            baseline = Baseline(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
+            baseline = Baseline(
+                data_folder,
+                train_file="train.txt",
+                dev_file="dev.txt",
+                test_file="test.txt",
+            )
             baseline.from_scratch("kfold-evaluation")
         else:
-            bert = BERT(data_folder, train_file="train.txt", dev_file="dev.txt", test_file="test.txt")
-            bert.fine_tune("/mnt/data/users/simmler/language-models/gutenberg/german", "kfold-evaluation", epochs=2)
+            bert = BERT(
+                data_folder,
+                train_file="train.txt",
+                dev_file="dev.txt",
+                test_file="test.txt",
+            )
+            bert.fine_tune(
+                "/mnt/data/users/simmler/language-models/gutenberg/german",
+                "kfold-evaluation",
+                epochs=2,
+            )
 
 
 def get_contingency_table(gold, pred1, pred2):
