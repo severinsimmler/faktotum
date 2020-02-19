@@ -49,7 +49,7 @@ class EntityLinker:
         tp = 0
         fp = 0
         fn = 0
-
+        hard_to_disamiguate = list()
         for key, value in self.kb.items():
             # ignore entities occuring only once
             if len(value["context"]) > 1:
@@ -65,14 +65,17 @@ class EntityLinker:
                             for key, mention in mentions.items():
                                 if token[2] == key and token[0] in mention:
                                     tp += 1
+                                    break
                                 elif token[2] == key and token[0] not in mention:
                                     fn += 1
+                                    if sentence not in hard_to_disamiguate:
+                                        hard_to_disamiguate.append({"mention": token[0], "id": token[2], "index": sentence.index(token), "sentence": sentence})
                                 elif token[2] != key and token[0] in mention:
                                     fp += 1
 
         precision = self.precision(tp, fp)
         recall = self.recall(tp, fn)
-        return {"precision": precision, "recall": recall, "f1": self.f1(precision, recall)}
+        return {"precision": precision, "recall": recall, "f1": self.f1(precision, recall)}, hard_to_disamiguate
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:
