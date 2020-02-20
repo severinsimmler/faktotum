@@ -5,6 +5,8 @@ from sklearn.cluster import KMeans
 from sklearn import metrics
 from flair.embeddings import BertEmbeddings
 from flair.data import Sentence
+
+
 def classic_vectorization(mentions, model):
     for mention in mentions:
         try:
@@ -26,7 +28,7 @@ def bert_vectorization(mentions, model):
 def word2vec(modelpath, data):
     model = Word2Vec.load(modelpath)
     distinct_classes = set([mention["id"] for mention in data])
-    classes = dict(enumerate(distinct_classes))
+    classes = {c: i for i, c in enumerate(distinct_classes)}
     labels_true = list()
     vectors = list()
 
