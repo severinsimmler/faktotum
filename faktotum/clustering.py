@@ -15,6 +15,8 @@ from sklearn.cluster import KMeans
 
 logger = logging.getLogger("gensim")
 logger.setLevel(logging.ERROR)
+logger = logging.getLogger("transformers")
+logger.setLevel(logging.ERROR)
 
 TABLE_BEGIN = "\\begin{table}\n  \centering\n\\begin{tabular}{lllll}\n  \\toprule\n{} & Homogeneity & Completeness & V \\\\\n \\midrule"
 TABLE_END = "\\bottomrule\n  \\end{tabular}\n\\caption{Caption}\n\\end{table}"
@@ -282,6 +284,7 @@ def compare_approaches(data, model_directory, corpus):
 
     '''
     ###############################
+    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
     result = bert("bert-base-german-dbmdz-cased", data, add_adj=True)
     result["approach"] = "dBERT + ADJ"
