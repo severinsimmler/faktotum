@@ -287,7 +287,7 @@ def compare_approaches(data, model_directory, corpus):
 
     '''
     ###############################
-    logging.info("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    logging.info("start")
 
     result = bert("bert-base-german-dbmdz-cased", data, add_adj=True)
     result["approach"] = "dBERT + ADJ"
