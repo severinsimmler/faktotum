@@ -12,6 +12,10 @@ from sklearn.cluster import KMeans
 logger = logging.getLogger("gensim")
 logger.setLevel(logging.ERROR)
 
+TABLE_BEGIN = "\\begin{table}\n  \centering\n\\begin{tabular}{lllll}\n  \\toprule\n{} & Homogeneity & Completeness & V \\\\\n \\midrule"
+TABLE_END = "\\bottomrule\n  \\end{tabular}\n\\caption{Caption}\n\\end{table}"
+TABLE_ROW = "{approach} & {homogeneity} & {completeness} & {v} \\\\"
+
 
 def classic_vectorization(mentions, model, add_adj=False, add_per=False):
     for mention in mentions:
@@ -101,14 +105,10 @@ def bert(modelpath, data):
     )
     return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
 
-TABLE_BEGIN = "\\begin{table}\n  \centering\n\\begin{tabular}{lllll}\n  \\toprule\n{} & Homogeneity & Completeness & V \\\\\n \\midrule"
-TABLE_END = "\\bottomrule\n  \\end{tabular}\n\\caption{Caption}\n\\end{table}"
-TABLE_ROW = "{approach} & {homogeneity} & {completeness} & {v} \\\\"
-
-
 
 def compare_approaches(data, model_directory, corpus):
-    print(BEGIN_TABLE)
+    print(TABLE_BEGIN)
+
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     result = word2vec(str(path), data)
     result["approach"] = "CBOW\\textsubscript{w2v}"
@@ -158,9 +158,7 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "Skipgram\\textsubscript{ft} + ADJ"
     print(TABLE_ROW.format(**result))
 
-
     ###################
-
 
     print("CBOW Word2Vec + PER")
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
@@ -253,3 +251,4 @@ def compare_approaches(data, model_directory, corpus):
 
     # TODO: stacked
     # TODO: BERT mit explizitem Kontext
+    print(TABLE_END)
