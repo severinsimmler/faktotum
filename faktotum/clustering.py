@@ -65,7 +65,11 @@ def word2vec(modelpath, data, add_adj=False, add_per=False):
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
-    return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
+    return {
+        "homogeneity": round(homogeneity * 100, 2),
+        "completeness": round(completeness * 100, 2),
+        "v": round(v * 100, 2),
+    }
 
 
 def fasttext(modelpath, data, add_adj=False, add_per=False):
@@ -84,7 +88,11 @@ def fasttext(modelpath, data, add_adj=False, add_per=False):
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
-    return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
+    return {
+        "homogeneity": round(homogeneity * 100, 2),
+        "completeness": round(completeness * 100, 2),
+        "v": round(v * 100, 2),
+    }
 
 
 def bert(modelpath, data):
@@ -103,7 +111,11 @@ def bert(modelpath, data):
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
-    return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
+    return {
+        "homogeneity": round(homogeneity * 100, 2),
+        "completeness": round(completeness * 100, 2),
+        "v": round(v * 100, 2),
+    }
 
 
 def compare_approaches(data, model_directory, corpus):
