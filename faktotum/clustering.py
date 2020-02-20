@@ -33,11 +33,11 @@ def word2vec(modelpath, data):
     vectors = list()
 
     for i, vector in classic_vectorization(data, model):
-        labels_true.append(classes[i])
+        labels_true.append(i)
         vectors.append(vector)
 
     X = np.array(values)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
+    labels_pred = KMeans(n_clusters=len(distinct_classes), random_state=23).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(labels_true, labels_pred)
     return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
 
