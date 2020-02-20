@@ -186,7 +186,7 @@ def compare_approaches(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_per=True)
-    result["approach"] = "Skipgram\\textsubscript{ft}} + PER"
+    result["approach"] = "Skipgram\\textsubscript{ft} + PER"
     print(TABLE_ROW.format(**result))
 
     #######################
