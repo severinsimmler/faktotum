@@ -148,6 +148,7 @@ def stacked(bert_path, classic_path, data):
         labels_true.append(classes[i])
         vector = np.concatenate((bert_vector, classic_vector))
         vectors.append(vector)
+        print(vector)
 
     X = np.array(vectors)
     labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
