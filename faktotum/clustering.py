@@ -45,12 +45,21 @@ def classic_vectorization(mentions, model, add_adj=False, add_per=False):
         yield mention["id"], vector
 
 
-def bert_vectorization(mentions, model):
+def bert_vectorization(mentions, model, add_adj=False, add_per=False):
     for mention in mentions:
         text = " ".join([token[0] for token in mention["sentence"]])
         sentence = Sentence(text, use_tokenizer=False)
         model.embed(sentence)
-        yield mention["id"], sentence[mention["index"]].get_embedding().numpy()
+        vector = sentence[mention["index"]].get_embedding().numpy()
+        if add_adj:
+            adjs = [mention["sentence"].index(token[0]) for token in mention["sentence"] if token[3] == "ADJA"]
+            for adj in adjs:
+                vector = vector + sentence[adj].get_embedding().numpy()
+        if add_per:
+            pers = [mention["sentence"].index(token[0]) for token in mention["sentence"] if "PER" in token[1]]
+            for per in pers:
+                vector = vector + sentence[per].get_embedding().numpy()
+        yield mention["id"], vector
 
 
 def word2vec(modelpath, data, add_adj=False, add_per=False):
@@ -99,15 +108,40 @@ def fasttext(modelpath, data, add_adj=False, add_per=False):
     }
 
 
-def bert(modelpath, data):
+def bert(modelpath, data, add_adj=False, add_per=False):
     model = BertEmbeddings(modelpath)
     distinct_classes = set([mention["id"] for mention in data])
     classes = {c: i for i, c in enumerate(distinct_classes)}
     labels_true = list()
     vectors = list()
 
-    for i, vector in bert_vectorization(data, model):
+    for i, vector in bert_vectorization(data, model, add_adj, add_per):
         labels_true.append(classes[i])
+        vectors.append(vector)
+
+    X = np.array(vectors)
+    labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
+    homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
+        labels_true, labels_pred
+    )
+    return {
+        "homogeneity": round(homogeneity * 100, 2),
+        "completeness": round(completeness * 100, 2),
+        "v": round(v * 100, 2),
+    }
+
+
+def stacked(bert_path, classic_path, data, add_adj=False, add_per=False):
+    bert = BertEmbeddings(bert_path)
+    classic = FastText.load(classic_path)
+    distinct_classes = set([mention["id"] for mention in data])
+    classes = {c: i for i, c in enumerate(distinct_classes)}
+    labels_true = list()
+    vectors = list()
+
+    for i, bert_vector, classic_vector in zip(bert_vectorization(data, model, add_adj, add_per), classic_vectorization(data, model, add_adj, add_per)):
+        labels_true.append(classes[i])
+        vector = np.concatenate((bert_vector, classic_vector))
         vectors.append(vector)
 
     X = np.array(vectors)
@@ -205,7 +239,7 @@ def compare_approaches(data, model_directory, corpus):
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "CBOW\\textsubscript{ft} + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    print(TABLE_ROW.format(**result))path
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_adj=True, add_per=True)
@@ -222,13 +256,12 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "mBERT"
     print(TABLE_ROW.format(**result))
 
-    '''
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
         raise NotImplementedError
     result = bert(path, data)
-    result["approach"] = "dBERT\\superscript{$\\ddagger$}"
+    result["approach"] = "dBERT\\textsuperscript{$\\ddagger$}"
     print(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
@@ -236,7 +269,7 @@ def compare_approaches(data, model_directory, corpus):
     else:
         raise NotImplementedError
     result = bert(path, data)
-    result["approach"] = "mBERT\\superscript{$\\ddagger$}"
+    result["approach"] = "mBERT\\textsuperscript{$\\ddagger$}"
     print(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
@@ -247,6 +280,132 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "glBERT"
     print(TABLE_ROW.format(**result))
 
-    # TODO: stacked
-    # TODO: BERT mit explizitem Kontext
+    '''
+    ###############################
+
+    result = bert("bert-base-german-dbmdz-cased", data, add_adj=True)
+    result["approach"] = "dBERT + ADJ"
+    print(TABLE_ROW.format(**result))
+
+    result = bert("bert-base-multilingual-cased", data, add_adj=True)
+    result["approach"] = "mBERT + ADJ"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_adj=True)
+    result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + ADJ"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_adj=True)
+    result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + ADJ"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "german-literary-bert"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_adj=True)
+    result["approach"] = "glBERT + ADJ"
+    print(TABLE_ROW.format(**result))
+
+    #################################
+
+    result = bert("bert-base-german-dbmdz-cased", data, add_per=True)
+    result["approach"] = "dBERT + PER"
+    print(TABLE_ROW.format(**result))
+
+    result = bert("bert-base-multilingual-cased", data, add_per=True)
+    result["approach"] = "mBERT + PER"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_per=True)
+    result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + PER"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_per=True)
+    result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + PER"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "german-literary-bert"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_per=True)
+    result["approach"] = "glBERT + PER"
+    print(TABLE_ROW.format(**result))
+
+
+    ###########################################
+
+    result = bert("bert-base-german-dbmdz-cased", data, add_adj=True, add_per=True)
+    result["approach"] = "dBERT + ADJ + PER"
+    print(TABLE_ROW.format(**result))
+
+    result = bert("bert-base-multilingual-cased", data, add_adj=True, add_per=True)
+    result["approach"] = "mBERT + ADJ + PER"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_adj=True, add_per=True)
+    result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + ADJ + PER"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_adj=True, add_per=True)
+    result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + ADJ + PER"
+    print(TABLE_ROW.format(**result))
+
+    if corpus == "gutenberg":
+        path = str(Path(model_directory, "german-literary-bert"))
+    else:
+        raise NotImplementedError
+    result = bert(path, data, add_adj=True, add_per=True)
+    result["approach"] = "glBERT + ADJ + PER"
+    print(TABLE_ROW.format(**result))
+
+    #############################
+    '''
+    if corpus == "gutenberg":
+        bert_path = str(Path(model_directory, "german-literary-bert"))
+        classic_path = Path(model_directory, f"{corpus}????????????????")
+    else:
+        raise NotImplementedError
+    result = stacked(bert_path, classic_path, data)
+    result["approach"] = "???? + ????"
+    print(TABLE_ROW.format(**result))
+
+    result = stacked(bert_path, classic_path, data, add_adj=True)
+    result["approach"] = "???? + ???? + ADJ"
+    print(TABLE_ROW.format(**result))
+
+    result = stacked(bert_path, classic_path, data, add_per=True)
+    result["approach"] = "???? + ???? + PER"
+    print(TABLE_ROW.format(**result))
+
+    result = stacked(bert_path, classic_path, data, add_adj=True, add_per=True)
+    result["approach"] = "???? + ???? + ADJ + PER"
+    print(TABLE_ROW.format(**result))
+    '''
+
     print(TABLE_END)
