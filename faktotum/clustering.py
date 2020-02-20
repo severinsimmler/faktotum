@@ -36,7 +36,7 @@ def word2vec(modelpath, data):
         labels_true.append(classes[i])
         vectors.append(vector)
 
-    X = np.array(values)
+    X = np.array(vectors)
     labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(labels_true, labels_pred)
     return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
@@ -52,7 +52,7 @@ def fasttext(modelpath, data):
         labels_true.append(classes[i])
         vectors.append(vector)
 
-    X = np.array(values)
+    X = np.array(vectors)
     labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(labels_true, labels_pred)
     return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
@@ -70,7 +70,7 @@ def bert(modelpath, data):
         labels_true.append(classes[i])
         vectors.append(vector)
 
-    X = np.array(values)
+    X = np.array(vectors)
     labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(labels_true, labels_pred)
     return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
