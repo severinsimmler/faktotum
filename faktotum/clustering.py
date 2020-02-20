@@ -52,11 +52,11 @@ def bert_vectorization(mentions, model, add_adj=False, add_per=False):
         model.embed(sentence)
         vector = sentence[mention["index"]].get_embedding().numpy()
         if add_adj:
-            adjs = [mention["sentence"].index(token[0]) for token in mention["sentence"] if token[3] == "ADJA"]
+            adjs = [i for i, token in enumerate(mention["sentence"]) if token[3] == "ADJA"]
             for adj in adjs:
                 vector = vector + sentence[adj].get_embedding().numpy()
         if add_per:
-            pers = [mention["sentence"].index(token[0]) for token in mention["sentence"] if "PER" in token[1]]
+            pers = [i for i, token in enumerate(mention["sentence"]) if "PER" in token[1]]
             for per in pers:
                 vector = vector + sentence[per].get_embedding().numpy()
         yield mention["id"], vector
