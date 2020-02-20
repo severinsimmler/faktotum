@@ -18,6 +18,9 @@ logger.setLevel(logging.ERROR)
 logger = logging.getLogger("transformers")
 logger.setLevel(logging.ERROR)
 
+logging.basicConfig(format="%(message)s", level=logging.INFO)
+
+
 TABLE_BEGIN = "\\begin{table}\n  \centering\n\\begin{tabular}{lllll}\n  \\toprule\n{} & Homogeneity & Completeness & V \\\\\n \\midrule"
 TABLE_END = "\\bottomrule\n  \\end{tabular}\n\\caption{Caption}\n\\end{table}"
 TABLE_ROW = "{approach} & {homogeneity} & {completeness} & {v} \\\\"
@@ -160,103 +163,103 @@ def stacked(bert_path, classic_path, data, add_adj=False, add_per=False):
 
 def compare_approaches(data, model_directory, corpus):
     '''
-    print(TABLE_BEGIN)
+    logging.info(TABLE_BEGIN)
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     result = word2vec(str(path), data)
     result["approach"] = "CBOW\\textsubscript{w2v}"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     result = word2vec(str(path), data)
     result["approach"] = "Skipgram\\textsubscript{w2v}"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data)
     result["approach"] = "CBOW\\textsubscript{ft}"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data)
     result["approach"] = "Skipgram\\textsubscript{ft}"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     ##########
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     result = word2vec(str(path), data, add_adj=True)
     result["approach"] = "CBOW\\textsubscript{w2v} + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     result = word2vec(str(path), data, add_adj=True)
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data, add_adj=True)
     result["approach"] = "CBOW\\textsubscript{ft} + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_adj=True)
     result["approach"] = "Skipgram\\textsubscript{ft} + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     ###################
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     result = word2vec(str(path), data, add_per=True)
     result["approach"] = "CBOW\\textsubscript{w2v} + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     result = word2vec(str(path), data, add_per=True)
     result["approach"] = "Skipgram\\textsubscript{w2v} + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data, add_per=True)
     result["approach"] = "CBOW\\textsubscript{ft} + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_per=True)
     result["approach"] = "Skipgram\\textsubscript{ft} + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     #######################
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     result = word2vec(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "CBOW\\textsubscript{w2v} + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     result = word2vec(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "CBOW\\textsubscript{ft} + ADJ + PER"
-    print(TABLE_ROW.format(**result))path
+    logging.info(TABLE_ROW.format(**result))path
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     #################
 
     result = bert("bert-base-german-dbmdz-cased", data)
     result["approach"] = "dBERT"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     result = bert("bert-base-multilingual-cased", data)
     result["approach"] = "mBERT"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
@@ -264,7 +267,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data)
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$}"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
@@ -272,7 +275,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data)
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$}"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "german-literary-bert"))
@@ -280,19 +283,19 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data)
     result["approach"] = "glBERT"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     '''
     ###############################
-    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    logging.info("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
     result = bert("bert-base-german-dbmdz-cased", data, add_adj=True)
     result["approach"] = "dBERT + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     result = bert("bert-base-multilingual-cased", data, add_adj=True)
     result["approach"] = "mBERT + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
@@ -300,7 +303,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_adj=True)
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
@@ -308,7 +311,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_adj=True)
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "german-literary-bert"))
@@ -316,17 +319,17 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_adj=True)
     result["approach"] = "glBERT + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     #################################
 
     result = bert("bert-base-german-dbmdz-cased", data, add_per=True)
     result["approach"] = "dBERT + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     result = bert("bert-base-multilingual-cased", data, add_per=True)
     result["approach"] = "mBERT + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
@@ -334,7 +337,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_per=True)
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
@@ -342,7 +345,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_per=True)
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "german-literary-bert"))
@@ -350,18 +353,18 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_per=True)
     result["approach"] = "glBERT + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
 
     ###########################################
 
     result = bert("bert-base-german-dbmdz-cased", data, add_adj=True, add_per=True)
     result["approach"] = "dBERT + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     result = bert("bert-base-multilingual-cased", data, add_adj=True, add_per=True)
     result["approach"] = "mBERT + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
@@ -369,7 +372,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_adj=True, add_per=True)
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
@@ -377,7 +380,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_adj=True, add_per=True)
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
         path = str(Path(model_directory, "german-literary-bert"))
@@ -385,7 +388,7 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = bert(path, data, add_adj=True, add_per=True)
     result["approach"] = "glBERT + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     #############################
     '''
@@ -396,19 +399,19 @@ def compare_approaches(data, model_directory, corpus):
         raise NotImplementedError
     result = stacked(bert_path, classic_path, data)
     result["approach"] = "???? + ????"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     result = stacked(bert_path, classic_path, data, add_adj=True)
     result["approach"] = "???? + ???? + ADJ"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     result = stacked(bert_path, classic_path, data, add_per=True)
     result["approach"] = "???? + ???? + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
 
     result = stacked(bert_path, classic_path, data, add_adj=True, add_per=True)
     result["approach"] = "???? + ???? + ADJ + PER"
-    print(TABLE_ROW.format(**result))
+    logging.info(TABLE_ROW.format(**result))
     '''
 
-    print(TABLE_END)
+    logging.info(TABLE_END)
