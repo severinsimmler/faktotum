@@ -69,13 +69,27 @@ class EntityLinker:
                                 elif token[2] == key and token[0] not in mention:
                                     fn += 1
                                     if sentence not in hard_to_disamiguate:
-                                        hard_to_disamiguate.append({"mention": token[0], "id": token[2], "index": sentence.index(token), "sentence": sentence})
+                                        hard_to_disamiguate.append(
+                                            {
+                                                "mention": token[0],
+                                                "id": token[2],
+                                                "index": sentence.index(token),
+                                                "sentence": sentence,
+                                            }
+                                        )
                                 elif token[2] != key and token[0] in mention:
                                     fp += 1
 
         precision = self.precision(tp, fp)
         recall = self.recall(tp, fn)
-        return {"precision": precision, "recall": recall, "f1": self.f1(precision, recall)}, hard_to_disamiguate
+        return (
+            {
+                "precision": precision,
+                "recall": recall,
+                "f1": self.f1(precision, recall),
+            },
+            hard_to_disamiguate,
+        )
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:
