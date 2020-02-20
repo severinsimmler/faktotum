@@ -123,6 +123,7 @@ def bert(modelpath, data):
 
 
 def compare_approaches(data, model_directory, corpus):
+    '''
     print(TABLE_BEGIN)
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
@@ -221,8 +222,9 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "mBERT"
     print(TABLE_ROW.format(**result))
 
+    '''
     if corpus == "gutenberg":
-        path = Path(model_directory, "bert-german-literary-adapted")
+        path = str(Path(model_directory, "bert-german-literary-adapted"))
     else:
         raise NotImplementedError
     result = bert(path, data)
@@ -230,7 +232,7 @@ def compare_approaches(data, model_directory, corpus):
     print(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
-        path = Path(model_directory, "bert-multi-literary-adapted")
+        path = str(Path(model_directory, "bert-multi-literary-adapted"))
     else:
         raise NotImplementedError
     result = bert(path, data)
@@ -238,7 +240,7 @@ def compare_approaches(data, model_directory, corpus):
     print(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
-        path = Path(model_directory, "german-literary-bert")
+        path = str(Path(model_directory, "german-literary-bert"))
     else:
         raise NotImplementedError
     result = bert(path, data)
