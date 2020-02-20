@@ -1,4 +1,4 @@
-# faktotum information from unstructured text
+# Extract information from unstructured text
 
 ## Getting started
 
