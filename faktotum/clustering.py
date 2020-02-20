@@ -136,15 +136,15 @@ def bert(modelpath, data, add_adj=False, add_per=False):
     }
 
 
-def stacked(bert_path, classic_path, data, add_adj=False, add_per=False):
-    bert = BertEmbeddings(bert_path)
-    classic = FastText.load(classic_path)
+def stacked(bert_path, classic_path, data):
+    bert_path = BertEmbeddings(bert_path)
+    classic_path = FastText.load(classic_path)
     distinct_classes = set([mention["id"] for mention in data])
     classes = {c: i for i, c in enumerate(distinct_classes)}
     labels_true = list()
     vectors = list()
 
-    for i, bert_vector, classic_vector in zip(bert_vectorization(data, model, add_adj, add_per), classic_vectorization(data, model, add_adj, add_per)):
+    for i, bert_vector, classic_vector in zip(bert_vectorization(data, bert_model, add_adj=False, add_per=False), classic_vectorization(data, classic_model, add_adj=True, add_per=True)):
         labels_true.append(classes[i])
         vector = np.concatenate((bert_vector, classic_vector))
         vectors.append(vector)
