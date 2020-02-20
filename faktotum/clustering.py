@@ -285,9 +285,8 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "glBERT"
     logging.info(TABLE_ROW.format(**result))
 
-    '''
+    
     ###############################
-    logging.info("start")
 
     result = bert("bert-base-german-dbmdz-cased", data, add_adj=True)
     result["approach"] = "dBERT + ADJ"
@@ -393,25 +392,12 @@ def compare_approaches(data, model_directory, corpus):
     #############################
     '''
     if corpus == "gutenberg":
-        bert_path = str(Path(model_directory, "german-literary-bert"))
-        classic_path = Path(model_directory, f"{corpus}????????????????")
+        bert_path = "bert-base-multilingual-cased"
+        classic_path = Path(model_directory, f"{corpus}-cbow.fasttext")
     else:
         raise NotImplementedError
     result = stacked(bert_path, classic_path, data)
-    result["approach"] = "???? + ????"
+    result["approach"] = "mBERT + CBOW\\textsubscript{ft} + ADJ + PER"
     logging.info(TABLE_ROW.format(**result))
-
-    result = stacked(bert_path, classic_path, data, add_adj=True)
-    result["approach"] = "???? + ???? + ADJ"
-    logging.info(TABLE_ROW.format(**result))
-
-    result = stacked(bert_path, classic_path, data, add_per=True)
-    result["approach"] = "???? + ???? + PER"
-    logging.info(TABLE_ROW.format(**result))
-
-    result = stacked(bert_path, classic_path, data, add_adj=True, add_per=True)
-    result["approach"] = "???? + ???? + ADJ + PER"
-    logging.info(TABLE_ROW.format(**result))
-    '''
 
     logging.info(TABLE_END)
