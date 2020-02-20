@@ -42,7 +42,7 @@ def bert_vectorization(mentions, model):
         text = " ".join([token[0] for token in mention["sentence"]])
         sentence = Sentence(text, use_tokenizer=False)
         model.embed(sentence)
-        yield mention["id"], sentence[mention["index"]].get_embedding().numpy()
+        yield mention["id"], sentence[mention["index"]].get_embedding().cpu().numpy()
 
 
 def word2vec(modelpath, data, add_adj=False, add_per=False):
@@ -101,41 +101,62 @@ def bert(modelpath, data):
     )
     return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
 
+TABLE_BEGIN = "\\begin{table}\n  \centering\n\\begin{tabular}{lllll}\n  \\toprule\n{} & Homogeneity & Completeness & V \\\\\n \\midrule"
+TABLE_END = "\\bottomrule\n  \\end{tabular}\n\\caption{Caption}\n\\end{table}"
+TABLE_ROW = "{approach} & {homogeneity} & {completeness} & {v} \\\\"
+
+
 
 def compare_approaches(data, model_directory, corpus):
-    print("CBOW Word2Vec")
+    print(BEGIN_TABLE)
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
-    print(word2vec(str(path), data), "\n")
+    result = word2vec(str(path), data)
+    result["approach"] = "CBOW\\textsubscript{w2v}"
+    print(TABLE_ROW.format(**result))
 
     print("Skipgram Word2Vec")
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
-    print(word2vec(str(path), data), "\n")
+    result = word2vec(str(path), data)
+    result["approach"] = "Skipgram\\textsubscript{w2v}"
+    print(TABLE_ROW.format(**result))
 
     print("CBOW FastText")
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
-    print(fasttext(str(path), data), "\n")
+    result = fasttext(str(path), data)
+    result["approach"] = "CBOW\\textsubscript{ft}"
+    print(TABLE_ROW.format(**result))
 
     print("Skipgram FastText")
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
-    print(fasttext(str(path), data), "\n")
+    result = fasttext(str(path), data)
+    result["approach"] = "Skipgram\\textsubscript{ft}"
+    print(TABLE_ROW.format(**result))
 
     ##########
 
     print("CBOW Word2Vec + ADJ")
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
-    print(word2vec(str(path), data, add_adj=True), "\n")
+    result = word2vec(str(path), data, add_adj=True)
+    result["approach"] = "CBOW\\textsubscript{w2v} + ADJ"
+    print(TABLE_ROW.format(**result))
 
     print("Skipgram Word2Vec + ADJ")
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
-    print(word2vec(str(path), data, add_adj=True), "\n")
+    result = word2vec(str(path), data, add_adj=True)
+    result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ"
+    print(TABLE_ROW.format(**result))
 
     print("CBOW FastText + ADJ")
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
-    print(fasttext(str(path), data, add_adj=True), "\n")
+    result = fasttext(str(path), data, add_adj=True)
+    result["approach"] = "CBOW\\textsubscript{ft} + ADJ"
+    print(TABLE_ROW.format(**result))
 
     print("Skipgram FastText + ADJ")
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
-    print(fasttext(str(path), data, add_adj=True), "\n")
+    result = fasttext(str(path), data, add_adj=True)
+    result["approach"] = "Skipgram\\textsubscript{ft} + ADJ"
+    print(TABLE_ROW.format(**result))
 
 
     ###################
@@ -143,66 +164,92 @@ def compare_approaches(data, model_directory, corpus):
 
     print("CBOW Word2Vec + PER")
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
-    print(word2vec(str(path), data, add_per=True), "\n")
+    result = word2vec(str(path), data, add_per=True)
+    result["approach"] = "CBOW\\textsubscript{w2v} + PER"
+    print(TABLE_ROW.format(**result))
 
     print("Skipgram Word2Vec + PER")
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
-    print(word2vec(str(path), data, add_per=True), "\n")
+    result = word2vec(str(path), data, add_per=True)
+    result["approach"] = "Skipgram\\textsubscript{w2v} + PER"
+    print(TABLE_ROW.format(**result))
 
     print("CBOW FastText + PER")
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
-    print(fasttext(str(path), data, add_per=True), "\n")
+    result = fasttext(str(path), data, add_per=True)
+    result["approach"] = "CBOW\\textsubscript{ft} + PER"
+    print(TABLE_ROW.format(**result))
 
     print("Skipgram FastText + PER")
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
-    print(fasttext(str(path), data, add_per=True), "\n")
+    result = fasttext(str(path), data, add_per=True)
+    result["approach"] = "Skipgram\\textsubscript{ft}} + PER"
+    print(TABLE_ROW.format(**result))
 
     #######################
 
     print("CBOW Word2Vec + ADJ + PER")
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
-    print(word2vec(str(path), data, add_adj=True, add_per=True), "\n")
+    result = word2vec(str(path), data, add_adj=True, add_per=True)
+    result["approach"] = "CBOW\\textsubscript{w2v} + ADJ + PER"
+    print(TABLE_ROW.format(**result))
 
     print("Skipgram Word2Vec + ADJ + PER")
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
-    print(word2vec(str(path), data, add_adj=True, add_per=True), "\n")
+    result = word2vec(str(path), data, add_adj=True, add_per=True)
+    result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ + PER"
+    print(TABLE_ROW.format(**result))
 
     print("CBOW FastText + ADJ + PER")
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
-    print(fasttext(str(path), data, add_adj=True, add_per=True), "\n")
+    result = fasttext(str(path), data, add_adj=True, add_per=True)
+    result["approach"] = "CBOW\\textsubscript{ft} + ADJ + PER"
+    print(TABLE_ROW.format(**result))
 
     print("Skipgram FastText + ADJ + PER")
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
-    print(fasttext(str(path), data, add_adj=True, add_per=True), "\n")
+    result = fasttext(str(path), data, add_adj=True, add_per=True)
+    result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ + PER"
+    print(TABLE_ROW.format(**result))
 
     #################
 
     print("German vanilla BERT")
-    print(bert("bert-base-german-dbmdz-cased", data), "\n")
+    result = bert("bert-base-german-dbmdz-cased", data)
+    result["approach"] = "dBERT"
+    print(TABLE_ROW.format(**result))
 
     print("Multi vanilla BERT")
-    print(bert("bert-base-multilingual-cased", data), "\n")
+    result = bert("bert-base-multilingual-cased", data)
+    result["approach"] = "mBERT"
+    print(TABLE_ROW.format(**result))
 
     print("Adapted German BERT")
     if corpus == "gutenberg":
         path = Path(model_directory, "bert-german-literary-adapted")
     else:
         raise NotImplementedError
-    print(bert(path, data), "\n")
+    result = bert(path, data)
+    result["approach"] = "dBERT\\superscript{$\\ddagger$}"
+    print(TABLE_ROW.format(**result))
 
     print("Adapted Multi BERT")
     if corpus == "gutenberg":
         path = Path(model_directory, "bert-multi-literary-adapted")
     else:
         raise NotImplementedError
-    print(bert(path, data), "\n")
+    result = bert(path, data)
+    result["approach"] = "mBERT\\superscript{$\\ddagger$}"
+    print(TABLE_ROW.format(**result))
 
     print("German NER trained BERT")
     if corpus == "gutenberg":
         path = Path(model_directory, "german-literary-bert")
     else:
         raise NotImplementedError
-    print(bert(path, data), "\n")
+    result = bert(path, data)
+    result["approach"] = "glBERT"
+    print(TABLE_ROW.format(**result))
 
     # TODO: stacked
     # TODO: BERT mit explizitem Kontext
