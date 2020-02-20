@@ -1,4 +1,4 @@
-from gensim.models.fasttext import fasttext
+from gensim.models.fasttext import FastText
 from gensim.models import Word2Vec
 import numpy as np
 from sklearn.cluster import KMeans
