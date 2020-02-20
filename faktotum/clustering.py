@@ -96,39 +96,39 @@ def bert(modelpath, data):
     return {"homogeneity": homogeneity, "completeness": completeness, "v": v}
 
 
-def compare_approaches(data, model_directory):
+def compare_approaches(data, model_directory, corpus):
     print("CBOW Word2Vec")
-    path = Path(model_directory, "cbow-gutenberg.word2vec")
+    path = Path(model_directory, f"{corpus}-cbow.word2vec")
     print(word2vec(str(path), data), "\n")
 
     print("Skipgram Word2Vec")
-    path = Path(model_directory, "skipgram-gutenberg.word2vec")
+    path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     print(word2vec(str(path), data), "\n")
 
     print("CBOW FastText")
-    path = Path(model_directory, "cbow-gutenberg.fasttext")
+    path = Path(model_directory, f"{corpus}-cbow.fasttext")
     print(fasttext(str(path), data), "\n")
 
     print("Skipgram FastText")
-    path = Path(model_directory, "skipgram-gutenberg.fasttext")
+    path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     print(fasttext(str(path), data), "\n")
 
     ##########
 
     print("CBOW Word2Vec + ADJ")
-    path = Path(model_directory, "cbow.word2vec")
+    path = Path(model_directory, f"{corpus}-cbow.word2vec")
     print(word2vec(str(path), data, add_adj=True), "\n")
 
     print("Skipgram Word2Vec + ADJ")
-    path = Path(model_directory, "skipgram.word2vec")
+    path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     print(word2vec(str(path), data, add_adj=True), "\n")
 
     print("CBOW FastText + ADJ")
-    path = Path(model_directory, "cbow.fasttext")
+    path = Path(model_directory, f"{corpus}-cbow.fasttext")
     print(fasttext(str(path), data, add_adj=True), "\n")
 
     print("Skipgram FastText + ADJ")
-    path = Path(model_directory, "skipgram.fasttext")
+    path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     print(fasttext(str(path), data, add_adj=True), "\n")
 
 
@@ -136,37 +136,37 @@ def compare_approaches(data, model_directory):
 
 
     print("CBOW Word2Vec + PER")
-    path = Path(model_directory, "cbow.word2vec")
+    path = Path(model_directory, f"{corpus}-cbow.word2vec")
     print(word2vec(str(path), data, add_per=True), "\n")
 
     print("Skipgram Word2Vec + PER")
-    path = Path(model_directory, "skipgram.word2vec")
+    path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     print(word2vec(str(path), data, add_per=True), "\n")
 
     print("CBOW FastText + PER")
-    path = Path(model_directory, "cbow.fasttext")
+    path = Path(model_directory, f"{corpus}-cbow.fasttext")
     print(fasttext(str(path), data, add_per=True), "\n")
 
     print("Skipgram FastText + PER")
-    path = Path(model_directory, "skipgram.fasttext")
+    path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     print(fasttext(str(path), data, add_per=True), "\n")
 
     #######################
 
     print("CBOW Word2Vec + ADJ + PER")
-    path = Path(model_directory, "cbow.word2vec")
+    path = Path(model_directory, f"{corpus}-cbow.word2vec")
     print(word2vec(str(path), data, add_adj=True, add_per=True), "\n")
 
     print("Skipgram Word2Vec + ADJ + PER")
-    path = Path(model_directory, "skipgram.word2vec")
+    path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     print(word2vec(str(path), data, add_adj=True, add_per=True), "\n")
 
     print("CBOW FastText + ADJ + PER")
-    path = Path(model_directory, "cbow.fasttext")
+    path = Path(model_directory, f"{corpus}-cbow.fasttext")
     print(fasttext(str(path), data, add_adj=True, add_per=True), "\n")
 
     print("Skipgram FastText + ADJ + PER")
-    path = Path(model_directory, "skipgram.fasttext")
+    path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     print(fasttext(str(path), data, add_adj=True, add_per=True), "\n")
 
     #################
@@ -178,15 +178,24 @@ def compare_approaches(data, model_directory):
     print(bert("bert-base-multilingual-cased", data), "\n")
 
     print("Adapted German BERT")
-    path = Path(model_directory, "bert-german-literary-adapted")
+    if corpus == "gutenberg":
+        path = Path(model_directory, "bert-german-literary-adapted")
+    else:
+        raise NotImplementedError
     print(bert(path, data), "\n")
 
     print("Adapted Multi BERT")
-    path = Path(model_directory, "bert-multi-literary-adapted")
+    if corpus == "gutenberg":
+        path = Path(model_directory, "bert-multi-literary-adapted")
+    else:
+        raise NotImplementedError
     print(bert(path, data), "\n")
 
     print("German NER trained BERT")
-    path = Path(model_directory, "german-literary-bert")
+    if corpus == "gutenberg":
+        path = Path(model_directory, "german-literary-bert")
+    else:
+        raise NotImplementedError
     print(bert(path, data), "\n")
 
     # TODO: stacked
