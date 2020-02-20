@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 
 import numpy as np
@@ -7,6 +8,9 @@ from gensim.models import Word2Vec
 from gensim.models.fasttext import FastText
 from sklearn import metrics
 from sklearn.cluster import KMeans
+
+logger = logging.getLogger("gensim")
+logger.setLevel(logging.ERROR)
 
 
 def classic_vectorization(mentions, model, add_adj=False, add_per=False):
