@@ -224,7 +224,7 @@ def compare_approaches(data, model_directory, corpus):
 
     '''
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "bert-german-literary-adapted"))
+        path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
         raise NotImplementedError
     result = bert(path, data)
@@ -232,7 +232,7 @@ def compare_approaches(data, model_directory, corpus):
     print(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "bert-multi-literary-adapted"))
+        path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
         raise NotImplementedError
     result = bert(path, data)
