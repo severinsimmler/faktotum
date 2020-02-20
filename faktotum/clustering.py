@@ -126,19 +126,16 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "CBOW\\textsubscript{w2v}"
     print(TABLE_ROW.format(**result))
 
-    print("Skipgram Word2Vec")
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     result = word2vec(str(path), data)
     result["approach"] = "Skipgram\\textsubscript{w2v}"
     print(TABLE_ROW.format(**result))
 
-    print("CBOW FastText")
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data)
     result["approach"] = "CBOW\\textsubscript{ft}"
     print(TABLE_ROW.format(**result))
 
-    print("Skipgram FastText")
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data)
     result["approach"] = "Skipgram\\textsubscript{ft}"
@@ -146,25 +143,21 @@ def compare_approaches(data, model_directory, corpus):
 
     ##########
 
-    print("CBOW Word2Vec + ADJ")
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     result = word2vec(str(path), data, add_adj=True)
     result["approach"] = "CBOW\\textsubscript{w2v} + ADJ"
     print(TABLE_ROW.format(**result))
 
-    print("Skipgram Word2Vec + ADJ")
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     result = word2vec(str(path), data, add_adj=True)
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ"
     print(TABLE_ROW.format(**result))
 
-    print("CBOW FastText + ADJ")
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data, add_adj=True)
     result["approach"] = "CBOW\\textsubscript{ft} + ADJ"
     print(TABLE_ROW.format(**result))
 
-    print("Skipgram FastText + ADJ")
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_adj=True)
     result["approach"] = "Skipgram\\textsubscript{ft} + ADJ"
@@ -172,25 +165,21 @@ def compare_approaches(data, model_directory, corpus):
 
     ###################
 
-    print("CBOW Word2Vec + PER")
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     result = word2vec(str(path), data, add_per=True)
     result["approach"] = "CBOW\\textsubscript{w2v} + PER"
     print(TABLE_ROW.format(**result))
 
-    print("Skipgram Word2Vec + PER")
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     result = word2vec(str(path), data, add_per=True)
     result["approach"] = "Skipgram\\textsubscript{w2v} + PER"
     print(TABLE_ROW.format(**result))
 
-    print("CBOW FastText + PER")
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data, add_per=True)
     result["approach"] = "CBOW\\textsubscript{ft} + PER"
     print(TABLE_ROW.format(**result))
 
-    print("Skipgram FastText + PER")
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_per=True)
     result["approach"] = "Skipgram\\textsubscript{ft}} + PER"
@@ -198,25 +187,21 @@ def compare_approaches(data, model_directory, corpus):
 
     #######################
 
-    print("CBOW Word2Vec + ADJ + PER")
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     result = word2vec(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "CBOW\\textsubscript{w2v} + ADJ + PER"
     print(TABLE_ROW.format(**result))
 
-    print("Skipgram Word2Vec + ADJ + PER")
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     result = word2vec(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ + PER"
     print(TABLE_ROW.format(**result))
 
-    print("CBOW FastText + ADJ + PER")
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "CBOW\\textsubscript{ft} + ADJ + PER"
     print(TABLE_ROW.format(**result))
 
-    print("Skipgram FastText + ADJ + PER")
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ + PER"
@@ -224,17 +209,14 @@ def compare_approaches(data, model_directory, corpus):
 
     #################
 
-    print("German vanilla BERT")
     result = bert("bert-base-german-dbmdz-cased", data)
     result["approach"] = "dBERT"
     print(TABLE_ROW.format(**result))
 
-    print("Multi vanilla BERT")
     result = bert("bert-base-multilingual-cased", data)
     result["approach"] = "mBERT"
     print(TABLE_ROW.format(**result))
 
-    print("Adapted German BERT")
     if corpus == "gutenberg":
         path = Path(model_directory, "bert-german-literary-adapted")
     else:
@@ -243,7 +225,6 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "dBERT\\superscript{$\\ddagger$}"
     print(TABLE_ROW.format(**result))
 
-    print("Adapted Multi BERT")
     if corpus == "gutenberg":
         path = Path(model_directory, "bert-multi-literary-adapted")
     else:
@@ -252,7 +233,6 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "mBERT\\superscript{$\\ddagger$}"
     print(TABLE_ROW.format(**result))
 
-    print("German NER trained BERT")
     if corpus == "gutenberg":
         path = Path(model_directory, "german-literary-bert")
     else:
