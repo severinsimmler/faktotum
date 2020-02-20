@@ -1,6 +1,10 @@
 import logging
 from pathlib import Path
 
+import flair
+import torch
+
+flair.device = torch.device("cpu")
 import numpy as np
 from flair.data import Sentence
 from flair.embeddings import BertEmbeddings
@@ -46,7 +50,7 @@ def bert_vectorization(mentions, model):
         text = " ".join([token[0] for token in mention["sentence"]])
         sentence = Sentence(text, use_tokenizer=False)
         model.embed(sentence)
-        yield mention["id"], sentence[mention["index"]].get_embedding().cpu().numpy()
+        yield mention["id"], sentence[mention["index"]].get_embedding().numpy()
 
 
 def word2vec(modelpath, data, add_adj=False, add_per=False):
