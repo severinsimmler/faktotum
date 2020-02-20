@@ -144,7 +144,7 @@ def stacked(bert_path, classic_path, data):
     labels_true = list()
     vectors = list()
 
-    for i, bert_vector, classic_vector in zip(bert_vectorization(data, bert_model, add_adj=False, add_per=False), classic_vectorization(data, classic_model, add_adj=True, add_per=True)):
+    for (i, bert_vector), (_, classic_vector) in zip(bert_vectorization(data, bert_model, add_adj=False, add_per=False), classic_vectorization(data, classic_model, add_adj=True, add_per=True)):
         labels_true.append(classes[i])
         vector = np.concatenate((bert_vector, classic_vector))
         vectors.append(vector)
