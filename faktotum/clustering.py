@@ -57,11 +57,15 @@ def bert_vectorization(mentions, model, add_adj=False, add_per=False):
         model.embed(sentence)
         vector = sentence[mention["index"]].get_embedding().numpy()
         if add_adj:
-            adjs = [i for i, token in enumerate(mention["sentence"]) if token[3] == "ADJA"]
+            adjs = [
+                i for i, token in enumerate(mention["sentence"]) if token[3] == "ADJA"
+            ]
             for adj in adjs:
                 vector = vector + sentence[adj].get_embedding().numpy()
         if add_per:
-            pers = [i for i, token in enumerate(mention["sentence"]) if "PER" in token[1]]
+            pers = [
+                i for i, token in enumerate(mention["sentence"]) if "PER" in token[1]
+            ]
             for per in pers:
                 vector = vector + sentence[per].get_embedding().numpy()
         yield mention["id"], vector
@@ -144,11 +148,13 @@ def stacked(bert_path, classic_path, data):
     labels_true = list()
     vectors = list()
 
-    for (i, bert_vector), (_, classic_vector) in zip(bert_vectorization(data, bert_model, add_adj=False, add_per=False), classic_vectorization(data, classic_model, add_adj=True, add_per=True)):
+    for (i, bert_vector), (_, classic_vector) in zip(
+        bert_vectorization(data, bert_model, add_adj=False, add_per=False),
+        classic_vectorization(data, classic_model, add_adj=True, add_per=True),
+    ):
         labels_true.append(classes[i])
         vector = np.concatenate((bert_vector, classic_vector))
         vectors.append(vector)
-        print(vector)
 
     X = np.array(vectors)
     labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
@@ -163,7 +169,7 @@ def stacked(bert_path, classic_path, data):
 
 
 def compare_approaches(data, model_directory, corpus):
-    '''
+    """
     logging.info(TABLE_BEGIN)
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
@@ -391,7 +397,7 @@ def compare_approaches(data, model_directory, corpus):
     logging.info(TABLE_ROW.format(**result))
 
     #############################
-    '''
+    """
     if corpus == "gutenberg":
         bert_path = "bert-base-multilingual-cased"
         classic_path = Path(model_directory, f"{corpus}-cbow.fasttext")
