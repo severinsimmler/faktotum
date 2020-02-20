@@ -169,7 +169,6 @@ def stacked(bert_path, classic_path, data):
 
 
 def compare_approaches(data, model_directory, corpus):
-    """
     logging.info(TABLE_BEGIN)
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
@@ -292,7 +291,6 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "glBERT"
     logging.info(TABLE_ROW.format(**result))
 
-    
     ###############################
 
     result = bert("bert-base-german-dbmdz-cased", data, add_adj=True)
@@ -361,7 +359,6 @@ def compare_approaches(data, model_directory, corpus):
     result["approach"] = "glBERT + PER"
     logging.info(TABLE_ROW.format(**result))
 
-
     ###########################################
 
     result = bert("bert-base-german-dbmdz-cased", data, add_adj=True, add_per=True)
@@ -397,7 +394,7 @@ def compare_approaches(data, model_directory, corpus):
     logging.info(TABLE_ROW.format(**result))
 
     #############################
-    """
+
     if corpus == "gutenberg":
         bert_path = "bert-base-multilingual-cased"
         classic_path = Path(model_directory, f"{corpus}-cbow.fasttext")
