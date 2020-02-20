@@ -396,7 +396,7 @@ def compare_approaches(data, model_directory, corpus):
         classic_path = Path(model_directory, f"{corpus}-cbow.fasttext")
     else:
         raise NotImplementedError
-    result = stacked(bert_path, classic_path, data)
+    result = stacked(bert_path, str(classic_path), data)
     result["approach"] = "mBERT + CBOW\\textsubscript{ft} + ADJ + PER"
     logging.info(TABLE_ROW.format(**result))
 
