@@ -137,8 +137,8 @@ def bert(modelpath, data, add_adj=False, add_per=False):
 
 
 def stacked(bert_path, classic_path, data):
-    bert_path = BertEmbeddings(bert_path)
-    classic_path = FastText.load(classic_path)
+    bert_model = BertEmbeddings(bert_path)
+    classic_model = FastText.load(classic_path)
     distinct_classes = set([mention["id"] for mention in data])
     classes = {c: i for i, c in enumerate(distinct_classes)}
     labels_true = list()
