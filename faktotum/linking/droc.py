@@ -1,7 +1,7 @@
 from pathlib import Path
 from collections import defaultdict
-from collections import defaultdict
 import json
+import re
 
 
 class EntityLinker:
@@ -89,13 +89,24 @@ class EntityLinker:
                                         fp += 1
             elif self.corpus == "smartdata":
                 for sentence in self.dataset:
-                    entity = defaultdict(list)
-                    for token in sentence:
-                        if token[-1].startswith("Q"):
-                            entity[token[-1]].append(token[0])
+                    entity = dict()
+                    boundray = "[START]"
+                    ent = list()
+                    last = "?"
+                    i_ = 9999999999999
+                    for i, token in enumerate(sentence):
+                        if token[1].startswith("B") and token[-1].startswith("Q"):
+                            ent = [token[0]]
+                            last = token[-1]
+                        elif token[1].startswith("I") and token[-1].startswith("Q") and i - 1 == i_:
+                            ent.append(token[0])
+                            last = token[-1]
+                        else:
+                            if ent:
+                                text = re.sub(r'\s+([?.!"])', r'\1', " ".join(ent))
+                                entity[text] = last
 
-                    for identifier, tokens in entity.items():
-                        text = " ".join(tokens)
+                    for text, identifier in entity.items():
                         matches = defaultdict(list)
                         for key, value in self.kb.items():
                             if text in value["MENTIONS"]:
