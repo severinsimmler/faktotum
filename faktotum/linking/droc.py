@@ -2,7 +2,7 @@ from pathlib import Path
 from collections import defaultdict
 import json
 import re
-
+import tqdm
 
 class EntityLinker:
     def __init__(self, corpus: str, kb_dir: str):
@@ -106,7 +106,7 @@ class EntityLinker:
                                 text = re.sub(r'\s+([?.!"])', r'\1', " ".join(ent))
                                 entity[text] = last
                         i_ = i
-                    for text, identifier in entity.items():
+                    for text, identifier in tqdm.tqdm(entity.items()):
                         matches = defaultdict(list)
                         for key, value in self.kb.items():
                             if text in value["MENTIONS"]:
