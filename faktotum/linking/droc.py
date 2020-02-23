@@ -87,7 +87,7 @@ class EntityLinker:
                                             )
                                     elif token[2] != key and token[0] in mention:
                                         fp += 1
-            elif corpus == "smartdata":
+            elif self.corpus == "smartdata":
                 for sentence in self.dataset:
                     entity = defaultdict(list)
                     for token in sentence:
