@@ -87,37 +87,36 @@ class EntityLinker:
                                             )
                                     elif token[2] != key and token[0] in mention:
                                         fp += 1
-            elif self.corpus == "smartdata":
-                for sentence in self.dataset:
-                    entity = dict()
-                    boundray = "[START]"
-                    ent = list()
-                    last = "?"
-                    i_ = 9999999999999
-                    for i, token in enumerate(sentence):
-                        if token[1].startswith("B") and token[-1].startswith("Q"):
-                            ent = [token[0]]
-                            last = token[-1]
-                        elif token[1].startswith("I") and token[-1].startswith("Q") and i - 1 == i_:
-                            ent.append(token[0])
-                            last = token[-1]
-                        else:
-                            if ent:
-                                text = re.sub(r'\s+([?.!"])', r'\1', " ".join(ent))
-                                entity[text] = last
-                        i_ = i
-                    for text, identifier in entity.items():
-                        matches = defaultdict(list)
-                        for key, value in self.kb.items():
-                            if text in value["MENTIONS"]:
-                                matches[text].append(key)
-                                if identifier == key:
-                                    tp += 1
-                                elif identifier != key:
-                                    fp += 1
-                        if len(matches[text]) == 0:
-                            fn += 1
-                            print(text)
+        if self.corpus == "smartdata":
+            for sentence in self.dataset:
+                entity = dict()
+                boundray = "[START]"
+                ent = list()
+                last = "?"
+                i_ = 9999999999999
+                for i, token in enumerate(sentence):
+                    if token[1].startswith("B") and token[-1].startswith("Q"):
+                        ent = [token[0]]
+                        last = token[-1]
+                    elif token[1].startswith("I") and token[-1].startswith("Q") and i - 1 == i_:
+                        ent.append(token[0])
+                        last = token[-1]
+                    else:
+                        if ent:
+                            text = re.sub(r'\s+([?.!"])', r'\1', " ".join(ent))
+                            entity[text] = last
+                    i_ = i
+                for text, identifier in entity.items():
+                    matches = defaultdict(list)
+                    for key, value in self.kb.items():
+                        if text in value["MENTIONS"]:
+                            matches[text].append(key)
+                            if identifier == key:
+                                tp += 1
+                            elif identifier != key:
+                                fp += 1
+                    if len(matches[text]) == 0:
+                        fn += 1
 
         precision = self.precision(tp, fp)
         recall = self.recall(tp, fn)
