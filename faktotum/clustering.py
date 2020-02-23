@@ -250,7 +250,7 @@ def compare_approaches(data, model_directory, corpus):
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     result = fasttext(str(path), data, add_adj=True, add_per=True)
     result["approach"] = "CBOW\\textsubscript{ft} + ADJ + PER"
-    logging.info(TABLE_ROW.format(**result))path
+    logging.info(TABLE_ROW.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     result = fasttext(str(path), data, add_adj=True, add_per=True)
