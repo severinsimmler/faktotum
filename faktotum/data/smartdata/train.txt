@@ -7964,11 +7964,11 @@ Cuxhaven O - NE
 17.02.16 O - FM
 DGAP B-ORG - NE Q879172
 - I-ORG - $( Q879172
-News I-ORG - FM
+News I-ORG - FM Q879172
 : O - $.
 
 Energiekontor B-ORG - NN Q1341306
-AG I-ORG - NN
+AG I-ORG - NN Q1341306
 / O - $(
 Schlagwort O - NN
 ( O - $(
@@ -7978,7 +7978,7 @@ e O - FM
 
 Sonstiges O - ADJA
 Energiekontor B-ORG - NN Q1341306
-AG I-ORG - NN
+AG I-ORG - NN Q1341306
 : O - $.
 
 Startschuss O - NN
@@ -8010,7 +8010,7 @@ Landkreis O - NN
 Cuxhaven O - NE
 Die O - ART
 Energiekontor B-ORG - NN Q1341306
-AG I-ORG - NN
+AG I-ORG - NN Q1341306
 beginnt O - VVFIN
 nach O - APPR
 erfolgreicher O - ADJA
@@ -8035,8 +8035,8 @@ Februar O - NN
 Nachdem O - KOUS
 die O - ART
 Energiekontor B-ORG - NN Q1341306
-- I-ORG - $(
-Gruppe I-ORG - NN
+- I-ORG - $( Q1341306
+Gruppe I-ORG - NN Q1341306
 Ende O - NN
 letzten O - ADJA
 Jahres O - NN
