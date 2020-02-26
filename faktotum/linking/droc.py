@@ -111,11 +111,13 @@ class EntityLinker:
                     i_ = i
                 for text, identifier in entity.items():
                     matches = defaultdict(list)
+                    success = False
                     for key, value in self.kb.items():
                         if text in value["MENTIONS"]:
                             matches[text].append(key)
                             if identifier["id"] == key:
                                 tp += 1
+                                success = True
                                 break
                             elif identifier["id"] != key:
                                 fp += 1
@@ -130,7 +132,15 @@ class EntityLinker:
                                                 }
                                             )
                     elif len(matches[text]) > 1:
-                        print(text)
+                        hard_to_disamiguate.append(
+                                                {
+                                                    "mention": text,
+                                                    "id": identifier["id"],
+                                                    "index": identifier["indices"],
+                                                    "sentence": sentence,
+                                                }
+                                            )
+                    elif not success:
                         hard_to_disamiguate.append(
                                                 {
                                                     "mention": text,
