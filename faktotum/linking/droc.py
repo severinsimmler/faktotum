@@ -98,7 +98,7 @@ class EntityLinker:
                 for i, token in enumerate(sentence):
                     if token[1].startswith("B") and token[-1].startswith("Q"):
                         ent = [token[0]]
-                        indices.append(i)
+                        indices = [sentence.index(token)]
                         last = token[-1]
                     elif token[1].startswith("I") and token[-1].startswith("Q") and i - 1 == i_:
                         ent.append(token[0])
