@@ -412,7 +412,9 @@ def compare_approaches_local(data, model_directory, corpus):
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     results = list()
     for doc in data:
-        results.append(word2vec(str(path), data))
+        result = word2vec(str(path), doc)
+        print(result)
+        results.append(result)
     df = pd.DataFrame(results)
     result = df.mean().to_dict()
     std = df.std()
