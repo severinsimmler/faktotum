@@ -129,6 +129,7 @@ class EntityLinker:
                                                     "id": identifier["id"],
                                                     "index": identifier["indices"],
                                                     "sentence": sentence,
+                                                    "candidates": []
                                                 }
                                             )
                     elif len(matches[text]) > 1:
@@ -138,15 +139,17 @@ class EntityLinker:
                                                     "id": identifier["id"],
                                                     "index": identifier["indices"],
                                                     "sentence": sentence,
+                                                    "candidates": list(matches[text].values())
                                                 }
                                             )
-                    elif not success:
+                    elif not success and matches[text]:
                         hard_to_disamiguate.append(
                                                 {
                                                     "mention": text,
                                                     "id": identifier["id"],
                                                     "index": identifier["indices"],
                                                     "sentence": sentence,
+                                                    "candidates": list(matches[text].values())
                                                 }
                                             )
 
