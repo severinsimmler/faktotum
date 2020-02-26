@@ -57,8 +57,8 @@ class EntityLinker:
         fp = 0
         fn = 0
         hard_to_disamiguate = list()
-        for key, value in self.kb.items():
-            if self.corpus == "droc":
+        if self.corpus == "droc":
+            for key, value in self.kb.items():
                 # ignore entities occuring only once
                 if len(value["context"]) > 1:
                     for sentence in value["context"]:
