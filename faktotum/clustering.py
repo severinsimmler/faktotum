@@ -3,6 +3,7 @@ from pathlib import Path
 
 import flair
 import torch
+import pandas as pd
 
 flair.device = torch.device("cpu")
 import numpy as np
@@ -413,7 +414,6 @@ def compare_approaches_local(data, model_directory, corpus):
     results = list()
     for doc in data:
         result = word2vec(str(path), doc)
-        print(result)
         results.append(result)
     df = pd.DataFrame(results)
     result = df.mean().to_dict()
@@ -422,13 +422,13 @@ def compare_approaches_local(data, model_directory, corpus):
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{w2v}"
-    print(TABLE_ROW_STD.format(**result))
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     results = list()
     for doc in data:
-        results.append(word2vec(str(path), data))
+        result = word2vec(str(path), doc)
+        results.append(result)
     df = pd.DataFrame(results)
     result = df.mean().to_dict()
     std = df.std()
@@ -439,84 +439,219 @@ def compare_approaches_local(data, model_directory, corpus):
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
-    result = fasttext(str(path), data)
+    results = list()
+    for doc in data:
+        result = fasttext(str(path), doc)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{ft}"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
-    result = fasttext(str(path), data)
+    results = list()
+    for doc in data:
+        result = fasttext(str(path), doc)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "Skipgram\\textsubscript{ft}"
     logging.info(TABLE_ROW_STD.format(**result))
 
     ##########
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
-    result = word2vec(str(path), data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = word2vec(str(path), doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{w2v} + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
-    result = word2vec(str(path), data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = word2vec(str(path), doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
-    result = fasttext(str(path), data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = fasttext(str(path), doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{ft} + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
-    result = fasttext(str(path), data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = fasttext(str(path), doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "Skipgram\\textsubscript{ft} + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
     ###################
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
-    result = word2vec(str(path), data, add_per=True)
+    results = list()
+    for doc in data:
+        result = word2vec(str(path), doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{w2v} + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
-    result = word2vec(str(path), data, add_per=True)
+    results = list()
+    for doc in data:
+        result = word2vec(str(path), doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "Skipgram\\textsubscript{w2v} + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
-    result = fasttext(str(path), data, add_per=True)
+    results = list()
+    for doc in data:
+        result = fasttext(str(path), doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{ft} + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
-    result = fasttext(str(path), data, add_per=True)
+    results = list()
+    for doc in data:
+        result = fasttext(str(path), doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "Skipgram\\textsubscript{ft} + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     #######################
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
-    result = word2vec(str(path), data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = word2vec(str(path), doc, add_per=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{w2v} + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
-    result = word2vec(str(path), data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = word2vec(str(path), doc, add_per=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
-    result = fasttext(str(path), data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = fasttext(str(path), doc, add_per=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{ft} + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
-    result = fasttext(str(path), data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = fasttext(str(path), doc, add_per=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "Skipgram\\textsubscript{w2v} + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     #################
 
-    result = bert("bert-base-german-dbmdz-cased", data)
+    results = list()
+    for doc in data:
+        result = bert("bert-base-german-dbmdz-cased", doc)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "dBERT"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -528,7 +663,16 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
         raise NotImplementedError
-    result = bert(path, data)
+    results = list()
+    for doc in data:
+        result = bert(path, doc)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$}"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -536,7 +680,16 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
         raise NotImplementedError
-    result = bert(path, data)
+    results = list()
+    for doc in data:
+        result = bert(path, doc)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$}"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -544,17 +697,44 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "german-literary-bert"))
     else:
         raise NotImplementedError
-    result = bert(path, data)
+    results = list()
+    for doc in data:
+        result = bert(path, doc)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "glBERT"
     logging.info(TABLE_ROW_STD.format(**result))
 
     ###############################
 
-    result = bert("bert-base-german-dbmdz-cased", data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = bert("bert-base-german-dbmdz-cased", doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "dBERT + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
-    result = bert("bert-base-multilingual-cased", data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = bert("bert-base-multilingual-cased", doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "mBERT + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -562,7 +742,16 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -570,7 +759,16 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -578,17 +776,44 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "german-literary-bert"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_adj=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_adj=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "glBERT + ADJ"
     logging.info(TABLE_ROW_STD.format(**result))
 
     #################################
 
-    result = bert("bert-base-german-dbmdz-cased", data, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert("bert-base-german-dbmdz-cased", doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "dBERT + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
-    result = bert("bert-base-multilingual-cased", data, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert("bert-base-multilingual-cased", doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "mBERT + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -596,7 +821,16 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -604,7 +838,16 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -612,17 +855,44 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "german-literary-bert"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "glBERT + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     ###########################################
 
-    result = bert("bert-base-german-dbmdz-cased", data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert("bert-base-german-dbmdz-cased", doc, add_adj=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "dBERT + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
-    result = bert("bert-base-multilingual-cased", data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert("bert-base-multilingual-cased", doc, add_adj=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "mBERT + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -630,7 +900,16 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_adj=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -638,7 +917,16 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_adj=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
@@ -646,18 +934,37 @@ def compare_approaches_local(data, model_directory, corpus):
         path = str(Path(model_directory, "german-literary-bert"))
     else:
         raise NotImplementedError
-    result = bert(path, data, add_adj=True, add_per=True)
+    results = list()
+    for doc in data:
+        result = bert(path, doc, add_adj=True, add_per=True)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "glBERT + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
     #############################
-
+    return
     if corpus == "gutenberg":
         bert_path = "bert-base-multilingual-cased"
         classic_path = Path(model_directory, f"{corpus}-cbow.fasttext")
     else:
         raise NotImplementedError
-    result = stacked(bert_path, str(classic_path), data)
+    results = list()
+    for doc in data:
+        result = stacked(bert_path, str(classic_path), data)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().to_dict()
+    std = df.std()
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
+
     result["approach"] = "mBERT + CBOW\\textsubscript{ft} + ADJ + PER"
     logging.info(TABLE_ROW_STD.format(**result))
 
