@@ -119,7 +119,7 @@ class EntityLinker:
                                 break
                             elif identifier["id"] != key:
                                 fp += 1
-                    if len(matches[text]) == 0::
+                    if len(matches[text]) == 0:
                         fn += 1
                         hard_to_disamiguate.append(
                                                 {
