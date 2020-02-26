@@ -139,7 +139,7 @@ class EntityLinker:
                                                     "id": identifier["id"],
                                                     "index": identifier["indices"],
                                                     "sentence": sentence,
-                                                    "candidates": list(matches[text].values())
+                                                    "candidates": matches[text]
                                                 }
                                             )
                     elif not success and matches[text]:
@@ -149,7 +149,7 @@ class EntityLinker:
                                                     "id": identifier["id"],
                                                     "index": identifier["indices"],
                                                     "sentence": sentence,
-                                                    "candidates": list(matches[text].values())
+                                                    "candidates": matches[text]
                                                 }
                                             )
 
