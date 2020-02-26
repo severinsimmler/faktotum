@@ -84,7 +84,7 @@ def word2vec(modelpath, data, add_adj=False, add_per=False):
         vectors.append(vector)
 
     X = np.array(vectors)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
+    labels_pred = KMeans(n_clusters=len(classes), random_state=23, n_jobs=-1).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
@@ -107,7 +107,7 @@ def fasttext(modelpath, data, add_adj=False, add_per=False):
         vectors.append(vector)
 
     X = np.array(vectors)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
+    labels_pred = KMeans(n_clusters=len(classes), random_state=23, n_jobs=-1).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
@@ -130,7 +130,7 @@ def bert(modelpath, data, add_adj=False, add_per=False):
         vectors.append(vector)
 
     X = np.array(vectors)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
+    labels_pred = KMeans(n_clusters=len(classes), random_state=23, n_jobs=-1).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
@@ -158,7 +158,7 @@ def stacked(bert_path, classic_path, data):
         vectors.append(vector)
 
     X = np.array(vectors)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23).fit_predict(X)
+    labels_pred = KMeans(n_clusters=len(classes), random_state=23, n_jobs=-1).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
