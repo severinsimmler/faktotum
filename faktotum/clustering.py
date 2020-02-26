@@ -416,8 +416,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = word2vec(str(path), doc)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -430,8 +430,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = word2vec(str(path), doc)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -444,8 +444,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = fasttext(str(path), doc)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -458,8 +458,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = fasttext(str(path), doc)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -474,8 +474,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = word2vec(str(path), doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -488,8 +488,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = word2vec(str(path), doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -502,8 +502,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = fasttext(str(path), doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -516,8 +516,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = fasttext(str(path), doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -532,8 +532,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = word2vec(str(path), doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -546,8 +546,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = word2vec(str(path), doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -560,8 +560,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = fasttext(str(path), doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -574,8 +574,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = fasttext(str(path), doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -590,8 +590,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = word2vec(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -604,8 +604,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = word2vec(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -618,8 +618,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = fasttext(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -632,8 +632,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = fasttext(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -647,8 +647,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert("bert-base-german-dbmdz-cased", doc)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -668,8 +668,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -685,8 +685,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -702,8 +702,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -717,8 +717,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert("bert-base-german-dbmdz-cased", doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -730,8 +730,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert("bert-base-multilingual-cased", doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -747,8 +747,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -764,8 +764,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -781,8 +781,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -796,8 +796,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert("bert-base-german-dbmdz-cased", doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -809,8 +809,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert("bert-base-multilingual-cased", doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -826,8 +826,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -843,8 +843,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -860,8 +860,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -875,8 +875,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert("bert-base-german-dbmdz-cased", doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -888,8 +888,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert("bert-base-multilingual-cased", doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -905,8 +905,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -922,8 +922,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -939,8 +939,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = bert(path, doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
@@ -959,8 +959,8 @@ def compare_approaches_local(data, model_directory, corpus):
         result = stacked(bert_path, str(classic_path), data)
         results.append(result)
     df = pd.DataFrame(results)
-    result = df.mean().to_dict()
-    std = df.std()
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
     result["std_homogeneity"] = std["homogeneity"]
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
