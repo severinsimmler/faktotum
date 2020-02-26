@@ -587,7 +587,7 @@ def compare_approaches_local(data, model_directory, corpus):
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     results = list()
     for doc in data:
-        result = word2vec(str(path), doc, add_per=True, add_per=True)
+        result = word2vec(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
     result = df.mean().to_dict()
@@ -601,7 +601,7 @@ def compare_approaches_local(data, model_directory, corpus):
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     results = list()
     for doc in data:
-        result = word2vec(str(path), doc, add_per=True, add_per=True)
+        result = word2vec(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
     result = df.mean().to_dict()
@@ -615,7 +615,7 @@ def compare_approaches_local(data, model_directory, corpus):
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     results = list()
     for doc in data:
-        result = fasttext(str(path), doc, add_per=True, add_per=True)
+        result = fasttext(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
     result = df.mean().to_dict()
@@ -629,7 +629,7 @@ def compare_approaches_local(data, model_directory, corpus):
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     results = list()
     for doc in data:
-        result = fasttext(str(path), doc, add_per=True, add_per=True)
+        result = fasttext(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
     result = df.mean().to_dict()
