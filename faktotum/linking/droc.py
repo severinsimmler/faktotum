@@ -92,31 +92,53 @@ class EntityLinker:
                 entity = dict()
                 boundray = "[START]"
                 ent = list()
+                indices = list()
                 last = "?"
                 i_ = 9999999999999
                 for i, token in enumerate(sentence):
                     if token[1].startswith("B") and token[-1].startswith("Q"):
                         ent = [token[0]]
+                        indices.append(i)
                         last = token[-1]
                     elif token[1].startswith("I") and token[-1].startswith("Q") and i - 1 == i_:
                         ent.append(token[0])
+                        indices.append(i)
                         last = token[-1]
                     else:
                         if ent:
                             text = re.sub(r'\s+([?.!"])', r'\1', " ".join(ent))
-                            entity[text] = last
+                            entity[text] = {"id": last, "indices": indices}
                     i_ = i
                 for text, identifier in entity.items():
                     matches = defaultdict(list)
                     for key, value in self.kb.items():
                         if text in value["MENTIONS"]:
                             matches[text].append(key)
-                            if identifier == key:
+                            if identifier["id"] == key:
                                 tp += 1
-                            elif identifier != key:
+                                break
+                            elif identifier["id"] != key:
                                 fp += 1
-                    if len(matches[text]) == 0:
+                    if len(matches[text]) == 0::
                         fn += 1
+                        hard_to_disamiguate.append(
+                                                {
+                                                    "mention": text,
+                                                    "id": identifier["id"],
+                                                    "index": identifier["indices"],
+                                                    "sentence": sentence,
+                                                }
+                                            )
+                    elif len(matches[text]) > 1:
+                        print(text)
+                        hard_to_disamiguate.append(
+                                                {
+                                                    "mention": text,
+                                                    "id": identifier["id"],
+                                                    "index": identifier["indices"],
+                                                    "sentence": sentence,
+                                                }
+                                            )
 
         precision = self.precision(tp, fp)
         recall = self.recall(tp, fn)
