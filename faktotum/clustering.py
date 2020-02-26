@@ -657,6 +657,7 @@ def compare_approaches_local(data, model_directory, corpus):
     result["std_completeness"] = std["completeness"]
     result["std_v"] = std["v"]
     result["approach"] = "CBOW\\textsubscript{w2v}"
+    print(TABLE_ROW_STD.format(**result))
     logging.info(TABLE_ROW_STD.format(**result))
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
