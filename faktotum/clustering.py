@@ -408,6 +408,7 @@ def compare_approaches_global(data, model_directory, corpus):
 
 
 def compare_approaches_local(data, model_directory, corpus):
+    """
     logging.info(TABLE_BEGIN)
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
@@ -655,7 +656,17 @@ def compare_approaches_local(data, model_directory, corpus):
     result["approach"] = "dBERT"
     logging.info(TABLE_ROW_STD.format(**result))
 
-    result = bert("bert-base-multilingual-cased", data)
+    """
+    results = list()
+    for doc in data:
+        result = bert("bert-base-multilingual-cased", doc)
+        results.append(result)
+    df = pd.DataFrame(results)
+    result = df.mean().round(2).to_dict()
+    std = df.std().round(2)
+    result["std_homogeneity"] = std["homogeneity"]
+    result["std_completeness"] = std["completeness"]
+    result["std_v"] = std["v"]
     result["approach"] = "mBERT"
     logging.info(TABLE_ROW_STD.format(**result))
 
