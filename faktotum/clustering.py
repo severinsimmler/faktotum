@@ -408,12 +408,12 @@ def compare_approaches_global(data, model_directory, corpus):
 
 
 def compare_approaches_local(data, model_directory, corpus):
-    """
+
     logging.info(TABLE_BEGIN)
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = word2vec(str(path), doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -427,7 +427,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = word2vec(str(path), doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -441,7 +441,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = fasttext(str(path), doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -455,7 +455,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = fasttext(str(path), doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -471,7 +471,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = word2vec(str(path), doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -485,7 +485,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = word2vec(str(path), doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -499,7 +499,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = fasttext(str(path), doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -513,7 +513,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = fasttext(str(path), doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -529,7 +529,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = word2vec(str(path), doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -543,7 +543,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = word2vec(str(path), doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -557,7 +557,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = fasttext(str(path), doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -571,7 +571,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = fasttext(str(path), doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -587,7 +587,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = word2vec(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -601,7 +601,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.word2vec")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = word2vec(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -615,7 +615,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-cbow.fasttext")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = fasttext(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -629,7 +629,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     path = Path(model_directory, f"{corpus}-skipgram.fasttext")
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = fasttext(str(path), doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -644,7 +644,7 @@ def compare_approaches_local(data, model_directory, corpus):
     #################
 
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert("bert-base-german-dbmdz-cased", doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -658,7 +658,7 @@ def compare_approaches_local(data, model_directory, corpus):
 
     """
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert("bert-base-multilingual-cased", doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -675,7 +675,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -692,7 +692,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -709,7 +709,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc)
         results.append(result)
     df = pd.DataFrame(results)
@@ -724,7 +724,7 @@ def compare_approaches_local(data, model_directory, corpus):
     ###############################
 
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert("bert-base-german-dbmdz-cased", doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -737,7 +737,7 @@ def compare_approaches_local(data, model_directory, corpus):
     logging.info(TABLE_ROW_STD.format(**result))
 
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert("bert-base-multilingual-cased", doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -754,7 +754,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -771,7 +771,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -788,7 +788,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_adj=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -803,7 +803,7 @@ def compare_approaches_local(data, model_directory, corpus):
     #################################
 
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert("bert-base-german-dbmdz-cased", doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -816,7 +816,7 @@ def compare_approaches_local(data, model_directory, corpus):
     logging.info(TABLE_ROW_STD.format(**result))
 
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert("bert-base-multilingual-cased", doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -833,7 +833,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -850,7 +850,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -867,7 +867,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -882,7 +882,7 @@ def compare_approaches_local(data, model_directory, corpus):
     ###########################################
 
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert("bert-base-german-dbmdz-cased", doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -895,7 +895,7 @@ def compare_approaches_local(data, model_directory, corpus):
     logging.info(TABLE_ROW_STD.format(**result))
 
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert("bert-base-multilingual-cased", doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -912,7 +912,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -929,7 +929,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -946,7 +946,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = bert(path, doc, add_adj=True, add_per=True)
         results.append(result)
     df = pd.DataFrame(results)
@@ -966,7 +966,7 @@ def compare_approaches_local(data, model_directory, corpus):
     else:
         raise NotImplementedError
     results = list()
-    for doc in data:
+    for doc in data.values():
         result = stacked(bert_path, str(classic_path), data)
         results.append(result)
     df = pd.DataFrame(results)

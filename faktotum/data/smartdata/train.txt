@@ -18612,7 +18612,7 @@ Branche O - NN
 
 Sony B-ORG - NE Q41187
 , O - $,
-Samsung B-ORG - NE Q20718)
+Samsung B-ORG - NE Q20718
 , O - $,
 LG B-ORG - NE Q162345
 , O - $,
