@@ -56,7 +56,14 @@ def bert_vectorization(mentions, model, add_adj=False, add_per=False):
         text = " ".join([token[0] for token in mention["sentence"]])
         sentence = Sentence(text, use_tokenizer=False)
         model.embed(sentence)
-        vector = sentence[mention["index"]].get_embedding().numpy()
+        if isinstance(mention["index"], list):
+            vector = sentence[mention["index"][0]].get_embedding().numpy()
+            if len(mention["index"]) > 1:
+                for i in mention["index"][1:]:
+                    # Add vectors
+                    vector = vector + sentence[mention["index"][i]].get_embedding().numpy()
+        else:
+            vector = sentence[mention["index"]].get_embedding().numpy()
         if add_adj:
             adjs = [
                 i for i, token in enumerate(mention["sentence"]) if token[3] == "ADJA"
