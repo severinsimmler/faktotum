@@ -132,7 +132,7 @@ class EntityLinker:
                                                     "candidates": []
                                                 }
                                             )
-                    elif len(matches[text]) > 1:
+                    elif len(matches[text]) > 1 and identifier["id"] in matches[text]:
                         hard_to_disamiguate.append(
                                                 {
                                                     "mention": text,
@@ -140,6 +140,16 @@ class EntityLinker:
                                                     "index": identifier["indices"],
                                                     "sentence": sentence,
                                                     "candidates": matches[text]
+                                                }
+                                            )
+                    elif len(matches[text]) > 1 and identifier["id"] not in matches[text]:
+                        hard_to_disamiguate.append(
+                                                {
+                                                    "mention": text,
+                                                    "id": identifier["id"],
+                                                    "index": identifier["indices"],
+                                                    "sentence": sentence,
+                                                    "candidates": []
                                                 }
                                             )
                     elif not success and matches[text]:
