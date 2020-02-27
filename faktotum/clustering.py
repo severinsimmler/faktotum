@@ -284,7 +284,7 @@ def compare_approaches_global(data, model_directory, corpus):
     logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "german-literary-bert"))
+        path = str(Path(model_directory, "ner-droc"))
     else:
         raise NotImplementedError
     result = bert(path, data)
@@ -318,7 +318,7 @@ def compare_approaches_global(data, model_directory, corpus):
     logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "german-literary-bert"))
+        path = str(Path(model_directory, "ner-droc"))
     else:
         raise NotImplementedError
     result = bert(path, data, add_adj=True)
@@ -352,7 +352,7 @@ def compare_approaches_global(data, model_directory, corpus):
     logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "german-literary-bert"))
+        path = str(Path(model_directory, "ner-droc"))
     else:
         raise NotImplementedError
     result = bert(path, data, add_per=True)
@@ -386,7 +386,7 @@ def compare_approaches_global(data, model_directory, corpus):
     logging.info(TABLE_ROW.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "german-literary-bert"))
+        path = str(Path(model_directory, "ner-droc"))
     else:
         raise NotImplementedError
     result = bert(path, data, add_adj=True, add_per=True)
@@ -408,7 +408,6 @@ def compare_approaches_global(data, model_directory, corpus):
 
 
 def compare_approaches_local(data, model_directory, corpus):
-
     logging.info(TABLE_BEGIN)
 
     path = Path(model_directory, f"{corpus}-cbow.word2vec")
@@ -656,7 +655,6 @@ def compare_approaches_local(data, model_directory, corpus):
     result["approach"] = "dBERT"
     logging.info(TABLE_ROW_STD.format(**result))
 
-    """
     results = list()
     for doc in data.values():
         result = bert("bert-base-multilingual-cased", doc)
@@ -705,7 +703,7 @@ def compare_approaches_local(data, model_directory, corpus):
     logging.info(TABLE_ROW_STD.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "german-literary-bert"))
+        path = str(Path(model_directory, "ner-droc"))
     else:
         raise NotImplementedError
     results = list()
@@ -784,7 +782,7 @@ def compare_approaches_local(data, model_directory, corpus):
     logging.info(TABLE_ROW_STD.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "german-literary-bert"))
+        path = str(Path(model_directory, "ner-droc"))
     else:
         raise NotImplementedError
     results = list()
@@ -863,7 +861,7 @@ def compare_approaches_local(data, model_directory, corpus):
     logging.info(TABLE_ROW_STD.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "german-literary-bert"))
+        path = str(Path(model_directory, "ner-droc"))
     else:
         raise NotImplementedError
     results = list()
@@ -942,7 +940,7 @@ def compare_approaches_local(data, model_directory, corpus):
     logging.info(TABLE_ROW_STD.format(**result))
 
     if corpus == "gutenberg":
-        path = str(Path(model_directory, "german-literary-bert"))
+        path = str(Path(model_directory, "ner-droc"))
     else:
         raise NotImplementedError
     results = list()
