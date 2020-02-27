@@ -270,7 +270,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "bert-german-presse-adapted"))
     result = bert(path, data)
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$}"
     logging.info(TABLE_ROW.format(**result))
@@ -278,7 +278,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "bert-multi-presse-adapted"))
     result = bert(path, data)
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$}"
     logging.info(TABLE_ROW.format(**result))
@@ -286,7 +286,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "ner-droc"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "ner-presse"))
     result = bert(path, data)
     result["approach"] = "glBERT"
     logging.info(TABLE_ROW.format(**result))
@@ -304,7 +304,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "bert-german-presse-adapted"))
     result = bert(path, data, add_adj=True)
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + ADJ"
     logging.info(TABLE_ROW.format(**result))
@@ -312,7 +312,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "bert-multi-presse-adapted"))
     result = bert(path, data, add_adj=True)
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + ADJ"
     logging.info(TABLE_ROW.format(**result))
@@ -320,7 +320,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "ner-droc"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "ner-presse"))
     result = bert(path, data, add_adj=True)
     result["approach"] = "glBERT + ADJ"
     logging.info(TABLE_ROW.format(**result))
@@ -338,7 +338,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "bert-german-presse-adapted"))
     result = bert(path, data, add_per=True)
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + PER"
     logging.info(TABLE_ROW.format(**result))
@@ -346,7 +346,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "bert-multi-presse-adapted"))
     result = bert(path, data, add_per=True)
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + PER"
     logging.info(TABLE_ROW.format(**result))
@@ -354,7 +354,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "ner-droc"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "ner-presse"))
     result = bert(path, data, add_per=True)
     result["approach"] = "glBERT + PER"
     logging.info(TABLE_ROW.format(**result))
@@ -372,7 +372,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-german-gutenberg-adapted"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "bert-german-presse-adapted"))
     result = bert(path, data, add_adj=True, add_per=True)
     result["approach"] = "dBERT\\textsuperscript{$\\ddagger$} + ADJ + PER"
     logging.info(TABLE_ROW.format(**result))
@@ -380,7 +380,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "bert-multi-gutenberg-adapted"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "bert-multi-presse-adapted"))
     result = bert(path, data, add_adj=True, add_per=True)
     result["approach"] = "mBERT\\textsuperscript{$\\ddagger$} + ADJ + PER"
     logging.info(TABLE_ROW.format(**result))
@@ -388,7 +388,7 @@ def compare_approaches_global(data, model_directory, corpus):
     if corpus == "gutenberg":
         path = str(Path(model_directory, "ner-droc"))
     else:
-        raise NotImplementedError
+        path = str(Path(model_directory, "ner-presse"))
     result = bert(path, data, add_adj=True, add_per=True)
     result["approach"] = "glBERT + ADJ + PER"
     logging.info(TABLE_ROW.format(**result))
@@ -399,7 +399,7 @@ def compare_approaches_global(data, model_directory, corpus):
         bert_path = "bert-base-multilingual-cased"
         classic_path = Path(model_directory, f"{corpus}-cbow.fasttext")
     else:
-        raise NotImplementedError
+        bert_path = "bert-base-multilingual-cased"
     result = stacked(bert_path, str(classic_path), data)
     result["approach"] = "mBERT + CBOW\\textsubscript{ft} + ADJ + PER"
     logging.info(TABLE_ROW.format(**result))
