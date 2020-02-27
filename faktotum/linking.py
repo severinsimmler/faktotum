@@ -121,16 +121,6 @@ class EntityLinker:
                                 break
                             elif identifier["id"] != key:
                                 fp += 1
-                    hard_to_disamiguate.append(
-                                                {
-                                                    "mention": text,
-                                                    "id": identifier["id"],
-                                                    "index": identifier["indices"],
-                                                    "sentence": sentence,
-                                                    "candidates": []
-                                                }
-                                            )
-                    continue
                     if len(matches[text]) == 0:
                         fn += 1
                         hard_to_disamiguate.append(
