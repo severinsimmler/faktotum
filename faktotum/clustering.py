@@ -61,7 +61,7 @@ def bert_vectorization(mentions, model, add_adj=False, add_per=False):
             if len(mention["index"]) > 1:
                 for i in mention["index"][1:]:
                     # Add vectors
-                    vector = vector + sentence[mention["index"][i]].get_embedding().numpy()
+                    vector = vector + sentence[i].get_embedding().numpy()
         else:
             vector = sentence[mention["index"]].get_embedding().numpy()
         if add_adj:
