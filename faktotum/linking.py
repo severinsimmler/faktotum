@@ -4,6 +4,7 @@ import json
 import re
 import tqdm
 
+
 class EntityLinker:
     def __init__(self, corpus: str, kb_dir: str):
         module_folder = Path(__file__).resolve().parent
@@ -100,13 +101,17 @@ class EntityLinker:
                         ent = [token[0]]
                         indices = [sentence.index(token)]
                         last = token[-1]
-                    elif token[1].startswith("I") and token[-1].startswith("Q") and i - 1 == i_:
+                    elif (
+                        token[1].startswith("I")
+                        and token[-1].startswith("Q")
+                        and i - 1 == i_
+                    ):
                         ent.append(token[0])
                         indices.append(i)
                         last = token[-1]
                     else:
                         if ent:
-                            text = re.sub(r'\s+([?.!"])', r'\1', " ".join(ent))
+                            text = re.sub(r'\s+([?.!"])', r"\1", " ".join(ent))
                             entity[text] = {"id": last, "indices": indices}
                     i_ = i
                 for text, identifier in entity.items():
@@ -124,44 +129,46 @@ class EntityLinker:
                     if len(matches[text]) == 0:
                         fn += 1
                         hard_to_disamiguate.append(
-                                                {
-                                                    "mention": text,
-                                                    "id": identifier["id"],
-                                                    "index": identifier["indices"],
-                                                    "sentence": sentence,
-                                                    "candidates": []
-                                                }
-                                            )
+                            {
+                                "mention": text,
+                                "id": identifier["id"],
+                                "index": identifier["indices"],
+                                "sentence": sentence,
+                                "candidates": [],
+                            }
+                        )
                     elif len(matches[text]) > 1 and identifier["id"] in matches[text]:
                         hard_to_disamiguate.append(
-                                                {
-                                                    "mention": text,
-                                                    "id": identifier["id"],
-                                                    "index": identifier["indices"],
-                                                    "sentence": sentence,
-                                                    "candidates": matches[text]
-                                                }
-                                            )
-                    elif len(matches[text]) > 1 and identifier["id"] not in matches[text]:
+                            {
+                                "mention": text,
+                                "id": identifier["id"],
+                                "index": identifier["indices"],
+                                "sentence": sentence,
+                                "candidates": matches[text],
+                            }
+                        )
+                    elif (
+                        len(matches[text]) > 1 and identifier["id"] not in matches[text]
+                    ):
                         hard_to_disamiguate.append(
-                                                {
-                                                    "mention": text,
-                                                    "id": identifier["id"],
-                                                    "index": identifier["indices"],
-                                                    "sentence": sentence,
-                                                    "candidates": []
-                                                }
-                                            )
+                            {
+                                "mention": text,
+                                "id": identifier["id"],
+                                "index": identifier["indices"],
+                                "sentence": sentence,
+                                "candidates": [],
+                            }
+                        )
                     elif not success and matches[text]:
                         hard_to_disamiguate.append(
-                                                {
-                                                    "mention": text,
-                                                    "id": identifier["id"],
-                                                    "index": identifier["indices"],
-                                                    "sentence": sentence,
-                                                    "candidates": matches[text]
-                                                }
-                                            )
+                            {
+                                "mention": text,
+                                "id": identifier["id"],
+                                "index": identifier["indices"],
+                                "sentence": sentence,
+                                "candidates": matches[text],
+                            }
+                        )
 
         precision = self.precision(tp, fp)
         recall = self.recall(tp, fn)

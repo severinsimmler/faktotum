@@ -27,6 +27,7 @@ TABLE_END = "\\bottomrule\n  \\end{tabular}\n\\caption{Caption}\n\\end{table}"
 TABLE_ROW = "{approach} & {homogeneity} & {completeness} & {v} \\\\"
 TABLE_ROW_STD = "{approach} & {homogeneity} (±{std_homogeneity}) & {completeness} (±{std_completeness}) & {v} (±{std_v}) \\\\"
 
+
 def classic_vectorization(mentions, model, add_adj=False, add_per=False):
     for mention in mentions:
         try:
@@ -91,7 +92,9 @@ def word2vec(modelpath, data, add_adj=False, add_per=False):
         vectors.append(vector)
 
     X = np.array(vectors)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23, n_jobs=-1).fit_predict(X)
+    labels_pred = KMeans(
+        n_clusters=len(classes), random_state=23, n_jobs=-1
+    ).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
@@ -114,7 +117,9 @@ def fasttext(modelpath, data, add_adj=False, add_per=False):
         vectors.append(vector)
 
     X = np.array(vectors)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23, n_jobs=-1).fit_predict(X)
+    labels_pred = KMeans(
+        n_clusters=len(classes), random_state=23, n_jobs=-1
+    ).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
@@ -137,7 +142,9 @@ def bert(modelpath, data, add_adj=False, add_per=False):
         vectors.append(vector)
 
     X = np.array(vectors)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23, n_jobs=-1).fit_predict(X)
+    labels_pred = KMeans(
+        n_clusters=len(classes), random_state=23, n_jobs=-1
+    ).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
@@ -165,7 +172,9 @@ def stacked(bert_path, classic_path, data):
         vectors.append(vector)
 
     X = np.array(vectors)
-    labels_pred = KMeans(n_clusters=len(classes), random_state=23, n_jobs=-1).fit_predict(X)
+    labels_pred = KMeans(
+        n_clusters=len(classes), random_state=23, n_jobs=-1
+    ).fit_predict(X)
     homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
         labels_true, labels_pred
     )
@@ -174,6 +183,7 @@ def stacked(bert_path, classic_path, data):
         "completeness": round(completeness * 100, 2),
         "v": round(v * 100, 2),
     }
+
 
 def compare_approaches_global(data, model_directory, corpus):
     logging.info(TABLE_BEGIN)
