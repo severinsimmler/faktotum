@@ -137,7 +137,9 @@ class Embeddings:
     def _get_classic_embedding(tokens, model):
         for token in tokens:
             try:
-                yield model.wv[token]
+                x = model.wv[token]
+                print(x.shape)
+                yield x
             except KeyError:
                 # Yield a null vector if not in vocabulary
                 yield np.array([0] * 300)
