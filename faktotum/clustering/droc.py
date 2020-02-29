@@ -4,7 +4,7 @@ import pandas as pd
 
 def load_data():
     package_folder = Path(__file__).parent.parent
-    data_folder = Path(PACKAGE_FOLDER, "data", "droc", "linking")
+    data_folder = Path(package_folder, "data", "droc", "linking")
     data = dict()
     for file_ in data_folder.glob("*.txt"):
         with file_.open("r", encoding="utf-8") as file_:
