@@ -28,6 +28,7 @@ class Embeddings:
         logging.info(f"Loading {path}...")
         self.cbow_w2v = Word2Vec.load(path)
 
+        """
         path = str(Path(model_directory, f"{corpus}-skipgram.word2vec"))
         logging.info(f"Loading {path}...")
         self.skipgram_w2v = Word2Vec.load(path)
@@ -56,9 +57,13 @@ class Embeddings:
         logging.info(f"Loading {path}...")
         self.bert_ma = BertEmbeddings(path)
 
-        path = str(Path(model_directory, f"{corpus}-ner"))
+        if corpus == "gutenberg":
+            path = str(Path(model_directory, "ner-droc"))
+        else:
+            path = str(Path(model_directory, "ner-smartdata"))
         logging.info(f"Loading {path}...")
         self.bert_ner = BertEmbeddings(path)
+        """
 
     def vectorize(self, sentences, model, add_adj=False, add_nn=False, add_per=False):
         X = list()
