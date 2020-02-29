@@ -136,8 +136,8 @@ class Embeddings:
     @staticmethod
     def _get_classic_embedding(tokens, model):
         for token in tokens:
+            print(token)
             try:
-                print(model.wv[token])
                 yield model.wv[token]
             except KeyError:
                 # Yield a null vector if not in vocabulary
