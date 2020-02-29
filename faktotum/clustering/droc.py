@@ -1,5 +1,6 @@
 from faktotum.clustering.utils import Embeddings, Clustering
-
+from pathlib import Path
+import pandas as pd
 
 def load_data():
     package_folder = Path(__file__).parent.parent
