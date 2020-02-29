@@ -78,7 +78,7 @@ class Embeddings:
                 y.append(identifier)
         return X, y
 
-    def classic_vectorization(
+    def _classic_vectorization(
         self, sentence, token_indices, model, add_adj=False, add_nn=False, add_per=False
     ):
         self._add_tokens(token_indices, add_adj, add_nn, add_per)
