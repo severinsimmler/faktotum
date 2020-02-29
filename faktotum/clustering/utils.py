@@ -83,6 +83,7 @@ class Embeddings:
     ):
         self._add_tokens(token_indices, add_adj, add_nn, add_per)
         tokens = [token for i, token in enumerate(sentence) if i in token_indices]
+        print(self._get_classic_embedding(tokens, model))
         return sum(self._get_classic_embedding(tokens, model)) / len(tokens)
 
     def _bert_vectorization(
@@ -93,7 +94,6 @@ class Embeddings:
         model.embed(sentence_)
         self._add_tokens(token_indices, add_adj, add_nn, add_per)
         tokens = [token for i, token in enumerate(sentence_) if i in token_indices]
-        print(self._get_bert_embedding(tokens))
         return sum(self._get_bert_embedding(tokens)) / len(tokens)
 
     @staticmethod
