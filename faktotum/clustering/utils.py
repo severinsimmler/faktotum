@@ -12,7 +12,7 @@ from flair.embeddings import BertEmbeddings
 from gensim.models import Word2Vec
 from gensim.models.fasttext import FastText
 from sklearn import metrics
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, AgglomerativeClustering, SpectralClustering
 
 logger = logging.getLogger("gensim")
 logger.setLevel(logging.ERROR)
@@ -22,167 +22,155 @@ logger.setLevel(logging.ERROR)
 logging.basicConfig(format="%(message)s", level=logging.INFO)
 
 
-TABLE_BEGIN = "\\begin{table}\n  \centering\n\\begin{tabular}{lllll}\n  \\toprule\n{} & Homogeneity & Completeness & V \\\\\n \\midrule"
-TABLE_END = "\\bottomrule\n  \\end{tabular}\n\\caption{Caption}\n\\end{table}"
-TABLE_ROW = "{approach} & {homogeneity} & {completeness} & {v} \\\\"
-TABLE_ROW_STD = "{approach} & {homogeneity} (±{std_homogeneity}) & {completeness} (±{std_completeness}) & {v} (±{std_v}) \\\\"
+class Embeddings:
+    def __init__(self, model_directory, corpus):
+        path = str(Path(self.model_directory, f"{corpus}-cbow.word2vec"))
+        logging.info(f"Loading {path.name}...")
+        self.cbow_w2v = Word2Vec.load(path)
 
+        path = str(Path(self.model_directory, f"{corpus}-skipgram.word2vec"))
+        logging.info(f"Loading {path.name}...")
+        self.skipgram_w2v = Word2Vec.load(path)
 
-def classic_vectorization(mentions, model, add_adj=False, add_per=False):
-    for mention in mentions:
-        try:
-            vector = model.wv[mention["mention"]]
-        except KeyError:
-            # return null vector if not in vocabulary (word2vec)
-            vector = [0] * 300
-        if add_adj:
-            adjs = [token[0] for token in mention["sentence"] if token[3] == "ADJA"]
-            try:
-                for adj in adjs:
-                    vector = vector + model.wv[adj]
-            except KeyError:
-                pass
-        if add_per:
-            pers = [token[0] for token in mention["sentence"] if "PER" in token[1]]
-            try:
-                for per in pers:
-                    vector = vector + model.wv[per]
-            except KeyError:
-                pass
-        yield mention["id"], vector
+        path = str(Path(self.model_directory, f"{corpus}-cbow.fasttext"))
+        logging.info(f"Loading {path.name}...")
+        self.cbow_ft = FastText.load(path)
 
+        path = str(Path(self.model_directory, f"{corpus}-skipgram.fasttext"))
+        logging.info(f"Loading {path.name}...")
+        self.skipgram_ft = FastText.load(path)
 
-def bert_vectorization(mentions, model, add_adj=False, add_per=False):
-    for mention in mentions:
-        text = " ".join([token[0] for token in mention["sentence"]])
-        sentence = Sentence(text, use_tokenizer=False)
-        model.embed(sentence)
-        if isinstance(mention["index"], list):
-            vector = sentence[mention["index"][0]].get_embedding().numpy()
-            if len(mention["index"]) > 1:
-                for i in mention["index"][1:]:
-                    # Add vectors
-                    vector = vector + sentence[i].get_embedding().numpy()
+        path = "bert-base-german-dbmdz-cased"
+        logging.info(f"Loading {path.name}...")
+        self.bert_g = BertEmbeddings(path)
+
+        path = str(Path(self.model_directory, f"bert-german-{corpus}-adapted"))
+        logging.info(f"Loading {path.name}...")
+        self.bert_ga = BertEmbeddings(path)
+
+        path = "bert-base-multilingual-cased"
+        logging.info(f"Loading {path.name}...")
+        self.bert_m = BertEmbeddings(path)
+
+        path = str(Path(self.model_directory, f"bert-multi-{corpus}-adapted"))
+        logging.info(f"Loading {path.name}...")
+        self.bert_ma = BertEmbeddings(path)
+
+        path = str(Path(self.model_directory, f"{corpus}-ner"))
+        logging.info(f"Loading {path.name}...")
+        self.bert_ner = BertEmbeddings(path)
+
+    def vectorize(self, sentences, model, add_adj=False, add_nn=False, add_per=False):
+        X = list()
+        y = list()
+        if isinstance(model, BertEmbeddings):
+            _vectorize = self._bert_vectorization
         else:
-            vector = sentence[mention["index"]].get_embedding().numpy()
-        if add_adj:
-            adjs = [
-                i for i, token in enumerate(mention["sentence"]) if token[3] == "ADJA"
-            ]
-            for adj in adjs:
-                vector = vector + sentence[adj].get_embedding().numpy()
-        if add_per:
-            pers = [
-                i for i, token in enumerate(mention["sentence"]) if "PER" in token[1]
-            ]
-            for per in pers:
-                vector = vector + sentence[per].get_embedding().numpy()
-        yield mention["id"], vector
+            _vectorize = self._classic_vectorization
+        for sentence in sentences:
+            persons = list(self._group_persons(sentence))
+            for identifier, indices in persons:
+                vector = _vectorize(sentence, indices, model, add_adj, add_nn, add_per)
+                X.append(vector)
+                y.append(identifier)
+        return X, y
 
-
-def word2vec(modelpath, data, add_adj=False, add_per=False):
-    model = Word2Vec.load(modelpath)
-    distinct_classes = set([mention["id"] for mention in data])
-    classes = {c: i for i, c in enumerate(distinct_classes)}
-    labels_true = list()
-    vectors = list()
-
-    for i, vector in classic_vectorization(data, model, add_adj, add_per):
-        labels_true.append(classes[i])
-        vectors.append(vector)
-
-    X = np.array(vectors)
-    labels_pred = KMeans(
-        n_clusters=len(classes), random_state=23, n_jobs=-1
-    ).fit_predict(X)
-    homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
-        labels_true, labels_pred
-    )
-    return {
-        "homogeneity": round(homogeneity * 100, 2),
-        "completeness": round(completeness * 100, 2),
-        "v": round(v * 100, 2),
-    }
-
-
-def fasttext(modelpath, data, add_adj=False, add_per=False):
-    model = FastText.load(modelpath)
-    distinct_classes = set([mention["id"] for mention in data])
-    classes = {c: i for i, c in enumerate(distinct_classes)}
-    labels_true = list()
-    vectors = list()
-
-    for i, vector in classic_vectorization(data, model, add_adj, add_per):
-        labels_true.append(classes[i])
-        vectors.append(vector)
-
-    X = np.array(vectors)
-    labels_pred = KMeans(
-        n_clusters=len(classes), random_state=23, n_jobs=-1
-    ).fit_predict(X)
-    homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
-        labels_true, labels_pred
-    )
-    return {
-        "homogeneity": round(homogeneity * 100, 2),
-        "completeness": round(completeness * 100, 2),
-        "v": round(v * 100, 2),
-    }
-
-
-def bert(modelpath, data, add_adj=False, add_per=False):
-    model = BertEmbeddings(modelpath)
-    distinct_classes = set([mention["id"] for mention in data])
-    classes = {c: i for i, c in enumerate(distinct_classes)}
-    labels_true = list()
-    vectors = list()
-
-    for i, vector in bert_vectorization(data, model, add_adj, add_per):
-        labels_true.append(classes[i])
-        vectors.append(vector)
-
-    X = np.array(vectors)
-    labels_pred = KMeans(
-        n_clusters=len(classes), random_state=23, n_jobs=-1
-    ).fit_predict(X)
-    homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
-        labels_true, labels_pred
-    )
-    return {
-        "homogeneity": round(homogeneity * 100, 2),
-        "completeness": round(completeness * 100, 2),
-        "v": round(v * 100, 2),
-    }
-
-
-def stacked(bert_path, classic_path, data):
-    bert_model = BertEmbeddings(bert_path)
-    classic_model = FastText.load(classic_path)
-    distinct_classes = set([mention["id"] for mention in data])
-    classes = {c: i for i, c in enumerate(distinct_classes)}
-    labels_true = list()
-    vectors = list()
-
-    for (i, bert_vector), (_, classic_vector) in zip(
-        bert_vectorization(data, bert_model, add_adj=False, add_per=False),
-        classic_vectorization(data, classic_model, add_adj=True, add_per=True),
+    def classic_vectorization(
+        self, sentence, token_indices, model, add_adj=False, add_nn=False, add_per=False
     ):
-        labels_true.append(classes[i])
-        vector = np.concatenate((bert_vector, classic_vector))
-        vectors.append(vector)
+        self._add_tokens(token_indices, add_adj, add_nn, add_per)
+        tokens = [token for i, token in enumerate(sentence_) if i in token_indices]
+        return sum(self._get_classic_embedding(tokens, model)) / len(tokens)
 
-    X = np.array(vectors)
-    labels_pred = KMeans(
-        n_clusters=len(classes), random_state=23, n_jobs=-1
-    ).fit_predict(X)
-    homogeneity, completeness, v = metrics.homogeneity_completeness_v_measure(
-        labels_true, labels_pred
-    )
-    return {
-        "homogeneity": round(homogeneity * 100, 2),
-        "completeness": round(completeness * 100, 2),
-        "v": round(v * 100, 2),
-    }
+    def _bert_vectorization(
+        self, sentence, token_indices, model, add_adj=False, add_nn=False, add_per=False
+    ):
+        text = " ".join(token[0] for token in sentence)
+        sentence_ = Sentence(text, use_tokenizer=False)
+        model.embed(sentence_)
+        self._add_tokens(token_indices, add_adj, add_nn, add_per)
+        tokens = [token for i, token in enumerate(sentence_) if i in token_indices]
+        return sum(self._get_bert_embedding(tokens)) / len(tokens)
+
+    @staticmethod
+    def _group_persons(sentence):
+        indices = list()
+        current_person = None
+        last_index = 0
+        for i, token in enumerate(sentence):
+            if token[2] != "-":
+                if token[2] == current_person and i - 1 == last_index:
+                    indices.append(i)
+                else:
+                    if indices:
+                        yield current_person, indices
+                    indices = list()
+                    indices.append(i)
+                    current_person = token[2]
+                    last_index = i
+
+    @staticmethod
+    def _add_tokens(token_indices, add_adj, add_nn, add_per):
+        if add_adj:
+            adjs = [i for i, token in enumerate(sentence) if "ADJA" in token[3]]
+            token_indices.extend(adjs)
+        if add_nn:
+            nns = [i for i, token in enumerate(sentence) if "NN" in token[3]]
+            token_indices.extend(nns)
+        if add_per:
+            pers = [i for i, token in enumerate(sentence) if "PER" in token[1]]
+            token_indices.extend(pers)
+
+    @staticmethod
+    def _get_bert_embedding(tokens):
+        for token in tokens:
+            yield token.get_embedding().numpy()
+
+    @staticmethod
+    def _get_classic_embedding(tokens, model):
+        for token in tokens:
+            try:
+                yield model.wv[token]
+            except KeyError:
+                # Yield a null vector if not in vocabulary
+                yield [0] * 300
+
+
+class Clustering:
+    def __init__(self, algorithm, X, y):
+        algorithm = self.algorithms.get(algorithm, KMeans)
+        self.X = X
+        self.y = y
+        self.n_clusters = len(set(y))
+        self.random_state = 23
+        self.model = algorithm(
+            n_clusters=self.n_clusters, random_state=self.random_state, n_jobs=-1
+        )
+
+    @property
+    def algorithms(self):
+        return {
+            "kmeans": KMeans,
+            "spectral": SpectralClustering,
+            "ward": AgglomerativeClustering,
+        }
+
+    def evaluate(self):
+        y_ = self.model.fit_predict(self.X)
+        homogeneity = metrics.homogeneity_score(self.y, y_)
+        completeness = metrics.completeness_score(self.y, y_)
+        v_measure = metrics.v_measure_score(self.y, y_)
+        ari = metrics.adjusted_rand_score(self.y, y_)
+        ami = metrics.adjusted_mutual_info_score(self.y, y_)
+        fmi = metrics.fowlkes_mallows_score(self.y, y_)
+        return {
+            "Homogeneity": round(homogeneity, 2),
+            "Completeness": round(completeness, 2),
+            "V-Measure": round(v_measure, 2),
+            "ARI": round(ari, 2),
+            "AMI": round(ami, 2),
+            "FMI": round(fmi, 2),
+        }
 
 
 def compare_approaches_global(data, model_directory, corpus):
@@ -422,6 +410,23 @@ def compare_approaches_global(data, model_directory, corpus):
     logging.info(TABLE_ROW.format(**result))
 
     logging.info(TABLE_END)
+
+
+class LocalKMeans:
+    def __init__(self, dataset, model_directory):
+        self.dataset = dataset
+        self.model_directory
+
+    def word2vec(self, cbow: bool = True):
+        if cbow:
+            path = Path(model_directory, "gutenberg-cbow.word2vec")
+            approach = "CBOW_{w2v}"
+        else:
+            path = Path(model_directory, "gutenberg-skipgram.word2vec")
+            approach = "Skipgram_{w2v}"
+
+        for novel in self.dataset.values():
+            scores = word2vec(path, novel)
 
 
 def compare_approaches_local(data, model_directory, corpus):

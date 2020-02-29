@@ -3286,7 +3286,7 @@ der O - ART
 Knecht B-PER 0_2 NN
 des O - ART
 Bauern B-PER 0_5 NN
-Tochter I-PER 0_118 NN
+Tochter B-PER 0_118 NN
 gewinnen O - VVINF
 . O - $.
 
@@ -40615,7 +40615,7 @@ die O - ART
 , O - $,
 daß O - KOUS
 seine O - PPOSAT
-Soubrette I-PER 11_696 NN
+Soubrette B-PER 11_696 NN
 als O - KOKOM
 Gamsbua O - NE
 auftrat O - VVFIN
@@ -40751,7 +40751,7 @@ das O - PDS
 war O - VAFIN
 man O - PIS
 seinem O - PPOSAT
-Ensemble I-PER 11_708 NN
+Ensemble B-PER 11_708 NN
 schuldig O - ADJD
 . O - $.
 
@@ -65767,7 +65767,7 @@ würde O - VAFIN
 vielleicht O - ADV
 des O - ART
 Gehangenen B-PER 22_2 NN
-Befreundte I-PER 22_5 NN
+Befreundte B-PER 22_5 NN
 gewesen O - VAPP
 sein O - VAINF
 . O - $.
@@ -69842,7 +69842,7 @@ Kette O - NN
 und O - KON
 des O - ART
 Rodelbauern B-PER 24_96 NN
-Aeltester I-PER 24_211 NE
+Aeltester B-PER 24_211 NE
 , O - $,
 den O - PRELS
 er O - PPER
@@ -84613,7 +84613,7 @@ allein O - ADV
 der O - PRELS
 zu O - APPR
 seinem O - PPOSAT
-Kinde I-PER 27_225 NN
+Kinde B-PER 27_225 NN
 nicht O - PTKNEG
 bloß O - ADV
 in O - APPR
@@ -84635,7 +84635,7 @@ ewige O - ADJA
 Liebe O - NN
 für O - APPR
 seine O - PPOSAT
-Sprößlinge I-PER 27_225 NN
+Sprößlinge B-PER 27_225 NN
 . O - $.
 
 Fußnoten O - NN
@@ -90074,7 +90074,7 @@ sie O - PPER
 die O - ART
 heilige O - ADJA
 Mutter B-PER 30_149 NN
-Gottes I-PER 30_57 NE
+Gottes B-PER 30_57 NE
 mit O - APPR
 dem O - ART
 Jesuskinde B-PER 30_151 NN
@@ -95417,7 +95417,7 @@ kann O - VMFIN
 eine O - ART
 Mutter B-PER 30_979 NN
 ihr O - PPOSAT
-Kind I-PER 30_981 NN
+Kind B-PER 30_981 NN
 , O - $,
 das O - PRELS
 sie O - PPER
@@ -109285,7 +109285,7 @@ Tanzai B-PER 35_1 NE
 Likse B-PER 36_1 NE
 und O - KON
 Panulla B-PER 36_2 NE
-Likse I-PER 36_1 NE
+Likse B-PER 36_1 NE
 , O - $,
 eine O - ART
 chinesische O - ADJA
@@ -127743,7 +127743,7 @@ empört O - VVFIN
 oder O - KON
 vielleicht O - ADV
 ihre O - PPOSAT
-Väter I-PER 43_28 NN
+Väter B-PER 43_28 NN
 ) O - $(
 , O - $,
 als O - KOKOM
@@ -128460,7 +128460,7 @@ ihm O - PPER
 daß O - KOUS
 er O - PPER
 seiner O - PPOSAT
-Obrigkeit I-PER 43_105 NN
+Obrigkeit B-PER 43_105 NN
 gehorchen O - VVINF
 solle O - VMFIN
 ; O - $.
@@ -132553,7 +132553,7 @@ hohe O - ADJA
 Begriffe O - NN
 wie O - KOKOM
 sie O - PPER
-selbst I-PER 43_525 ADV
+selbst B-PER 43_525 ADV
 von O - APPR
 ihren O - PPOSAT
 Verdiensten O - NN
@@ -141882,7 +141882,7 @@ ist O - VAFIN
 Mag O - VMFIN
 immer O - ADV
 Serranus B-PER 46_132 NE
-Sulpiciens I-PER 46_1 NE
+Sulpiciens B-PER 46_1 NE
 schätzbaren O - ADJA
 Eigenschaften O - NN
 kein O - PIAT
@@ -143260,7 +143260,7 @@ sein O - PPOSAT
 Ich O - NN
 und O - KON
 sein O - PPOSAT
-eigenes I-PER 47_70 ADJA
+eigenes B-PER 47_70 ADJA
 Leben O - NN
 hat O - VAFIN
 . O - $.
@@ -165358,7 +165358,7 @@ zurückzukehren O - VVIZU
 
 War O - VAFIN
 er O - PPER
-Geograph I-PER 52_66 NN
+Geograph B-PER 52_66 NN
 ? O - $.
 
 Ethnolog B-PER 52_66 NE
@@ -181302,7 +181302,7 @@ mir O - PPER
 Gutes O - NN
 , O - $,
 ihr O - PPOSAT
-Abgeschiedenen I-PER 55_1288 NN
+Abgeschiedenen B-PER 55_1288 NN
 ? O - $.
 
 Was O - PWS
@@ -181337,7 +181337,7 @@ mit O - APPR
 mir O - PPER
 , O - $,
 ihr O - PPER
-Lebenden I-PER 55_1288 NN
+Lebenden B-PER 55_1288 NN
 , O - $,
 klagen O - VVINF
 will O - VMFIN
@@ -181346,7 +181346,7 @@ mit O - APPR
 euch O - PPER
 , O - $,
 ihr O - PPER
-Gestorbenen I-PER 55_1288 NN
+Gestorbenen B-PER 55_1288 NN
 , O - $,
 denen O - PDS
 – O - $(
@@ -184354,7 +184354,7 @@ ein O - ART
 Raum O - NN
 für O - APPR
 uns O - PPER
-Armen I-PER 55_1589 NN
+Armen B-PER 55_1589 NN
 ! O - $.
 
 Nur O - ADV
@@ -198548,7 +198548,7 @@ Kapselstock O - NN
 war O - VAFIN
 eine O - ART
 Mutter B-PER 61_148 NN
-Gottes I-PER 61_87 NE
+Gottes B-PER 61_87 NE
 in O - APPR
 feinen O - ADJA
 Linien O - NN
@@ -201649,7 +201649,7 @@ recht O - ADJD
 , O - $,
 ob O - KOUS
 sie O - PPER
-Verwandte I-PER 62_504 NN
+Verwandte B-PER 62_504 NN
 hätten O - VAFIN
 oder O - KON
 nicht O - PTKNEG
@@ -206536,7 +206536,7 @@ Wohlwollen O - NN
 das O - PRELS
 man O - PIS
 ihren O - PPOSAT
-Kindern I-PER 63_757 NN
+Kindern B-PER 63_757 NN
 schenkt O - VVFIN
 . O - $.
 
@@ -218042,7 +218042,7 @@ weiß O - VVFIN
 daß O - KOUS
 er O - PPER
 seiner O - PPOSAT
-Frau I-PER 69_221 NN
+Frau B-PER 69_221 NN
 nicht O - PTKNEG
 gleichgültig O - ADJD
 ist O - VAFIN
@@ -225470,7 +225470,7 @@ einem O - PIS
 der O - ART
 vielen O - PIDAT
 Brüder B-PER 72_186 NN
-Pathe I-PER 72_184 NE
+Pathe B-PER 72_184 NE
 gestanden O - VVPP
 . O - $.
 
