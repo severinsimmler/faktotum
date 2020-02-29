@@ -27,15 +27,15 @@ def compare_embeddings(model_directory):
 
     for approach, model in {
         ("CBOW_{w2v}", embeddings.cbow_w2v),
-        ("Skipgram_{w2v}", embeddings.skipgram_w2v),
+        #("Skipgram_{w2v}", embeddings.skipgram_w2v),
         ("Facebook CBOW_{ft}", embeddings.cbow_ft_fb),
-        ("CBOW_{ft}", embeddings.cbow_ft),
-        ("Skipgram_{ft}", embeddings.skipgram_ft),
-        ("dBERT", embeddings.bert_g),
-        ("dBERT_{\ddagger}", embeddings.bert_ga),
-        ("mBERT", embeddings.bert_m),
-        ("mBERT_{\ddagger}", embeddings.bert_ma),
-        ("BERT_{ner}", embeddings.bert_ner),
+        #("CBOW_{ft}", embeddings.cbow_ft),
+        #("Skipgram_{ft}", embeddings.skipgram_ft),
+        #("dBERT", embeddings.bert_g),
+        #("dBERT_{\ddagger}", embeddings.bert_ga),
+        #("mBERT", embeddings.bert_m),
+        #("mBERT_{\ddagger}", embeddings.bert_ma),
+        #("BERT_{ner}", embeddings.bert_ner),
     }:
         scores = list()
         for novel in data.values():
@@ -46,6 +46,12 @@ def compare_embeddings(model_directory):
             score = clustering.evaluate()
             scores.append(score)
         scores = pd.DataFrame(scores)
-        scores = {"approach": approach, "mean": scores.mean(), "std": scores.std()}
-        print(approach, scores)
-        stats.append(scores)
+        values = {
+            index: f"{mean} (±{std})"
+            for index, mean, std in zip(
+                scores.columns, scores.mean().round(2), scores.std().round(2)
+            )
+        }
+        stats.append(values)
+        index.append(approach)
+    return pd.DataFrame(stats, index=index)
