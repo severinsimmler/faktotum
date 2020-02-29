@@ -25,39 +25,39 @@ logging.basicConfig(format="%(message)s", level=logging.INFO)
 class Embeddings:
     def __init__(self, model_directory, corpus):
         path = str(Path(model_directory, f"{corpus}-cbow.word2vec"))
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.cbow_w2v = Word2Vec.load(path)
 
         path = str(Path(model_directory, f"{corpus}-skipgram.word2vec"))
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.skipgram_w2v = Word2Vec.load(path)
 
         path = str(Path(model_directory, f"{corpus}-cbow.fasttext"))
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.cbow_ft = FastText.load(path)
 
         path = str(Path(model_directory, f"{corpus}-skipgram.fasttext"))
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.skipgram_ft = FastText.load(path)
 
         path = "bert-base-german-dbmdz-cased"
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.bert_g = BertEmbeddings(path)
 
         path = str(Path(model_directory, f"bert-german-{corpus}-adapted"))
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.bert_ga = BertEmbeddings(path)
 
         path = "bert-base-multilingual-cased"
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.bert_m = BertEmbeddings(path)
 
         path = str(Path(model_directory, f"bert-multi-{corpus}-adapted"))
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.bert_ma = BertEmbeddings(path)
 
         path = str(Path(model_directory, f"{corpus}-ner"))
-        logging.info(f"Loading {path.name}...")
+        logging.info(f"Loading {path}...")
         self.bert_ner = BertEmbeddings(path)
 
     def vectorize(self, sentences, model, add_adj=False, add_nn=False, add_per=False):
