@@ -80,7 +80,7 @@ class Embeddings:
                 vector = _vectorize(sentence, indices, model, add_adj, add_nn, add_per)
                 X.append(vector)
                 y.append(identifier)
-        return X, y
+        return np.array(X), np.array(y)
 
     def _classic_vectorization(
         self, sentence, token_indices, model, add_adj=False, add_nn=False, add_per=False
@@ -137,7 +137,7 @@ class Embeddings:
     def _get_classic_embedding(tokens, model):
         for token in tokens:
             try:
-                yield model.wv[token].reshape(1, -1)
+                yield model.wv[token]
             except KeyError:
                 # Yield a null vector if not in vocabulary
                 yield np.array([0] * 300)
