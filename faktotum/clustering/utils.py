@@ -93,6 +93,7 @@ class Embeddings:
         model.embed(sentence_)
         self._add_tokens(token_indices, add_adj, add_nn, add_per)
         tokens = [token for i, token in enumerate(sentence_) if i in token_indices]
+        print(self._get_bert_embedding(tokens))
         return sum(self._get_bert_embedding(tokens)) / len(tokens)
 
     @staticmethod
@@ -133,7 +134,7 @@ class Embeddings:
     def _get_classic_embedding(tokens, model):
         for token in tokens:
             try:
-                yield np.array(model.wv[token])
+                yield model.wv[token]
             except KeyError:
                 # Yield a null vector if not in vocabulary
                 yield [0] * 300
