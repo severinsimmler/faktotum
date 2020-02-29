@@ -24,19 +24,19 @@ logging.basicConfig(format="%(message)s", level=logging.INFO)
 
 class Embeddings:
     def __init__(self, model_directory, corpus):
-        path = str(Path(self.model_directory, f"{corpus}-cbow.word2vec"))
+        path = str(Path(model_directory, f"{corpus}-cbow.word2vec"))
         logging.info(f"Loading {path.name}...")
         self.cbow_w2v = Word2Vec.load(path)
 
-        path = str(Path(self.model_directory, f"{corpus}-skipgram.word2vec"))
+        path = str(Path(model_directory, f"{corpus}-skipgram.word2vec"))
         logging.info(f"Loading {path.name}...")
         self.skipgram_w2v = Word2Vec.load(path)
 
-        path = str(Path(self.model_directory, f"{corpus}-cbow.fasttext"))
+        path = str(Path(model_directory, f"{corpus}-cbow.fasttext"))
         logging.info(f"Loading {path.name}...")
         self.cbow_ft = FastText.load(path)
 
-        path = str(Path(self.model_directory, f"{corpus}-skipgram.fasttext"))
+        path = str(Path(model_directory, f"{corpus}-skipgram.fasttext"))
         logging.info(f"Loading {path.name}...")
         self.skipgram_ft = FastText.load(path)
 
@@ -44,7 +44,7 @@ class Embeddings:
         logging.info(f"Loading {path.name}...")
         self.bert_g = BertEmbeddings(path)
 
-        path = str(Path(self.model_directory, f"bert-german-{corpus}-adapted"))
+        path = str(Path(model_directory, f"bert-german-{corpus}-adapted"))
         logging.info(f"Loading {path.name}...")
         self.bert_ga = BertEmbeddings(path)
 
@@ -52,11 +52,11 @@ class Embeddings:
         logging.info(f"Loading {path.name}...")
         self.bert_m = BertEmbeddings(path)
 
-        path = str(Path(self.model_directory, f"bert-multi-{corpus}-adapted"))
+        path = str(Path(model_directory, f"bert-multi-{corpus}-adapted"))
         logging.info(f"Loading {path.name}...")
         self.bert_ma = BertEmbeddings(path)
 
-        path = str(Path(self.model_directory, f"{corpus}-ner"))
+        path = str(Path(model_directory, f"{corpus}-ner"))
         logging.info(f"Loading {path.name}...")
         self.bert_ner = BertEmbeddings(path)
 
@@ -415,7 +415,7 @@ def compare_approaches_global(data, model_directory, corpus):
 class LocalKMeans:
     def __init__(self, dataset, model_directory):
         self.dataset = dataset
-        self.model_directory
+        model_directory
 
     def word2vec(self, cbow: bool = True):
         if cbow:
