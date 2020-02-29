@@ -2,6 +2,11 @@ from faktotum.clustering.utils import Embeddings, Clustering
 from pathlib import Path
 import json
 import pandas as pd
+import logging
+
+
+logging.basicConfig(format="%(message)s", level=logging.INFO)
+
 
 def load_data():
     package_folder = Path(__file__).parent.parent
@@ -39,4 +44,6 @@ def compare_embeddings(model_directory):
             score = clustering.evaluate()
             scores.append(score)
         scores = pd.DataFrame(scores)
-        stats.append({"approach": approach, "mean": scores.mean(), "std": scores.std()})
+        scores = {"approach": approach, "mean": scores.mean(), "std": scores.std()}
+        print(approach, scores)
+        stats.append(scores)
