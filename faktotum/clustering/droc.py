@@ -1,5 +1,6 @@
 from faktotum.clustering.utils import Embeddings, Clustering
 from pathlib import Path
+import json
 import pandas as pd
 
 def load_data():
