@@ -20,6 +20,7 @@ def load_data():
 
 def compare_embeddings(model_directory):
     stats = list()
+    index = list()
 
     data = load_data()
     embeddings = Embeddings(model_directory, "gutenberg")
