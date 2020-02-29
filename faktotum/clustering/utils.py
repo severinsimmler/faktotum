@@ -87,7 +87,6 @@ class Embeddings:
     ):
         self._add_tokens(token_indices, add_adj, add_nn, add_per)
         tokens = [token for i, token in enumerate(sentence) if i in token_indices]
-        print(list(self._get_classic_embedding(tokens, model)))
         return sum(self._get_classic_embedding(tokens, model)) / len(tokens)
 
     def _bert_vectorization(
@@ -141,7 +140,7 @@ class Embeddings:
                 yield model.wv[token].reshape(1, -1)
             except KeyError:
                 # Yield a null vector if not in vocabulary
-                yield [0] * 300
+                yield np.array([0] * 300)
 
 
 class Clustering:
