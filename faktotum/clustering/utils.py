@@ -82,7 +82,7 @@ class Embeddings:
         self, sentence, token_indices, model, add_adj=False, add_nn=False, add_per=False
     ):
         self._add_tokens(token_indices, add_adj, add_nn, add_per)
-        tokens = [token for i, token in enumerate(sentence_) if i in token_indices]
+        tokens = [token for i, token in enumerate(sentence) if i in token_indices]
         return sum(self._get_classic_embedding(tokens, model)) / len(tokens)
 
     def _bert_vectorization(
