@@ -32,6 +32,10 @@ class Embeddings:
         logging.info(f"Loading {path}...")
         self.skipgram_w2v = Word2Vec.load(path)
 
+        path = str(Path(model_directory, f"facebook-{corpus}-cbow.fasttext"))
+        logging.info(f"Loading {path}...")
+        self.cbow_ft_fb = FastText.load(path)
+
         path = str(Path(model_directory, f"{corpus}-cbow.fasttext"))
         logging.info(f"Loading {path}...")
         self.cbow_ft = FastText.load(path)
@@ -134,7 +138,7 @@ class Embeddings:
     def _get_classic_embedding(tokens, model):
         for token in tokens:
             try:
-                yield model.wv[token]
+                yield model.wv[token].reshape(1, -1)
             except KeyError:
                 # Yield a null vector if not in vocabulary
                 yield [0] * 300
