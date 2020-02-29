@@ -115,6 +115,8 @@ class Embeddings:
                     indices.append(i)
                     current_person = token[2]
                     last_index = i
+        if indices:
+            yield current_person, indices
 
     @staticmethod
     def _add_tokens(token_indices, add_adj, add_nn, add_per):
