@@ -1,6 +1,8 @@
 import json
 import logging
 from pathlib import Path
+from sklearn.utils.testing import ignore_warnings
+from sklearn.exceptions import ConvergenceWarning
 
 import pandas as pd
 
@@ -19,6 +21,7 @@ def load_data():
     return data
 
 
+@ignore_warnings(category=ConvergenceWarning)
 def compare_embeddings(model_directory):
     stats = list()
     index = list()
