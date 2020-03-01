@@ -37,21 +37,27 @@ def compare_embeddings(model_directory):
         ("mBERT_{\ddagger}", embeddings.bert_ma),
         ("BERT_{ner}", embeddings.bert_ner),
     }:
-        scores = list()
-        for novel in data.values():
-            X, y = embeddings.vectorize(
-                novel, model, add_adj=False, add_nn=False, add_per=False
-            )
-            clustering = Clustering("kmeans", X, y)
-            score = clustering.evaluate()
-            scores.append(score)
-        scores = pd.DataFrame(scores)
-        values = {
-            index: f"{mean} (±{std})"
-            for index, mean, std in zip(
-                scores.columns, scores.mean().round(2), scores.std().round(2)
-            )
-        }
-        stats.append(values)
-        index.append(approach)
+        for suffix, features in [
+            ("", {"add_adj": False, "add_nn": False, "add_per": False}),
+            ("+ ADJ", {"add_adj": True, "add_nn": False, "add_per": False}),
+            ("+ NN", {"add_adj": False, "add_nn": True, "add_per": False}),
+            ("+ PER", {"add_adj": False, "add_nn": False, "add_per": True}),
+            ("+ ADJ + NN + PER", {"add_adj": True, "add_nn": True, "add_per": True}),
+        ]:
+            approach = approach + suffix
+            scores = list()
+            for novel in data.values():
+                X, y = embeddings.vectorize(novel, model, **features)
+                clustering = Clustering("kmeans", X, y)
+                score = clustering.evaluate()
+                scores.append(score)
+            scores = pd.DataFrame(scores)
+            values = {
+                index: f"{mean} (±{std})"
+                for index, mean, std in zip(
+                    scores.columns, scores.mean().round(2), scores.std().round(2)
+                )
+            }
+            stats.append(values)
+            index.append(approach)
     return pd.DataFrame(stats, index=index)
