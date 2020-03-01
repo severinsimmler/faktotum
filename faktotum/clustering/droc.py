@@ -70,6 +70,7 @@ def compare_algorithms(model_directory, embedding):
     embeddings = Embeddings(model_directory, "gutenberg", load=embedding)
 
     for algorithm in {"kmeans", "spectral", "ward"}:
+        logging.info(algorithm)
         scores = list()
         for novel in data.values():
             X, y = embeddings.vectorize(novel, embeddings.bert_ner)
