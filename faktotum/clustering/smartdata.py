@@ -32,7 +32,7 @@ def compare_embeddings(model_directory):
     stats = list()
     index = list()
 
-    data = load_data()
+    data = list(load_data())
     embeddings = Embeddings(model_directory, "presse")
 
     for embedding, model in [
@@ -56,7 +56,6 @@ def compare_embeddings(model_directory):
             X, y = embeddings.vectorize(data, model, **kwargs)
             clustering = Clustering("kmeans", X, y)
             score = clustering.evaluate()
-            print(score)
             stats.append(score)
             index.append(approach)
     return pd.DataFrame(stats, index=index)
@@ -66,23 +65,15 @@ def compare_algorithms(model_directory, embedding):
     stats = list()
     index = list()
 
-    data = load_data()
+    data = list(load_data())
     embeddings = Embeddings(model_directory, "presse", load=embedding)
 
     for algorithm in {"kmeans", "spectral", "ward"}:
         scores = list()
-        for novel in data.values():
-            X, y = embeddings.vectorize(novel, embeddings.TODO)
-            clustering = Clustering(algorithm, X, y)
-            score = clustering.evaluate()
-            scores.append(score)
-        scores = pd.DataFrame(scores)
-        values = {
-            index: f"{mean} (±{std})"
-            for index, mean, std in zip(
-                scores.columns, scores.mean().round(2), scores.std().round(2)
-            )
-        }
-        stats.append(values)
+        X, y = embeddings.vectorize(data, embeddings.TODO)
+        clustering = Clustering(algorithm, X, y)
+        score = clustering.evaluate()
+        score = clustering.evaluate()
+        stats.append(score)
         index.append(approach)
     return pd.DataFrame(stats, index=index)

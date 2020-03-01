@@ -79,7 +79,7 @@ class Embeddings:
             logging.info(f"Loading {path}...")
             self.bert_ner = BertEmbeddings(path)
 
-    def vectorize(self, sentences, model, add_adj=False, add_nn=False, add_per=False):
+    def vectorize(self, sentences, model, add_adj=False):
         X = list()
         y = list()
         if isinstance(model, BertEmbeddings):
@@ -89,25 +89,21 @@ class Embeddings:
         for sentence in sentences:
             persons = list(self._group_persons(sentence))
             for identifier, indices in persons:
-                vector = _vectorize(sentence, indices, model, add_adj, add_nn, add_per)
+                vector = _vectorize(sentence, indices, model, add_adj)
                 X.append(vector)
                 y.append(identifier)
         return np.array(X), np.array(y)
 
-    def _classic_vectorization(
-        self, sentence, token_indices, model, add_adj=False, add_nn=False, add_per=False
-    ):
-        self._add_tokens(sentence, token_indices, add_adj, add_nn, add_per)
+    def _classic_vectorization(self, sentence, token_indices, model, add_adj=False):
+        self._add_tokens(sentence, token_indices, add_adj)
         tokens = [token[0] for i, token in enumerate(sentence) if i in token_indices]
         return sum(self._get_classic_embedding(tokens, model)) / len(tokens)
 
-    def _bert_vectorization(
-        self, sentence, token_indices, model, add_adj=False, add_nn=False, add_per=False
-    ):
+    def _bert_vectorization(self, sentence, token_indices, model, add_adj=False):
         text = " ".join(token[0] for token in sentence)
         sentence_ = Sentence(text, use_tokenizer=False)
         model.embed(sentence_)
-        self._add_tokens(sentence, token_indices, add_adj, add_nn, add_per)
+        self._add_tokens(sentence, token_indices, add_adj)
         tokens = [token for i, token in enumerate(sentence_) if i in token_indices]
         return sum(self._get_bert_embedding(tokens)) / len(tokens)
 
@@ -131,7 +127,7 @@ class Embeddings:
             yield current_person, indices
 
     @staticmethod
-    def _add_tokens(sentence, token_indices, add_adj, add_nn, add_per):
+    def _add_tokens(sentence, token_indices, add_adj):
         if add_adj:
             adjs = [i for i, token in enumerate(sentence) if "ADJA" in token[3]]
             token_indices.extend(adjs)
@@ -158,7 +154,7 @@ class SemiSupervisedKMeans:
 
     def fit_predict(self, X):
         centroids = np.array(list(self._calculate_centroids(X)))
-        _, y = scipy.cluster.vq.kmeans2(X, centroids, minit='matrix')
+        _, y = scipy.cluster.vq.kmeans2(X, centroids, minit="matrix")
         return y
 
     def _calculate_centroids(self, X):
