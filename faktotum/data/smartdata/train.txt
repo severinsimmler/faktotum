@@ -12,11 +12,11 @@ dts O - NE
 nachrichtenagentur.de O - FM
 Der O - ART
 frühere O - ADJA
-Fifa B-ORG 15 NE Q253414
+Fifa B-ORG Q253414 NE Q253414
 - O - $(
 Mediendirektor O 15 NN
-Guido B-PER 15 NE NIL
-Tognoni I-PER 15 NE NIL
+Guido B-PER - NE NIL
+Tognoni I-PER - NE NIL
 geht O - VVFIN
 davon O - PROAV
 aus O - PTKVZ
@@ -39,7 +39,7 @@ Bild O - NN
 dts O - NE
 Nachrichtenagentur O - NN
 Ex-Fifa-Mediendirektor O - NN
-Tognoni B-PER 18 NE NIL
+Tognoni B-PER - NE NIL
 : O - $.
 
 Es O - PPER
@@ -49,11 +49,11 @@ wenig O - ADV
 ändern O - VVINF
 Der O - ART
 frühere O - ADJA
-Fifa B-ORG 21 NE Q253414
+Fifa B-ORG Q253414 NE Q253414
 - O - $(
 Mediendirektor O 21 NN
-Guido B-PER 21 NE NIL
-Tognoni I-PER 21 NE NIL
+Guido B-PER - NE NIL
+Tognoni I-PER - NE NIL
 geht O - VVFIN
 davon O - PROAV
 aus O - PTKVZ
@@ -78,8 +78,8 @@ Der O - ART
 favorisierte O - ADJA
 Kandidat O - NN
 , O - $,
-Scheich B-PER - NE Q7405402
-Salman I-PER - NE Q7405402
+Scheich B-PER Q7405402 NE Q7405402
+Salman I-PER Q7405402 NE Q7405402
 aus O - APPR
 Bahrain O - NE
 , O - $,
@@ -93,7 +93,7 @@ Das O - PDS
 ist O - VAFIN
 für O - APPR
 die O - ART
-Fifa B-ORG - NE Q253414
+Fifa B-ORG Q253414 NE Q253414
 ein O - ART
 schlechtes O - ADJA
 Signal O - NN
@@ -123,7 +123,7 @@ mit O - APPR
 einem O - ART
 neuen O - ADJA
 Präsidenten O - NN
-Salman B-PER - NE Q7405402
+Salman B-PER Q7405402 NE Q7405402
 wird O - VAFIN
 das O - PDS
 genauso O - ADV
@@ -135,7 +135,7 @@ am O - APPRART
 Freitag O - NN
 dem O - ART
 Sender O - NN
-hr1 B-ORG - NE Q1632263
+hr1 B-ORG Q1632263 NE Q1632263
 . O - $.
 
 Mit O - APPR
@@ -145,7 +145,7 @@ umstrittenen O - ADJA
 Funktionär O - NN
 werde O - VAFIN
 die O - ART
-Fifa B-ORG - NE Q253414
+Fifa B-ORG Q253414 NE Q253414
 weiter O - ADV
 in O - APPR
 geschwächter O - ADJA
@@ -166,7 +166,7 @@ existierende O - ADJA
 Mikroblogging O - NN
 - O - $(
 Dienst O - NN
-Twitter B-ORG - NE Q918
+Twitter B-ORG Q918 NE Q918
 hat O - VAFIN
 nach O - ADV
 wie O - KOKOM
@@ -371,12 +371,12 @@ Sieg O - NN
 im O - APPRART
 Nachholspiel O - NN
 gegen O - APPR
-Pyrmont B-ORG - NE Q2306182
-II I-ORG - CARD Q2306182
+Pyrmont B-ORG Q2306182 NE Q2306182
+II I-ORG Q2306182 CARD Q2306182
 den O - ART
 Abstand O - NN
 auf O - APPR
-Kanzleramt B-ORG - NN Q317027
+Kanzleramt B-ORG Q317027 NN Q317027
 : O - $.
 
 Keine O - PIAT
@@ -388,12 +388,12 @@ Armee O - NN
 Tornado O - NE
 “ O - $(
 des O - ART
-Taktischen B-ORG - ADJA Q759780
-Luftwaffengeschwaders I-ORG - NN Q759780
-51 I-ORG - CARD Q759780
-„ I-ORG - $( Q759780
-Immelmann I-ORG - NE Q759780
-“ I-ORG - $( Q759780
+Taktischen B-ORG Q759780 ADJA Q759780
+Luftwaffengeschwaders I-ORG Q759780 NN Q759780
+51 I-ORG Q759780 CARD Q759780
+„ I-ORG Q759780 $( Q759780
+Immelmann I-ORG Q759780 NE Q759780
+“ I-ORG Q759780 $( Q759780
 über O - APPR 
 dem O - ART
 Fliegerhorst O - NN
@@ -415,16 +415,16 @@ Typ O - NN
 Tornado O - NE
 “ O - $(
 des O - ART
-Taktischen B-ORG - ADJA Q759780
-Luftwaffengeschwaders I-ORG - NN Q759780
-51 I-ORG - CARD Q759780
-„ I-ORG - $( Q759780
-Immelmann I-ORG - NE Q759780
-“ I-ORG - $( Q759780
+Taktischen B-ORG Q759780 ADJA Q759780
+Luftwaffengeschwaders I-ORG Q759780 NN Q759780
+51 I-ORG Q759780 CARD Q759780
+„ I-ORG Q759780 $( Q759780
+Immelmann I-ORG Q759780 NE Q759780
+“ I-ORG Q759780 $( Q759780
 der O - ART
-Luftwaffe B-ORG - NN Q56013
+Luftwaffe B-ORG Q56013 NN Q56013
 der O - ART
-Bundeswehr B-ORG - NN Q56013
+Bundeswehr B-ORG Q56013 NN Q56013
 setzt O - VVFIN
 zur O - APPRART
 Landung O - NN
@@ -442,8 +442,8 @@ Carsten B-PER - NE NIL
 Rehder I-PER - NE NIL
 Carsten B-PER - NE NIL
 Rehder I-PER - NE NIL
-Kanzlerin B-PER - NN Q567
-Merkel I-PER - NE Q567
+Kanzlerin B-PER Q567 NN Q567
+Merkel I-PER Q567 NE Q567
 ( O - $(
 M O - NE
 ) O - $(
@@ -471,8 +471,8 @@ der O - ART
 Koalition O - NN
 : O - $.
 
-Anton B-PER - NE Q103519
-Hofreiter I-PER - NE Q103519
+Anton B-PER Q103519 NE Q103519
+Hofreiter I-PER Q103519 NE Q103519
 . O - $.
 
 Foto O - NN
@@ -495,7 +495,7 @@ Bundeswehreinsatz O - NN
 gegen O - APPR
 die O - ART
 Terrororganisation O - NN
-IS B-ORG - NE Q2429253
+IS B-ORG Q2429253 NE Q2429253
 an O - PTKVZ
 . O - $.
 
@@ -537,7 +537,7 @@ Rehder I-PER - NE NIL
 / O - $(
 Archiv O - NN
 Berlin O - NE
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Eine O - ART
 Zusammenarbeit O - NN
 mit O - APPR
@@ -591,7 +591,7 @@ Wiener O - ADJA
 Derby O - NE
 steht O - VVFIN
 für O - APPR
-Rapid B-ORG - NE Q131215
+Rapid B-ORG Q131215 NE Q131215
 schon O - ADV
 das O - ART
 nächste O - ADJA
@@ -612,18 +612,18 @@ die O - ART
 Mannschaft O - NN
 von O - APPR
 Trainer O - NN
-Zoran B-PER - NE Q220490
-Barišić I-PER - NE Q220490
+Zoran B-PER Q220490 NE Q220490
+Barišić I-PER Q220490 NE Q220490
 ab O - APPR
 21:05 B-PER - CARD NIL
 Uhr I-PER - NN NIL
 ( O - $(
 live O - ADJD
 auf O - APPR
-Puls B-ORG - NN Q358559
-4 I-ORG - CARD Q358559
+Puls B-ORG Q358559 NN Q358559
+4 I-ORG Q358559 CARD Q358559
 , O - $,
-Sky B-ORG - NE Q918390
+Sky B-ORG Q918390 NE Q918390
 und O - KON
 im O - APPRART
 VIENNA.at B-ORG - NE NIL
@@ -635,15 +635,15 @@ Mestalla O - NE
 - O - $(
 Stadion O - NN
 des O - ART
-FC B-ORG - NE Q10333
-Valencia I-ORG - NE Q10333
+FC B-ORG Q10333 NE Q10333
+Valencia I-ORG Q10333 NE Q10333
 . O - $.
 
 Nach O - APPR
 den O - ART
 Gruppenduellen O - NN
 mit O - APPR
-Villarreal B-ORG - NE Q12297
+Villarreal B-ORG Q12297 NE Q12297
 läutet O - VVFIN
 die O - ART
 Partie O - NN
@@ -658,20 +658,20 @@ den O - ART
 zweiten O - ADJA
 Teil O - NN
 von O - APPR
-Rapids B-ORG - NE Q131215
+Rapids B-ORG Q131215 NE Q131215
 spanischen O - ADJA
 Wochen O - NN
 in O - APPR
 der O - ART
-Europa B-ORG - NE Q18760
-League I-ORG - FM Q18760
+Europa B-ORG Q18760 NE Q18760
+League I-ORG Q18760 FM Q18760
 ein O - PTKVZ
 . O - $.
 
 Zuvor O - ADV
 waren O - VAFIN
 die O - ART
-Wiener B-ORG - ADJA Q131215
+Wiener B-ORG Q131215 ADJA Q131215
 34 O - CARD
 Jahre O - NN
 lang O - APPO
@@ -724,26 +724,26 @@ Hochwasser O - NN
 gemeistert O - VVPP
 : O - $.
 
-Hubert B-PER 32 NE NIL
-Finke I-PER 32 NE NIL
+Hubert B-PER - NE NIL
+Finke I-PER - NE NIL
 ( O - $(
 l. O - NE
 ) O - $(
 als O - KOKOM
 Leiter O 32 NN
 des O - ART
-Wittenberger B-ORG 32 ADJA NIL
-Wasser I-ORG 32 NN NIL
-- I-ORG 32 TRUNC NIL
-und I-ORG 32 KON NIL
-Schifffahrtsamtes I-ORG 32 NN NIL
+Wittenberger B-ORG - ADJA NIL
+Wasser I-ORG - NN NIL
+- I-ORG - TRUNC NIL
+und I-ORG - KON NIL
+Schifffahrtsamtes I-ORG - NN NIL
 , O - $,
 sowie O - KON
-Erich B-PER 35 NE NIL
-Schlotthauer I-PER 35 NE NIL
+Erich B-PER - NE NIL
+Schlotthauer I-PER - NE NIL
 , O - $,
 Sachbereichsleiter O 35 NN
-Katastrophenschutz B-ORG 35 NN Q1735655
+Katastrophenschutz B-ORG Q1735655 NN Q1735655
 . O - $.
 
 1 O - CARD
@@ -1045,8 +1045,8 @@ Horn I-PER - NE NIL
 . O - $.
 
 © O - FM
-From B-ORG - FM Q2414469
-Software I-ORG - FM Q2414469
+From B-ORG Q2414469 FM Q2414469
+Software I-ORG Q2414469 FM Q2414469
 legt O - VVFIN
 Dark O - FM
 Souls O - FM
@@ -1058,13 +1058,13 @@ Nachfolger O - NN
 in O - APPR
 naher O - ADJA
 Zukunft O - NN
-Hidetaka B-PER 38 NE Q11454590
-Miyazaki I-PER 38 NE Q11454590
+Hidetaka B-PER Q11454590 NE Q11454590
+Miyazaki I-PER Q11454590 NE Q11454590
 , O - $,
 Präsident O 38 NN
 von O - APPR
-From B-ORG - FM Q2414469
-Software I-ORG - FM Q2414469
+From B-ORG Q2414469 FM Q2414469
+Software I-ORG Q2414469 FM Q2414469
 , O - $,
 hat O - VAFIN
 in O - APPR
@@ -1143,8 +1143,8 @@ enttäuscht O - VVPP
 . O - $.
 
 Denn O - KON
-Hidetaka B-PER - NE Q11454590
-Miyazaki I-PER - NE Q11454590
+Hidetaka B-PER Q11454590 NE Q11454590
+Miyazaki I-PER Q11454590 NE Q11454590
 , O - $,
 seines O - PPOSAT
 Zeichens O - NN
@@ -1216,55 +1216,55 @@ Burdafashion O - NE
 Fotocredits O - NE
 : O - $.
 
-Universal B-ORG - FM Q4005797
-Home I-ORG - FM Q4005797
-Entertainment I-ORG - FM Q4005797
+Universal B-ORG Q4005797 FM Q4005797
+Home I-ORG Q4005797 FM Q4005797
+Entertainment I-ORG Q4005797 FM Q4005797
 , O - $,
-Vox B-ORG - NE Q684981
+Vox B-ORG Q684981 NE Q684981
 , O - $,
-ARD B-ORG - NE Q49653
+ARD B-ORG Q49653 NE Q49653
 ( O - $(
 2 O - CARD
 ) O - $(
 , O - $,
-RTL B-ORG - NE Q155702
+RTL B-ORG Q155702 NE Q155702
 ( O - $(
 3 O - CARD
 ) O - $(
 , O - $,
 Imago B-ORG - NE NIL
 , O - $,
-Twentieth B-ORG - FM Q434841
-Century I-ORG - FM Q434841
-FOX I-ORG - NE Q434841
+Twentieth B-ORG Q434841 FM Q434841
+Century I-ORG Q434841 FM Q434841
+FOX I-ORG Q434841 NE Q434841
 ( O - $(
 4 O - CARD
 ) O - $(
 , O - $,
-Universal B-ORG - FM Q21043034
-Pictures I-ORG - FM Q21043034
+Universal B-ORG Q21043034 FM Q21043034
+Pictures I-ORG Q21043034 FM Q21043034
 , O - $,
-STUDIOCANAL B-ORG - NE Q2450848
+STUDIOCANAL B-ORG Q2450848 NE Q2450848
 , O - $,
-Universum B-ORG - NE Q2496469
-Film I-ORG - FM Q2496469
+Universum B-ORG Q2496469 NE Q2496469
+Film I-ORG Q2496469 FM Q2496469
 , O - $,
-ARD B-ORG - NE Q49653
+ARD B-ORG Q49653 NE Q49653
 , O - $,
-Degeto B-ORG - NE Q1182873
+Degeto B-ORG Q1182873 NE Q1182873
 , O - $,
 NFP B-ORG - NE NIL
 , O - $,
-Arte B-ORG - NE Q8073
+Arte B-ORG Q8073 NE Q8073
 , O - $,
-SWR B-ORG - NE Q700133
+SWR B-ORG Q700133 NE Q700133
 , O - $,
-ZDF B-ORG - NE Q48989
+ZDF B-ORG Q48989 NE Q48989
 Die O - ART
-TV B-ORG - NN Q2386017
-SPIELFILM I-ORG - NE Q2386017
-Verlag I-ORG - NN Q2386017
-GmbH I-ORG - NN Q2386017
+TV B-ORG Q2386017 NN Q2386017
+SPIELFILM I-ORG Q2386017 NE Q2386017
+Verlag I-ORG Q2386017 NN Q2386017
+GmbH I-ORG Q2386017 NN Q2386017
 weist O - VVFIN
 darauf O - PROAV
 hin O - PTKVZ
@@ -1308,7 +1308,7 @@ ein O - ART
 Kamerateam O - NN
 des O - ART
 Fernsehsenders O - NN
-RTL2 B-ORG - NE Q594177
+RTL2 B-ORG Q594177 NE Q594177
 bei O - APPR
 der O - ART
 Neumünsteraner O - ADJA
@@ -1640,11 +1640,11 @@ Grad O - NN
 
 Gemeldet O - VVPP
 vom O - APPRART
-Bundesamt B-ORG - NN Q1005487
-für I-ORG - APPR Q1005487
-Seeschifffahrt I-ORG - NN Q1005487
-und I-ORG - KON Q1005487
-Hydrographie I-ORG - NN Q1005487
+Bundesamt B-ORG Q1005487 NN Q1005487
+für I-ORG Q1005487 APPR Q1005487
+Seeschifffahrt I-ORG Q1005487 NN Q1005487
+und I-ORG Q1005487 KON Q1005487
+Hydrographie I-ORG Q1005487 NN Q1005487
 Hochwasser O - NN
 : O - $.
 
@@ -1662,17 +1662,17 @@ Am O - APPRART
 29 O - CARD
 . O - $.
 
-Premier B-ORG - FM Q9448
-League I-ORG - FM Q9448
+Premier B-ORG Q9448 FM Q9448
+League I-ORG Q9448 FM Q9448
 - O - $(
 Spieltag O - NN
 treffen O - VVFIN
 bei O - APPR
 der O - ART
 Partie O - NN
-Watford B-ORG - NE Q2714
+Watford B-ORG Q2714 NE Q2714
 gegen O - APPR
-Leicester B-ORG - NE Q19481
+Leicester B-ORG Q19481 NE Q19481
 ( O - $(
 Samstag O - NN
 , O - $,
@@ -1775,7 +1775,7 @@ Leben O - NN
 wie O - PWAV
 die O - ART
 Betreiberfirma O - NN
-Statoil B-ORG - NE Q4992912
+Statoil B-ORG Q4992912 NE Q4992912
 mitteilte O - VVFIN
 . O - $.
 
@@ -1802,7 +1802,7 @@ Festland O - NN
 fahren O - VVINF
 . O - $.
 
-Statoil B-ORG - NE Q4992912
+Statoil B-ORG Q4992912 NE Q4992912
 hatte O - VAFIN
 die O - ART
 sogenannte O - ADJA
@@ -1843,8 +1843,8 @@ mussten O - VMFIN
 etwa O - ADV
 380 O - CARD
 Mens O - NN
-Mitteldeutsche B-ORG - ADJA Q1940107
-Zeitung I-ORG - NN Q1940107
+Mitteldeutsche B-ORG Q1940107 ADJA Q1940107
+Zeitung I-ORG Q1940107 NN Q1940107
 : O - $.
 
 zu O - APPR
@@ -1928,8 +1928,8 @@ I. O - NN
 
 . O - $.
 
-Mitteldeutsche B-ORG - ADJA Q1940107
-Zeitung I-ORG - NN Q1940107
+Mitteldeutsche B-ORG Q1940107 ADJA Q1940107
+Zeitung I-ORG Q1940107 NN Q1940107
 : O - $.
 
 zu O - APPR
@@ -1944,8 +1944,8 @@ keine O - PIAT
 Besserung O - NN
 . O - $.
 
-Europäische B-ORG - ADJA Q458
-Union I-ORG - NN Q458
+Europäische B-ORG Q458 ADJA Q458
+Union I-ORG Q458 NN Q458
 wie O - KOKOM
 Finanzmärkte O - NN
 werden O - VAFIN
@@ -2002,7 +2002,7 @@ sich O - PRF
 hat O - VAFIN
 . O - $.
 
-Rajoy B-PER - NE Q10819
+Rajoy B-PER Q10819 NE Q10819
 wird O - VAFIN
 als O - KOKOM
 erstes O - ADJA
@@ -2010,7 +2010,7 @@ die O - ART
 ROUNDUP O - NE
 : O - $.
 
-Verdi B-ORG - NE Q547951
+Verdi B-ORG Q547951 NE Q547951
 kündigt O - VVFIN
 Streiks O - NN
 an O - APPR
@@ -2018,14 +2018,14 @@ Flughäfen O - NN
 an O - PTKVZ
 22.04.16 O - FM
 11:35 O - CARD
-dpa B-ORG - NE Q312653
-- I-ORG - $( Q312653
-AFX I-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
+- I-ORG Q312653 $( Q312653
+AFX I-ORG Q312653 NE Q312653
 BERLIN O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
-- I-ORG - $( Q312653
-AFX I-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
+- I-ORG Q312653 $( Q312653
+AFX I-ORG Q312653 NE Q312653
 ) O - $(
 - O - $(
 An O - APPR
@@ -2036,7 +2036,7 @@ ist O - VAFIN
 laut O - APPR
 der O - ART
 Gewerkschaft O - NN
-Verdi B-ORG - NE Q547951
+Verdi B-ORG Q547951 NE Q547951
 wegen O - APPR
 Warnstreiks O - NN
 am O - APPRART
@@ -2056,29 +2056,29 @@ Betroffen O - VVPP
 sein O - VAINF
 sollen O - VMFIN
 der O - ART
-Fraport B-ORG - NE Q643578
-- I-ORG - $( Q643578
-Flughafen I-ORG - NN Q643578
-Frankfurt I-ORG - NE Q643578
+Fraport B-ORG Q643578 NE Q643578
+- I-ORG Q643578 $( Q643578
+Flughafen I-ORG Q643578 NN Q643578
+Frankfurt I-ORG Q643578 NE Q643578
 sowie O - KON
 die O - ART
-Airports B-ORG - NN Q131402
-München I-ORG - NE Q131402
+Airports B-ORG Q131402 NN Q131402
+München I-ORG Q131402 NE Q131402
 , O - $,
-Düsseldorf B-ORG - NE Q58226
+Düsseldorf B-ORG Q58226 NE Q58226
 , O - $,
 Köln O - NE
 / O - $,
 Bonn O - NE
 , O - $,
-Dortmund B-ORG - NE Q313587
+Dortmund B-ORG Q313587 NE Q313587
 und O - KON
-Hannover B-ORG - NE Q170169
+Hannover B-ORG Q170169 NE Q170169
 - I-ORG - $(
-Langenhagen I-ORG - NE Q170169
+Langenhagen I-ORG Q170169 NE Q170169
 , O - $,
 teilte O - VVFIN
-Verdi B-ORG - NE Q547951
+Verdi B-ORG Q547951 NE Q547951
 am O - APPRART
 Freitag O - NN
 in O - APPR
@@ -2090,7 +2090,7 @@ Mit O - APPR
 den O - ART
 Ausständen O - NN
 will O - VMFIN
-Verdi B-ORG - NE Q547951
+Verdi B-ORG Q547951 NE Q547951
 den O - ART
 Druck O - NN
 im O - APPRART
@@ -2245,7 +2245,7 @@ wie O - PWAV
 die O - ART
 österreichische O - ADJA
 Nachrichtenagentur O - NN
-APA B-ORG - NE Q680662
+APA B-ORG Q680662 NE Q680662
 berichtete O - VVFIN
 . O - $.
 
@@ -2595,8 +2595,8 @@ Behncke I-PER - NE NIL
 , O - $,
 konnte O - VMFIN
 Sitzungspräsident O - NN
-Volker B-PER - NE Q16295285
-Weininger I-PER - NE Q16295285
+Volker B-PER Q16295285 NE Q16295285
+Weininger I-PER Q16295285 NE Q16295285
 im O - APPRART
 gut O - ADJD
 gefüllten O - ADJA
@@ -2657,7 +2657,7 @@ Extralob O - NN
 vom O - APPRART
 Sitzungspräsidenten O - NN
 ernte O - VVFIN
-Solarwatt B-ORG - NE Q1304269
+Solarwatt B-ORG Q1304269 NE Q1304269
 will O - VMFIN
 sich O - PRF
 in O - APPR
@@ -2672,9 +2672,9 @@ etablieren O - VVINF
 Foto O - NN
 : O - $.
 
-Solarwatt B-ORG - NE Q1304269
-GmbH I-ORG - NN Q1304269
-Solarwatt B-ORG - NE Q1304269
+Solarwatt B-ORG Q1304269 NE Q1304269
+GmbH I-ORG Q1304269 NN Q1304269
+Solarwatt B-ORG Q1304269 NE Q1304269
 erweitert O - VVFIN
 Produktionskapazitäten O - NN
 für O - APPR
@@ -2712,7 +2712,7 @@ eine O - ART
 engere O - ADJA
 Zusammenarbeit O - NN
 mit O - APPR
-Bosch B-ORG - NE Q234021
+Bosch B-ORG Q234021 NE Q234021
 an O - PTKVZ
 . O - $.
 
@@ -2736,7 +2736,7 @@ Wärmepumpe O - NN
 enthalten O - VVFIN
 , O - $,
 bietet O - VVFIN
-Solarwatt B-ORG - NE Q1304269
+Solarwatt B-ORG Q1304269 NE Q1304269
 für O - APPR
 unter O - ADV
 10.000 O - CARD
@@ -2750,8 +2750,8 @@ Neuhaus I-PER - NE NIL
 im O - APPRART
 Interview O - NN
 mit O - APPR
-pv B-ORG - NE Q1343811
-magazine I-ORG - FM Q1343811
+pv B-ORG Q1343811 NE Q1343811
+magazine I-ORG Q1343811 FM Q1343811
 erklärt O - VVFIN
 . O - $.
 
@@ -2784,8 +2784,8 @@ Artikel O - NN
 teilen O - VVINF
 Zur O - APPRART
 Anmeldung O - NN
-pv B-ORG - FM Q1343811
-magazine I-ORG - FM Q1343811
+pv B-ORG Q1343811 FM Q1343811
+magazine I-ORG Q1343811 FM Q1343811
 : O - $.
 
 Wie O - PWAV
@@ -2793,7 +2793,7 @@ kam O - VVFIN
 die O - ART
 Kooperation O - NN
 mit O - APPR
-Bosch B-ORG - NE Q234021
+Bosch B-ORG Q234021 NE Q234021
 zustande O - PTKVZ
 ? O - $.
 
@@ -2822,7 +2822,7 @@ Solarw O - NE
 10:32 O - CARD
 Uhr O - NN
 Oppositionszeitung O - NN
-Zaman B-ORG - NE Q145400
+Zaman B-ORG Q145400 NE Q145400
 : O - $.
 
 Türkischer O - ADJA
@@ -2839,7 +2839,7 @@ Freitag O - NN
 die O - ART
 regierungskritische O - ADJA
 Zeitung O - NN
-Zaman B-ORG - NE Q145400
+Zaman B-ORG Q145400 NE Q145400
 unter O - APPR
 die O - ART
 Kontrolle O - NN
@@ -2866,7 +2866,7 @@ die O - ART
 staatliche O - ADJA
 Übernahme O - NN
 der O - ART
-Zaman B-ORG - NE Q145400
+Zaman B-ORG Q145400 NE Q145400
 protestiert O - VVPP
 . O - $.
 
@@ -2882,8 +2882,8 @@ Foto O - NN
 
 REUTERS O - NE
 / O - $(
-Osman B-PER - NE Q16733889
-Orsal I-PER - NE Q16733889
+Osman B-PER Q16733889 NE Q16733889
+Orsal I-PER Q16733889 NE Q16733889
 Der O - ART
 türkische O - ADJA
 Regierungschef O - NN
@@ -2895,7 +2895,7 @@ Vorgehen O - NN
 gegen O - APPR
 die O - ART
 Zeitung O - NN
-Zaman B-ORG - NE Q145400
+Zaman B-ORG Q145400 NE Q145400
 als O - KOKOM
 unabhängige O - ADJA
 Entscheidung O - NN
@@ -3124,10 +3124,10 @@ Newsletter O - NN
 erscheint O - VVFIN
 donnerst O - FM
 > O - FM
-SAF B-ORG - NE Q1806059
-- I-ORG - $( Q1806059
-HOLLAND I-ORG - NE Q1806059
-S.A. I-ORG - NE Q1806059
+SAF B-ORG Q1806059 NE Q1806059
+- I-ORG Q1806059 $( Q1806059
+HOLLAND I-ORG Q1806059 NE Q1806059
+S.A. I-ORG Q1806059 NE Q1806059
 mit O - APPR
 Rekordjahr O - NN
 2015 O - CARD
@@ -3137,10 +3137,10 @@ steigt O - VVFIN
 um O - APPR
 2 O - CARD
 ... O - $.
-SAF B-ORG - NE Q1806059
-- I-ORG - $( Q1806059
-HOLLAND I-ORG - NE Q1806059
-S.A. I-ORG - NE Q1806059
+SAF B-ORG Q1806059 NE Q1806059
+- I-ORG Q1806059 $( Q1806059
+HOLLAND I-ORG Q1806059 NE Q1806059
+S.A. I-ORG Q1806059 NE Q1806059
 mit O - APPR
 Rekordjahr O - NN
 2015 O - CARD
@@ -3153,10 +3153,10 @@ um O - APPR
 heute O - ADV
 , O - $,
 07:45 O - CARD
-SAF B-ORG - NE Q1806059
-- I-ORG - $( Q1806059
-HOLLAND I-ORG - NE Q1806059
-S.A. I-ORG - NE Q1806059
+SAF B-ORG Q1806059 NE Q1806059
+- I-ORG Q1806059 $( Q1806059
+HOLLAND I-ORG Q1806059 NE Q1806059
+S.A. I-ORG Q1806059 NE Q1806059
 mit O - APPR
 Rekordjahr O - NN
 2015 O - CARD
@@ -3166,10 +3166,10 @@ steigt O - VVFIN
 um O - APPR
 25 O - CARD
 % O - NN
-SAF B-ORG - NE Q1806059
-- I-ORG - $( Q1806059
-HOLLAND I-ORG - NE Q1806059
-S.A. I-ORG - NE Q1806059
+SAF B-ORG Q1806059 NE Q1806059
+- I-ORG Q1806059 $( Q1806059
+HOLLAND I-ORG Q1806059 NE Q1806059
+S.A. I-ORG Q1806059 NE Q1806059
 / O - $(
 Schlagwort O - NN
 ( O - $(
@@ -3199,9 +3199,9 @@ DGAP O - NE
 ein O - ART
 Service O - NN
 der O - ART
-EQS B-ORG - NE Q16978036
-Group I-ORG - FM Q16978036
-AG I-ORG - NN Q16978036
+EQS B-ORG Q16978036 NE Q16978036
+Group I-ORG Q16978036 FM Q16978036
+AG I-ORG Q16978036 NN Q16978036
 . O - $.
 
 Für O - APPR
@@ -3287,9 +3287,9 @@ im O - APPRART
 SDAX O - NE
 gelistete O - ADJA
 Nutzfahrzeugzulieferer O - NN
-SAF B-ORG - NE Q1806059
-- I-ORG - $( Q1806059
-HOLLAND I-ORG - NE Q1806059
+SAF B-ORG Q1806059 NE Q1806059
+- I-ORG Q1806059 $( Q1806059
+HOLLAND I-ORG Q1806059 NE Q1806059
 den O - ART
 Konzernumsatz O - NN
 um O - APPR
@@ -3477,44 +3477,44 @@ ab O - PTKVZ
 
 Zur O - APPRART
 Freude O - NN
-Kanye B-PER - NE Q15935
-West I-PER - NE Q15935
+Kanye B-PER Q15935 NE Q15935
+West I-PER Q15935 NE Q15935
 , O - $,
 Ehemann O - NN
 von O - APPR
-Kim B-PER - NE Q186304
-Kardashian I-PER - NE Q186304
+Kim B-PER Q186304 NE Q186304
+Kardashian I-PER Q186304 NE Q186304
 , O - $,
 hat O - VAFIN
 in O - APPR
 einem O - ART
 Tweet O - NN
 jetzt O - ADV
-Bill B-PER - NE Q213512
-Cosby I-PER - NE Q213512
+Bill B-PER Q213512 NE Q213512
+Cosby I-PER Q213512 NE Q213512
 freigesprochen O - VVPP
 . O - $.
 
 Bizarrer O - ADJA
 Tweet O - NE
-Kanye B-PER - NE Q15935
-West I-PER - NE Q15935
+Kanye B-PER Q15935 NE Q15935
+West I-PER Q15935 NE Q15935
 hält O - VVFIN
-Bill B-PER - NE Q213512
-Cosby I-PER - NE Q213512
+Bill B-PER Q213512 NE Q213512
+Cosby I-PER Q213512 NE Q213512
 für O - APPR
 unschuldig O - ADJD
 10.02.16 O - FM
 , O - $,
 15:42 O - CARD
 Uhr O - NN
-Kanye B-PER - NE Q15935
-West I-PER - NE Q15935
+Kanye B-PER Q15935 NE Q15935
+West I-PER Q15935 NE Q15935
 , O - $,
 Ehemann O - NN
 von O - APPR
-Kim B-PER - NE Q186304
-Kardashian I-PER - NE Q186304
+Kim B-PER Q186304 NE Q186304
+Kardashian I-PER Q186304 NE Q186304
 , O - $,
 hat O - VAFIN
 jetzt O - ADV
@@ -3525,14 +3525,14 @@ Tweet O - NN
 gepostet O - VVPP
 : O - $.
 
-Bill B-PER - NE Q213512
-Cosby I-PER - NE Q213512
+Bill B-PER Q213512 NE Q213512
+Cosby I-PER Q213512 NE Q213512
 ist O - VAFIN
 unschuldig O - ADJD
 !!!!! O - $.
 — O - $(
-KANYE B-PER - NE Q15935
-WEST I-PER - NE Q15935
+KANYE B-PER Q15935 NE Q15935
+WEST I-PER Q15935 NE Q15935
 ( O - $(
 @kanyewest O - FM
 ) O - $(
@@ -3551,8 +3551,8 @@ Gegen O - APPR
 Hollywood O - NE
 - O - $(
 Star O - FM
-Bill B-PER - NE Q213512
-Cosby I-PER - NE Q213512
+Bill B-PER Q213512 NE Q213512
+Cosby I-PER Q213512 NE Q213512
 läuft O - VVFIN
 derzeit O - ADV
 ein O - ART
@@ -3585,7 +3585,7 @@ Schauspieler O - NN
 erhoben O - VVPP
 . O - $.
 
-Kanye B-PER - NE Q15935
+Kanye B-PER Q15935 NE Q15935
 erntete O - VVFIN
 mit O - APPR
 seinem O - PPOSAT
@@ -3604,15 +3604,15 @@ darauf O - PROAV
 nicht O - PTKNEG
 . O - $.
 
-Kanye B-PER - NE Q15935
-West I-PER - NE Q15935
+Kanye B-PER Q15935 NE Q15935
+West I-PER Q15935 NE Q15935
 und O - KON
-Kim B-PER - NE Q186304
-Kardashian I-PER - NE Q186304
+Kim B-PER Q186304 NE Q186304
+Kardashian I-PER Q186304 NE Q186304
 Foto O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Warum O - PWAV
 das O - PDS
 alles O - PIS
@@ -3624,8 +3624,8 @@ der O - ART
 Mann O - NN
 von O - APPR
 Selbstvermarktungsmaschine O - NN
-Kim B-PER - NE Q186304
-Kardaschian I-PER - NE Q186304
+Kim B-PER Q186304 NE Q186304
+Kardaschian I-PER Q186304 NE Q186304
 nur O - ADV
 mal O - ADV
 wieder O - ADV
@@ -3652,16 +3652,16 @@ könnte O - VMFIN
 Sie O - PPER
 auch O - ADV
 inter O - ADJD
-German B-ORG - FM Q5551250
-Startups I-ORG - FM Q5551250
-Group I-ORG - FM Q5551250
-Berlin I-ORG - NE Q5551250
-GmbH I-ORG - NN Q5551250
-& I-ORG - KON Q5551250
-Co I-ORG - NN Q5551250
-. I-ORG - $. Q5551250
+German B-ORG Q5551250 FM Q5551250
+Startups I-ORG Q5551250 FM Q5551250
+Group I-ORG Q5551250 FM Q5551250
+Berlin I-ORG Q5551250 NE Q5551250
+GmbH I-ORG Q5551250 NN Q5551250
+& I-ORG Q5551250 KON Q5551250
+Co I-ORG Q5551250 NN Q5551250
+. I-ORG Q5551250 $. Q5551250
 
-KGaA B-ORG - NE Q19823288
+KGaA B-ORG Q19823288 NE Q19823288
 strebt O - VVFIN
 die O - ART
 Schaffung O - NN
@@ -3677,16 +3677,16 @@ Kapitalerhöhung O - NN
 vor O - APPR
 21:05 O - CARD
 13.01.16 O - FM
-German B-ORG - NE Q5551250
-Startups I-ORG - NE Q5551250
-Group I-ORG - FM Q5551250
-Berlin I-ORG - NE Q5551250
-GmbH I-ORG - NN Q5551250
-& I-ORG - KON Q5551250
-Co I-ORG - NN Q5551250
-. I-ORG - $. Q5551250
+German B-ORG Q5551250 NE Q5551250
+Startups I-ORG Q5551250 NE Q5551250
+Group I-ORG Q5551250 FM Q5551250
+Berlin I-ORG Q5551250 NE Q5551250
+GmbH I-ORG Q5551250 NN Q5551250
+& I-ORG Q5551250 KON Q5551250
+Co I-ORG Q5551250 NN Q5551250
+. I-ORG Q5551250 $. Q5551250
 
-KGaA B-ORG - NE Q19823288
+KGaA B-ORG Q19823288 NE Q19823288
 / O - $(
 Schlagwort O - NN
 ( O - $(
@@ -3704,12 +3704,12 @@ News O - FM
 , O - $,
 übermittelt O - VVPP
 durch O - APPR
-DGAP B-ORG - NE Q879172
+DGAP B-ORG Q879172 NE Q879172
 - O - $(
 ein O - ART
 Service O - NN
 der O - ART
-EQS B-ORG - NE Q16978036
+EQS B-ORG Q16978036 NE Q16978036
 Group I-ORG - FM
 AG I-ORG - NN
 . O - $.
@@ -3738,16 +3738,16 @@ Quasi-Ad-hoc-Mitteilung O - NN
 zur O - APPRART
 sofortigen O - ADJA
 Veröffentlichung O - NN
-German B-ORG - FM Q5551250
-Startups I-ORG - NE Q5551250
-Group I-ORG - FM Q5551250
-Berlin I-ORG - NE Q5551250
-GmbH I-ORG - NN Q5551250
-& I-ORG - KON Q5551250
-Co I-ORG - NN Q5551250
-. I-ORG - $. Q5551250
+German B-ORG Q5551250 FM Q5551250
+Startups I-ORG Q5551250 NE Q5551250
+Group I-ORG Q5551250 FM Q5551250
+Berlin I-ORG Q5551250 NE Q5551250
+GmbH I-ORG Q5551250 NN Q5551250
+& I-ORG Q5551250 KON Q5551250
+Co I-ORG Q5551250 NN Q5551250
+. I-ORG Q5551250 $. Q5551250
 
-KGaA B-ORG - NE Q19823288
+KGaA B-ORG Q19823288 NE Q19823288
 strebt O - VVFIN
 die O - ART
 Schaffung O - NN
@@ -3770,9 +3770,9 @@ Januar O - NN
 2016 O - CARD
 - O - $(
 Die O - ART
-German B-ORG - FM Q5551250
-Startups I-ORG - FM Q5551250
-Group I-ORG - FM Q5551250
+German B-ORG Q5551250 FM Q5551250
+Startups I-ORG Q5551250 FM Q5551250
+Group I-ORG Q5551250 FM Q5551250
 , O - $,
 zweitaktivster O - ADJA
 Venture O - FM
@@ -3785,8 +3785,8 @@ seit O - APPR
 in O - APPR
 Deutschland O - NE
 ( O - $(
-CB B-ORG - NE Q57680197
-Insights I-ORG - FM Q57680197
+CB B-ORG Q57680197 NE Q57680197
+Insights I-ORG Q57680197 FM Q57680197
 , O - $,
 2015 O - CARD
 ) O - $(
@@ -3914,9 +3914,9 @@ bestätigen O - VVFIN
 auch O - ADV
 Umfragen O - NN
 der O - ART
-EU B-ORG - NE Q8880
-- I-ORG - $( Q8880
-Kommission I-ORG - NN Q8880
+EU B-ORG Q8880 NE Q8880
+- I-ORG Q8880 $( Q8880
+Kommission I-ORG Q8880 NN Q8880
 . O - $.
 
 Entschädigungsanspruch O - NN
@@ -3961,7 +3961,7 @@ A60 O - FM
 FOTO O - NE
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 , O - $,
 fve O - FM
 fpt O - FM
@@ -4043,8 +4043,8 @@ konnte O - VMFIN
 den O - ART
 Bus O - NN
 der O - ART
-Mainzer B-ORG - ADJA Q1885780
-Verkehrsbetriebe I-ORG - NN Q1885780
+Mainzer B-ORG Q1885780 ADJA Q1885780
+Verkehrsbetriebe I-ORG Q1885780 NN Q1885780
 inzwischen O - ADV
 stabilisieren O - VVINF
 . O - $.
@@ -4089,7 +4089,7 @@ bekannt O - ADJD
 . O - $.
 
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 ) O - $(
 Ihre O - PPOSAT
 Meinung O - NN
@@ -4247,8 +4247,8 @@ werden O - VAINF
 
 Wissenschaftler O - NN
 des O - ART
-Deutschen B-ORG - ADJA Q1205654
-GeoForschungsZentrums I-ORG - NN Q1205654
+Deutschen B-ORG Q1205654 ADJA Q1205654
+GeoForschungsZentrums I-ORG Q1205654 NN Q1205654
 GFZ I-ORG - NE Q1205654 Q1205654
 haben O - VAFIN
 zusammen O - ADV
@@ -4257,10 +4257,10 @@ einem O - ART
 Kollegen O - NN
 von O - APPR
 der O - ART
-University B-ORG - FM Q4614
-of I-ORG - FM Q4614
-Southern I-ORG - NE Q4614
-California I-ORG - NE Q4614
+University B-ORG Q4614 FM Q4614
+of I-ORG Q4614 FM Q4614
+Southern I-ORG Q4614 NE Q4614
+California I-ORG Q4614 NE Q4614
 die O - ART
 Erdbebenmaxima O - NN
 entlang O - APPR
@@ -4493,7 +4493,7 @@ GIS I-ORG - NE NIL
 e.V. I-ORG - NE NIL
 an O - APPR
 der O - ART
-TU B-ORG - NE Q157808
+TU B-ORG Q157808 NE Q157808
 München I-ORG - NE
 aus O - PTKVZ
 . O - $.
@@ -4532,8 +4532,8 @@ Ende O - NN
 Februar O - NN
 an O - APPR
 der O - ART
-TU B-ORG - NE Q157808
-München I-ORG - NE Q157808
+TU B-ORG Q157808 NE Q157808
+München I-ORG Q157808 NE Q157808
 . O - $.
 
 Tatsächlich O - ADJD
@@ -4643,10 +4643,10 @@ Twittern O - NN
 Foto O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 München O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 / O - $(
 lby O - FM
 ) O - $(
@@ -4672,10 +4672,10 @@ Herkunftsstaaten O - NN
 . O - $.
 
 Innenminister O - NN 
-Joachim B-PER - NE Q1690169
-Herrmann I-PER - NE Q1690169
+Joachim B-PER Q1690169 NE Q1690169
+Herrmann I-PER Q1690169 NE Q1690169
 ( O - $(
-CSU B-ORG - NE Q49763
+CSU B-ORG Q49763 NE Q49763
 ) O - $(
 nannte O - VVFIN
 am O - APPRART
@@ -4723,7 +4723,7 @@ Nigeria O - NE
 
 Ebenfalls O - ADV
 forderte O - VVFIN
-Herrmann B-PER - NE Q1690169
+Herrmann B-PER Q1690169 NE Q1690169
 die O - ART
 Bundesregierung O - NN
 auf O - PTKVZ
@@ -4853,7 +4853,7 @@ teilte O - VVFIN
 ein O - ART
 Sprecher O - NN
 des O - ART
-Wirtschaftsministeriums B-ORG - NN Q2986560
+Wirtschaftsministeriums B-ORG Q2986560 NN Q2986560
 in O - APPR
 Den O - NE
 Haag O - NE
@@ -4932,16 +4932,16 @@ Jahr O - NN
 2000 O - CARD
 vergab O - VVFIN
 die O - ART
-Regulierungsbehörde B-ORG - NN Q269138
-für I-ORG - APPR Q269138
-Telekommunikation I-ORG - NN Q269138
-und I-ORG - KON Q269138
-Post I-ORG - NN Q269138
+Regulierungsbehörde B-ORG Q269138 NN Q269138
+für I-ORG Q269138 APPR Q269138
+Telekommunikation I-ORG Q269138 NN Q269138
+und I-ORG Q269138 KON Q269138
+Post I-ORG Q269138 NN Q269138
 ( O - $(
 so O - ADV
 hieß O - VVFIN
 die O - ART
-Bundesnetzagentur B-ORG - NN Q269138
+Bundesnetzagentur B-ORG Q269138 NN Q269138
 damals O - ADV
 noch O - ADV
 ) O - $(
@@ -4987,7 +4987,7 @@ italienische O - ADJA
 Mobilfunk O - NN
 - O - $(
 Anbieter O - NN
-Linkem B-ORG - NE Q3833050
+Linkem B-ORG Q3833050 NE Q3833050
 bietet O - VVFIN
 Festnetz O - NN
 - O - $(
@@ -5106,7 +5106,7 @@ Jahr O - NN
 Foto O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Frankfurt O - NE
 . O - $.
 
@@ -5186,11 +5186,11 @@ WSI O - NE
 Tarifarchivs O - NN
 der O - ART
 gewerkschaftsnahen O - ADJA
-Hans B-ORG - NE Q1283089
-- I-ORG - $( Q1283089
-Böckler I-ORG - NE Q1283089
-- I-ORG - $( Q1283089
-Stiftung I-ORG - NN Q1283089
+Hans B-ORG Q1283089 NE Q1283089
+- I-ORG Q1283089 $( Q1283089
+Böckler I-ORG Q1283089 NE Q1283089
+- I-ORG Q1283089 $( Q1283089
+Stiftung I-ORG Q1283089 NN Q1283089
 werden O - VAFIN
 von O - APPR
 Ende O - NN
@@ -5367,7 +5367,7 @@ Holdings I-ORG - FM NIL
 % O - NN
 ) O - $(
 und O - KON
-SunEdison B-ORG - NE Q946713
+SunEdison B-ORG Q946713 NE Q946713
 ( O - $(
 -33 O - CARD
 % O - NN
@@ -5412,7 +5412,7 @@ mit O - APPR
 ) O - $(
 . O - $.
 
-SolarCity B-ORG - NE Q7555824
+SolarCity B-ORG Q7555824 NE Q7555824
 wurde O - VAFIN
 von O - APPR
 4 O - CARD
@@ -5422,8 +5422,8 @@ Gewichtungspunkte O - NN
 hochgestuft O - VVPP
 , O - $,
 bei O - APPR
-SPI B-ORG - NE Q7555940
-Energy I-ORG - FM Q7555940
+SPI B-ORG Q7555940 NE Q7555940
+Energy I-ORG Q7555940 FM Q7555940
 gibt O - VVFIN
 es O - PPER
 – O - $(
@@ -5431,8 +5431,8 @@ nach O - APPR
 dem O - ART
 Merger O - NN
 mit O - APPR
-Solar B-ORG - FM Q7555940
-Power I-ORG - FM Q7555940
+Solar B-ORG Q7555940 FM Q7555940
+Power I-ORG Q7555940 FM Q7555940
 – O - $( 
 noch O - ADV
 kein O - PIAT
@@ -5444,7 +5444,7 @@ Alliance I-ORG - FM NIL
 Foto O - FM
 : O - $.
 
-TVRNews B-ORG - NE Q17056328
+TVRNews B-ORG Q17056328 NE Q17056328
 Im O - APPRART
 dritten O - ADJA
 Anlauf O - NN
@@ -5622,8 +5622,8 @@ zum O - APPRART
 
 Todestag O - NN
 von O - APPR
-Franz B-PER - NE Q44054
-Marc I-PER - NE Q44054
+Franz B-PER Q44054 NE Q44054
+Marc I-PER Q44054 NE Q44054
 Der O - ART
 Maler O - NN
 fiel O - VVFIN
@@ -5649,8 +5649,8 @@ Todestag O - NN
 des O - ART
 expressionistischen O - ADJA
 Malers O - NN
-Franz B-PER - NE Q44054
-Marc I-PER - NE Q44054
+Franz B-PER Q44054 NE Q44054
+Marc I-PER Q44054 NE Q44054
 ( O - $(
 1880 O - CARD
 -1916 O - CARD
@@ -5666,7 +5666,7 @@ ein O - ART
 anderer O - ADJA
 Künstler O - NN
 symbolisiere O - VVFIN
-Marc B-PER - NE Q44054
+Marc B-PER Q44054 NE Q44054
 die O - ART
 Einbettung O - NN
 der O - ART
@@ -5686,7 +5686,7 @@ am O - APPRART
 See O - NN
 . O - $.
 
-Marc B-PER - NE Q44054
+Marc B-PER Q44054 NE Q44054
 war O - VAFIN
 am O - APPRART
 4 O - CARD
@@ -5710,9 +5710,9 @@ diesem O - PDAT
 Anlass O - NN
 widmet O - VVFIN
 das O - ART
-Franz B-PER - NE Q44054
-- I-PER - $( Q44054
-Marc I-PER - NE Q44054
+Franz B-PER Q44054 NE Q44054
+- I-PER Q44054 $( Q44054
+Marc I-PER Q44054 NE Q44054
 - O - $(
 Museum O - NN
 seinem O - PPOSAT
@@ -5727,8 +5727,8 @@ Veranstaltungsjahr O - NN
 
 Die O - ART
 Trilogie O - NN
-Franz B-PER - NE Q44054
-Marc I-PER - NE Q44054
+Franz B-PER Q44054 NE Q44054
+Marc I-PER Q44054 NE Q44054
 - O - $(
 Zwischen O - APPR
 Utopie O - NN
@@ -5775,8 +5775,8 @@ Erbe O - NN
 . O - $.
 
 Bestsellerautor O - NN
-Pat B-PER - NE Q2451348
-Conroy I-PER - NE Q2451348
+Pat B-PER Q2451348 NE Q2451348
+Conroy I-PER Q2451348 NE Q2451348
 ist O - VAFIN
 tot O - ADJD
 Alles O - PIS
@@ -5786,7 +5786,7 @@ Werbung O - NN
 Stellenanzeigen O - NN
 und O - KON
 Immobilieninserate O - NN
-Osram B-ORG - NE Q310481
+Osram B-ORG Q310481 NE Q310481
 pumpt O - VVFIN
 Milliarde O - NN
 in O - APPR
@@ -5808,13 +5808,13 @@ Posting O - NN
 In O - APPR
 Malaysia O - NE
 baut O - VVFIN
-Osram B-ORG - NE Q310481
+Osram B-ORG Q310481 NE Q310481
 eine O - ART
 eigene O - ADJA
 LED O - NE
 - O - $(
 Chipfabrik O - NN
-Osram B-ORG - NE Q310481
+Osram B-ORG Q310481 NE Q310481
 wandelt O - VVFIN
 sich O - PRF
 vom O - APPRART
@@ -5895,7 +5895,7 @@ Halogen O - NN
 und O - KON
 Energiesparlampen O - NN
 will O - VMFIN
-Osram B-ORG - NE Q310481
+Osram B-ORG Q310481 NE Q310481
 im O - APPRART
 nächsten O - ADJA
 halben O - ADJA
@@ -5927,7 +5927,7 @@ abgestoßen O - VVPP
 , O - $,
 das O - ART
 größte O - ADJA
-Osram B-ORG - NN Q310481
+Osram B-ORG Q310481 NN Q310481
 - O - $(
 Werk O - NN
 Regensbur O - NE
@@ -5963,7 +5963,7 @@ an O - PTKVZ
 . O - $.
 
 © O - FM
-REUTERS B-ORG - NE Q130879
+REUTERS B-ORG Q130879 NE Q130879
 , O - $,
 Guillermo B-PER - NE NIL
 Granja I-PER - NE NIL
@@ -6088,7 +6088,7 @@ Opfern O - NN
 und O - KON
 Angehörigen O - NN
 über O - APPR
-Twitter B-ORG - NN Q918
+Twitter B-ORG Q918 NN Q918
 sein O - PPOSAT
 Mitg O - NN
 Welcher O - PWAT
@@ -6136,7 +6136,7 @@ Die O - ART
 Wahlerfolge O - NN
 der O - ART
 rechtpopulistischen O - ADJA
-AfD B-ORG - NE Q6721203
+AfD B-ORG Q6721203 NE Q6721203
 in O - APPR
 Baden O - NE
 - O - $(
@@ -6201,7 +6201,7 @@ Angela O - NE
 Merkel O - NE
 . O - $.
 
-AfD B-ORG - NE Q6721203
+AfD B-ORG Q6721203 NE Q6721203
 - O - $(
 Wähler O - NN
 sind O - VAFIN
@@ -6234,9 +6234,9 @@ Kinder O - NN
 und O - KON
 Jugendliche O - NN
 Der O - ART
-SSV B-ORG - NE Q701290
-Ulm I-ORG - NE Q701290
-1846 I-ORG - CARD Q701290
+SSV B-ORG Q701290 NE Q701290
+Ulm I-ORG Q701290 NE Q701290
+1846 I-ORG Q701290 CARD Q701290
 fordert O - VVFIN
 zum O - APPRART
 Laufen O - NN
@@ -6331,7 +6331,7 @@ bereits O - ADV
 am O - APPRART
 Samstag O - NN
 im O - APPRART
-SSV B-ORG - NE Q701290
+SSV B-ORG Q701290 NE Q701290
 - O - $(
 Bad O - NN
 der O - ART
@@ -6379,7 +6379,7 @@ und O - KON
 400 O - CARD
 Meter O - NN
 im O - APPRART
-SSV B-ORG - NN Q701290
+SSV B-ORG Q701290 NN Q701290
 - O - $(
 Bad O - NN
 geschwommen O - VVPP
@@ -6403,7 +6403,7 @@ ab O - APPR
 10 O - CARD
 Uhr O - NN
 im O - APPRART
-SSV B-ORG - NE Q701290
+SSV B-ORG Q701290 NE Q701290
 - O - $(
 Bad O - NN
 . O - $.
@@ -6419,7 +6419,7 @@ Shirt O - NN
 eine O - ART
 Medaille O - NN
 Twittern O - NE
-Thyssenkrupp B-ORG - NE Q137910
+Thyssenkrupp B-ORG Q137910 NE Q137910
 : O - $.
 
 Erste O - ADJA
@@ -6432,14 +6432,14 @@ am O - APPRART
 Ziel O - NN
 Essen O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 ) O - $(
 - O - $(
-Thyssenkrupp B-ORG - NE Q137910
+Thyssenkrupp B-ORG Q137910 NE Q137910
 - O - $(
 Chef O 320 NN
-Heinrich B-PER 320 NE Q109782
-Hiesinger I-PER 320 NE Q109782
+Heinrich B-PER Q109782 NE Q109782
+Hiesinger I-PER Q109782 NE Q109782
 sieht O - VVFIN
 den O - ART
 Konzern O - NN
@@ -6523,7 +6523,7 @@ einem O - ART
 neuen O - ADJA
 Logo O - NN
 will O - VMFIN
-Thyssenkrupp B-ORG - NE Q137910
+Thyssenkrupp B-ORG Q137910 NE Q137910
 den O - ART
 Neuanfang O - NN
 nun O - ADV
@@ -6532,7 +6532,7 @@ optisch O - ADJD
 verdeutlichen O - VVINF
 . O - $.
 
-Hiesinger B-PER - NE Q109782
+Hiesinger B-PER Q109782 NE Q109782
 verteidigte O - VVFIN
 erneut O - ADJD
 seine O - PPOSAT
@@ -6617,7 +6617,7 @@ Uhr O - NN
 BZ O - NE
 - O - $(
 Interview O - NN
-Hüttinger B-ORG - NE Q1652680
+Hüttinger B-ORG Q1652680 NE Q1652680
 - O - $(
 Geschäftsführer O - NN
 rechtfertigt O - VVFIN
@@ -6626,8 +6626,8 @@ Stellenabbau O - NN
 Der O - ART
 südbadische O - ADJA
 Generatorenspezialist O - NN
-Trumpf B-ORG - NE Q1652680
-Hüttinger I-ORG - NE Q1652680
+Trumpf B-ORG Q1652680 NE Q1652680
+Hüttinger I-ORG Q1652680 NE Q1652680
 streicht O - VVFIN
 50 O - CARD
 Stellen O - NN
@@ -6662,8 +6662,8 @@ Arbeitgeber O - NN
 Freiburgs O - NE
 : O - $.
 
-Trumpf B-ORG - NN Q1652680
-Hüttinger I-ORG - NE Q1652680
+Trumpf B-ORG Q1652680 NN Q1652680
+Hüttinger I-ORG Q1652680 NE Q1652680
 Foto O - NN
 : O - $.
 
@@ -6674,8 +6674,8 @@ KUNZ O - NE
 Der O - ART
 südbadische O - ADJA
 Generatorenspezialist O - NN
-Trumpf B-ORG - NE Q1652680
-Hüttinger I-ORG - NE Q1652680
+Trumpf B-ORG Q1652680 NE Q1652680
+Hüttinger I-ORG Q1652680 NE Q1652680
 will O - VMFIN
 mit O - APPR
 neuen O - ADJA
@@ -6700,7 +6700,7 @@ von O - APPR
 50 O - CARD
 Arbeitsplätzen O - NN
 nannte O - VVFIN
-Hüttinger B-ORG - NE Q1652680
+Hüttinger B-ORG Q1652680 NE Q1652680
 - O - $(
 Chef O - NN
 Stephan O - NE
@@ -6722,7 +6722,7 @@ Veränderungen O - NN
 in O - APPR
 den O - ART
 klassischen O - ADJA
-Hüttinger B-ORG - ADJA Q1652680
+Hüttinger B-ORG Q1652680 ADJA Q1652680
 - O - $(
 Märkten O - NN
 zurückzuführen O - VVIZU
@@ -6760,19 +6760,19 @@ der O - ART
 Redaktion O - NN
 . O - $.
 
-Deutsche B-ORG 326 ADJA Q157852
-Börse I-ORG 326 NN Q157852
+Deutsche B-ORG Q157852 ADJA Q157852
+Börse I-ORG Q157852 NN Q157852
 und O - KON
-London B-ORG 326 NE Q171240
-Stock I-ORG 326 FM Q171240
-Exchange I-ORG 326 FM Q171240
+London B-ORG Q171240 NE Q171240
+Stock I-ORG Q171240 FM Q171240
+Exchange I-ORG Q171240 FM Q171240
 wollen O - VMFIN
 fusionieren O - VVINF
 FRANKFURT O - NE
 - O - $(
 Die O - ART
-Deutsche B-ORG - ADJA Q157852
-Börse I-ORG - NN Q157852
+Deutsche B-ORG Q157852 ADJA Q157852
+Börse I-ORG Q157852 NN Q157852
 will O - VMFIN
 sich O - PRF
 mit O - APPR
@@ -6803,8 +6803,8 @@ sollen O - VMFIN
 die O - ART
 Aktionäre O - NN
 der O - ART
-Deutschen B-ORG - ADJA Q157852
-Börse I-ORG - NN Q157852
+Deutschen B-ORG Q157852 ADJA Q157852
+Börse I-ORG Q157852 NN Q157852
 an O - APPR
 dem O - ART
 neuen O - ADJA
@@ -6846,7 +6846,7 @@ der O - ART
 US O - NE
 - O - $(
 Schokoladenkonzern O - NN
-Mars B-ORG - NE Q695087
+Mars B-ORG Q695087 NE Q695087
 einen O - ART
 großen O - ADJA
 Produktrückruf O - NN
@@ -6926,9 +6926,9 @@ ist O - VAFIN
 ein O - ART
 Angebot O - NN
 der O - ART
-Ströer B-ORG - NE Q2357618
-Content I-ORG - FM Q2357618
-Group I-ORG - FM Q2357618
+Ströer B-ORG Q2357618 NE Q2357618
+Content I-ORG Q2357618 FM Q2357618
+Group I-ORG Q2357618 FM Q2357618
 Bocholt O - NE
 Bocholt O - NE
 - O - $(
@@ -7202,8 +7202,8 @@ geboten O - VVPP
 , O - $,
 weil O - KOUS
 der O - ART
-Fußballverband B-ORG - NN Q1478441
-Niederrhein I-ORG - NE Q1478441
+Fußballverband B-ORG Q1478441 NN Q1478441
+Niederrhein I-ORG Q1478441 NE Q1478441
 die O - ART
 neue O - ADJA
 Saison O - NN
@@ -7258,8 +7258,8 @@ Steuerberater I-ORG - NN NIL
 Insolvenz O - NN
 der O - ART
 Frankfurter O - ADJA
-Maple B-ORG - NE Q22674632
-Bank I-ORG - NN Q22674632
+Maple B-ORG Q22674632 NE Q22674632
+Bank I-ORG Q22674632 NN Q22674632
 openPR.de O - NE
 / O - FM
 t892327 O - FM
@@ -7276,14 +7276,14 @@ openPR.de O - FM
 t892327 O - FM
 Die O - ART
 Frankfurter O - ADJA
-Maple B-ORG - NE Q22674632
-Bank I-ORG - NN Q22674632
+Maple B-ORG Q22674632 NE Q22674632
+Bank I-ORG Q22674632 NN Q22674632
 ist O - VAFIN
 insolvent O - ADJD
 . O - $.
 
 Die O - ART
-BaFin B-ORG - NN Q314211
+BaFin B-ORG Q314211 NN Q314211
 hat O - VAFIN
 am O - APPRART
 11 O - CARD
@@ -7297,8 +7297,8 @@ festgestellt O - VVPP
 . O - $.
 
 Das O - ART
-AG B-ORG - NN Q480675
-Frankfurt I-ORG - NE Q480675
+AG B-ORG Q480675 NN Q480675
+Frankfurt I-ORG Q480675 NE Q480675
 hat O - VAFIN
 das O - ART
 Insolvenzverfahren O - NN
@@ -7357,8 +7357,8 @@ deutsche O - ADJA
 Tochter O - NN
 der O - ART
 kanadischen O - ADJA
-Maple B-ORG - NE Q22674632
-Bank I-ORG - NN Q22674632
+Maple B-ORG Q22674632 NE Q22674632
+Bank I-ORG Q22674632 NN Q22674632
 am O - APPRART
 11 O - CARD
 . O - $.
@@ -7374,7 +7374,7 @@ Tags O - ADV
 zuvor O - ADV
 hatte O - VAFIN
 die O - ART
-BaFin B-ORG - NE Q314211
+BaFin B-ORG Q314211 NE Q314211
 Antrag O - NN
 auf O - APPR
 Eröffnung O - NN
@@ -7382,12 +7382,12 @@ eines O - ART
 Insolvenzverfahrens O - NN
 über O - APPR
 die O - ART
-Maple B-ORG - NE Q22674632
-Bank I-ORG - NN Q22674632
-GmbH I-ORG - NN Q22674632
+Maple B-ORG Q22674632 NE Q22674632
+Bank I-ORG Q22674632 NN Q22674632
+GmbH I-ORG Q22674632 NN Q22674632
 beim O - APPRART
-Amtsgericht B-ORG - NN Q480675
-Frankfurt I-ORG - NE Q480675
+Amtsgericht B-ORG Q480675 NN Q480675
+Frankfurt I-ORG Q480675 NE Q480675
 eingereicht O - VVPP
 , O - $,
 das O - ART
@@ -7413,8 +7413,8 @@ bereit O - ADJD
 06.03.16 O - FM
 BRÜSSEL O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
-- I-ORG - $( Q312653
+dpa B-ORG Q312653 NE Q312653
+- I-ORG Q312653 $( Q312653
 AFX I-ORG - NE
 ) O - $(
 - O - $(
@@ -7487,8 +7487,8 @@ mit O - APPR
 dem O - ART
 türkischen O - ADJA
 Ministerpräsidenten O - NN 
-Ahmet B-PER - NE Q58198
-Davutoglu I-PER - NE Q58198
+Ahmet B-PER Q58198 NE Q58198
+Davutoglu I-PER Q58198 NE Q58198
 treffen O - VVINF
 . O - $.
 
@@ -7504,7 +7504,7 @@ der O - ART
 regierungskritischen O - ADJA
 türkischen O - ADJA
 Zeitung O - NN
-Zaman B-ORG - NE Q145400
+Zaman B-ORG Q145400 NE Q145400
 . O - $.
 
 Die O - ART
@@ -7654,8 +7654,8 @@ Ich O - PPER
 m O - NE
 chte O - VVFIN
 den O - ART
-S B-ORG - NN Q885282
-DKURIER I-ORG - NE Q885282
+S B-ORG Q885282 NN Q885282
+DKURIER I-ORG Q885282 NE Q885282
 Online O - FM
 Newsletter O - NN
 ( O - $(
@@ -7669,9 +7669,9 @@ und O - KON
 Angebote O - NN
 aus O - APPR
 der O - ART
-S B-ORG - NN Q885282
-DKURIER I-ORG - NE Q885282
-GmbH I-ORG - NN Q885282
+S B-ORG Q885282 NN Q885282
+DKURIER I-ORG Q885282 NE Q885282
+GmbH I-ORG Q885282 NN Q885282
 per O - APPR
 E-Mail O - NE
 erhalten O - VVINF
@@ -7736,8 +7736,8 @@ sic O - NE
 Mecklenburg O - NE
 Grevesmühlen O - NE
 Wirtschaft O - NN
-German B-ORG - NE Q1514031
-Pellets I-ORG - NE Q1514031
+German B-ORG Q1514031 NE Q1514031
+Pellets I-ORG Q1514031 NE Q1514031
 : O - $.
 
 Amtsgericht O - NN
@@ -7751,8 +7751,8 @@ kleiner O - ADJD
 größer O - ADJD
 Wismar O - NE
 – O - $(
-German B-ORG - FM Q1514031
-Pellets I-ORG - NE Q1514031
+German B-ORG Q1514031 FM Q1514031
+Pellets I-ORG Q1514031 NE Q1514031
 : O - $.
 
 Amtsgericht O - NN
@@ -7807,8 +7807,8 @@ Uhr O - NN
 Das O - ART
 Werk O - NN
 von O - APPR
-German B-ORG - NE Q1514031
-Pellets I-ORG - NE Q1514031
+German B-ORG Q1514031 NE Q1514031
+Pellets I-ORG Q1514031 NE Q1514031
 in O - APPR
 Wismar O - NE
 : O - $.
@@ -7838,7 +7838,7 @@ Quelle O - NE
 
 Bernd B-PER - NE NIL
 Wüstneck I-PER - NE NIL
-Mobilezone B-ORG - NE Q1680518
+Mobilezone B-ORG Q1680518 NE Q1680518
 - O - $(
 Umsatz O - NN
 dank O - APPR
@@ -7950,7 +7950,7 @@ vollständigen O - ADJA
 Artikel O - NN
 lesen O - VVINF
 ... O - $.
-Energiekontor B-ORG - NN Q1341306
+Energiekontor B-ORG Q1341306 NN Q1341306
 AG I-ORG - NN
 : O - $.
 
@@ -7962,13 +7962,13 @@ Landkreis O - NN
 Cuxhaven O - NE
 09:20 O - CARD
 17.02.16 O - FM
-DGAP B-ORG - NE Q879172
-- I-ORG - $( Q879172
-News I-ORG - FM Q879172
+DGAP B-ORG Q879172 NE Q879172
+- I-ORG Q879172 $( Q879172
+News I-ORG Q879172 FM Q879172
 : O - $.
 
-Energiekontor B-ORG - NN Q1341306
-AG I-ORG - NN Q1341306
+Energiekontor B-ORG Q1341306 NN Q1341306
+AG I-ORG Q1341306 NN Q1341306
 / O - $(
 Schlagwort O - NN
 ( O - $(
@@ -7977,8 +7977,8 @@ e O - FM
 : O - $.
 
 Sonstiges O - ADJA
-Energiekontor B-ORG - NN Q1341306
-AG I-ORG - NN Q1341306
+Energiekontor B-ORG Q1341306 NN Q1341306
+AG I-ORG Q1341306 NN Q1341306
 : O - $.
 
 Startschuss O - NN
@@ -8009,8 +8009,8 @@ im O - APPRART
 Landkreis O - NN
 Cuxhaven O - NE
 Die O - ART
-Energiekontor B-ORG - NN Q1341306
-AG I-ORG - NN Q1341306
+Energiekontor B-ORG Q1341306 NN Q1341306
+AG I-ORG Q1341306 NN Q1341306
 beginnt O - VVFIN
 nach O - APPR
 erfolgreicher O - ADJA
@@ -8034,9 +8034,9 @@ Februar O - NN
 
 Nachdem O - KOUS
 die O - ART
-Energiekontor B-ORG - NN Q1341306
-- I-ORG - $( Q1341306
-Gruppe I-ORG - NN Q1341306
+Energiekontor B-ORG Q1341306 NN Q1341306
+- I-ORG Q1341306 $( Q1341306
+Gruppe I-ORG Q1341306 NN Q1341306
 Ende O - NN
 letzten O - ADJA
 Jahres O - NN
@@ -8089,12 +8089,12 @@ bestehenden O - ADJA
 Megawatt O - NN
 PresseBox O - NE
 > O - FM
-KION B-ORG - NE Q1742326
-GROUP I-ORG - NE Q1742326
-GmbH I-ORG - NN Q1742326
+KION B-ORG Q1742326 NE Q1742326
+GROUP I-ORG Q1742326 NE Q1742326
+GmbH I-ORG Q1742326 NN Q1742326
 > O - FM
-KION B-ORG - NE Q1742326
-Group I-ORG - FM Q1742326
+KION B-ORG Q1742326 NE Q1742326
+Group I-ORG Q1742326 FM Q1742326
 erzielt O - VVPP
 2015 O - CARD
 neue O - ADJA
@@ -8102,8 +8102,8 @@ Bestmarken O - NN
 Pressemitteilung O - NN
 BoxID O - NE
 779106 O - CARD
-KION B-ORG - NE Q1742326
-Group I-ORG - FM Q1742326
+KION B-ORG Q1742326 NE Q1742326
+Group I-ORG Q1742326 FM Q1742326
 erzielt O - VVFIN
 2015 O - CARD
 neue O - ADJA
@@ -8127,7 +8127,7 @@ Zahlen O - NN
 vollständig O - ADJD
 erreicht O - VVPP
 - O - $(
-KION B-ORG - NE Q1742326
+KION B-ORG Q1742326 NE Q1742326
 Wachstum O - NN
 erneut O - ADJD
 über O - APPR
@@ -8241,7 +8241,7 @@ Neue O - ADJA
 Bestmarken O - NN
 für O - APPR
 die O - ART
-KION B-ORG - NE Q1742326
+KION B-ORG Q1742326 NE Q1742326
 Group I-ORG - FM
 : O - $.
 
@@ -8334,7 +8334,7 @@ Von O - APPR
 Ivo B-PER - NE NIL
 Marusczyk I-PER - NE NIL
 , O - $,
-ARD B-ORG - NE Q49653
+ARD B-ORG Q49653 NE Q49653
 - O - $(
 Studio O - NN
 Südamerika O - NE
@@ -8557,8 +8557,8 @@ promovierte O - ADJA
 Psychologe O - NN
 Teil O - NN
 der O - ART
-Hochschule B-ORG - NN Q1622234
-Coburg I-ORG - NE Q1622234
+Hochschule B-ORG Q1622234 NN Q1622234
+Coburg I-ORG Q1622234 NE Q1622234
 . O - $.
 
 Er O - PPER
@@ -8604,7 +8604,7 @@ Cry O - NE
 
 Primal O - ADJD
 schickt O - VVFIN
-Ubisoft B-ORG - NE Q188273
+Ubisoft B-ORG Q188273 NE Q188273
 den O - ART
 nächsten O - ADJA
 Open O - FM
@@ -8669,7 +8669,7 @@ erklärte O - VVFIN
 Jason B-PER - NE NIL
 Paradise I-PER - NE NIL
 von O - APPR
-Ubisoft B-ORG - NE Q188273
+Ubisoft B-ORG Q188273 NE Q188273
 nun O - ADV
 , O - $,
 weshalb O - PWAV
@@ -8780,7 +8780,7 @@ Frankfurt O - NE
 / O - KON
 Main O - NE
 – O - $(
-Dax B-ORG - NE Q155718
+Dax B-ORG Q155718 NE Q155718
 fällt O - VVFIN
 weiter O - ADV
 angesichts O - APPR
@@ -8859,10 +8859,10 @@ in O - APPR
 einem O - ART
 Logo O - NN
 des O - ART
-Deutschen B-ORG - ADJA Q155718
-Aktienindexes I-ORG - NN Q155718
+Deutschen B-ORG Q155718 ADJA Q155718
+Aktienindexes I-ORG Q155718 NN Q155718
 ( O - $(
-DAX B-ORG - NE Q155718
+DAX B-ORG Q155718 NE Q155718
 ) O - $(
 . O - $.
 
@@ -8890,7 +8890,7 @@ nachgegeben O - VVPP
 . O - $.
 
 Der O - ART
-Dax B-ORG - NE Q155718
+Dax B-ORG Q155718 NE Q155718
 fiel O - VVFIN
 zum O - APPRART
 Handelsschluss O - NN
@@ -8937,7 +8937,7 @@ MDax O - NE
 büßte O - VVFIN
 0,69 O - CARD
 Pr O - NN
-Wagenknecht B-PER - NN Q77193
+Wagenknecht B-PER Q77193 NN Q77193
 nennt O - VVFIN
 Luftangriffe O - NN
 in O - APPR
@@ -8966,7 +8966,7 @@ Terror O - NN
 : O - $.
 
 Linksfraktionschefin O - NN
-Wagenknecht B-PER - NE Q77193
+Wagenknecht B-PER Q77193 NE Q77193
 wählt O - VVFIN
 harte O - ADJA
 Worte O - NN
@@ -8996,7 +8996,7 @@ Paris O - NE
 . O - $.
 
 Linksfraktionschefin O - NN
-Wagenknecht B-PER - NE Q77193
+Wagenknecht B-PER Q77193 NE Q77193
 ( O - $(
 Archivbild O - NN
 ) O - $(
@@ -9016,7 +9016,7 @@ verurteilen O - VVINF
 © O - FM
 dpa O - NE
 Linksfraktionschefin O - NN
-Wagenknecht B-PER - NE Q77193
+Wagenknecht B-PER Q77193 NE Q77193
 ( O - $(
 Archivbild O - NN
 ) O - $(
@@ -9038,13 +9038,13 @@ Foto O - NN
 
 dpa O - NE
 Linksfraktionschefin O - NN
-Sahra B-PER - NE Q77193
-Wagenknecht I-PER - NE Q77193
+Sahra B-PER Q77193 NE Q77193
+Wagenknecht I-PER Q77193 NE Q77193
 hat O - VAFIN
 die O - ART
 von O - APPR
 der O - ART
-Bundeswehr B-ORG - NN Q56010
+Bundeswehr B-ORG Q56010 NN Q56010
 unterstützten O - ADJA
 Luftangriffe O - NN
 in O - APPR
@@ -9096,8 +9096,8 @@ Schölermann I-PER - NE NIL
 Erster O - ADJA
 Vorsitzender O - NN
 des O - ART
-TSV B-ORG - NE Q479753
-Uetersen I-ORG - NE Q479753
+TSV B-ORG Q479753 NE Q479753
+Uetersen I-ORG Q479753 NE Q479753
 Jetzt O - NN
 hat O - VAFIN
 das O - ART
@@ -9113,8 +9113,8 @@ Fußball O - NN
 - O - $(
 Abteilung O - NN
 des O - ART
-TSV B-ORG - NE Q479753
-Uetersen I-ORG - NE Q479753
+TSV B-ORG Q479753 NE Q479753
+Uetersen I-ORG Q479753 NE Q479753
 gab O - VVFIN
 ( O - $(
 SportNord B-ORG - NE NIL
@@ -9150,8 +9150,8 @@ Herren O - NN
 - O - $(
 Mannschaft O - NN
 des O - ART
-TSV B-ORG - NE Q479753
-Uetersen I-ORG - NE Q479753
+TSV B-ORG Q479753 NE Q479753
+Uetersen I-ORG Q479753 NE Q479753
 nach O - APPR
 Gesprächen O - NN
 mit O - APPR
@@ -9169,7 +9169,7 @@ nicht O - PTKNEG
 mehr O - ADV
 für O - APPR
 den O - ART
-TSV B-ORG - NE Q479753
+TSV B-ORG Q479753 NE Q479753
 antreten O - VVINF
 werden O - VAFIN
 . O - $.
@@ -9272,8 +9272,8 @@ in O - APPR
 Syrien O - NE
 für O - APPR
 Aufklärung O - NN
-© B-ORG - FM Q32860709
-imago I-ORG - NE Q32860709
+© B-ORG Q32860709 FM Q32860709
+imago I-ORG Q32860709 NE Q32860709
 / O - $(
 Christian B-PER - NE NIL
 Thiel I-PER - NE NIL
@@ -9385,7 +9385,7 @@ in O - APPR
 Berlin O - NE
 : O - $.
 
-Lageso B-ORG - NE Q20758202
+Lageso B-ORG Q20758202 NE Q20758202
 - O - $(
 Chef O - NN
 tritt O - VVFIN
@@ -9412,7 +9412,7 @@ noch O - ADV
 verschärft O - VVPP
 . O - $.
 
-CDU B-ORG - NE Q49762
+CDU B-ORG Q49762 NE Q49762
 - O - $(
 Fraktionsvize O - NN
 Stefan B-PER - NE NIL
@@ -9489,7 +9489,7 @@ Do O - FM
 19.30 O - CARD
 Uhr O - NN
 | O - FM
-SWR B-ORG - NE Q700133
+SWR B-ORG Q700133 NE Q700133
 Fernsehen O - NN
 in O - APPR
 Rheinland O - NE
@@ -9499,7 +9499,7 @@ Mehr O - PIAT
 Info O - NN
 Bundeswehreinsatz O - NN
 gegen O - APPR
-IS B-ORG - NE Q2429253
+IS B-ORG Q2429253 NE Q2429253
 In O - APPR
 Büchel O - NE
 laufen O - VVFIN
@@ -9513,7 +9513,7 @@ gefährlicher O - ADJA
 Bundeswehreinsatz O - NN
 gegen O - APPR
 den O - ART
-IS B-ORG - NE Q2429253
+IS B-ORG Q2429253 NE Q2429253
 in O - APPR
 Syrien O - NE
 begonnen O - VVPP
@@ -9543,9 +9543,9 @@ Am O - APPRART
 Donnerstag O - NN
 informierte O - VVFIN
 das O - ART
-Taktische B-ORG - ADJA Q1678269
-Luftwaffengeschwader I-ORG - NN Q1678269
-33 I-ORG - CARD Q1678269
+Taktische B-ORG Q1678269 ADJA Q1678269
+Luftwaffengeschwader I-ORG Q1678269 NN Q1678269
+33 I-ORG Q1678269 CARD Q1678269
 Journalisten O - NN
 über O - APPR
 den O - ART
@@ -9567,8 +9567,8 @@ unternehmen O - VVINF
 Der O - ART
 Kommodore O - NN
 des O - ART
-Taktischen B-ORG - ADJA Q1678269
-Luftwaffengeschwaders I-ORG - NN Q1678269
+Taktischen B-ORG Q1678269 ADJA Q1678269
+Luftwaffengeschwaders I-ORG Q1678269 NN Q1678269
 , O - $,
 Holger B-PER - NE NIL
 Radmann I-PER - NE NIL
@@ -9584,8 +9584,8 @@ US O - FM
 - O - $(
 Pressestimmen O - NN
 zu O - APPR
-Donald B-PER - NE Q22686
-Trumps I-PER - NE Q22686
+Donald B-PER Q22686 NE Q22686
+Trumps I-PER Q22686 NE Q22686
 gestrigem O - ADJA
 Vorwahl O - NN
 - O - $(
@@ -9603,12 +9603,12 @@ den O - ART
 liberalen O - ADJA
 Zeitungen O - NN
 , O - $,
-Washington B-ORG - NE Q166032
-Post I-ORG - NE Q166032
+Washington B-ORG Q166032 NE Q166032
+Post I-ORG Q166032 NE Q166032
 und O - KON
 der O - ART
-Miami B-ORG - NE Q1706651
-Herald I-ORG - NE Q1706651
+Miami B-ORG Q1706651 NE Q1706651
+Herald I-ORG Q1706651 NE Q1706651
 , O - $,
 überwiegend O - ADJD
 über O - APPR
@@ -9618,11 +9618,11 @@ feindliche O - ADJA
 kommentiert O - VVPP
 , O - $,
 die O - PRELS
-Donald B-PER - NE Q22686
-Trump I-PER - NE Q22686
+Donald B-PER Q22686 NE Q22686
+Trump I-PER Q22686 NE Q22686
 bei O - APPR
 den O - ART
-Republikanern B-ORG - NN Q29468
+Republikanern B-ORG Q29468 NN Q29468
 vollzogen O - VVPP
 habe O - VAFIN
 . O - $.
@@ -9644,7 +9644,7 @@ Lügner O - NN
 Von O - APPR
 einer O - ART
 Kontrolle O - NN
-Trumps B-PER - NE Q22686
+Trumps B-PER Q22686 NE Q22686
 über O - APPR
 die O - ART
 Grand O - FM
@@ -9658,7 +9658,7 @@ Partei O - NN
 worden O - VAPP
 . O - $.
 
-Trump B-PER - NE Q22686
+Trump B-PER Q22686 NE Q22686
 habe O - VAFIN
 nun O - ADV
 den O - ART
@@ -9678,13 +9678,13 @@ könne O - VMFIN
 . O - $.
 
 Die O - ART
-New B-ORG - FM Q9684
-York I-ORG - FM Q9684
-Times I-ORG - NE Q9684
+New B-ORG Q9684 FM Q9684
+York I-ORG Q9684 FM Q9684
+Times I-ORG Q9684 NE Q9684
 schreibt O - VVFIN
 , O - $,
 dass O - KOUS
-Trump B-PER - NE Q22686
+Trump B-PER Q22686 NE Q22686
 die O - ART
 eigene O - ADJA
 Partei O - NN
@@ -9714,14 +9714,14 @@ Wahlkampagne O - NN
 , O - $,
 so O - ADV
 der O - ART
-Miami B-ORG - NE Q1706651
-Herald I-ORG - NE Q1706651
+Miami B-ORG Q1706651 NE Q1706651
+Herald I-ORG Q1706651 NE Q1706651
 . O - $.
 
 Panisch O - ADJD
 reagieren O - VVFIN
 nun O - ADV
-Republikaner B-ORG - NN Q29468
+Republikaner B-ORG Q29468 NN Q29468
 - O - $(
 Chefs O - NN
 und O - KON
@@ -9956,7 +9956,7 @@ Ache O - NN
 . O - $.
 
 Landesrat O - NN
-Schwaiger B-PER - NE Q15440930
+Schwaiger B-PER Q15440930 NE Q15440930
 : O - $.
 
 “ O - $(
@@ -10057,8 +10057,8 @@ den O - ART
 Wasserbau O - NN
 ressortzuständige O - ADJA
 Landesrat O - NN
-Josef B-PER - NE Q15440930
-Schwaiger I-PER - NE Q15440930
+Josef B-PER Q15440930 NE Q15440930
+Schwaiger I-PER Q15440930 NE Q15440930
 . O - $.
 
 Aktuelle O - ADJA
@@ -10081,23 +10081,23 @@ der O - ART
 Finanzmarktinformationen O - NN
 : O - $.
 
-vwd B-ORG - NE Q2514979
-Vereinigte B-ORG - ADJA Q2514979
-Wirtschaftsdienste I-ORG - NN Q2514979
-GmbH I-ORG - NN Q2514979
+vwd B-ORG Q2514979 NE Q2514979
+Vereinigte B-ORG Q2514979 ADJA Q2514979
+Wirtschaftsdienste I-ORG Q2514979 NN Q2514979
+GmbH I-ORG Q2514979 NN Q2514979
 Verzögerung O - NN
 der O - ART
 Kursdaten O - NN
 : O - $.
 
-Deutsche B-ORG - ADJA Q157852
+Deutsche B-ORG Q157852 ADJA Q157852
 Börse I-ORG - NN
 15 O - CARD
 Min. O - NN
 , O - $,
 Nasdaq O - NE
 und O - KON
-NYSE B-ORG - NE Q13677
+NYSE B-ORG Q13677 NE Q13677
 20 O - CARD
 Min O - NN
 . O - $.
@@ -10324,49 +10324,49 @@ Startseite O - NN
 % O - NN
 100 O - CARD
 % O - NN
-Christoph B-PER - NE Q152984
-Metzelder I-PER - NE Q152984
+Christoph B-PER Q152984 NE Q152984
+Metzelder I-PER Q152984 NE Q152984
 lehnt O - VVFIN
 Amt O - NN
 des O - ART
 Vorstandschefs O - NN
 bei O - APPR
-Eintracht B-ORG - NN Q38245
-Frankfurt I-ORG - NE Q38245
+Eintracht B-ORG Q38245 NN Q38245
+Frankfurt I-ORG Q38245 NE Q38245
 ab O - APPR
 Amt O - NN
 als O - KOKOM
 Vorstandschef O - NN
 abgelehnt O - VVPP
-Metzelder B-PER - NE Q152984
+Metzelder B-PER Q152984 NE Q152984
 sagt O - VVFIN
-Eintracht B-ORG - NN Q38245
-Frankfurt I-ORG - NE Q38245
+Eintracht B-ORG Q38245 NN Q38245
+Frankfurt I-ORG Q38245 NE Q38245
 an O - APPR
 05.03.16 O - FM
 - O - $(
 15:20 O - CARD
-Christoph B-PER - NE Q152984
-Metzelder I-PER - NE Q152984
+Christoph B-PER Q152984 NE Q152984
+Metzelder I-PER Q152984 NE Q152984
 . O - $.
 
 © O - FM
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Frankfurt O - NE
 / O - KON
 Main O - NE
 - O - $(
-Christoph B-PER - NE Q152984
-Metzelder I-PER - NE Q152984
+Christoph B-PER Q152984 NE Q152984
+Metzelder I-PER Q152984 NE Q152984
 war O - VAFIN
 als O - KOKOM
 Nachfolger O - NN
 von O - APPR
-Eintracht B-ORG 406 NN Q38245
-Frankfurts I-ORG 406 NE Q38245
+Eintracht B-ORG Q38245 NN Q38245
+Frankfurts I-ORG Q38245 NE Q38245
 Vorstandschef O 406 NN 
-Heribert B-PER 406 NE Q895570
-Bruchhagen I-PER 406 NE Q895570
+Heribert B-PER Q895570 NE Q895570
+Bruchhagen I-PER Q895570 NE Q895570
 im O - APPRART
 Gespräch O - NN
 . O - $.
@@ -10385,18 +10385,18 @@ haben O - VAINF
 Der O - ART
 frühere O - ADJA
 Nationalspieler O - NN
-Christoph B-PER - NE Q152984
-Metzelder I-PER - NE Q152984
+Christoph B-PER Q152984 NE Q152984
+Metzelder I-PER Q152984 NE Q152984
 hat O - VAFIN
 die O - ART
 Nachfolge O - NN
 von O - APPR
 Vorstandschef O 403 NN
-Heribert B-PER 403 NE Q895570
-Bruchhagen I-PER 403 NE Q895570
+Heribert B-PER Q895570 NE Q895570
+Bruchhagen I-PER Q895570 NE Q895570
 bei O - APPR
-Eintracht B-ORG 403 NN Q38245
-Frankfurt I-ORG 403 NE Q38245
+Eintracht B-ORG Q38245 NN Q38245
+Frankfurt I-ORG Q38245 NE Q38245
 abgelehnt O - VVPP
 . O - $.
 
@@ -10431,14 +10431,14 @@ habe O - VAFIN
 “ O - $(
 , O - $,
 sagte O - VVFIN
-Metzelder B-PER - NE Q152984
+Metzelder B-PER Q152984 NE Q152984
 am O - APPRART
 Samstag O - NN
 dem O - ART
 TV O - NN
 - O - $(
 Sender O - NN
-Sky B-ORG - NE Q652282
+Sky B-ORG Q652282 NE Q652282
 nach O - APPR
 Verhandlungen O - NN
 mit O - APPR
@@ -10449,15 +10449,15 @@ hessischen O - ADJA
 Bundesligisten O - NN
 . O - $.
 
-Metzelder B-PER - NE Q152984
+Metzelder B-PER Q152984 NE Q152984
 galt O - VVFIN
 als O - KOKOM
 Wunschkandidat O - NN
 der O - ART
-Eintracht B-ORG - NN Q38245
+Eintracht B-ORG Q38245 NN Q38245
 . O - $.
 
-Bruchhagen B-PER - NE Q895570
+Bruchhagen B-PER Q895570 NE Q895570
 gibt O - VVFIN
 das O - ART
 Amt O - NN
@@ -10470,15 +10470,15 @@ auf O - PTKVZ
 Zuletzt O - ADV
 hatte O - VAFIN
 auch O - ADV
-Christian B-PER - NE Q650214
-Nerlinger I-PER - NE Q650214
+Christian B-PER Q650214 NE Q650214
+Nerlinger I-PER Q650214 NE Q650214
 , O - $,
 ehemals O - ADV
 Manager O - NN
 des O - ART
-FC B-ORG - NN Q15789
-Bayern I-ORG - NE Q15789
-München I-ORG - NE Q15789
+FC B-ORG Q15789 NN Q15789
+Bayern I-ORG Q15789 NE Q15789
+München I-ORG Q15789 NE Q15789
 , O - $,
 auf O - APPR
 eine O - ART
@@ -10671,7 +10671,7 @@ Vor O - APPR
 dem O - ART
 Spiel O - NN
 beim O - APPRART
-VfR B-ORG - NE Q692586
+VfR B-ORG Q692586 NE Q692586
 Aalen I-ORG - NE
 ( O - $(
 Samstag O - NN
@@ -10759,7 +10759,7 @@ ist O - VAFIN
 ein O - ART
 Foto O - NN
 von O - APPR
-Apples B-ORG - NE Q312
+Apples B-ORG Q312 NE Q312
 nächstem O - ADJA
 Vorzeigemodell O - NN
 aufgetaucht O - VVPP
@@ -10866,8 +10866,8 @@ Ausführung O - NN
 die O - ART
 ve O - NE
 Der O - ART
-MSV B-ORG - NE Q154293
-Duisburg I-ORG - NE Q154293
+MSV B-ORG Q154293 NE Q154293
+Duisburg I-ORG Q154293 NE Q154293
 muss O - VMFIN
 weiter O - ADV
 auf O - APPR
@@ -10889,17 +10889,17 @@ anders O - ADV
 aus O - PTKVZ
 : O - $.
 
-Kingsley B-PER - NE Q1422678
-Ounuegbu I-PER - NE Q1422678
+Kingsley B-PER Q1422678 NE Q1422678
+Ounuegbu I-PER Q1422678 NE Q1422678
 ( O - $(
 links O - NE
 ) O - $(
 und O - KON
-Giorgi B-PER - NE Q889449
-Chanturia I-PER - NE Q889449
+Giorgi B-PER Q889449 NE Q889449
+Chanturia I-PER Q889449 NE Q889449
 auf O - APPR
 der O - ART
-Duisburger B-ORG - ADJA Q154293
+Duisburger B-ORG Q154293 ADJA Q154293
 Ersatzbank.Foto O - NN
 : O - $.
 
@@ -10927,16 +10927,16 @@ der O - ART
 0:1-Pleite O - NN
 gegen O - APPR
 den O - ART
-Karlsruher B-ORG - ADJA Q105853
-SC I-ORG - NN Q105853
+Karlsruher B-ORG Q105853 ADJA Q105853
+SC I-ORG Q105853 NN Q105853
 half O - VVFIN
 auch O - ADV
 die O - ART
 Anwesenheit O - NN
 von O - APPR
 Ex-MSV-Torwart O - NN
-Thomas B-PER - NE Q1379367
-Gill I-PER - NE Q1379367
+Thomas B-PER Q1379367 NE Q1379367
+Gill I-PER Q1379367 NE Q1379367
 nicht O - PTKNEG
 . O - $.
 
@@ -10956,8 +10956,8 @@ des O - ART
 Fußball O - NN
 - O - $(
 Zweitligisten O - NN
-MSV B-ORG - NE Q154293
-Duisburg I-ORG - NE Q154293
+MSV B-ORG Q154293 NE Q154293
+Duisburg I-ORG Q154293 NE Q154293
 , O - $,
 die O - PRELS
 am O - APPRART
@@ -10984,12 +10984,12 @@ feuchte O - ADJA
 Augen O - NN
 . O - $.
 
-MSV B-ORG - NE Q154293
+MSV B-ORG Q154293 NE Q154293
 - O - $(
 Planung O - NN
 Der O - ART
-MSV B-ORG - NE Q154293
-Duisburg I-ORG - NE Q154293
+MSV B-ORG Q154293 NE Q154293
+Duisburg I-ORG Q154293 NE Q154293
 plant O - VVFIN
 nach O - APPR
 Niederlage O - NN
@@ -11000,7 +11000,7 @@ die O - ART
 . I-ORG - $. NIL
 
 Liga B-ORG - NN NIL
-MSV B-ORG - NE Q154293
+MSV B-ORG Q154293 NE Q154293
 - O - $(
 Aufsichtsratschef O - NN
 Jürgen O - NE
@@ -11009,13 +11009,13 @@ schließt O - VVFIN
 eine O - ART
 Trainerdiskussion O - NN
 beim O - APPRART
-MSV B-ORG - NE Q154293
-Duisburg I-ORG - NE Q154293
+MSV B-ORG Q154293 NE Q154293
+Duisburg I-ORG Q154293 NE Q154293
 aus O - PTKVZ
 . O - $.
 
-Martin B-PER - NE Q122565
-Dausch I-PER - NE Q122565
+Martin B-PER Q122565 NE Q122565
+Dausch I-PER Q122565 NE Q122565
 unterzieht O - VVFIN
 sich O - PRF
 derweil O - ADV
@@ -11026,16 +11026,16 @@ Hüftoperation O - NN
 Die O - ART
 Ex-Trainer O - NN
 Seppo B-PER - NE Q1704521 
-Eichkorn I-PER - NE Q1704521
+Eichkorn I-PER Q1704521 NE Q1704521
 und O - KON
-Kosta B-PER - NE Q1785131
-Runjaic I-PER - NE Q1785131
+Kosta B-PER Q1785131 NE Q1785131
+Runjaic I-PER Q1785131 NE Q1785131
 waren O - VAFIN
 da O - ADV
 , O - $,
 Sturmlegende O - NN
-Bachirou B-PER - NE Q464669
-Salou I-PER - NE Q464669
+Bachirou B-PER Q464669 NE Q464669
+Salou I-PER Q464669 NE Q464669
 , O - $,
 der O - PRELS
 ehemal O - ADV
@@ -11076,13 +11076,13 @@ Tiefrote O - ADJA
 Zahlen O - NN
 : O - $.
 
-Eybl B-ORG - NE Q1385678
+Eybl B-ORG Q1385678 NE Q1385678
 - O - $(
 Übernahme O - NN
 wird O - VAFIN
 für O - APPR
-Sports B-ORG - NE Q7579661
-Direct I-ORG - NE Q7579661
+Sports B-ORG Q7579661 NE Q7579661
+Direct I-ORG Q7579661 NE Q7579661
 zum O - APPRART
 Fiasko O - NN
 Erschienen O - NN
@@ -11104,8 +11104,8 @@ Diskont O - NN
 - O - $(
 Strategie O - NN
 von O - APPR
-Sports B-ORG - FM Q7579661
-Direct I-ORG - FM Q7579661
+Sports B-ORG Q7579661 FM Q7579661
+Direct I-ORG Q7579661 FM Q7579661
 und O - KON
 das O - ART
 Schließen O - NN
@@ -11240,8 +11240,8 @@ DGAP O - NE
 ein O - ART
 Service O - NN
 der O - ART
-EQS B-ORG - NE Q16978036
-Group I-ORG - FM Q16978036
+EQS B-ORG Q16978036 NE Q16978036
+Group I-ORG Q16978036 FM Q16978036
 AG I-ORG - NN
 . O - $.
 
@@ -11329,10 +11329,10 @@ Twittern O - NN
 Foto O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Saarbrücken O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 / O - $(
 lrs O - FM
 ) O - $(
@@ -11342,10 +11342,10 @@ Vorsitzende O - NN
 der O - ART
 Innenministerkonferenz O - NN
 , O - $,
-Klaus B-PER - NE Q18584620
-Bouillon I-PER - NE Q18584620
+Klaus B-PER Q18584620 NE Q18584620
+Bouillon I-PER Q18584620 NE Q18584620
 ( O - $(
-CDU B-ORG - NE Q49762
+CDU B-ORG Q49762 NE Q49762
 ) O - $(
 , O - $,
 hält O - VVFIN
@@ -11397,9 +11397,9 @@ Innenminister O - NN
 am O - APPRART
 Dienstag O - NN
 der O - ART
-Deutschen B-ORG - ADJA Q312653
-Presse I-ORG - NN Q312653
-- I-ORG - $( Q312653
+Deutschen B-ORG Q312653 ADJA Q312653
+Presse I-ORG Q312653 NN Q312653
+- I-ORG Q312653 $( Q312653
 Agentur I-ORG - NN
 in O - APPR
 Saarbrücken O - NE
@@ -11450,7 +11450,7 @@ erfolgt O - VVFIN
 » O - $(
 , O - $,
 sagte O - VVFIN
-Bouillon B-PER - NE Q18584620
+Bouillon B-PER Q18584620 NE Q18584620
 . O - $.
 
 Für O - APPR
@@ -11549,9 +11549,9 @@ Luxus O - NN
 Mode O - NN
 : O - $.
 
-Escada B-ORG - NE Q600986
+Escada B-ORG Q600986 NE Q600986
 - O - $(
-Modekonzern O - NN Q600986
+Modekonzern O Q600986 NN Q600986
 kämpft O - VVFIN
 mit O - APPR
 Geschäftsrückgang O - NN
@@ -11563,7 +11563,7 @@ Der O - ART
 Luxus O - NN
 - O - $(
 Damenmodekonzern O - NN
-Escada B-ORG - NE Q600986
+Escada B-ORG Q600986 NE Q600986
 steht O - VVFIN
 vor O - APPR
 einem O - ART
@@ -11574,7 +11574,7 @@ Neuausrichtung O - NN
 . O - $.
 
 Der O - ART
-Luxusmodekonzern B-ORG - NN Q600986
+Luxusmodekonzern B-ORG Q600986 NN Q600986
 will O - VMFIN
 nun O - ADV
 binnen O - APPR
@@ -11598,17 +11598,17 @@ der O - ART
 Finanzmarktinformationen O - NN
 : O - $.
 
-vwd B-ORG - NE Q2514979
-Vereinigte B-ORG - ADJA Q2514979
-Wirtschaftsdienste I-ORG - NN Q2514979
-GmbH I-ORG - NN Q2514979
+vwd B-ORG Q2514979 NE Q2514979
+Vereinigte B-ORG Q2514979 ADJA Q2514979
+Wirtschaftsdienste I-ORG Q2514979 NN Q2514979
+GmbH I-ORG Q2514979 NN Q2514979
 Verzögerung O - NN
 der O - ART
 Kursdaten O - NN
 : O - $.
 
-Deutsche B-ORG - ADJA Q157852
-Börse I-ORG - NN Q157852
+Deutsche B-ORG Q157852 ADJA Q157852
+Börse I-ORG Q157852 NN Q157852
 15 O - CARD
 Min. O - NN
 , O - $,
@@ -11882,7 +11882,7 @@ Möller I-PER - NE NIL
 Gelsenkirchen O - NE
 . O - $.
 
-WAZ B-ORG - NE Q561840
+WAZ B-ORG Q561840 NE Q561840
 stellt O - VVFIN
 in O - APPR
 einer O - ART
@@ -11978,7 +11978,7 @@ greifen O - VVINF
 . O - $.
 
 Die O - ART
-WAZ B-ORG - NE Q561840
+WAZ B-ORG Q561840 NE Q561840
 hat O - VAFIN
 hinter O - APPR
 die O - ART
@@ -12188,7 +12188,7 @@ beachten O - VVINF
 . O - $.
 
 Das O - ART
-Tiefbauamt B-ORG - NN Q811094
+Tiefbauamt B-ORG Q811094 NN Q811094
 bittet O - VVFIN
 die O - ART
 Verkehrsteilnehmer O - NN
@@ -12262,8 +12262,8 @@ Danach O - PROAV
 wird O - VAFIN
 die O - ART
 Bundeskanzlerin O - NN
-Angela B-PER - NE Q567
-Merkel I-PER - NE Q567
+Angela B-PER Q567 NE Q567
+Merkel I-PER Q567 NE Q567
 stürzen O - VVINF
 ? O - $.
 
@@ -12347,13 +12347,13 @@ Ein O - ART
 König O - NN
 mit O - APPR
 Namen O - NN
-Tarquinius B-PER - NE Q193047
-Superbus I-PER - NE Q193047
+Tarquinius B-PER Q193047 NE Q193047
+Superbus I-PER Q193047 NE Q193047
 und O - KON
 sein O - PPOSAT
 nichtsnutziger O - ADJA
 Sohn O - NN
-Sextus B-PER - NE Q456931
+Sextus B-PER Q456931 NE Q456931
 . O - $.
 
 Auf O - APPR
@@ -12389,7 +12389,7 @@ Terror O - NN
 : O - $.
 
 Linksfraktionschefin O 636 NN
-Wagenknecht B-PER 636 NE Q77193
+Wagenknecht B-PER Q77193 NE Q77193
 wählt O - VVFIN
 harte O - ADJA
 Worte O - NN
@@ -12419,7 +12419,7 @@ Paris O - NE
 . O - $.
 
 Linksfraktionschefin O - NN
-Wagenknecht B-PER - NE Q77193
+Wagenknecht B-PER Q77193 NE Q77193
 ( O - $(
 Archivbild O - NN
 ) O - $(
@@ -12439,7 +12439,7 @@ verurteilen O - VVINF
 © O - FM
 dpa O - NE
 Linksfraktionschefin O - NN
-Wagenknecht B-PER - NE Q77193
+Wagenknecht B-PER Q77193 NE Q77193
 ( O - $(
 Archivbild O - NN
 ) O - $(
@@ -12459,7 +12459,7 @@ verurteilen O - VVINF
 Foto O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Linksfraktionschefin O - NN
 Sahra O - NE
 Wagenknecht O - NE
@@ -12467,7 +12467,7 @@ hat O - VAFIN
 die O - ART
 von O - APPR
 der O - ART
-Bundeswehr B-ORG - NN Q56010
+Bundeswehr B-ORG Q56010 NN Q56010
 unterstützten O - ADJA
 Luftangriffe O - NN
 in O - APPR
@@ -12503,7 +12503,7 @@ Pariser O - ADJA
 Restaurants O - NN
 und O - KON
 Kon O - NE
-Obama B-PER - NE Q76
+Obama B-PER Q76 NE Q76
 will O - VMFIN
 Missbrauch O - NN
 von O - APPR
@@ -12590,8 +12590,8 @@ Washington O - NE
 US O - NE
 - O - $(
 Präsident O - NN
-Barack B-PER - NE Q76
-Obama I-PER - NE Q76
+Barack B-PER Q76 NE Q76
+Obama I-PER Q76 NE Q76
 hat O - VAFIN
 in O - APPR
 einer O - ART
@@ -12609,7 +12609,7 @@ angekündigt O - VVPP
 Mehrmals O - ADV
 wischte O - VVFIN
 sich O - PRF
-Obama B-PER - NE Q76
+Obama B-PER Q76 NE Q76
 Tränen O - NN
 aus O - APPR
 dem O - ART
@@ -12632,7 +12632,7 @@ Land O - NN
 erinnerte O - VVFIN
 . O - $.
 
-Obama B-PER - NE Q76
+Obama B-PER Q76 NE Q76
 will O - VMFIN
 vor O - APPR
 allem O - PIS
@@ -12653,7 +12653,7 @@ möglichst O - ADV
 schließen O - VVINF
 . O - $.
 
-Obama B-PER - NE Q76
+Obama B-PER Q76 NE Q76
 will O - VMFIN
 Missbrauch O - NN
 von O - APPR
@@ -12672,7 +12672,7 @@ verlängert O - VVFIN
 15:11 O - CARD
 | O - FM
 ( O - $(
-DiePresse.com B-ORG - NE Q689934
+DiePresse.com B-ORG Q689934 NE Q689934
 ) O - $(
 Auf O - APPR
 mindestens O - ADV
@@ -12732,12 +12732,12 @@ Das O - PDS
 teilten O - VVFIN
 die O - ART
 Produktionsfirma O - NN
-Universal B-ORG - FM Q21043034
-Pictures I-ORG - FM Q21043034
+Universal B-ORG Q21043034 FM Q21043034
+Pictures I-ORG Q21043034 FM Q21043034
 und O - KON
 Hauptdarsteller O - NN
-Vin B-PER - NE Q178166
-Diesel I-PER - NE Q178166
+Vin B-PER Q178166 NE Q178166
+Diesel I-PER Q178166 NE Q178166
 mit O - PTKVZ
 . O - $.
 
@@ -12748,7 +12748,7 @@ zehn O - CARD
 werden O - VAFIN
 dem O - ART
 Branchenblatt O - NN
-Variety B-ORG - NE Q471728
+Variety B-ORG Q471728 NE Q471728
 zufolge O - APPO
 2019 O - CARD
 und O - KON
@@ -12773,9 +12773,9 @@ Outta O - NE
 Compton O - NE
 - O - $(
 Regisseur O - NN
-F. B-PER - NE Q462078
-Gary I-PER - NE Q462078
-Gray I-PER - NE Q462078
+F. B-PER Q462078 NE Q462078
+Gary I-PER Q462078 NE Q462078
+Gray I-PER Q462078 NE Q462078
 inszeniert O - VVFIN
 diesen O - PDS
 . O - $.
@@ -12784,7 +12784,7 @@ Pläne O - NN
 auch O - ADV
 für O - APPR
 Ableger O - NN
-Diesel B-ORG - NE Q178166
+Diesel B-ORG Q178166 NE Q178166
 verriet O - VVFIN
 bereits O - ADV
 im O - APPRART
@@ -12841,15 +12841,15 @@ sagt O - VVFIN
 der O - ART
 Präsident O 649 NN
 des O - ART
-Bundeskriminalamtes B-ORG 649 NN Q56030
+Bundeskriminalamtes B-ORG Q56030 NN Q56030
 , O - $,
-Holger B-PER 649 NE Q1624578
-Münch I-PER 649 NE Q1624578
+Holger B-PER Q1624578 NE Q1624578
+Münch I-PER Q1624578 NE Q1624578
 . O - $.
 
 Hier O - ADV
 vom O - APPRART
-Zoll B-ORG - NN Q1009333
+Zoll B-ORG Q1009333 NN Q1009333
 sichergestelltes O - ADJA
 Crystal O - NE
 Meth O - NE
@@ -12865,9 +12865,9 @@ Berlin O - NE
 Der O - ART
 Präsident O - NN
 des O - ART
-Bundeskriminalamtes B-ORG - NN Q56030
+Bundeskriminalamtes B-ORG Q56030 NN Q56030
 ( O - $(
-BKA B-ORG - NE Q56030
+BKA B-ORG Q56030 NE Q56030
 ) O - $(
 , O - $,
 Holger O - NE
@@ -12884,10 +12884,10 @@ Sorge O - NN
 . O - $.
 
 Dem O - ART
-Redaktionsnetzwerk B-ORG - NN Q22676655
-Deutschland I-ORG - NE Q22676655
+Redaktionsnetzwerk B-ORG Q22676655 NN Q22676655
+Deutschland I-ORG Q22676655 NE Q22676655
 sagte O - VVFIN
-Münch B-PER - NE Q1624578
+Münch B-PER Q1624578 NE Q1624578
 : O - $.
 
 Wir O - PPER
@@ -12940,7 +12940,7 @@ wie O - KOKOM
 Heroin O - NE
 . O - $.
 
-Münch B-PER - NE Q1624578
+Münch B-PER Q1624578 NE Q1624578
 bestätigt O - VVFIN
 jedoch O - ADV
 den O - ART
@@ -12978,7 +12978,7 @@ vor O - APPR
 Minuten O - NN
 : O - $.
 
-FIFA B-ORG - NE Q253414
+FIFA B-ORG Q253414 NE Q253414
 - O - $(
 Wahlkampf O - NN
 mit O - APPR
@@ -12992,18 +12992,18 @@ und O - KON
 Florian B-PER - NE NIL
 Lütticke I-PER - NE NIL
 , O - $,
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Scheich O - NE
-Salman B-PER - NE Q7405402
-bin I-PER - NE Q7405402
-Ibrahim I-PER - NE Q7405402
-al I-PER - NE Q7405402
-Chalifa I-PER - NE Q7405402
+Salman B-PER Q7405402 NE Q7405402
+bin I-PER Q7405402 NE Q7405402
+Ibrahim I-PER Q7405402 NE Q7405402
+al I-PER Q7405402 NE Q7405402
+Chalifa I-PER Q7405402 NE Q7405402
 hat O - VAFIN
 den O - ART
 Wahlkampf O - NN
 ums O - APPRART
-FIFA B-ORG - NE Q253414
+FIFA B-ORG Q253414 NE Q253414
 - O - $(
 Präsidentenamt O - NN
 verschärft O - VVPP
@@ -13018,7 +13018,7 @@ Kraemer I-PER - NE NIL
 Bild O - NN NIL
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 - I-ORG - $(
 infocom I-ORG - NE
 GmbH I-ORG - NN
@@ -13030,11 +13030,11 @@ um O - APPR
 das O - ART
 Erbe O - NN
 von O - APPR
-FIFA B-ORG 652 NE Q253414
+FIFA B-ORG Q253414 NE Q253414
 - O - $(
 Boss O 652 NN
-Joseph B-PER 652 NE Q483437
-Blatter I-PER 652 NE Q483437
+Joseph B-PER Q483437 NE Q483437
+Blatter I-PER Q483437 NE Q483437
 eher O - ADV
 dröge O - ADJD
 . O - $.
@@ -13055,11 +13055,11 @@ auf O - PTKVZ
 . O - $.
 
 Scheich O - NE
-Salman B-PER - NE Q7405402
-bin I-PER - VAFIN Q7405402
-Ibrahim I-PER - NE Q7405402
-al I-PER - NE Q7405402
-Chalifa I-PER - NE Q7405402
+Salman B-PER Q7405402 NE Q7405402
+bin I-PER Q7405402 VAFIN Q7405402
+Ibrahim I-PER Q7405402 NE Q7405402
+al I-PER Q7405402 NE Q7405402
+Chalifa I-PER Q7405402 NE Q7405402
 aus O - APPR
 Bahrain O - NE
 , O - $,
@@ -13093,8 +13093,8 @@ AP B-ORG - NE Q40469
 Zur O - APPRART
 Zielscheibe O - NN
 wird O - VAFIN
-Gianni B-PER - NE Q124138
-Infantino I-PER - NE Q124138
+Gianni B-PER Q124138 NE Q124138
+Infantino I-PER Q124138 NE Q124138
 , O - $,
 einziger O - ADJA
 ernstzunehmender O - ADJA
@@ -13105,12 +13105,12 @@ Verbandspräsidenten O - NN
 . O - $.
 
 Scheich O - NE
-Salman B-PER - NE Q7405402
+Salman B-PER Q7405402 NE Q7405402
 zu O - PTKVZ
 : O - $.
 
 - O - $(
-Infantinos B-PER - NE Q124138
+Infantinos B-PER Q124138 NE Q124138
 finanziellen O - ADJA
 Versprechungen O - NN
 : O - $.
@@ -13119,14 +13119,14 @@ Der O - ART
 Hintergrund O - NN
 : O - $.
 
-UEFA B-ORG 655 NE Q35572
+UEFA B-ORG Q35572 NE Q35572
 - O - $(
 Generalsekretär O 655 NN
-Gianni B-PER 655 NE Q124138
-Infantino I-PER 655 NE Q124138
+Gianni B-PER Q124138 NE Q124138
+Infantino I-PER Q124138 NE Q124138
 will O - VMFIN
 als O - KOKOM
-FIFA B-ORG - NE Q253414
+FIFA B-ORG Q253414 NE Q253414
 - O - $(
 Chef O - NN
 die O - ART
@@ -13135,7 +13135,7 @@ an O - APPR
 jedes O - PIS
 der O - ART
 209 O - CARD
-FIFA B-ORG - NE Q253414
+FIFA B-ORG Q253414 NE Q253414
 - O - $(
 Mitglieder O - NN
 von O - APPR
@@ -13145,7 +13145,7 @@ Etwas O - NN
 verspätet O - ADJD
 : O - $.
 
-BMW B-ORG - NE Q26678
+BMW B-ORG Q26678 NE Q26678
 Dingolfing O - NE
 feiert O - VVFIN
 Artikel O - NN
@@ -13162,7 +13162,7 @@ dran O - PROAV
 Heute O - ADV
 dürfen O - VMFIN
 die O - ART
-BMW B-ORG - NE Q26678
+BMW B-ORG Q26678 NE Q26678
 ´ O - $(
 ler O - NE
 im O - APPRART
@@ -13204,7 +13204,7 @@ sauer O - ADJD
 Denn O - KON
 in O - APPR
 anderen O - ADJA
-BMW B-ORG - NE Q26678
+BMW B-ORG Q26678 NE Q26678
 - O - $(
 Werken O - NN
 wie O - KOKOM
@@ -13276,27 +13276,27 @@ Mal O - ADV
 die O - ART
 Übernahme O - NN
 der O - ART
-Hans B-ORG - NE Q664324
-Glas I-ORG - NE Q664324
-GmbH I-ORG - NN Q664324
+Hans B-ORG Q664324 NE Q664324
+Glas I-ORG Q664324 NE Q664324
+GmbH I-ORG Q664324 NN Q664324
 in O - APPR
 Landshut O - NE
 und O - KON
 Dingolfing O - NE
 durch O - APPR
-BMW B-ORG - NE Q26678
+BMW B-ORG Q26678 NE Q26678
 . O - $.
 
 Trauerfeier O - NN
 für O - APPR
-Pierre B-PER - NE Q156193
-Boulez I-PER - NE Q156193
+Pierre B-PER Q156193 NE Q156193
+Boulez I-PER Q156193 NE Q156193
 in O - APPR
 Baden O - NE
 - O - $(
 Baden O - NE
-Pierre B-PER - NE Q156193
-Boulez I-PER - NE Q156193
+Pierre B-PER Q156193 NE Q156193
+Boulez I-PER Q156193 NE Q156193
 hat O - VAFIN 
 die O - ART
 Grenzen O - NN
@@ -13313,20 +13313,20 @@ Haid I-PER - NE NIL
 Bild O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 - I-ORG - $(
 infocom I-ORG - NE
 GmbH I-ORG - NN
 Baden O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 ) O - $(
 - O - $(
 Feierlicher O - ADJA
 Abschied O - NN
 von O - APPR
-Pierre B-PER - NE Q156193
-Boulez I-PER - NE Q156193
+Pierre B-PER Q156193 NE Q156193
+Boulez I-PER Q156193 NE Q156193
 : O - $.
 
 Der O - ART
@@ -13367,7 +13367,7 @@ Musik O - NN
 von O - APPR
 und O - KON
 für O - APPR
-Boulez B-PER - NE Q156193
+Boulez B-PER Q156193 NE Q156193
 , O - $,
 Lesungen O - NN
 und O - KON
@@ -13410,8 +13410,8 @@ Sarg O - NN
 waren O - VAFIN
 Komponisten O - NN
 wie O - KOKOM
-Wolfgang B-PER - NE Q77031
-Rihm I-PER - NE Q77031
+Wolfgang B-PER Q77031 NE Q77031
+Rihm I-PER Q77031 NE Q77031
 und O - KON
 andere O - ADJA
 Musikschaffende O - NN
@@ -13419,13 +13419,13 @@ wie O - KOKOM
 Festspielhaus O - NN
 - O - $(
 Intendant O - NN
-Andreas B-PER - NE Q499684
-Mölich I-PER - NE Q499684
+Andreas B-PER Q499684 NE Q499684
+Mölich I-PER Q499684 NE Q499684
 - I-PER - $(
-Zebhauser I-PER - NE Q499684
+Zebhauser I-PER Q499684 NE Q499684
 . O - $.
 
-Boulez B-PER - NE Q156193
+Boulez B-PER Q156193 NE Q156193
 war O - VAFIN
 am O - APPRART
 5 O - CARD
@@ -13462,24 +13462,24 @@ die O - ART
 Entscheidung O - NN
 von O - APPR
 Wirtschaftsminister O - NN
-Gabriel B-PER - NE Q160902
+Gabriel B-PER Q160902 NE Q160902
 , O - $,
 die O - ART
 Fusion O - NN
 von O - APPR
-Edeka B-ORG - NE Q701755
+Edeka B-ORG Q701755 NE Q701755
 und O - KON
-Tengelmann B-ORG - NE Q832996
+Tengelmann B-ORG Q832996 NE Q832996
 zu O - PTKZU
 erlauben O - VVINF
 . O - $.
 
-Daniel B-PER 664 NE Q18411264
-Zimmer I-PER 664 NE Q18411264
+Daniel B-PER Q18411264 NE Q18411264
+Zimmer I-PER Q18411264 NE Q18411264
 , O - $,
 Chef O 664 NN
 der O - ART
-Monopolkommission B-ORG 664 NN Q1945081
+Monopolkommission B-ORG Q1945081 NN Q1945081
 , O - $,
 findet O - VVFIN
 im O - APPRART
@@ -13498,8 +13498,8 @@ zeigt O - VVFIN
 sich O - PRF
 : O - $.
 
-Kaiser B-ORG - NE Q897187
-´s I-ORG - PPER Q897187
+Kaiser B-ORG Q897187 NE Q897187
+´s I-ORG Q897187 PPER Q897187
 hat O - VAFIN
 noch O - ADV
 immer O - ADV
@@ -13520,11 +13520,11 @@ rentabel O - ADJD
 Zu O - PTKA
 lange O - ADJD
 hat O - VAFIN
-Tengelmann B-ORG - NE Q832996
+Tengelmann B-ORG Q832996 NE Q832996
 - O - $(
 Chef O 667 NN
-Erivan B-PER 667 NE Q103647
-Haub I-PER 667 NE Q103647
+Erivan B-PER Q103647 NE Q103647
+Haub I-PER Q103647 NE Q103647
 sie O - PPER
 durchgeschleppt O - VVPP
 . O - $.
@@ -13573,7 +13573,7 @@ zitiert O - VVPP
 Ein O - ART
 letzter O - ADJA
 Versuch O - NN
-Haubs B-PER - NE Q103647
+Haubs B-PER Q103647 NE Q103647
 , O - $,
 seine O - PPOSAT
 Supermärkte O - NN
@@ -13600,13 +13600,13 @@ der O - ART
 Norden O - NN
 Deutschlands O - NE
 den O - ART
-Kaiser B-ORG - NN Q897187
-´s I-ORG - PPER Q897187
+Kaiser B-ORG Q897187 NN Q897187
+´s I-ORG Q897187 PPER Q897187
 und O - KON
 der O - ART
 Süden O - NN
 den O - ART
-Tengelmann B-ORG - NE Q832996
+Tengelmann B-ORG Q832996 NE Q832996
 Supermärkten O - NN
 . O - $.
 
@@ -13622,7 +13622,7 @@ Preiskampf O - NN
 im O - APPRART
 Lebensmitteleinzelhandel O - NN
 i O - CARD
-pnp.de B-ORG - NE Q896978
+pnp.de B-ORG Q896978 NE Q896978
 ist O - VAFIN
 nicht O - PTKNEG
 verantwortlich O - ADJD
@@ -13648,10 +13648,10 @@ Nach O - APPR
 Berechnungen O - NN
 des O - ART
 arbeitgebernahen O - ADJA
-Institut B-ORG - NN Q958316
-der I-ORG - ART Q958316
-Wirtschaft I-ORG - NN Q958316
-Köln I-ORG - NE Q958316
+Institut B-ORG Q958316 NN Q958316
+der I-ORG Q958316 ART Q958316
+Wirtschaft I-ORG Q958316 NN Q958316
+Köln I-ORG Q958316 NE Q958316
 sind O - VAFIN
 in O - APPR
 diesem O - PDAT
@@ -13679,7 +13679,7 @@ gestreikt O - VVPP
 , O - $,
 sagt O - VVFIN
 das O - ART
-IW B-ORG - NE Q958316
+IW B-ORG Q958316 NE Q958316
 . O - $.
 
 Heiner B-PER - NE NIL
@@ -13731,7 +13731,7 @@ Streiks O - NN
 im O - APPRART
 Organisationsbereich O - NN
 von O - APPR
-Verdi B-ORG - NE Q547951
+Verdi B-ORG Q547951 NE Q547951
 entfallen O - VVPP
 , O - $,
 darunter O - PROAV
@@ -13740,7 +13740,7 @@ langen O - ADJA
 Konflikte O - NN
 bei O - APPR
 der O - ART
-Post B-ORG - NN Q157645
+Post B-ORG Q157645 NN Q157645
 und O - KON
 im O - APPRART
 Sozial O - NN
@@ -13802,9 +13802,9 @@ Verfolgung O - NN
 Themen O - NN
 - O - $(
 Dossiers O - NN
-Börsen B-ORG - NN Q855176
-- I-ORG - $( Q855176
-Zeitung I-ORG - NN Q855176
+Börsen B-ORG Q855176 NN Q855176
+- I-ORG Q855176 $( Q855176
+Zeitung I-ORG Q855176 NN Q855176
 : O - $.
 
 Gelebte O - ADJA
@@ -13812,13 +13812,13 @@ Kapitalmarktunion O - NN
 , O - $,
 Kommentar O - NN
 zu O - APPR
-Deutschen B-ORG - ADJA Q157852
-Börse I-ORG - NN Q157852
+Deutschen B-ORG Q157852 ADJA Q157852
+Börse I-ORG Q157852 NN Q157852
 / O - $(
-LSE B-ORG - NE Q171240
+LSE B-ORG Q171240 NE Q171240
 von O - APPR
-Claus B-PER - NE Q20752451
-Döring I-PER - NE Q20752451
+Claus B-PER Q20752451 NE Q20752451
+Döring I-PER Q20752451 NE Q20752451
 23.02.16 O - FM
 20:50 O - CARD
 Frankfurt O - NE
@@ -13829,13 +13829,13 @@ ots O - NE
 Was O - PWS
 dem O - ART
 einstigen O - ADJA
-Deutsche B-ORG - ADJA Q157852
-- I-ORG - $( Q157852
-Börse I-ORG - NN Q157852
+Deutsche B-ORG Q157852 ADJA Q157852
+- I-ORG Q157852 $( Q157852
+Börse I-ORG Q157852 NN Q157852
 - O 679 $(
 Chef O 679 NN
-Werner B-PER 679 NE Q2562605
-Seifert I-PER 679 NE Q2562605
+Werner B-PER Q2562605 NE Q2562605
+Seifert I-PER Q2562605 NE Q2562605
 vor O - APPR
 elf O - CARD
 Jahren O - NN
@@ -13844,8 +13844,8 @@ gelang O - VVFIN
 , O - $,
 will O - VMFIN
 nun O - ADV
-Carsten B-PER 682 NE Q19277183
-Kengeter I-PER 682 NE Q19277183
+Carsten B-PER Q19277183 NE Q19277183
+Kengeter I-PER Q19277183 NE Q19277183
 mit O - APPR
 einem O - ART
 neuen O - ADJA
@@ -13855,16 +13855,16 @@ schaffen O - VVINF
 
 mit O - APPR
 der O - ART
-London B-ORG - NE Q171240
-Stock I-ORG - FM Q171240
-Exchange I-ORG - FM Q171240
+London B-ORG Q171240 NE Q171240
+Stock I-ORG Q171240 FM Q171240
+Exchange I-ORG Q171240 FM Q171240
 ( O - $(
-LSE B-ORG - NE Q171240
+LSE B-ORG Q171240 NE Q171240
 ) O - $(
 und O - KON
 der O - ART
-Deutschen B-ORG - ADJA Q157852
-Börse I-ORG - NN Q157852
+Deutschen B-ORG Q157852 ADJA Q157852
+Börse I-ORG Q157852 NN Q157852
 die O - ART
 beiden O - PIDAT
 führenden O - ADJA
@@ -13918,7 +13918,7 @@ um O - APPR
 eine O - ART
 Übernahme O - NN
 der O - ART
-LSE B-ORG - NE Q171240
+LSE B-ORG Q171240 NE Q171240
 , O - $,
 die O - PRELS
 seinerzeit O - ADV
@@ -13940,7 +13940,7 @@ Fusion O - NN
 wettende O - ADJA
 Hedgefonds O - NN
 mit O - APPR
-TCI B-ORG - NE Q1476216
+TCI B-ORG Q1476216 NE Q1476216
 an O - APPR
 der O - ART
 Spitze O - NN
@@ -13993,15 +13993,15 @@ technischer O - ADJA
 Prozesse O - NN
 an O - APPR
 der O - ART
-Bergischen B-ORG - ADJA Q447953
-Universität I-ORG - NN Q447953
-Wuppertal I-ORG - NE Q447953
+Bergischen B-ORG Q447953 ADJA Q447953
+Universität I-ORG Q447953 NN Q447953
+Wuppertal I-ORG Q447953 NE Q447953
 hält O - VVFIN
 auf O - APPR
 Einladung O - NN
 der O - ART
-Universität B-ORG - NN Q3551328
-Talca I-ORG - NE Q3551328
+Universität B-ORG Q3551328 NN Q3551328
+Talca I-ORG Q3551328 NE Q3551328
 , O - $,
 Chile O - NE
 , O - $,
@@ -14035,10 +14035,10 @@ sein O - VAINF
 . O - $.
 
 Der O - ART
-Deutsche B-ORG - ADJA Q696935
-Akademische I-ORG - ADJA Q696935
-Austauschdienst I-ORG - NN Q696935
-DAAD B-ORG - NE Q696935
+Deutsche B-ORG Q696935 ADJA Q696935
+Akademische I-ORG Q696935 ADJA Q696935
+Austauschdienst I-ORG Q696935 NN Q696935
+DAAD B-ORG Q696935 NE Q696935
 fördert O - VVFIN
 den O - ART
 Aufenthalt O - NN
@@ -14048,23 +14048,23 @@ Die O - ART
 1981 O - CARD
 aus O - APPR
 der O - ART
-Universidad B-ORG - FM Q232141
-de I-ORG - FM Q232141
-Chile I-ORG - NE Q232141
+Universidad B-ORG Q232141 FM Q232141
+de I-ORG Q232141 FM Q232141
+Chile I-ORG Q232141 NE Q232141
 und O - KON
 der O - ART
-Universidad B-ORG - FM Q6156725
-de I-ORG - FM Q6156725
-Técnica I-ORG - FM Q6156725
-del I-ORG - FM Q6156725
-Estado I-ORG - NE Q6156725
+Universidad B-ORG Q6156725 FM Q6156725
+de I-ORG Q6156725 FM Q6156725
+Técnica I-ORG Q6156725 FM Q6156725
+del I-ORG Q6156725 FM Q6156725
+Estado I-ORG Q6156725 NE Q6156725
 ( O - $(
-UTE B-ORG - NE Q6156725
+UTE B-ORG Q6156725 NE Q6156725
 ) O - $(
 hervorgegangene O - ADJA
-Universidad B-ORG - FM Q3551328
-de I-ORG - FM Q3551328
-Talca I-ORG - NE Q3551328
+Universidad B-ORG Q3551328 FM Q3551328
+de I-ORG Q3551328 FM Q3551328
+Talca I-ORG Q3551328 NE Q3551328
 gehört O - VVFIN
 heute O - ADV
 zu O - APPR
@@ -14097,9 +14097,9 @@ Schule O - NN
 
 An O - APPR
 der O - ART
-Universidad B-ORG - FM Q3551328
-de I-ORG - NE Q3551328
-Talca I-ORG - NE Q3551328
+Universidad B-ORG Q3551328 FM Q3551328
+de I-ORG Q3551328 NE Q3551328
+Talca I-ORG Q3551328 NE Q3551328
 studieren O - VVFIN
 ca. O - ADV
 9.000 O - CARD
@@ -14361,7 +14361,7 @@ Fr O - NN
 16.00 O - CARD
 Uhr O - NN
 | O - FM
-SWR B-ORG - NE Q700133
+SWR B-ORG Q700133 NE Q700133
 Fernsehen O - NN
 in O - APPR
 Rheinland O - NE
@@ -14452,14 +14452,14 @@ Bild O - NN
 
 dpa O - NE
 , O - $,
-Ralf B-PER - NE Q64764848
-Hirschberger I-PER - NE Q64764848
+Ralf B-PER Q64764848 NE Q64764848
+Hirschberger I-PER Q64764848 NE Q64764848
 ) O - $(
 Nach O - APPR
 Informationen O - NN
 der O - ART
-Deutschen B-ORG - ADJA Q30291065
-Oracle I-ORG - NE Q30291065
+Deutschen B-ORG Q30291065 ADJA Q30291065
+Oracle I-ORG Q30291065 NE Q30291065
 - I-ORG - $(
 Anwendergruppe I-ORG - NN
 DOAG I-ORG - NE
@@ -14479,7 +14479,7 @@ kurz O - ADJD
 bevor O - PTKVZ
 . O - $.
 
-Oracle B-ORG - NE Q30291065
+Oracle B-ORG Q30291065 NE Q30291065
 wird O - VAFIN
 seinen O - PPOSAT
 Software O - NN
@@ -14505,7 +14505,7 @@ schon O - ADV
 länger O - ADJD
 : O - $.
 
-Oracle B-ORG - NE Q30291065
+Oracle B-ORG Q30291065 NE Q30291065
 will O - VMFIN
 seinen O - PPOSAT
 Support O - NN
@@ -14522,13 +14522,13 @@ Support I-PER - FM NIL
 Country I-PER - FM NIL
 Leader I-PER - FM NIL
 bei O - APPR
-Oracle B-ORG - NE Q30291065
-Deutschland I-ORG - NE Q30291065
+Oracle B-ORG Q30291065 NE Q30291065
+Deutschland I-ORG Q30291065 NE Q30291065
 , O - $,
 versprach O - VVFIN
 gegenüber O - APPR
 der O - ART
-DOAG B-ORG - NE Q1203625
+DOAG B-ORG Q1203625 NE Q1203625
 , O - $,
 er O - PPER
 stünde O - VVFIN
@@ -14555,7 +14555,7 @@ betroffen O - VVPP
 . O - $.
 
 Laut O - APPR
-DOAG B-ORG - NE Q1203625
+DOAG B-ORG Q1203625 NE Q1203625
 treffe O - VVFIN
 es O - PPER
 darüber O - PROAV
@@ -14585,14 +14585,14 @@ Mitarbeiter O - NN
 in O - APPR
 Rumänien O - NE
 habe O - VAFIN
-Oracle B-ORG - NE Q30291065
+Oracle B-ORG Q30291065 NE Q30291065
 bisher O - ADV
 nicht O - PTKNEG
 genannt O - VVPP
 . O - $.
 
 Die O - ART
-DOAG B-ORG - NE Q1203625
+DOAG B-ORG Q1203625 NE Q1203625
 befürchtet O - VVFIN
 nun O - ADV
 zumindest O - ADV
@@ -14749,7 +14749,7 @@ Craig B-PER - NE NIL
 Erlam I-PER - NE NIL
 vom O - APPRART
 Broker O - NE
-Oanda B-ORG - NE Q7074354
+Oanda B-ORG Q7074354 NE Q7074354
 . O - $.
 
 Es O - PPER
@@ -14855,7 +14855,7 @@ seitdem O - PROAV
 auf O - APPR
 dem O - ART
 Sender O - NN
-CBS B-ORG - NE Q43380
+CBS B-ORG Q43380 NE Q43380
 . O - $.
 
 Dort O - ADV
@@ -14878,8 +14878,8 @@ beliebt O - ADJD
 Hintergrund O - NN
 : O - $.
 
-Jerry B-PER - NE Q217037
-Bruckheimer I-PER - NE Q217037
+Jerry B-PER Q217037 NE Q217037
+Bruckheimer I-PER Q217037 NE Q217037
 produzierte O - VVFIN
 mit O - APPR
 CSI O - NE
@@ -14952,13 +14952,13 @@ hauptsächlich O - ADJD
 aus O - APPR
 den O - ART
 Geschäftsfeldern O - NN
-Gornergrat B-ORG - NE Q667247
-Bahn I-ORG - NN Q667247
+Gornergrat B-ORG Q667247 NE Q667247
+Bahn I-ORG Q667247 NN Q667247
 und O - KON
 Mobilität O - NN
 , O - $,
 teilte O - VVFIN
-BVZ B-ORG - NE Q162537
+BVZ B-ORG Q162537 NE Q162537
 am O - APPRART
 Mittwoch O - NN
 in O - APPR
@@ -14994,7 +14994,7 @@ getrieben O - VVPP
 . O - $.
 
 Die O - ART
-Gornergrat B-ORG - NE Q667247
+Gornergrat B-ORG Q667247 NE Q667247
 Bahn I-ORG - NN
 konnte O - VMFIN
 den O - ART
@@ -15090,8 +15090,8 @@ zurück O - PTKVZ
 Der O - ART
 Glaci O - NE
 Tweet O - NN
-George B-PER - NE Q23844
-Clooney I-PER - NE Q23844
+George B-PER Q23844 NE Q23844
+Clooney I-PER Q23844 NE Q23844
 ist O - VAFIN
 zwar O - ADV
 nicht O - PTKNEG
@@ -15104,8 +15104,8 @@ beim O - APPRART
 gleichnamigen O - ADJA
 Film O - NN
 steht O - VVFIN
-Robert B-PER - NE Q47284
-Rodriguez I-PER - NE Q47284
+Robert B-PER Q47284 NE Q47284
+Rodriguez I-PER Q47284 NE Q47284
 auch O - ADV
 hinter O - APPR
 dem O - ART
@@ -15121,7 +15121,7 @@ Dawn O - NE
 
 Nach O - APPR
 ihrer O - PPOSAT
-Netflix B-ORG - NN Q907311
+Netflix B-ORG Q907311 NN Q907311
 - O - $(
 Premiere O - NN
 läuft O - VVFIN
@@ -15131,8 +15131,8 @@ Staffel O - NN
 ab O - APPR
 Mai O - NN
 bei O - APPR
-RTL B-ORG - NE Q320187
-Crime I-ORG - NE Q320187
+RTL B-ORG Q320187 NE Q320187
+Crime I-ORG Q320187 NE Q320187
 . O - $.
 
 Knapp O - ADJD
@@ -15150,16 +15150,16 @@ Kinos O - NN
 kam O - VVFIN
 , O - $,
 entwickelte O - VVFIN
-Robert B-PER - NE Q47284
-Rodriguez I-PER - NE Q47284
+Robert B-PER Q47284 NE Q47284
+Rodriguez I-PER Q47284 NE Q47284
 eine O - ART
 Serie O - NN
 zum O - APPRART
 erfolgreichen O - ADJA
 Film O - NN
 mit O - APPR
-George B-PER - NE Q23844
-Clooney I-PER - NE Q23844
+George B-PER Q23844 NE Q23844
+Clooney I-PER Q23844 NE Q23844
 . O - $.
 
 Wer O - PWS
@@ -15168,7 +15168,7 @@ hierzulande O - ADV
 noch O - ADV
 nicht O - PTKNEG
 bei O - APPR
-Netflix B-ORG - NE Q907311
+Netflix B-ORG Q907311 NE Q907311
 gesehen O - VVPP
 hat O - VAFIN
 , O - $,
@@ -15194,8 +15194,8 @@ Pay O - FM
 TV O - NN
 - O - $(
 Sender O - NN
-RTL B-ORG - NE Q320187
-Crime I-ORG - NE Q320187
+RTL B-ORG Q320187 NE Q320187
+Crime I-ORG Q320187 NE Q320187
 hat O - VAFIN
 die O - ART
 Ausstrahlung O - NN
@@ -15243,22 +15243,22 @@ es O - PPER
 Die O - ART
 beiden O - PIDAT
 Bankräuber O - NN
-Seth B-PER - NE Q7456474
-Gecko I-PER - NE Q7456474
+Seth B-PER Q7456474 NE Q7456474
+Gecko I-PER Q7456474 NE Q7456474
 ( O - $(
-D.J. B-PER - NE Q4236307
-Cotrona I-PER - NE Q4236307
+D.J. B-PER Q4236307 NE Q4236307
+Cotrona I-PER Q4236307 NE Q4236307
 ) O - $(
 und O - KON
 sein O - PPOSAT
 gewalttätiger O - ADJA
 unberechenbarer O - ADJA
 Bruder O - NN
-Richie B-PER - NE Q17002365
-Gecko I-PER - NE Q17002365
+Richie B-PER Q17002365 NE Q17002365
+Gecko I-PER Q17002365 NE Q17002365
 ( O - $(
-Zane B-PER - NE Q2683810
-Holtz I-PER - NE Q2683810
+Zane B-PER Q2683810 NE Q2683810
+Holtz I-PER Q2683810 NE Q2683810
 ) O - $(
 , O - $,
 werden O - VAFIN
@@ -15271,7 +15271,7 @@ Texas O - NE
 Rangern O - FM
 Earl O - NE
 McGra O - NE
-Mars B-ORG - NE Q64667160
+Mars B-ORG Q64667160 NE Q64667160
 ruft O - VVFIN
 Millionen O - NN
 Schokoriegel O - NN
@@ -15319,11 +15319,11 @@ Foto O - NN
 Gero B-PER - NE NIL
 Breloer I-PER - NE NIL
 / O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Mehr O - PIS
 zum O - APPRART
 Thema O - NN
-Kaufland B-ORG - NN Q685967
+Kaufland B-ORG Q685967 NN Q685967
 ruft O - VVFIN
 Gourmet O - NN
 - O - $(
@@ -15338,7 +15338,7 @@ Der O - ART
 US O - FM
 - O - $(
 Süßwarengigant O - NN
-Mars B-ORG - NE Q64667160
+Mars B-ORG Q64667160 NE Q64667160
 warnt O - VVFIN
 seine O - PPOSAT
 Kunden O - NN
@@ -15387,7 +15387,7 @@ nicht O - PTKNEG
 auszuschließen O - VVIZU
 . O - $.
 
-Mars B-ORG - NE Q64667160
+Mars B-ORG Q64667160 NE Q64667160
 habe O - VAFIN
 sich O - PRF
 deshalb O - PROAV
@@ -15438,7 +15438,7 @@ berichtet O - VVFIN
 - O - $(
 07:07 O - CARD
 Uhr O - NN
-Strache B-PER - NN Q44733
+Strache B-PER Q44733 NN Q44733
 : O - $.
 
 Neuer O - ADJA
@@ -15447,7 +15447,7 @@ für O - APPR
 einen O - ART
 Super-Präsidenten O - NN
 Der O - ART
-FPÖ B-ORG - NE Q131692
+FPÖ B-ORG Q131692 NE Q131692
 - O - $(
 Chef O - NN
 kramt O - VVFIN
@@ -15507,7 +15507,7 @@ angesagt O - VVPP
 Tobias B-PER - NE NIL
 Hase I-PER - NE NIL
 / O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Laupheim O - NE
 sz O - NE
 Der O - ART
@@ -15675,7 +15675,7 @@ Horcajuelo I-PER - NE NIL
 / O - $(
 Archiv O - NN
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 ) O - $(
 Während O - KOUS
 die O - ART
@@ -15735,9 +15735,9 @@ die O - ART
 US O - NE
 - O - $(
 amerikanische O - ADJA
-Columbia B-ORG - NE Q49088
-- I-ORG - $( Q49088
-Universität I-ORG - NN Q49088
+Columbia B-ORG Q49088 NE Q49088
+- I-ORG Q49088 $( Q49088
+Universität I-ORG Q49088 NN Q49088
 mit O - PTKVZ
 . O - $.
 
@@ -15769,8 +15769,8 @@ Elizabeth B-PER - NE NIL
 Wolkovich I-PER - NE NIL
 von O - APPR
 der O - ART
-Universität B-ORG - NN Q13371
-Harvard I-ORG - NE Q13371
+Universität B-ORG Q13371 NN Q13371
+Harvard I-ORG Q13371 NE Q13371
 . O - $.
 
 Nach O - APPR
@@ -15872,10 +15872,10 @@ angemeldet O - VVPP
 , O - $,
 teilte O - VVFIN
 der O - ART
-Alpenländischen B-ORG - ADJA Q2650798
-Kreditorenverband I-ORG - NN Q2650798
+Alpenländischen B-ORG Q2650798 ADJA Q2650798
+Kreditorenverband I-ORG Q2650798 NN Q2650798
 ( O - $(
-AKV B-ORG - NE Q2650798
+AKV B-ORG Q2650798 NE Q2650798
 ) O - $(
 am O - APPRART
 Mittwoch O - NN
@@ -16073,7 +16073,7 @@ des O - ART
 grossen O - ADJA
 Stellenabbaus O - NN
 bei O - APPR
-Alstom B-ORG - NE Q309084
+Alstom B-ORG Q309084 NE Q309084
 . O - $.
 
 Am O - APPRART
@@ -16083,14 +16083,14 @@ die O - ART
 neue O - ADJA
 Eigentümerin O - NN
 , O - $,
-General B-ORG - FM Q54173
-Electric I-ORG - NE Q54173
+General B-ORG Q54173 FM Q54173
+Electric I-ORG Q54173 NE Q54173
 , O - $,
 mitgeteilt O - VVPP
 , O - $,
 bei O - APPR
-Alstom B-ORG - NE Q309084
-Schweiz I-ORG - NE Q309084
+Alstom B-ORG Q309084 NE Q309084
+Schweiz I-ORG Q309084 NE Q309084
 1300 O - CARD
 Stellen O - NN
 zu O - PTKZU
@@ -16151,10 +16151,10 @@ Talk O - NN
 zum O - APPRART
 Stellenabbau O - NN
 von O - APPR
-Alstom B-ORG - NE Q309084
+Alstom B-ORG Q309084 NE Q309084
 auf O - APPR
-Tele B-ORG - NE Q964402
-M1 I-ORG - NE Q964402
+Tele B-ORG Q964402 NE Q964402
+M1 I-ORG Q964402 NE Q964402
 . O - $.
 
 ( O - $(
@@ -16180,7 +16180,7 @@ Kreis O - NN
 Ab O - NE
 : O - $.
 
-Zacharias B-PER - NE Q2429303
+Zacharias B-PER Q2429303 NE Q2429303
 spricht O - VVFIN
 von O - APPR
 einer O - ART
@@ -16207,8 +16207,8 @@ einen O - ART
 möglichen O - ADJA
 Insolvenzantrag O - NN
 des O - ART
-HSV B-ORG 749 NE Q615848
-Hamburg I-ORG 749 NE Q615848
+HSV B-ORG Q615848 NE Q615848
+Hamburg I-ORG Q615848 NE Q615848
 aufkamen O - VVFIN
 , O - $,
 wurde O - VAFIN
@@ -16220,7 +16220,7 @@ zur O - APPRART
 Realität O - NN
 , O - $,
 die O - ART
-Norddeutschen B-ORG 751 NN Q615848
+Norddeutschen B-ORG Q615848 NN Q615848
 haben O - VAFIN
 sich O - PRF
 völlig O - ADJD
@@ -16238,8 +16238,8 @@ der O - ART
 Handballwoche O - NN
 analysiert O - VVFIN
 bei O - APPR
-Sascha B-PER - NE Q65794843
-Staat I-PER - NE Q65794843
+Sascha B-PER Q65794843 NE Q65794843
+Staat I-PER Q65794843 NE Q65794843
 ( O - $(
 sportpodcast.de B-ORG - FM NIL
 ) O - $(
@@ -16260,8 +16260,8 @@ Nachdem O - KOUS
 nun O - ADV
 auch O - ADV
 Mäzen O - NN
-Andreas B-PER - NE Q500309
-Rudolph I-PER - NE Q500309
+Andreas B-PER Q500309 NE Q500309
+Rudolph I-PER Q500309 NE Q500309
 wieder O - ADV
 an O - APPR
 die O - ART
@@ -16281,12 +16281,12 @@ Wohin O - PWAV
 der O - ART
 Weg O - NN
 des O - ART
-einstigen B-ORG - ADJA Q615848
-Champions I-ORG - NN Q615848
-- I-ORG - $( Q615848
-League I-ORG - FM Q615848
-- I-ORG - $( Q615848
-Siegers I-ORG - NN Q615848
+einstigen B-ORG Q615848 ADJA Q615848
+Champions I-ORG Q615848 NN Q615848
+- I-ORG Q615848 $( Q615848
+League I-ORG Q615848 FM Q615848
+- I-ORG Q615848 $( Q615848
+Siegers I-ORG Q615848 NN Q615848
 führt O - VVFIN
 ist O - VAFIN
 völlig O - ADJD
@@ -16315,19 +16315,19 @@ was O - PWS
 den O - ART
 Protest O - NN
 der O - ART
-MT B-ORG - NE Q656923
-Melsungen I-ORG - NN Q656923
+MT B-ORG Q656923 NE Q656923
+Melsungen I-ORG Q656923 NN Q656923
 bezüglich O - APPR
 des O - ART
 Pokalspiels O - NN
 bei O - APPR
 den O - ART
-Rhein B-ORG - NE Q707826
-- I-ORG - $( Q707826
-Neckar I-ORG - NE Q707826
-Löwen I-ORG - NE Q707826
+Rhein B-ORG Q707826 NE Q707826
+- I-ORG Q707826 $( Q707826
+Neckar I-ORG Q707826 NE Q707826
+Löwen I-ORG Q707826 NE Q707826
 b O - NN
-Ebay B-ORG - NE Q58024
+Ebay B-ORG Q58024 NE Q58024
 erfreut O - VVFIN
 Investoren O - NN
 mit O - APPR
@@ -16337,20 +16337,20 @@ Mittwoch O - NN
 20.07.2016 O - FM
 22:47 O - CARD
 von O - APPR
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 - I-ORG - $(
 AFX I-ORG - NE
 SAN O - NE
 JOSE O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 - I-ORG - $(
 AFX I-ORG - NE
 ) O - $(
 - O - $(
 Die O - ART
 Handelsplattform O - NN
-Ebay B-ORG - NE Q58024
+Ebay B-ORG Q58024 NE Q58024
 ( O - $(
 eBay O - NE
 Aktie O - NN
@@ -16389,7 +16389,7 @@ Prozent O - NN
 zu O - PTKVZ
 . O - $.
 
-Ebay B-ORG - NE Q58024
+Ebay B-ORG Q58024 NE Q58024
 steigerte O - VVFIN
 den O - ART
 Quartalsumsatz O - NN
@@ -16423,7 +16423,7 @@ Dollarkurs O - NN
 zu O - PTKVZ
 , O - $,
 wie O - PWAV
-Ebay B-ORG - NE Q58024
+Ebay B-ORG Q58024 NE Q58024
 nach O - APPR
 US O - NE
 - O - $(
@@ -16443,10 +16443,10 @@ der O - ART
 Abspaltung O - NN
 des O - ART
 Bezahldienstes O - NN
-Paypal B-ORG - NE Q483959
+Paypal B-ORG Q483959 NE Q483959
 . O - $.
 
-Ebay B-ORG - NE Q58024
+Ebay B-ORG Q58024 NE Q58024
 kündigte O - VVFIN
 ein O - ART
 zusätzliches O - ADJA
@@ -16468,7 +16468,7 @@ das O - ART
 gesamte O - ADJA
 Jahr O - NN
 rechnet O - VVFIN
-Ebay B-ORG - NE Q58024
+Ebay B-ORG Q58024 NE Q58024
 mit O - APPR
 einem O - ART
 Umsatz O - NN
@@ -16490,10 +16490,10 @@ Prozent O - NN
 bei O - APPR
 gleichbleibenden O - ADJA
 Währungskurs O - NN
-Ferratum B-ORG - NE Q11859513
-Capital I-ORG - FM Q11859513
-Germany I-ORG - NE Q11859513
-GmbH I-ORG - NN Q11859513
+Ferratum B-ORG Q11859513 NE Q11859513
+Capital I-ORG Q11859513 FM Q11859513
+Germany I-ORG Q11859513 NE Q11859513
+GmbH I-ORG Q11859513 NN Q11859513
 , O - $,
 DE000A1X3VZ3 O - FM
 13.01.16 O - FM
@@ -16505,29 +16505,29 @@ Uhr O - NN
 mal O - ADV
 gelesen O - VVPP
 | O - FM
-dgap.de B-ORG - FM Q879172
-Ferratum B-ORG - NE Q11859513
+dgap.de B-ORG Q879172 FM Q879172
+Ferratum B-ORG Q11859513 NE Q11859513
 erweitert O - VVFIN
 Angebot O - NN
 in O - APPR
 Deutschland O - NE
 um O - APPR
 Einlageprodukte O - NN
-Ferratum B-ORG - NE Q11859513
-Capital I-ORG - FM Q11859513
-Germany I-ORG - FM Q11859513
-GmbH I-ORG - NN Q11859513
+Ferratum B-ORG Q11859513 NE Q11859513
+Capital I-ORG Q11859513 FM Q11859513
+Germany I-ORG Q11859513 FM Q11859513
+GmbH I-ORG Q11859513 NN Q11859513
 , O - $,
 DE000A1X3VZ3 O - FM
-DGAP B-ORG - NE Q879172
+DGAP B-ORG Q879172 NE Q879172
 - I-ORG - $(
 News I-ORG - FM
 : O - $.
 
-Ferratum B-ORG - NE Q11859513
-Capital I-ORG - FM Q11859513
-Germany I-ORG - FM Q11859513
-GmbH I-ORG - NN Q11859513
+Ferratum B-ORG Q11859513 NE Q11859513
+Capital I-ORG Q11859513 FM Q11859513
+Germany I-ORG Q11859513 FM Q11859513
+GmbH I-ORG Q11859513 NN Q11859513
 / O - $(
 Schlagwort O - NN
 ( O - $(
@@ -16536,7 +16536,7 @@ e O - FM
 : O - $.
 
 Produkteinführung O - NN
-Ferratum B-ORG - NE Q11859513
+Ferratum B-ORG Q11859513 NE Q11859513
 erweitert O - VVFIN
 Angebot O - NN
 in O - APPR
@@ -16557,7 +16557,7 @@ Emittent O - NN
 verantwortlich O - ADJD
 . O - $.
 
-Ferratum B-ORG - NE Q11859513
+Ferratum B-ORG Q11859513 NE Q11859513
 erweitert O - VVFIN
 Angebot O - NN
 in O - APPR
@@ -16574,7 +16574,7 @@ Berlin O - NE
 Januar O - NN
 2016 O - CARD
 - O - $(
-Ferratum B-ORG - NE Q11859513
+Ferratum B-ORG Q11859513 NE Q11859513
 Oyj I-ORG - NE
 ( O - $(
 ISIN O - NE
@@ -16613,9 +16613,9 @@ Einlageprodukte O - NN
 über O - APPR
 die O - ART
 Tochtergesellschaft O - NN
-Ferratum B-ORG - NE Q11859513
-Bank I-ORG - NN Q11859513
-plc I-ORG - NE Q11859513
+Ferratum B-ORG Q11859513 NE Q11859513
+Bank I-ORG Q11859513 NN Q11859513
+plc I-ORG Q11859513 NE Q11859513
 an O - PTKVZ
 . O - $.
 
@@ -16637,7 +16637,7 @@ vierten O - ADJA
 Quartal O - NN
 2015 O - CARD
 hatte O - VAFIN
-Ferratum B-ORG - NE Q11859513
+Ferratum B-ORG Q11859513 NE Q11859513
 mit O - APPR
 dem O - ART
 Launch O - NN
@@ -16755,17 +16755,17 @@ sicher O - ADJD
 , O - $,
 wie O - PWAV
 das O - ART
-Landeskriminalamt B-ORG - NN Q1802340
-( I-ORG - $( Q1802340
-LKA I-ORG - NE Q1802340
-) I-ORG - $( Q1802340
-Rheinland I-ORG - NE Q1802340
-- I-ORG - $( Q1802340
-Pfalz I-ORG - NE Q1802340
+Landeskriminalamt B-ORG Q1802340 NN Q1802340
+( I-ORG Q1802340 $( Q1802340
+LKA I-ORG Q1802340 NE Q1802340
+) I-ORG Q1802340 $( Q1802340
+Rheinland I-ORG Q1802340 NE Q1802340
+- I-ORG Q1802340 $( Q1802340
+Pfalz I-ORG Q1802340 NE Q1802340
 und O - KON
 die O - ART
-Generalstaatsanwaltschaft B-ORG - NN Q23786261
-Koblenz I-ORG - NE Q23786261
+Generalstaatsanwaltschaft B-ORG Q23786261 NN Q23786261
+Koblenz I-ORG Q23786261 NE Q23786261
 mitteilten O - VVFIN
 . O - $.
 
@@ -16811,10 +16811,10 @@ Eine O - ART
 aktuelle O - ADJA
 Studie O - NN
 von O - APPR
-AMC B-ORG - NE Q294660
+AMC B-ORG Q294660 NE Q294660
 und O - KON
-Communication B-ORG - FM Q66839206
-Lab I-ORG - FM Q66839206
+Communication B-ORG Q66839206 FM Q66839206
+Lab I-ORG Q66839206 FM Q66839206
 attestiert O - VVFIN
 den O - ART
 Allgemeinen O - ADJA
@@ -16873,12 +16873,12 @@ Auflage O - NN
 der O - ART
 Verständlichkeitsstudie O - NN
 von O - APPR
-AMC B-ORG - NE Q294660
+AMC B-ORG Q294660 NE Q294660
 Finanzmarkt I-ORG - NN
 GmbH I-ORG - NN
 und O - KON
-Communication B-ORG - FM Q66839206
-Lab I-ORG - FM Q66839206
+Communication B-ORG Q66839206 FM Q66839206
+Lab I-ORG Q66839206 FM Q66839206
 . O - $.
 
 Bereits O - ADV
@@ -16928,7 +16928,7 @@ ROUNDUP O - NE
 2 O - CARD
 : O - $.
 
-Mars B-ORG - NE Q695087
+Mars B-ORG Q695087 NE Q695087
 ruft O - VVFIN
 Millionen O - NN
 Schokoriegel O - NN
@@ -16937,7 +16937,7 @@ ROUNDUP O - NE
 2 O - CARD
 : O - $.
 
-Mars B-ORG - NN Q695087
+Mars B-ORG Q695087 NN Q695087
 ruft O - VVFIN
 Millionen O - NN
 Schokoriegel O - NN
@@ -16945,7 +16945,7 @@ zurück O - PTKVZ
 heute O - ADV
 , O - $,
 18:11 O - CARD
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 - I-ORG - $(
 AFX I-ORG - NE
 ( O - $(
@@ -16962,7 +16962,7 @@ betroffen O - VVPP
 ) O - $(
 VIERSEN O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 - I-ORG - $(
 AFX I-ORG - NE
 ) O - $(
@@ -16976,7 +16976,7 @@ Der O - ART
 US O - FM
 - O - $(
 Süßwarengigant O - NN
-Mars B-ORG - NE Q695087
+Mars B-ORG Q695087 NE Q695087
 warnt O - VVFIN
 seine O - PPOSAT
 Kunden O - NN
@@ -17025,7 +17025,7 @@ nicht O - PTKNEG
 auszuschließen O - VVIZU
 . O - $.
 
-Mars B-ORG - NE Q695087
+Mars B-ORG Q695087 NE Q695087
 habe O - VAFIN
 sich O - PRF
 deshalb O - PROAV
@@ -17090,7 +17090,7 @@ Unternehmenssprecher O - NN
 
 Eine O - ART
 Verbraucher O - NN
-BMW B-ORG - NE Q26678
+BMW B-ORG Q26678 NE Q26678
 knallt O - VVFIN
 in O - APPR
 die O - ART
@@ -17138,7 +17138,7 @@ Daten O - NN
 des O - ART
 kaputten O - ADJA
 alten O - ADJA
-BMW B-ORG - NE Q26678
+BMW B-ORG Q26678 NE Q26678
 aufnehmen O - VVINF
 . O - $.
 
@@ -17165,7 +17165,7 @@ reserviert O - VVPP
 Sie O - PPER
 sind O - VAFIN
 bereits O - ADV
-IVZ B-ORG - NE Q1662517
+IVZ B-ORG Q1662517 NE Q1662517
 - O - $(
 Abonnent O - NN
 und O - KON
@@ -17175,7 +17175,7 @@ die O - ART
 digitalen O - ADJA
 Angebote O - NN
 der O - ART
-IVZ B-ORG - NE Q1662517
+IVZ B-ORG Q1662517 NE Q1662517
 nutzen O - VVINF
 ? O - $.
 
@@ -17206,7 +17206,7 @@ noch O - ADV
 kein O - PIAT
 Abonnent O - NN
 der O - ART
-IVZ B-ORG - NE Q1662517
+IVZ B-ORG Q1662517 NE Q1662517
 und O - KON
 möchten O - VMFIN
 unser O - PPOSAT
@@ -17352,7 +17352,7 @@ geständig O - ADJD
 die O - ART
 Frau O - NN
 via O - APPR
-Facebook B-ORG - NE Q355
+Facebook B-ORG Q355 NE Q355
 unter O - APPR
 Verwendung O - NN
 eines O - ART
@@ -17392,8 +17392,8 @@ Bes O - NE
 Vor O - APPR
 35 O - CARD
 Minuten O - NN
-FOCUS B-ORG - NE Q33108673
-Online I-ORG - FM Q33108673
+FOCUS B-ORG Q33108673 NE Q33108673
+Online I-ORG Q33108673 FM Q33108673
 Die O - ART
 Top O - FM
 - O - $(
@@ -17402,9 +17402,9 @@ der O - ART
 Hinrunde O - NN
 in O - APPR
 der O - ART
-Fußball B-ORG - NN Q82595
-- I-ORG - $( Q82595
-Bundesliga I-ORG - NN Q82595
+Fußball B-ORG Q82595 NN Q82595
+- I-ORG Q82595 $( Q82595
+Bundesliga I-ORG Q82595 NN Q82595
 wird O - VAFIN
 nach O - APPR
 einer O - ART
@@ -17423,18 +17423,18 @@ dominiert O - VVPP
 
 Fünf O - CARD
 Mal O - NN
-Bayern B-ORG - NE Q15789
-München I-ORG - NE Q15789
+Bayern B-ORG Q15789 NE Q15789
+München I-ORG Q15789 NE Q15789
 , O - $,
 fünf O - CARD
 Mal O - NN
-Borussia B-ORG - NE Q41420
-Dortmund I-ORG - NE Q41420
+Borussia B-ORG Q41420 NE Q41420
+Dortmund I-ORG Q41420 NE Q41420
 und O - KON
 dazu O - PROAV
 der O - ART
 Leverkusener O - ADJA
-Chicharito B-PER - NE Q165125
+Chicharito B-PER Q165125 NE Q165125
 : O - $.
 
 Die O - ART
@@ -17488,21 +17488,21 @@ stellt O - VVFIN
 in O - APPR
 Torhüter O - NN
 Manuel B-PER - NE Q107365 
-Neuer I-PER - NE Q107365
+Neuer I-PER Q107365 NE Q107365
 , O - $,
 den O - ART
 Abwehrspielern O - NN
-Jerome B-PER - NE Q151260
-Boateng I-PER - NE Q151260
+Jerome B-PER Q151260 NE Q151260
+Boateng I-PER Q151260 NE Q151260
 und O - KON
-Philipp B-PER - NE Q43682
-Lahm I-PER - NE Q43682
+Philipp B-PER Q43682 NE Q43682
+Lahm I-PER Q43682 NE Q43682
 sowie O - KON
-Thomas B-PER - NE Q43666
-Müller I-PER - NE Q43666
+Thomas B-PER Q43666 NE Q43666
+Müller I-PER Q43666 NE Q43666
 und O - KON
-Douglas B-PER - NE Q391680
-Costa I-PER - NE Q391680
+Douglas B-PER Q391680 NE Q391680
+Costa I-PER Q391680 NE Q391680
 fast O - ADV
 die O - ART
 Hälfte O - NN
@@ -17523,11 +17523,11 @@ Dafür O - PROAV
 wurde O - VAFIN
 Leverkusens O - NE
 Mexikaner O - NN
-Javier B-PER - NE Q410758
-Hernandez I-PER - NE Q410758
+Javier B-PER Q410758 NE Q410758
+Hernandez I-PER Q410758 NE Q410758
 , O - $,
 genannt O - VVPP
-Chicharito B-PER - NE Q410758
+Chicharito B-PER Q410758 NE Q410758
 , O - $,
 im O - APPRART
 Sturm O - NN
@@ -17536,10 +17536,10 @@ die O - ART
 Seite O - NN
 des O - ART
 Dortmunders O - NN
-Pierre B-PER - NE Q44977
-- I-PER - $( Q44977
-Emerick I-PER - NE Q44977
-Aubameyang I-PER - NE Q44977
+Pierre B-PER Q44977 NE Q44977
+- I-PER Q44977 $( Q44977
+Emerick I-PER Q44977 NE Q44977
+Aubameyang I-PER Q44977 NE Q44977
 gewählt O - VVPP
 . O - $.
 
@@ -17569,7 +17569,7 @@ mit O - APPR
 Stubenmädchen O - NN
 , O - $,
 mit O - APPR
-Swarovski B-ORG - NE Q611115
+Swarovski B-ORG Q611115 NE Q611115
 - O - $(
 Kristallen O - NN
 ... O - $.
@@ -17692,7 +17692,7 @@ Euro O - NN
 
 Laut O - APPR
 Gläubigerschutzverband O - NN
-AKV B-ORG - NE Q2650798
+AKV B-ORG Q2650798 NE Q2650798
 wird O - VAFIN
 eine O - ART
 Fortführung O - NN
@@ -17703,8 +17703,8 @@ angestrebt O - VVPP
 Die O - ART
 Firma B-ORG - NN NIL
 mit O - APPR
-Roland B-PER 799 NE NIL
-Gratzer I-PER 799 NE NIL
+Roland B-PER - NE NIL
+Gratzer I-PER - NE NIL
 als O - KOKOM
 Geschäftsführer O 799 NN
 setzte O - VVFIN
@@ -17712,7 +17712,7 @@ auf O - APPR
 den O - ART
 Glanz O - NN
 der O - ART
-Swarovski B-ORG - NE Q611115
+Swarovski B-ORG Q611115 NE Q611115
 - O - $(
 Kristalle O - NN
 und O - KON
@@ -17733,7 +17733,7 @@ Erneut O - ADJD
 ganztägiger O - ADJA
 Streik O - NN
 bei O - APPR
-Amazon B-ORG - NE Q3884
+Amazon B-ORG Q3884 NE Q3884
 in O - APPR
 Leipzig O - NE
 18.12.2015 O - FM
@@ -17749,7 +17749,7 @@ Leipziger O - ADJA
 Versandzentrum O - NN
 des O - ART
 Internethändlers O - NN
-Amazon B-ORG - NE Q3884
+Amazon B-ORG Q3884 NE Q3884
 hat O - VAFIN
 die O - ART
 Gewerkschaft O - NN
@@ -17775,13 +17775,13 @@ n. O - NE
 
 . O - $.
 
-DGAP B-ORG - NE Q879172
+DGAP B-ORG Q879172 NE Q879172
 - O - $(
 News O - FM
 : O - $.
 
-IMMOFINANZ B-ORG - NE Q1660121
-AG I-ORG - NN Q1660121
+IMMOFINANZ B-ORG Q1660121 NE Q1660121
+AG I-ORG Q1660121 NN Q1660121
 / O - $.
 Schlagwort O - NN
 ( O - $(
@@ -17792,7 +17792,7 @@ e O - FM
 Immobilien O - NN
 / O - $(
 Sonstiges O - NN
-IMMOFINANZ B-ORG - NN Q1660121
+IMMOFINANZ B-ORG Q1660121 NN Q1660121
 mit O - APPR
 weiterer O - ADJA
 Großvermietung O - NN
@@ -17800,7 +17800,7 @@ in O - APPR
 Düsseldorf O - NE
 : O - $.
 
-Uniper B-ORG - NE Q19839259
+Uniper B-ORG Q19839259 NE Q19839259
 bezieht O - VVFIN
 rund O - ADV
 28.000 O - CARD
@@ -17825,7 +17825,7 @@ verantwortlich O - ADJD
 
 --------------------------------------------------------------------------- O - $(
 Die O - ART
-IMMOFINANZ B-ORG - NE Q1660121
+IMMOFINANZ B-ORG Q1660121 NE Q1660121
 hat O - VAFIN
 für O - APPR
 ihr O - PPOSAT
@@ -17843,7 +17843,7 @@ abgeschlossen O - VVPP
 
 Der O - ART
 Energieanbieter O - NN
-Uniper B-ORG - NE Q19839259
+Uniper B-ORG Q19839259 NE Q19839259
 Kraftwerke I-ORG - NN
 GmbH I-ORG - NN
 , O - $,
@@ -17853,7 +17853,7 @@ eine O - ART
 - O - $(
 Tochter O - NN
 der O - ART
-E.ON B-ORG - NE Q270223
+E.ON B-ORG Q270223 NE Q270223
 SE I-ORG - NE
 , O - $,
 mietet O - VVFIN
@@ -17875,8 +17875,8 @@ Fertigstellung O - NN
 des O - ART
 von O - APPR
 Stararchitekt O - NN 
-Renzo B-PER - NE Q190148
-Piano I-PER - NE Q190148
+Renzo B-PER Q190148 NE Q190148
+Piano I-PER Q190148 NE Q190148
 entworfenen O - ADJA
 Bürokomplexes O - NN
 ist O - VAFIN
@@ -17887,9 +17887,9 @@ geplant O - VVPP
 . O - $.
 
 Mit O - APPR
-Uniper B-ORG - NE Q19839259
+Uniper B-ORG Q19839259 NE Q19839259
 und O - KON 
-trivago B-ORG - NE Q265286
+trivago B-ORG Q265286 NE Q265286
 haben O - VAFIN
 sich O - PRF
 binnen O - APPR
@@ -17899,7 +17899,7 @@ zwei O - CARD
 renommierte O - ADJA
 Konzerne O - NN
 für O - APPR
-IMMOFINANZ B-ORG - NE Q1660121
+IMMOFINANZ B-ORG Q1660121 NE Q1660121
 - O - $(
 Immobilien O - NN
 in O - APPR
@@ -17928,7 +17928,7 @@ Finanzen.at O - NN
 04-02-2016 O - FM
 EINDHOVEN O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 - I-ORG - $(
 AFX I-ORG - NE
 ) O - $(
@@ -17944,15 +17944,15 @@ und O - KON
 Mobilfunkprodukte O - NN
 sowie O - KON
 die O - ART
-Freescale B-ORG - NN Q863675
+Freescale B-ORG Q863675 NN Q863675
 - O - $(
 Übernahme O - NN
 bringen O - VVFIN
 dem O - ART
 Chi O - NE
 ... O - $.
-José B-PER - NE Q485165
-Carreras I-PER - NE Q485165
+José B-PER Q485165 NE Q485165
+Carreras I-PER Q485165 NE Q485165
 kommt O - VVFIN
 mit O - APPR
 Final O - FM
@@ -17963,8 +17963,8 @@ Tour O - FM
 2017 O - CARD
 nach O - APPR
 Deutschland O - NE
-José B-PER - NE Q485165
-Carreras I-PER - NE Q485165
+José B-PER Q485165 NE Q485165
+Carreras I-PER Q485165 NE Q485165
 kommt O - VVFIN
 2016 O - CARD
 und O - KON
@@ -17988,8 +17988,8 @@ Nachdem O - KOUS
 Star O - FM
 - O - $(
 Tenor O - NN
-José B-PER - NE Q485165
-Carreras I-PER - NE Q485165
+José B-PER Q485165 NE Q485165
+Carreras I-PER Q485165 NE Q485165
 2014 O - CARD
 noch O - ADV
 einmal O - ADV
@@ -18045,8 +18045,8 @@ zwei O - CARD
 Termine O - NN
 . O - $.
 
-José B-PER - NE Q485165
-Carreras I-PER - NE Q485165
+José B-PER Q485165 NE Q485165
+Carreras I-PER Q485165 NE Q485165
 dazu O - PROAV
 : O - $.
 
@@ -18114,10 +18114,10 @@ Tour O - FM
 / O - $(
 2017 O - CARD
 vom O - APPRART
-Bohemia B-ORG - NE Q19901967
-Symphony I-ORG - FM Q19901967
-Orchestra I-ORG - FM Q19901967
-Prag I-ORG - NE Q19901967
+Bohemia B-ORG Q19901967 NE Q19901967
+Symphony I-ORG Q19901967 FM Q19901967
+Orchestra I-ORG Q19901967 FM Q19901967
+Prag I-ORG Q19901967 NE Q19901967
 unter O - APPR
 Maestro O - NE
 David O - NE
@@ -18136,7 +18136,7 @@ Frankfurt O - NE
 / O - $(
 Main O - NE
 ( O - $(
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 ) O - $(
 - O - $(
 Zehntausende O - NN
@@ -18155,14 +18155,14 @@ einstellen O - VVINF
 . O - $.
 
 Die O - ART
-Lufthansa B-ORG - NE Q9325
+Lufthansa B-ORG Q9325 NE Q9325
 kündigte O - VVFIN
 wegen O - APPR
 eines O - ART
 Warnstreiks O - NN
 der O - ART
 Dienstleistungsgewerkschaft O - NN
-Verdi B-ORG 827 NE Q547951
+Verdi B-ORG Q547951 NE Q547951
 an O - APPR
 sechs O - CARD
 deutschen O - ADJA
@@ -18179,7 +18179,7 @@ an O - PTKVZ
 Foto O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 So O - ADV
 würden O - VAFIN
 alle O - PIDAT
@@ -18224,8 +18224,8 @@ werde O - VAFIN
 . O - $.
 
 Auch O - ADV
-Air B-ORG - NE Q156829
-Berlin I-ORG - NE Q156829
+Air B-ORG Q156829 NE Q156829
+Berlin I-ORG Q156829 NE Q156829
 wies O - VVFIN
 darauf O - PROAV
 hin O - PTKVZ
@@ -18243,7 +18243,7 @@ kommen O - VVINF
 könne O - VMFIN
 . O - $.
 
-Verdi B-ORG - NE Q547951
+Verdi B-ORG Q547951 NE Q547951
 hat O - VAFIN
 zu O - APPR
 Warnstreiks O - NN
@@ -18290,11 +18290,11 @@ Verzögerung O - NN
 des O - ART
 Bauabschlusses O - NN
 am O - APPRART
-BER B-ORG - NE Q160556
+BER B-ORG Q160556 NE Q160556
 Von O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Letzte O - ADJA
 Aktualisierung O - NN
 : O - $.
@@ -18352,9 +18352,9 @@ prognostiziert O - VVPP
 schreibt O - VVFIN
 die O - ART
 „ O - $(
-Bild B-ORG - NN Q860548
-am I-ORG - APPRART Q860548
-Sonntag I-ORG - NN Q860548
+Bild B-ORG Q860548 NN Q860548
+am I-ORG Q860548 APPRART Q860548
+Sonntag I-ORG Q860548 NN Q860548
 ” O - $(
 . O - $.
 
@@ -18390,7 +18390,7 @@ sollen O - VMFIN
 Der O - ART
 Start O - NN
 des O - ART
-BER B-ORG - NE Q160556
+BER B-ORG Q160556 NE Q160556
 wird O - VAFIN
 Ende O - NN
 2017 O - CARD
@@ -18415,11 +18415,11 @@ Verzögerung O - NN
 des O - ART
 Bauabschlusses O - NN
 am O - APPRART
-BER B-ORG - NE Q160556
+BER B-ORG Q160556 NE Q160556
 Von O - NN
 : O - $.
 
-dpa B-ORG - NE Q312653
+dpa B-ORG Q312653 NE Q312653
 Letzte O - ADJA
 Aktualisierung O - NN
 : O - $.
@@ -18461,10 +18461,10 @@ alle O - PIDAT
 Artikel O - NN
 des O - ART
 Autors O - NN
-Facebook B-ORG - NE Q355
-Google B-ORG - NE Q95
+Facebook B-ORG Q355 NE Q355
+Google B-ORG Q95 NE Q95
 + O - KON
-Twitter B-ORG - NE Q918
+Twitter B-ORG Q918 NE Q918
 Wirtschaftsredakteur O - NN
 Nein O - NE
 , O - $,
@@ -18563,7 +18563,7 @@ nun O - ADV
 auf O - APPR
 der O - ART
 Elektronikmesse O - NN
-CES B-ORG - NE Q646089
+CES B-ORG Q646089 NE Q646089
 in O - APPR
 Las O - NE
 Vegas O - NE
@@ -18592,8 +18592,8 @@ Jahr O - NN
 zur O - APPRART
 Gründung O - NN
 der O - ART
-UHD B-ORG - NE Q25399479
-Alliance I-ORG - FM Q25399479
+UHD B-ORG Q25399479 NE Q25399479
+Alliance I-ORG Q25399479 FM Q25399479
 geführt O - VVPP
 . O - $.
 
@@ -18610,21 +18610,21 @@ der O - ART
 Branche O - NN
 : O - $.
 
-Sony B-ORG - NE Q41187
+Sony B-ORG Q41187 NE Q41187
 , O - $,
-Samsung B-ORG - NE Q20718
+Samsung B-ORG Q20718 NE Q20718
 , O - $,
-LG B-ORG - NE Q162345
+LG B-ORG Q162345 NE Q162345
 , O - $,
-Panasonic B-ORG - NE Q53247
+Panasonic B-ORG Q53247 NE Q53247
 , O - $,
-Sky B-ORG - NE Q918390
+Sky B-ORG Q918390 NE Q918390
 , O - $,
-DirecTV B-ORG - NE Q1056839
+DirecTV B-ORG Q1056839 NE Q1056839
 , O - $,
-Netflix B-ORG - NE Q907311
+Netflix B-ORG Q907311 NE Q907311
 , O - $,
-Amazon B-ORG - NE Q3884
+Amazon B-ORG Q3884 NE Q3884
 , O - $,
 D O - NE
 erixx O - NE
@@ -18635,7 +18635,7 @@ zum O - APPRART
 angekündigten O - ADJA
 Warnstreik O - NN
 der O - ART
-GDL B-ORG - NE Q553062
+GDL B-ORG Q553062 NE Q553062
 Soltau O - NE
 , O - $,
 02.05.2016 O - FM
@@ -18645,7 +18645,7 @@ BA O - NE
 gm O - NE
 ) O - $(
 Die O - ART
-GDL B-ORG 843 NE Q553062
+GDL B-ORG Q553062 NE Q553062
 hat O - VAFIN
 für O - APPR
 den O - ART
@@ -18657,7 +18657,7 @@ Dienstag O - NN
 Warnstreiks O - NN
 für O - APPR
 den O - ART
-erixx B-ORG - NE Q1354909
+erixx B-ORG Q1354909 NE Q1354909
 angekündigt O - VVPP
 . O - $.
 
@@ -18672,7 +18672,7 @@ bis O - APPR
 07:00 O - CARD
 morgens O - ADV
 soll O - VMFIN
-erixx B-ORG - NE Q1354909
+erixx B-ORG Q1354909 NE Q1354909
 bestreikt O - VVPP
 werden O - VAINF
 . O - $.
@@ -18875,8 +18875,8 @@ wie O - PWAV
 der O - ART
 französische O - ADJA
 Radiosender O - NN
-France B-ORG - NE Q19904
-Info I-ORG - FM Q19904
+France B-ORG Q19904 NE Q19904
+Info I-ORG Q19904 FM Q19904
 berichtete O - VVFIN
 . O - $.
 
