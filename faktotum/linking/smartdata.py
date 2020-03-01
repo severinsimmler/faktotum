@@ -8,7 +8,6 @@ import tqdm
 class EntityLinker:
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent
-        self.corpus = corpus
         self.corpus_folder = Path(module_folder, "data", "smartdata")
         self.train = list(self._load_corpus("train"))
         self.test = list(self._load_corpus("test"))
