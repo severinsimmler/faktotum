@@ -1,41 +1,3 @@
-Republikanische O Q29468 ADJA
-Partei O Q29468 NN
-US O - NE
--amerikanische O - ADJA
-Partei O - NN
-
-Republikanische O Q29468 ADJA
-Partei O Q29468 NN
-der O Q29468 ART
-USA O Q29468 NE
-US O - FM
--amerikanische O - ADJA
-Partei O - NN
-
-Republican O Q29468 FM
-Party O Q29468 FM
-US O - FM
--amerikanische O - ADJA
-Partei O - NN
-
-G.O.P O Q29468 NE
-. O Q29468 $.
-US O - FM
--amerikanische O - ADJA
-Partei O - NN
-
-Republicans O Q29468 NE
-US O - FM
--amerikanische O - ADJA
-Partei O - NN
-
-Grand O Q29468 FM
-Old O Q29468 FM
-Party O Q29468 FM
-US O - FM
--amerikanische O - ADJA
-Partei O - NN
-
 United O Q29468 FM
 States O Q29468 FM
 Republican O Q29468 FM
@@ -66,95 +28,9 @@ Souza O Q391680 NE
 brasilianischer O - ADJA
 Fußballspieler O - NN
 
-Douglas O Q391680 NE
-Costa O Q391680 NE
-brasilianischer O - ADJA
-Fußballspieler O - NN
-
-Costa O Q391680 NE
-de O Q391680 NE
-Souza O Q391680 NE
-brasilianischer O - ADJA
-Fußballspieler O - NN
-
 Brenntag O Q828445 NN
 ein O - ART
 Chemiedistributor O - NN
-
-Brenntag O Q828445 NN
-AG O Q828445 NN
-ein O - ART
-Chemiedistributor O - NN
-
-Bild O Q860548 VVIMP
-am O Q860548 APPRART
-Sonntag O Q860548 NN
-eine O - ART
-sonntags O - ADV
-im O - APPRART
-nordischen O - ADJA
-Tabloid O - NN
-erscheinende O - ADJA
-deutsche O - ADJA
-Boulevardzeitung O - NN
-. O - $.
-
-Bild O Q860548 NN
-am O Q860548 APPRART
-Sonntag O Q860548 NN
-Sie O - PPER
-ist O - VAFIN
-Teil O - NN
-der O - ART
-Bild O - NN
--Gruppe O - TRUNC
-der O - ART
-Axel O - NE
-Springer O - NE
-SE O - NE
-und O - KON
-gehört O - VVFIN
-zu O - APPR
-den O - ART
-meist O - ADV
-zitierten O - ADJA
-Medien O - NN
-Deutschlands O - NE
-. O - $.
-
-Bam O Q860548 NE
-S O Q860548 NE
-eine O - ART
-sonntags O - ADV
-im O - APPRART
-nordischen O - ADJA
-Tabloid O - NN
-erscheinende O - ADJA
-deutsche O - ADJA
-Boulevardzeitung O - NN
-. O - $.
-
-Bam O Q860548 NE
-S O Q860548 NE
-Sie O - PPER
-ist O - VAFIN
-Teil O - NN
-der O - ART
-Bild O - NN
--Gruppe O - TRUNC
-der O - ART
-Axel O - NE
-Springer O - NE
-SE O - NE
-und O - KON
-gehört O - VVFIN
-zu O - APPR
-den O - ART
-meist O - ADV
-zitierten O - ADJA
-Medien O - NN
-Deutschlands O - NE
-. O - $.
 
 BILD O Q860548 NE
 am O Q860548 APPRART
@@ -168,101 +44,10 @@ erscheinende O - ADJA
 deutsche O - ADJA
 Boulevardzeitung O - NN
 . O - $.
-
-BILD O Q860548 NE
-am O Q860548 APPRART
-SONNTAG O Q860548 NN
-Sie O - PPER
-ist O - VAFIN
-Teil O - NN
-der O - ART
-Bild O - NN
--Gruppe O - TRUNC
-der O - ART
-Axel O - NE
-Springer O - NE
-SE O - NE
-und O - KON
-gehört O - VVFIN
-zu O - APPR
-den O - ART
-meist O - ADV
-zitierten O - ADJA
-Medien O - NN
-Deutschlands O - NE
-. O - $.
-
-Ströer O Q2357618 NE
-Media O Q2357618 FM
-Unternehmen O - NN
-zur O - APPRART
-Vermarktung O - NN
-von O - APPR
-Außenwerbung O - NN
-
-Ströer O Q2357618 NN
-Deutsche O Q2357618 ADJA
-Städte O Q2357618 NN
-Medien O Q2357618 NN
-Gmb O Q2357618 NE
-H O Q2357618 NN
-Unternehmen O - NN
-zur O - APPRART
-Vermarktung O - NN
-von O - APPR
-Außenwerbung O - NN
-
-Ströer O Q2357618 NE
-Out O Q2357618 FM
--of O Q2357618 FM
--Home O Q2357618 FM
-Media O Q2357618 FM
-AG O Q2357618 NN
-Unternehmen O - NN
-zur O - APPRART
-Vermarktung O - NN
-von O - APPR
-Außenwerbung O - NN
-
-Deutsche O Q2357618 ADJA
-Städte O Q2357618 NN
--Medien O Q2357618 TRUNC
-Unternehmen O - NN
-zur O - APPRART
-Vermarktung O - NN
-von O - APPR
-Außenwerbung O - NN
 
 Deutsche O Q2357618 ADJA
 Städte O Q2357618 NN
 -Reklame O Q2357618 TRUNC
-Unternehmen O - NN
-zur O - APPRART
-Vermarktung O - NN
-von O - APPR
-Außenwerbung O - NN
-
-Ströer O Q2357618 ADJA
-Unternehmen O - NN
-zur O - APPRART
-Vermarktung O - NN
-von O - APPR
-Außenwerbung O - NN
-
-Stroer O Q2357618 NE
-Unternehmen O - NN
-zur O - APPRART
-Vermarktung O - NN
-von O - APPR
-Außenwerbung O - NN
-
-Ströer O Q2357618 NE
-SE O Q2357618 NE
-& O Q2357618 KON
-Co O Q2357618 NN
-. O Q2357618 $.
-KGa O Q2357618 NE
-A O Q2357618 FM
 Unternehmen O - NN
 zur O - APPRART
 Vermarktung O - NN
@@ -276,39 +61,11 @@ Universität O - NN
 in O - APPR
 Chile O - NN
 
-FC O Q10333 NE
-Valencia O Q10333 NE
-spanischer O - ADJA
-Fußballverein O - NN
-
-Valencia O Q10333 NE
-Club O Q10333 FM
-de O Q10333 NE
-Futbol O Q10333 NE
-spanischer O - ADJA
-Fußballverein O - NN
-
-Valencia O Q10333 NE
-CF O Q10333 NE
-spanischer O - ADJA
-Fußballverein O - NN
-
 Valencia O Q10333 NE
 C.F O Q10333 NE
 . O Q10333 $.
 spanischer O - ADJA
 Fußballverein O - NN
-
-Valencia O Q10333 NE
-Club O Q10333 FM
-de O Q10333 NE
-Fútbol O Q10333 NE
-spanischer O - ADJA
-Fußballverein O - NN
-
-Kaufland O Q685967 NN
-deutsches O - ADJA
-Einzelhandelsunternehmen O - NN
 
 Kaufland O Q685967 NN
 Stiftung O Q685967 NN
@@ -322,23 +79,10 @@ Vereinte O Q547951 ADJA
 Dienstleistungsgewerkschaft O Q547951 NN
 Gewerkschaft O - NN
 
-Verdi O Q547951 NE
-Gewerkschaft O - NN
-
-ver.di O Q547951 NE
-Gewerkschaft O - NN
-
 University O Q4614 FM
 of O Q4614 FM
 Southern O Q4614 NE
 California O Q4614 NE
-Privatuniversität O - NN
-in O - APPR
-Kalifornien O - NE
-
-Universität O Q4614 NN
-von O Q4614 APPR
-Südkalifornien O Q4614 NE
 Privatuniversität O - NN
 in O - APPR
 Kalifornien O - NE
@@ -349,20 +93,6 @@ ständiges O - ADJA
 unabhängiges O - ADJA
 Beratungsgremium O - NN
 
-Bundeskriminalamt O Q56030 NN
-Bundesoberbehörde O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-BKA O Q56030 NE
-Bundesoberbehörde O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-Bundeskriminalamt O Q56030 NN
-, O Q56030 $,
 BKA O Q56030 NE
 Bundesoberbehörde O - NN
 der O - ART
@@ -385,123 +115,6 @@ Nachrichten O - NN
 Variety O Q471728 NE
 amerikanisches O - ADJA
 Entertainmentmagazin O - NN
-
-Daily O Q471728 NE
-Variety O Q471728 NE
-amerikanisches O - ADJA
-Entertainmentmagazin O - NN
-
-Islamischer O Q2429253 ADJA
-Staat O Q2429253 NN
-dschihadistisch O - ADJD
--salafistische O - ADJA
-Organisation O - NN
-, O - $,
-deren O - PRELAT
-Ziel O - NN
-die O - ART
-Errichtung O - NN
-eines O - ART
-weltweiten O - ADJA
-Kalifats O - NN
-ist O - VAFIN
-. O - $.
-
-ISIS O Q2429253 NE
-dschihadistisch O - ADJD
--salafistische O - ADJA
-Organisation O - NN
-, O - $,
-deren O - PRELAT
-Ziel O - NN
-die O - ART
-Errichtung O - NN
-eines O - ART
-weltweiten O - ADJA
-Kalifats O - NN
-ist O - VAFIN
-. O - $.
-
-Islamischer O Q2429253 ADJA
-Staat O Q2429253 NN
-im O Q2429253 APPRART
-Irak O Q2429253 NE
-und O Q2429253 KON
-in O Q2429253 APPR
-Syrien O Q2429253 NE
-dschihadistisch O - ADJD
--salafistische O - ADJA
-Organisation O - NN
-, O - $,
-deren O - PRELAT
-Ziel O - NN
-die O - ART
-Errichtung O - NN
-eines O - ART
-weltweiten O - ADJA
-Kalifats O - NN
-ist O - VAFIN
-. O - $.
-
-IS O Q2429253 NE
-dschihadistisch O - ADJD
--salafistische O - ADJA
-Organisation O - NN
-, O - $,
-deren O - PRELAT
-Ziel O - NN
-die O - ART
-Errichtung O - NN
-eines O - ART
-weltweiten O - ADJA
-Kalifats O - NN
-ist O - VAFIN
-. O - $.
-
-Daaisch O Q2429253 ADJD
-dschihadistisch O - ADJD
--salafistische O - ADJA
-Organisation O - NN
-, O - $,
-deren O - PRELAT
-Ziel O - NN
-die O - ART
-Errichtung O - NN
-eines O - ART
-weltweiten O - ADJA
-Kalifats O - NN
-ist O - VAFIN
-. O - $.
-
-ISIL O Q2429253 NE
-dschihadistisch O - ADJD
--salafistische O - ADJA
-Organisation O - NN
-, O - $,
-deren O - PRELAT
-Ziel O - NN
-die O - ART
-Errichtung O - NN
-eines O - ART
-weltweiten O - ADJA
-Kalifats O - NN
-ist O - VAFIN
-. O - $.
-
-Daesch O Q2429253 NE
-dschihadistisch O - ADJD
--salafistische O - ADJA
-Organisation O - NN
-, O - $,
-deren O - PRELAT
-Ziel O - NN
-die O - ART
-Errichtung O - NN
-eines O - ART
-weltweiten O - ADJA
-Kalifats O - NN
-ist O - VAFIN
-. O - $.
 
 Daesh O Q2429253 NE
 dschihadistisch O - ADJD
@@ -526,53 +139,6 @@ und O - KON
 nordamerikanischer O - ADJA
 Staaten O - NN
 
-Organisation O Q7184 NN
-des O Q7184 ART
-Nordatlantikvertrags O Q7184 NN
-militärisches O - ADJA
-Bündnis O - NN
-europäischer O - ADJA
-und O - KON
-nordamerikanischer O - ADJA
-Staaten O - NN
-
-OTAN O Q7184 NE
-militärisches O - ADJA
-Bündnis O - NN
-europäischer O - ADJA
-und O - KON
-nordamerikanischer O - ADJA
-Staaten O - NN
-
-North O Q7184 FM
-Atlantic O Q7184 FM
-Treaty O Q7184 FM
-Organization O Q7184 FM
-militärisches O - ADJA
-Bündnis O - NN
-europäischer O - ADJA
-und O - KON
-nordamerikanischer O - ADJA
-Staaten O - NN
-
-Nordatlantikpakt O Q7184 NN
--Organisation O Q7184 TRUNC
-militärisches O - ADJA
-Bündnis O - NN
-europäischer O - ADJA
-und O - KON
-nordamerikanischer O - ADJA
-Staaten O - NN
-
-Atlantisches O Q7184 ADJA
-Bündnis O Q7184 NN
-militärisches O - ADJA
-Bündnis O - NN
-europäischer O - ADJA
-und O - KON
-nordamerikanischer O - ADJA
-Staaten O - NN
-
 Political O Q66839206 FM
 Communication O Q66839206 FM
 Lab O Q66839206 FM
@@ -587,28 +153,11 @@ Villarreal O Q12297 NE
 spanischer O - ADJA
 Fußballverein O - NN
 
-Villarreal O Q12297 NE
-CF O Q12297 NE
-spanischer O - ADJA
-Fußballverein O - NN
-
-Landesamt O Q20758202 NN
-für O Q20758202 APPR
-Gesundheit O Q20758202 NN
-und O Q20758202 KON
-Soziales O Q20758202 NN
-Berliner O - ADJA
-Behörde O - NN
-
 La O Q20758202 FM
 Ge O Q20758202 NE
 So O Q20758202 NE
 Berliner O - ADJA
 Behörde O - NN
-
-hr1 O Q1632263 NE
-deutscher O - ADJA
-Hörfunksender O - NN
 
 HR1 O Q1632263 NE
 deutscher O - ADJA
@@ -626,33 +175,9 @@ Innenminister O - NN
 des O - ART
 Saarlandes O - NN
 
-Gewerkschaft O Q553062 NN
-Deutscher O Q553062 ADJA
-Lokomotivführer O Q553062 NN
-Deutsche O - ADJA
-Gewerkschaft O - NN
-
-Gewerkschaft O Q553062 NN
-Deutscher O Q553062 ADJA
-Lokführer O Q553062 NN
-Deutsche O - ADJA
-Gewerkschaft O - NN
-
-Gewerkschaft O Q553062 NN
-der O Q553062 ART
-Lokführer O Q553062 NN
-Deutsche O - ADJA
-Gewerkschaft O - NN
-
 GDL O Q553062 NE
 Deutsche O - ADJA
 Gewerkschaft O - NN
-
-Uniper O Q19839259 NE
-deutsches O - ADJA
-Unternehmen O - NN
-der O - ART
-Energiewirtschaft O - NN
 
 Uniper O Q19839259 NE
 AG O Q19839259 NN
@@ -661,36 +186,9 @@ Unternehmen O - NN
 der O - ART
 Energiewirtschaft O - NN
 
-Uniper O Q19839259 NE
-SE O Q19839259 NE
-deutsches O - ADJA
-Unternehmen O - NN
-der O - ART
-Energiewirtschaft O - NN
-
 Christian O Q22279773 NE
 Pulisic O Q22279773 NE
 US O - FM
--Amerikanischer O - ADJA
-Fußballspieler O - NN
-
-Christian O Q22279773 NE
-Mate O Q22279773 NE
-Pulisic O Q22279773 NE
-US O - FM
--Amerikanischer O - ADJA
-Fußballspieler O - NN
-
-Christian O Q22279773 NE
-Pulišić O Q22279773 NE
-US O - NE
--Amerikanischer O - ADJA
-Fußballspieler O - NN
-
-Christian O Q22279773 NE
-Mate O Q22279773 NE
-Pulišić O Q22279773 NE
-US O - NE
 -Amerikanischer O - ADJA
 Fußballspieler O - NN
 
@@ -703,19 +201,6 @@ in O - APPR
 New O - NE
 York O - NE
 
-NYSE O Q13677 NE
-Wertpapierbörse O - NN
-in O - APPR
-New O - NE
-York O - NE
-
-Wall O Q13677 NE
-Street O Q13677 NE
-Wertpapierbörse O - NN
-in O - APPR
-New O - NE
-York O - NE
-
 Landesbetrieb O Q1548258 NN
 Straßenbau O Q1548258 NN
 Nordrhein O Q1548258 NE
@@ -748,117 +233,6 @@ Landesbehörde O - NN
 zum O - APPRART
 1 O - CARD
 . O - $.
-
-Landesbetrieb O Q1548258 NN
-Straßenbau O Q1548258 NN
-Nordrhein O Q1548258 NE
--Westfalen O Q1548258 NE
-Januar O - NN
-2001 O - CARD
-gegründet O - VVPP
-. O - $.
-
-Straßen O Q1548258 NN
-. O Q1548258 $.
-NRW O Q1548258 NE
-als O - KOKOM
-Straßenbauverwaltung O - NN
-verantwortlich O - ADJD
-für O - APPR
-die O - ART
-Planung O - NN
-, O - $,
-den O - ART
-Bau O - NN
-und O - KON
-den O - ART
-Betrieb O - NN
-des O - ART
-überörtlichen O - ADJA
-Straßennetzes O - NN
-in O - APPR
-Nordrhein O - NE
--Westfalen O - NE
-( O - $(
-NRW O - NE
-) O - $(
-und O - KON
-wurde O - VAFIN
-als O - KOKOM
-Landesbehörde O - NN
-zum O - APPRART
-1 O - CARD
-. O - $.
-
-Straßen O Q1548258 NN
-. O Q1548258 $.
-NRW O Q1548258 NE
-Januar O - NN
-2001 O - CARD
-gegründet O - VVPP
-. O - $.
-
-Landesbetrieb O Q1548258 NN
-Straßenbau O Q1548258 NN
-NRW O Q1548258 NE
-als O - KOKOM
-Straßenbauverwaltung O - NN
-verantwortlich O - ADJD
-für O - APPR
-die O - ART
-Planung O - NN
-, O - $,
-den O - ART
-Bau O - NN
-und O - KON
-den O - ART
-Betrieb O - NN
-des O - ART
-überörtlichen O - ADJA
-Straßennetzes O - NN
-in O - APPR
-Nordrhein O - NE
--Westfalen O - NE
-( O - $(
-NRW O - NE
-) O - $(
-und O - KON
-wurde O - VAFIN
-als O - KOKOM
-Landesbehörde O - NN
-zum O - APPRART
-1 O - CARD
-. O - $.
-
-Landesbetrieb O Q1548258 NN
-Straßenbau O Q1548258 NN
-NRW O Q1548258 NE
-Januar O - NN
-2001 O - CARD
-gegründet O - VVPP
-. O - $.
-
-Heinz O Q44733 NE
--Christian O Q44733 NE
-Strache O Q44733 NE
-ehemaliger O - ADJA
-österreichischer O - ADJA
-Politiker O - NN
-( O - $(
-ehemals O - ADV
-FPÖ O - NE
-) O - $(
-
-Heinz O Q44733 NE
-Christian O Q44733 NE
-Strache O Q44733 NE
-ehemaliger O - ADJA
-österreichischer O - ADJA
-Politiker O - NN
-( O - $(
-ehemals O - ADV
-FPÖ O - NE
-) O - $(
 
 HC O Q44733 NE
 Strache O Q44733 NN
@@ -869,26 +243,6 @@ Politiker O - NN
 ehemals O - ADV
 FPÖ O - NE
 ) O - $(
-
-Landeskriminalamt O Q1802340 NN
-Rheinland O Q1802340 NE
--Pfalz O Q1802340 NE
-ein O - ART
-an O - APPR
-SIX O - NE
-Swiss O - FM
-Exchange O - FM
-kotierter O - ADJA
-Finanzdienstleister O - NN
-, O - $,
-der O - PRELS
-überwiegend O - ADJD
-inm O - APPRART
-Asset O - FM
-Management O - FM
-tätig O - ADJD
-ist O - VAFIN
-. O - $.
 
 LKA O Q1802340 NE
 Rheinland O Q1802340 NE
@@ -911,80 +265,8 @@ ist O - VAFIN
 . O - $.
 
 Borussia O Q101959 NE
-Mönchengladbach O Q101959 NE
-Sportverein O - NN
-aus O - APPR
-Mönchengladbach O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Vf O Q101959 NE
-Tu O Q101959 NE
-R O Q101959 NN
-München O Q101959 NE
--Gladbach O Q101959 TRUNC
-Sportverein O - NN
-aus O - APPR
-Mönchengladbach O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Borussia O Q101959 NE
 M O Q101959 NE
 'Gladbach O Q101959 NE
-Sportverein O - NN
-aus O - APPR
-Mönchengladbach O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Borussia O Q101959 NE
-Vf O Q101959 NE
-L O Q101959 NE
-1900 O Q101959 CARD
-Sportverein O - NN
-aus O - APPR
-Mönchengladbach O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Borussia O Q101959 NE
-Verein O Q101959 NN
-für O Q101959 APPR
-Leibesübungen O Q101959 NN
-1900 O Q101959 CARD
-Mönchengladbach O Q101959 NE
-Sportverein O - NN
-aus O - APPR
-Mönchengladbach O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Fohlen O Q101959 NE
--Elf O Q101959 TRUNC
-Sportverein O - NN
-aus O - APPR
-Mönchengladbach O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Fohlenelf O Q101959 NE
-Sportverein O - NN
-aus O - APPR
-Mönchengladbach O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Bor O Q101959 NE
-. O Q101959 $.
-Mönchengladbach O Q101959 NE
 Sportverein O - NN
 aus O - APPR
 Mönchengladbach O - NE
@@ -997,14 +279,6 @@ Pierre O Q44977 NE
 Aubameyang O Q44977 NE
 gabunischer O - ADJA
 Fußballspieler O - NN
-
-The O Q1476216 FM
-Children O Q1476216 FM
-’s O Q1476216 FM
-Investment O Q1476216 FM
-Fund O Q1476216 FM
-Britischer O - ADJA
-Hedgefond O - NE
 
 The O Q1476216 FM
 Children O Q1476216 FM
@@ -1021,58 +295,7 @@ Schauspieler O - NN
 und O - KON
 Model O - NN
 
-Kion O Q1742326 NE
-Group O Q1742326 FM
-Hersteller O - NN
-von O - APPR
-Gabelstaplern O - NN
-, O - $,
-Lagertechnikgeräten O - NN
-und O - KON
-Flurförderzeugen O - NN
-
-Kion O Q1742326 NE
-Hersteller O - NN
-von O - APPR
-Gabelstaplern O - NN
-, O - $,
-Lagertechnikgeräten O - NN
-und O - KON
-Flurförderzeugen O - NN
-
-Kion O Q1742326 NE
-Group O Q1742326 FM
-Gmb O Q1742326 NE
-H O Q1742326 NN
-Hersteller O - NN
-von O - APPR
-Gabelstaplern O - NN
-, O - $,
-Lagertechnikgeräten O - NN
-und O - KON
-Flurförderzeugen O - NN
-
-Baoli O Q1742326 NE
-Hersteller O - NN
-von O - APPR
-Gabelstaplern O - NN
-, O - $,
-Lagertechnikgeräten O - NN
-und O - KON
-Flurförderzeugen O - NN
-
 Voltas O Q1742326 NE
-Hersteller O - NN
-von O - APPR
-Gabelstaplern O - NN
-, O - $,
-Lagertechnikgeräten O - NN
-und O - KON
-Flurförderzeugen O - NN
-
-KION O Q1742326 NE
-GROUP O Q1742326 NE
-AG O Q1742326 NN
 Hersteller O - NN
 von O - APPR
 Gabelstaplern O - NN
@@ -1088,11 +311,6 @@ Publisher O - NN
 für O - APPR
 Computerspiele O - NN
 
-Kosta O Q1785131 NE
-Runjaic O Q1785131 NE
-deutscher O - ADJA
-Fußballtrainer O - NN
-
 Runjaic O Q1785131 NE
 deutscher O - ADJA
 Fußballtrainer O - NN
@@ -1100,22 +318,6 @@ Fußballtrainer O - NN
 Bill O Q213512 NE
 Cosby O Q213512 NE
 US O - NE
--amerikanischer O - ADJA
-Schauspieler O - NN
-, O - $,
-Komiker O - NN
-, O - $,
-Sänger O - NN
-und O - KON
-Autor O - NN
-
-William O Q213512 NE
-Henry O Q213512 NE
-Cosby O Q213512 NE
-, O Q213512 $,
-Jr O Q213512 NE
-. O Q213512 $.
-US O - FM
 -amerikanischer O - ADJA
 Schauspieler O - NN
 , O - $,
@@ -1140,15 +342,6 @@ A O - NN
 in O - APPR
 Deutschland O - NE
 
-KGa O Q19823288 NE
-A O Q19823288 FM
-Rechtsform O - NN
-der O - ART
-KGa O - NE
-A O - NN
-in O - APPR
-Deutschland O - NE
-
 Handball O Q615848 NN
 Sport O Q615848 NN
 Verein O Q615848 NN
@@ -1162,20 +355,7 @@ Gill O Q1379367 NE
 norwegischer O - ADJA
 Fußballtorhüter O - NN
 
-Europäische O Q458 ADJA
-Union O Q458 NN
-europäischer O - ADJA
-Staatenverbund O - NN
-
 EU O Q458 NE
-europäischer O - ADJA
-Staatenverbund O - NN
-
-Europa O Q458 NE
-europäischer O - ADJA
-Staatenverbund O - NN
-
-🇪🇺 O Q458 NE
 europäischer O - ADJA
 Staatenverbund O - NN
 
@@ -1209,11 +389,6 @@ Welt O - NN
 
 Kingsley O Q1422678 NE
 Onuegbu O Q1422678 NE
-nigerianischer O - ADJA
-Fußballspieler O - NN
-
-Kingsley O Q1422678 NE
-Ugochuwu O Q1422678 NE
 nigerianischer O - ADJA
 Fußballspieler O - NN
 
@@ -1261,46 +436,6 @@ im O - APPRART
 Internet O - NN
 . O - $.
 
-Kanzlei O Q2541749 NN
-Waldorf O Q2541749 NE
-eine O - ART
-hoch O - ADJD
-spezialisierte O - ADJA
-Anwaltskanzlei O - NN
-– O - $(
-und O - KON
-führend O - ADJD
-in O - APPR
-juristischen O - ADJA
-Großprojekten O - NN
-, O - $,
-etwa O - ADV
-der O - ART
-Bekämpfung O - NN
-vielfältiger O - ADJA
-Erscheinungsformen O - NN
-von O - APPR
-Rechtsverletzungen O - NN
-im O - APPRART
-Internet O - NN
-. O - $.
-
-FIFA O Q253414 NE
-Fußball O - NN
--Weltverband O - TRUNC
-
-Fédération O Q253414 FM
-Internationale O Q253414 FM
-de O Q253414 FM
-Football O Q253414 FM
-Association O Q253414 FM
-Fußball O - NN
--Weltverband O - TRUNC
-
-Fifa O Q253414 NE
-Fußball O - NN
--Weltverband O - TRUNC
-
 Internationaler O Q253414 ADJA
 Verband O Q253414 NN
 des O Q253414 ART
@@ -1329,56 +464,10 @@ ab O - PTKVZ
 . O - $.
 
 E.ON O Q270223 NE
-SE O Q270223 NE
 Holdinggesellschaft O - NN
 eines O - ART
 deutschen O - ADJA
 Energiekonzerns O - NN
-
-E O Q270223 NE
--on O Q270223 FM
-Holdinggesellschaft O - NN
-eines O - ART
-deutschen O - ADJA
-Energiekonzerns O - NN
-
-E.ON O Q270223 NE
-Holdinggesellschaft O - NN
-eines O - ART
-deutschen O - ADJA
-Energiekonzerns O - NN
-
-E.ON O Q270223 NE
-AG O Q270223 NN
-Holdinggesellschaft O - NN
-eines O - ART
-deutschen O - ADJA
-Energiekonzerns O - NN
-
-Google O Q95 NE
-LLC O Q95 NE
-US O - NE
--amerikanisches O - ADJA
-Technologieunternehmen O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Mountain O - NE
-View O - NE
-, O - $,
-Kalifornien O - NE
-
-Google O Q95 NE
-US O - NE
--amerikanisches O - ADJA
-Technologieunternehmen O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Mountain O - NE
-View O - NE
-, O - $,
-Kalifornien O - NE
 
 Google O Q95 NE
 Inc O Q95 FM
@@ -1396,18 +485,6 @@ Kalifornien O - NE
 
 Generalstaatsanwaltschaft O Q23786261 NN
 Koblenz O Q23786261 NE
-eine O - PIS
-von O - APPR
-24 O - CARD
-Generalstaatsanwaltschaften O - NN
-in O - APPR
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-. O - $.
-
-Generalstaatsanwaltschaft O Q23786261 NN
-Koblenz O Q23786261 NE
 Die O - ART
 Generalstaatsanwaltschaft O - NN
 Koblenz O - NE
@@ -1416,39 +493,8 @@ wurde O - VAFIN
 gegründet O - VVPP
 . O - $.
 
-Generalstaatsanwaltschaft O Q23786261 NN
-Koblenz O Q23786261 NE
-Neben O - APPR
-der O - ART
-Generalstaatsanwaltschaft O - NN
-Koblenz O - NE
-gibt O - VVFIN
-es O - PPER
-in O - APPR
-Rheinland O - NE
--Pfalz O - NE
-die O - ART
-Generalstaatsanwaltschaft O - NN
-Zweibrücken O - NE
-. O - $.
-
-Chicharito O Q165125 NE
-mexikanischer O - ADJA
-Fußballspieler O - NN
-
-Javier O Q165125 NE
-Hernández O Q165125 NE
-Balcazar O Q165125 NE
-mexikanischer O - ADJA
-Fußballspieler O - NN
-
 Javier O Q165125 NE
 Hernandez O Q165125 NE
-mexikanischer O - ADJA
-Fußballspieler O - NN
-
-Javier O Q165125 NE
-Hernández O Q165125 NE
 mexikanischer O - ADJA
 Fußballspieler O - NN
 
@@ -1468,81 +514,6 @@ Peters O - NE
 Missouri O - NE
 . O - $.
 
-Sun O Q946713 NE
-Edison O Q946713 NE
-Das O - ART
-Unternehmen O - NN
-wurde O - VAFIN
-1959 O - CARD
-als O - KOKOM
-Monsanto O - NE
-Electronic O - FM
-Materials O - FM
-Company O - FM
-gegründet O - VVPP
-und O - KON
-war O - VAFIN
-Teil O - NN
-der O - ART
-Monsanto O - NE
--Gruppe O - TRUNC
-. O - $.
-
-Sun O Q946713 NE
-Edison O Q946713 NE
-Seit O - APPR
-30 O - CARD
-. O - $.
-
-Sun O Q946713 NE
-Edison O Q946713 NE
-Mai O - NN
-2013 O - CARD
-firmiert O - VVFIN
-MEMC O - NE
-unter O - APPR
-dem O - ART
-Namen O - NN
-Sun O - NE
-Edison O - NE
-. O - $.
-
-Taktisches O Q759780 ADJA
-Luftwaffengeschwader O Q759780 NN
-51 O Q759780 CARD
-ein O - ART
-Aufklärungsgeschwader O - NN
-der O - ART
-Bundeswehr O - NN
-. O - $.
-
-Taktisches O Q759780 ADJA
-Luftwaffengeschwader O Q759780 NN
-51 O Q759780 CARD
-Es O - PPER
-ist O - VAFIN
-das O - ART
-jüngste O - ADJA
-Geschwader O - NN
-der O - ART
-Luftwaffe O - NN
-und O - KON
-das O - ART
-einzige O - ADJA
-mit O - APPR
-der O - ART
-Fähigkeit O - NN
-zur O - APPRART
-bemannten O - ADJA
-und O - KON
-unbemannten O - ADJA
-taktischen O - ADJA
-Luftaufklärung O - NN
-innerhalb O - APPR
-der O - ART
-Bundeswehr O - NN
-. O - $.
-
 Aufklärungsgeschwader O Q759780 NN
 51 O Q759780 CARD
 ein O - ART
@@ -1550,47 +521,6 @@ Aufklärungsgeschwader O - NN
 der O - ART
 Bundeswehr O - NN
 . O - $.
-
-Aufklärungsgeschwader O Q759780 NN
-51 O Q759780 CARD
-Es O - PPER
-ist O - VAFIN
-das O - ART
-jüngste O - ADJA
-Geschwader O - NN
-der O - ART
-Luftwaffe O - NN
-und O - KON
-das O - ART
-einzige O - ADJA
-mit O - APPR
-der O - ART
-Fähigkeit O - NN
-zur O - APPRART
-bemannten O - ADJA
-und O - KON
-unbemannten O - ADJA
-taktischen O - ADJA
-Luftaufklärung O - NN
-innerhalb O - APPR
-der O - ART
-Bundeswehr O - NN
-. O - $.
-
-Deutscher O Q696935 ADJA
-Akademischer O Q696935 ADJA
-Austauschdienst O Q696935 NN
-Gemeinschaftseinrichtung O - NN
-der O - ART
-deutschen O - ADJA
-Hochschulen O - NN
-und O - KON
-Studierendenschaften O - NN
-zur O - APPRART
-Pflege O - NN
-ihrer O - PPOSAT
-internationalen O - ADJA
-Beziehungen O - NN
 
 Deutscher O Q696935 ADJA
 Akademischer O Q696935 ADJA
@@ -1611,59 +541,10 @@ ihrer O - PPOSAT
 internationalen O - ADJA
 Beziehungen O - NN
 
-DAAD O Q696935 NE
-Gemeinschaftseinrichtung O - NN
-der O - ART
-deutschen O - ADJA
-Hochschulen O - NN
-und O - KON
-Studierendenschaften O - NN
-zur O - APPRART
-Pflege O - NN
-ihrer O - PPOSAT
-internationalen O - ADJA
-Beziehungen O - NN
-
-Consumer O Q646089 FM
-Electronics O Q646089 FM
-Show O Q646089 FM
-Messe O - NN
-für O - APPR
-Unterhaltungselektronik O - NN
-
-Summer O Q646089 FM
-Consumer O Q646089 FM
-Electronics O Q646089 FM
-Show O Q646089 FM
-Messe O - NN
-für O - APPR
-Unterhaltungselektronik O - NN
-
 CES O Q646089 NN
 Messe O - NN
 für O - APPR
 Unterhaltungselektronik O - NN
-
-Puls O Q358559 NN
-4 O Q358559 CARD
-Österreichischer O - ADJA
-Fernsehsender O - NN
-der O - ART
-Pro O - FM
-Sieben O - CARD
-Sat1 O - NE
--Gruppe O - TRUNC
-
-Puls O Q358559 NN
-4 O Q358559 CARD
-HD O Q358559 NN
-Österreichischer O - ADJA
-Fernsehsender O - NN
-der O - ART
-Pro O - FM
-Sieben O - CARD
-Sat1 O - NE
--Gruppe O - TRUNC
 
 PULS O Q358559 NN
 4 O Q358559 CARD
@@ -1676,30 +557,6 @@ Sieben O - CARD
 Sat1 O - NE
 -Gruppe O - TRUNC
 
-Puls4 O Q358559 NN
-Österreichischer O - ADJA
-Fernsehsender O - NN
-der O - ART
-Pro O - FM
-Sieben O - CARD
-Sat1 O - NE
--Gruppe O - TRUNC
-
-Puls O Q358559 NN
-TV O Q358559 NN
-Österreichischer O - ADJA
-Fernsehsender O - NN
-der O - ART
-Pro O - FM
-Sieben O - CARD
-Sat1 O - NE
--Gruppe O - TRUNC
-
-Philipp O Q43682 NE
-Lahm O Q43682 NE
-deutscher O - ADJA
-Fußballspieler O - NN
-
 Lahm O Q43682 NE
 , O Q43682 $,
 Philipp O Q43682 NE
@@ -1711,24 +568,6 @@ Tatum O Q212064 NE
 US O - FM
 -amerikanischer O - ADJA
 Schauspieler O - NN
-
-Channing O Q212064 NE
-Matthew O Q212064 NE
-Tatum O Q212064 NE
-US O - NE
--amerikanischer O - ADJA
-Schauspieler O - NN
-
-Eybl O Q1385678 NE
-International O Q1385678 FM
-Sitz O - NN
-im O - APPRART
-österreichischen O - ADJA
-Krems O - NN
-war O - VAFIN
-ein O - ART
-Automobilzulieferer O - NN
-. O - $.
 
 Eybl O Q1385678 NE
 International O Q1385678 FM
@@ -1766,13 +605,6 @@ in O - APPR
 den O - ART
 USA O - NE
 
-CBS O Q43380 NE
-Fernseh O - NN
--Netzwerk O - TRUNC
-in O - APPR
-den O - ART
-USA O - NE
-
 Universal O Q4005797 FM
 Studios O Q4005797 FM
 Home O Q4005797 FM
@@ -1797,25 +629,6 @@ und O - KON
 trainer O - NN
 
 AMC O Q294660 NE
-US O - NE
--amerikanischer O - ADJA
-Kabelsender O - NN
-
-American O Q294660 FM
-Movie O Q294660 FM
-Channel O Q294660 FM
-US O - FM
--amerikanischer O - ADJA
-Kabelsender O - NN
-
-American O Q294660 FM
-Movie O Q294660 FM
-Classics O Q294660 FM
-US O - FM
--amerikanischer O - ADJA
-Kabelsender O - NN
-
-AMC O Q294660 NE
 Network O Q294660 FM
 US O - FM
 -amerikanischer O - ADJA
@@ -1823,31 +636,6 @@ Kabelsender O - NN
 
 Trumpf O Q1652680 NE
 Hüttinger O Q1652680 NE
-ein O - ART
-deutsches O - ADJA
-Unternehmen O - NN
-im O - APPRART
-Bereich O - NN
-der O - ART
-DC O - NN
-- O - $(
-, O - $,
-Mittelfrequenz O - NN
-- O - $(
-und O - KON
-Hochfrequenzgeneratoren O - NN
-für O - APPR
-die O - ART
-Plasmaanregung O - NN
-, O - $,
-Induktionserwärmung O - NN
-und O - KON
-CO2 O - NE
--Laseranregung O - TRUNC
-. O - $.
-
-HÜTTINGER O Q1652680 NE
-Elektronik O Q1652680 NN
 ein O - ART
 deutsches O - ADJA
 Unternehmen O - NN
@@ -1890,120 +678,18 @@ Partei O - NN
 in O - APPR
 Deutschland O - NE
 
-CDU O Q49762 NE
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Deutschland O - NE
-
 Bachirou O Q464669 NE
 Salou O Q464669 NE
 deutscher O - ADJA
 Fußballspieler O - NN
 
 Allianz O Q487292 NN
-SE O Q487292 NE
-Europäisches O - ADJA
-Versicherungsunternehmen O - NN
-
-Allianz O Q487292 NN
 Versicherung O Q487292 NN
 Europäisches O - ADJA
 Versicherungsunternehmen O - NN
 
-Allianz O Q487292 NN
-Group O Q487292 FM
-Europäisches O - ADJA
-Versicherungsunternehmen O - NN
-
-BMW O Q26678 NE
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-BMW O Q26678 NE
-Group O Q26678 NE
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
 BMW O Q26678 NE
 AG O Q26678 NN
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-Rapp O Q26678 NE
-Motorenwerke O Q26678 NN
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-Bayerische O Q26678 ADJA
-Motoren O Q26678 NN
-Werke O Q26678 NN
-Aktiengesellschaft O Q26678 NN
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-Bayerische O Q26678 ADJA
-Motoren O Q26678 NN
-Werke O Q26678 NN
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-Bayerische O Q26678 ADJA
-Motorenwerke O Q26678 NN
-AG O Q26678 NN
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-Bayerische O Q26678 ADJA
-Motoren O Q26678 NN
-Werke O Q26678 NN
-AG O Q26678 NN
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-Bayerische O Q26678 ADJA
-Motorenwerke O Q26678 NN
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-Forschungs O Q26678 NN
-- O Q26678 TRUNC
-und O Q26678 KON
-Innovationszentrum O Q26678 NN
-deutscher O - ADJA
-Automobil O - NN
-- O - $(
-und O - KON
-Motorradhersteller O - NN
-
-Bimmer O Q26678 NE
 deutscher O - ADJA
 Automobil O - NN
 - O - $(
@@ -2055,75 +741,6 @@ Universität O - NN
 in O - APPR
 Bayern O - NE
 
-TU O Q157808 NE
-München O Q157808 NE
-Technische O - ADJA
-Universität O - NN
-in O - APPR
-Bayern O - NE
-
-TH O Q157808 NN
-München O Q157808 NE
-Technische O - ADJA
-Universität O - NN
-in O - APPR
-Bayern O - NE
-
-Technische O Q157808 ADJA
-Hochschule O Q157808 NN
-München O Q157808 NE
-Technische O - ADJA
-Universität O - NN
-in O - APPR
-Bayern O - NE
-
-TUM O Q157808 NE
-Technische O - ADJA
-Universität O - NN
-in O - APPR
-Bayern O - NE
-
-Technische O Q157808 ADJA
-Universität O Q157808 NN
-München O Q157808 NE
-( O Q157808 $(
-TUM O Q157808 NE
-) O Q157808 $(
-Technische O - ADJA
-Universität O - NN
-in O - APPR
-Bayern O - NE
-
-HTC O Q186012 NE
-Corporation O Q186012 FM
-taiwanesischer O - ADJA
-Elektronikgeräte O - NN
--Hersteller O - TRUNC
-
-High O Q186012 FM
-Tech O Q186012 FM
-Computer O Q186012 FM
-Corporation O Q186012 FM
-taiwanesischer O - ADJA
-Elektronikgeräte O - NN
--Hersteller O - TRUNC
-
-Xda O Q186012 NE
-neo O Q186012 NE
-taiwanesischer O - ADJA
-Elektronikgeräte O - NN
--Hersteller O - TRUNC
-
-Dopod O Q186012 NE
-taiwanesischer O - ADJA
-Elektronikgeräte O - NN
--Hersteller O - TRUNC
-
-Qtek O Q186012 NE
-taiwanesischer O - ADJA
-Elektronikgeräte O - NN
--Hersteller O - TRUNC
-
 Smart O Q186012 FM
 Digital O Q186012 FM
 Assistant O Q186012 FM
@@ -2131,41 +748,9 @@ taiwanesischer O - ADJA
 Elektronikgeräte O - NN
 -Hersteller O - TRUNC
 
-Vodafone O Q186012 NE
-Personal O Q186012 FM
-Assistant O Q186012 FM
-taiwanesischer O - ADJA
-Elektronikgeräte O - NN
--Hersteller O - TRUNC
-
-Sozialdemokratische O Q49768 ADJA
-Partei O Q49768 NN
-Deutschlands O Q49768 NE
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Deutschland O - NE
-
 SPD O Q49768 NE
 politische O - ADJA
 Partei O - NN
-in O - APPR
-Deutschland O - NE
-
-Düsseldorf O Q58226 NE
-Airport O Q58226 NN
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q58226 NN
-Düsseldorf O Q58226 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-EDDL O Q58226 NE
-Flughafen O - NN
 in O - APPR
 Deutschland O - NE
 
@@ -2182,79 +767,12 @@ den O - ART
 Vereinigten O - ADJA
 Staaten O - NN
 
-Columbia O Q49088 NE
--Universität O Q49088 TRUNC
-Universität O - NN
-in O - APPR
-den O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Universität O Q49088 NN
-von O Q49088 APPR
-Columbia O Q49088 NE
-Universität O - NN
-in O - APPR
-den O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Columbia O Q49088 NE
-University O Q49088 FM
-in O Q49088 FM
-the O Q49088 FM
-City O Q49088 FM
-of O Q49088 FM
-New O Q49088 FM
-York O Q49088 FM
-Universität O - NN
-in O - APPR
-den O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-D O Q611115 NN
-. O Q611115 $.
-Swarovski O Q611115 NE
-oesterreichische O - ADJA
-Unternehmensgruppe O - NN
-
 Swarovski O Q611115 NE
 KG O Q611115 NN
 oesterreichische O - ADJA
 Unternehmensgruppe O - NN
 
-D O Q611115 NN
-. O Q611115 $.
-Swarovski O Q611115 NE
-KG O Q611115 NN
-oesterreichische O - ADJA
-Unternehmensgruppe O - NN
-
-D O Q611115 NN
-. O Q611115 $.
-Swarovski O Q611115 NE
-& O Q611115 KON
-Co O Q611115 NN
-. O Q611115 $.
-oesterreichische O - ADJA
-Unternehmensgruppe O - NN
-
 SSV O Q701290 NE
-Ulm O Q701290 NE
-1846 O Q701290 CARD
-deutscher O - ADJA
-Sportverein O - NN
-
-SSV O Q701290 NE
-Ulm O Q701290 NE
-deutscher O - ADJA
-Sportverein O - NN
-
-Schwimm O Q701290 NN
-- O Q701290 TRUNC
-und O Q701290 KON
-Sportverein O Q701290 NN
 Ulm O Q701290 NE
 1846 O Q701290 CARD
 deutscher O - ADJA
@@ -2283,82 +801,12 @@ der O - ART
 Vereinten O - ADJA
 Nationen O - NN
 
-Digital O Q722027 FM
-Illusions O Q722027 FM
-CE O Q722027 NE
-schwedisches O - ADJA
-Spieleentwickler O - NN
--Studio O - TRUNC
-
-EA O Q722027 NE
-DICE O Q722027 NE
-schwedisches O - ADJA
-Spieleentwickler O - NN
--Studio O - TRUNC
-
-Digital O Q722027 FM
-Illusions O Q722027 FM
-schwedisches O - ADJA
-Spieleentwickler O - NN
--Studio O - TRUNC
-
-Digital O Q722027 FM
-Illusions O Q722027 FM
-Creative O Q722027 FM
-Entertainment O Q722027 FM
-schwedisches O - ADJA
-Spieleentwickler O - NN
--Studio O - TRUNC
-
-EA O Q722027 NE
-Digital O Q722027 FM
-Illusions O Q722027 FM
-CE O Q722027 NE
-schwedisches O - ADJA
-Spieleentwickler O - NN
--Studio O - TRUNC
-
 DICE O Q722027 NE
 schwedisches O - ADJA
 Spieleentwickler O - NN
 -Studio O - TRUNC
 
 Madonna O Q1744 NE
-US O - FM
--amerikanische O - ADJA
-Sängerin O - NN
-, O - $,
-Autorin O - NN
-, O - $,
-Model O - NN
-, O - $,
-Schauspielerin O - NN
-, O - $,
-Produzentin O - NN
-und O - KON
-Stilikone O - NN
-
-Madonna O Q1744 NE
-Louise O Q1744 NE
-Ciccone O Q1744 NE
-US O - FM
--amerikanische O - ADJA
-Sängerin O - NN
-, O - $,
-Autorin O - NN
-, O - $,
-Model O - NN
-, O - $,
-Schauspielerin O - NN
-, O - $,
-Produzentin O - NN
-und O - KON
-Stilikone O - NN
-
-Madonna O Q1744 NE
-Louise O Q1744 NE
-Veronica O Q1744 NE
-Ciccone O Q1744 NE
 US O - FM
 -amerikanische O - ADJA
 Sängerin O - NN
@@ -2394,16 +842,6 @@ von O - APPR
 From O - FM
 Software O - NN
 
-Twitter O Q918 ADJA
-Mikrobloggingdienst O - NN
-des O - ART
-US O - FM
--amerikanischen O - ADJA
-Unternehmens O - NN
-Twitter O - NE
-Inc O - FM
-. O - $.
-
 twitter.com O Q918 NE
 Mikrobloggingdienst O - NN
 des O - ART
@@ -2414,32 +852,8 @@ Twitter O - NE
 Inc O - FM
 . O - $.
 
-www.twitter.com O Q918 NE
-Mikrobloggingdienst O - NN
-des O - ART
-US O - FM
--amerikanischen O - ADJA
-Unternehmens O - NN
-Twitter O - NE
-Inc O - FM
-. O - $.
-
 Lucasfilm O Q242446 NE
 Filmproduktionsgesellschaft O - NN
-
-Lucasfilm O Q242446 NE
-Ltd O Q242446 NE
-. O Q242446 $.
-Filmproduktionsgesellschaft O - NN
-
-Pierre O Q156193 NE
-Boulez O Q156193 NE
-französischer O - ADJA
-Komponist O - NN
-, O - $,
-Dirigent O - NN
-und O - KON
-Musiktheoretiker O - NN
 
 Boulez O Q156193 NE
 französischer O - ADJA
@@ -2448,15 +862,6 @@ Komponist O - NN
 Dirigent O - NN
 und O - KON
 Musiktheoretiker O - NN
-
-Glas O Q664324 NN
-deutscher O - ADJA
-Landmaschinen O - NN
-- O - $(
-und O - KON
-später O - ADJD
-auch O - ADV
-Kraftfahrzeughersteller O - NN
 
 Hans O Q664324 NE
 Glas O Q664324 NE
@@ -2472,11 +877,6 @@ Kraftfahrzeughersteller O - NN
 
 Leicester O Q19481 NE
 City O Q19481 NE
-englischer O - ADJA
-Fußballverein O - NN
-
-The O Q19481 FM
-Foxes O Q19481 NE
 englischer O - ADJA
 Fußballverein O - NN
 
@@ -2556,50 +956,6 @@ und O - KON
 zwischenstaatliche O - ADJA
 Organisation O - NN
 
-UNO O Q1065 NE
-globale O - ADJA
-internationale O - ADJA
-und O - KON
-zwischenstaatliche O - ADJA
-Organisation O - NN
-
-UN O Q1065 NE
-globale O - ADJA
-internationale O - ADJA
-und O - KON
-zwischenstaatliche O - ADJA
-Organisation O - NN
-
-VN O Q1065 NE
-globale O - ADJA
-internationale O - ADJA
-und O - KON
-zwischenstaatliche O - ADJA
-Organisation O - NN
-
-Völkergemeinschaft O Q1065 NN
-globale O - ADJA
-internationale O - ADJA
-und O - KON
-zwischenstaatliche O - ADJA
-Organisation O - NN
-
-Lucas O Q216611 NE
-Arts O Q216611 NE
-US O - NE
--amerikanisches O - ADJA
-Entwicklungsstudio O - NN
-für O - APPR
-Computerspiele O - NN
-
-Lucasfilm O Q216611 NE
-Games O Q216611 FM
-US O - FM
--amerikanisches O - ADJA
-Entwicklungsstudio O - NN
-für O - APPR
-Computerspiele O - NN
-
 Lucasfilm O Q216611 NE
 -Games O Q216611 FM
 US O - FM
@@ -2608,66 +964,14 @@ Entwicklungsstudio O - NN
 für O - APPR
 Computerspiele O - NN
 
-Lucas O Q216611 NE
-Arts O Q216611 NE
-US O - NE
--amerikanisches O - ADJA
-Entwicklungsstudio O - NN
-für O - APPR
-Computerspiele O - NN
-
-Lucas O Q216611 NE
-Arts O Q216611 FM
-Entertainment O Q216611 FM
-Company O Q216611 FM
-LLC O Q216611 NE
-US O - NE
--amerikanisches O - ADJA
-Entwicklungsstudio O - NN
-für O - APPR
-Computerspiele O - NN
-
-LEC O Q216611 NE
-US O - FM
--amerikanisches O - ADJA
-Entwicklungsstudio O - NN
-für O - APPR
-Computerspiele O - NN
-
-Gianni O Q124138 NE
-Infantino O Q124138 NE
-Schweizer O - ADJA
-Fußballfunktionär O - NN
-
 Giovanni O Q124138 NE
 Vincenzo O Q124138 NE
 Infantino O Q124138 NE
 Schweizer O - ADJA
 Fußballfunktionär O - NN
 
-Giovanni O Q124138 NE
-Infantino O Q124138 NE
-Schweizer O - ADJA
-Fußballfunktionär O - NN
-
-VOX O Q684981 NE
-deutscher O - ADJA
-Fernsehsender O - NN
-
 VOX O Q684981 NE
 HD O Q684981 NE
-deutscher O - ADJA
-Fernsehsender O - NN
-
-VOX O Q684981 NE
-Television O Q684981 NE
-Gmb O Q684981 NE
-H O Q684981 NN
-deutscher O - ADJA
-Fernsehsender O - NN
-
-VOX O Q684981 NE
--HD O Q684981 NE
 deutscher O - ADJA
 Fernsehsender O - NN
 
@@ -2688,31 +992,7 @@ und O - KON
 Solothurn O - NE
 . O - $.
 
-Deutsche O Q879172 ADJA
-Gesellschaft O Q879172 NN
-für O Q879172 APPR
-Auswärtige O Q879172 ADJA
-Politik O Q879172 NN
-deutsches O - ADJA
-Netzwerk O - NN
-und O - KON
-Denkfabrik O - NN
-für O - APPR
-Außenpolitik O - NN
-
 DGAP O Q879172 NE
-deutsches O - ADJA
-Netzwerk O - NN
-und O - KON
-Denkfabrik O - NN
-für O - APPR
-Außenpolitik O - NN
-
-German O Q879172 FM
-Council O Q879172 FM
-on O Q879172 FM
-Foreign O Q879172 FM
-Relations O Q879172 FM
 deutsches O - ADJA
 Netzwerk O - NN
 und O - KON
@@ -2737,13 +1017,6 @@ US O - NE
 -amerikanischer O - ADJA
 Unternehmer O - NN
 
-Mark O Q36215 NN
-Elliot O Q36215 NE
-Zuckerberg O Q36215 NE
-US O - NE
--amerikanischer O - ADJA
-Unternehmer O - NN
-
 Mariano O Q10819 NE
 Rajoy O Q10819 NE
 ehemaliger O - ADJA
@@ -2751,85 +1024,6 @@ Präsident O - NN
 der O - ART
 Regierung O - NN
 Spaniens O - NE
-
-Mariano O Q10819 NE
-Rajoy O Q10819 NE
-Brey O Q10819 NE
-ehemaliger O - ADJA
-Präsident O - NN
-der O - ART
-Regierung O - NN
-Spaniens O - NE
-
-Erixx O Q1354909 NE
-als O - KOKOM
-Teil O - NN
-der O - ART
-Netinera O - NE
--Gruppe O - TRUNC
-ein O - ART
-nichtbundeseigenes O - ADJA
-Eisenbahnverkehrsunternehmen O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Soltau O - NE
-. O - $.
-
-Erixx O Q1354909 NE
-Die O - ART
-Gesellschaft O - NN
-betreibt O - VVFIN
-verschiedene O - ADJA
-Bahnstrecken O - NN
-in O - APPR
-der O - ART
-Lüneburger O - ADJA
-Heide O - NN
-, O - $,
-in O - APPR
-der O - ART
-Region O - NN
-Braunschweig O - NE
-und O - KON
-im O - APPRART
-Harz O - NN
-. O - $.
-
-Heidekreuz O Q1354909 NE
-als O - KOKOM
-Teil O - NN
-der O - ART
-Netinera O - NE
--Gruppe O - TRUNC
-ein O - ART
-nichtbundeseigenes O - ADJA
-Eisenbahnverkehrsunternehmen O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Soltau O - NE
-. O - $.
-
-Heidekreuz O Q1354909 NE
-Die O - ART
-Gesellschaft O - NN
-betreibt O - VVFIN
-verschiedene O - ADJA
-Bahnstrecken O - NN
-in O - APPR
-der O - ART
-Lüneburger O - ADJA
-Heide O - NN
-, O - $,
-in O - APPR
-der O - ART
-Region O - NN
-Braunschweig O - NE
-und O - KON
-im O - APPRART
-Harz O - NN
-. O - $.
 
 Heidekreuzbahn O Q1354909 NN
 als O - KOKOM
@@ -2844,26 +1038,6 @@ mit O - APPR
 Sitz O - NN
 in O - APPR
 Soltau O - NE
-. O - $.
-
-Heidekreuzbahn O Q1354909 NN
-Die O - ART
-Gesellschaft O - NN
-betreibt O - VVFIN
-verschiedene O - ADJA
-Bahnstrecken O - NN
-in O - APPR
-der O - ART
-Lüneburger O - ADJA
-Heide O - NN
-, O - $,
-in O - APPR
-der O - ART
-Region O - NN
-Braunschweig O - NE
-und O - KON
-im O - APPRART
-Harz O - NN
 . O - $.
 
 Carsten O Q19277183 NE
@@ -2885,51 +1059,7 @@ und O - KON
 Geschäftsmann O - NN
 . O - $.
 
-Mars O Q695087 NE
-Incorporated O Q695087 FM
-US O - FM
--amerikanischer O - ADJA
-Nahrungsmittelkonzern O - NN
-
-Greenies O Q695087 NE
-US O - FM
--amerikanischer O - ADJA
-Nahrungsmittelkonzern O - NN
-
-Mars O Q695087 NE
-Inc O Q695087 FM
-. O Q695087 $.
-US O - FM
--amerikanischer O - ADJA
-Nahrungsmittelkonzern O - NN
-
-Kitekat O Q695087 NN
-US O - NE
--amerikanischer O - ADJA
-Nahrungsmittelkonzern O - NN
-
 Dreamies O Q695087 NN
-US O - FM
--amerikanischer O - ADJA
-Nahrungsmittelkonzern O - NN
-
-Masterfoods O Q695087 NE
-US O - FM
--amerikanischer O - ADJA
-Nahrungsmittelkonzern O - NN
-
-James O Q695087 NE
-Wellbeloved O Q695087 NE
-US O - NE
--amerikanischer O - ADJA
-Nahrungsmittelkonzern O - NN
-
-Seramis O Q695087 NE
-US O - FM
--amerikanischer O - ADJA
-Nahrungsmittelkonzern O - NN
-
-Effem O Q695087 NE
 US O - FM
 -amerikanischer O - ADJA
 Nahrungsmittelkonzern O - NN
@@ -2943,35 +1073,7 @@ Mode O - NN
 -Einzelhandelskette O - TRUNC
 
 Freie O Q13124 ADJA
-Demokratische O Q13124 ADJA
-Partei O Q13124 NN
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Deutschland O - NE
-
-FDP O Q13124 NE
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Deutschland O - NE
-
-F.D.P O Q13124 NE
-. O Q13124 $.
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Deutschland O - NE
-
-Freie O Q13124 ADJA
 Demokraten O Q13124 NN
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Deutschland O - NE
-
-Die O Q13124 ART
-Liberalen O Q13124 ADJA
 politische O - ADJA
 Partei O - NN
 in O - APPR
@@ -2994,85 +1096,9 @@ in O - APPR
 der O - ART
 Schweiz O - NE
 
-Fahrplanfeld O Q667247 NN
-139 O Q667247 CARD
-meterspurige O - ADJA
-Schmalspurbahn O - NN
-mit O - APPR
-Drehstrombetrieb O - NN
-in O - APPR
-der O - ART
-Schweiz O - NE
-
-Gornergrat O Q667247 NE
--Bahn O Q667247 TRUNC
-meterspurige O - ADJA
-Schmalspurbahn O - NN
-mit O - APPR
-Drehstrombetrieb O - NN
-in O - APPR
-der O - ART
-Schweiz O - NE
-
-Gornergrat O Q667247 NE
-Bahn O Q667247 NN
-meterspurige O - ADJA
-Schmalspurbahn O - NN
-mit O - APPR
-Drehstrombetrieb O - NN
-in O - APPR
-der O - ART
-Schweiz O - NE
-
-Gornergrat O Q667247 NE
--Monte O Q667247 NE
-Rosa O Q667247 NE
--Bahnen O Q667247 TRUNC
-meterspurige O - ADJA
-Schmalspurbahn O - NN
-mit O - APPR
-Drehstrombetrieb O - NN
-in O - APPR
-der O - ART
-Schweiz O - NE
-
-Rotenboden O Q667247 NN
-meterspurige O - ADJA
-Schmalspurbahn O - NN
-mit O - APPR
-Drehstrombetrieb O - NN
-in O - APPR
-der O - ART
-Schweiz O - NE
-
-Gornergratbahn、略:GGB O Q667247 NE
-meterspurige O - ADJA
-Schmalspurbahn O - NN
-mit O - APPR
-Drehstrombetrieb O - NN
-in O - APPR
-der O - ART
-Schweiz O - NE
-
-Escada O Q600986 NE
-SE O Q600986 NE
-Mode O - NN
--Unternehmen O - TRUNC
-
 Escada O Q600986 NE
 Mode O - NN
 -Unternehmen O - TRUNC
-
-Werner O Q2562605 NE
-Seifert O Q2562605 NE
-Schweizer O - ADJA
-Manager O - NN
-und O - KON
-Vorstandsvorsitzender O - NN
-der O - ART
-Deutschen O - ADJA
-Börse O - NN
-AG O - NN
 
 Werner O Q2562605 NE
 G O Q2562605 NN
@@ -3102,21 +1128,6 @@ Aalen O Q692586 NE
 deutscher O - ADJA
 Fußballverein O - NN
 
-Sepp O Q483437 NE
-Blatter O Q483437 NE
-Schweizer O - ADJA
-Fussballfunktionär O - NN
-
-Joseph O Q483437 NE
-Blatter O Q483437 NE
-Schweizer O - ADJA
-Fussballfunktionär O - NN
-
-Josef O Q483437 NE
-Blatter O Q483437 NE
-Schweizer O - ADJA
-Fussballfunktionär O - NN
-
 Joseph O Q483437 NE
 S O Q483437 NE
 . O Q483437 $.
@@ -3127,20 +1138,6 @@ Fussballfunktionär O - NN
 Warner O Q126399 NE
 Bros O Q126399 NE
 . O Q126399 $.
-Entertainment O Q126399 FM
-US O - FM
--amerikanische O - ADJA
-Film O - NN
-- O - $(
-, O - $,
-Fernseh O - NN
-- O - TRUNC
-und O - KON
-Musikproduktionsfirma O - NN
-
-Warner O Q126399 NE
-Bros O Q126399 NE
-. O Q126399 $.
 Pictures O Q126399 FM
 US O - FM
 -amerikanische O - ADJA
@@ -3152,177 +1149,12 @@ Fernseh O - NN
 und O - KON
 Musikproduktionsfirma O - NN
 
-Warner O Q126399 NE
-Independent O Q126399 FM
-Pictures O Q126399 FM
-US O - FM
--amerikanische O - ADJA
-Film O - NN
-- O - $(
-, O - $,
-Fernseh O - NN
-- O - TRUNC
-und O - KON
-Musikproduktionsfirma O - NN
-
-Warner O Q126399 NE
-Brothers O Q126399 NE
-US O - FM
--amerikanische O - ADJA
-Film O - NN
-- O - $(
-, O - $,
-Fernseh O - NN
-- O - TRUNC
-und O - KON
-Musikproduktionsfirma O - NN
-
-Warner O Q126399 NE
-Bros O Q126399 NE
-. O Q126399 $.
-Toons O Q126399 NE
-US O - FM
--amerikanische O - ADJA
-Film O - NN
-- O - $(
-, O - $,
-Fernseh O - NN
-- O - TRUNC
-und O - KON
-Musikproduktionsfirma O - NN
-
-English O Q126399 FM
-Bros O Q126399 NE
-. O Q126399 $.
-US O - FM
--amerikanische O - ADJA
-Film O - NN
-- O - $(
-, O - $,
-Fernseh O - NN
-- O - TRUNC
-und O - KON
-Musikproduktionsfirma O - NN
-
-Warner O Q126399 NE
-Brothers O Q126399 NE
-Pictures O Q126399 FM
-US O - FM
--amerikanische O - ADJA
-Film O - NN
-- O - $(
-, O - $,
-Fernseh O - NN
-- O - TRUNC
-und O - KON
-Musikproduktionsfirma O - NN
-
-Warner O Q126399 NE
-Bros O Q126399 NE
-. O Q126399 $.
-US O - FM
--amerikanische O - ADJA
-Film O - NN
-- O - $(
-, O - $,
-Fernseh O - NN
-- O - TRUNC
-und O - KON
-Musikproduktionsfirma O - NN
-
-Mila O Q37628 NE
 Kunis O Q37628 NE
 US O - NE
 -amerikanische O - ADJA
 Schauspielerin O - NN
 und O - KON
 Synchronsprecherin O - NN
-
-Kunis O Q37628 NE
-US O - NE
--amerikanische O - ADJA
-Schauspielerin O - NN
-und O - KON
-Synchronsprecherin O - NN
-
-Milena O Q37628 NE
-Kunis O Q37628 NE
-US O - NE
--amerikanische O - ADJA
-Schauspielerin O - NN
-und O - KON
-Synchronsprecherin O - NN
-
-Milena O Q37628 NE
-Markiwna O Q37628 NE
-Kunis O Q37628 NE
-US O - NE
--amerikanische O - ADJA
-Schauspielerin O - NN
-und O - KON
-Synchronsprecherin O - NN
-
-Angela O Q567 NE
-Merkel O Q567 NE
-achte O - VVFIN
-Inhaberin O - NN
-des O - ART
-Amtes O - NN
-Bundeskanzler/in O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-( O - $(
-seit O - APPR
-2005 O - CARD
-) O - $(
-
-Angela O Q567 NE
-Dorothea O Q567 NE
-Merkel O Q567 NE
-achte O - VVFIN
-Inhaberin O - NN
-des O - ART
-Amtes O - NN
-Bundeskanzler/in O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-( O - $(
-seit O - APPR
-2005 O - CARD
-) O - $(
-
-Angela O Q567 NE
-Kasner O Q567 NE
-achte O - VVFIN
-Inhaberin O - NN
-des O - ART
-Amtes O - NN
-Bundeskanzler/in O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-( O - $(
-seit O - APPR
-2005 O - CARD
-) O - $(
-
-Angela O Q567 NE
-Dorothea O Q567 NE
-Kasner O Q567 NE
-achte O - VVFIN
-Inhaberin O - NN
-des O - ART
-Amtes O - NN
-Bundeskanzler/in O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-( O - $(
-seit O - APPR
-2005 O - CARD
-) O - $(
 
 A O Q567 NN
 . O Q567 $.
@@ -3340,121 +1172,16 @@ seit O - APPR
 2005 O - CARD
 ) O - $(
 
-Merkel O Q567 NE
-, O Q567 $,
-Angela O Q567 NE
-achte O - VVFIN
-Inhaberin O - NN
-des O - ART
-Amtes O - NN
-Bundeskanzler/in O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-( O - $(
-seit O - APPR
-2005 O - CARD
-) O - $(
-
-SK O Q131215 NE
-Rapid O Q131215 NE
-Wien O Q131215 NE
-österreichischer O - ADJA
-Fußballklub O - NN
-
-Sportklub O Q131215 NN
-Rapid O Q131215 NE
-Wien O Q131215 NE
-österreichischer O - ADJA
-Fußballklub O - NN
-
-Rapid O Q131215 NE
-Wien O Q131215 NE
-österreichischer O - ADJA
-Fußballklub O - NN
-
-Ultras O Q131215 NE
-Rapid O Q131215 NE
-österreichischer O - ADJA
-Fußballklub O - NN
-
 Sportclub O Q131215 NN
 Rapid O Q131215 NE
 österreichischer O - ADJA
 Fußballklub O - NN
-
-SK O Q131215 NE
-Rapid O Q131215 NE
-österreichischer O - ADJA
-Fußballklub O - NN
-
-Sportklub O Q131215 NN
-Rapid O Q131215 NE
-österreichischer O - ADJA
-Fußballklub O - NN
-
-Erster O Q131215 ADJA
-Wiener O Q131215 ADJA
-Arbeiter O Q131215 NN
--Fußball O Q131215 TRUNC
--Club O Q131215 TRUNC
-österreichischer O - ADJA
-Fußballklub O - NN
-
-Sky O Q918390 NE
-PLC O Q918390 NE
-Britischer O - ADJA
-Medienkonzern O - NN
-
-Sky O Q918390 FM
-Digital O Q918390 FM
-Britischer O - ADJA
-Medienkonzern O - NN
-
-Sky O Q918390 NE
-TV O Q918390 FM
-Britischer O - ADJA
-Medienkonzern O - NN
 
 BSky O Q918390 NE
 B O Q918390 NN
 Britischer O - ADJA
 Medienkonzern O - NN
 
-Sky O Q918390 NE
-Channel O Q918390 FM
-Britischer O - ADJA
-Medienkonzern O - NN
-
-British O Q918390 NE
-Sky O Q918390 FM
-Broadcasting O Q918390 FM
-Britischer O - ADJA
-Medienkonzern O - NN
-
-Helmholtz O Q1205654 NE
--Zentrum O Q1205654 NN
-Potsdam O Q1205654 NE
-– O Q1205654 $(
-Deutsches O Q1205654 ADJA
-Geo O Q1205654 NE
-Forschungs O Q1205654 NN
-Zentrum O Q1205654 NN
-Forschungszentrum O - NN
-für O - APPR
-Geowissenschaften O - NN
-
-Geoforschungszentrum O Q1205654 NN
-Forschungszentrum O - NN
-für O - APPR
-Geowissenschaften O - NN
-
-Geoforschungszentrum O Q1205654 NN
-Potsdam O Q1205654 NE
-Forschungszentrum O - NN
-für O - APPR
-Geowissenschaften O - NN
-
 Geo O Q1205654 NE
 Forschungs O Q1205654 NN
 Zentrum O Q1205654 NN
@@ -3462,51 +1189,8 @@ Potsdam O Q1205654 NE
 Forschungszentrum O - NN
 für O - APPR
 Geowissenschaften O - NN
-
-Geo O Q1205654 NE
-Forschungs O Q1205654 NN
-Zentrum O Q1205654 NN
-Forschungszentrum O - NN
-für O - APPR
-Geowissenschaften O - NN
-
-GFZ O Q1205654 NE
-Forschungszentrum O - NN
-für O - APPR
-Geowissenschaften O - NN
-
-Helmholtz O Q1205654 NE
--Zentrum O Q1205654 NN
-Potsdam O Q1205654 NE
-- O Q1205654 $(
-Deutsches O Q1205654 ADJA
-Geo O Q1205654 NE
-Forschungs O Q1205654 NN
-Zentrum O Q1205654 NN
-GFZ O Q1205654 NE
-Forschungszentrum O - NN
-für O - APPR
-Geowissenschaften O - NN
-
-Bundeszollverwaltung O Q1009333 NN
-deutsche O - ADJA
-Zollbehörde O - NN
-, O - $,
-Bestandteil O - NN
-der O - ART
-Bundesfinanzverwaltung O - NN
 
 Zollstation O Q1009333 NN
-deutsche O - ADJA
-Zollbehörde O - NN
-, O - $,
-Bestandteil O - NN
-der O - ART
-Bundesfinanzverwaltung O - NN
-
-Zoll O Q1009333 NN
--Ski O Q1009333 NE
--Team O Q1009333 TRUNC
 deutsche O - ADJA
 Zollbehörde O - NN
 , O - $,
@@ -3524,50 +1208,7 @@ aus O - APPR
 New O - NE
 York O - NE
 
-New O Q9684 FM
-York O Q9684 FM
-Times O Q9684 NE
-englischsprachige O - ADJA
-Tageszeitung O - NN
-aus O - APPR
-New O - NE
-York O - NE
-
-NYT O Q9684 NE
-englischsprachige O - ADJA
-Tageszeitung O - NN
-aus O - APPR
-New O - NE
-York O - NE
-
-NY O Q9684 NE
-Times O Q9684 NE
-englischsprachige O - ADJA
-Tageszeitung O - NN
-aus O - APPR
-New O - NE
-York O - NE
-
-Andreas O Q499684 NE
-Mölich O Q499684 NE
--Zebhauser O Q499684 NE
-deutscher O - ADJA
-Opernintendant O - NN
-
-Mölich O Q499684 NE
--Zebhauser O Q499684 ADJA
-deutscher O - ADJA
-Opernintendant O - NN
-
 Zebhäuser O Q499684 ADJA
-deutscher O - ADJA
-Opernintendant O - NN
-
-Mölich O Q499684 NE
-deutscher O - ADJA
-Opernintendant O - NN
-
-Zebhauser O Q499684 NE
 deutscher O - ADJA
 Opernintendant O - NN
 
@@ -3587,91 +1228,8 @@ Interessen O - NN
 von O - APPR
 Arbeitgebern O - NN
 
-Institut O Q958316 NN
-der O Q958316 ART
-deutschen O Q958316 ADJA
-Wirtschaft O Q958316 NN
-Köln O Q958316 NE
-e O Q958316 NN
-. O Q958316 $.
-V O Q958316 CARD
-. O Q958316 $.
-Denkfabrik O - NN
-für O - APPR
-Interessen O - NN
-von O - APPR
-Arbeitgebern O - NN
-
-The O Q166032 FM
-Washington O Q166032 NE
-Post O Q166032 FM
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Washington O - NE
-, O - $,
-D.C O - NE
-. O - $.
-
-The O Q166032 FM
-Washington O Q166032 NE
-Post O Q166032 FM
-Company O Q166032 FM
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Washington O - NE
-, O - $,
-D.C O - NE
-. O - $.
-
-Washington O Q166032 NE
-Post O Q166032 NN
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Washington O - NE
-, O - $,
-D.C O - NE
-. O - $.
-
-The O Q166032 FM
-Washington O Q166032 NE
-post O Q166032 FM
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Washington O - NE
-, O - $,
-D.C O - NE
-. O - $.
-
-WAPO O Q166032 NE
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Washington O - NE
-, O - $,
-D.C O - NE
-. O - $.
-
 Wa O Q166032 NE
 Po O Q166032 NE
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Washington O - NE
-, O - $,
-D.C O - NE
-. O - $.
-
-washingtonpost.com O Q166032 NE
 Tageszeitung O - NN
 mit O - APPR
 Sitz O - NN
@@ -3686,16 +1244,6 @@ Unternehmen O - NN
 in O - APPR
 Finnland O - NE
 
-F O Q462078 NE
-. O Q462078 $.
-Gary O Q462078 NE
-Gray O Q462078 NE
-US O - FM
--amerikanischer O - ADJA
-Music O - FM
--Video O - TRUNC
-Regisseur O - NN
-
 Felix O Q462078 NE
 Gary O Q462078 NE
 Gray O Q462078 NE
@@ -3704,32 +1252,6 @@ US O - FM
 Music O - FM
 -Video O - TRUNC
 Regisseur O - NN
-
-Amazon O Q3884 NE
-US O - NE
--amerikanisches O - ADJA
-E O - NN
--Commerce O - FM
--Versandhaus O - TRUNC
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Seattle O - NE
-, O - $,
-Washington O - NE
-
-Amazon.com O Q3884 NE
-US O - NE
--amerikanisches O - ADJA
-E O - NN
--Commerce O - FM
--Versandhaus O - TRUNC
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Seattle O - NE
-, O - $,
-Washington O - NE
 
 Amazon.com O Q3884 NE
 , O Q3884 $,
@@ -3767,19 +1289,8 @@ Marc O Q44054 NE
 deutscher O - ADJA
 Maler O - NN
 
-Franz O Q44054 NE
-Moritz O Q44054 NE
-Wilhelm O Q44054 NE
-Marc O Q44054 NE
-deutscher O - ADJA
-Maler O - NN
-
 Freescale O Q863675 NE
 Semiconductor O Q863675 FM
-texanischer O - ADJA
-Halbleiterhersteller O - NN
-
-Freescale O Q863675 NE
 texanischer O - ADJA
 Halbleiterhersteller O - NN
 
@@ -3803,33 +1314,6 @@ Körperschaft O - NN
 für O - APPR
 Bauangelegenheiten O - NN
 
-Tiefbauamt O Q811094 NN
-Amt O - NN
-einer O - ART
-öffentlich O - ADJD
--rechtlichen O - ADJA
-Körperschaft O - NN
-für O - APPR
-Bauangelegenheiten O - NN
-
-Hochbauamt O Q811094 NN
-Amt O - NN
-einer O - ART
-öffentlich O - ADJD
--rechtlichen O - ADJA
-Körperschaft O - NN
-für O - APPR
-Bauangelegenheiten O - NN
-
-Baubehörde O Q811094 NN
-Amt O - NN
-einer O - ART
-öffentlich O - ADJD
--rechtlichen O - ADJA
-Körperschaft O - NN
-für O - APPR
-Bauangelegenheiten O - NN
-
 Solarwatt O Q1304269 NE
 ein O - ART
 deutscher O - ADJA
@@ -3844,43 +1328,6 @@ und O - KON
 Kleingewerbe O - NN
 . O - $.
 
-Solarwatt O Q1304269 NE
-Die O - ART
-Firma O - NN
-verfolgt O - VVFIN
-konsequent O - ADJD
-eine O - ART
-Strategie O - NN
-des O - ART
-kompletten O - ADJA
-energetischen O - ADJA
-Systems O - NN
-, O - $,
-das O - PDS
-bedeutet O - VVFIN
-sie O - PPER
-produziert O - VVFIN
-und O - KON
-vertreibt O - VVFIN
-alle O - PIDAT
-wesentlichen O - ADJA
-Komponenten O - NN
-für O - APPR
-Eigenversorgung O - NN
-von O - APPR
-Haushalten O - NN
-aus O - APPR
-Solarstrom O - NN
-. O - $.
-
-Alternative O Q6721203 NN
-für O Q6721203 APPR
-Deutschland O Q6721203 NE
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Deutschland O - NE
-
 Af O Q6721203 NE
 D O Q6721203 NN
 politische O - ADJA
@@ -3893,66 +1340,12 @@ Haub O Q103647 NE
 deutscher O - ADJA
 Unternehmer O - NN
 
-Handelsblatt O Q819697 NN
-Deutsche O - ADJA
-Wirtschaftszeitung O - NN
-
-Wirtschafts O Q819697 NN
-Wiki O Q819697 NN
-Deutsche O - ADJA
-Wirtschaftszeitung O - NN
-
 Handelsblatt.com O Q819697 NE
 Deutsche O - ADJA
 Wirtschaftszeitung O - NN
 
 Ahmet O Q58198 NE
-Davutoğlu O Q58198 NE
-türkischer O - ADJA
-Politiker O - NN
-; O - $.
-Politikwissenschaftler O - NN
-
-Ahmed O Q58198 NE
-Davutoglu O Q58198 NE
-türkischer O - ADJA
-Politiker O - NN
-; O - $.
-Politikwissenschaftler O - NN
-
-Davutoğlu O Q58198 NE
-türkischer O - ADJA
-Politiker O - NN
-; O - $.
-Politikwissenschaftler O - NN
-
-Davudoglu O Q58198 NE
-türkischer O - ADJA
-Politiker O - NN
-; O - $.
-Politikwissenschaftler O - NN
-
-Ahmet O Q58198 NE
 Davudoğlu O Q58198 NE
-türkischer O - ADJA
-Politiker O - NN
-; O - $.
-Politikwissenschaftler O - NN
-
-Davutoglu O Q58198 NE
-türkischer O - ADJA
-Politiker O - NN
-; O - $.
-Politikwissenschaftler O - NN
-
-Ahmet O Q58198 NE
-Davutoglu O Q58198 NE
-türkischer O - ADJA
-Politiker O - NN
-; O - $.
-Politikwissenschaftler O - NN
-
-Hodscha O Q58198 NE
 türkischer O - ADJA
 Politiker O - NN
 ; O - $.
@@ -3965,116 +1358,10 @@ Verkehrsflughafen O - NN
 in O - APPR
 Deutschland O - NE
 
-Hannover O Q170169 NE
-Airport O Q170169 NE
-Verkehrsflughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-EDDV O Q170169 NE
-Verkehrsflughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Hannover O Q170169 NE
-Flughafen O Q170169 NN
-Verkehrsflughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q170169 NN
-Hannover O Q170169 NE
-Verkehrsflughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-HAJ O Q170169 NE
-Verkehrsflughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Edeka O Q701755 NE
-Unternehmensverbund O - NN
-
-Edeka O Q701755 NE
--Gruppe O Q701755 TRUNC
-Unternehmensverbund O - NN
-
 E O Q701755 NN
 -Neukauf O Q701755 TRUNC
 Unternehmensverbund O - NN
 
-Nah&gut O Q701755 NE
-Unternehmensverbund O - NN
-
-Nah O Q701755 NE
-& O Q701755 KON
-gut O Q701755 ADJD
-Unternehmensverbund O - NN
-
-nah O Q701755 ADJD
-und O Q701755 KON
-gut O Q701755 ADJD
-Unternehmensverbund O - NN
-
-Edeka O Q701755 NE
-xpress O Q701755 NE
-Unternehmensverbund O - NN
-
-Apple O Q312 NE
-US O - NE
--amerikanisches O - ADJA
-Hardware O - NN
-- O - $(
-, O - $,
-Software O - NN
-- O - $(
-und O - KON
-Technologieunternehmen O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Cupertino O - NE
-, O - $,
-Kalifornien O - NE
-
-Apple O Q312 NE
-Inc O Q312 FM
-. O Q312 $.
-US O - FM
--amerikanisches O - ADJA
-Hardware O - NN
-- O - $(
-, O - $,
-Software O - NN
-- O - TRUNC
-und O - KON
-Technologieunternehmen O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Cupertino O - NE
-, O - $,
-Kalifornien O - NE
-
-Apple O Q312 NE
-Computer O Q312 NN
-US O - FM
--amerikanisches O - ADJA
-Hardware O - NN
-- O - $(
-, O - $,
-Software O - NN
-- O - $(
-und O - KON
-Technologieunternehmen O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Cupertino O - NE
-, O - $,
-Kalifornien O - NE
-
 Apple O Q312 NE
 Computer O Q312 FM
 Inc O Q312 FM
@@ -4085,64 +1372,6 @@ Hardware O - NN
 , O - $,
 Software O - NN
 - O - $(
-und O - KON
-Technologieunternehmen O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Cupertino O - NE
-, O - $,
-Kalifornien O - NE
-
-Apple O Q312 NE
-Computer O Q312 NN
-, O Q312 $,
-Inc O Q312 FM
-. O Q312 $.
-US O - FM
--amerikanisches O - ADJA
-Hardware O - NN
-- O - $(
-, O - $,
-Software O - NN
-- O - TRUNC
-und O - KON
-Technologieunternehmen O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Cupertino O - NE
-, O - $,
-Kalifornien O - NE
-
-Apple O Q312 NE
-Incorporated O Q312 FM
-US O - FM
--amerikanisches O - ADJA
-Hardware O - NN
-- O - $(
-, O - $,
-Software O - NN
-- O - $(
-und O - KON
-Technologieunternehmen O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Cupertino O - NE
-, O - $,
-Kalifornien O - NE
-
-Apple O Q312 NE
-Computer O Q312 FM
-Incorporated O Q312 FM
-US O - FM
--amerikanisches O - ADJA
-Hardware O - NN
-- O - $(
-, O - $,
-Software O - NN
-- O - TRUNC
 und O - KON
 Technologieunternehmen O - NN
 mit O - APPR
@@ -4161,38 +1390,6 @@ Konferenz O - NN
 
 Reuters O Q130879 NE
 Nachrichtenagentur O - NN
-
-Thompson O Q130879 NE
--Reuters O Q130879 NE
-Nachrichtenagentur O - NN
-
-Informations O Q1662517 NN
--Verarbeitungs O Q1662517 TRUNC
--Zentrum O Q1662517 TRUNC
-Kooperation O - NN
-von O - APPR
-ARD O - NN
-und O - KON
-Deutschlandradio O - NE
-, O - $,
-im O - APPRART
-Rahmen O - NN
-einer O - ART
-öffentlich O - ADJD
--rechtlichen O - ADJA
-, O - $,
-nicht O - PTKNEG
--rechtsfähigen O - ADJA
-Verwaltungsgemeinschaft O - NN
-mit O - APPR
-Sitz O - NN
-im O - APPRART
-Rundfunk O - NN
-Berlin O - NE
--Brandenburg O - NE
-in O - APPR
-Potsdam O - NE
-. O - $.
 
 IVZ O Q1662517 NE
 Kooperation O - NN
@@ -4240,20 +1437,6 @@ in O - APPR
 Hamburg O - NE
 . O - $.
 
-TVR O Q17056328 NE
-Info O Q17056328 NE
-eine O - ART
-inhabergeführte O - ADJA
-TV O - NN
--Nachrichtenagentur O - TRUNC
-und O - KON
-Fernsehproduktionsfirma O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Hamburg O - NE
-. O - $.
-
 Daniel O Q18411264 NE
 Zimmer O Q18411264 NE
 deutscher O - ADJA
@@ -4287,22 +1470,6 @@ Haag O - NE
 . O - $.
 
 Jérôme O Q151260 NE
-Boateng O Q151260 NE
-deutscher O - ADJA
-Fußballspieler O - NN
-
-Jerome O Q151260 NE
-Agyenim O Q151260 NE
-Boateng O Q151260 NE
-deutscher O - ADJA
-Fußballspieler O - NN
-
-Jerome O Q151260 NE
-Boateng O Q151260 NE
-deutscher O - ADJA
-Fußballspieler O - NN
-
-Jérôme O Q151260 NE
 Agyenim O Q151260 NE
 Boateng O Q151260 NE
 deutscher O - ADJA
@@ -4312,65 +1479,8 @@ Condor O Q312517 NE
 Flugdienst O Q312517 NN
 Deutsche O - ADJA
 Charterfluggesellschaft O - NN
-
-Condor O Q312517 NE
-Flugdienst O Q312517 NN
-Gmb O Q312517 NE
-H O Q312517 NN
-Deutsche O - ADJA
-Charterfluggesellschaft O - NN
-
-Condor O Q312517 NE
-Berlin O Q312517 NE
-Deutsche O - ADJA
-Charterfluggesellschaft O - NN
-
-Condor O Q312517 NE
-Airlines O Q312517 FM
-Deutsche O - ADJA
-Charterfluggesellschaft O - NN
-
-Condor O Q312517 NE
-Deutsche O - ADJA
-Charterfluggesellschaft O - NN
-
-Air O Q156829 NE
-Berlin O Q156829 NE
-Ehemalige O - ADJA
-deutsche O - ADJA
-Fluggesellschaft O - NN
-
-Air O Q156829 NE
-Berlin O Q156829 NE
-PLC O Q156829 NE
-& O Q156829 KON
-Co O Q156829 NN
-. O Q156829 $.
-Luftverkehrs O Q156829 NN
-KG O Q156829 NE
-Ehemalige O - ADJA
-deutsche O - ADJA
-Fluggesellschaft O - NN
-
-Air O Q156829 NE
--Berlin O Q156829 NE
-Ehemalige O - ADJA
-deutsche O - ADJA
-Fluggesellschaft O - NN
 
 Airberlin O Q156829 NE
-Ehemalige O - ADJA
-deutsche O - ADJA
-Fluggesellschaft O - NN
-
-Air O Q156829 NE
-Berlin O Q156829 NE
-Gmb O Q156829 NE
-H O Q156829 NN
-& O Q156829 KON
-Co O Q156829 NN
-Luftverkehrs O Q156829 NN
-KG O Q156829 NE
 Ehemalige O - ADJA
 deutsche O - ADJA
 Fluggesellschaft O - NN
@@ -4392,10 +1502,6 @@ Hiesinger O Q109782 NE
 deutscher O - ADJA
 Wirtschaftsmanager O - NN
 
-Hiesinger O Q109782 NE
-deutscher O - ADJA
-Wirtschaftsmanager O - NN
-
 D O Q4236307 NN
 . O Q4236307 $.
 J O Q4236307 NE
@@ -4404,11 +1510,6 @@ Cotrona O Q4236307 NE
 US O - FM
 -amerikanischer O - ADJA
 Schauspieler O - NN
-
-Christoph O Q152984 NE
-Metzelder O Q152984 NE
-deutscher O - ADJA
-Fußballspieler O - NN
 
 Christoph O Q152984 NE
 Tobias O Q152984 NE
@@ -4423,23 +1524,7 @@ Universität O - NN
 in O - APPR
 Chile O - NN
 
-Universität O Q232141 NN
-von O Q232141 APPR
-Chile O Q232141 NE
-Universität O - NN
-in O - APPR
-Chile O - NN
-
 ZDF O Q48989 NE
-öffentlich O - ADJD
--rechtlicher O - ADJA
-Fernsehsender O - NN
-in O - APPR
-Deutschland O - NE
-
-Zweites O Q48989 ADJA
-Deutsches O Q48989 ADJA
-Fernsehen O Q48989 NN
 öffentlich O - ADJD
 -rechtlicher O - ADJA
 Fernsehsender O - NN
@@ -4450,74 +1535,12 @@ UEFA O Q35572 NE
 europäischer O - ADJA
 Fußballverband O - NN
 
-Europäischer O Q35572 ADJA
-Fußballverband O Q35572 NN
-europäischer O - ADJA
-Fußballverband O - NN
-
-Union O Q35572 FM
-of O Q35572 FM
-European O Q35572 FM
-Football O Q35572 FM
-Associations O Q35572 FM
-europäischer O - ADJA
-Fußballverband O - NN
-
-Mainzer O Q1885780 ADJA
-Verkehrsgesellschaft O Q1885780 NN
-Verkehrsunternehmen O - NN
-für O - APPR
-den O - ART
-öffentlichen O - ADJA
-Personennahverkehr O - NN
-
-Stadtverkehr O Q1885780 NN
-in O Q1885780 APPR
-Mainz O Q1885780 NE
-Verkehrsunternehmen O - NN
-für O - APPR
-den O - ART
-öffentlichen O - ADJA
-Personennahverkehr O - NN
-
-Mainzer O Q1885780 ADJA
-Verkehrsgesellschaft O Q1885780 NN
-mb O Q1885780 NE
-H O Q1885780 NN
-Verkehrsunternehmen O - NN
-für O - APPR
-den O - ART
-öffentlichen O - ADJA
-Personennahverkehr O - NN
-
 MVG O Q1885780 NE
 Verkehrsunternehmen O - NN
 für O - APPR
 den O - ART
 öffentlichen O - ADJA
 Personennahverkehr O - NN
-
-Taktisches O Q1678269 ADJA
-Luftwaffengeschwader O Q1678269 NN
-33 O Q1678269 CARD
-ein O - ART
-fliegender O - ADJA
-Kampfverband O - NN
-der O - ART
-Luftwaffe O - NN
-der O - ART
-Bundeswehr O - NN
-, O - $,
-der O - PRELS
-mit O - APPR
-dem O - ART
-Waffensystem O - NN
-Panavia O - NE
-Tornado O - NE
-IDS O - NE
-ausgerüstet O - VVPP
-ist O - VAFIN
-. O - $.
 
 Jabo O Q1678269 NE
 G O Q1678269 NN
@@ -4546,48 +1569,6 @@ Group O Q9325 NE
 deutscher O - ADJA
 Luftfahrtkonzern O - NN
 
-Deutsche O Q9325 ADJA
-Lufthansa O Q9325 NE
-deutscher O - ADJA
-Luftfahrtkonzern O - NN
-
-Deutsche O Q9325 ADJA
-Lufthansa O Q9325 NE
-AG O Q9325 NN
-deutscher O - ADJA
-Luftfahrtkonzern O - NN
-
-Deutsche O Q9325 ADJA
-Lufthansa O Q9325 NE
-Aktiengesellschaft O Q9325 NN
-deutscher O - ADJA
-Luftfahrtkonzern O - NN
-
-Lufthansa O Q9325 NE
-German O Q9325 NE
-Airlines O Q9325 FM
-deutscher O - ADJA
-Luftfahrtkonzern O - NN
-
-DLH O Q9325 NE
-deutscher O - ADJA
-Luftfahrtkonzern O - NN
-
-LH O Q9325 NE
-deutscher O - ADJA
-Luftfahrtkonzern O - NN
-
-Lufthansa O Q9325 NE
-Passage O Q9325 FM
-Airlines O Q9325 NE
-deutscher O - ADJA
-Luftfahrtkonzern O - NN
-
-Amtsgericht O Q480675 NN
-Frankfurt O Q480675 NE
-Wikimedia O - NE
--Begriffsklärungsseite O - TRUNC
-
 AG O Q480675 NN
 Frankfurt O Q480675 NE
 Wikimedia O - NE
@@ -4599,32 +1580,11 @@ für O - APPR
 Solartechnik O - NN
 . O - $.
 
-Sean O Q191104 NE
-Bean O Q191104 NE
-britischer O - ADJA
-Schauspieler O - NN
-
 Shaun O Q191104 NE
 Mark O Q191104 NE
 Bean O Q191104 NE
 britischer O - ADJA
 Schauspieler O - NN
-
-Europäische O Q8880 ADJA
-Kommission O Q8880 NN
-supranationales O - ADJA
-Organ O - NN
-der O - ART
-Europäischen O - ADJA
-Union O - NN
-
-EU O Q8880 NE
--Kommission O Q8880 TRUNC
-supranationales O - ADJA
-Organ O - NN
-der O - ART
-Europäischen O - ADJA
-Union O - NN
 
 EK O Q8880 NE
 supranationales O - ADJA
@@ -4632,39 +1592,6 @@ Organ O - NN
 der O - ART
 Europäischen O - ADJA
 Union O - NN
-
-KOM O Q8880 NE
-supranationales O - ADJA
-Organ O - NN
-der O - ART
-Europäischen O - ADJA
-Union O - NN
-
-RTL O Q155702 NE
-Television O Q155702 NE
-deutschsprachiger O - ADJA
-, O - $,
-privater O - ADJA
-TV O - NN
--Sender O - TRUNC
-
-RTL O Q155702 NE
--Fernsehen O Q155702 TRUNC
-deutschsprachiger O - ADJA
-, O - $,
-privater O - ADJA
-TV O - NN
--Sender O - TRUNC
-
-RTL O Q155702 NE
-Television O Q155702 NE
-Gmb O Q155702 NE
-H O Q155702 NN
-deutschsprachiger O - ADJA
-, O - $,
-privater O - ADJA
-TV O - NN
--Sender O - TRUNC
 
 Radio O Q155702 NN
 Télé O Q155702 NE
@@ -4675,29 +1602,6 @@ privater O - ADJA
 TV O - NN
 -Sender O - TRUNC
 
-RTL O Q155702 NE
-deutschsprachiger O - ADJA
-, O - $,
-privater O - ADJA
-TV O - NN
--Sender O - TRUNC
-
-Degeto O Q1182873 NE
-Film O Q1182873 NN
-gemeinsame O - ADJA
-Filmeinkaufsorganisation O - NN
-der O - ART
-ARD O - NE
-
-DEGETO O Q1182873 NE
-FILM O Q1182873 NE
-Gmb O Q1182873 NE
-H O Q1182873 NE
-gemeinsame O - ADJA
-Filmeinkaufsorganisation O - NN
-der O - ART
-ARD O - NN
-
 ARD O Q1182873 NE
 Degeto O Q1182873 NE
 gemeinsame O - ADJA
@@ -4705,62 +1609,10 @@ Filmeinkaufsorganisation O - NN
 der O - ART
 ARD O - NE
 
-Deutsche O Q1182873 ADJA
-Gesellschaft O Q1182873 NN
-für O Q1182873 APPR
-Ton O Q1182873 NN
-und O Q1182873 KON
-Film O Q1182873 NN
-gemeinsame O - ADJA
-Filmeinkaufsorganisation O - NN
-der O - ART
-ARD O - NE
-
-Degeto O Q1182873 NE
-gemeinsame O - ADJA
-Filmeinkaufsorganisation O - NN
-der O - ART
-ARD O - NE
-
-Rhein O Q707826 NE
--Neckar O Q707826 NE
-Löwen O Q707826 NE
-deutsche O - ADJA
-Handballmannschaft O - NN
-
-Rhein O Q707826 NE
--Neckar O Q707826 NE
--Löwen O Q707826 TRUNC
-deutsche O - ADJA
-Handballmannschaft O - NN
-
 SG O Q707826 NN
 Kronau/Östringen O Q707826 NE
 deutsche O - ADJA
 Handballmannschaft O - NN
-
-SG O Q707826 NN
-Kronau O Q707826 NE
--Östringen O Q707826 NE
-deutsche O - ADJA
-Handballmannschaft O - NN
-
-Rnlö O Q707826 NE
-deutsche O - ADJA
-Handballmannschaft O - NN
-
-Rnl O Q707826 NE
-deutsche O - ADJA
-Handballmannschaft O - NN
-
-Wolfgang O Q77031 NE
-Rihm O Q77031 NE
-deutscher O - ADJA
-Komponist O - NN
-, O - $,
-Musikwissenschaftler O - NN
-und O - KON
-Essayist O - NN
 
 Wolfgang O Q77031 NE
 Michael O Q77031 NE
@@ -4771,42 +1623,6 @@ Komponist O - NN
 Musikwissenschaftler O - NN
 und O - KON
 Essayist O - NN
-
-Rihm O Q77031 NE
-deutscher O - ADJA
-Komponist O - NN
-, O - $,
-Musikwissenschaftler O - NN
-und O - KON
-Essayist O - NN
-
-Facebook O Q380 NE
-Inc O Q380 FM
-. O Q380 $.
-US O - FM
--amerikanisches O - ADJA
-Internet O - NN
--Unternehmen O - TRUNC
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Menlo O - NE
-Park O - NE
-, O - $,
-Kalifornien O - NE
-
-Facebook O Q380 NE
-US O - FM
--amerikanisches O - ADJA
-Internet O - NN
--Unternehmen O - TRUNC
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Menlo O - NE
-Park O - NE
-, O - $,
-Kalifornien O - NE
 
 FB O Q380 NE
 US O - FM
@@ -4821,35 +1637,6 @@ Park O - NE
 , O - $,
 Kalifornien O - NE
 
-Facebook O Q380 NE
-, O Q380 $,
-Inc O Q380 NE
-. O Q380 $.
-US O - FM
--amerikanisches O - ADJA
-Internet O - NN
--Unternehmen O - TRUNC
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Menlo O - NE
-Park O - NE
-, O - $,
-Kalifornien O - NE
-
-facebook O Q380 NE
-US O - FM
--amerikanisches O - ADJA
-Internet O - NN
--Unternehmen O - TRUNC
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-Menlo O - NE
-Park O - NE
-, O - $,
-Kalifornien O - NE
-
 Bellevue O Q815953 NE
 Group O Q815953 FM
 ein O - ART
@@ -4868,63 +1655,6 @@ Management O - FM
 tätig O - ADJD
 ist O - VAFIN
 . O - $.
-
-Bellevue O Q815953 NE
-Group O Q815953 FM
-AG O Q815953 NN
-ein O - ART
-an O - APPR
-SIX O - NE
-Swiss O - FM
-Exchange O - FM
-kotierter O - ADJA
-Finanzdienstleister O - NN
-, O - $,
-der O - PRELS
-überwiegend O - ADJD
-im O - APPRART
-Asset O - FM
-Management O - FM
-tätig O - ADJD
-ist O - VAFIN
-. O - $.
-
-Bank O Q815953 NN
-am O Q815953 APPRART
-Bellevue O Q815953 NE
-ein O - ART
-an O - APPR
-SIX O - NE
-Swiss O - FM
-Exchange O - FM
-kotierter O - ADJA
-Finanzdienstleister O - NN
-, O - $,
-der O - PRELS
-überwiegend O - ADJD
-im O - APPRART
-Asset O - FM
-Management O - FM
-tätig O - ADJD
-ist O - VAFIN
-. O - $.
-
-Josep O Q485165 NE
-Carreras O Q485165 NE
-Spanischer O - ADJA
-Tenor O - NN
-
-Jose O Q485165 NE
-Carreras O Q485165 NE
-Spanischer O - ADJA
-Tenor O - NN
-
-Josep O Q485165 NE
-Carreras O Q485165 NE
-i O Q485165 CARD
-Coll O Q485165 NE
-Spanischer O - ADJA
-Tenor O - NN
 
 José O Q485165 NE
 Carreras O Q485165 NE
@@ -4937,49 +1667,6 @@ deutscher O - ADJA
 Fußballspieler O - NN
 und O - KON
 Funktionär O - NN
-
-Kim O Q186304 NE
-Kardashian O Q186304 NE
-US O - FM
--amerikanische O - ADJA
-Reality O - FM
--TV O - FM
--Teilnehmerin O - TRUNC
-, O - $,
-Model O - NE
-, O - $,
-Schauspielerin O - NN
-und O - KON
-Unternehmerin O - NN
-
-Kimberly O Q186304 NE
-Kardashian O Q186304 NE
-US O - NE
--amerikanische O - ADJA
-Reality O - FM
--TV O - FM
--Teilnehmerin O - TRUNC
-, O - $,
-Model O - NE
-, O - $,
-Schauspielerin O - NN
-und O - KON
-Unternehmerin O - NN
-
-Kimberly O Q186304 NE
-Noel O Q186304 NE
-Kardashian O Q186304 NE
-US O - FM
--amerikanische O - ADJA
-Reality O - FM
--TV O - FM
--Teilnehmerin O - TRUNC
-, O - $,
-Model O - NE
-, O - $,
-Schauspielerin O - NN
-und O - KON
-Unternehmerin O - NN
 
 Kimberly O Q186304 NE
 Noel O Q186304 NE
@@ -4996,19 +1683,6 @@ Model O - NE
 Schauspielerin O - NN
 und O - KON
 Unternehmerin O - NN
-
-Universal O Q21043034 FM
-Pictures O Q21043034 FM
-ein O - ART
-auf O - APPR
-Filmproduktion O - NN
-spezialisiertes O - ADJA
-Tochterunternehmen O - NN
-des O - ART
-Medienkonzerns O - NN
-NBC O - NE
-Universal O - NE
-. O - $.
 
 Universal O Q21043034 FM
 Pictures O Q21043034 FM
@@ -5032,28 +1706,6 @@ Staaten O - NN
 . O - $.
 
 Sigmar O Q160902 NE
-Gabriel O Q160902 NE
-deutscher O - ADJA
-Politiker O - NN
-( O - $(
-SPD O - NE
-) O - $(
-, O - $,
-Md O - NE
-B O - NN
-
-Siggi O Q160902 NE
-Pop O Q160902 NN
-deutscher O - ADJA
-Politiker O - NN
-( O - $(
-SPD O - NE
-) O - $(
-, O - $,
-Md O - NE
-B O - NN
-
-Sigmar O Q160902 NE
 Hartmut O Q160902 NE
 Gabriel O Q160902 NE
 deutscher O - ADJA
@@ -5071,149 +1723,12 @@ italienischer O - ADJA
 Architekt O - NN
 
 Samsung O Q20718 NE
-Electronics O Q20718 FM
-südkoreanischer O - ADJA
-Elektronikkonzern O - NN
-
-Samsung O Q20718 NE
 Semiconductor O Q20718 NE
 südkoreanischer O - ADJA
 Elektronikkonzern O - NN
 
 Borussia O Q41420 NE
-Dortmund O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Ballspielverein O Q41420 NN
-Borussia O Q41420 NE
 09 O Q41420 CARD
-Dortmund O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-BV O Q41420 NE
-09 O Q41420 CARD
-Borussia O Q41420 NE
-Dortmund O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Ballspielverein O Q41420 NN
-Borussia O Q41420 NE
-Dortmund O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-BV O Q41420 NE
-Borussia O Q41420 NE
-09 O Q41420 CARD
-Dortmund O Q41420 NN
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-BVB O Q41420 NE
-09 O Q41420 CARD
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-BVB O Q41420 NE
-Dortmund O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-BVB O Q41420 NE
-09 O Q41420 CARD
-Dortmund O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Ballspiel O Q41420 NN
--Verein O Q41420 TRUNC
-Borussia O Q41420 NE
-1909 O Q41420 CARD
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-BV O Q41420 NE
-Borussia O Q41420 NE
-Dortmund O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-BVB09 O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Borussia O Q41420 NE
-09 O Q41420 CARD
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-Ballspielverein O Q41420 NN
-Borussia O Q41420 NE
-09 O Q41420 CARD
-e O Q41420 NN
-. O Q41420 $.
-V O Q41420 CARD
-. O Q41420 $.
-Dortmund O Q41420 NE
-Fußballverein O - NN
-aus O - APPR
-Dortmund O - NE
-, O - $,
-Nordrhein O - NE
--Westfalen O - NE
-
-BVB O Q41420 NE
 Fußballverein O - NN
 aus O - APPR
 Dortmund O - NE
@@ -5222,58 +1737,6 @@ Nordrhein O - NE
 -Westfalen O - NE
 
 Sony O Q41187 NE
-japanischer O - ADJA
-, O - $,
-internationaler O - ADJA
-Konzern O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Minato O - NE
-, O - $,
-Tokio O - NE
-
-Sony O Q41187 NE
-Entertainment O Q41187 FM
-japanischer O - ADJA
-, O - $,
-internationaler O - ADJA
-Konzern O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Minato O - NE
-, O - $,
-Tokio O - NE
-
-Totsuko O Q41187 NE
-japanischer O - ADJA
-, O - $,
-internationaler O - ADJA
-Konzern O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Minato O - NE
-, O - $,
-Tokio O - NE
-
-Sony O Q41187 NE
-Corporation O Q41187 FM
-japanischer O - ADJA
-, O - $,
-internationaler O - ADJA
-Konzern O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Minato O - NE
-, O - $,
-Tokio O - NE
-
-Sony O Q41187 NE
-Kabushiki O Q41187 NE
-Kaisha O Q41187 NE
 japanischer O - ADJA
 , O - $,
 internationaler O - ADJA
@@ -5320,107 +1783,17 @@ und O - KON
 - O - $(
 funktionär O - ADJD
 
-Bundesnetzagentur O Q269138 NN
-deutsche O - ADJA
-Bundesbehörde O - NN
-
-Bundesnetzagentur O Q269138 NN
-für O Q269138 APPR
-Elektrizität O Q269138 NN
-, O Q269138 $,
-Gas O Q269138 NN
-, O Q269138 $,
-Telekommunikation O Q269138 NN
-, O Q269138 $,
-Post O Q269138 NN
-und O Q269138 KON
-Eisenbahnen O Q269138 NN
-deutsche O - ADJA
-Bundesbehörde O - NN
-
 BNetz O Q269138 NE
 A O Q269138 NN
 deutsche O - ADJA
 Bundesbehörde O - NN
-
-Regulierungsbehörde O Q269138 NN
-für O Q269138 APPR
-Telekommunikation O Q269138 NN
-und O Q269138 KON
-Post O Q269138 NN
-deutsche O - ADJA
-Bundesbehörde O - NN
-
-Yahoo O Q37093 NE
-Internetunternehmen O - NN
-aus O - APPR
-Kalifornien O - NE
-
-Yet O Q37093 FM
-Another O Q37093 FM
-Hierarchical O Q37093 FM
-Officious O Q37093 FM
-Oracle O Q37093 FM
-Internetunternehmen O - NN
-aus O - APPR
-Kalifornien O - NE
-
-Yahoo O Q37093 NE
-! O Q37093 $.
-Inc O Q37093 FM
-. O Q37093 $.
-Internetunternehmen O - NN
-aus O - APPR
-Kalifornien O - NE
-
-Yahoo O Q37093 NE
-! O Q37093 $.
-Internetunternehmen O - NN
-aus O - APPR
-Kalifornien O - NE
-
-Yahoo.de O Q37093 NN
-Internetunternehmen O - NN
-aus O - APPR
-Kalifornien O - NE
-
-Altaba O Q37093 NE
-Internetunternehmen O - NN
-aus O - APPR
-Kalifornien O - NE
 
 Yahoo.com O Q37093 NE
 Internetunternehmen O - NN
 aus O - APPR
 Kalifornien O - NE
 
-London O Q171240 NE
-Stock O Q171240 FM
-Exchange O Q171240 FM
-Börse O - NN
-von O - APPR
-London O - NE
-
 SETS O Q171240 NE
-Börse O - NN
-von O - APPR
-London O - NE
-
-SEAQ O Q171240 NE
-Börse O - NN
-von O - APPR
-London O - NE
-
-Londoner O Q171240 ADJA
-Börse O Q171240 NN
-Börse O - NN
-von O - APPR
-London O - NE
-
-London O Q171240 NE
-Stock O Q171240 FM
-Exchange O Q171240 FM
-Group O Q171240 FM
 Börse O - NN
 von O - APPR
 London O - NE
@@ -5435,25 +1808,6 @@ Fußballfunktionär O - NN
 
 Mitteldeutsche O Q1940107 ADJA
 Zeitung O Q1940107 NN
-deutsche O - ADJA
-regionale O - ADJA
-Tageszeitung O - NN
-
-Freiheit O Q1940107 NN
-( O Q1940107 $(
-Zeitung O Q1940107 NN
-) O Q1940107 $(
-deutsche O - ADJA
-regionale O - ADJA
-Tageszeitung O - NN
-
-mz O Q1940107 NE
--web.de O Q1940107 FM
-deutsche O - ADJA
-regionale O - ADJA
-Tageszeitung O - NN
-
-MZ.de O Q1940107 NN
 deutsche O - ADJA
 regionale O - ADJA
 Tageszeitung O - NN
@@ -5477,154 +1831,14 @@ und O - KON
 von O - APPR
 REWE O - NE
 
-Kaiser O Q897187 NE
-'s O Q897187 NE
-Tengelmann O Q897187 NE
-ehemalige O - ADJA
-deutsche O - ADJA
-Supermarktkette O - NN
-, O - $,
-übernommen O - VVPP
-von O - APPR
-Edeka O - NE
-und O - KON
-von O - APPR
-REWE O - NE
-
-Kaiser O Q897187 NE
-'s O Q897187 NE
-Tengelmann O Q897187 NE
-AG O Q897187 NN
-ehemalige O - ADJA
-deutsche O - ADJA
-Supermarktkette O - NN
-, O - $,
-übernommen O - VVPP
-von O - APPR
-Edeka O - NE
-und O - KON
-von O - APPR
-REWE O - NE
-
-Kaiser O Q897187 NE
-'s O Q897187 NE
-Kaffee O Q897187 NN
-Geschäft O Q897187 NN
-ehemalige O - ADJA
-deutsche O - ADJA
-Supermarktkette O - NN
-, O - $,
-übernommen O - VVPP
-von O - APPR
-Edeka O - NE
-und O - KON
-von O - APPR
-REWE O - NE
-
-Kaiser O Q897187 NE
-'s O Q897187 ART
-ehemalige O - ADJA
-deutsche O - ADJA
-Supermarktkette O - NN
-, O - $,
-übernommen O - VVPP
-von O - APPR
-Edeka O - NE
-und O - KON
-von O - APPR
-REWE O - NE
-
-WPP O Q1318049 NE
-Group O Q1318049 FM
-Werbedienstleister O - NN
-und O - KON
-Medienunternehmen O - NN
-
 WPP O Q1318049 NE
 Werbedienstleister O - NN
 und O - KON
 Medienunternehmen O - NN
-
-Austria O Q680662 NE
-Presse O Q680662 NN
-Agentur O Q680662 NN
-Österreichische O - ADJA
-Nachrichtenagentur O - NN
-
-APA O Q680662 NE
--OTS O Q680662 NE
-Österreichische O - ADJA
-Nachrichtenagentur O - NN
-
-Austria O Q680662 NE
-Presse O Q680662 NN
--Agentur O Q680662 TRUNC
-Österreichische O - ADJA
-Nachrichtenagentur O - NN
-
-APA O Q680662 NE
-Österreichische O - ADJA
-Nachrichtenagentur O - NN
 
 OTS O Q680662 NE
 Österreichische O - ADJA
 Nachrichtenagentur O - NN
-
-Wachowskis O Q195719 NE
-US O - FM
--amerikanische O - ADJA
-Drehbuchautorinnen O - NN
-und O - KON
-Filmregisseurinnen O - NN
-
-Wachowsky O Q195719 NE
-Brothers O Q195719 NE
-US O - FM
--amerikanische O - ADJA
-Drehbuchautorinnen O - NN
-und O - KON
-Filmregisseurinnen O - NN
-
-Wachowski O Q195719 NE
--Brüder O Q195719 TRUNC
-US O - NE
--amerikanische O - ADJA
-Drehbuchautorinnen O - NN
-und O - KON
-Filmregisseurinnen O - NN
-
-Larry O Q195719 NE
-and O Q195719 NE
-Andy O Q195719 NE
-Wachowski O Q195719 NE
-US O - NE
--amerikanische O - ADJA
-Drehbuchautorinnen O - NN
-und O - KON
-Filmregisseurinnen O - NN
-
-Wachowski O Q195719 NE
-Brothers O Q195719 NE
-US O - FM
--amerikanische O - ADJA
-Drehbuchautorinnen O - NN
-und O - KON
-Filmregisseurinnen O - NN
-
-Brüder O Q195719 NN
-Wachowski O Q195719 NE
-US O - NE
--amerikanische O - ADJA
-Drehbuchautorinnen O - NN
-und O - KON
-Filmregisseurinnen O - NN
-
-Wachowski O Q195719 NE
-US O - NE
--amerikanische O - ADJA
-Drehbuchautorinnen O - NN
-und O - KON
-Filmregisseurinnen O - NN
 
 Gebrüder O Q195719 NE
 Wachowski O Q195719 NE
@@ -5645,89 +1859,20 @@ Frankfurt O - NE
 am O - APPRART
 Main O - NE
 
-Avox O Q157852 NE
-deutsche O - ADJA
-Aktiengesellschaft O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-
-Deutsche O Q157852 ADJA
-Börse O Q157852 NN
-AG O Q157852 NN
-deutsche O - ADJA
-Aktiengesellschaft O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-
-Deutsche O Q157852 ADJA
-Börse O Q157852 NN
-Group O Q157852 NE
-deutsche O - ADJA
-Aktiengesellschaft O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-
-Deutsche O Q157852 ADJA
-Boerse O Q157852 NE
-AG O Q157852 NN
-deutsche O - ADJA
-Aktiengesellschaft O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-
 Javier O Q410758 NE
 Hernández O Q410758 NE
 Wikimedia O - NE
 -Begriffsklärungsseite O - TRUNC
 
 UHD O Q25399479 NE
-Alliance O Q25399479 FM
-Organisation O - NN
-
-UHD O Q25399479 NE
 Organisation O - NN
 
 Immofinanz O Q1660121 NN
-Unternehmen O - NN
-für O - APPR
-Immobilien O - NN
-
-Immofinanz O Q1660121 NN
-AG O Q1660121 NN
-Unternehmen O - NN
-für O - APPR
-Immobilien O - NN
-
-Immofinanz O Q1660121 NN
-Immobilien O Q1660121 NN
-Anlagen O Q1660121 NN
-AG O Q1660121 NN
 Unternehmen O - NN
 für O - APPR
 Immobilien O - NN
 
 Seppo O Q1704521 NE
-Eichkorn O Q1704521 NE
-deutscher O - ADJA
-Fußballtrainer O - NN
-
-Josef O Q1704521 NE
 Eichkorn O Q1704521 NE
 deutscher O - ADJA
 Fußballtrainer O - NN
@@ -5742,48 +1887,6 @@ Deutschland O - NE
 Century O Q434841 FM
 Studios O Q434841 FM
 Filmstudio O - NN
-
-Twentieth O Q434841 FM
-Century O Q434841 FM
-Fox O Q434841 FM
-Filmstudio O - NN
-
-Twentieth O Q434841 FM
-Century O Q434841 FM
-Fox O Q434841 FM
-Home O Q434841 FM
-Entertainment O Q434841 FM
-Filmstudio O - NN
-
-Fox O Q434841 NE
-Home O Q434841 FM
-Entertainment O Q434841 FM
-Filmstudio O - NN
-
-Fox O Q434841 NE
-Studios O Q434841 FM
-Filmstudio O - NN
-
-Fox O Q434841 NE
-movies O Q434841 FM
-Filmstudio O - NN
-
-20th O Q434841 FM
-Century O Q434841 FM
-Records O Q434841 FM
-Filmstudio O - NN
-
-20th O Q434841 FM
-Century O Q434841 FM
-Fox O Q434841 FM
-Filmstudio O - NN
-
-Volksverteidigungseinheiten O Q277036 NN
-Bewaffnete O - ADJA
-kurdische O - ADJA
-Miliz O - NN
-in O - APPR
-Syrien O - NE
 
 YPG O Q277036 NE
 Bewaffnete O - ADJA
@@ -5801,95 +1904,8 @@ Karlsruhe O - NE
 Baden O - NE
 -Württemberg O - NE
 
-Karlsruher O Q105853 ADJA
-Sport O Q105853 NN
--Club O Q105853 TRUNC
-Sportverein O - NN
-aus O - APPR
-Karlsruhe O - NE
-, O - $,
-Baden O - NE
--Württemberg O - TRUNC
-
-Karlsruher O Q105853 ADJA
-Sport O Q105853 NN
--Club O Q105853 TRUNC
-Mühlburg O Q105853 NE
--Phönix O Q105853 TRUNC
-e O Q105853 NN
-. O Q105853 $.
-V O Q105853 CARD
-. O Q105853 $.
-Sportverein O - NN
-aus O - APPR
-Karlsruhe O - NE
-, O - $,
-Baden O - NE
--Württemberg O - TRUNC
-
-KSC O Q105853 NE
-Sportverein O - NN
-aus O - APPR
-Karlsruhe O - NE
-, O - $,
-Baden O - NE
--Württemberg O - NE
-
-RTLZWEI O Q594177 NE
-Privater O - ADJA
-deutscher O - ADJA
-Fernsehsender O - NN
-, O - $,
-von O - APPR
-der O - ART
-RTLZWEI O - NE
-Fernsehen O - NN
-Gmb O - NE
-H O - NN
-& O - KON
-Co O - NN
-. O - $.
-KG O - NN
-betrieben O - VVPP
-
-RTL O Q594177 NE
-2 O Q594177 CARD
-Privater O - ADJA
-deutscher O - ADJA
-Fernsehsender O - NN
-, O - $,
-von O - APPR
-der O - ART
-RTLZWEI O - NE
-Fernsehen O - NN
-Gmb O - NE
-H O - NN
-& O - KON
-Co O - NN
-. O - $.
-KG O - NN
-betrieben O - VVPP
-
 RTL O Q594177 NE
 II O Q594177 CARD
-Privater O - ADJA
-deutscher O - ADJA
-Fernsehsender O - NN
-, O - $,
-von O - APPR
-der O - ART
-RTLZWEI O - NE
-Fernsehen O - NN
-Gmb O - NE
-H O - NN
-& O - KON
-Co O - NN
-. O - $.
-KG O - NN
-betrieben O - VVPP
-
-RTL O Q594177 NE
-Zwei O Q594177 CARD
 Privater O - ADJA
 deutscher O - ADJA
 Fernsehsender O - NN
@@ -5943,55 +1959,10 @@ Zeitung O Q561840 NN
 deutsche O - ADJA
 Tageszeitung O - NN
 
-Westdeutsche O Q561840 ADJA
-Allgemeine O Q561840 ADJA
-deutsche O - ADJA
-Tageszeitung O - NN
-
-WAZ O Q561840 NE
-deutsche O - ADJA
-Tageszeitung O - NN
-
 Zoran O Q220490 NE
 Barišić O Q220490 NE
 österreichischer O - ADJA
 Fußballspieler O - NN
-
-Jerry O Q217037 NE
-Bruckheimer O Q217037 NE
-US O - NE
--amerikanischer O - ADJA
-Film O - NN
-- O - $(
-und O - KON
-Fernsehproduzent O - NN
-
-Bruckheimer O Q217037 NE
-US O - NE
--amerikanischer O - ADJA
-Film O - NN
-- O - $(
-und O - KON
-Fernsehproduzent O - NN
-
-Jerome O Q217037 NE
-Leon O Q217037 NE
-Bruckheimer O Q217037 NE
-US O - NE
--amerikanischer O - ADJA
-Film O - NN
-- O - $(
-und O - KON
-Fernsehproduzent O - NN
-
-Jerome O Q217037 NE
-Bruckheimer O Q217037 NE
-US O - NE
--amerikanischer O - ADJA
-Film O - NN
-- O - $(
-und O - KON
-Fernsehproduzent O - NN
 
 Jerry O Q217037 NE
 Bruckheimer O Q217037 NE
@@ -6002,32 +1973,6 @@ Film O - NN
 - O - $(
 und O - KON
 Fernsehproduzent O - NN
-
-Deutsche O Q157645 ADJA
-Post O Q157645 NN
-AG O Q157645 NN
-deutsches O - ADJA
-Logistikunternehmen O - NN
-
-Gelbe O Q157645 ADJA
-Post O Q157645 NN
-deutsches O - ADJA
-Logistikunternehmen O - NN
-
-Deutsche O Q157645 ADJA
-Post O Q157645 NN
-deutsches O - ADJA
-Logistikunternehmen O - NN
-
-Post O Q157645 NN
-deutsches O - ADJA
-Logistikunternehmen O - NN
-
-Deutsche O Q157645 ADJA
-Post O Q157645 NN
-DHL O Q157645 NE
-deutsches O - ADJA
-Logistikunternehmen O - NN
 
 Deutsche O Q157645 ADJA
 Post O Q157645 NN
@@ -6049,49 +1994,8 @@ Landesrat O - NN
 
 Eintracht O Q38245 NN
 Frankfurt O Q38245 NE
-Sportverein O - NN
-aus O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-, O - $,
-Hessen O - NE
-
-SG O Q38245 NE
-Eintracht O Q38245 NN
-Frankfurt O Q38245 NE
-Sportverein O - NN
-aus O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-, O - $,
-Hessen O - NE
-
-Eintracht O Q38245 NN
-Frankfurt O Q38245 NE
 Fußball O Q38245 NN
 AG O Q38245 NN
-Sportverein O - NN
-aus O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-, O - $,
-Hessen O - NE
-
-Frankfurter O Q38245 ADJA
-SG O Q38245 NN
-Eintracht O Q38245 NN
-Sportverein O - NN
-aus O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-, O - $,
-Hessen O - NE
-
-SGE O Q38245 NE
 Sportverein O - NN
 aus O - APPR
 Frankfurt O - NE
@@ -6105,118 +2009,7 @@ Grube O Q110428 NE
 deutscher O - ADJA
 Manager O - NN
 
-Hochschule O Q1622234 NN
-für O Q1622234 APPR
-angewandte O Q1622234 ADJA
-Wissenschaften O Q1622234 NN
-Coburg O Q1622234 NE
-eine O - ART
-1971 O - CARD
-gegründete O - ADJA
-Fachhochschule O - NN
-im O - APPRART
-nordbayerischen O - ADJA
-Coburg O - NE
-mit O - APPR
-rund O - ADV
-5300 O - CARD
-Studierenden O - NN
-. O - $.
-
-FH O Q1622234 NE
-Coburg O Q1622234 NE
-eine O - ART
-1971 O - CARD
-gegründete O - ADJA
-Fachhochschule O - NN
-im O - APPRART
-nordbayerischen O - ADJA
-Coburg O - NE
-mit O - APPR
-rund O - ADV
-5300 O - CARD
-Studierenden O - NN
-. O - $.
-
 HAW O Q1622234 NE
-Coburg O Q1622234 NE
-eine O - ART
-1971 O - CARD
-gegründete O - ADJA
-Fachhochschule O - NN
-im O - APPRART
-nordbayerischen O - ADJA
-Coburg O - NE
-mit O - APPR
-rund O - ADV
-5300 O - CARD
-Studierenden O - NN
-. O - $.
-
-Haw O Q1622234 NE
-coburg O Q1622234 NE
-eine O - ART
-1971 O - CARD
-gegründete O - ADJA
-Fachhochschule O - NN
-im O - APPRART
-nordbayerischen O - ADJA
-Coburg O - NE
-mit O - APPR
-rund O - ADV
-5300 O - CARD
-Studierenden O - NN
-. O - $.
-
-Hochschule O Q1622234 NN
-für O Q1622234 APPR
-Angewandte O Q1622234 ADJA
-Wissenschaften O Q1622234 NN
-Coburg O Q1622234 NE
-eine O - ART
-1971 O - CARD
-gegründete O - ADJA
-Fachhochschule O - NN
-im O - APPRART
-nordbayerischen O - ADJA
-Coburg O - NE
-mit O - APPR
-rund O - ADV
-5300 O - CARD
-Studierenden O - NN
-. O - $.
-
-Fachhochschule O Q1622234 NN
-Coburg O Q1622234 NE
-eine O - ART
-1971 O - CARD
-gegründete O - ADJA
-Fachhochschule O - NN
-im O - APPRART
-nordbayerischen O - ADJA
-Coburg O - NE
-mit O - APPR
-rund O - ADV
-5300 O - CARD
-Studierenden O - NN
-. O - $.
-
-HS O Q1622234 NE
-Coburg O Q1622234 NE
-eine O - ART
-1971 O - CARD
-gegründete O - ADJA
-Fachhochschule O - NN
-im O - APPRART
-nordbayerischen O - ADJA
-Coburg O - NE
-mit O - APPR
-rund O - ADV
-5300 O - CARD
-Studierenden O - NN
-. O - $.
-
-Hochschule O Q1622234 NN
 Coburg O Q1622234 NE
 eine O - ART
 1971 O - CARD
@@ -6262,43 +2055,8 @@ Sitz O - NN
 in O - APPR
 Konstanz O - NE
 
-Suedkurier.de O Q885282 NN
-regionale O - ADJA
-deutsche O - ADJA
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Konstanz O - NE
-
 Die O Q689934 ART
 Presse O Q689934 NN
-österreichische O - ADJA
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Wien O - NE
-
-Presse O Q689934 NN
-österreichische O - ADJA
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Wien O - NE
-
-Neue O Q689934 ADJA
-Freie O Q689934 ADJA
-Presse O Q689934 NN
-österreichische O - ADJA
-Tageszeitung O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Wien O - NE
-
-diepresse.com O Q689934 NE
 österreichische O - ADJA
 Tageszeitung O - NN
 mit O - APPR
@@ -6316,24 +2074,6 @@ Diplomat O - NN
 und O - KON
 Politiker O - NN
 
-Universum O Q2496469 NN
-Film O Q2496469 NN
-deutsches O - ADJA
-Medienunternehmen O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-München O - NE
-
-Universum O Q2496469 NN
-Anime O Q2496469 NE
-deutsches O - ADJA
-Medienunternehmen O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-München O - NE
-
 Ufa O Q2496469 NE
 Anime O Q2496469 NE
 deutsches O - ADJA
@@ -6344,114 +2084,8 @@ in O - APPR
 München O - NE
 
 Sky O Q652282 NE
-Deutschland O Q652282 NE
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Sky O Q652282 NE
-Sport O Q652282 FM
-HD O Q652282 NE
-Extra O Q652282 NE
 deutscher O - ADJA
 Pay O - FM
--TV O - FM
-Anbieter O - NN
-
-Premiere O Q652282 NN
-Austria O Q652282 NE
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Premiere O Q652282 NN
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Premiere O Q652282 NN
-AG O Q652282 NN
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Premiere O Q652282 NN
-HD O Q652282 NE
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Premiere O Q652282 NN
-World O Q652282 FM
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Sky O Q652282 NE
-Sport O Q652282 FM
-HD O Q652282 NE
-2 O Q652282 CARD
-deutscher O - ADJA
-Pay O - FM
--TV O - FM
-Anbieter O - NN
-
-Sky O Q652282 NE
-Sport O Q652282 FM
-HD O Q652282 NE
-1 O Q652282 CARD
-deutscher O - ADJA
-Pay O - FM
--TV O - FM
-Anbieter O - NN
-
-Sky O Q652282 NE
-Sport O Q652282 NE
-2 O Q652282 CARD
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Sky O Q652282 NE
-deutscher O - ADJA
-Pay O - FM
--TV O - FM
-Anbieter O - NN
-
-Sky O Q652282 NE
-Sport O Q652282 NN
-1 O Q652282 CARD
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Premiere O Q652282 NN
-Medienkonzern O Q652282 NN
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Sky O Q652282 NE
-Deutschland O Q652282 NE
-AG O Q652282 NN
-deutscher O - ADJA
-Pay O - NE
--TV O - FM
-Anbieter O - NN
-
-Sky O Q652282 NE
-Österreich O Q652282 NE
-deutscher O - ADJA
-Pay O - NE
 -TV O - FM
 Anbieter O - NN
 
@@ -6462,35 +2096,11 @@ König O - NN
 von O - APPR
 Rom O - NE
 
-Tarquinius O Q193047 NE
-Superbus O Q193047 NE
-König O - NN
-von O - APPR
-Rom O - NE
-
-Manuel O Q107365 NE
-Neuer O Q107365 NE
-deutscher O - ADJA
-Fußballtorhüter O - NN
-
-Manuel O Q107365 NE
-Peter O Q107365 NE
-Neuer O Q107365 NE
-deutscher O - ADJA
-Fußballtorhüter O - NN
-
 Neuer O Q107365 ADJA
 , O Q107365 $,
 Manuel O Q107365 NE
 deutscher O - ADJA
 Fußballtorhüter O - NN
-
-Siemens O Q81230 NE
-Technologiekonzern O - NN
-
-Siemens O Q81230 NE
-AG O Q81230 NN
-Technologiekonzern O - NN
 
 Telegraphen O Q81230 NN
 -Bauanstalt O Q81230 TRUNC
@@ -6500,217 +2110,18 @@ Siemens O Q81230 NE
 Halske O Q81230 NE
 Technologiekonzern O - NN
 
-Siemens O Q81230 NE
-Deutschland O Q81230 NE
-Technologiekonzern O - NN
-
-Fußball O Q82595 NN
--Bundesliga O Q82595 TRUNC
-höchste O - ADJA
-Spielklasse O - NN
-im O - APPRART
-deutschen O - ADJA
-Männerfußball O - NN
-
-1 O Q82595 CARD
-. O Q82595 $.
-Fußball O Q82595 NN
--Bundesliga O Q82595 TRUNC
-höchste O - ADJA
-Spielklasse O - NN
-im O - APPRART
-deutschen O - ADJA
-Männerfußball O - NN
-
-Fussball O Q82595 NN
--Bundesliga O Q82595 TRUNC
-höchste O - ADJA
-Spielklasse O - NN
-im O - APPRART
-deutschen O - ADJA
-Männerfußball O - NN
-
 Bundesliga O Q82595 NN
 höchste O - ADJA
 Spielklasse O - NN
 im O - APPRART
 deutschen O - ADJA
 Männerfußball O - NN
-
-Erste O Q82595 ADJA
-Bundesliga O Q82595 NN
-höchste O - ADJA
-Spielklasse O - NN
-im O - APPRART
-deutschen O - ADJA
-Männerfußball O - NN
-
-1 O Q82595 CARD
-. O Q82595 $.
-Bundesliga O Q82595 NN
-höchste O - ADJA
-Spielklasse O - NN
-im O - APPRART
-deutschen O - ADJA
-Männerfußball O - NN
-
-Flughafen O Q313587 NN
-Dortmund O Q313587 NE
-Verkehrsflughafen O - NN
-in O - APPR
-Dortmund O - NE
-
-Dortmund O Q313587 NE
-Airport O Q313587 NE
-Verkehrsflughafen O - NN
-in O - APPR
-Dortmund O - NE
 
 EDLW O Q313587 NE
 Verkehrsflughafen O - NN
 in O - APPR
 Dortmund O - NE
 
-Dortmund O Q313587 NE
-Airport O Q313587 NN
-21 O Q313587 CARD
-Verkehrsflughafen O - NN
-in O - APPR
-Dortmund O - NE
-
-DTM O Q313587 NE
-Verkehrsflughafen O - NN
-in O - APPR
-Dortmund O - NE
-
-Barack O Q76 NE
-Obama O Q76 NE
-44 O - CARD
-. O - $.
-
-Barack O Q76 NE
-Obama O Q76 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Barack O Q76 NE
-Hussein O Q76 NE
-Obama O Q76 NE
-, O Q76 $,
-Jr O Q76 NE
-. O Q76 $.
-44 O - CARD
-. O - $.
-
-Barack O Q76 NE
-Hussein O Q76 NE
-Obama O Q76 NE
-, O Q76 $,
-Jr O Q76 NE
-. O Q76 $.
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Obama O Q76 NE
-44 O - CARD
-. O - $.
-
-Obama O Q76 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Barack O Q76 NE
-Hussein O Q76 NE
-Obama O Q76 NE
-44 O - CARD
-. O - $.
-
-Barack O Q76 NE
-Hussein O Q76 NE
-Obama O Q76 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Barack O Q76 NE
-H O Q76 NE
-. O Q76 $.
-Obama O Q76 NE
-44 O - CARD
-. O - $.
-
-Barack O Q76 NE
-H O Q76 NE
-. O Q76 $.
-Obama O Q76 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Barack O Q76 NE
-Hussein O Q76 NE
-Obama O Q76 NE
-II O Q76 CARD
-44 O - CARD
-. O - $.
-
-Barack O Q76 NE
-Hussein O Q76 NE
-Obama O Q76 NE
-II O Q76 CARD
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Präsident O Q76 NN
-Obama O Q76 NE
-44 O - CARD
-. O - $.
-
-Präsident O Q76 NN
-Obama O Q76 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Präsident O Q76 NN
-Barack O Q76 NE
-Obama O Q76 NE
-44 O - CARD
-. O - $.
-
-Präsident O Q76 NN
-Barack O Q76 NE
-Obama O Q76 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-US O Q76 FM
--Präsident O Q76 FM
-Obama O Q76 NE
-44 O - CARD
-. O - $.
-
-US O Q76 FM
--Präsident O Q76 FM
-Obama O Q76 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
 US O Q76 FM
 -Präsident O Q76 TRUNC
 Barack O Q76 NE
@@ -6718,48 +2129,7 @@ Obama O Q76 NE
 44 O - CARD
 . O - $.
 
-US O Q76 NE
--Präsident O Q76 TRUNC
-Barack O Q76 NE
-Obama O Q76 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Barack O Q76 NE
-Hussein O Q76 NE
-Obama O Q76 NE
-II O Q76 CARD
-44 O - CARD
-. O - $.
-
-Barack O Q76 NE
-Hussein O Q76 NE
-Obama O Q76 NE
-II O Q76 CARD
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
 Ubisoft O Q188273 NE
-französischer O - ADJA
-Publisher O - NN
-für O - APPR
-Computerspiele O - NN
-
-Ubi O Q188273 NE
-Soft O Q188273 NE
-französischer O - ADJA
-Publisher O - NN
-für O - APPR
-Computerspiele O - NN
-
-Ubisoft O Q188273 NE
-Entertainment O Q188273 FM
-S.A O Q188273 NE
-. O Q188273 $.
 französischer O - ADJA
 Publisher O - NN
 für O - APPR
@@ -6774,107 +2144,11 @@ Energie O - NN
 und O - KON
 Transportbereich O - NN
 
-ABB O Q309084 NE
-Kraftwerke O Q309084 NN
-Französischer O - ADJA
-Konzern O - NN
-im O - APPRART
-Energie O - NN
-- O - TRUNC
-und O - KON
-Transportbereich O - NN
-
-Alstom O Q309084 NE
-AG O Q309084 NN
-Französischer O - ADJA
-Konzern O - NN
-im O - APPRART
-Energie O - NN
-- O - TRUNC
-und O - KON
-Transportbereich O - NN
-
-Alsthom O Q309084 NE
-Französischer O - ADJA
-Konzern O - NN
-im O - APPRART
-Energie O - NN
-- O - TRUNC
-und O - KON
-Transportbereich O - NN
-
-Bundesamt O Q1005487 NN
-für O Q1005487 APPR
-Seeschifffahrt O Q1005487 NN
-und O Q1005487 KON
-Hydrographie O Q1005487 NN
-deutsche O - ADJA
-Bundesoberbehörde O - NN
-mit O - APPR
-Dienstsitzen O - NN
-in O - APPR
-Hamburg O - NE
-und O - KON
-Rostock O - NE
-
-Bundesamt O Q1005487 NN
-für O Q1005487 APPR
-Seeschifffahrt O Q1005487 NN
-und O Q1005487 KON
-Hydrografie O Q1005487 NN
-deutsche O - ADJA
-Bundesoberbehörde O - NN
-mit O - APPR
-Dienstsitzen O - NN
-in O - APPR
-Hamburg O - NE
-und O - KON
-Rostock O - NE
-
-Deutsches O Q1005487 ADJA
-Hydrographisches O Q1005487 ADJA
-Institut O Q1005487 NN
-deutsche O - ADJA
-Bundesoberbehörde O - NN
-mit O - APPR
-Dienstsitzen O - NN
-in O - APPR
-Hamburg O - NE
-und O - KON
-Rostock O - NE
-
-Deutsches O Q1005487 ADJA
-Hydrographisches O Q1005487 ADJA
-Institut O Q1005487 NN
-Hamburg O Q1005487 NE
-deutsche O - ADJA
-Bundesoberbehörde O - NN
-mit O - APPR
-Dienstsitzen O - NN
-in O - APPR
-Hamburg O - NE
-und O - KON
-Rostock O - NE
-
 Bundesamt O Q1005487 NN
 für O Q1005487 APPR
 Seeschiffahrt O Q1005487 NN
 und O Q1005487 KON
 Hydrographie O Q1005487 NN
-deutsche O - ADJA
-Bundesoberbehörde O - NN
-mit O - APPR
-Dienstsitzen O - NN
-in O - APPR
-Hamburg O - NE
-und O - KON
-Rostock O - NE
-
-Bundesamt O Q1005487 NN
-für O Q1005487 APPR
-Seeschiffahrt O Q1005487 NN
-und O Q1005487 KON
-Hydrografie O Q1005487 NN
 deutsche O - ADJA
 Bundesoberbehörde O - NN
 mit O - APPR
@@ -6889,53 +2163,7 @@ türkische O - ADJA
 Tageszeitung O - NN
 
 Fraport O Q643578 NE
-Betreibergesellschaft O - NN
-des O - ART
-Flughafens O - NN
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-und O - KON
-Beteiligung O - NN
-an O - APPR
-anderen O - ADJA
-Flughäfen O - NN
-
-Flughafen O Q643578 NN
-Frankfurt/Main O Q643578 NE
 AG O Q643578 NN
-Betreibergesellschaft O - NN
-des O - ART
-Flughafens O - NN
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-und O - KON
-Beteiligung O - NN
-an O - APPR
-anderen O - ADJA
-Flughäfen O - NN
-
-Fraport O Q643578 NE
-AG O Q643578 NN
-Betreibergesellschaft O - NN
-des O - ART
-Flughafens O - NN
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-und O - KON
-Beteiligung O - NN
-an O - APPR
-anderen O - ADJA
-Flughäfen O - NN
-
-Fraport O Q643578 NE
-AG O Q643578 NN
-Frankfurt O Q643578 NE
-Airport O Q643578 FM
-Services O Q643578 FM
-Worldwide O Q643578 FM
 Betreibergesellschaft O - NN
 des O - ART
 Flughafens O - NN
@@ -6953,44 +2181,7 @@ Electronics O Q162345 FM
 südkoreanisches O - ADJA
 Unternehmen O - NN
 
-LGe O Q162345 NE
-südkoreanisches O - ADJA
-Unternehmen O - NN
-
-Facebook O Q355 NE
-soziales O - ADJA
-Netzwerk O - NN
-des O - ART
-US O - FM
--amerikanischen O - ADJA
-Unternehmens O - NN
-Facebook O - NE
-Inc O - FM
-. O - $.
-
 facebook.com O Q355 NE
-soziales O - ADJA
-Netzwerk O - NN
-des O - ART
-US O - FM
--amerikanischen O - ADJA
-Unternehmens O - NN
-Facebook O - NE
-Inc O - FM
-. O - $.
-
-FB O Q355 NE
-soziales O - ADJA
-Netzwerk O - NN
-des O - ART
-US O - FM
--amerikanischen O - ADJA
-Unternehmens O - NN
-Facebook O - NE
-Inc O - FM
-. O - $.
-
-FACEBOOK O Q355 NE
 soziales O - ADJA
 Netzwerk O - NN
 des O - ART
@@ -7019,26 +2210,6 @@ Ad O - FM
 -hoc O - FM
 -Dienstleister O - TRUNC
 
-Passauer O Q896978 ADJA
-Neue O Q896978 ADJA
-Presse O Q896978 NN
-Regionalzeitung O - NN
-der O - ART
-Verlagsgruppe O - NN
-Passau O - NE
-Gmb O - NE
-H O - NN
-
-Landauer O Q896978 ADJA
-Neue O Q896978 ADJA
-Presse O Q896978 NN
-Regionalzeitung O - NN
-der O - ART
-Verlagsgruppe O - NN
-Passau O - NE
-Gmb O - NE
-H O - NN
-
 Bayerwald O Q896978 NE
 -Bote O Q896978 ADJA
 Regionalzeitung O - NN
@@ -7048,109 +2219,6 @@ Passau O - NE
 Gmb O - NE
 H O - NN
 
-Alt O Q896978 NE
--Neuöttinger O Q896978 ADJA
-Anzeiger O Q896978 NN
-Regionalzeitung O - NN
-der O - ART
-Verlagsgruppe O - NN
-Passau O - NE
-Gmb O - NE
-H O - NN
-
-Burghauser O Q896978 ADJA
-Anzeiger O Q896978 NN
-Regionalzeitung O - NN
-der O - ART
-Verlagsgruppe O - NN
-Passau O - NE
-Gmb O - NE
-H O - NN
-
-Deggendorfer O Q896978 ADJA
-Zeitung O Q896978 NN
-Regionalzeitung O - NN
-der O - ART
-Verlagsgruppe O - NN
-Passau O - NE
-Gmb O - NE
-H O - NN
-
-Rottaler O Q896978 ADJA
-Anzeiger O Q896978 NN
-Regionalzeitung O - NN
-der O - ART
-Verlagsgruppe O - NN
-Passau O - NE
-Gmb O - NE
-H O - NN
-
-Vilshofener O Q896978 ADJA
-Anzeiger O Q896978 NN
-Regionalzeitung O - NN
-der O - ART
-Verlagsgruppe O - NN
-Passau O - NE
-Gmb O - NE
-H O - NN
-
-Direc O Q1056839 NE
-TV O Q1056839 FM
-ein O - ART
-amerikanischer O - ADJA
-Fernsehsatellitenbetreiber O - NN
-und O - KON
-Programmanbieter O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-El O - NE
-Segundo O - NE
-. O - $.
-
-Direc O Q1056839 NE
-TV O Q1056839 FM
-Es O - PPER
-ist O - VAFIN
-der O - ART
-größte O - ADJA
-Pay O - FM
--TV O - TRUNC
--Anbieter O - TRUNC
-der O - ART
-Welt O - NN
-. O - $.
-
-Direc O Q1056839 NE
-TV O Q1056839 FM
-Direc O - NE
-TV O - FM
-ist O - VAFIN
-im O - APPRART
-Besitz O - NN
-der O - ART
-Direc O - NE
-TV O - FM
-Group O - FM
-, O - $,
-die O - PRELS
-wiederum O - ADV
-von O - APPR
-AT&T O - NE
-gehalten O - VVPP
-wird O - VAFIN
-und O - KON
-steht O - VVFIN
-in O - APPR
-Konkurrenz O - NN
-zum O - APPRART
-DISH O - NE
-Network O - FM
-und O - KON
-lokalen O - ADJA
-Kabelnetzbetreibern O - NN
-. O - $.
-
 The O Q1056839 FM
 DIRECTV O Q1056839 NE
 Group O Q1056839 FM
@@ -7165,193 +2233,17 @@ in O - APPR
 El O - NE
 Segundo O - NE
 . O - $.
-
-The O Q1056839 FM
-DIRECTV O Q1056839 NE
-Group O Q1056839 FM
-Es O - PPER
-ist O - VAFIN
-der O - ART
-größte O - ADJA
-Pay O - FM
--TV O - TRUNC
--Anbieter O - TRUNC
-der O - ART
-Welt O - NN
-. O - $.
-
-The O Q1056839 FM
-DIRECTV O Q1056839 NE
-Group O Q1056839 FM
-Direc O - NE
-TV O - FM
-ist O - VAFIN
-im O - APPRART
-Besitz O - NN
-der O - ART
-Direc O - NE
-TV O - FM
-Group O - FM
-, O - $,
-die O - PRELS
-wiederum O - ADV
-von O - APPR
-AT&T O - NE
-gehalten O - VVPP
-wird O - VAFIN
-und O - KON
-steht O - VVFIN
-in O - APPR
-Konkurrenz O - NN
-zum O - APPRART
-DISH O - NE
-Network O - FM
-und O - KON
-lokalen O - ADJA
-Kabelnetzbetreibern O - NN
-. O - $.
-
-The O Q1056839 FM
-DIRECTV O Q1056839 NE
-Group O Q1056839 FM
-, O Q1056839 $,
-Inc O Q1056839 NE
-. O Q1056839 $.
-ein O - ART
-amerikanischer O - ADJA
-Fernsehsatellitenbetreiber O - NN
-und O - KON
-Programmanbieter O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-El O - NE
-Segundo O - NE
-. O - $.
-
-The O Q1056839 FM
-DIRECTV O Q1056839 NE
-Group O Q1056839 FM
-, O Q1056839 $,
-Inc O Q1056839 NE
-. O Q1056839 $.
-Es O - PPER
-ist O - VAFIN
-der O - ART
-größte O - ADJA
-Pay O - FM
--TV O - TRUNC
--Anbieter O - TRUNC
-der O - ART
-Welt O - NN
-. O - $.
-
-The O Q1056839 FM
-DIRECTV O Q1056839 NE
-Group O Q1056839 FM
-, O Q1056839 $,
-Inc O Q1056839 FM
-. O Q1056839 $.
-Direc O - NE
-TV O - FM
-ist O - VAFIN
-im O - APPRART
-Besitz O - NN
-der O - ART
-Direc O - NE
-TV O - FM
-Group O - FM
-, O - $,
-die O - PRELS
-wiederum O - ADV
-von O - APPR
-AT&T O - NE
-gehalten O - VVPP
-wird O - VAFIN
-und O - KON
-steht O - VVFIN
-in O - APPR
-Konkurrenz O - NN
-zum O - APPRART
-DISH O - NE
-Network O - FM
-und O - KON
-lokalen O - ADJA
-Kabelnetzbetreibern O - NN
-. O - $.
-
-Studio O Q2450848 NN
-Canal O Q2450848 NE
-Filmproduktionsgesellschaft O - NN
-
-Le O Q2450848 FM
-Studio O Q2450848 FM
-Canal O Q2450848 FM
-+ O Q2450848 KON
-Filmproduktionsgesellschaft O - NN
-
-Canal O Q2450848 NE
-Plus O Q2450848 NE
-Filmproduktionsgesellschaft O - NN
 
 Canal O Q2450848 NE
 + O Q2450848 KON
 Distribution O Q2450848 FM
 Filmproduktionsgesellschaft O - NN
 
-Canal O Q2450848 NE
-+ O Q2450848 KON
-Production O Q2450848 FM
-Filmproduktionsgesellschaft O - NN
-
-Canal O Q2450848 NE
-+ O Q2450848 KON
-Image O Q2450848 FM
-Filmproduktionsgesellschaft O - NN
-
-Studio O Q2450848 FM
-Canal O Q2450848 FM
-S.A O Q2450848 NE
-. O Q2450848 $.
-Filmproduktionsgesellschaft O - NN
-
-Studio O Q2450848 FM
-Canal O Q2450848 FM
-Images O Q2450848 FM
-S.A O Q2450848 NE
-. O Q2450848 $.
-Filmproduktionsgesellschaft O - NN
-
-Katastrophenschutzministerium O Q1735655 NN
-Wikimedia O - NE
--Begriffsklärungsseite O - TRUNC
-
-Zivilschutzministerium O Q1735655 NN
-Wikimedia O - NE
--Begriffsklärungsseite O - TRUNC
-
-Katastrophenschutzminister O Q1735655 NN
-Wikimedia O - NE
--Begriffsklärungsseite O - TRUNC
-
 Zivilschutzminister O Q1735655 NN
 Wikimedia O - NE
 -Begriffsklärungsseite O - TRUNC
 
-Luftwaffe O Q56013 NN
-Militärische O - ADJA
-Teilstreitkraft O - NN
-der O - ART
-Bundeswehr O - NN
-
 Deutsche O Q56013 ADJA
-Luftwaffe O Q56013 NN
-Militärische O - ADJA
-Teilstreitkraft O - NN
-der O - ART
-Bundeswehr O - NN
-
-Deutsch O Q56013 NN
 Luftwaffe O Q56013 NN
 Militärische O - ADJA
 Teilstreitkraft O - NN
@@ -7367,44 +2259,6 @@ Moderator O - NN
 und O - KON
 Autor O - NN
 
-arte O Q8073 ADJA
-deutsch O - NN
--französischer O - ADJA
-Fernsehkanal O - NN
-für O - APPR
-Kultur O - NN
-
-Arte.tv O Q8073 NN
-deutsch O - ADJD
--französischer O - ADJA
-Fernsehkanal O - NN
-für O - APPR
-Kultur O - NN
-
-Association O Q8073 FM
-Relative O Q8073 FM
-a O Q8073 FM
-la O Q8073 FM
-Television O Q8073 FM
-Europeenne O Q8073 NE
-deutsch O - ADJD
--französischer O - ADJA
-Fernsehkanal O - NN
-für O - APPR
-Kultur O - NN
-
-Association O Q8073 FM
-Relative O Q8073 FM
-à O Q8073 FM
-la O Q8073 FM
-Télévision O Q8073 FM
-Européenne O Q8073 FM
-deutsch O - NE
--französischer O - ADJA
-Fernsehkanal O - NN
-für O - APPR
-Kultur O - NN
-
 Arte O Q8073 NN
 HD O Q8073 NN
 deutsch O - ADJD
@@ -7413,23 +2267,9 @@ Fernsehkanal O - NN
 für O - APPR
 Kultur O - NN
 
-Südwestrundfunk O Q700133 NN
-deutsche O - ADJA
-Rundfunkanstalt O - NN
-
 SWR O Q700133 NE
 deutsche O - ADJA
 Rundfunkanstalt O - NN
-
-Kanye O Q15935 NE
-West O Q15935 NE
-US O - NE
--amerikanischer O - ADJA
-Rapper O - NN
-, O - $,
-Sänger O - NN
-und O - KON
-Musikproduzent O - NN
 
 Kanye O Q15935 NE
 Omari O Q15935 NE
@@ -7446,21 +2286,6 @@ You O Q866 FM
 Tube O Q866 FM
 Internet O - FM
 -Videoportal O - TRUNC
-
-YT O Q866 NE
-Internet O - NN
--Videoportal O - TRUNC
-
-ARD O Q49653 NE
-Zusammenschluss O - NN
-von O - APPR
-deutschen O - ADJA
-öffentlich O - ADJD
--rechtlichen O - ADJA
-Regional O - NN
-- O - TRUNC
-und O - KON
-Bundesrundfunkanstalten O - NN
 
 Arbeitsgemeinschaft O Q49653 NN
 der O Q49653 ART
@@ -7482,53 +2307,7 @@ Bundesrundfunkanstalten O - NN
 
 Deutsche O Q9322 ADJA
 Bahn O Q9322 NN
-staatliches O - ADJA
-Verkehrsunternehmen O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-DB O Q9322 NE
-staatliches O - ADJA
-Verkehrsunternehmen O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-Deutsche O Q9322 ADJA
-Bahn O Q9322 NN
-AG O Q9322 NN
-staatliches O - ADJA
-Verkehrsunternehmen O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-Deutsche O Q9322 ADJA
-Bahn O Q9322 NN
 Aktiengesellschaft O Q9322 NN
-staatliches O - ADJA
-Verkehrsunternehmen O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-DBAG O Q9322 NE
-staatliches O - ADJA
-Verkehrsunternehmen O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-DB O Q9322 NE
-AG O Q9322 NN
-staatliches O - ADJA
-Verkehrsunternehmen O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-Bahn O Q9322 NN
 staatliches O - ADJA
 Verkehrsunternehmen O - NN
 der O - ART
@@ -7540,19 +2319,6 @@ Börsen O Q855176 NN
 Regelmäßig O - ADJD
 erscheinende O - ADJA
 Zeitung O - NN
-
-Börsenzeitung O Q855176 NN
-Regelmäßig O - ADJD
-erscheinende O - ADJA
-Zeitung O - NN
-
-trivago O Q265286 NE
-eine O - ART
-Hotel O - NN
--Metasuche O - TRUNC
-im O - APPRART
-Internet O - NN
-. O - $.
 
 trivago O Q265286 NE
 Dort O - ADV
@@ -7572,40 +2338,6 @@ verglichen O - VVPP
 werden O - VAINF
 . O - $.
 
-trivago O Q265286 NE
-Die O - ART
-Website O - NN
-durchsucht O - VVFIN
-nach O - APPR
-eigenen O - ADJA
-Angaben O - NN
-Preise O - NN
-von O - APPR
-mehr O - ADV
-als O - KOKOM
-einer O - ART
-Million O - NN
-Hotels O - NN
-weltweit O - ADJD
-aus O - APPR
-über O - ADV
-250 O - CARD
-Buchungsseiten O - NN
-. O - $.
-
-Vin O Q178166 NE
-Diesel O Q178166 NE
-US O - FM
--amerikanischer O - ADJA
-Schauspieler O - NN
-, O - $,
-Drehbuchautor O - NN
-, O - $,
-Filmregisseur O - NN
-und O - KON
-- O - TRUNC
-produzent O - ADJD
-
 Mark O Q178166 NN
 Sinclair O Q178166 NE
 US O - FM
@@ -7618,24 +2350,6 @@ Filmregisseur O - NN
 und O - KON
 - O - TRUNC
 produzent O - ADJD
-
-Mark O Q178166 NN
-Sinclair O Q178166 NE
-Vincent O Q178166 NE
-US O - NE
--amerikanischer O - ADJA
-Schauspieler O - NN
-, O - $,
-Drehbuchautor O - NN
-, O - $,
-Filmregisseur O - NN
-und O - KON
-- O - TRUNC
-produzent O - ADJD
-
-Cubana O Q849910 NE
-Kubanische O - ADJA
-Fluggesellschaft O - NN
 
 Cubana O Q849910 NE
 de O Q849910 FM
@@ -7651,21 +2365,6 @@ Stahl O - NN
 - O - $(
 und O - KON
 Technologieunternehmen O - NN
-
-Thyssen O Q137910 NE
-Krupp O Q137910 NE
-AG O Q137910 NN
-größtes O - ADJA
-deutsches O - ADJA
-Stahl O - NN
-- O - $(
-und O - KON
-Technologieunternehmen O - NN
-
-Nicolás O Q58132 NE
-Maduro O Q58132 NE
-venezolanischer O - ADJA
-Präsident O - NN
 
 Nicolas O Q58132 NE
 Maduro O Q58132 NE
@@ -7687,30 +2386,8 @@ Journalist O - NN
 und O - KON
 Chefredakteur O - NN
 
-MSV O Q154293 NE
-Duisburg O Q154293 NE
-deutscher O - ADJA
-Fußballverein O - NN
-
 Meidericher O Q154293 ADJA
 Spielverein O Q154293 NN
-deutscher O - ADJA
-Fußballverein O - NN
-
-Meidericher O Q154293 ADJA
-Spielverein O Q154293 NN
-02 O Q154293 CARD
-deutscher O - ADJA
-Fußballverein O - NN
-
-Meidericher O Q154293 ADJA
-SV O Q154293 NE
-Duisburg O Q154293 NE
-deutscher O - ADJA
-Fußballverein O - NN
-
-Meidericher O Q154293 NE
-SV O Q154293 NE
 deutscher O - ADJA
 Fußballverein O - NN
 
@@ -7725,52 +2402,9 @@ französischer O - ADJA
 Radiosender O - NN
 
 TV O Q2386017 NN
-Spielfilm O Q2386017 NN
-deutsche O - ADJA
-Programmzeitschrift O - NN
-
-Tvspielfilm.de O Q2386017 NN
-deutsche O - ADJA
-Programmzeitschrift O - NN
-
-TV O Q2386017 NN
 Spielfilm.de O Q2386017 NE
 deutsche O - ADJA
 Programmzeitschrift O - NN
-
-TV O Q2386017 NN
-SPIELFILM O Q2386017 NN
-deutsche O - ADJA
-Programmzeitschrift O - NN
-
-Valve O Q193559 NE
-Corporation O Q193559 FM
-US O - FM
--amerikanisches O - ADJA
-Entwicklungsstudio O - NN
-und O - KON
-Onlinedistributor O - NN
-für O - APPR
-Computerspiele O - NN
-
-Valve O Q193559 NE
-Software O Q193559 NN
-US O - FM
--amerikanisches O - ADJA
-Entwicklungsstudio O - NN
-und O - KON
-Onlinedistributor O - NN
-für O - APPR
-Computerspiele O - NN
-
-Valve O Q193559 NE
-US O - FM
--amerikanisches O - ADJA
-Entwicklungsstudio O - NN
-und O - KON
-Onlinedistributor O - NN
-für O - APPR
-Computerspiele O - NN
 
 VALVe O Q193559 NE
 US O - FM
@@ -7781,136 +2415,9 @@ Onlinedistributor O - NN
 für O - APPR
 Computerspiele O - NN
 
-Flughafen O Q160556 NN
-Berlin O Q160556 NE
-Brandenburg O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-BER O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q160556 NN
-BBI O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q160556 NN
-Berlin O Q160556 NE
--Brandenburg O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q160556 NN
-Berlin O Q160556 NE
-Brandenburg O Q160556 NE
-International O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Berlin O Q160556 NE
--Brandenburg O Q160556 NE
-International O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
 Willy O Q160556 NE
 -Brandt O Q160556 NE
 -Flughafen O Q160556 TRUNC
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Berlin O Q160556 NE
-Brandenburg O Q160556 NE
-International O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Großflughafen O Q160556 NN
-Berlin O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Berlin O Q160556 NE
-Brandenburg O Q160556 NE
-Airport O Q160556 NN
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q160556 NN
-Berlin O Q160556 NE
-Brandenburg O Q160556 NE
-„ O Q160556 $(
-Willy O Q160556 NE
-Brandt O Q160556 NE
-“ O Q160556 $(
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-EDDB O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q160556 NN
-Berlin O Q160556 NE
-im O - APPRART
-Bau O - NN
-befindlicher O - ADJA
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Berliner O Q160556 ADJA
-Flughafen O Q160556 NN
 im O - APPRART
 Bau O - NN
 befindlicher O - ADJA
@@ -7928,83 +2435,11 @@ Ridley O Q16738674 NE
 britische O - ADJA
 Schauspielerin O - NN
 
-Daisy O Q16738674 NE
-Jazz O Q16738674 NE
-Isobel O Q16738674 NE
-Ridley O Q16738674 NE
-britische O - ADJA
-Schauspielerin O - NN
-
-FC O Q2714 NE
-Watford O Q2714 NE
-englischer O - ADJA
-Fußballverein O - NN
-
-Watford O Q2714 NE
-FC O Q2714 NE
-englischer O - ADJA
-Fußballverein O - NN
-
 Watford O Q2714 NE
 Football O Q2714 FM
 Club O Q2714 NN
 englischer O - ADJA
 Fußballverein O - NN
-
-The O Q2714 FM
-Hornets O Q2714 NE
-englischer O - ADJA
-Fußballverein O - NN
-
-Sahra O Q77193 NE
-Wagenknecht O Q77193 NE
-Volkswirtin O - NN
-, O - $,
-deutsche O - ADJA
-Politikerin O - NN
-( O - $(
-Die O - ART
-Linke O - NN
-) O - $(
-, O - $,
-Md O - NE
-B O - NN
-, O - $,
-Autorin O - NN
-
-Sarah O Q77193 NE
-Wagenknecht O Q77193 NE
--Niemeyer O Q77193 NE
-Volkswirtin O - NN
-, O - $,
-deutsche O - ADJA
-Politikerin O - NN
-( O - $(
-Die O - ART
-Linke O - NN
-) O - $(
-, O - $,
-Md O - NE
-B O - NN
-, O - $,
-Autorin O - NN
-
-Sahra O Q77193 NE
-Wagenknecht O Q77193 NE
--Niemeyer O Q77193 NE
-Volkswirtin O - NN
-, O - $,
-deutsche O - ADJA
-Politikerin O - NN
-( O - $(
-Die O - ART
-Linke O - NN
-) O - $(
-, O - $,
-Md O - NE
-B O - NN
-, O - $,
-Autorin O - NN
 
 Sarah O Q77193 NE
 Wagenknecht O Q77193 NE
@@ -8049,25 +2484,8 @@ Dawn O - NE
 . O - $.
 
 George O Q23844 NE
-Clooney O Q23844 NE
-US O - NE
--amerikanischer O - ADJA
-Schauspieler O - NN
-und O - KON
-Regisseur O - NN
-
-George O Q23844 NE
 Timothy O Q23844 NE
 Clooney O Q23844 NE
-US O - NE
--amerikanischer O - ADJA
-Schauspieler O - NN
-und O - KON
-Regisseur O - NN
-
-Clooney O Q23844 NE
-, O Q23844 $,
-George O Q23844 NE
 US O - NE
 -amerikanischer O - ADJA
 Schauspieler O - NN
@@ -8078,38 +2496,6 @@ Felix O Q20995048 NE
 Passlack O Q20995048 NE
 deutscher O - ADJA
 Fußballspieler O - NN
-
-Solar O Q7555824 FM
-City O Q7555824 FM
-eine O - ART
-US O - FM
--amerikanische O - ADJA
-Aktiengesellschaft O - NN
-mit O - APPR
-Hauptsitz O - NN
-in O - APPR
-San O - NE
-Mateo O - NE
-, O - $,
-Kalifornien O - NE
-, O - $,
-die O - PRELS
-Solarstromanlagen O - NN
-konzipiert O - VVFIN
-, O - $,
-vertreibt O - VVFIN
-, O - $,
-installiert O - VVPP
-und O - KON
-auf O - APPR
-Wunsch O - NN
-auch O - ADV
-finanziert O - VVPP
-, O - $,
-vermietet O - VVPP
-und O - KON
-betreibt O - VVFIN
-. O - $.
 
 Solar O Q7555824 FM
 City O Q7555824 FM
@@ -8138,89 +2524,12 @@ Partei O - NN
 in O - APPR
 Bayern O - NE
 
-CSU O Q49763 NE
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Bayern O - NE
-
-Christlich O Q49763 ADJD
--Soziale O Q49763 ADJA
-Union O Q49763 NN
-in O Q49763 APPR
-Bayern O Q49763 NE
-e O Q49763 FM
-. O Q49763 $.
-V O Q49763 NN
-. O Q49763 $.
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Bayern O - NE
-
-Christlich O Q49763 ADJD
--Soziale O Q49763 ADJA
-Union O Q49763 NN
-in O Q49763 APPR
-Bayern O Q49763 NE
-e O Q49763 FM
-. O Q49763 $.
-V O Q49763 NN
-. O Q49763 $.
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Bayern O - NE
-
-Deutsche O Q312653 ADJA
-Presse O Q312653 NN
--Agentur O Q312653 TRUNC
-größte O - ADJA
-Nachrichtenagentur O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-Deutsche O Q312653 ADJA
-Presseagentur O Q312653 NN
-größte O - ADJA
-Nachrichtenagentur O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
 dpa O Q312653 NE
 größte O - ADJA
 Nachrichtenagentur O - NN
 der O - ART
 Bundesrepublik O - NN
 Deutschland O - NE
-
-dpa O Q312653 NE
-Deutsche O Q312653 ADJA
-Presse O Q312653 NN
--Agentur O Q312653 TRUNC
-Gmb O Q312653 NE
-H O Q312653 NN
-größte O - ADJA
-Nachrichtenagentur O - NN
-der O - ART
-Bundesrepublik O - NN
-Deutschland O - NE
-
-Bundesanstalt O Q314211 NN
-für O Q314211 APPR
-Finanzdienstleistungsaufsicht O Q314211 NN
-deutsche O - ADJA
-Bundesanstalt O - NN
-mit O - APPR
-Sitz O - NN
-in O - APPR
-Frankfurt O - NE
-am O - APPRART
-Main O - NE
-und O - KON
-Bonn O - NE
 
 Ba O Q314211 NE
 Fin O Q314211 NE
@@ -8241,289 +2550,11 @@ deutscher O - ADJA
 Handball O - NN
 -Schiedsrichter O - TRUNC
 
-Donald O Q22686 NE
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Donald O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Donald O Q22686 NE
-John O Q22686 NE
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Donald O Q22686 NE
-John O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Donald O Q22686 NE
-J O Q22686 NE
-. O Q22686 $.
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Donald O Q22686 NE
-J O Q22686 NE
-. O Q22686 $.
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Donald O Q22686 NE
-J O Q22686 NE
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Donald O Q22686 NE
-J O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Präsident O Q22686 NN
-Donald O Q22686 NE
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Präsident O Q22686 NN
-Donald O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Präsident O Q22686 NN
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Präsident O Q22686 NN
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Präsident O Q22686 NN
-Donald O Q22686 NE
-J O Q22686 NE
-. O Q22686 $.
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Präsident O Q22686 NN
-Donald O Q22686 NE
-J O Q22686 NE
-. O Q22686 $.
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-Präsident O Q22686 NN
-Donald O Q22686 NE
-John O Q22686 NE
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-Präsident O Q22686 NN
-Donald O Q22686 NE
-John O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-US O Q22686 NE
--Präsident O Q22686 TRUNC
-Donald O Q22686 NE
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-US O Q22686 FM
--Präsident O Q22686 TRUNC
-Donald O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-US O Q22686 FM
--Präsident O Q22686 TRUNC
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-US O Q22686 FM
--Präsident O Q22686 FM
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-US O Q22686 NE
--Präsident O Q22686 TRUNC
-Donald O Q22686 NE
-J O Q22686 NE
-. O Q22686 $.
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-US O Q22686 FM
--Präsident O Q22686 TRUNC
-Donald O Q22686 NE
-J O Q22686 NE
-. O Q22686 $.
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
 US O Q22686 FM
 -Präsident O Q22686 TRUNC
 Donald O Q22686 NE
 John O Q22686 NE
 Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-US O Q22686 FM
--Präsident O Q22686 TRUNC
-Donald O Q22686 NE
-John O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-The O Q22686 FM
-Donald O Q22686 NE
-45 O - CARD
-. O - $.
-
-The O Q22686 FM
-Donald O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-POTUS O Q22686 NE
-45 O Q22686 CARD
-45 O - CARD
-. O - $.
-
-POTUS O Q22686 NE
-45 O Q22686 CARD
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-President O Q22686 NN
-Donald O Q22686 NE
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-President O Q22686 NN
-Donald O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-President O Q22686 FM
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-President O Q22686 FM
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-President O Q22686 NN
-Donald O Q22686 NE
-J O Q22686 NE
-. O Q22686 $.
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-President O Q22686 NN
-Donald O Q22686 NE
-J O Q22686 NE
-. O Q22686 $.
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-President O Q22686 NN
-Donald O Q22686 NE
-John O Q22686 NE
-Trump O Q22686 NE
-45 O - CARD
-. O - $.
-
-President O Q22686 NN
-Donald O Q22686 NE
-John O Q22686 NE
-Trump O Q22686 NE
-Präsident O - NN
-der O - ART
-Vereinigten O - ADJA
-Staaten O - NN
-
-DJT O Q22686 NE
-45 O - CARD
-. O - $.
-
-DJT O Q22686 NE
 Präsident O - NN
 der O - ART
 Vereinigten O - ADJA
@@ -8534,53 +2565,7 @@ Uetersen O Q479753 NE
 deutscher O - ADJA
 Sportverein O - NN
 
-FC O Q15789 NE
 Bayern O Q15789 NE
-München O Q15789 NE
-Sportverein O - NN
-aus O - APPR
-München O - NE
-, O - $,
-Bayern O - NE
-
-FCB O Q15789 NE
-Sportverein O - NN
-aus O - APPR
-München O - NE
-, O - $,
-Bayern O - NE
-
-Bayern O Q15789 NE
-München O Q15789 NE
-Sportverein O - NN
-aus O - APPR
-München O - NE
-, O - $,
-Bayern O - NE
-
-FC O Q15789 NE
-Bayern O Q15789 NE
-Sportverein O - NN
-aus O - APPR
-München O - NE
-, O - $,
-Bayern O - NE
-
-Bayern O Q15789 NE
-Sportverein O - NN
-aus O - APPR
-München O - NE
-, O - $,
-Bayern O - NE
-
-Fußball O Q15789 NN
--Club O Q15789 TRUNC
-Bayern O Q15789 NE
-München O Q15789 NE
-e O Q15789 NN
-. O Q15789 $.
-V O Q15789 CARD
-. O Q15789 $.
 Sportverein O - NN
 aus O - APPR
 München O - NE
@@ -8620,136 +2605,17 @@ unabhängige O - ADJA
 Organisation O - NN
 . O - $.
 
-Ralph O Q64764848 NE
-Hirschberger O Q64764848 NE
-deutscher O - ADJA
-Fotograf O - NN
-
 Ralf O Q64764848 NE
 Hirschberger O Q64764848 NE
 deutscher O - ADJA
 Fotograf O - NN
 
-Vereinigte O Q2514979 ADJA
-Wirtschaftsdienste O Q2514979 NN
-ein O - ART
-europäischer O - ADJA
-Dienstleister O - NN
-für O - APPR
-Finanzinformationen O - NN
-. O - $.
-
-Vereinigte O Q2514979 ADJA
-Wirtschaftsdienste O Q2514979 NN
-Im O - APPRART
-Geschäftsjahr O - NN
-2016 O - CARD
-beschäftigte O - VVFIN
-vwd O - NE
-in O - APPR
-Belgien O - NE
-, O - $,
-Deutschland O - NE
-, O - $,
-Frankreich O - NE
-, O - $,
-Italien O - NE
-, O - $,
-den O - ART
-Niederlanden O - NE
-und O - KON
-der O - ART
-Schweiz O - NE
-450 O - CARD
-Mitarbeiter O - NN
-und O - KON
-erzielte O - VVFIN
-einen O - ART
-Umsatz O - NN
-von O - APPR
-80 O - CARD
-Millionen O - NN
-Euro O - NN
-. O - $.
-
-Vwd O Q2514979 NE
-ein O - ART
-europäischer O - ADJA
-Dienstleister O - NN
-für O - APPR
-Finanzinformationen O - NN
-. O - $.
-
-Vwd O Q2514979 NE
-Im O - APPRART
-Geschäftsjahr O - NN
-2016 O - CARD
-beschäftigte O - VVFIN
-vwd O - NE
-in O - APPR
-Belgien O - NE
-, O - $,
-Deutschland O - NE
-, O - $,
-Frankreich O - NE
-, O - $,
-Italien O - NE
-, O - $,
-den O - ART
-Niederlanden O - NE
-und O - KON
-der O - ART
-Schweiz O - NE
-450 O - CARD
-Mitarbeiter O - NN
-und O - KON
-erzielte O - VVFIN
-einen O - ART
-Umsatz O - NN
-von O - APPR
-80 O - CARD
-Millionen O - NN
-Euro O - NN
-. O - $.
-
 VWD O Q2514979 NE
 ein O - ART
 europäischer O - ADJA
 Dienstleister O - NN
 für O - APPR
 Finanzinformationen O - NN
-. O - $.
-
-VWD O Q2514979 NE
-Im O - APPRART
-Geschäftsjahr O - NN
-2016 O - CARD
-beschäftigte O - VVFIN
-vwd O - NE
-in O - APPR
-Belgien O - NE
-, O - $,
-Deutschland O - NE
-, O - $,
-Frankreich O - NE
-, O - $,
-Italien O - NE
-, O - $,
-den O - ART
-Niederlanden O - NE
-und O - KON
-der O - ART
-Schweiz O - NE
-450 O - CARD
-Mitarbeiter O - NN
-und O - KON
-erzielte O - VVFIN
-einen O - ART
-Umsatz O - NN
-von O - APPR
-80 O - CARD
-Millionen O - NN
-Euro O - NN
 . O - $.
 
 Robert O Q234021 NE
@@ -8758,26 +2624,6 @@ Gmb O Q234021 NE
 H O Q234021 NN
 deutsches O - ADJA
 Unternehmen O - NN
-
-Bosch O Q234021 NE
-deutsches O - ADJA
-Unternehmen O - NN
-
-Werkstätte O Q234021 NN
-für O Q234021 APPR
-Feinmechanik O Q234021 NN
-und O Q234021 KON
-Elektrotechnik O Q234021 NN
-deutsches O - ADJA
-Unternehmen O - NN
-
-Energiekontor O Q1341306 NN
-deutsches O - ADJA
-Unternehmen O - NN
-im O - APPRART
-Bereich O - NN
-Erneuerbare O - ADJA
-Energien O - NN
 
 Energiekontor O Q1341306 NN
 AG O Q1341306 NN
@@ -8788,59 +2634,6 @@ Bereich O - NN
 Erneuerbare O - ADJA
 Energien O - NN
 
-Fußballverband O Q1478441 NN
-Niederrhein O Q1478441 NE
-Dachorganisation O - NN
-von O - APPR
-1.225 O - CARD
-Fußballvereinen O - NN
-mit O - APPR
-413.921 O - CARD
-Mitgliedern O - NN
-und O - KON
-9.606 O - CARD
-Mannschaften O - NN
-. O - $.
-
-Fußballverband O Q1478441 NN
-Niederrhein O Q1478441 NE
-Der O - ART
-FVN O - NE
-wurde O - VAFIN
-im O - APPRART
-Januar O - NN
-1947 O - CARD
-gegründet O - VVPP
-und O - KON
-gehört O - VVFIN
-zu O - APPR
-den O - ART
-21 O - CARD
-Landesverbänden O - NN
-des O - ART
-DFB O - NE
-sowie O - KON
-zum O - APPRART
-Westdeutschen O - ADJA
-Fußballverband O - NN
-. O - $.
-
-Geschichte O Q1478441 NN
-des O Q1478441 ART
-Fußballverbands O Q1478441 NN
-Niederrhein O Q1478441 NE
-Dachorganisation O - NN
-von O - APPR
-1.225 O - CARD
-Fußballvereinen O - NN
-mit O - APPR
-413.921 O - CARD
-Mitgliedern O - NN
-und O - KON
-9.606 O - CARD
-Mannschaften O - NN
-. O - $.
-
 Geschichte O Q1478441 NN
 des O Q1478441 ART
 Fußballverbands O Q1478441 NN
@@ -8865,105 +2658,6 @@ zum O - APPRART
 Westdeutschen O - ADJA
 Fußballverband O - NN
 . O - $.
-
-Fußball O Q1478441 NN
--Verband O Q1478441 TRUNC
-Niederrhein O Q1478441 NE
-Dachorganisation O - NN
-von O - APPR
-1.225 O - CARD
-Fußballvereinen O - NN
-mit O - APPR
-413.921 O - CARD
-Mitgliedern O - NN
-und O - KON
-9.606 O - CARD
-Mannschaften O - NN
-. O - $.
-
-Fußball O Q1478441 NN
--Verband O Q1478441 TRUNC
-Niederrhein O Q1478441 NE
-Der O - ART
-FVN O - NE
-wurde O - VAFIN
-im O - APPRART
-Januar O - NN
-1947 O - CARD
-gegründet O - VVPP
-und O - KON
-gehört O - VVFIN
-zu O - APPR
-den O - ART
-21 O - CARD
-Landesverbänden O - NN
-des O - ART
-DFB O - NE
-sowie O - KON
-zum O - APPRART
-Westdeutschen O - ADJA
-Fußballverband O - NN
-. O - $.
-
-FVN O Q1478441 NE
-Dachorganisation O - NN
-von O - APPR
-1.225 O - CARD
-Fußballvereinen O - NN
-mit O - APPR
-413.921 O - CARD
-Mitgliedern O - NN
-und O - KON
-9.606 O - CARD
-Mannschaften O - NN
-. O - $.
-
-FVN O Q1478441 NE
-Der O - ART
-FVN O - NE
-wurde O - VAFIN
-im O - APPRART
-Januar O - NN
-1947 O - CARD
-gegründet O - VVPP
-und O - KON
-gehört O - VVFIN
-zu O - APPR
-den O - ART
-21 O - CARD
-Landesverbänden O - NN
-des O - ART
-DFB O - NE
-sowie O - KON
-zum O - APPRART
-Westdeutschen O - ADJA
-Fußballverband O - NN
-. O - $.
-
-Robert O Q47284 NE
-Rodriguez O Q47284 NE
-US O - NE
--amerikanischer O - ADJA
-Regisseur O - NN
-, O - $,
-Drehbuchautor O - NN
-, O - $,
-Filmkomponist O - NN
-und O - KON
-Filmproduzent O - NN
-
-Robert O Q47284 NE
-Anthony O Q47284 NE
-Rodriguez O Q47284 NE
-US O - NE
--amerikanischer O - ADJA
-Regisseur O - NN
-, O - $,
-Drehbuchautor O - NN
-, O - $,
-Filmkomponist O - NN
-und O - KON
-Filmproduzent O - NN
 
 Robert O Q47284 NE
 Rodríguez O Q47284 NE
@@ -9031,117 +2725,11 @@ deutschsprachigen O - ADJA
 Raum O - NN
 . O - $.
 
-Deutsche O Q1203625 ADJA
-ORACLE O Q1203625 NE
--Anwendergruppe O Q1203625 TRUNC
-e O Q1203625 NN
-. O Q1203625 $.
-V O Q1203625 CARD
-. O Q1203625 $.
-eine O - PIS
-der O - ART
-wichtigsten O - ADJA
-unabhängigen O - ADJA
-Informationsplattformen O - NN
-zu O - APPR
-Oracle O - NE
--nahen O - ADJA
-Themen O - NN
-im O - APPRART
-deutschsprachigen O - ADJA
-Raum O - NN
-. O - $.
-
-Deutsche O Q1203625 ADJA
-ORACLE O Q1203625 NE
--Anwendergruppe O Q1203625 TRUNC
-e O Q1203625 NN
-. O Q1203625 $.
-V O Q1203625 CARD
-. O Q1203625 $.
-eine O - PIS
-der O - ART
-wichtigsten O - ADJA
-unabhängigen O - ADJA
-Informationsplattformen O - NN
-zu O - APPR
-Oracle O - NE
--nahen O - ADJA
-Themen O - NN
-im O - APPRART
-deutschsprachigen O - ADJA
-Raum O - NN
-. O - $.
-
-Bundeskanzleramt O Q317027 NN
-Behörde O - NN
-des O - ART
-deutschen O - ADJA
-Bundeskanzlers O - NN
-
 BKAmt O Q317027 NE
 Behörde O - NN
 des O - ART
 deutschen O - ADJA
 Bundeskanzlers O - NN
-
-DAX O Q155718 NE
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
-
-DAX O Q155718 NE
--Index O Q155718 TRUNC
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
-
-Deutscher O Q155718 ADJA
-Aktienindex O Q155718 NN
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
-
-DAX30 O Q155718 NE
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
-
-Short O Q155718 FM
-DAX O Q155718 NE
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
-
-^ O Q155718 FM
-GDAXI O Q155718 NE
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
 
 DAX O Q155718 NE
 30 O Q155718 CARD
@@ -9153,63 +2741,7 @@ börsennotierten O - ADJA
 deutschen O - ADJA
 Unternehmen O - NN
 
-L O Q155718 NE
--DAX O Q155718 NE
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
-
-L/E O Q155718 NE
--Dax O Q155718 NE
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
-
-Der O Q155718 ART
-Dax O Q155718 NE
-Aktienindex O - NN
-der O - ART
-30 O - CARD
-größten O - ADJA
-börsennotierten O - ADJA
-deutschen O - ADJA
-Unternehmen O - NN
-
-Harvard O Q13371 NE
-University O Q13371 FM
-private O - ADJA
-Universität O - NN
-in O - APPR
-Cambridge O - NE
-, O - $,
-Massachusetts O - NE
-
-Harvard O Q13371 NE
--Universität O Q13371 NN
-private O - ADJA
-Universität O - NN
-in O - APPR
-Cambridge O - NE
-, O - $,
-Massachusetts O - NE
-
 Universität O Q13371 NN
-Harvard O Q13371 NE
-private O - ADJA
-Universität O - NN
-in O - APPR
-Cambridge O - NE
-, O - $,
-Massachusetts O - NE
-
 Harvard O Q13371 NE
 private O - ADJA
 Universität O - NN
@@ -9222,86 +2754,6 @@ Thomas O Q43666 NE
 Müller O Q43666 NE
 Deutscher O - ADJA
 Fußballspieler O - NN
-
-Müller O Q43666 NE
-, O Q43666 $,
-Thomas O Q43666 NE
-Deutscher O - NE
-Fußballspieler O - NN
-
-Dpa O Q1253717 NE
--AFX O Q1253717 NE
-Wirtschaftsnachrichten O Q1253717 NN
-eine O - ART
-deutschsprachige O - ADJA
-Nachrichtenagentur O - NN
-für O - APPR
-Wirtschafts O - NN
-- O - TRUNC
-und O - KON
-Finanznachrichten O - NN
-. O - $.
-
-Dpa O Q1253717 NE
--AFX O Q1253717 $(
-Wirtschaftsnachrichten O Q1253717 NN
-Die O - ART
-Zielgruppe O - NN
-von O - APPR
-dpa O - NE
--AFX O - FM
-sind O - VAFIN
-Banken O - NN
-, O - $,
-Finanzdienstleister O - NN
-und O - KON
-Medien O - NN
-. O - $.
-
-Dpa O Q1253717 NE
--AFX O Q1253717 NE
-Wirtschaftsnachrichten O Q1253717 NN
-Gmb O Q1253717 NE
-H O Q1253717 NN
-eine O - ART
-deutschsprachige O - ADJA
-Nachrichtenagentur O - NN
-für O - APPR
-Wirtschafts O - NN
-- O - TRUNC
-und O - KON
-Finanznachrichten O - NN
-. O - $.
-
-Dpa O Q1253717 NE
--AFX O Q1253717 NE
-Wirtschaftsnachrichten O Q1253717 NN
-Gmb O Q1253717 NE
-H O Q1253717 NN
-Die O - ART
-Zielgruppe O - NN
-von O - APPR
-dpa O - NE
--AFX O - NE
-sind O - VAFIN
-Banken O - NN
-, O - $,
-Finanzdienstleister O - NN
-und O - KON
-Medien O - NN
-. O - $.
-
-dpa O Q1253717 NE
--AFX O Q1253717 FM
-eine O - ART
-deutschsprachige O - ADJA
-Nachrichtenagentur O - NN
-für O - APPR
-Wirtschafts O - NN
-- O - TRUNC
-und O - KON
-Finanznachrichten O - NN
-. O - $.
 
 dpa O Q1253717 NE
 -AFX O Q1253717 $(
@@ -9326,63 +2778,13 @@ Partei O - NN
 in O - APPR
 Österreich O - NE
 
-Freiheitliche O Q131692 ADJA
-Partei O Q131692 NN
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Österreich O - NE
-
-FPÖ O Q131692 NE
-politische O - ADJA
-Partei O - NN
-in O - APPR
-Österreich O - NE
-
-Focus O Q33108673 FM
-Online O Q33108673 FM
-deutschsprachige O - ADJA
-Nachrichten O - NN
--Website O - TRUNC
-
 FOCUS O Q33108673 NE
 ONLINE O Q33108673 NE
 deutschsprachige O - ADJA
 Nachrichten O - NN
 -Website O - TRUNC
 
-focus.de O Q33108673 NE
-deutschsprachige O - ADJA
-Nachrichten O - NN
--Website O - TRUNC
-
-Bergische O Q447953 ADJA
-Universität O Q447953 NN
-Wuppertal O Q447953 NE
-Universität O - NN
-in O - APPR
-Deutschland O - NE
-
-Maschinenbauschule O Q447953 NN
-Elberfeld O Q447953 NE
--Barmen O Q447953 TRUNC
-Universität O - NN
-in O - APPR
-Deutschland O - NE
-
-Gesamthochschule O Q447953 NN
-Wuppertal O Q447953 NE
-Universität O - NN
-in O - APPR
-Deutschland O - NE
-
 Uni O Q447953 NN
-Wuppertal O Q447953 NE
-Universität O - NN
-in O - APPR
-Deutschland O - NE
-
-Universität O Q447953 NN
 Wuppertal O Q447953 NE
 Universität O - NN
 in O - APPR
@@ -9396,87 +2798,6 @@ in O - APPR
 der O - ART
 Schweiz O - NE
 
-Flughafen O Q131402 NN
-München O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q131402 NN
-Franz O Q131402 NE
-Joseph O Q131402 NE
-Strauß O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q131402 NN
-Franz O Q131402 NE
--Josef O Q131402 NE
--Strauß O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-EDDM O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q131402 NN
-München O Q131402 NE
-Franz O Q131402 NE
-Josef O Q131402 NE
-Strauß O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Airport O Q131402 NN
-München O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q131402 NN
-Franz O Q131402 NE
-Josef O Q131402 NE
-Strauss O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q131402 NN
-München O Q131402 NE
-Franz O Q131402 NE
--Josef O Q131402 NE
--Strauß O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q131402 NN
-München O Q131402 NE
--Franz O Q131402 NE
-Josef O Q131402 NE
-Strauß O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Flughafen O Q131402 NN
-München O Q131402 NE
-II O Q131402 CARD
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Munich O Q131402 NE
-Airport O Q131402 FM
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
 Franz O Q131402 NE
 -Josef O Q131402 NE
 -Strauß O Q131402 TRUNC
@@ -9484,22 +2805,6 @@ Franz O Q131402 NE
 Flughafen O - NN
 in O - APPR
 Deutschland O - NE
-
-Flughafen O Q131402 NN
-MUC O Q131402 NE
-Flughafen O - NN
-in O - APPR
-Deutschland O - NE
-
-Pay O Q483959 NE
-Pal O Q483959 NE
-US O - FM
--amerikanischer O - ADJA
-Betreiber O - NN
-eines O - ART
-gleichnamigen O - ADJA
-Online O - FM
--Bezahlsystems O - TRUNC
 
 Pay O Q483959 FM
 Pal O Q483959 FM
@@ -9515,32 +2820,6 @@ gleichnamigen O - ADJA
 Online O - FM
 -Bezahlsystems O - TRUNC
 
-Anton O Q103519 NE
-Hofreiter O Q103519 NE
-deutscher O - ADJA
-Politiker O - NN
-( O - $(
-Bündnis O - NN
-90/Die O - ADJA
-Grünen O - NN
-) O - $(
-, O - $,
-Md O - NE
-B O - NN
-
-Toni O Q103519 NE
-Hofreiter O Q103519 NE
-deutscher O - ADJA
-Politiker O - NN
-( O - $(
-Bündnis O - NN
-90/Die O - ADJA
-Grünen O - NN
-) O - $(
-, O - $,
-Md O - NE
-B O - NN
-
 Hofreiter O Q103519 NN
 deutscher O - ADJA
 Politiker O - NN
@@ -9553,25 +2832,8 @@ Grünen O - NN
 Md O - NE
 B O - NN
 
-Tengelmann O Q832996 NE
-deutsches O - ADJA
-Unternehmen O - NN
-
 Unternehmensgruppe O Q832996 NN
 Tengelmann O Q832996 NE
-deutsches O - ADJA
-Unternehmen O - NN
-
-Tengelmann O Q832996 NE
-International O Q832996 NE
-Gmb O Q832996 NE
-H O Q832996 NE
-deutsches O - ADJA
-Unternehmen O - NN
-
-Tengelmann O Q832996 NE
-Warenhandelsgesellschaft O Q832996 NN
-KG O Q832996 NE
 deutsches O - ADJA
 Unternehmen O - NN
 
