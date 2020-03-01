@@ -56,6 +56,7 @@ def compare_embeddings(model_directory):
             X, y = embeddings.vectorize(data, model, **kwargs)
             clustering = Clustering("kmeans", X, y)
             score = clustering.evaluate()
+            print(score)
             stats.append(score)
             index.append(approach)
     return pd.DataFrame(stats, index=index)
