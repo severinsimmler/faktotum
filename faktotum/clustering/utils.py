@@ -156,7 +156,7 @@ class SemiSupervisedKMeans:
         self.y = y
         random.seed(random_state)
 
-    def fit_predict(self, X, y):
+    def fit_predict(self, X):
         centroids = np.array(self._calculate_centroids(X))
         _, y = scipy.cluster.vq.kmeans2(centroids, self.n_clusters, minit='matrix')
         return y
