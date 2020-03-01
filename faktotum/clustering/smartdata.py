@@ -75,7 +75,7 @@ def compare_algorithms(model_directory, embedding):
 
     for algorithm in {"kmeans", "spectral", "ward", "semi-supervised-kmeans"}:
         scores = list()
-        X, y = embeddings.vectorize(data, embeddings.ner)
+        X, y = embeddings.vectorize(data, embeddings.bert_m, add_adj=True)
         clustering = Clustering(algorithm, X, y)
         score = clustering.evaluate()
         stats.append(score)
