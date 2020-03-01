@@ -173,7 +173,7 @@ class Clustering:
         self.y = y
         self.n_clusters = len(set(y))
         self.random_state = 23
-        if isinstance(algorithm, SemiSupervisedKMeans):
+        if algorithm is SemiSupervisedKMeans:
             self.model = algorithm(n_clusters=self.n_clusters, random_state=self.random_state)
         else:
             self.model = algorithm(
