@@ -45,6 +45,7 @@ def compare_embeddings(model_directory):
             ("+ ADJ + NN + PER", {"add_adj": True, "add_nn": True, "add_per": True}),
         ]:
             approach = approach + suffix
+            logging.info(approach)
             scores = list()
             for novel in data.values():
                 X, y = embeddings.vectorize(novel, model, **features)
