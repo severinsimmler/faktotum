@@ -69,7 +69,7 @@ def compare_algorithms(model_directory, embedding):
     data = load_data()
     embeddings = Embeddings(model_directory, "gutenberg", load=embedding)
 
-    for algorithm in {"kmeans", "spectral", "ward"}:
+    for algorithm in {"kmeans", "spectral", "ward", "semi-supervised-kmeans"}:
         logging.info(algorithm)
         scores = list()
         for novel in data.values():
@@ -85,5 +85,5 @@ def compare_algorithms(model_directory, embedding):
             )
         }
         stats.append(values)
-        index.append(approach)
+        index.append(algorithm)
     return pd.DataFrame(stats, index=index)
