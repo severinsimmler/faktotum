@@ -72,7 +72,7 @@ def compare_algorithms(model_directory, embedding):
     for algorithm in {"kmeans", "spectral", "ward"}:
         scores = list()
         for novel in data.values():
-            X, y = embeddings.vectorize(novel, embeddings.TODO)
+            X, y = embeddings.vectorize(novel, embeddings.bert_ner)
             clustering = Clustering(algorithm, X, y)
             score = clustering.evaluate()
             scores.append(score)
