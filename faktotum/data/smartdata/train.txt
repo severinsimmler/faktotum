@@ -14,7 +14,7 @@ Der O - ART
 frühere O - ADJA
 Fifa B-ORG Q253414 NE Q253414
 - O - $(
-Mediendirektor O 15 NN
+Mediendirektor O - NN
 Guido B-PER - NE NIL
 Tognoni I-PER - NE NIL
 geht O - VVFIN
@@ -51,7 +51,7 @@ Der O - ART
 frühere O - ADJA
 Fifa B-ORG Q253414 NE Q253414
 - O - $(
-Mediendirektor O 21 NN
+Mediendirektor O - NN
 Guido B-PER - NE NIL
 Tognoni I-PER - NE NIL
 geht O - VVFIN
@@ -730,7 +730,7 @@ Finke I-PER - NE NIL
 l. O - NE
 ) O - $(
 als O - KOKOM
-Leiter O 32 NN
+Leiter O - NN
 des O - ART
 Wittenberger B-ORG - ADJA NIL
 Wasser I-ORG - NN NIL
@@ -742,7 +742,7 @@ sowie O - KON
 Erich B-PER - NE NIL
 Schlotthauer I-PER - NE NIL
 , O - $,
-Sachbereichsleiter O 35 NN
+Sachbereichsleiter O - NN
 Katastrophenschutz B-ORG Q1735655 NN Q1735655
 . O - $.
 
@@ -1061,7 +1061,7 @@ Zukunft O - NN
 Hidetaka B-PER Q11454590 NE Q11454590
 Miyazaki I-PER Q11454590 NE Q11454590
 , O - $,
-Präsident O 38 NN
+Präsident O - NN
 von O - APPR
 From B-ORG Q2414469 FM Q2414469
 Software I-ORG Q2414469 FM Q2414469
@@ -5853,9 +5853,9 @@ stärker O - ADJD
 ausschöpfen O - VVINF
 , O - $,
 sagte O - VVFIN
-Vorstandschef O 275 NN
-Olaf B-PER 275 NE
-Berlien I-PER 275 NE
+Vorstandschef O - NN
+Olaf B-PER - NE
+Berlien I-PER - NE
 am O - APPRART
 Dienstag O - NN
 in O - APPR
@@ -6437,7 +6437,7 @@ dpa B-ORG Q312653 NE Q312653
 - O - $(
 Thyssenkrupp B-ORG Q137910 NE Q137910
 - O - $(
-Chef O 320 NN
+Chef O - NN
 Heinrich B-PER Q109782 NE Q109782
 Hiesinger I-PER Q109782 NE Q109782
 sieht O - VVFIN
@@ -10364,7 +10364,7 @@ Nachfolger O - NN
 von O - APPR
 Eintracht B-ORG Q38245 NN Q38245
 Frankfurts I-ORG Q38245 NE Q38245
-Vorstandschef O 406 NN 
+Vorstandschef O - NN 
 Heribert B-PER Q895570 NE Q895570
 Bruchhagen I-PER Q895570 NE Q895570
 im O - APPRART
@@ -10391,7 +10391,7 @@ hat O - VAFIN
 die O - ART
 Nachfolge O - NN
 von O - APPR
-Vorstandschef O 403 NN
+Vorstandschef O - NN
 Heribert B-PER Q895570 NE Q895570
 Bruchhagen I-PER Q895570 NE Q895570
 bei O - APPR
@@ -12388,7 +12388,7 @@ verantworteter O - ADJA
 Terror O - NN
 : O - $.
 
-Linksfraktionschefin O 636 NN
+Linksfraktionschefin O - NN
 Wagenknecht B-PER Q77193 NE Q77193
 wählt O - VVFIN
 harte O - ADJA
@@ -12839,7 +12839,7 @@ Vormarsch O - NN
 , O - $,
 sagt O - VVFIN
 der O - ART
-Präsident O 649 NN
+Präsident O - NN
 des O - ART
 Bundeskriminalamtes B-ORG Q56030 NN Q56030
 , O - $,
@@ -13032,7 +13032,7 @@ Erbe O - NN
 von O - APPR
 FIFA B-ORG Q253414 NE Q253414
 - O - $(
-Boss O 652 NN
+Boss O - NN
 Joseph B-PER Q483437 NE Q483437
 Blatter I-PER Q483437 NE Q483437
 eher O - ADV
@@ -13121,7 +13121,7 @@ Hintergrund O - NN
 
 UEFA B-ORG Q35572 NE Q35572
 - O - $(
-Generalsekretär O 655 NN
+Generalsekretär O - NN
 Gianni B-PER Q124138 NE Q124138
 Infantino I-PER Q124138 NE Q124138
 will O - VMFIN
@@ -13477,7 +13477,7 @@ erlauben O - VVINF
 Daniel B-PER Q18411264 NE Q18411264
 Zimmer I-PER Q18411264 NE Q18411264
 , O - $,
-Chef O 664 NN
+Chef O - NN
 der O - ART
 Monopolkommission B-ORG Q1945081 NN Q1945081
 , O - $,
@@ -13522,7 +13522,7 @@ lange O - ADJD
 hat O - VAFIN
 Tengelmann B-ORG Q832996 NE Q832996
 - O - $(
-Chef O 667 NN
+Chef O - NN
 Erivan B-PER Q103647 NE Q103647
 Haub I-PER Q103647 NE Q103647
 sie O - PPER
@@ -13832,8 +13832,8 @@ einstigen O - ADJA
 Deutsche B-ORG Q157852 ADJA Q157852
 - I-ORG Q157852 $( Q157852
 Börse I-ORG Q157852 NN Q157852
-- O 679 $(
-Chef O 679 NN
+- O - $(
+Chef O - NN
 Werner B-PER Q2562605 NE Q2562605
 Seifert I-PER Q2562605 NE Q2562605
 vor O - APPR
@@ -17706,7 +17706,7 @@ mit O - APPR
 Roland B-PER - NE NIL
 Gratzer I-PER - NE NIL
 als O - KOKOM
-Geschäftsführer O 799 NN
+Geschäftsführer O - NN
 setzte O - VVFIN
 auf O - APPR
 den O - ART
@@ -19885,7 +19885,7 @@ auf O - PTKVZ
 Am O - APPRART
 Donnerstag O - NN
 erwartet O - VVFIN
-Verdi B-ORG 887 NE
+Verdi B-ORG - NE
 in O - APPR
 der O - ART
 Tarifrunde O - NN
@@ -19973,11 +19973,11 @@ noch O - ADV
 Einiges O - PIS
 , O - $,
 so O - ADV
-Joachim B-PER 884 NE
-Reiter I-PER 884 NE
-, O 884 $,
-Verdi B-ORG 884 NE
-Landesfachbereichsleiter O 884 NN
+Joachim B-PER - NE
+Reiter I-PER - NE
+, O - $,
+Verdi B-ORG - NE
+Landesfachbereichsleiter O - NN
 in O - APPR
 einer O - ART
 entsprechenden O - ADJA
@@ -20752,11 +20752,11 @@ beenden O - VVINF
 » O - $(
 , O - $,
 sagte O - VVFIN
-CSU B-ORG 1059 NE
+CSU B-ORG - NE
 - O - $(
-Chef O 1059 NN
-Horst B-PER 1059 NE
-Seehofer I-PER 1059 NE
+Chef O - NN
+Horst B-PER - NE
+Seehofer I-PER - NE
 nach O - APPR
 einer O - ART
 Parteivorstandssitzung O - NN
@@ -21529,12 +21529,12 @@ AFX I-ORG - NE
 ) O - $(
 - O - $(
 Der O - ART
-Vorstandschef O 1248 NN
+Vorstandschef O - NN
 der O - ART
 Ethikbank B-ORG - NN
-, O 1248 $,
-Klaus B-PER 1248 NE
-Euler I-PER 1248 NE
+, O - $,
+Klaus B-PER - NE
+Euler I-PER - NE
 , O - $,
 sieht O - VVFIN
 Genossenschaftsbanken O - NN
@@ -21641,11 +21641,11 @@ Sparkassen O - NN
 zum O - APPRART
 Schulterschluss O - NN
 auf O - PTKVZ
-. O 1251 $.
+. O - $.
 
-Euler B-PER 1251 NE
+Euler B-PER - NE
 ist O - VAFIN
-Chef O 1251 NN
+Chef O - NN
 der O - ART
 Volksbank B-ORG - NN
 Eisenberg I-ORG - NE
@@ -25929,15 +25929,15 @@ leisten O - VVINF
 , O - $,
 sagte O - VVFIN
 der O - ART
-Vorsitzende O 1355 NN
-der O 1355 ART
-Geschäftsführung O 1355 NN
+Vorsitzende O - NN
+der O - ART
+Geschäftsführung O - NN
 von O - APPR
 DB B-ORG - NE
 International I-ORG - FM
 , O - $,
-Niko B-PER 1355 NE
-Warbanoff I-PER 1355 NE
+Niko B-PER - NE
+Warbanoff I-PER - NE
 , O - $,
 am O - APPRART
 Mittwoch O - NN
@@ -25977,9 +25977,9 @@ Consulting I-ORG - FM
 verschmolzen O - VVPP
 . O - $.
 
-Warbanoff B-PER 1358 NE
+Warbanoff B-PER - NE
 wird O - VAFIN
-Chef O 1358 NN
+Chef O - NN
 der O - ART
 neuen O - ADJA
 Tochtergesellschaft B-ORG - NN
@@ -26747,10 +26747,10 @@ fixiert O - VVPP
 Dies O - PDS
 sagte O - VVFIN
 Spar B-ORG - NE
-- O 1383 $(
-Vorstand O 1383 NN
-Hans B-PER 1383 NE
-Reisch I-PER 1383 NE
+- O - $(
+Vorstand O - NN
+Hans B-PER - NE
+Reisch I-PER - NE
 am O - APPRART
 Dienstag O - NN
 am O - APPRART
@@ -27043,8 +27043,8 @@ die O - ART
 Entscheidung O - NN
 zum O - APPRART
 insolventen O - ADJA
-HSV B-ORG 1386 NE
-Hamburg I-ORG 1386 NE
+HSV B-ORG - NE
+Hamburg I-ORG - NE
 . O - $.
 
 Dreieinhalb O - CARD
@@ -27085,15 +27085,15 @@ voll O - ADJD
 verstehen O - VVINF
 , O - $,
 sagte O - VVFIN
-Frank B-PER 1388 NE
-Bohmann I-PER 1388 NE
+Frank B-PER - NE
+Bohmann I-PER - NE
 , O - $,
-Geschäftsführer O 1388 NN
+Geschäftsführer O - NN
 des O - ART
 Liga O - NN
 - O - $(
 Verbandes O - NN
-HBL B-ORG 1388 NE
+HBL B-ORG - NE
 , O - $,
 der O - ART
 Deutschen B-ORG - ADJA
@@ -27140,12 +27140,12 @@ Wochen O - NN
 ausverkauft O - VVPP
 . O - $.
 
-Dierk B-PER 1391 NE
-Schmäschke I-PER 1391 NE
+Dierk B-PER - NE
+Schmäschke I-PER - NE
 , O - $,
-Geschäftsführer O 1391 NN
+Geschäftsführer O - NN
 der O - ART
-Flensburger B-ORG 1391 ADJA
+Flensburger B-ORG - ADJA
 , O - $,
 spricht O - VVFIN
 von O - APPR
@@ -27624,13 +27624,13 @@ neue O - ADJA
 Vorstand O - NN
 der O - ART
 Sängervereinigung O - NN
-Eintracht B-ORG 1407 NN
-Germania I-ORG 1407 NE
+Eintracht B-ORG - NN
+Germania I-ORG - NE
 mit O - APPR
 dem O - ART
-Vorsitzenden O 1407 NN
-Frank B-PER 1407 NE
-Steinmüller I-PER 1407 NE
+Vorsitzenden O - NN
+Frank B-PER - NE
+Steinmüller I-PER - NE
 ( O - $(
 3 O - CARD
 . O - $.
@@ -28483,14 +28483,14 @@ aufgenommen O - VVPP
 , O - $,
 sagte O - VVFIN
 der O - ART
-Geschäftsführer O 1417 NN
+Geschäftsführer O - NN
 der O - ART
 Grün B-ORG - NN
 Berlin I-ORG - NE
 GmbH I-ORG - NN
 , O - $,
-Christoph B-PER 1417 NE
-Schmidt I-PER 1417 NE
+Christoph B-PER - NE
+Schmidt I-PER - NE
 , O - $,
 am O - APPRART
 Donnerstag O - NN
@@ -29380,7 +29380,7 @@ ots B-ORG - FM
 ) O - $(
 - O - $(
 Die O - ART
-Geschäftsführer O 1443 NN
+Geschäftsführer O - NN
 der O - ART
 führenden O - ADJA
 deutschen O - ADJA
@@ -29388,11 +29388,11 @@ Parfümeriekooperation O - NN
 beauty B-ORG - FM
 alliance I-ORG - FM
 , O - $,
-Ulrich B-PER 1443 NE
-Schwarze I-PER 1443 NE
+Ulrich B-PER - NE
+Schwarze I-PER - NE
 und O - KON
-Christian B-PER 1443 NE
-Lorenz I-PER 1443 NE
+Christian B-PER - NE
+Lorenz I-PER - NE
 , O - $,
 haben O - VAFIN
 das O - ART
@@ -29487,9 +29487,9 @@ Mitglieder O - NN
 bestätigt O - VVFIN
 beauty B-ORG - FM
 alliance I-ORG - FM
-Geschäftsführer O 1447 NN
-Christian B-PER 1447 NE
-Lorenz I-PER 1447 NE
+Geschäftsführer O - NN
+Christian B-PER - NE
+Lorenz I-PER - NE
 . O - $.
 
 Und O - KON
@@ -30274,10 +30274,10 @@ zufriedenstellend O - ADJD
 “ O - $(
 , O - $,
 erläutert O - VVFIN
-Josef B-PER 1461 NE
-Gutschik I-PER 1461 NE
+Josef B-PER - NE
+Gutschik I-PER - NE
 , O - $,
-Finanzvorstand O 1461 NN
+Finanzvorstand O - NN
 der O - ART
 Helvetia B-ORG - NE
 . O - $.
@@ -30621,10 +30621,10 @@ am O - APPRART
 um O - APPR
 16:53 O - CARD
 Uhr O - NN
-Carsten B-PER 1472 NE
-Kengeter I-PER 1472 NE
+Carsten B-PER - NE
+Kengeter I-PER - NE
 , O - $,
-Vorstandsvorsitzender O 1472 NN
+Vorstandsvorsitzender O - NN
 der O - ART
 Deutschen B-ORG - ADJA
 Börse I-ORG - NN
@@ -30657,9 +30657,9 @@ Deutsche B-ORG - NN
 - I-ORG - $(
 Börse I-ORG - NN
 - O - $(
-Chef O 1475 NN
-Carsten B-PER 1475 NE
-Kengeter I-PER 1475 NE
+Chef O - NN
+Carsten B-PER - NE
+Kengeter I-PER - NE
 entscheidet O - VVFIN
 eine O - ART
 Fusion O - NN
@@ -31174,22 +31174,22 @@ ist O - VAFIN
 der O - ART
 FC B-ORG - NE
 Augsburg I-ORG - NE
-Der O 1495 ART
-FC B-ORG 1495 NE
-Augsburg I-ORG 1495 NE
+Der O - ART
+FC B-ORG - NE
+Augsburg I-ORG - NE
 geht O - VVFIN
 aus O - APPR
 einer O - ART
 Fusion O - NN
 zwischen O - APPR
-dem O 1495 ART
-BC B-ORG 1495 NE
-Augsburg I-ORG 1495 NE
+dem O - ART
+BC B-ORG - NE
+Augsburg I-ORG - NE
 und O - KON
-des O 1495 ART
-TSV B-ORG 1495 NE
-Schwaben I-ORG 1495 NE
-Augsburg I-ORG 1495 NE
+des O - ART
+TSV B-ORG - NE
+Schwaben I-ORG - NE
+Augsburg I-ORG - NE
 im O - APPRART
 Jahr O - NN
 1969 O - CARD
@@ -31666,7 +31666,7 @@ versorgt O - VVPP
 . O - $.
 
 Beim O - APPRART
-Chef O 1506 NN
+Chef O - NN
 des O - ART
 weltgrößten O - ADJA
 PC O - NN
@@ -31674,8 +31674,8 @@ PC O - NN
 Herstellers O - NN
 Lenovo B-ORG - NE
 , O - $,
-Yang B-PER 1506 NE
-Yuanqing I-PER 1506 NE
+Yang B-PER - NE
+Yuanqing I-PER - NE
 , O - $,
 stößt O - VVFIN
 das O - ART
@@ -32220,7 +32220,7 @@ bestreiten O - VVINF
 . O - $.
 
 Der O - ART
-Aufsteiger B-ORG 1523 NN
+Aufsteiger B-ORG - NN
 konnte O - VMFIN
 nach O - APPR
 der O - ART
@@ -34148,11 +34148,11 @@ zu O - PTKZU
 können O - VMINF
 , O - $,
 sagte O - VVFIN
-FDP B-ORG 1554 NE
+FDP B-ORG - NE
 - O - $(
-Generalsekretärin O 1554 NN
-Nicola B-PER 1554 NE
-Beer I-PER 1554 NE
+Generalsekretärin O - NN
+Nicola B-PER - NE
+Beer I-PER - NE
 der O - ART
 Rheinischen B-ORG - ADJA
 Post I-ORG - NN
@@ -35044,11 +35044,11 @@ Datenverarbeitung O - NN
 “ O - $(
 , O - $,
 so O - ADV
-Knut B-PER 1573 NE
-Eichholz I-PER 1573 NE
+Knut B-PER - NE
+Eichholz I-PER - NE
 , O - $,
-kaufmännischer O 1573 ADJA
-Geschäftsführer O 1573 NN
+kaufmännischer O - ADJA
+Geschäftsführer O - NN
 der O - ART
 TeDaPro B-ORG - NE
 GmbH I-ORG - NN
@@ -35747,7 +35747,7 @@ eines O - ART
 Warnstreiks O - NN
 der O - ART
 Dienstleistungsgewerkschaft O - NN
-Verdi B-ORG 1588 NE
+Verdi B-ORG - NE
 an O - APPR
 sechs O - CARD
 deutschen O - ADJA
@@ -36092,8 +36092,8 @@ macht O - VVFIN
 reinen O - ADJA
 Tisch O - NN
 Volkswagen B-ORG - NE
-Chef O 1615 NN
-Müller B-PER 1615 NE
+Chef O - NN
+Müller B-PER - NE
 stellt O - VVFIN
 heute O - ADV
 in O - APPR
@@ -36140,8 +36140,8 @@ Aufspaltung O - NN
 Lange O - NE
 hatte O - VAFIN
 RWE B-ORG - NE
-Chef O 1618 NN
-Terium B-PER 1618 NE
+Chef O - NN
+Terium B-PER - NE
 es O - PPER
 weit O - ADJD
 von O - APPR
@@ -38088,10 +38088,10 @@ angeordnet O - VVPP
 worden O - VAPP
 , O - $,
 sagte O - VVFIN
-Ashwani B-PER 1670 NE
-Lohani I-PER 1670 NE
+Ashwani B-PER - NE
+Lohani I-PER - NE
 , O - $,
-Vorsitzender O 1670 NN
+Vorsitzender O - NN
 der O - ART
 staatlichen O - ADJA
 Fluggesellschaft O - NN
@@ -39732,7 +39732,7 @@ Spitze O - NN
 deutlic O - ADJD
 Mailen O - NN
 Die O - ART
-Flugbegleiter B-PER 1707 NN
+Flugbegleiter B-PER - NN
 der O - ART
 Lufthansa B-ORG - NE
 weiten O - VVFIN
@@ -39811,11 +39811,11 @@ bestreikt O - VVPP
 , O - $,
 sagte O - VVFIN
 der O - ART
-Ufo B-ORG 1704 NN
+Ufo B-ORG - NN
 - O - $(
-Vorsitzende O 1704 NN
-Nicoley B-PER 1704 NE
-Baublies I-PER 1704 NE
+Vorsitzende O - NN
+Nicoley B-PER - NE
+Baublies I-PER - NE
 der O - ART
 Deutschen B-ORG - ADJA
 Presse I-ORG - NN
@@ -40787,16 +40787,16 @@ Auszubildenden O - NN
 durch O - APPR
 die O - ART
 Bremer O - ADJA
-Gustav B-ORG 1736 NE
-- I-ORG 1736 $(
-Zech I-ORG 1736 NE
-- I-ORG 1736 $(
-Stiftung I-ORG 1736 NN
+Gustav B-ORG - NE
+- I-ORG - $(
+Zech I-ORG - NE
+- I-ORG - $(
+Stiftung I-ORG - NN
 sucht O - VVFIN
-Colsman B-PER 1741 NE
+Colsman B-PER - NE
 nun O - ADV
 als O - KOKOM
-Geschäftsführer O 1741 NN
+Geschäftsführer O - NN
 von O - APPR
 Zech B-ORG - NE
 Management I-ORG - FM
@@ -41346,11 +41346,11 @@ nicht O - PTKNEG
 entschieden O - VVPP
 . O - $.
 
-Ufo B-ORG 1753 NE
+Ufo B-ORG - NE
 - O - $(
-Chef O 1753 NN
-Nicoley B-PER 1753 NE
-Baublies I-PER 1753 NE
+Chef O - NN
+Nicoley B-PER - NE
+Baublies I-PER - NE
 hatte O - VAFIN
 am O - APPRART
 Donnerstag O - NN
@@ -44875,11 +44875,11 @@ die O - ART
 Lufthansa B-ORG - NE
 . O - $.
 
-Ufo B-ORG 2133 NE
-- O 2133 $(
+Ufo B-ORG - NE
+- O - $(
 Chef O - NN
-Nicoley B-PER 2133 NE
-Baublies I-PER 2133 NE
+Nicoley B-PER - NE
+Baublies I-PER - NE
 machte O - VVFIN
 die O - ART
 Fluglinie O - NN
@@ -50257,8 +50257,8 @@ VW B-ORG - NE
 Aktuell O - NN
 VW B-ORG - NE
 - O - $(
-Markenchef O 2398 NN
-Diess B-PER 2398 NE
+Markenchef O - NN
+Diess B-PER - NE
 im O - APPRART
 großen O - ADJA
 AZ O - NN
@@ -50275,9 +50275,9 @@ größer O - ADJA
 Volkswagen B-ORG - NN
 – O - $(
 VW B-ORG - NE
-- O 2401 $(
-Markenchef O 2401 NN
-Diess B-PER 2401 NE
+- O - $(
+Markenchef O - NN
+Diess B-PER - NE
 im O - APPRART
 großen O - ADJA
 AZ O - NN
@@ -50294,11 +50294,11 @@ Salons O - NN
 in O - APPR
 Genf O - NE
 verbreitete O - VVFIN
-VW B-ORG 2404 NE
-- O 2404 $(
-Markenchef O 2404 NN
-Herbert B-PER 2404 NE
-Diess I-PER 2404 NE
+VW B-ORG - NE
+- O - $(
+Markenchef O - NN
+Herbert B-PER - NE
+Diess I-PER - NE
 ( O - $(
 57 O - CARD
 ) O - $(
@@ -50362,13 +50362,13 @@ bei O - APPR
 der O - ART
 AZ O - NN
 / O - $(
-WAZ O 2407 NE
-: O 2407 $.
+WAZ O - NE
+: O - $.
 
-VW B-ORG 2407 NE
-- O 2407 $(
-Markenchef O 2407 NN
-Herbert B-PER 2407 NE
+VW B-ORG - NE
+- O - $(
+Markenchef O - NN
+Herbert B-PER - NE
 Diess I-PER - NE
 . O - $.
 
@@ -53991,7 +53991,7 @@ der O - ART
 Flugbegleiter O - NN
 - O - $(
 Gewerkschaft O - NN
-Ufo B-ORG 2459 NE
+Ufo B-ORG - NE
 für O - APPR
 Mittwoch O - NN
 930 O - CARD
@@ -56229,10 +56229,10 @@ zu O - PTKZU
 kaufen O - VVINF
 , O - $,
 sagte O - VVFIN
-Richard B-PER 2522 NE
-Baker I-PER 2522 NE
+Richard B-PER - NE
+Baker I-PER - NE
 , O - $,
-Chairman O 2522 NN
+Chairman O - NN
 des O - ART
 kanadischen O - ADJA
 Kaufhof B-ORG - NN
@@ -58211,7 +58211,7 @@ den O - ART
 Streik O - NN
 der O - ART
 Gewerkschaft O - NN
-Verdi B-ORG 2565 NE
+Verdi B-ORG - NE
 vor O - PTKVZ
 . O - $.
 
@@ -58700,9 +58700,9 @@ ist O - VAFIN
 ein O - ART
 Rückschlag O - NN
 für O - APPR
-Konzernchefin O 2578 NN
-Marissa B-PER 2578 NE
-Mayer I-PER 2578 NE
+Konzernchefin O - NN
+Marissa B-PER - NE
+Mayer I-PER - NE
 , O - $,
 die O - PRELS
 eigentlich O - ADV
@@ -58723,10 +58723,10 @@ wollte O - VMFIN
 . O - $.
 
 Yahoo B-ORG - NE
-- O 2581 $(
-Finanzvorstand O 2581 NN
-Kenneth B-PER 2581 NE
-Goldman I-PER 2581 NE
+- O - $(
+Finanzvorstand O - NN
+Kenneth B-PER - NE
+Goldman I-PER - NE
 begründete O - VVFIN
 die O - ART
 Entscheidung O - NN
@@ -61140,10 +61140,10 @@ Flugbenzin O - NN
 gelagert O - VVPP
 . O - $.
 
-Managing O 2638 FM
-Director O 2638 FM
-Sanjeev B-PER 2638 NE
-Kumar I-PER 2638 NE
+Managing O - FM
+Director O - FM
+Sanjeev B-PER - NE
+Kumar I-PER - NE
 von O - APPR
 State B-ORG - FM
 Oil I-ORG - FM
@@ -62040,8 +62040,8 @@ Spin O - NN
 - O - $(
 off O - FM
 der O - ART
-TU B-ORG 2661 NE
-München I-ORG 2661 NE
+TU B-ORG - NE
+München I-ORG - NE
 . O - $.
 
 Frederik B-PER - NE
@@ -63468,10 +63468,10 @@ Qualitätsmerkmale O - NN
 “ O - $(
 , O - $,
 erklärt O - VVFIN
-Florian B-PER 2678 NE
-Buzin I-PER 2678 NE
+Florian B-PER - NE
+Buzin I-PER - NE
 , O - $,
-Geschäftsführer O 2678 NN
+Geschäftsführer O - NN
 von O - APPR
 STARFACE B-ORG - NE
 . O - $.
@@ -63623,15 +63623,15 @@ Schatzinsel O - NN
 
 Und O - KON
 der O - ART
-Präsident O 2681 NN
+Präsident O - NN
 der O - ART
 verantwortlichen O - ADJA
-Stiftung B-ORG 2681 NN
-Preußischer I-ORG 2681 ADJA
-Kulturbesitz I-ORG 2681 NN
+Stiftung B-ORG - NN
+Preußischer I-ORG - ADJA
+Kulturbesitz I-ORG - NN
 , O - $,
-Hermann B-PER 2681 NE
-Parzinger I-PER 2681 NE
+Hermann B-PER - NE
+Parzinger I-PER - NE
 , O - $,
 sagte O - VVFIN
 : O - $.
@@ -64403,9 +64403,9 @@ Experten O - NN
 Jetzt O - ADV
 durchklicken O - ADJA
 Umfrage O - NN
-Bundesbankpräsident O 2706 NN
-Jens B-PER 2706 NE
-Weidmann I-PER 2706 NE
+Bundesbankpräsident O - NN
+Jens B-PER - NE
+Weidmann I-PER - NE
 hat O - VAFIN
 seine O - PPOSAT
 kritische O - ADJA
@@ -64757,12 +64757,12 @@ könnten O - VMFIN
 , O - $,
 sagte O - VVFIN
 der O - ART
-Chef O 2709 NN
+Chef O - NN
 der O - ART
 Airline B-ORG - NN
 , O - $,
-Carsten B-PER 2709 NE
-Spohr I-PER 2709 NE
+Carsten B-PER - NE
+Spohr I-PER - NE
 , O - $,
 dem O - ART
 Nachrichtenmagazin O - NN
@@ -66504,8 +66504,8 @@ Beteiligten O - NN
 . O - $.
 
 Vom O - APPRART
-VDC B-ORG 2742 NE
-Fellbach I-ORG 2742 NE
+VDC B-ORG - NE
+Fellbach I-ORG - NE
 , O - $,
 Partner O - NN
 in O - APPR
@@ -66513,10 +66513,10 @@ der O - ART
 Umsetzung O - NN
 , O - $,
 war O - VAFIN
-Geschäftsführer O 2742 NN
-Dr. B-PER 2742 NN
-Christoph I-PER 2742 NE
-Runde I-PER 2742 NE
+Geschäftsführer O - NN
+Dr. B-PER - NN
+Christoph I-PER - NE
+Runde I-PER - NE
 zu O - APPR
 Gast O - NN
 , O - $,
@@ -66553,10 +66553,10 @@ GmbH I-ORG - NN
 links O - ADV
 : O - $.
 
-Bernd B-PER 2745 NE
-Hansen I-PER 2745 NE
+Bernd B-PER - NE
+Hansen I-PER - NE
 , O - $,
-CEO O 2745 NN
+CEO O - NN
 Hansen B-ORG - NE
 Gruppe I-ORG - NN
 ( O - $(
@@ -67137,9 +67137,9 @@ strategisch O - ADJD
 wichtig O - ADJD
 , O - $,
 sagte O - VVFIN
-Vorstandschef O 2765 NN
-Tan B-PER 2765 NE
-Sri I-PER 2765 NE
+Vorstandschef O - NN
+Tan B-PER - NE
+Sri I-PER - NE
 Li I-PER - NE
 Scharapowa B-PER - NE
 hat O - VAFIN
@@ -67418,11 +67418,11 @@ nicht O - PTKNEG
 fest O - PTKVZ
 , O - $,
 sagte O - VVFIN
-Nationalpark B-ORG 2768 NN
-- O 2768 $(
-Leiter O 2768 NN
-Manfred B-PER 2768 NE
-Großmann I-PER 2768 NE
+Nationalpark B-ORG - NN
+- O - $(
+Leiter O - NN
+Manfred B-PER - NE
+Großmann I-PER - NE
 . O - $.
 
 Die O - ART
@@ -67484,7 +67484,7 @@ fast O - ADV
 Flüge O - NN
 wegen O - APPR
 des O - ART
-Verdi B-ORG 2775 NE
+Verdi B-ORG - NE
 - O - $(
 Warnstreiks O - NN
 Foto O - NN
@@ -67553,7 +67553,7 @@ Lufthansa B-ORG - NE
 hat O - VAFIN
 wegen O - APPR
 des O - ART
-Verdi B-ORG 2781 NE
+Verdi B-ORG - NE
 - O - $(
 Warnstreiks O - NN
 für O - APPR
@@ -67844,25 +67844,25 @@ Gemeindepräsident O - NN
 Au O - NE
 ) O - $(
 , O - $,
-Claudio B-PER 2794 NE
-Senn I-PER 2794 NE
+Claudio B-PER - NE
+Senn I-PER - NE
 ( O - $(
-stv O 2794 NE
-. O 2794 $.
+stv O - NE
+. O - $.
 
-Leiter O 2794 NN
+Leiter O - NN
 Rheinunternehmen B-ORG - NN
 ) O - $(
 , O - $,
-Roland B-PER 2797 NE
-Wälter I-PER 2797 NE
+Roland B-PER - NE
+Wälter I-PER - NE
 ( O - $(
 Gemeindepräsident O - NN
 Diepoldsau O - NE
 und O - KON
-Präsident O 2797 NN
+Präsident O - NN
 Zweckverband O - NN
-RBK B-ORG 2797 NE
+RBK B-ORG - NE
 ) O - $(
 , O - $,
 Thomas B-PER - NE
@@ -68454,9 +68454,9 @@ Datum O - NN
 Uhr O - NN
 HypoVereinsbank B-ORG - NE
 - O - $(
-Chef O 2817 NN
-Theodor B-PER 2817 NE
-Weimer I-PER 2817 NE
+Chef O - NN
+Theodor B-PER - NE
+Weimer I-PER - NE
 ist O - VAFIN
 mit O - APPR
 dem O - ART
@@ -68984,24 +68984,24 @@ von O - APPR
 2.500 O - CARD
 Euro O - NN
 überbrachten O - VVFIN
-Dr. B-PER 2820 NN
-Alfred I-PER 2820 NE
-Schaffranka I-PER 2820 NE
+Dr. B-PER - NN
+Alfred I-PER - NE
+Schaffranka I-PER - NE
 , O - $,
 Heinz B-ORG - NE
 von I-ORG - APPR
 Heiden I-ORG - NE
-- O 2820 $(
-Regionalleiter O 2820 NN
+- O - $(
+Regionalleiter O - NN
 für O - APPR
 Bayern O - NE
 , O - $,
 und O - KON
 Stefani B-ORG - NE
 Bode I-ORG - NE
-, O 2823 $,
-Leiterin O 2823 NN
-Marketing O 2823 NN
+, O - $,
+Leiterin O - NN
+Marketing O - NN
 bei O - APPR
 Heinz B-ORG - NE
 von I-ORG - APPR
@@ -71689,9 +71689,9 @@ Reuters B-ORG - NE
 - O - $(
 E.ON B-ORG - NE
 - O - $(
-Chef O 2881 NN
-Johannes B-PER 2881 NE
-Teyssen I-PER 2881 NE
+Chef O - NN
+Johannes B-PER - NE
+Teyssen I-PER - NE
 treibt O - VVFIN
 den O - ART
 Börsengang O - NN
@@ -72529,10 +72529,10 @@ geblieben O - VVPP
 , O - $,
 sagte O - VVFIN
 Hermes B-ORG - NE
-- O 2913 $(
-Geschäftsführer O 2913 NN
-Frank B-PER 2913 NE
-Rausch I-PER 2913 NE
+- O - $(
+Geschäftsführer O - NN
+Frank B-PER - NE
+Rausch I-PER - NE
 der O - ART
 Zeitung O - NN
 . O - $.
@@ -72615,13 +72615,13 @@ bringen O - VVINF
 , O - $,
 sagte O - VVFIN
 der O - ART
-Geschäftsführer O 2916 NN
+Geschäftsführer O - NN
 des O - ART
 Paketdiensts O - NN
 DPD B-ORG - NE
-, O 2916 $,
-Boris B-PER 2916 NE
-Winkelmann I-PER 2916 NE
+, O - $,
+Boris B-PER - NE
+Winkelmann I-PER - NE
 , O - $,
 der O - ART
 Verkehr O - NN
@@ -73214,15 +73214,15 @@ Anfangsphase O - NN
 » O - $(
 , O - $,
 sagte O - VVFIN
-Jan B-PER 2934 NE
-Rispens I-PER 2934 NE
+Jan B-PER - NE
+Rispens I-PER - NE
 , O - $,
-Geschäftsführer O 2934 NN
+Geschäftsführer O - NN
 des O - ART
 Branchennetzwerkes O - NN
-Erneuerbare B-ORG 2934 ADJA
-Energien I-ORG 2934 NN
-Hamburg I-ORG 2934 NE
+Erneuerbare B-ORG - ADJA
+Energien I-ORG - NN
+Hamburg I-ORG - NE
 ( O - $(
 EEHH B-ORG - NE
 ) O - $(
@@ -76573,7 +76573,7 @@ Streik O - NN
 der O - ART
 Lufthansa B-ORG - NE
 - O - $(
-Flugbegleiter B-PER 2998 NN
+Flugbegleiter B-PER - NN
 hat O - VAFIN
 am O - APPRART
 Frankfurter O - ADJA
@@ -81335,9 +81335,9 @@ Media B-ORG - FM
 - I-ORG - $(
 Saturn I-ORG - NE
 - O - $(
-Manager O 3141 NN
-Pieter B-PER 3141 NE
-Haas I-PER 3141 NE
+Manager O - NN
+Pieter B-PER - NE
+Haas I-PER - NE
 setzt O - VVFIN
 wieder O - ADV
 verstärkt O - ADJD
@@ -81771,14 +81771,14 @@ Ecken O - NN
 Doch O - KON
 dann O - ADV
 war O - VAFIN
-Peter B-PER 3165 NE
-Lauterbach I-PER 3165 NE
+Peter B-PER - NE
+Lauterbach I-PER - NE
 am O - APPRART
 Ziel O - NN
 : O - $.
 
 Der O - ART
-CEO O 3165 NN
+CEO O - NN
 des O - ART
 Kölner O - ADJA
 TV O - NN
@@ -82019,11 +82019,11 @@ dpa B-ORG - NE
 ) O - $(
 . O - $.
 
-SPD B-ORG 3176 NE
+SPD B-ORG - NE
 - O - $(
-Chef O 3176 NN
-Sigmar B-PER 3176 NE
-Gabriel I-PER 3176 NE
+Chef O - NN
+Sigmar B-PER - NE
+Gabriel I-PER - NE
 rechnet O - VVFIN
 nicht O - PTKNEG
 mit O - APPR
@@ -83062,12 +83062,12 @@ belegen O - VVINF
 “ O - $(
 , O - $,
 sagt O - VVFIN
-Sven B-PER 3199 NE
-Stricker I-PER 3199 NE
+Sven B-PER - NE
+Stricker I-PER - NE
 , O - $,
-Head O 3199 FM
-of O 3199 FM
-Investment O 3199 FM
+Head O - FM
+of O - FM
+Investment O - FM
 bei O - APPR
 BNPPRE B-ORG - NE
 . O - $.
@@ -83732,9 +83732,9 @@ Mode O - NN
 Visionär O - NN
 und O - KON
 RYU B-ORG - NE
-CEO O 3219 NN
-Marcello B-PER 3219 NE
-Leone I-PER 3219 NE
+CEO O - NN
+Marcello B-PER - NE
+Leone I-PER - NE
 persönlich O - ADJD
 in O - APPR
 Vancouver O - NE
@@ -85998,7 +85998,7 @@ Standorten O - NN
 will O - VMFIN
 die O - ART
 Gewerkschaft O - NN
-Verdi B-ORG 3258 NE
+Verdi B-ORG - NE
 den O - ART
 Druck O - NN
 im O - APPRART
@@ -86506,7 +86506,7 @@ Tarifstreit O - NN
 bei O - APPR
 der O - ART
 Lufthansa B-ORG - NE
-Flugbegleiter B-PER 3274 NN
+Flugbegleiter B-PER - NN
 - O - $(
 Streik O - NN
 ab O - APPR
@@ -86531,8 +86531,8 @@ in O - APPR
 München O - NE
 die O - ART
 Lufthansa B-ORG - NE
-- O 3279 $(
-Flugbegleiter B-PER 3279 NN
+- O - $(
+Flugbegleiter B-PER - NN
 die O - ART
 Arbeit O - NN
 niederlegen O - VVINF
@@ -86894,11 +86894,11 @@ von O - APPR
 Prozent O - NN
 . O - $.
 
-Bettina B-PER 3284 NE
-Bunge I-PER 3284 NE
+Bettina B-PER - NE
+Bunge I-PER - NE
 , O - $,
 die O - ART
-Geschäftsführerin O 3284 NN
+Geschäftsführerin O - NN
 der O - ART
 Dresden B-ORG - NE
 Marketing I-ORG - FM
@@ -87493,12 +87493,12 @@ hatte O - VAFIN
 seinen O - PPOSAT
 Vorschlag O - NN
 Bahnchef O - NN
-Rüdiger B-PER 3310 NE
-Grube I-PER 3310 NE
+Rüdiger B-PER - NE
+Grube I-PER - NE
 und O - KON
-Vorstand O 3307 NN
-Volker B-PER 3307 NE
-Kefer I-PER 3307 NE
+Vorstand O - NN
+Volker B-PER - NE
+Kefer I-PER - NE
 unterbreitet O - VVPP
 . O - $.
 
@@ -88363,11 +88363,11 @@ Dienstag O - NN
 bekanntgegeben O - VVPP
 , O - $,
 sagte O - VVFIN
-Ufo B-ORG 3380 NE
-- O 3380 $(
-Chef O 3380 NN
-Nicoley B-PER 3380 NE
-Baublies I-PER 3380 NE
+Ufo B-ORG - NE
+- O - $(
+Chef O - NN
+Nicoley B-PER - NE
+Baublies I-PER - NE
 . O - $.
 
 Ufo B-ORG - NE
@@ -89422,9 +89422,9 @@ Einschnitte O - NN
 
 Siemens B-ORG - NE
 - O - $(
-Chef O 3543 NN
-Joe B-PER 3543 NE
-Kaeser I-PER 3543 NE
+Chef O - NN
+Joe B-PER - NE
+Kaeser I-PER - NE
 spürt O - VVFIN
 die O - ART
 Krise O - NN
@@ -89920,10 +89920,10 @@ Finanznachrichten O - NN
 , O - $,
 Newsletter O - NN
 FNW O - NE
-Ralph B-PER 3587 NE
-Brand I-PER 3587 NE
+Ralph B-PER - NE
+Brand I-PER - NE
 , O - $,
-Vorstandsvorsitzender O 3587 NN
+Vorstandsvorsitzender O - NN
 Zurich B-ORG - NE
 Gruppe I-ORG - NN
 Deutschland I-ORG - NE
@@ -93992,11 +93992,11 @@ ausfällt O - VVFIN
 , O - $,
 sagte O - VVFIN
 der O - ART
-Ufo B-ORG 4287 NE
-- O 4287 $(
-Vorsitzende O 4287 NN
-Nicoley B-PER 4287 NE
-Baublies I-PER 4287 NE
+Ufo B-ORG - NE
+- O - $(
+Vorsitzende O - NN
+Nicoley B-PER - NE
+Baublies I-PER - NE
 am O - APPRART
 Sonntag O - NN
 in O - APPR
@@ -94615,9 +94615,9 @@ Bereits O - ADV
 am O - APPRART
 Vortag O - NN
 hatte O - VAFIN
-Zentralbankchef O 4312 NN
-Ioannis B-PER 4312 NE
-Stournaras I-PER 4312 NE
+Zentralbankchef O - NN
+Ioannis B-PER - NE
+Stournaras I-PER - NE
 Premier O - NN
 Alexis B-PER - NE
 Tsipras I-PER - NE
@@ -95080,13 +95080,13 @@ Analytics O - FM
 - O - $(
 Spin O - FM
 - O - $(
-off O 4331 FM
-des O 4331 ART
-Hasso B-ORG 4331 NE
-- I-ORG 4331 $(
-Plattner I-ORG 4331 NE
-- I-ORG 4331 $(
-Instituts I-ORG 4331 NN
+off O - FM
+des O - ART
+Hasso B-ORG - NE
+- I-ORG - $(
+Plattner I-ORG - NE
+- I-ORG - $(
+Instituts I-ORG - NN
 gab O - VVFIN
 heute O - ADV
 bekannt O - PTKVZ
