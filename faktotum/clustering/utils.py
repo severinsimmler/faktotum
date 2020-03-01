@@ -23,49 +23,59 @@ logging.basicConfig(format="%(message)s", level=logging.INFO)
 
 
 class Embeddings:
-    def __init__(self, model_directory, corpus):
-        path = str(Path(model_directory, f"{corpus}-cbow.word2vec"))
-        logging.info(f"Loading {path}...")
-        self.cbow_w2v = Word2Vec.load(path)
+    def __init__(self, model_directory, corpus, load="all"):
+        if load in {"cbow-word2vec", "all"}:
+            path = str(Path(model_directory, f"{corpus}-cbow.word2vec"))
+            logging.info(f"Loading {path}...")
+            self.cbow_w2v = Word2Vec.load(path)
 
-        path = str(Path(model_directory, f"{corpus}-skipgram.word2vec"))
-        logging.info(f"Loading {path}...")
-        self.skipgram_w2v = Word2Vec.load(path)
+        if load in {"skipgram-word2vec", "all"}:
+            path = str(Path(model_directory, f"{corpus}-skipgram.word2vec"))
+            logging.info(f"Loading {path}...")
+            self.skipgram_w2v = Word2Vec.load(path)
 
-        path = str(Path(model_directory, f"facebook-{corpus}-cbow.fasttext"))
-        logging.info(f"Loading {path}...")
-        self.cbow_ft_fb = FastText.load(path)
+        if load in {"cbow-fasttext-facebook", "all"}:
+            path = str(Path(model_directory, f"facebook-{corpus}-cbow.fasttext"))
+            logging.info(f"Loading {path}...")
+            self.cbow_ft_fb = FastText.load(path)
 
-        path = str(Path(model_directory, f"{corpus}-cbow.fasttext"))
-        logging.info(f"Loading {path}...")
-        self.cbow_ft = FastText.load(path)
+        if load in {"cbow-fasttext", "all"}:
+            path = str(Path(model_directory, f"{corpus}-cbow.fasttext"))
+            logging.info(f"Loading {path}...")
+            self.cbow_ft = FastText.load(path)
 
-        path = str(Path(model_directory, f"{corpus}-skipgram.fasttext"))
-        logging.info(f"Loading {path}...")
-        self.skipgram_ft = FastText.load(path)
+        if load in {"skipgram-fasttext", "all"}:
+            path = str(Path(model_directory, f"{corpus}-skipgram.fasttext"))
+            logging.info(f"Loading {path}...")
+            self.skipgram_ft = FastText.load(path)
 
-        path = "bert-base-german-dbmdz-cased"
-        logging.info(f"Loading {path}...")
-        self.bert_g = BertEmbeddings(path)
+        if load in {"bert-german", "all"}:
+            path = "bert-base-german-dbmdz-cased"
+            logging.info(f"Loading {path}...")
+            self.bert_g = BertEmbeddings(path)
 
-        path = str(Path(model_directory, f"bert-german-{corpus}-adapted"))
-        logging.info(f"Loading {path}...")
-        self.bert_ga = BertEmbeddings(path)
+        if load in {"bert-german-adapted", "all"}:
+            path = str(Path(model_directory, f"bert-german-{corpus}-adapted"))
+            logging.info(f"Loading {path}...")
+            self.bert_ga = BertEmbeddings(path)
 
-        path = "bert-base-multilingual-cased"
-        logging.info(f"Loading {path}...")
-        self.bert_m = BertEmbeddings(path)
+        if load in {"bert-multi", "all"}:
+            path = "bert-base-multilingual-cased"
+            logging.info(f"Loading {path}...")
+            self.bert_m = BertEmbeddings(path)
 
-        path = str(Path(model_directory, f"bert-multi-{corpus}-adapted"))
-        logging.info(f"Loading {path}...")
-        self.bert_ma = BertEmbeddings(path)
+        if load in {"bert-multi-adapted", "all"}:
+            path = str(Path(model_directory, f"bert-multi-{corpus}-adapted"))
+            logging.info(f"Loading {path}...")
+            self.bert_ma = BertEmbeddings(path)
 
-        if corpus == "gutenberg":
-            path = str(Path(model_directory, "ner-droc"))
-        else:
-            path = str(Path(model_directory, "ner-smartdata"))
-        logging.info(f"Loading {path}...")
-        self.bert_ner = BertEmbeddings(path)
+        if load in {"ner", "all"}:
+            if corpus == "gutenberg":
+                path = str(Path(model_directory, "ner-droc"))
+            else:
+                path = str(Path(model_directory, "ner-smartdata"))
+            logging.info(f"Loading {path}...")
+            self.bert_ner = BertEmbeddings(path)
 
     def vectorize(self, sentences, model, add_adj=False, add_nn=False, add_per=False):
         X = list()
@@ -123,12 +133,6 @@ class Embeddings:
         if add_adj:
             adjs = [i for i, token in enumerate(sentence) if "ADJA" in token[3]]
             token_indices.extend(adjs)
-        if add_nn:
-            nns = [i for i, token in enumerate(sentence) if "NN" in token[3]]
-            token_indices.extend(nns)
-        if add_per:
-            pers = [i for i, token in enumerate(sentence) if "PER" in token[1]]
-            token_indices.extend(pers)
 
     @staticmethod
     def _get_bert_embedding(tokens):

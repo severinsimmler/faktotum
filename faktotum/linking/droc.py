@@ -2,6 +2,7 @@ from pathlib import Path
 from collections import defaultdict
 import json
 import re
+import pandas as pd
 import tqdm
 
 
@@ -22,7 +23,8 @@ class EntityLinker:
         with textfile.open("r", encoding="utf-8") as file_:
             return json.load(file_)
 
-    def _build_knowledge_base(self, novel):
+    @staticmethod
+    def _build_knowledge_base(novel):
         context = defaultdict(list)
         mentions = defaultdict(set)
         for sentence in novel:
@@ -39,7 +41,6 @@ class EntityLinker:
         for key in mentions:
             kb[key]["CONTEXT"] = context[key]
             kb[key]["MENTIONS"] = mentions[key]
-            kb[key]["NIL"] = True if len(context[key]) > 1 else False
         return kb
 
     @staticmethod
@@ -56,10 +57,11 @@ class EntityLinker:
             clusters = KMeans().fit_transform(matrix)
 
     def rule_based(self):
-        tp = 0
-        fp = 0
-        fn = 0
+        stats = list()
         for novel in tqdm.tqdm(self.dataset.values()):
+            tp = 0
+            fp = 0
+            fn = 0
             kb = self._build_knowledge_base(novel)
             for sentence in novel:
                 mentions = [token for token in sentence if token[2] != "-"]
@@ -87,13 +89,13 @@ class EntityLinker:
                     else:
                         # If ambiguous, it's a FN
                         fn += 1
-        precision = self.precision(tp, fp)
-        recall = self.recall(tp, fn)
-        return {
-            "precision": precision,
-            "recall": recall,
-            "f1": self.f1(precision, recall),
-        }
+            precision = self.precision(tp, fp)
+            recall = self.recall(tp, fn)
+            f1 = self.f1(precision, recall)
+            stats.append(
+                {"precision": precision, "recall": recall, "f1": f1,}
+            )
+        return pd.DataFrame(stats).describe()
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:
