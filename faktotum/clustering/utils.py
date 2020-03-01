@@ -174,9 +174,7 @@ class Clustering:
         if algorithm is SemiSupervisedKMeans:
             self.model = algorithm(self.y, random_state=self.random_state)
         elif algorithm is AgglomerativeClustering:
-            self.model = self.model = algorithm(
-                n_clusters=self.n_clusters
-            )
+            self.model = self.model = algorithm(n_clusters=self.n_clusters)
         else:
             self.model = algorithm(
                 n_clusters=self.n_clusters, random_state=self.random_state, n_jobs=-1
@@ -187,7 +185,6 @@ class Clustering:
         return {
             "kmeans": KMeans,
             "semi-supervised-kmeans": SemiSupervisedKMeans,
-            "spectral": SpectralClustering,
             "ward": AgglomerativeClustering,
         }
 
