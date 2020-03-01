@@ -1,7 +1,6 @@
 import json
 import logging
 from pathlib import Path
-from sklearn.utils import ignore_warnings
 from sklearn.exceptions import ConvergenceWarning
 
 import pandas as pd
@@ -9,6 +8,7 @@ import pandas as pd
 from faktotum.clustering.utils import Clustering, Embeddings
 
 logging.basicConfig(format="%(message)s", level=logging.INFO)
+ConvergenceWarning("ignore")
 
 
 def load_data():
@@ -21,7 +21,6 @@ def load_data():
     return data
 
 
-@ignore_warnings(category=ConvergenceWarning)
 def compare_embeddings(model_directory):
     stats = list()
     index = list()
