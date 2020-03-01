@@ -151,21 +151,19 @@ class Embeddings:
                 yield np.array([0] * 300)
 
 class SemiSupervisedKMeans:
-    def __init__(self, n_clusters, y, random_state=23):
-        self.n_clusters = n_clusters
+    def __init__(self, y, random_state=23):
         self.y = y
         random.seed(random_state)
 
     def fit_predict(self, X):
         centroids = np.array(list(self._calculate_centroids(X)))
-        _, y = scipy.cluster.vq.kmeans2(centroids, self.n_clusters, minit='matrix')
+        _, y = scipy.cluster.vq.kmeans2(C, centroids, minit='matrix')
         return y
 
     def _calculate_centroids(self, X):
         X = pd.DataFrame(X)
         X["y"] = self.y
         for _, cluster in X.groupby("y"):
-            print(X.iloc[:, :-1])
             yield random.choice(X.iloc[:, :-1].values)
 
 class Clustering:
@@ -176,7 +174,7 @@ class Clustering:
         self.n_clusters = len(set(y))
         self.random_state = 23
         if algorithm is SemiSupervisedKMeans:
-            self.model = algorithm(n_clusters=self.n_clusters, y=y, random_state=self.random_state)
+            self.model = algorithm(self.y, random_state=self.random_state)
         else:
             self.model = algorithm(
                 n_clusters=self.n_clusters, random_state=self.random_state, n_jobs=-1
