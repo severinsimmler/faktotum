@@ -59,7 +59,7 @@ def compare_embeddings(model_directory):
                     scores.columns, scores.mean().round(2), scores.std().round(2)
                 )
             }
-            logging.info(values)
+            logging.info(json.dumps(values))
             stats.append(values)
             index.append(approach)
     return pd.DataFrame(stats, index=index)
