@@ -20,7 +20,7 @@ def load_data():
         Path(data_folder, "test.txt"),
         Path(package_folder, "data", "wikidata.txt"),
     ]
-    for file_ in data_folder.glob("*.txt"):
+    for file_ in files:
         text = file_.read_text(encoding="utf-8")
         for line in text.split("\n"):
             if not line.startswith("#"):
