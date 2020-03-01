@@ -27,15 +27,15 @@ def compare_embeddings(model_directory):
 
     for approach, model in {
         ("CBOW_{w2v}", embeddings.cbow_w2v),
-        #("Skipgram_{w2v}", embeddings.skipgram_w2v),
+        ("Skipgram_{w2v}", embeddings.skipgram_w2v),
         ("Facebook CBOW_{ft}", embeddings.cbow_ft_fb),
-        #("CBOW_{ft}", embeddings.cbow_ft),
-        #("Skipgram_{ft}", embeddings.skipgram_ft),
-        #("dBERT", embeddings.bert_g),
-        #("dBERT_{\ddagger}", embeddings.bert_ga),
-        #("mBERT", embeddings.bert_m),
-        #("mBERT_{\ddagger}", embeddings.bert_ma),
-        #("BERT_{ner}", embeddings.bert_ner),
+        ("CBOW_{ft}", embeddings.cbow_ft),
+        ("Skipgram_{ft}", embeddings.skipgram_ft),
+        ("dBERT", embeddings.bert_g),
+        ("dBERT_{\ddagger}", embeddings.bert_ga),
+        ("mBERT", embeddings.bert_m),
+        ("mBERT_{\ddagger}", embeddings.bert_ma),
+        ("BERT_{ner}", embeddings.bert_ner),
     }:
         scores = list()
         for novel in data.values():
