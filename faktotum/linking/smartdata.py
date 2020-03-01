@@ -114,9 +114,7 @@ class EntityLinker:
                             "candidates": matches[text],
                         }
                     )
-                elif (
-                    len(matches[text]) > 1 and identifier["id"] not in matches[text]
-                ):
+                elif len(matches[text]) > 1 and identifier["id"] not in matches[text]:
                     hard_to_disamiguate.append(
                         {
                             "mention": text,

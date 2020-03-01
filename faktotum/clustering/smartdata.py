@@ -14,8 +14,12 @@ def load_data():
     package_folder = Path(__file__).parent.parent
     data_folder = Path(package_folder, "data", "smartdata")
     data = dict()
-    files = [file_ for file_ in data_folder.glob("*.txt") if file_.stem in {"train", "test", "dev"}]
-    files.append(Path(package_folder, "data", "wikidata.txt"))
+    files = [
+        Path(data_folder, "train.txt"),
+        Path(data_folder, "dev.txt"),
+        Path(data_folder, "test.txt"),
+        Path(package_folder, "data", "wikidata.txt"),
+    ]
     for file_ in data_folder.glob("*.txt"):
         text = file_.read_text(encoding="utf-8")
         for line in text.split("\n"):
