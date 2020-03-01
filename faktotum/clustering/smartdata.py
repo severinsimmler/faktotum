@@ -14,18 +14,19 @@ def load_data():
     package_folder = Path(__file__).parent.parent
     data_folder = Path(package_folder, "data", "smartdata")
     data = dict()
+    files = [file_ for file_ in data_folder.glob("*.txt") if file_.stem in {"train", "test", "dev"}]
+    files.append(Path(package_folder, "data", "wikidata.txt"))
     for file_ in data_folder.glob("*.txt"):
-        if file_.stem in {"train", "test", "dev"}:
-            text = file_.read_text(encoding="utf-8")
-            for line in text.split("\n"):
-                if not line.startswith("#"):
-                    if line != "":
-                        sentence.append(line.split(" "))
-                    else:
-                        yield sentence
-                        sentence = list()
-            if sentence:
-                yield sentence
+        text = file_.read_text(encoding="utf-8")
+        for line in text.split("\n"):
+            if not line.startswith("#"):
+                if line != "":
+                    sentence.append(line.split(" "))
+                else:
+                    yield sentence
+                    sentence = list()
+        if sentence:
+            yield sentence
 
 
 def compare_embeddings(model_directory):
