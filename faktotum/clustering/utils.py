@@ -161,8 +161,7 @@ class SemiSupervisedKMeans:
         _, y = scipy.cluster.vq.kmeans2(centroids, self.n_clusters, minit='matrix')
         return y
 
-    @staticmethod
-    def _calculate_centroids(X):
+    def _calculate_centroids(self, X):
         X = pd.DataFrame(X)
         X["y"] = self.y
         for _, cluster in X.groupby("y"):
