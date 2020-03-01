@@ -96,7 +96,7 @@ class Embeddings:
         sentence_ = Sentence(text, use_tokenizer=False)
         model.embed(sentence_)
         self._add_tokens(token_indices, add_adj, add_nn, add_per)
-        tokens = [token[0] for i, token in enumerate(sentence_) if i in token_indices]
+        tokens = [token.text for i, token in enumerate(sentence_) if i in token_indices]
         return sum(self._get_bert_embedding(tokens)) / len(tokens)
 
     @staticmethod
