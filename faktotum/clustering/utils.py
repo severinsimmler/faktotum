@@ -4,6 +4,7 @@ from pathlib import Path
 import flair
 import torch
 import pandas as pd
+import scipy.cluster
 
 flair.device = torch.device("cpu")
 import numpy as np
@@ -148,6 +149,22 @@ class Embeddings:
                 # Yield a null vector if not in vocabulary
                 yield np.array([0] * 300)
 
+class SemiSupervisedKMeans:
+    def __init__(self, n_clusters, random_state=23):
+        self.n_clusters = n_clusters
+        random.seed(random_state)
+
+    def fit_predict(self, X, y):
+        centroids = np.array(self._calculate_centroids(X, y))
+        _, y = scipy.cluster.vq.kmeans2(centroids, self.n_clusters, minit='matrix')
+        return y
+
+    @staticmethod
+    def _calculate_centroids(X, y):
+        X = pd.DataFrame(X, y)
+        X["y"] = y
+        for _, cluster in X.groupby("y"):
+            yield random.choice(X.iloc[:, :-1].values)
 
 class Clustering:
     def __init__(self, algorithm, X, y):
@@ -156,14 +173,18 @@ class Clustering:
         self.y = y
         self.n_clusters = len(set(y))
         self.random_state = 23
-        self.model = algorithm(
-            n_clusters=self.n_clusters, random_state=self.random_state, n_jobs=-1
-        )
+        if isinstance(algorithm, SemiSupervisedKMeans):
+            self.model = algorithm(n_clusters=self.n_clusters, random_state=self.random_state)
+        else:
+            self.model = algorithm(
+                n_clusters=self.n_clusters, random_state=self.random_state, n_jobs=-1
+            )
 
     @property
     def algorithms(self):
         return {
             "kmeans": KMeans,
+            "semi-supervised-kmeans": SemiSupervisedKMeans,
             "spectral": SpectralClustering,
             "ward": AgglomerativeClustering,
         }
