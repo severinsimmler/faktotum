@@ -1,0 +1,9589 @@
+Republikanische O - ADJA
+Partei O - NN
+US O - NE
+-amerikanische O - ADJA
+Partei O - NN
+
+Republikanische O - ADJA
+Partei O - NN
+der O - ART
+USA O - NE
+US O - FM
+-amerikanische O - ADJA
+Partei O - NN
+
+Republican O - FM
+Party O - FM
+US O - FM
+-amerikanische O - ADJA
+Partei O - NN
+
+G.O.P O - NE
+. O - $.
+US O - FM
+-amerikanische O - ADJA
+Partei O - NN
+
+Republicans O - NE
+US O - FM
+-amerikanische O - ADJA
+Partei O - NN
+
+Grand O - FM
+Old O - FM
+Party O - FM
+US O - FM
+-amerikanische O - ADJA
+Partei O - NN
+
+United O - FM
+States O - FM
+Republican O - FM
+Party O - FM
+US O - FM
+-amerikanische O - ADJA
+Partei O - NN
+
+Bohemian O - NE
+Symphony O - FM
+Orchestra O - FM
+Prague O - NE
+ein O - ART
+Orchester O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Prag O - NE
+, O - $,
+Tschechische O - ADJA
+Republik O - NN
+. O - $.
+
+Douglas O - NE
+Costa O - NE
+de O - NE
+Souza O - NE
+brasilianischer O - ADJA
+Fußballspieler O - NN
+
+Douglas O - NE
+Costa O - NE
+brasilianischer O - ADJA
+Fußballspieler O - NN
+
+Costa O - NE
+de O - NE
+Souza O - NE
+brasilianischer O - ADJA
+Fußballspieler O - NN
+
+Brenntag O - NN
+ein O - ART
+Chemiedistributor O - NN
+
+Brenntag O - NN
+AG O - NN
+ein O - ART
+Chemiedistributor O - NN
+
+Bild O - VVIMP
+am O - APPRART
+Sonntag O - NN
+eine O - ART
+sonntags O - ADV
+im O - APPRART
+nordischen O - ADJA
+Tabloid O - NN
+erscheinende O - ADJA
+deutsche O - ADJA
+Boulevardzeitung O - NN
+. O - $.
+
+Bild O - NN
+am O - APPRART
+Sonntag O - NN
+Sie O - PPER
+ist O - VAFIN
+Teil O - NN
+der O - ART
+Bild O - NN
+-Gruppe O - TRUNC
+der O - ART
+Axel O - NE
+Springer O - NE
+SE O - NE
+und O - KON
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+meist O - ADV
+zitierten O - ADJA
+Medien O - NN
+Deutschlands O - NE
+. O - $.
+
+Bam O - NE
+S O - NE
+eine O - ART
+sonntags O - ADV
+im O - APPRART
+nordischen O - ADJA
+Tabloid O - NN
+erscheinende O - ADJA
+deutsche O - ADJA
+Boulevardzeitung O - NN
+. O - $.
+
+Bam O - NE
+S O - NE
+Sie O - PPER
+ist O - VAFIN
+Teil O - NN
+der O - ART
+Bild O - NN
+-Gruppe O - TRUNC
+der O - ART
+Axel O - NE
+Springer O - NE
+SE O - NE
+und O - KON
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+meist O - ADV
+zitierten O - ADJA
+Medien O - NN
+Deutschlands O - NE
+. O - $.
+
+BILD O - NE
+am O - APPRART
+SONNTAG O - NN
+eine O - ART
+sonntags O - ADV
+im O - APPRART
+nordischen O - ADJA
+Tabloid O - NN
+erscheinende O - ADJA
+deutsche O - ADJA
+Boulevardzeitung O - NN
+. O - $.
+
+BILD O - NE
+am O - APPRART
+SONNTAG O - NN
+Sie O - PPER
+ist O - VAFIN
+Teil O - NN
+der O - ART
+Bild O - NN
+-Gruppe O - TRUNC
+der O - ART
+Axel O - NE
+Springer O - NE
+SE O - NE
+und O - KON
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+meist O - ADV
+zitierten O - ADJA
+Medien O - NN
+Deutschlands O - NE
+. O - $.
+
+Ströer O - NE
+Media O - FM
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+Ströer O - NN
+Deutsche O - ADJA
+Städte O - NN
+Medien O - NN
+Gmb O - NE
+H O - NN
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+Ströer O - NE
+Out O - FM
+-of O - FM
+-Home O - FM
+Media O - FM
+AG O - NN
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+Deutsche O - ADJA
+Städte O - NN
+-Medien O - TRUNC
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+Deutsche O - ADJA
+Städte O - NN
+-Reklame O - TRUNC
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+Ströer O - ADJA
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+Stroer O - NE
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+Ströer O - NE
+SE O - NE
+& O - KON
+Co O - NN
+. O - $.
+KGa O - NE
+A O - FM
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+University O - FM
+of O - FM
+Talca O - NE
+Universität O - NN
+in O - APPR
+Chile O - NN
+
+FC O - NE
+Valencia O - NE
+spanischer O - ADJA
+Fußballverein O - NN
+
+Valencia O - NE
+Club O - FM
+de O - NE
+Futbol O - NE
+spanischer O - ADJA
+Fußballverein O - NN
+
+Valencia O - NE
+CF O - NE
+spanischer O - ADJA
+Fußballverein O - NN
+
+Valencia O - NE
+C.F O - NE
+. O - $.
+spanischer O - ADJA
+Fußballverein O - NN
+
+Valencia O - NE
+Club O - FM
+de O - NE
+Fútbol O - NE
+spanischer O - ADJA
+Fußballverein O - NN
+
+Kaufland O - NN
+deutsches O - ADJA
+Einzelhandelsunternehmen O - NN
+
+Kaufland O - NN
+Stiftung O - NN
+& O - KON
+Co O - NN
+KG O - NN
+deutsches O - ADJA
+Einzelhandelsunternehmen O - NN
+
+Vereinte O - ADJA
+Dienstleistungsgewerkschaft O - NN
+Gewerkschaft O - NN
+
+Verdi O - NE
+Gewerkschaft O - NN
+
+ver.di O - NE
+Gewerkschaft O - NN
+
+University O - FM
+of O - FM
+Southern O - NE
+California O - NE
+Privatuniversität O - NN
+in O - APPR
+Kalifornien O - NE
+
+Universität O - NN
+von O - APPR
+Südkalifornien O - NE
+Privatuniversität O - NN
+in O - APPR
+Kalifornien O - NE
+
+Monopolkommission O - NN
+ständiges O - ADJA
+, O - $,
+unabhängiges O - ADJA
+Beratungsgremium O - NN
+
+Bundeskriminalamt O - NN
+Bundesoberbehörde O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+BKA O - NE
+Bundesoberbehörde O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Bundeskriminalamt O - NN
+, O - $,
+BKA O - NE
+Bundesoberbehörde O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Redaktions O - NN
+Netzwerk O - NN
+Deutschland O - NE
+Redaktion O - NN
+zur O - APPRART
+Versorgung O - NN
+von O - APPR
+regionalen O - ADJA
+Tageszeitungen O - NN
+mit O - APPR
+überregionalen O - ADJA
+Nachrichten O - NN
+
+Variety O - NE
+amerikanisches O - ADJA
+Entertainmentmagazin O - NN
+
+Daily O - NE
+Variety O - NE
+amerikanisches O - ADJA
+Entertainmentmagazin O - NN
+
+Islamischer O - ADJA
+Staat O - NN
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+ISIS O - NE
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+Islamischer O - ADJA
+Staat O - NN
+im O - APPRART
+Irak O - NE
+und O - KON
+in O - APPR
+Syrien O - NE
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+IS O - NE
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+Daaisch O - ADJD
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+ISIL O - NE
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+Daesch O - NE
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+Daesh O - NE
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+NATO O - NE
+militärisches O - ADJA
+Bündnis O - NN
+europäischer O - ADJA
+und O - KON
+nordamerikanischer O - ADJA
+Staaten O - NN
+
+Organisation O - NN
+des O - ART
+Nordatlantikvertrags O - NN
+militärisches O - ADJA
+Bündnis O - NN
+europäischer O - ADJA
+und O - KON
+nordamerikanischer O - ADJA
+Staaten O - NN
+
+OTAN O - NE
+militärisches O - ADJA
+Bündnis O - NN
+europäischer O - ADJA
+und O - KON
+nordamerikanischer O - ADJA
+Staaten O - NN
+
+North O - FM
+Atlantic O - FM
+Treaty O - FM
+Organization O - FM
+militärisches O - ADJA
+Bündnis O - NN
+europäischer O - ADJA
+und O - KON
+nordamerikanischer O - ADJA
+Staaten O - NN
+
+Nordatlantikpakt O - NN
+-Organisation O - TRUNC
+militärisches O - ADJA
+Bündnis O - NN
+europäischer O - ADJA
+und O - KON
+nordamerikanischer O - ADJA
+Staaten O - NN
+
+Atlantisches O - ADJA
+Bündnis O - NN
+militärisches O - ADJA
+Bündnis O - NN
+europäischer O - ADJA
+und O - KON
+nordamerikanischer O - ADJA
+Staaten O - NN
+
+Political O - FM
+Communication O - FM
+Lab O - FM
+Organisation O - NN
+in O - APPR
+den O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+FC O - NE
+Villarreal O - NE
+spanischer O - ADJA
+Fußballverein O - NN
+
+Villarreal O - NE
+CF O - NE
+spanischer O - ADJA
+Fußballverein O - NN
+
+Landesamt O - NN
+für O - APPR
+Gesundheit O - NN
+und O - KON
+Soziales O - NN
+Berliner O - ADJA
+Behörde O - NN
+
+La O - FM
+Ge O - NE
+So O - NE
+Berliner O - ADJA
+Behörde O - NN
+
+hr1 O - NE
+deutscher O - ADJA
+Hörfunksender O - NN
+
+HR1 O - NE
+deutscher O - ADJA
+Hörfunksender O - NN
+
+Klaus O - NE
+Bouillon O - NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+CDU O - NE
+) O - $(
+und O - KON
+Innenminister O - NN
+des O - ART
+Saarlandes O - NN
+
+Gewerkschaft O - NN
+Deutscher O - ADJA
+Lokomotivführer O - NN
+Deutsche O - ADJA
+Gewerkschaft O - NN
+
+Gewerkschaft O - NN
+Deutscher O - ADJA
+Lokführer O - NN
+Deutsche O - ADJA
+Gewerkschaft O - NN
+
+Gewerkschaft O - NN
+der O - ART
+Lokführer O - NN
+Deutsche O - ADJA
+Gewerkschaft O - NN
+
+GDL O - NE
+Deutsche O - ADJA
+Gewerkschaft O - NN
+
+Uniper O - NE
+deutsches O - ADJA
+Unternehmen O - NN
+der O - ART
+Energiewirtschaft O - NN
+
+Uniper O - NE
+AG O - NN
+deutsches O - ADJA
+Unternehmen O - NN
+der O - ART
+Energiewirtschaft O - NN
+
+Uniper O - NE
+SE O - NE
+deutsches O - ADJA
+Unternehmen O - NN
+der O - ART
+Energiewirtschaft O - NN
+
+Christian O - NE
+Pulisic O - NE
+US O - FM
+-Amerikanischer O - ADJA
+Fußballspieler O - NN
+
+Christian O - NE
+Mate O - NE
+Pulisic O - NE
+US O - FM
+-Amerikanischer O - ADJA
+Fußballspieler O - NN
+
+Christian O - NE
+Pulišić O - NE
+US O - NE
+-Amerikanischer O - ADJA
+Fußballspieler O - NN
+
+Christian O - NE
+Mate O - NE
+Pulišić O - NE
+US O - NE
+-Amerikanischer O - ADJA
+Fußballspieler O - NN
+
+New O - FM
+York O - FM
+Stock O - FM
+Exchange O - FM
+Wertpapierbörse O - NN
+in O - APPR
+New O - NE
+York O - NE
+
+NYSE O - NE
+Wertpapierbörse O - NN
+in O - APPR
+New O - NE
+York O - NE
+
+Wall O - NE
+Street O - NE
+Wertpapierbörse O - NN
+in O - APPR
+New O - NE
+York O - NE
+
+Landesbetrieb O - NN
+Straßenbau O - NN
+Nordrhein O - NE
+-Westfalen O - NE
+als O - KOKOM
+Straßenbauverwaltung O - NN
+verantwortlich O - ADJD
+für O - APPR
+die O - ART
+Planung O - NN
+, O - $,
+den O - ART
+Bau O - NN
+und O - KON
+den O - ART
+Betrieb O - NN
+des O - ART
+überörtlichen O - ADJA
+Straßennetzes O - NN
+in O - APPR
+Nordrhein O - NE
+-Westfalen O - NE
+( O - $(
+NRW O - NE
+) O - $(
+und O - KON
+wurde O - VAFIN
+als O - KOKOM
+Landesbehörde O - NN
+zum O - APPRART
+1 O - CARD
+. O - $.
+
+Landesbetrieb O - NN
+Straßenbau O - NN
+Nordrhein O - NE
+-Westfalen O - NE
+Januar O - NN
+2001 O - CARD
+gegründet O - VVPP
+. O - $.
+
+Straßen O - NN
+. O - $.
+NRW O - NE
+als O - KOKOM
+Straßenbauverwaltung O - NN
+verantwortlich O - ADJD
+für O - APPR
+die O - ART
+Planung O - NN
+, O - $,
+den O - ART
+Bau O - NN
+und O - KON
+den O - ART
+Betrieb O - NN
+des O - ART
+überörtlichen O - ADJA
+Straßennetzes O - NN
+in O - APPR
+Nordrhein O - NE
+-Westfalen O - NE
+( O - $(
+NRW O - NE
+) O - $(
+und O - KON
+wurde O - VAFIN
+als O - KOKOM
+Landesbehörde O - NN
+zum O - APPRART
+1 O - CARD
+. O - $.
+
+Straßen O - NN
+. O - $.
+NRW O - NE
+Januar O - NN
+2001 O - CARD
+gegründet O - VVPP
+. O - $.
+
+Landesbetrieb O - NN
+Straßenbau O - NN
+NRW O - NE
+als O - KOKOM
+Straßenbauverwaltung O - NN
+verantwortlich O - ADJD
+für O - APPR
+die O - ART
+Planung O - NN
+, O - $,
+den O - ART
+Bau O - NN
+und O - KON
+den O - ART
+Betrieb O - NN
+des O - ART
+überörtlichen O - ADJA
+Straßennetzes O - NN
+in O - APPR
+Nordrhein O - NE
+-Westfalen O - NE
+( O - $(
+NRW O - NE
+) O - $(
+und O - KON
+wurde O - VAFIN
+als O - KOKOM
+Landesbehörde O - NN
+zum O - APPRART
+1 O - CARD
+. O - $.
+
+Landesbetrieb O - NN
+Straßenbau O - NN
+NRW O - NE
+Januar O - NN
+2001 O - CARD
+gegründet O - VVPP
+. O - $.
+
+Heinz O - NE
+-Christian O - NE
+Strache O - NE
+ehemaliger O - ADJA
+österreichischer O - ADJA
+Politiker O - NN
+( O - $(
+ehemals O - ADV
+FPÖ O - NE
+) O - $(
+
+Heinz O - NE
+Christian O - NE
+Strache O - NE
+ehemaliger O - ADJA
+österreichischer O - ADJA
+Politiker O - NN
+( O - $(
+ehemals O - ADV
+FPÖ O - NE
+) O - $(
+
+HC O - NE
+Strache O - NN
+ehemaliger O - ADJA
+österreichischer O - ADJA
+Politiker O - NN
+( O - $(
+ehemals O - ADV
+FPÖ O - NE
+) O - $(
+
+Landeskriminalamt O - NN
+Rheinland O - NE
+-Pfalz O - NE
+ein O - ART
+an O - APPR
+SIX O - NE
+Swiss O - FM
+Exchange O - FM
+kotierter O - ADJA
+Finanzdienstleister O - NN
+, O - $,
+der O - PRELS
+überwiegend O - ADJD
+inm O - APPRART
+Asset O - FM
+Management O - FM
+tätig O - ADJD
+ist O - VAFIN
+. O - $.
+
+LKA O - NE
+Rheinland O - NE
+-Pfalz O - NE
+ein O - ART
+an O - APPR
+SIX O - NE
+Swiss O - FM
+Exchange O - FM
+kotierter O - ADJA
+Finanzdienstleister O - NN
+, O - $,
+der O - PRELS
+überwiegend O - ADJD
+inm O - APPRART
+Asset O - FM
+Management O - FM
+tätig O - ADJD
+ist O - VAFIN
+. O - $.
+
+Borussia O - NE
+Mönchengladbach O - NE
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Vf O - NE
+Tu O - NE
+R O - NN
+München O - NE
+-Gladbach O - TRUNC
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Borussia O - NE
+M O - NE
+'Gladbach O - NE
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Borussia O - NE
+Vf O - NE
+L O - NE
+1900 O - CARD
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Borussia O - NE
+Verein O - NN
+für O - APPR
+Leibesübungen O - NN
+1900 O - CARD
+Mönchengladbach O - NE
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Fohlen O - NE
+-Elf O - TRUNC
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Fohlenelf O - NE
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Bor O - NE
+. O - $.
+Mönchengladbach O - NE
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Pierre O - NE
+-Emerick O - NE
+Aubameyang O - NE
+gabunischer O - ADJA
+Fußballspieler O - NN
+
+The O - FM
+Children O - FM
+’s O - FM
+Investment O - FM
+Fund O - FM
+Britischer O - ADJA
+Hedgefond O - NE
+
+The O - FM
+Children O - FM
+'s O - FM
+Investment O - FM
+Fund O - FM
+Britischer O - ADJA
+Hedgefond O - NE
+
+Zane O - NE
+Holtz O - NE
+kanadischer O - ADJA
+Schauspieler O - NN
+und O - KON
+Model O - NN
+
+Kion O - NE
+Group O - FM
+Hersteller O - NN
+von O - APPR
+Gabelstaplern O - NN
+, O - $,
+Lagertechnikgeräten O - NN
+und O - KON
+Flurförderzeugen O - NN
+
+Kion O - NE
+Hersteller O - NN
+von O - APPR
+Gabelstaplern O - NN
+, O - $,
+Lagertechnikgeräten O - NN
+und O - KON
+Flurförderzeugen O - NN
+
+Kion O - NE
+Group O - FM
+Gmb O - NE
+H O - NN
+Hersteller O - NN
+von O - APPR
+Gabelstaplern O - NN
+, O - $,
+Lagertechnikgeräten O - NN
+und O - KON
+Flurförderzeugen O - NN
+
+Baoli O - NE
+Hersteller O - NN
+von O - APPR
+Gabelstaplern O - NN
+, O - $,
+Lagertechnikgeräten O - NN
+und O - KON
+Flurförderzeugen O - NN
+
+Voltas O - NE
+Hersteller O - NN
+von O - APPR
+Gabelstaplern O - NN
+, O - $,
+Lagertechnikgeräten O - NN
+und O - KON
+Flurförderzeugen O - NN
+
+KION O - NE
+GROUP O - NE
+AG O - NN
+Hersteller O - NN
+von O - APPR
+Gabelstaplern O - NN
+, O - $,
+Lagertechnikgeräten O - NN
+und O - KON
+Flurförderzeugen O - NN
+
+From O - FM
+Software O - NN
+japanischer O - ADJA
+Publisher O - NN
+für O - APPR
+Computerspiele O - NN
+
+Kosta O - NE
+Runjaic O - NE
+deutscher O - ADJA
+Fußballtrainer O - NN
+
+Runjaic O - NE
+deutscher O - ADJA
+Fußballtrainer O - NN
+
+Bill O - NE
+Cosby O - NE
+US O - NE
+-amerikanischer O - ADJA
+Schauspieler O - NN
+, O - $,
+Komiker O - NN
+, O - $,
+Sänger O - NN
+und O - KON
+Autor O - NN
+
+William O - NE
+Henry O - NE
+Cosby O - NE
+, O - $,
+Jr O - NE
+. O - $.
+US O - FM
+-amerikanischer O - ADJA
+Schauspieler O - NN
+, O - $,
+Komiker O - NN
+, O - $,
+Sänger O - NN
+und O - KON
+Autor O - NN
+
+Intel O - NE
+US O - NE
+-amerikanischer O - ADJA
+Halbleiterhersteller O - NN
+
+Kommanditgesellschaft O - NN
+auf O - APPR
+Aktien O - NN
+Rechtsform O - NN
+der O - ART
+KGa O - NE
+A O - NN
+in O - APPR
+Deutschland O - NE
+
+KGa O - NE
+A O - FM
+Rechtsform O - NN
+der O - ART
+KGa O - NE
+A O - NN
+in O - APPR
+Deutschland O - NE
+
+Handball O - NN
+Sport O - NN
+Verein O - NN
+Hamburg O - NE
+Sportverein O - NN
+aus O - APPR
+Hamburg O - NE
+
+Thomas O - NE
+Gill O - NE
+norwegischer O - ADJA
+Fußballtorhüter O - NN
+
+Europäische O - ADJA
+Union O - NN
+europäischer O - ADJA
+Staatenverbund O - NN
+
+EU O - NE
+europäischer O - ADJA
+Staatenverbund O - NN
+
+Europa O - NE
+europäischer O - ADJA
+Staatenverbund O - NN
+
+🇪🇺 O - NE
+europäischer O - ADJA
+Staatenverbund O - NN
+
+Joachim O - NE
+Herrmann O - NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+CSU O - NE
+) O - $(
+, O - $,
+Md O - NE
+L O - NE
+, O - $,
+Innenminister O - NN
+Bayern O - NE
+
+Christian O - NE
+Nerlinger O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+General O - FM
+Electric O - FM
+einer O - PIS
+der O - ART
+größten O - ADJA
+Mischkonzerne O - NN
+der O - ART
+Welt O - NN
+
+Kingsley O - NE
+Onuegbu O - NE
+nigerianischer O - ADJA
+Fußballspieler O - NN
+
+Kingsley O - NE
+Ugochuwu O - NE
+nigerianischer O - ADJA
+Fußballspieler O - NN
+
+Ministry O - FM
+of O - FM
+Economic O - FM
+Affairs O - FM
+and O - FM
+Climate O - FM
+Policy O - FM
+Ministerium O - NN
+für O - APPR
+Wirtschaft O - NN
+und O - KON
+Klimapolitik O - NN
+
+Sp O - NE
+Vgg O - NE
+Bad O - NE
+Pyrmont O - NE
+deutscher O - ADJA
+Fußballverein O - NN
+
+Waldorf O - NE
+Frommer O - NE
+eine O - ART
+hoch O - ADJD
+spezialisierte O - ADJA
+Anwaltskanzlei O - NN
+– O - $(
+und O - KON
+führend O - ADJD
+in O - APPR
+juristischen O - ADJA
+Großprojekten O - NN
+, O - $,
+etwa O - ADV
+der O - ART
+Bekämpfung O - NN
+vielfältiger O - ADJA
+Erscheinungsformen O - NN
+von O - APPR
+Rechtsverletzungen O - NN
+im O - APPRART
+Internet O - NN
+. O - $.
+
+Kanzlei O - NN
+Waldorf O - NE
+eine O - ART
+hoch O - ADJD
+spezialisierte O - ADJA
+Anwaltskanzlei O - NN
+– O - $(
+und O - KON
+führend O - ADJD
+in O - APPR
+juristischen O - ADJA
+Großprojekten O - NN
+, O - $,
+etwa O - ADV
+der O - ART
+Bekämpfung O - NN
+vielfältiger O - ADJA
+Erscheinungsformen O - NN
+von O - APPR
+Rechtsverletzungen O - NN
+im O - APPRART
+Internet O - NN
+. O - $.
+
+FIFA O - NE
+Fußball O - NN
+-Weltverband O - TRUNC
+
+Fédération O - FM
+Internationale O - FM
+de O - FM
+Football O - FM
+Association O - FM
+Fußball O - NN
+-Weltverband O - TRUNC
+
+Fifa O - NE
+Fußball O - NN
+-Weltverband O - TRUNC
+
+Internationaler O - ADJA
+Verband O - NN
+des O - ART
+Association O - FM
+Football O - FM
+Fußball O - NN
+-Weltverband O - TRUNC
+
+CB O - NE
+Insights O - FM
+Die O - ART
+maschinelle O - ADJA
+Intelligenzplattform O - NN
+fängt O - VVFIN
+jede O - PIDAT
+Datenbank O - NN
+für O - APPR
+die O - ART
+Finanzierung O - NN
+privater O - ADJA
+Unternehmen O - NN
+und O - KON
+Engel O - NN
+-Investitionen O - TRUNC
+ab O - PTKVZ
+. O - $.
+
+E.ON O - NE
+SE O - NE
+Holdinggesellschaft O - NN
+eines O - ART
+deutschen O - ADJA
+Energiekonzerns O - NN
+
+E O - NE
+-on O - FM
+Holdinggesellschaft O - NN
+eines O - ART
+deutschen O - ADJA
+Energiekonzerns O - NN
+
+E.ON O - NE
+Holdinggesellschaft O - NN
+eines O - ART
+deutschen O - ADJA
+Energiekonzerns O - NN
+
+E.ON O - NE
+AG O - NN
+Holdinggesellschaft O - NN
+eines O - ART
+deutschen O - ADJA
+Energiekonzerns O - NN
+
+Google O - NE
+LLC O - NE
+US O - NE
+-amerikanisches O - ADJA
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Mountain O - NE
+View O - NE
+, O - $,
+Kalifornien O - NE
+
+Google O - NE
+US O - NE
+-amerikanisches O - ADJA
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Mountain O - NE
+View O - NE
+, O - $,
+Kalifornien O - NE
+
+Google O - NE
+Inc O - FM
+. O - $.
+US O - FM
+-amerikanisches O - ADJA
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Mountain O - NE
+View O - NE
+, O - $,
+Kalifornien O - NE
+
+Generalstaatsanwaltschaft O - NN
+Koblenz O - NE
+eine O - PIS
+von O - APPR
+24 O - CARD
+Generalstaatsanwaltschaften O - NN
+in O - APPR
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+. O - $.
+
+Generalstaatsanwaltschaft O - NN
+Koblenz O - NE
+Die O - ART
+Generalstaatsanwaltschaft O - NN
+Koblenz O - NE
+wurde O - VAFIN
+1946 O - CARD
+gegründet O - VVPP
+. O - $.
+
+Generalstaatsanwaltschaft O - NN
+Koblenz O - NE
+Neben O - APPR
+der O - ART
+Generalstaatsanwaltschaft O - NN
+Koblenz O - NE
+gibt O - VVFIN
+es O - PPER
+in O - APPR
+Rheinland O - NE
+-Pfalz O - NE
+die O - ART
+Generalstaatsanwaltschaft O - NN
+Zweibrücken O - NE
+. O - $.
+
+Chicharito O - NE
+mexikanischer O - ADJA
+Fußballspieler O - NN
+
+Javier O - NE
+Hernández O - NE
+Balcazar O - NE
+mexikanischer O - ADJA
+Fußballspieler O - NN
+
+Javier O - NE
+Hernandez O - NE
+mexikanischer O - ADJA
+Fußballspieler O - NN
+
+Javier O - NE
+Hernández O - NE
+mexikanischer O - ADJA
+Fußballspieler O - NN
+
+Sun O - NE
+Edison O - NE
+ein O - ART
+US O - FM
+-amerikanisches O - ADJA
+Halbleiterunternehmen O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+St O - NE
+. O - $.
+Peters O - NE
+, O - $,
+Missouri O - NE
+. O - $.
+
+Sun O - NE
+Edison O - NE
+Das O - ART
+Unternehmen O - NN
+wurde O - VAFIN
+1959 O - CARD
+als O - KOKOM
+Monsanto O - NE
+Electronic O - FM
+Materials O - FM
+Company O - FM
+gegründet O - VVPP
+und O - KON
+war O - VAFIN
+Teil O - NN
+der O - ART
+Monsanto O - NE
+-Gruppe O - TRUNC
+. O - $.
+
+Sun O - NE
+Edison O - NE
+Seit O - APPR
+30 O - CARD
+. O - $.
+
+Sun O - NE
+Edison O - NE
+Mai O - NN
+2013 O - CARD
+firmiert O - VVFIN
+MEMC O - NE
+unter O - APPR
+dem O - ART
+Namen O - NN
+Sun O - NE
+Edison O - NE
+. O - $.
+
+Taktisches O - ADJA
+Luftwaffengeschwader O - NN
+51 O - CARD
+ein O - ART
+Aufklärungsgeschwader O - NN
+der O - ART
+Bundeswehr O - NN
+. O - $.
+
+Taktisches O - ADJA
+Luftwaffengeschwader O - NN
+51 O - CARD
+Es O - PPER
+ist O - VAFIN
+das O - ART
+jüngste O - ADJA
+Geschwader O - NN
+der O - ART
+Luftwaffe O - NN
+und O - KON
+das O - ART
+einzige O - ADJA
+mit O - APPR
+der O - ART
+Fähigkeit O - NN
+zur O - APPRART
+bemannten O - ADJA
+und O - KON
+unbemannten O - ADJA
+taktischen O - ADJA
+Luftaufklärung O - NN
+innerhalb O - APPR
+der O - ART
+Bundeswehr O - NN
+. O - $.
+
+Aufklärungsgeschwader O - NN
+51 O - CARD
+ein O - ART
+Aufklärungsgeschwader O - NN
+der O - ART
+Bundeswehr O - NN
+. O - $.
+
+Aufklärungsgeschwader O - NN
+51 O - CARD
+Es O - PPER
+ist O - VAFIN
+das O - ART
+jüngste O - ADJA
+Geschwader O - NN
+der O - ART
+Luftwaffe O - NN
+und O - KON
+das O - ART
+einzige O - ADJA
+mit O - APPR
+der O - ART
+Fähigkeit O - NN
+zur O - APPRART
+bemannten O - ADJA
+und O - KON
+unbemannten O - ADJA
+taktischen O - ADJA
+Luftaufklärung O - NN
+innerhalb O - APPR
+der O - ART
+Bundeswehr O - NN
+. O - $.
+
+Deutscher O - ADJA
+Akademischer O - ADJA
+Austauschdienst O - NN
+Gemeinschaftseinrichtung O - NN
+der O - ART
+deutschen O - ADJA
+Hochschulen O - NN
+und O - KON
+Studierendenschaften O - NN
+zur O - APPRART
+Pflege O - NN
+ihrer O - PPOSAT
+internationalen O - ADJA
+Beziehungen O - NN
+
+Deutscher O - ADJA
+Akademischer O - ADJA
+Austauschdienst O - NN
+e O - FM
+. O - $.
+V O - CARD
+. O - $.
+Gemeinschaftseinrichtung O - NN
+der O - ART
+deutschen O - ADJA
+Hochschulen O - NN
+und O - KON
+Studierendenschaften O - NN
+zur O - APPRART
+Pflege O - NN
+ihrer O - PPOSAT
+internationalen O - ADJA
+Beziehungen O - NN
+
+DAAD O - NE
+Gemeinschaftseinrichtung O - NN
+der O - ART
+deutschen O - ADJA
+Hochschulen O - NN
+und O - KON
+Studierendenschaften O - NN
+zur O - APPRART
+Pflege O - NN
+ihrer O - PPOSAT
+internationalen O - ADJA
+Beziehungen O - NN
+
+Consumer O - FM
+Electronics O - FM
+Show O - FM
+Messe O - NN
+für O - APPR
+Unterhaltungselektronik O - NN
+
+Summer O - FM
+Consumer O - FM
+Electronics O - FM
+Show O - FM
+Messe O - NN
+für O - APPR
+Unterhaltungselektronik O - NN
+
+CES O - NN
+Messe O - NN
+für O - APPR
+Unterhaltungselektronik O - NN
+
+Puls O - NN
+4 O - CARD
+Österreichischer O - ADJA
+Fernsehsender O - NN
+der O - ART
+Pro O - FM
+Sieben O - CARD
+Sat1 O - NE
+-Gruppe O - TRUNC
+
+Puls O - NN
+4 O - CARD
+HD O - NN
+Österreichischer O - ADJA
+Fernsehsender O - NN
+der O - ART
+Pro O - FM
+Sieben O - CARD
+Sat1 O - NE
+-Gruppe O - TRUNC
+
+PULS O - NN
+4 O - CARD
+Austria O - NE
+Österreichischer O - ADJA
+Fernsehsender O - NN
+der O - ART
+Pro O - FM
+Sieben O - CARD
+Sat1 O - NE
+-Gruppe O - TRUNC
+
+Puls4 O - NN
+Österreichischer O - ADJA
+Fernsehsender O - NN
+der O - ART
+Pro O - FM
+Sieben O - CARD
+Sat1 O - NE
+-Gruppe O - TRUNC
+
+Puls O - NN
+TV O - NN
+Österreichischer O - ADJA
+Fernsehsender O - NN
+der O - ART
+Pro O - FM
+Sieben O - CARD
+Sat1 O - NE
+-Gruppe O - TRUNC
+
+Philipp O - NE
+Lahm O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Lahm O - NE
+, O - $,
+Philipp O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Channing O - NE
+Tatum O - NE
+US O - FM
+-amerikanischer O - ADJA
+Schauspieler O - NN
+
+Channing O - NE
+Matthew O - NE
+Tatum O - NE
+US O - NE
+-amerikanischer O - ADJA
+Schauspieler O - NN
+
+Eybl O - NE
+International O - FM
+Sitz O - NN
+im O - APPRART
+österreichischen O - ADJA
+Krems O - NN
+war O - VAFIN
+ein O - ART
+Automobilzulieferer O - NN
+. O - $.
+
+Eybl O - NE
+International O - FM
+Das O - ART
+operative O - ADJA
+Geschäft O - NN
+des O - ART
+Unternehmens O - NN
+wurde O - VAFIN
+per O - APPR
+Ende O - NN
+2008 O - CARD
+an O - APPR
+Prevent O - NN
+DEV O - NE
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Wolfsburg O - NE
+veräußert O - VVPP
+, O - $,
+die O - PRELS
+seither O - ADV
+die O - ART
+Geschäfte O - NN
+fortführt O - VVFIN
+. O - $.
+
+Columbia O - FM
+Broadcasting O - FM
+System O - FM
+Fernseh O - NN
+-Netzwerk O - TRUNC
+in O - APPR
+den O - ART
+USA O - NE
+
+CBS O - NE
+Fernseh O - NN
+-Netzwerk O - TRUNC
+in O - APPR
+den O - ART
+USA O - NE
+
+Universal O - FM
+Studios O - FM
+Home O - FM
+Entertainment O - FM
+Abteilung O - NN
+für O - APPR
+den O - ART
+Vertrieb O - NN
+von O - APPR
+Heimvideos O - NN
+von O - APPR
+Universal O - FM
+Pictures O - FM
+. O - $.
+
+Thomas O - NE
+Tuchel O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+und O - KON
+- O - $(
+trainer O - NN
+
+AMC O - NE
+US O - NE
+-amerikanischer O - ADJA
+Kabelsender O - NN
+
+American O - FM
+Movie O - FM
+Channel O - FM
+US O - FM
+-amerikanischer O - ADJA
+Kabelsender O - NN
+
+American O - FM
+Movie O - FM
+Classics O - FM
+US O - FM
+-amerikanischer O - ADJA
+Kabelsender O - NN
+
+AMC O - NE
+Network O - FM
+US O - FM
+-amerikanischer O - ADJA
+Kabelsender O - NN
+
+Trumpf O - NE
+Hüttinger O - NE
+ein O - ART
+deutsches O - ADJA
+Unternehmen O - NN
+im O - APPRART
+Bereich O - NN
+der O - ART
+DC O - NN
+- O - $(
+, O - $,
+Mittelfrequenz O - NN
+- O - $(
+und O - KON
+Hochfrequenzgeneratoren O - NN
+für O - APPR
+die O - ART
+Plasmaanregung O - NN
+, O - $,
+Induktionserwärmung O - NN
+und O - KON
+CO2 O - NE
+-Laseranregung O - TRUNC
+. O - $.
+
+HÜTTINGER O - NE
+Elektronik O - NN
+ein O - ART
+deutsches O - ADJA
+Unternehmen O - NN
+im O - APPRART
+Bereich O - NN
+der O - ART
+DC O - NN
+- O - $(
+, O - $,
+Mittelfrequenz O - NN
+- O - $(
+und O - KON
+Hochfrequenzgeneratoren O - NN
+für O - APPR
+die O - ART
+Plasmaanregung O - NN
+, O - $,
+Induktionserwärmung O - NN
+und O - KON
+CO2 O - NE
+-Laseranregung O - TRUNC
+. O - $.
+
+Osman O - NE
+Orsal O - NE
+Fotojournalist O - NN
+bei O - APPR
+der O - ART
+internationalen O - ADJA
+Nachrichtenagentur O - NN
+Reuters O - NE
+. O - $.
+
+Christlich O - ADJD
+Demokratische O - ADJA
+Union O - NN
+Deutschlands O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+CDU O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Bachirou O - NE
+Salou O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Allianz O - NN
+SE O - NE
+Europäisches O - ADJA
+Versicherungsunternehmen O - NN
+
+Allianz O - NN
+Versicherung O - NN
+Europäisches O - ADJA
+Versicherungsunternehmen O - NN
+
+Allianz O - NN
+Group O - FM
+Europäisches O - ADJA
+Versicherungsunternehmen O - NN
+
+BMW O - NE
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+BMW O - NE
+Group O - NE
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+BMW O - NE
+AG O - NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Rapp O - NE
+Motorenwerke O - NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Bayerische O - ADJA
+Motoren O - NN
+Werke O - NN
+Aktiengesellschaft O - NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Bayerische O - ADJA
+Motoren O - NN
+Werke O - NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Bayerische O - ADJA
+Motorenwerke O - NN
+AG O - NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Bayerische O - ADJA
+Motoren O - NN
+Werke O - NN
+AG O - NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Bayerische O - ADJA
+Motorenwerke O - NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Forschungs O - NN
+- O - TRUNC
+und O - KON
+Innovationszentrum O - NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Bimmer O - NE
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Mobilezone O - NE
+ein O - ART
+in O - APPR
+der O - ART
+Mobil O - NN
+- O - TRUNC
+und O - KON
+Festnetztelefonie O - NN
+tätiges O - ADJA
+unabhängiges O - ADJA
+Schweizer O - ADJA
+Unternehmen O - NN
+, O - $,
+das O - PRELS
+seit O - APPR
+2001 O - CARD
+an O - APPR
+der O - ART
+Schweizer O - ADJA
+Börse O - NN
+SIX O - NE
+kotiert O - VVPP
+ist O - VAFIN
+. O - $.
+
+Imago O - NE
+Bildagentur O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+lizenzpflichtigen O - ADJA
+Bildern O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Berlin O - NE
+
+Technische O - ADJA
+Universität O - NN
+München O - NE
+Technische O - ADJA
+Universität O - NN
+in O - APPR
+Bayern O - NE
+
+TU O - NE
+München O - NE
+Technische O - ADJA
+Universität O - NN
+in O - APPR
+Bayern O - NE
+
+TH O - NN
+München O - NE
+Technische O - ADJA
+Universität O - NN
+in O - APPR
+Bayern O - NE
+
+Technische O - ADJA
+Hochschule O - NN
+München O - NE
+Technische O - ADJA
+Universität O - NN
+in O - APPR
+Bayern O - NE
+
+TUM O - NE
+Technische O - ADJA
+Universität O - NN
+in O - APPR
+Bayern O - NE
+
+Technische O - ADJA
+Universität O - NN
+München O - NE
+( O - $(
+TUM O - NE
+) O - $(
+Technische O - ADJA
+Universität O - NN
+in O - APPR
+Bayern O - NE
+
+HTC O - NE
+Corporation O - FM
+taiwanesischer O - ADJA
+Elektronikgeräte O - NN
+-Hersteller O - TRUNC
+
+High O - FM
+Tech O - FM
+Computer O - FM
+Corporation O - FM
+taiwanesischer O - ADJA
+Elektronikgeräte O - NN
+-Hersteller O - TRUNC
+
+Xda O - NE
+neo O - NE
+taiwanesischer O - ADJA
+Elektronikgeräte O - NN
+-Hersteller O - TRUNC
+
+Dopod O - NE
+taiwanesischer O - ADJA
+Elektronikgeräte O - NN
+-Hersteller O - TRUNC
+
+Qtek O - NE
+taiwanesischer O - ADJA
+Elektronikgeräte O - NN
+-Hersteller O - TRUNC
+
+Smart O - FM
+Digital O - FM
+Assistant O - FM
+taiwanesischer O - ADJA
+Elektronikgeräte O - NN
+-Hersteller O - TRUNC
+
+Vodafone O - NE
+Personal O - FM
+Assistant O - FM
+taiwanesischer O - ADJA
+Elektronikgeräte O - NN
+-Hersteller O - TRUNC
+
+Sozialdemokratische O - ADJA
+Partei O - NN
+Deutschlands O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+SPD O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Düsseldorf O - NE
+Airport O - NN
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Düsseldorf O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+EDDL O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+DUS O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Columbia O - NE
+University O - FM
+Universität O - NN
+in O - APPR
+den O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Columbia O - NE
+-Universität O - TRUNC
+Universität O - NN
+in O - APPR
+den O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Universität O - NN
+von O - APPR
+Columbia O - NE
+Universität O - NN
+in O - APPR
+den O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Columbia O - NE
+University O - FM
+in O - FM
+the O - FM
+City O - FM
+of O - FM
+New O - FM
+York O - FM
+Universität O - NN
+in O - APPR
+den O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+D O - NN
+. O - $.
+Swarovski O - NE
+oesterreichische O - ADJA
+Unternehmensgruppe O - NN
+
+Swarovski O - NE
+KG O - NN
+oesterreichische O - ADJA
+Unternehmensgruppe O - NN
+
+D O - NN
+. O - $.
+Swarovski O - NE
+KG O - NN
+oesterreichische O - ADJA
+Unternehmensgruppe O - NN
+
+D O - NN
+. O - $.
+Swarovski O - NE
+& O - KON
+Co O - NN
+. O - $.
+oesterreichische O - ADJA
+Unternehmensgruppe O - NN
+
+SSV O - NE
+Ulm O - NE
+1846 O - CARD
+deutscher O - ADJA
+Sportverein O - NN
+
+SSV O - NE
+Ulm O - NE
+deutscher O - ADJA
+Sportverein O - NN
+
+Schwimm O - NN
+- O - TRUNC
+und O - KON
+Sportverein O - NN
+Ulm O - NE
+1846 O - CARD
+deutscher O - ADJA
+Sportverein O - NN
+
+Sextus O - NE
+Tarquinius O - NE
+Prinz O - NE
+und O - KON
+Sohn O - NN
+des O - ART
+letzten O - ADJA
+Königs O - NN
+von O - APPR
+Rom O - NE
+
+Boutros O - NE
+Boutros O - NE
+-Ghali O - NE
+ägyptischer O - ADJA
+Politiker O - NN
+und O - KON
+sechster O - ADJA
+Generalsekretär O - NN
+der O - ART
+Vereinten O - ADJA
+Nationen O - NN
+
+Digital O - FM
+Illusions O - FM
+CE O - NE
+schwedisches O - ADJA
+Spieleentwickler O - NN
+-Studio O - TRUNC
+
+EA O - NE
+DICE O - NE
+schwedisches O - ADJA
+Spieleentwickler O - NN
+-Studio O - TRUNC
+
+Digital O - FM
+Illusions O - FM
+schwedisches O - ADJA
+Spieleentwickler O - NN
+-Studio O - TRUNC
+
+Digital O - FM
+Illusions O - FM
+Creative O - FM
+Entertainment O - FM
+schwedisches O - ADJA
+Spieleentwickler O - NN
+-Studio O - TRUNC
+
+EA O - NE
+Digital O - FM
+Illusions O - FM
+CE O - NE
+schwedisches O - ADJA
+Spieleentwickler O - NN
+-Studio O - TRUNC
+
+DICE O - NE
+schwedisches O - ADJA
+Spieleentwickler O - NN
+-Studio O - TRUNC
+
+Madonna O - NE
+US O - FM
+-amerikanische O - ADJA
+Sängerin O - NN
+, O - $,
+Autorin O - NN
+, O - $,
+Model O - NN
+, O - $,
+Schauspielerin O - NN
+, O - $,
+Produzentin O - NN
+und O - KON
+Stilikone O - NN
+
+Madonna O - NE
+Louise O - NE
+Ciccone O - NE
+US O - FM
+-amerikanische O - ADJA
+Sängerin O - NN
+, O - $,
+Autorin O - NN
+, O - $,
+Model O - NN
+, O - $,
+Schauspielerin O - NN
+, O - $,
+Produzentin O - NN
+und O - KON
+Stilikone O - NN
+
+Madonna O - NE
+Louise O - NE
+Veronica O - NE
+Ciccone O - NE
+US O - FM
+-amerikanische O - ADJA
+Sängerin O - NN
+, O - $,
+Autorin O - NN
+, O - $,
+Model O - NN
+, O - $,
+Schauspielerin O - NN
+, O - $,
+Produzentin O - NN
+und O - KON
+Stilikone O - NN
+
+MARS O - NE
+Corporation O - FM
+Entwickler O - NN
+von O - APPR
+Videospielen O - NN
+. O - $.
+
+Hidetaka O - NE
+Miyazaki O - NE
+japanischer O - ADJA
+Spieleentwickler O - NN
+, O - $,
+Designer O - NN
+, O - $,
+Schriftsteller O - NN
+und O - KON
+Präsident O - NN
+von O - APPR
+From O - FM
+Software O - NN
+
+Twitter O - ADJA
+Mikrobloggingdienst O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Twitter O - NE
+Inc O - FM
+. O - $.
+
+twitter.com O - NE
+Mikrobloggingdienst O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Twitter O - NE
+Inc O - FM
+. O - $.
+
+www.twitter.com O - NE
+Mikrobloggingdienst O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Twitter O - NE
+Inc O - FM
+. O - $.
+
+Lucasfilm O - NE
+Filmproduktionsgesellschaft O - NN
+
+Lucasfilm O - NE
+Ltd O - NE
+. O - $.
+Filmproduktionsgesellschaft O - NN
+
+Pierre O - NE
+Boulez O - NE
+französischer O - ADJA
+Komponist O - NN
+, O - $,
+Dirigent O - NN
+und O - KON
+Musiktheoretiker O - NN
+
+Boulez O - NE
+französischer O - ADJA
+Komponist O - NN
+, O - $,
+Dirigent O - NN
+und O - KON
+Musiktheoretiker O - NN
+
+Glas O - NN
+deutscher O - ADJA
+Landmaschinen O - NN
+- O - $(
+und O - KON
+später O - ADJD
+auch O - ADV
+Kraftfahrzeughersteller O - NN
+
+Hans O - NE
+Glas O - NE
+Gmb O - NE
+H O - NN
+deutscher O - ADJA
+Landmaschinen O - NN
+- O - $(
+und O - KON
+später O - ADJD
+auch O - ADV
+Kraftfahrzeughersteller O - NN
+
+Leicester O - NE
+City O - NE
+englischer O - ADJA
+Fußballverein O - NN
+
+The O - FM
+Foxes O - NE
+englischer O - ADJA
+Fußballverein O - NN
+
+Universidad O - FM
+Técnica O - FM
+del O - FM
+Estado O - NE
+eine O - ART
+1947 O - CARD
+gegründete O - ADJA
+öffentliche O - ADJA
+Universität O - NN
+, O - $,
+deren O - PRELAT
+Vorgängerin O - NN
+die O - ART
+Escuela O - FM
+de O - FM
+Artes O - FM
+y O - FM
+Oficios O - FM
+( O - $(
+1849 O - CARD
+) O - $(
+ist O - VAFIN
+und O - KON
+aus O - APPR
+der O - PRELS
+1981 O - CARD
+die O - ART
+Universidad O - FM
+de O - NE
+Antofagasta O - NE
+, O - $,
+die O - ART
+Universidad O - FM
+de O - NE
+Atacama O - NE
+, O - $,
+die O - ART
+Universidad O - FM
+de O - FM
+La O - FM
+Serena O - NE
+, O - $,
+die O - ART
+Universidad O - FM
+de O - FM
+Santiago O - NE
+de O - NE
+Chile O - NE
+, O - $,
+die O - ART
+Universidad O - FM
+del O - NE
+Bío O - NE
+-Bío O - FM
+, O - $,
+die O - ART
+Universidad O - FM
+de O - FM
+la O - FM
+Frontera O - FM
+und O - KON
+die O - ART
+Universidad O - FM
+de O - NE
+Magallanes O - NE
+hervorgingen O - VVFIN
+. O - $.
+
+Vereinte O - ADJA
+Nationen O - NN
+globale O - ADJA
+internationale O - ADJA
+und O - KON
+zwischenstaatliche O - ADJA
+Organisation O - NN
+
+UNO O - NE
+globale O - ADJA
+internationale O - ADJA
+und O - KON
+zwischenstaatliche O - ADJA
+Organisation O - NN
+
+UN O - NE
+globale O - ADJA
+internationale O - ADJA
+und O - KON
+zwischenstaatliche O - ADJA
+Organisation O - NN
+
+VN O - NE
+globale O - ADJA
+internationale O - ADJA
+und O - KON
+zwischenstaatliche O - ADJA
+Organisation O - NN
+
+Völkergemeinschaft O - NN
+globale O - ADJA
+internationale O - ADJA
+und O - KON
+zwischenstaatliche O - ADJA
+Organisation O - NN
+
+Lucas O - NE
+Arts O - NE
+US O - NE
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+für O - APPR
+Computerspiele O - NN
+
+Lucasfilm O - NE
+Games O - FM
+US O - FM
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+für O - APPR
+Computerspiele O - NN
+
+Lucasfilm O - NE
+-Games O - FM
+US O - FM
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+für O - APPR
+Computerspiele O - NN
+
+Lucas O - NE
+Arts O - NE
+US O - NE
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+für O - APPR
+Computerspiele O - NN
+
+Lucas O - NE
+Arts O - FM
+Entertainment O - FM
+Company O - FM
+LLC O - NE
+US O - NE
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+für O - APPR
+Computerspiele O - NN
+
+LEC O - NE
+US O - FM
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+für O - APPR
+Computerspiele O - NN
+
+Gianni O - NE
+Infantino O - NE
+Schweizer O - ADJA
+Fußballfunktionär O - NN
+
+Giovanni O - NE
+Vincenzo O - NE
+Infantino O - NE
+Schweizer O - ADJA
+Fußballfunktionär O - NN
+
+Giovanni O - NE
+Infantino O - NE
+Schweizer O - ADJA
+Fußballfunktionär O - NN
+
+VOX O - NE
+deutscher O - ADJA
+Fernsehsender O - NN
+
+VOX O - NE
+HD O - NE
+deutscher O - ADJA
+Fernsehsender O - NN
+
+VOX O - NE
+Television O - NE
+Gmb O - NE
+H O - NN
+deutscher O - ADJA
+Fernsehsender O - NN
+
+VOX O - NE
+-HD O - NE
+deutscher O - ADJA
+Fernsehsender O - NN
+
+Tele O - NE
+M1 O - NE
+ein O - ART
+konzessionierter O - ADJA
+regionaler O - ADJA
+Privatfernsehsender O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+für O - APPR
+die O - ART
+Kantone O - NN
+Aargau O - NE
+und O - KON
+Solothurn O - NE
+. O - $.
+
+Deutsche O - ADJA
+Gesellschaft O - NN
+für O - APPR
+Auswärtige O - ADJA
+Politik O - NN
+deutsches O - ADJA
+Netzwerk O - NN
+und O - KON
+Denkfabrik O - NN
+für O - APPR
+Außenpolitik O - NN
+
+DGAP O - NE
+deutsches O - ADJA
+Netzwerk O - NN
+und O - KON
+Denkfabrik O - NN
+für O - APPR
+Außenpolitik O - NN
+
+German O - FM
+Council O - FM
+on O - FM
+Foreign O - FM
+Relations O - FM
+deutsches O - ADJA
+Netzwerk O - NN
+und O - KON
+Denkfabrik O - NN
+für O - APPR
+Außenpolitik O - NN
+
+Olaf O - NE
+Lies O - NE
+Deutscher O - ADJA
+Politiker O - NN
+( O - $(
+SPD O - NE
+) O - $(
+, O - $,
+Md O - NE
+L O - NE
+
+Mark O - NN
+Zuckerberg O - NE
+US O - NE
+-amerikanischer O - ADJA
+Unternehmer O - NN
+
+Mark O - NN
+Elliot O - NE
+Zuckerberg O - NE
+US O - NE
+-amerikanischer O - ADJA
+Unternehmer O - NN
+
+Mariano O - NE
+Rajoy O - NE
+ehemaliger O - ADJA
+Präsident O - NN
+der O - ART
+Regierung O - NN
+Spaniens O - NE
+
+Mariano O - NE
+Rajoy O - NE
+Brey O - NE
+ehemaliger O - ADJA
+Präsident O - NN
+der O - ART
+Regierung O - NN
+Spaniens O - NE
+
+Erixx O - NE
+als O - KOKOM
+Teil O - NN
+der O - ART
+Netinera O - NE
+-Gruppe O - TRUNC
+ein O - ART
+nichtbundeseigenes O - ADJA
+Eisenbahnverkehrsunternehmen O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Soltau O - NE
+. O - $.
+
+Erixx O - NE
+Die O - ART
+Gesellschaft O - NN
+betreibt O - VVFIN
+verschiedene O - ADJA
+Bahnstrecken O - NN
+in O - APPR
+der O - ART
+Lüneburger O - ADJA
+Heide O - NN
+, O - $,
+in O - APPR
+der O - ART
+Region O - NN
+Braunschweig O - NE
+und O - KON
+im O - APPRART
+Harz O - NN
+. O - $.
+
+Heidekreuz O - NE
+als O - KOKOM
+Teil O - NN
+der O - ART
+Netinera O - NE
+-Gruppe O - TRUNC
+ein O - ART
+nichtbundeseigenes O - ADJA
+Eisenbahnverkehrsunternehmen O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Soltau O - NE
+. O - $.
+
+Heidekreuz O - NE
+Die O - ART
+Gesellschaft O - NN
+betreibt O - VVFIN
+verschiedene O - ADJA
+Bahnstrecken O - NN
+in O - APPR
+der O - ART
+Lüneburger O - ADJA
+Heide O - NN
+, O - $,
+in O - APPR
+der O - ART
+Region O - NN
+Braunschweig O - NE
+und O - KON
+im O - APPRART
+Harz O - NN
+. O - $.
+
+Heidekreuzbahn O - NN
+als O - KOKOM
+Teil O - NN
+der O - ART
+Netinera O - NE
+-Gruppe O - TRUNC
+ein O - ART
+nichtbundeseigenes O - ADJA
+Eisenbahnverkehrsunternehmen O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Soltau O - NE
+. O - $.
+
+Heidekreuzbahn O - NN
+Die O - ART
+Gesellschaft O - NN
+betreibt O - VVFIN
+verschiedene O - ADJA
+Bahnstrecken O - NN
+in O - APPR
+der O - ART
+Lüneburger O - ADJA
+Heide O - NN
+, O - $,
+in O - APPR
+der O - ART
+Region O - NN
+Braunschweig O - NE
+und O - KON
+im O - APPRART
+Harz O - NN
+. O - $.
+
+Carsten O - NE
+Kengeter O - NE
+deutscher O - ADJA
+Manager O - NN
+
+Guy O - NE
+Oseary O - NE
+ein O - ART
+US O - FM
+-amerikanischer O - ADJA
+Talentmanager O - NN
+, O - $,
+Investor O - NN
+, O - $,
+Schriftsteller O - NN
+und O - KON
+Geschäftsmann O - NN
+. O - $.
+
+Mars O - NE
+Incorporated O - FM
+US O - FM
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Greenies O - NE
+US O - FM
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Mars O - NE
+Inc O - FM
+. O - $.
+US O - FM
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Kitekat O - NN
+US O - NE
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Dreamies O - NN
+US O - FM
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Masterfoods O - NE
+US O - FM
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+James O - NE
+Wellbeloved O - NE
+US O - NE
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Seramis O - NE
+US O - FM
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Effem O - NE
+US O - FM
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Sports O - FM
+Direct O - FM
+Sportartikel O - NN
+- O - $(
+und O - KON
+Mode O - NN
+-Einzelhandelskette O - TRUNC
+
+Freie O - ADJA
+Demokratische O - ADJA
+Partei O - NN
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+FDP O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+F.D.P O - NE
+. O - $.
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Freie O - ADJA
+Demokraten O - NN
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Die O - ART
+Liberalen O - ADJA
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+German O - NE
+Pellets O - NE
+Produzent O - NN
+und O - KON
+Händler O - NN
+von O - APPR
+Holzpellets O - NN
+
+Gornergratbahn O - NN
+meterspurige O - ADJA
+Schmalspurbahn O - NN
+mit O - APPR
+Drehstrombetrieb O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+
+Fahrplanfeld O - NN
+139 O - CARD
+meterspurige O - ADJA
+Schmalspurbahn O - NN
+mit O - APPR
+Drehstrombetrieb O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+
+Gornergrat O - NE
+-Bahn O - TRUNC
+meterspurige O - ADJA
+Schmalspurbahn O - NN
+mit O - APPR
+Drehstrombetrieb O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+
+Gornergrat O - NE
+Bahn O - NN
+meterspurige O - ADJA
+Schmalspurbahn O - NN
+mit O - APPR
+Drehstrombetrieb O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+
+Gornergrat O - NE
+-Monte O - NE
+Rosa O - NE
+-Bahnen O - TRUNC
+meterspurige O - ADJA
+Schmalspurbahn O - NN
+mit O - APPR
+Drehstrombetrieb O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+
+Rotenboden O - NN
+meterspurige O - ADJA
+Schmalspurbahn O - NN
+mit O - APPR
+Drehstrombetrieb O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+
+Gornergratbahn、略:GGB O - NE
+meterspurige O - ADJA
+Schmalspurbahn O - NN
+mit O - APPR
+Drehstrombetrieb O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+
+Escada O - NE
+SE O - NE
+Mode O - NN
+-Unternehmen O - TRUNC
+
+Escada O - NE
+Mode O - NN
+-Unternehmen O - TRUNC
+
+Werner O - NE
+Seifert O - NE
+Schweizer O - ADJA
+Manager O - NN
+und O - KON
+Vorstandsvorsitzender O - NN
+der O - ART
+Deutschen O - ADJA
+Börse O - NN
+AG O - NN
+
+Werner O - NE
+G O - NN
+. O - $.
+Seifert O - NE
+Schweizer O - ADJA
+Manager O - NN
+und O - KON
+Vorstandsvorsitzender O - NN
+der O - ART
+Deutschen O - ADJA
+Börse O - NN
+AG O - NN
+
+e O - FM
+Bay O - FM
+US O - FM
+-amerikanisches O - ADJA
+, O - $,
+weltweit O - ADJD
+größtes O - ADJA
+Internetauktionshaus O - NN
+
+Vf O - NE
+R O - NE
+Aalen O - NE
+deutscher O - ADJA
+Fußballverein O - NN
+
+Sepp O - NE
+Blatter O - NE
+Schweizer O - ADJA
+Fussballfunktionär O - NN
+
+Joseph O - NE
+Blatter O - NE
+Schweizer O - ADJA
+Fussballfunktionär O - NN
+
+Josef O - NE
+Blatter O - NE
+Schweizer O - ADJA
+Fussballfunktionär O - NN
+
+Joseph O - NE
+S O - NE
+. O - $.
+Blatter O - NE
+Schweizer O - ADJA
+Fussballfunktionär O - NN
+
+Warner O - NE
+Bros O - NE
+. O - $.
+Entertainment O - FM
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+Warner O - NE
+Bros O - NE
+. O - $.
+Pictures O - FM
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+Warner O - NE
+Independent O - FM
+Pictures O - FM
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+Warner O - NE
+Brothers O - NE
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+Warner O - NE
+Bros O - NE
+. O - $.
+Toons O - NE
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+English O - FM
+Bros O - NE
+. O - $.
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+Warner O - NE
+Brothers O - NE
+Pictures O - FM
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+Warner O - NE
+Bros O - NE
+. O - $.
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+Mila O - NE
+Kunis O - NE
+US O - NE
+-amerikanische O - ADJA
+Schauspielerin O - NN
+und O - KON
+Synchronsprecherin O - NN
+
+Kunis O - NE
+US O - NE
+-amerikanische O - ADJA
+Schauspielerin O - NN
+und O - KON
+Synchronsprecherin O - NN
+
+Milena O - NE
+Kunis O - NE
+US O - NE
+-amerikanische O - ADJA
+Schauspielerin O - NN
+und O - KON
+Synchronsprecherin O - NN
+
+Milena O - NE
+Markiwna O - NE
+Kunis O - NE
+US O - NE
+-amerikanische O - ADJA
+Schauspielerin O - NN
+und O - KON
+Synchronsprecherin O - NN
+
+Angela O - NE
+Merkel O - NE
+achte O - VVFIN
+Inhaberin O - NN
+des O - ART
+Amtes O - NN
+Bundeskanzler/in O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+( O - $(
+seit O - APPR
+2005 O - CARD
+) O - $(
+
+Angela O - NE
+Dorothea O - NE
+Merkel O - NE
+achte O - VVFIN
+Inhaberin O - NN
+des O - ART
+Amtes O - NN
+Bundeskanzler/in O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+( O - $(
+seit O - APPR
+2005 O - CARD
+) O - $(
+
+Angela O - NE
+Kasner O - NE
+achte O - VVFIN
+Inhaberin O - NN
+des O - ART
+Amtes O - NN
+Bundeskanzler/in O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+( O - $(
+seit O - APPR
+2005 O - CARD
+) O - $(
+
+Angela O - NE
+Dorothea O - NE
+Kasner O - NE
+achte O - VVFIN
+Inhaberin O - NN
+des O - ART
+Amtes O - NN
+Bundeskanzler/in O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+( O - $(
+seit O - APPR
+2005 O - CARD
+) O - $(
+
+A O - NN
+. O - $.
+Merkel O - NE
+achte O - VVFIN
+Inhaberin O - NN
+des O - ART
+Amtes O - NN
+Bundeskanzler/in O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+( O - $(
+seit O - APPR
+2005 O - CARD
+) O - $(
+
+Merkel O - NE
+, O - $,
+Angela O - NE
+achte O - VVFIN
+Inhaberin O - NN
+des O - ART
+Amtes O - NN
+Bundeskanzler/in O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+( O - $(
+seit O - APPR
+2005 O - CARD
+) O - $(
+
+SK O - NE
+Rapid O - NE
+Wien O - NE
+österreichischer O - ADJA
+Fußballklub O - NN
+
+Sportklub O - NN
+Rapid O - NE
+Wien O - NE
+österreichischer O - ADJA
+Fußballklub O - NN
+
+Rapid O - NE
+Wien O - NE
+österreichischer O - ADJA
+Fußballklub O - NN
+
+Ultras O - NE
+Rapid O - NE
+österreichischer O - ADJA
+Fußballklub O - NN
+
+Sportclub O - NN
+Rapid O - NE
+österreichischer O - ADJA
+Fußballklub O - NN
+
+SK O - NE
+Rapid O - NE
+österreichischer O - ADJA
+Fußballklub O - NN
+
+Sportklub O - NN
+Rapid O - NE
+österreichischer O - ADJA
+Fußballklub O - NN
+
+Erster O - ADJA
+Wiener O - ADJA
+Arbeiter O - NN
+-Fußball O - TRUNC
+-Club O - TRUNC
+österreichischer O - ADJA
+Fußballklub O - NN
+
+Sky O - NE
+PLC O - NE
+Britischer O - ADJA
+Medienkonzern O - NN
+
+Sky O - FM
+Digital O - FM
+Britischer O - ADJA
+Medienkonzern O - NN
+
+Sky O - NE
+TV O - FM
+Britischer O - ADJA
+Medienkonzern O - NN
+
+BSky O - NE
+B O - NN
+Britischer O - ADJA
+Medienkonzern O - NN
+
+Sky O - NE
+Channel O - FM
+Britischer O - ADJA
+Medienkonzern O - NN
+
+British O - NE
+Sky O - FM
+Broadcasting O - FM
+Britischer O - ADJA
+Medienkonzern O - NN
+
+Helmholtz O - NE
+-Zentrum O - NN
+Potsdam O - NE
+– O - $(
+Deutsches O - ADJA
+Geo O - NE
+Forschungs O - NN
+Zentrum O - NN
+Forschungszentrum O - NN
+für O - APPR
+Geowissenschaften O - NN
+
+Geoforschungszentrum O - NN
+Forschungszentrum O - NN
+für O - APPR
+Geowissenschaften O - NN
+
+Geoforschungszentrum O - NN
+Potsdam O - NE
+Forschungszentrum O - NN
+für O - APPR
+Geowissenschaften O - NN
+
+Geo O - NE
+Forschungs O - NN
+Zentrum O - NN
+Potsdam O - NE
+Forschungszentrum O - NN
+für O - APPR
+Geowissenschaften O - NN
+
+Geo O - NE
+Forschungs O - NN
+Zentrum O - NN
+Forschungszentrum O - NN
+für O - APPR
+Geowissenschaften O - NN
+
+GFZ O - NE
+Forschungszentrum O - NN
+für O - APPR
+Geowissenschaften O - NN
+
+Helmholtz O - NE
+-Zentrum O - NN
+Potsdam O - NE
+- O - $(
+Deutsches O - ADJA
+Geo O - NE
+Forschungs O - NN
+Zentrum O - NN
+GFZ O - NE
+Forschungszentrum O - NN
+für O - APPR
+Geowissenschaften O - NN
+
+Bundeszollverwaltung O - NN
+deutsche O - ADJA
+Zollbehörde O - NN
+, O - $,
+Bestandteil O - NN
+der O - ART
+Bundesfinanzverwaltung O - NN
+
+Zollstation O - NN
+deutsche O - ADJA
+Zollbehörde O - NN
+, O - $,
+Bestandteil O - NN
+der O - ART
+Bundesfinanzverwaltung O - NN
+
+Zoll O - NN
+-Ski O - NE
+-Team O - TRUNC
+deutsche O - ADJA
+Zollbehörde O - NN
+, O - $,
+Bestandteil O - NN
+der O - ART
+Bundesfinanzverwaltung O - NN
+
+The O - FM
+New O - FM
+York O - FM
+Times O - NE
+englischsprachige O - ADJA
+Tageszeitung O - NN
+aus O - APPR
+New O - NE
+York O - NE
+
+New O - FM
+York O - FM
+Times O - NE
+englischsprachige O - ADJA
+Tageszeitung O - NN
+aus O - APPR
+New O - NE
+York O - NE
+
+NYT O - NE
+englischsprachige O - ADJA
+Tageszeitung O - NN
+aus O - APPR
+New O - NE
+York O - NE
+
+NY O - NE
+Times O - NE
+englischsprachige O - ADJA
+Tageszeitung O - NN
+aus O - APPR
+New O - NE
+York O - NE
+
+Andreas O - NE
+Mölich O - NE
+-Zebhauser O - NE
+deutscher O - ADJA
+Opernintendant O - NN
+
+Mölich O - NE
+-Zebhauser O - ADJA
+deutscher O - ADJA
+Opernintendant O - NN
+
+Zebhäuser O - ADJA
+deutscher O - ADJA
+Opernintendant O - NN
+
+Mölich O - NE
+deutscher O - ADJA
+Opernintendant O - NN
+
+Zebhauser O - NE
+deutscher O - ADJA
+Opernintendant O - NN
+
+The O - FM
+Miami O - NE
+Herald O - NE
+amerikanische O - ADJA
+Zeitung O - NN
+
+Institut O - NN
+der O - ART
+deutschen O - ADJA
+Wirtschaft O - NN
+Denkfabrik O - NN
+für O - APPR
+Interessen O - NN
+von O - APPR
+Arbeitgebern O - NN
+
+Institut O - NN
+der O - ART
+deutschen O - ADJA
+Wirtschaft O - NN
+Köln O - NE
+e O - NN
+. O - $.
+V O - CARD
+. O - $.
+Denkfabrik O - NN
+für O - APPR
+Interessen O - NN
+von O - APPR
+Arbeitgebern O - NN
+
+The O - FM
+Washington O - NE
+Post O - FM
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Washington O - NE
+, O - $,
+D.C O - NE
+. O - $.
+
+The O - FM
+Washington O - NE
+Post O - FM
+Company O - FM
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Washington O - NE
+, O - $,
+D.C O - NE
+. O - $.
+
+Washington O - NE
+Post O - NN
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Washington O - NE
+, O - $,
+D.C O - NE
+. O - $.
+
+The O - FM
+Washington O - NE
+post O - FM
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Washington O - NE
+, O - $,
+D.C O - NE
+. O - $.
+
+WAPO O - NE
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Washington O - NE
+, O - $,
+D.C O - NE
+. O - $.
+
+Wa O - NE
+Po O - NE
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Washington O - NE
+, O - $,
+D.C O - NE
+. O - $.
+
+washingtonpost.com O - NE
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Washington O - NE
+, O - $,
+D.C O - NE
+. O - $.
+
+Ferratum O - NE
+Unternehmen O - NN
+in O - APPR
+Finnland O - NE
+
+F O - NE
+. O - $.
+Gary O - NE
+Gray O - NE
+US O - FM
+-amerikanischer O - ADJA
+Music O - FM
+-Video O - TRUNC
+Regisseur O - NN
+
+Felix O - NE
+Gary O - NE
+Gray O - NE
+US O - FM
+-amerikanischer O - ADJA
+Music O - FM
+-Video O - TRUNC
+Regisseur O - NN
+
+Amazon O - NE
+US O - NE
+-amerikanisches O - ADJA
+E O - NN
+-Commerce O - FM
+-Versandhaus O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Seattle O - NE
+, O - $,
+Washington O - NE
+
+Amazon.com O - NE
+US O - NE
+-amerikanisches O - ADJA
+E O - NN
+-Commerce O - FM
+-Versandhaus O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Seattle O - NE
+, O - $,
+Washington O - NE
+
+Amazon.com O - NE
+, O - $,
+Inc O - FM
+. O - $.
+US O - FM
+-amerikanisches O - ADJA
+E O - NN
+-Commerce O - FM
+-Versandhaus O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Seattle O - NE
+, O - $,
+Washington O - NE
+
+MT O - NE
+Melsungen O - NE
+Deutscher O - ADJA
+Handballverein O - NN
+
+Oracle O - NE
+( O - $(
+Germany O - NE
+) O - $(
+Software O - NN
+-Unternehmen O - TRUNC
+aus O - APPR
+München O - NE
+. O - $.
+
+Franz O - NE
+Marc O - NE
+deutscher O - ADJA
+Maler O - NN
+
+Franz O - NE
+Moritz O - NE
+Wilhelm O - NE
+Marc O - NE
+deutscher O - ADJA
+Maler O - NN
+
+Freescale O - NE
+Semiconductor O - FM
+texanischer O - ADJA
+Halbleiterhersteller O - NN
+
+Freescale O - NE
+texanischer O - ADJA
+Halbleiterhersteller O - NN
+
+German O - FM
+Startups O - FM
+Group O - FM
+Deutsches O - ADJA
+im O - APPRART
+Jahr O - NN
+2012 O - CARD
+gegründetes O - ADJA
+Unternehmen O - NN
+. O - $.
+
+Bauamt O - NN
+Amt O - NN
+einer O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+Körperschaft O - NN
+für O - APPR
+Bauangelegenheiten O - NN
+
+Tiefbauamt O - NN
+Amt O - NN
+einer O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+Körperschaft O - NN
+für O - APPR
+Bauangelegenheiten O - NN
+
+Hochbauamt O - NN
+Amt O - NN
+einer O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+Körperschaft O - NN
+für O - APPR
+Bauangelegenheiten O - NN
+
+Baubehörde O - NN
+Amt O - NN
+einer O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+Körperschaft O - NN
+für O - APPR
+Bauangelegenheiten O - NN
+
+Solarwatt O - NE
+ein O - ART
+deutscher O - ADJA
+Hersteller O - NN
+und O - KON
+Anbieter O - NN
+von O - APPR
+Photovoltaikanlagen O - NN
+für O - APPR
+Eigenheime O - NN
+und O - KON
+Kleingewerbe O - NN
+. O - $.
+
+Solarwatt O - NE
+Die O - ART
+Firma O - NN
+verfolgt O - VVFIN
+konsequent O - ADJD
+eine O - ART
+Strategie O - NN
+des O - ART
+kompletten O - ADJA
+energetischen O - ADJA
+Systems O - NN
+, O - $,
+das O - PDS
+bedeutet O - VVFIN
+sie O - PPER
+produziert O - VVFIN
+und O - KON
+vertreibt O - VVFIN
+alle O - PIDAT
+wesentlichen O - ADJA
+Komponenten O - NN
+für O - APPR
+Eigenversorgung O - NN
+von O - APPR
+Haushalten O - NN
+aus O - APPR
+Solarstrom O - NN
+. O - $.
+
+Alternative O - NN
+für O - APPR
+Deutschland O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Af O - NE
+D O - NN
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Erivan O - NE
+Haub O - NE
+deutscher O - ADJA
+Unternehmer O - NN
+
+Handelsblatt O - NN
+Deutsche O - ADJA
+Wirtschaftszeitung O - NN
+
+Wirtschafts O - NN
+Wiki O - NN
+Deutsche O - ADJA
+Wirtschaftszeitung O - NN
+
+Handelsblatt.com O - NE
+Deutsche O - ADJA
+Wirtschaftszeitung O - NN
+
+Ahmet O - NE
+Davutoğlu O - NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+Ahmed O - NE
+Davutoglu O - NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+Davutoğlu O - NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+Davudoglu O - NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+Ahmet O - NE
+Davudoğlu O - NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+Davutoglu O - NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+Ahmet O - NE
+Davutoglu O - NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+Hodscha O - NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+Flughafen O - NN
+Hannover O - NE
+-Langenhagen O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Hannover O - NE
+Airport O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+EDDV O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Hannover O - NE
+Flughafen O - NN
+Verkehrsflughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Hannover O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+HAJ O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Edeka O - NE
+Unternehmensverbund O - NN
+
+Edeka O - NE
+-Gruppe O - TRUNC
+Unternehmensverbund O - NN
+
+E O - NN
+-Neukauf O - TRUNC
+Unternehmensverbund O - NN
+
+Nah&gut O - NE
+Unternehmensverbund O - NN
+
+Nah O - NE
+& O - KON
+gut O - ADJD
+Unternehmensverbund O - NN
+
+nah O - ADJD
+und O - KON
+gut O - ADJD
+Unternehmensverbund O - NN
+
+Edeka O - NE
+xpress O - NE
+Unternehmensverbund O - NN
+
+Apple O - NE
+US O - NE
+-amerikanisches O - ADJA
+Hardware O - NN
+- O - $(
+, O - $,
+Software O - NN
+- O - $(
+und O - KON
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Cupertino O - NE
+, O - $,
+Kalifornien O - NE
+
+Apple O - NE
+Inc O - FM
+. O - $.
+US O - FM
+-amerikanisches O - ADJA
+Hardware O - NN
+- O - $(
+, O - $,
+Software O - NN
+- O - TRUNC
+und O - KON
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Cupertino O - NE
+, O - $,
+Kalifornien O - NE
+
+Apple O - NE
+Computer O - NN
+US O - FM
+-amerikanisches O - ADJA
+Hardware O - NN
+- O - $(
+, O - $,
+Software O - NN
+- O - $(
+und O - KON
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Cupertino O - NE
+, O - $,
+Kalifornien O - NE
+
+Apple O - NE
+Computer O - FM
+Inc O - FM
+US O - FM
+-amerikanisches O - ADJA
+Hardware O - NN
+- O - $(
+, O - $,
+Software O - NN
+- O - $(
+und O - KON
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Cupertino O - NE
+, O - $,
+Kalifornien O - NE
+
+Apple O - NE
+Computer O - NN
+, O - $,
+Inc O - FM
+. O - $.
+US O - FM
+-amerikanisches O - ADJA
+Hardware O - NN
+- O - $(
+, O - $,
+Software O - NN
+- O - TRUNC
+und O - KON
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Cupertino O - NE
+, O - $,
+Kalifornien O - NE
+
+Apple O - NE
+Incorporated O - FM
+US O - FM
+-amerikanisches O - ADJA
+Hardware O - NN
+- O - $(
+, O - $,
+Software O - NN
+- O - $(
+und O - KON
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Cupertino O - NE
+, O - $,
+Kalifornien O - NE
+
+Apple O - NE
+Computer O - FM
+Incorporated O - FM
+US O - FM
+-amerikanisches O - ADJA
+Hardware O - NN
+- O - $(
+, O - $,
+Software O - NN
+- O - TRUNC
+und O - KON
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Cupertino O - NE
+, O - $,
+Kalifornien O - NE
+
+Solar O - FM
+Power O - FM
+International O - FM
+Internationale O - ADJA
+Konferenz O - NN
+. O - $.
+
+Reuters O - NE
+Nachrichtenagentur O - NN
+
+Thompson O - NE
+-Reuters O - NE
+Nachrichtenagentur O - NN
+
+Informations O - NN
+-Verarbeitungs O - TRUNC
+-Zentrum O - TRUNC
+Kooperation O - NN
+von O - APPR
+ARD O - NN
+und O - KON
+Deutschlandradio O - NE
+, O - $,
+im O - APPRART
+Rahmen O - NN
+einer O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+, O - $,
+nicht O - PTKNEG
+-rechtsfähigen O - ADJA
+Verwaltungsgemeinschaft O - NN
+mit O - APPR
+Sitz O - NN
+im O - APPRART
+Rundfunk O - NN
+Berlin O - NE
+-Brandenburg O - NE
+in O - APPR
+Potsdam O - NE
+. O - $.
+
+IVZ O - NE
+Kooperation O - NN
+von O - APPR
+ARD O - NE
+und O - KON
+Deutschlandradio O - NE
+, O - $,
+im O - APPRART
+Rahmen O - NN
+einer O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+, O - $,
+nicht O - PTKNEG
+-rechtsfähigen O - ADJA
+Verwaltungsgemeinschaft O - NN
+mit O - APPR
+Sitz O - NN
+im O - APPRART
+Rundfunk O - NN
+Berlin O - NE
+-Brandenburg O - NE
+in O - APPR
+Potsdam O - NE
+. O - $.
+
+Netflix O - NE
+US O - FM
+-amerikanischer O - ADJA
+Streaming O - FM
+-Anbieter O - TRUNC
+
+TVR O - NE
+News O - FM
+eine O - ART
+inhabergeführte O - ADJA
+TV O - NN
+-Nachrichtenagentur O - TRUNC
+und O - KON
+Fernsehproduktionsfirma O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Hamburg O - NE
+. O - $.
+
+TVR O - NE
+Info O - NE
+eine O - ART
+inhabergeführte O - ADJA
+TV O - NN
+-Nachrichtenagentur O - TRUNC
+und O - KON
+Fernsehproduktionsfirma O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Hamburg O - NE
+. O - $.
+
+Daniel O - NE
+Zimmer O - NE
+deutscher O - ADJA
+Rechtswissenschaftler O - NN
+und O - KON
+geschäftsführender O - ADJA
+Direktor O - NN
+
+Maple O - NE
+Bank O - NN
+ein O - ART
+deutsches O - ADJA
+Kreditinstitut O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+einer O - ART
+Niederlassung O - NN
+im O - APPRART
+kanadischen O - ADJA
+Toronto O - NE
+und O - KON
+im O - APPRART
+niederländischen O - ADJA
+Den O - NE
+Haag O - NE
+. O - $.
+
+Jérôme O - NE
+Boateng O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Jerome O - NE
+Agyenim O - NE
+Boateng O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Jerome O - NE
+Boateng O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Jérôme O - NE
+Agyenim O - NE
+Boateng O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Condor O - NE
+Flugdienst O - NN
+Deutsche O - ADJA
+Charterfluggesellschaft O - NN
+
+Condor O - NE
+Flugdienst O - NN
+Gmb O - NE
+H O - NN
+Deutsche O - ADJA
+Charterfluggesellschaft O - NN
+
+Condor O - NE
+Berlin O - NE
+Deutsche O - ADJA
+Charterfluggesellschaft O - NN
+
+Condor O - NE
+Airlines O - FM
+Deutsche O - ADJA
+Charterfluggesellschaft O - NN
+
+Condor O - NE
+Deutsche O - ADJA
+Charterfluggesellschaft O - NN
+
+Air O - NE
+Berlin O - NE
+Ehemalige O - ADJA
+deutsche O - ADJA
+Fluggesellschaft O - NN
+
+Air O - NE
+Berlin O - NE
+PLC O - NE
+& O - KON
+Co O - NN
+. O - $.
+Luftverkehrs O - NN
+KG O - NE
+Ehemalige O - ADJA
+deutsche O - ADJA
+Fluggesellschaft O - NN
+
+Air O - NE
+-Berlin O - NE
+Ehemalige O - ADJA
+deutsche O - ADJA
+Fluggesellschaft O - NN
+
+Airberlin O - NE
+Ehemalige O - ADJA
+deutsche O - ADJA
+Fluggesellschaft O - NN
+
+Air O - NE
+Berlin O - NE
+Gmb O - NE
+H O - NN
+& O - KON
+Co O - NN
+Luftverkehrs O - NN
+KG O - NE
+Ehemalige O - ADJA
+deutsche O - ADJA
+Fluggesellschaft O - NN
+
+Pat O - NE
+Conroy O - NE
+Schriftsteller O - NN
+
+Junge O - ADJA
+Union O - NN
+Jugendorganisation O - NN
+von O - APPR
+CDU O - NE
+und O - KON
+CSU O - NE
+
+Heinrich O - NE
+Hiesinger O - NE
+deutscher O - ADJA
+Wirtschaftsmanager O - NN
+
+Hiesinger O - NE
+deutscher O - ADJA
+Wirtschaftsmanager O - NN
+
+D O - NN
+. O - $.
+J O - NE
+. O - $.
+Cotrona O - NE
+US O - FM
+-amerikanischer O - ADJA
+Schauspieler O - NN
+
+Christoph O - NE
+Metzelder O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Christoph O - NE
+Tobias O - NE
+Metzelder O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Universidad O - FM
+de O - FM
+Chile O - NE
+Universität O - NN
+in O - APPR
+Chile O - NN
+
+Universität O - NN
+von O - APPR
+Chile O - NE
+Universität O - NN
+in O - APPR
+Chile O - NN
+
+ZDF O - NE
+öffentlich O - ADJD
+-rechtlicher O - ADJA
+Fernsehsender O - NN
+in O - APPR
+Deutschland O - NE
+
+Zweites O - ADJA
+Deutsches O - ADJA
+Fernsehen O - NN
+öffentlich O - ADJD
+-rechtlicher O - ADJA
+Fernsehsender O - NN
+in O - APPR
+Deutschland O - NE
+
+UEFA O - NE
+europäischer O - ADJA
+Fußballverband O - NN
+
+Europäischer O - ADJA
+Fußballverband O - NN
+europäischer O - ADJA
+Fußballverband O - NN
+
+Union O - FM
+of O - FM
+European O - FM
+Football O - FM
+Associations O - FM
+europäischer O - ADJA
+Fußballverband O - NN
+
+Mainzer O - ADJA
+Verkehrsgesellschaft O - NN
+Verkehrsunternehmen O - NN
+für O - APPR
+den O - ART
+öffentlichen O - ADJA
+Personennahverkehr O - NN
+
+Stadtverkehr O - NN
+in O - APPR
+Mainz O - NE
+Verkehrsunternehmen O - NN
+für O - APPR
+den O - ART
+öffentlichen O - ADJA
+Personennahverkehr O - NN
+
+Mainzer O - ADJA
+Verkehrsgesellschaft O - NN
+mb O - NE
+H O - NN
+Verkehrsunternehmen O - NN
+für O - APPR
+den O - ART
+öffentlichen O - ADJA
+Personennahverkehr O - NN
+
+MVG O - NE
+Verkehrsunternehmen O - NN
+für O - APPR
+den O - ART
+öffentlichen O - ADJA
+Personennahverkehr O - NN
+
+Taktisches O - ADJA
+Luftwaffengeschwader O - NN
+33 O - CARD
+ein O - ART
+fliegender O - ADJA
+Kampfverband O - NN
+der O - ART
+Luftwaffe O - NN
+der O - ART
+Bundeswehr O - NN
+, O - $,
+der O - PRELS
+mit O - APPR
+dem O - ART
+Waffensystem O - NN
+Panavia O - NE
+Tornado O - NE
+IDS O - NE
+ausgerüstet O - VVPP
+ist O - VAFIN
+. O - $.
+
+Jabo O - NE
+G O - NN
+33 O - CARD
+ein O - ART
+fliegender O - ADJA
+Kampfverband O - NN
+der O - ART
+Luftwaffe O - NN
+der O - ART
+Bundeswehr O - NN
+, O - $,
+der O - PRELS
+mit O - APPR
+dem O - ART
+Waffensystem O - NN
+Panavia O - NE
+Tornado O - NE
+IDS O - NE
+ausgerüstet O - VVPP
+ist O - VAFIN
+. O - $.
+
+Lufthansa O - NE
+Group O - NE
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+Deutsche O - ADJA
+Lufthansa O - NE
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+Deutsche O - ADJA
+Lufthansa O - NE
+AG O - NN
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+Deutsche O - ADJA
+Lufthansa O - NE
+Aktiengesellschaft O - NN
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+Lufthansa O - NE
+German O - NE
+Airlines O - FM
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+DLH O - NE
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+LH O - NE
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+Lufthansa O - NE
+Passage O - FM
+Airlines O - NE
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+Amtsgericht O - NN
+Frankfurt O - NE
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+AG O - NN
+Frankfurt O - NE
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+Photovoltaik O - NN
+Zeitschrift O - NN
+für O - APPR
+Solartechnik O - NN
+. O - $.
+
+Sean O - NE
+Bean O - NE
+britischer O - ADJA
+Schauspieler O - NN
+
+Shaun O - NE
+Mark O - NE
+Bean O - NE
+britischer O - ADJA
+Schauspieler O - NN
+
+Europäische O - ADJA
+Kommission O - NN
+supranationales O - ADJA
+Organ O - NN
+der O - ART
+Europäischen O - ADJA
+Union O - NN
+
+EU O - NE
+-Kommission O - TRUNC
+supranationales O - ADJA
+Organ O - NN
+der O - ART
+Europäischen O - ADJA
+Union O - NN
+
+EK O - NE
+supranationales O - ADJA
+Organ O - NN
+der O - ART
+Europäischen O - ADJA
+Union O - NN
+
+KOM O - NE
+supranationales O - ADJA
+Organ O - NN
+der O - ART
+Europäischen O - ADJA
+Union O - NN
+
+RTL O - NE
+Television O - NE
+deutschsprachiger O - ADJA
+, O - $,
+privater O - ADJA
+TV O - NN
+-Sender O - TRUNC
+
+RTL O - NE
+-Fernsehen O - TRUNC
+deutschsprachiger O - ADJA
+, O - $,
+privater O - ADJA
+TV O - NN
+-Sender O - TRUNC
+
+RTL O - NE
+Television O - NE
+Gmb O - NE
+H O - NN
+deutschsprachiger O - ADJA
+, O - $,
+privater O - ADJA
+TV O - NN
+-Sender O - TRUNC
+
+Radio O - NN
+Télé O - NE
+Luxemburg O - NE
+deutschsprachiger O - ADJA
+, O - $,
+privater O - ADJA
+TV O - NN
+-Sender O - TRUNC
+
+RTL O - NE
+deutschsprachiger O - ADJA
+, O - $,
+privater O - ADJA
+TV O - NN
+-Sender O - TRUNC
+
+Degeto O - NE
+Film O - NN
+gemeinsame O - ADJA
+Filmeinkaufsorganisation O - NN
+der O - ART
+ARD O - NE
+
+DEGETO O - NE
+FILM O - NE
+Gmb O - NE
+H O - NE
+gemeinsame O - ADJA
+Filmeinkaufsorganisation O - NN
+der O - ART
+ARD O - NN
+
+ARD O - NE
+Degeto O - NE
+gemeinsame O - ADJA
+Filmeinkaufsorganisation O - NN
+der O - ART
+ARD O - NE
+
+Deutsche O - ADJA
+Gesellschaft O - NN
+für O - APPR
+Ton O - NN
+und O - KON
+Film O - NN
+gemeinsame O - ADJA
+Filmeinkaufsorganisation O - NN
+der O - ART
+ARD O - NE
+
+Degeto O - NE
+gemeinsame O - ADJA
+Filmeinkaufsorganisation O - NN
+der O - ART
+ARD O - NE
+
+Rhein O - NE
+-Neckar O - NE
+Löwen O - NE
+deutsche O - ADJA
+Handballmannschaft O - NN
+
+Rhein O - NE
+-Neckar O - NE
+-Löwen O - TRUNC
+deutsche O - ADJA
+Handballmannschaft O - NN
+
+SG O - NN
+Kronau/Östringen O - NE
+deutsche O - ADJA
+Handballmannschaft O - NN
+
+SG O - NN
+Kronau O - NE
+-Östringen O - NE
+deutsche O - ADJA
+Handballmannschaft O - NN
+
+Rnlö O - NE
+deutsche O - ADJA
+Handballmannschaft O - NN
+
+Rnl O - NE
+deutsche O - ADJA
+Handballmannschaft O - NN
+
+Wolfgang O - NE
+Rihm O - NE
+deutscher O - ADJA
+Komponist O - NN
+, O - $,
+Musikwissenschaftler O - NN
+und O - KON
+Essayist O - NN
+
+Wolfgang O - NE
+Michael O - NE
+Rihm O - NE
+deutscher O - ADJA
+Komponist O - NN
+, O - $,
+Musikwissenschaftler O - NN
+und O - KON
+Essayist O - NN
+
+Rihm O - NE
+deutscher O - ADJA
+Komponist O - NN
+, O - $,
+Musikwissenschaftler O - NN
+und O - KON
+Essayist O - NN
+
+Facebook O - NE
+Inc O - FM
+. O - $.
+US O - FM
+-amerikanisches O - ADJA
+Internet O - NN
+-Unternehmen O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Menlo O - NE
+Park O - NE
+, O - $,
+Kalifornien O - NE
+
+Facebook O - NE
+US O - FM
+-amerikanisches O - ADJA
+Internet O - NN
+-Unternehmen O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Menlo O - NE
+Park O - NE
+, O - $,
+Kalifornien O - NE
+
+FB O - NE
+US O - FM
+-amerikanisches O - ADJA
+Internet O - NN
+-Unternehmen O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Menlo O - NE
+Park O - NE
+, O - $,
+Kalifornien O - NE
+
+Facebook O - NE
+, O - $,
+Inc O - NE
+. O - $.
+US O - FM
+-amerikanisches O - ADJA
+Internet O - NN
+-Unternehmen O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Menlo O - NE
+Park O - NE
+, O - $,
+Kalifornien O - NE
+
+facebook O - NE
+US O - FM
+-amerikanisches O - ADJA
+Internet O - NN
+-Unternehmen O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Menlo O - NE
+Park O - NE
+, O - $,
+Kalifornien O - NE
+
+Bellevue O - NE
+Group O - FM
+ein O - ART
+an O - APPR
+SIX O - NE
+Swiss O - FM
+Exchange O - FM
+kotierter O - ADJA
+Finanzdienstleister O - NN
+, O - $,
+der O - PRELS
+überwiegend O - ADJD
+im O - APPRART
+Asset O - FM
+Management O - FM
+tätig O - ADJD
+ist O - VAFIN
+. O - $.
+
+Bellevue O - NE
+Group O - FM
+AG O - NN
+ein O - ART
+an O - APPR
+SIX O - NE
+Swiss O - FM
+Exchange O - FM
+kotierter O - ADJA
+Finanzdienstleister O - NN
+, O - $,
+der O - PRELS
+überwiegend O - ADJD
+im O - APPRART
+Asset O - FM
+Management O - FM
+tätig O - ADJD
+ist O - VAFIN
+. O - $.
+
+Bank O - NN
+am O - APPRART
+Bellevue O - NE
+ein O - ART
+an O - APPR
+SIX O - NE
+Swiss O - FM
+Exchange O - FM
+kotierter O - ADJA
+Finanzdienstleister O - NN
+, O - $,
+der O - PRELS
+überwiegend O - ADJD
+im O - APPRART
+Asset O - FM
+Management O - FM
+tätig O - ADJD
+ist O - VAFIN
+. O - $.
+
+Josep O - NE
+Carreras O - NE
+Spanischer O - ADJA
+Tenor O - NN
+
+Jose O - NE
+Carreras O - NE
+Spanischer O - ADJA
+Tenor O - NN
+
+Josep O - NE
+Carreras O - NE
+i O - CARD
+Coll O - NE
+Spanischer O - ADJA
+Tenor O - NN
+
+José O - NE
+Carreras O - NE
+Spanischer O - ADJA
+Tenor O - NN
+
+Heribert O - NE
+Bruchhagen O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+und O - KON
+Funktionär O - NN
+
+Kim O - NE
+Kardashian O - NE
+US O - FM
+-amerikanische O - ADJA
+Reality O - FM
+-TV O - FM
+-Teilnehmerin O - TRUNC
+, O - $,
+Model O - NE
+, O - $,
+Schauspielerin O - NN
+und O - KON
+Unternehmerin O - NN
+
+Kimberly O - NE
+Kardashian O - NE
+US O - NE
+-amerikanische O - ADJA
+Reality O - FM
+-TV O - FM
+-Teilnehmerin O - TRUNC
+, O - $,
+Model O - NE
+, O - $,
+Schauspielerin O - NN
+und O - KON
+Unternehmerin O - NN
+
+Kimberly O - NE
+Noel O - NE
+Kardashian O - NE
+US O - FM
+-amerikanische O - ADJA
+Reality O - FM
+-TV O - FM
+-Teilnehmerin O - TRUNC
+, O - $,
+Model O - NE
+, O - $,
+Schauspielerin O - NN
+und O - KON
+Unternehmerin O - NN
+
+Kimberly O - NE
+Noel O - NE
+Kardashian O - NE
+West O - NE
+US O - FM
+-amerikanische O - ADJA
+Reality O - FM
+-TV O - FM
+-Teilnehmerin O - TRUNC
+, O - $,
+Model O - NE
+, O - $,
+Schauspielerin O - NN
+und O - KON
+Unternehmerin O - NN
+
+Universal O - FM
+Pictures O - FM
+ein O - ART
+auf O - APPR
+Filmproduktion O - NN
+spezialisiertes O - ADJA
+Tochterunternehmen O - NN
+des O - ART
+Medienkonzerns O - NN
+NBC O - NE
+Universal O - NE
+. O - $.
+
+Universal O - FM
+Pictures O - FM
+Das O - ART
+Unternehmen O - NN
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+sogenannten O - ADJA
+Major O - FM
+-Studios O - FM
+, O - $,
+den O - ART
+sechs O - CARD
+größten O - ADJA
+Filmunternehmen O - NN
+in O - APPR
+den O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+. O - $.
+
+Sigmar O - NE
+Gabriel O - NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+SPD O - NE
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+
+Siggi O - NE
+Pop O - NN
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+SPD O - NE
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+
+Sigmar O - NE
+Hartmut O - NE
+Gabriel O - NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+SPD O - NE
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+
+Renzo O - NE
+Piano O - NE
+italienischer O - ADJA
+Architekt O - NN
+
+Samsung O - NE
+Electronics O - FM
+südkoreanischer O - ADJA
+Elektronikkonzern O - NN
+
+Samsung O - NE
+Semiconductor O - NE
+südkoreanischer O - ADJA
+Elektronikkonzern O - NN
+
+Borussia O - NE
+Dortmund O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Ballspielverein O - NN
+Borussia O - NE
+09 O - CARD
+Dortmund O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+BV O - NE
+09 O - CARD
+Borussia O - NE
+Dortmund O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Ballspielverein O - NN
+Borussia O - NE
+Dortmund O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+BV O - NE
+Borussia O - NE
+09 O - CARD
+Dortmund O - NN
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+BVB O - NE
+09 O - CARD
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+BVB O - NE
+Dortmund O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+BVB O - NE
+09 O - CARD
+Dortmund O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Ballspiel O - NN
+-Verein O - TRUNC
+Borussia O - NE
+1909 O - CARD
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+BV O - NE
+Borussia O - NE
+Dortmund O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+BVB09 O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Borussia O - NE
+09 O - CARD
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Ballspielverein O - NN
+Borussia O - NE
+09 O - CARD
+e O - NN
+. O - $.
+V O - CARD
+. O - $.
+Dortmund O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+BVB O - NE
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+Sony O - NE
+japanischer O - ADJA
+, O - $,
+internationaler O - ADJA
+Konzern O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Minato O - NE
+, O - $,
+Tokio O - NE
+
+Sony O - NE
+Entertainment O - FM
+japanischer O - ADJA
+, O - $,
+internationaler O - ADJA
+Konzern O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Minato O - NE
+, O - $,
+Tokio O - NE
+
+Totsuko O - NE
+japanischer O - ADJA
+, O - $,
+internationaler O - ADJA
+Konzern O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Minato O - NE
+, O - $,
+Tokio O - NE
+
+Sony O - NE
+Corporation O - FM
+japanischer O - ADJA
+, O - $,
+internationaler O - ADJA
+Konzern O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Minato O - NE
+, O - $,
+Tokio O - NE
+
+Sony O - NE
+Kabushiki O - NE
+Kaisha O - NE
+japanischer O - ADJA
+, O - $,
+internationaler O - ADJA
+Konzern O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Minato O - NE
+, O - $,
+Tokio O - NE
+
+Statoil O - NE
+Fuel O - FM
+& O - KON
+Retail O - NE
+Norwegisches O - ADJA
+Energieeinzelhandelsunternehmen O - NN
+, O - $,
+das O - PRELS
+2010 O - CARD
+durch O - APPR
+die O - ART
+Abtrennung O - NN
+des O - ART
+Downstream O - NN
+-Geschäfts O - TRUNC
+von O - APPR
+Statoil O - NE
+ASA O - NE
+in O - APPR
+ein O - ART
+separates O - ADJA
+börsennotiertes O - ADJA
+Unternehmen O - NN
+gegründet O - VVPP
+wurde O - VAFIN
+. O - $.
+
+Andreas O - NE
+Rudolph O - NE
+deutscher O - ADJA
+Handballspieler O - NN
+und O - KON
+- O - $(
+funktionär O - ADJD
+
+Bundesnetzagentur O - NN
+deutsche O - ADJA
+Bundesbehörde O - NN
+
+Bundesnetzagentur O - NN
+für O - APPR
+Elektrizität O - NN
+, O - $,
+Gas O - NN
+, O - $,
+Telekommunikation O - NN
+, O - $,
+Post O - NN
+und O - KON
+Eisenbahnen O - NN
+deutsche O - ADJA
+Bundesbehörde O - NN
+
+BNetz O - NE
+A O - NN
+deutsche O - ADJA
+Bundesbehörde O - NN
+
+Regulierungsbehörde O - NN
+für O - APPR
+Telekommunikation O - NN
+und O - KON
+Post O - NN
+deutsche O - ADJA
+Bundesbehörde O - NN
+
+Yahoo O - NE
+Internetunternehmen O - NN
+aus O - APPR
+Kalifornien O - NE
+
+Yet O - FM
+Another O - FM
+Hierarchical O - FM
+Officious O - FM
+Oracle O - FM
+Internetunternehmen O - NN
+aus O - APPR
+Kalifornien O - NE
+
+Yahoo O - NE
+! O - $.
+Inc O - FM
+. O - $.
+Internetunternehmen O - NN
+aus O - APPR
+Kalifornien O - NE
+
+Yahoo O - NE
+! O - $.
+Internetunternehmen O - NN
+aus O - APPR
+Kalifornien O - NE
+
+Yahoo.de O - NN
+Internetunternehmen O - NN
+aus O - APPR
+Kalifornien O - NE
+
+Altaba O - NE
+Internetunternehmen O - NN
+aus O - APPR
+Kalifornien O - NE
+
+Yahoo.com O - NE
+Internetunternehmen O - NN
+aus O - APPR
+Kalifornien O - NE
+
+London O - NE
+Stock O - FM
+Exchange O - FM
+Börse O - NN
+von O - APPR
+London O - NE
+
+SETS O - NE
+Börse O - NN
+von O - APPR
+London O - NE
+
+SEAQ O - NE
+Börse O - NN
+von O - APPR
+London O - NE
+
+Londoner O - ADJA
+Börse O - NN
+Börse O - NN
+von O - APPR
+London O - NE
+
+London O - NE
+Stock O - FM
+Exchange O - FM
+Group O - FM
+Börse O - NN
+von O - APPR
+London O - NE
+
+Salman O - NE
+bin O - NE
+Ibrahim O - NE
+Al O - NE
+Chalifa O - NE
+bahrainischer O - ADJA
+Fußballfunktionär O - NN
+
+Mitteldeutsche O - ADJA
+Zeitung O - NN
+deutsche O - ADJA
+regionale O - ADJA
+Tageszeitung O - NN
+
+Freiheit O - NN
+( O - $(
+Zeitung O - NN
+) O - $(
+deutsche O - ADJA
+regionale O - ADJA
+Tageszeitung O - NN
+
+mz O - NE
+-web.de O - FM
+deutsche O - ADJA
+regionale O - ADJA
+Tageszeitung O - NN
+
+MZ.de O - NN
+deutsche O - ADJA
+regionale O - ADJA
+Tageszeitung O - NN
+
+Linkem O - ADJA
+Italienisches O - ADJA
+Unternehmen O - NN
+. O - $.
+
+Kaiser O - NE
+’s O - NE
+Tengelmann O - NE
+ehemalige O - ADJA
+deutsche O - ADJA
+Supermarktkette O - NN
+, O - $,
+übernommen O - VVPP
+von O - APPR
+Edeka O - NE
+und O - KON
+von O - APPR
+REWE O - NE
+
+Kaiser O - NE
+'s O - NE
+Tengelmann O - NE
+ehemalige O - ADJA
+deutsche O - ADJA
+Supermarktkette O - NN
+, O - $,
+übernommen O - VVPP
+von O - APPR
+Edeka O - NE
+und O - KON
+von O - APPR
+REWE O - NE
+
+Kaiser O - NE
+'s O - NE
+Tengelmann O - NE
+AG O - NN
+ehemalige O - ADJA
+deutsche O - ADJA
+Supermarktkette O - NN
+, O - $,
+übernommen O - VVPP
+von O - APPR
+Edeka O - NE
+und O - KON
+von O - APPR
+REWE O - NE
+
+Kaiser O - NE
+'s O - NE
+Kaffee O - NN
+Geschäft O - NN
+ehemalige O - ADJA
+deutsche O - ADJA
+Supermarktkette O - NN
+, O - $,
+übernommen O - VVPP
+von O - APPR
+Edeka O - NE
+und O - KON
+von O - APPR
+REWE O - NE
+
+Kaiser O - NE
+'s O - ART
+ehemalige O - ADJA
+deutsche O - ADJA
+Supermarktkette O - NN
+, O - $,
+übernommen O - VVPP
+von O - APPR
+Edeka O - NE
+und O - KON
+von O - APPR
+REWE O - NE
+
+WPP O - NE
+Group O - FM
+Werbedienstleister O - NN
+und O - KON
+Medienunternehmen O - NN
+
+WPP O - NE
+Werbedienstleister O - NN
+und O - KON
+Medienunternehmen O - NN
+
+Austria O - NE
+Presse O - NN
+Agentur O - NN
+Österreichische O - ADJA
+Nachrichtenagentur O - NN
+
+APA O - NE
+-OTS O - NE
+Österreichische O - ADJA
+Nachrichtenagentur O - NN
+
+Austria O - NE
+Presse O - NN
+-Agentur O - TRUNC
+Österreichische O - ADJA
+Nachrichtenagentur O - NN
+
+APA O - NE
+Österreichische O - ADJA
+Nachrichtenagentur O - NN
+
+OTS O - NE
+Österreichische O - ADJA
+Nachrichtenagentur O - NN
+
+Wachowskis O - NE
+US O - FM
+-amerikanische O - ADJA
+Drehbuchautorinnen O - NN
+und O - KON
+Filmregisseurinnen O - NN
+
+Wachowsky O - NE
+Brothers O - NE
+US O - FM
+-amerikanische O - ADJA
+Drehbuchautorinnen O - NN
+und O - KON
+Filmregisseurinnen O - NN
+
+Wachowski O - NE
+-Brüder O - TRUNC
+US O - NE
+-amerikanische O - ADJA
+Drehbuchautorinnen O - NN
+und O - KON
+Filmregisseurinnen O - NN
+
+Larry O - NE
+and O - NE
+Andy O - NE
+Wachowski O - NE
+US O - NE
+-amerikanische O - ADJA
+Drehbuchautorinnen O - NN
+und O - KON
+Filmregisseurinnen O - NN
+
+Wachowski O - NE
+Brothers O - NE
+US O - FM
+-amerikanische O - ADJA
+Drehbuchautorinnen O - NN
+und O - KON
+Filmregisseurinnen O - NN
+
+Brüder O - NN
+Wachowski O - NE
+US O - NE
+-amerikanische O - ADJA
+Drehbuchautorinnen O - NN
+und O - KON
+Filmregisseurinnen O - NN
+
+Wachowski O - NE
+US O - NE
+-amerikanische O - ADJA
+Drehbuchautorinnen O - NN
+und O - KON
+Filmregisseurinnen O - NN
+
+Gebrüder O - NE
+Wachowski O - NE
+US O - NE
+-amerikanische O - ADJA
+Drehbuchautorinnen O - NN
+und O - KON
+Filmregisseurinnen O - NN
+
+Deutsche O - ADJA
+Börse O - NN
+deutsche O - ADJA
+Aktiengesellschaft O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+
+Avox O - NE
+deutsche O - ADJA
+Aktiengesellschaft O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+
+Deutsche O - ADJA
+Börse O - NN
+AG O - NN
+deutsche O - ADJA
+Aktiengesellschaft O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+
+Deutsche O - ADJA
+Börse O - NN
+Group O - NE
+deutsche O - ADJA
+Aktiengesellschaft O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+
+Deutsche O - ADJA
+Boerse O - NE
+AG O - NN
+deutsche O - ADJA
+Aktiengesellschaft O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+
+Javier O - NE
+Hernández O - NE
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+UHD O - NE
+Alliance O - FM
+Organisation O - NN
+
+UHD O - NE
+Organisation O - NN
+
+Immofinanz O - NN
+Unternehmen O - NN
+für O - APPR
+Immobilien O - NN
+
+Immofinanz O - NN
+AG O - NN
+Unternehmen O - NN
+für O - APPR
+Immobilien O - NN
+
+Immofinanz O - NN
+Immobilien O - NN
+Anlagen O - NN
+AG O - NN
+Unternehmen O - NN
+für O - APPR
+Immobilien O - NN
+
+Seppo O - NE
+Eichkorn O - NE
+deutscher O - ADJA
+Fußballtrainer O - NN
+
+Josef O - NE
+Eichkorn O - NE
+deutscher O - ADJA
+Fußballtrainer O - NN
+
+Bundeswehr O - NN
+Streitkräfte O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+20th O - FM
+Century O - FM
+Studios O - FM
+Filmstudio O - NN
+
+Twentieth O - FM
+Century O - FM
+Fox O - FM
+Filmstudio O - NN
+
+Twentieth O - FM
+Century O - FM
+Fox O - FM
+Home O - FM
+Entertainment O - FM
+Filmstudio O - NN
+
+Fox O - NE
+Home O - FM
+Entertainment O - FM
+Filmstudio O - NN
+
+Fox O - NE
+Studios O - FM
+Filmstudio O - NN
+
+Fox O - NE
+movies O - FM
+Filmstudio O - NN
+
+20th O - FM
+Century O - FM
+Records O - FM
+Filmstudio O - NN
+
+20th O - FM
+Century O - FM
+Fox O - FM
+Filmstudio O - NN
+
+Volksverteidigungseinheiten O - NN
+Bewaffnete O - ADJA
+kurdische O - ADJA
+Miliz O - NN
+in O - APPR
+Syrien O - NE
+
+YPG O - NE
+Bewaffnete O - ADJA
+kurdische O - ADJA
+Miliz O - NN
+in O - APPR
+Syrien O - NE
+
+Karlsruher O - ADJA
+SC O - NE
+Sportverein O - NN
+aus O - APPR
+Karlsruhe O - NE
+, O - $,
+Baden O - NE
+-Württemberg O - NE
+
+Karlsruher O - ADJA
+Sport O - NN
+-Club O - TRUNC
+Sportverein O - NN
+aus O - APPR
+Karlsruhe O - NE
+, O - $,
+Baden O - NE
+-Württemberg O - TRUNC
+
+Karlsruher O - ADJA
+Sport O - NN
+-Club O - TRUNC
+Mühlburg O - NE
+-Phönix O - TRUNC
+e O - NN
+. O - $.
+V O - CARD
+. O - $.
+Sportverein O - NN
+aus O - APPR
+Karlsruhe O - NE
+, O - $,
+Baden O - NE
+-Württemberg O - TRUNC
+
+KSC O - NE
+Sportverein O - NN
+aus O - APPR
+Karlsruhe O - NE
+, O - $,
+Baden O - NE
+-Württemberg O - NE
+
+RTLZWEI O - NE
+Privater O - ADJA
+deutscher O - ADJA
+Fernsehsender O - NN
+, O - $,
+von O - APPR
+der O - ART
+RTLZWEI O - NE
+Fernsehen O - NN
+Gmb O - NE
+H O - NN
+& O - KON
+Co O - NN
+. O - $.
+KG O - NN
+betrieben O - VVPP
+
+RTL O - NE
+2 O - CARD
+Privater O - ADJA
+deutscher O - ADJA
+Fernsehsender O - NN
+, O - $,
+von O - APPR
+der O - ART
+RTLZWEI O - NE
+Fernsehen O - NN
+Gmb O - NE
+H O - NN
+& O - KON
+Co O - NN
+. O - $.
+KG O - NN
+betrieben O - VVPP
+
+RTL O - NE
+II O - CARD
+Privater O - ADJA
+deutscher O - ADJA
+Fernsehsender O - NN
+, O - $,
+von O - APPR
+der O - ART
+RTLZWEI O - NE
+Fernsehen O - NN
+Gmb O - NE
+H O - NN
+& O - KON
+Co O - NN
+. O - $.
+KG O - NN
+betrieben O - VVPP
+
+RTL O - NE
+Zwei O - CARD
+Privater O - ADJA
+deutscher O - ADJA
+Fernsehsender O - NN
+, O - $,
+von O - APPR
+der O - ART
+RTLZWEI O - NE
+Fernsehen O - NN
+Gmb O - NE
+H O - NN
+& O - KON
+Co O - NN
+. O - $.
+KG O - NN
+betrieben O - VVPP
+
+Martin O - NE
+Dausch O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+UEFA O - NE
+Europa O - NE
+League O - FM
+Fußball O - NE
+-Europapokalwettbewerb O - TRUNC
+
+OSRAM O - NE
+Licht O - NN
+AG O - NN
+Hersteller O - NN
+von O - APPR
+Leuchtmitteln O - NN
+und O - KON
+Lichttechnik O - NN
+
+Brian O - NE
+Krzanich O - NE
+Amerikanischer O - ADJA
+Chemiker O - NN
+, O - $,
+Ingenieur O - NN
+, O - $,
+Unternehmer O - NN
+und O - KON
+Geschäftsmann O - NN
+
+Westdeutsche O - ADJA
+Allgemeine O - ADJA
+Zeitung O - NN
+deutsche O - ADJA
+Tageszeitung O - NN
+
+Westdeutsche O - ADJA
+Allgemeine O - ADJA
+deutsche O - ADJA
+Tageszeitung O - NN
+
+WAZ O - NE
+deutsche O - ADJA
+Tageszeitung O - NN
+
+Zoran O - NE
+Barišić O - NE
+österreichischer O - ADJA
+Fußballspieler O - NN
+
+Jerry O - NE
+Bruckheimer O - NE
+US O - NE
+-amerikanischer O - ADJA
+Film O - NN
+- O - $(
+und O - KON
+Fernsehproduzent O - NN
+
+Bruckheimer O - NE
+US O - NE
+-amerikanischer O - ADJA
+Film O - NN
+- O - $(
+und O - KON
+Fernsehproduzent O - NN
+
+Jerome O - NE
+Leon O - NE
+Bruckheimer O - NE
+US O - NE
+-amerikanischer O - ADJA
+Film O - NN
+- O - $(
+und O - KON
+Fernsehproduzent O - NN
+
+Jerome O - NE
+Bruckheimer O - NE
+US O - NE
+-amerikanischer O - ADJA
+Film O - NN
+- O - $(
+und O - KON
+Fernsehproduzent O - NN
+
+Jerry O - NE
+Bruckheimer O - NE
+Films O - NN
+US O - FM
+-amerikanischer O - ADJA
+Film O - NN
+- O - $(
+und O - KON
+Fernsehproduzent O - NN
+
+Deutsche O - ADJA
+Post O - NN
+AG O - NN
+deutsches O - ADJA
+Logistikunternehmen O - NN
+
+Gelbe O - ADJA
+Post O - NN
+deutsches O - ADJA
+Logistikunternehmen O - NN
+
+Deutsche O - ADJA
+Post O - NN
+deutsches O - ADJA
+Logistikunternehmen O - NN
+
+Post O - NN
+deutsches O - ADJA
+Logistikunternehmen O - NN
+
+Deutsche O - ADJA
+Post O - NN
+DHL O - NE
+deutsches O - ADJA
+Logistikunternehmen O - NN
+
+Deutsche O - ADJA
+Post O - NN
+World O - FM
+Net O - NE
+deutsches O - ADJA
+Logistikunternehmen O - NN
+
+Josef O - NE
+Schwaiger O - NE
+österreichischer O - ADJA
+Politiker O - NN
+( O - $(
+ÖVP O - NE
+) O - $(
+, O - $,
+Salzburger O - ADJA
+Landesrat O - NN
+
+Eintracht O - NN
+Frankfurt O - NE
+Sportverein O - NN
+aus O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+, O - $,
+Hessen O - NE
+
+SG O - NE
+Eintracht O - NN
+Frankfurt O - NE
+Sportverein O - NN
+aus O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+, O - $,
+Hessen O - NE
+
+Eintracht O - NN
+Frankfurt O - NE
+Fußball O - NN
+AG O - NN
+Sportverein O - NN
+aus O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+, O - $,
+Hessen O - NE
+
+Frankfurter O - ADJA
+SG O - NN
+Eintracht O - NN
+Sportverein O - NN
+aus O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+, O - $,
+Hessen O - NE
+
+SGE O - NE
+Sportverein O - NN
+aus O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+, O - $,
+Hessen O - NE
+
+Rüdiger O - NE
+Grube O - NE
+deutscher O - ADJA
+Manager O - NN
+
+Hochschule O - NN
+für O - APPR
+angewandte O - ADJA
+Wissenschaften O - NN
+Coburg O - NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+FH O - NE
+Coburg O - NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+HAW O - NE
+Coburg O - NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+Haw O - NE
+coburg O - NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+Hochschule O - NN
+für O - APPR
+Angewandte O - ADJA
+Wissenschaften O - NN
+Coburg O - NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+Fachhochschule O - NN
+Coburg O - NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+HS O - NE
+Coburg O - NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+Hochschule O - NN
+Coburg O - NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+RTL O - NE
+Crime O - NE
+( O - $(
+Deutschland O - NE
+) O - $(
+deutscher O - ADJA
+Fernsehsender O - NN
+
+Seth O - NE
+Gecko O - NE
+Name O - NN
+eines O - ART
+fiktiven O - ADJA
+Charakters O - NN
+in O - APPR
+der O - ART
+Filmreihe O - NN
+From O - FM
+Dusk O - FM
+till O - FM
+Dawn O - NE
+
+Südkurier O - NN
+regionale O - ADJA
+deutsche O - ADJA
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Konstanz O - NE
+
+Suedkurier.de O - NN
+regionale O - ADJA
+deutsche O - ADJA
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Konstanz O - NE
+
+Die O - ART
+Presse O - NN
+österreichische O - ADJA
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Wien O - NE
+
+Presse O - NN
+österreichische O - ADJA
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Wien O - NE
+
+Neue O - ADJA
+Freie O - ADJA
+Presse O - NN
+österreichische O - ADJA
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Wien O - NE
+
+diepresse.com O - NE
+österreichische O - ADJA
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Wien O - NE
+
+Javier O - NE
+Pérez O - NE
+de O - NE
+Cuéllar O - NE
+ehemaliger O - ADJA
+peruanischer O - ADJA
+Diplomat O - NN
+und O - KON
+Politiker O - NN
+
+Universum O - NN
+Film O - NN
+deutsches O - ADJA
+Medienunternehmen O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+München O - NE
+
+Universum O - NN
+Anime O - NE
+deutsches O - ADJA
+Medienunternehmen O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+München O - NE
+
+Ufa O - NE
+Anime O - NE
+deutsches O - ADJA
+Medienunternehmen O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+München O - NE
+
+Sky O - NE
+Deutschland O - NE
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Sky O - NE
+Sport O - FM
+HD O - NE
+Extra O - NE
+deutscher O - ADJA
+Pay O - FM
+-TV O - FM
+Anbieter O - NN
+
+Premiere O - NN
+Austria O - NE
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Premiere O - NN
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Premiere O - NN
+AG O - NN
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Premiere O - NN
+HD O - NE
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Premiere O - NN
+World O - FM
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Sky O - NE
+Sport O - FM
+HD O - NE
+2 O - CARD
+deutscher O - ADJA
+Pay O - FM
+-TV O - FM
+Anbieter O - NN
+
+Sky O - NE
+Sport O - FM
+HD O - NE
+1 O - CARD
+deutscher O - ADJA
+Pay O - FM
+-TV O - FM
+Anbieter O - NN
+
+Sky O - NE
+Sport O - NE
+2 O - CARD
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Sky O - NE
+deutscher O - ADJA
+Pay O - FM
+-TV O - FM
+Anbieter O - NN
+
+Sky O - NE
+Sport O - NN
+1 O - CARD
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Premiere O - NN
+Medienkonzern O - NN
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Sky O - NE
+Deutschland O - NE
+AG O - NN
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Sky O - NE
+Österreich O - NE
+deutscher O - ADJA
+Pay O - NE
+-TV O - FM
+Anbieter O - NN
+
+Lucius O - NE
+Tarquinius O - NE
+Superbus O - NE
+König O - NN
+von O - APPR
+Rom O - NE
+
+Tarquinius O - NE
+Superbus O - NE
+König O - NN
+von O - APPR
+Rom O - NE
+
+Manuel O - NE
+Neuer O - NE
+deutscher O - ADJA
+Fußballtorhüter O - NN
+
+Manuel O - NE
+Peter O - NE
+Neuer O - NE
+deutscher O - ADJA
+Fußballtorhüter O - NN
+
+Neuer O - ADJA
+, O - $,
+Manuel O - NE
+deutscher O - ADJA
+Fußballtorhüter O - NN
+
+Siemens O - NE
+Technologiekonzern O - NN
+
+Siemens O - NE
+AG O - NN
+Technologiekonzern O - NN
+
+Telegraphen O - NN
+-Bauanstalt O - TRUNC
+von O - APPR
+Siemens O - NE
+& O - KON
+Halske O - NE
+Technologiekonzern O - NN
+
+Siemens O - NE
+Deutschland O - NE
+Technologiekonzern O - NN
+
+Fußball O - NN
+-Bundesliga O - TRUNC
+höchste O - ADJA
+Spielklasse O - NN
+im O - APPRART
+deutschen O - ADJA
+Männerfußball O - NN
+
+1 O - CARD
+. O - $.
+Fußball O - NN
+-Bundesliga O - TRUNC
+höchste O - ADJA
+Spielklasse O - NN
+im O - APPRART
+deutschen O - ADJA
+Männerfußball O - NN
+
+Fussball O - NN
+-Bundesliga O - TRUNC
+höchste O - ADJA
+Spielklasse O - NN
+im O - APPRART
+deutschen O - ADJA
+Männerfußball O - NN
+
+Bundesliga O - NN
+höchste O - ADJA
+Spielklasse O - NN
+im O - APPRART
+deutschen O - ADJA
+Männerfußball O - NN
+
+Erste O - ADJA
+Bundesliga O - NN
+höchste O - ADJA
+Spielklasse O - NN
+im O - APPRART
+deutschen O - ADJA
+Männerfußball O - NN
+
+1 O - CARD
+. O - $.
+Bundesliga O - NN
+höchste O - ADJA
+Spielklasse O - NN
+im O - APPRART
+deutschen O - ADJA
+Männerfußball O - NN
+
+Flughafen O - NN
+Dortmund O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Dortmund O - NE
+
+Dortmund O - NE
+Airport O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Dortmund O - NE
+
+EDLW O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Dortmund O - NE
+
+Dortmund O - NE
+Airport O - NN
+21 O - CARD
+Verkehrsflughafen O - NN
+in O - APPR
+Dortmund O - NE
+
+DTM O - NE
+Verkehrsflughafen O - NN
+in O - APPR
+Dortmund O - NE
+
+Barack O - NE
+Obama O - NE
+44 O - CARD
+. O - $.
+
+Barack O - NE
+Obama O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Barack O - NE
+Hussein O - NE
+Obama O - NE
+, O - $,
+Jr O - NE
+. O - $.
+44 O - CARD
+. O - $.
+
+Barack O - NE
+Hussein O - NE
+Obama O - NE
+, O - $,
+Jr O - NE
+. O - $.
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Obama O - NE
+44 O - CARD
+. O - $.
+
+Obama O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Barack O - NE
+Hussein O - NE
+Obama O - NE
+44 O - CARD
+. O - $.
+
+Barack O - NE
+Hussein O - NE
+Obama O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Barack O - NE
+H O - NE
+. O - $.
+Obama O - NE
+44 O - CARD
+. O - $.
+
+Barack O - NE
+H O - NE
+. O - $.
+Obama O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Barack O - NE
+Hussein O - NE
+Obama O - NE
+II O - CARD
+44 O - CARD
+. O - $.
+
+Barack O - NE
+Hussein O - NE
+Obama O - NE
+II O - CARD
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Präsident O - NN
+Obama O - NE
+44 O - CARD
+. O - $.
+
+Präsident O - NN
+Obama O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Präsident O - NN
+Barack O - NE
+Obama O - NE
+44 O - CARD
+. O - $.
+
+Präsident O - NN
+Barack O - NE
+Obama O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+US O - FM
+-Präsident O - FM
+Obama O - NE
+44 O - CARD
+. O - $.
+
+US O - FM
+-Präsident O - FM
+Obama O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+US O - FM
+-Präsident O - TRUNC
+Barack O - NE
+Obama O - NE
+44 O - CARD
+. O - $.
+
+US O - NE
+-Präsident O - TRUNC
+Barack O - NE
+Obama O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Barack O - NE
+Hussein O - NE
+Obama O - NE
+II O - CARD
+44 O - CARD
+. O - $.
+
+Barack O - NE
+Hussein O - NE
+Obama O - NE
+II O - CARD
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Ubisoft O - NE
+französischer O - ADJA
+Publisher O - NN
+für O - APPR
+Computerspiele O - NN
+
+Ubi O - NE
+Soft O - NE
+französischer O - ADJA
+Publisher O - NN
+für O - APPR
+Computerspiele O - NN
+
+Ubisoft O - NE
+Entertainment O - FM
+S.A O - NE
+. O - $.
+französischer O - ADJA
+Publisher O - NN
+für O - APPR
+Computerspiele O - NN
+
+Alstom O - NE
+Französischer O - ADJA
+Konzern O - NN
+im O - APPRART
+Energie O - NN
+- O - TRUNC
+und O - KON
+Transportbereich O - NN
+
+ABB O - NE
+Kraftwerke O - NN
+Französischer O - ADJA
+Konzern O - NN
+im O - APPRART
+Energie O - NN
+- O - TRUNC
+und O - KON
+Transportbereich O - NN
+
+Alstom O - NE
+AG O - NN
+Französischer O - ADJA
+Konzern O - NN
+im O - APPRART
+Energie O - NN
+- O - TRUNC
+und O - KON
+Transportbereich O - NN
+
+Alsthom O - NE
+Französischer O - ADJA
+Konzern O - NN
+im O - APPRART
+Energie O - NN
+- O - TRUNC
+und O - KON
+Transportbereich O - NN
+
+Bundesamt O - NN
+für O - APPR
+Seeschifffahrt O - NN
+und O - KON
+Hydrographie O - NN
+deutsche O - ADJA
+Bundesoberbehörde O - NN
+mit O - APPR
+Dienstsitzen O - NN
+in O - APPR
+Hamburg O - NE
+und O - KON
+Rostock O - NE
+
+Bundesamt O - NN
+für O - APPR
+Seeschifffahrt O - NN
+und O - KON
+Hydrografie O - NN
+deutsche O - ADJA
+Bundesoberbehörde O - NN
+mit O - APPR
+Dienstsitzen O - NN
+in O - APPR
+Hamburg O - NE
+und O - KON
+Rostock O - NE
+
+Deutsches O - ADJA
+Hydrographisches O - ADJA
+Institut O - NN
+deutsche O - ADJA
+Bundesoberbehörde O - NN
+mit O - APPR
+Dienstsitzen O - NN
+in O - APPR
+Hamburg O - NE
+und O - KON
+Rostock O - NE
+
+Deutsches O - ADJA
+Hydrographisches O - ADJA
+Institut O - NN
+Hamburg O - NE
+deutsche O - ADJA
+Bundesoberbehörde O - NN
+mit O - APPR
+Dienstsitzen O - NN
+in O - APPR
+Hamburg O - NE
+und O - KON
+Rostock O - NE
+
+Bundesamt O - NN
+für O - APPR
+Seeschiffahrt O - NN
+und O - KON
+Hydrographie O - NN
+deutsche O - ADJA
+Bundesoberbehörde O - NN
+mit O - APPR
+Dienstsitzen O - NN
+in O - APPR
+Hamburg O - NE
+und O - KON
+Rostock O - NE
+
+Bundesamt O - NN
+für O - APPR
+Seeschiffahrt O - NN
+und O - KON
+Hydrografie O - NN
+deutsche O - ADJA
+Bundesoberbehörde O - NN
+mit O - APPR
+Dienstsitzen O - NN
+in O - APPR
+Hamburg O - NE
+und O - KON
+Rostock O - NE
+
+Zaman O - NE
+türkische O - ADJA
+Tageszeitung O - NN
+
+Fraport O - NE
+Betreibergesellschaft O - NN
+des O - ART
+Flughafens O - NN
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+Beteiligung O - NN
+an O - APPR
+anderen O - ADJA
+Flughäfen O - NN
+
+Flughafen O - NN
+Frankfurt/Main O - NE
+AG O - NN
+Betreibergesellschaft O - NN
+des O - ART
+Flughafens O - NN
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+Beteiligung O - NN
+an O - APPR
+anderen O - ADJA
+Flughäfen O - NN
+
+Fraport O - NE
+AG O - NN
+Betreibergesellschaft O - NN
+des O - ART
+Flughafens O - NN
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+Beteiligung O - NN
+an O - APPR
+anderen O - ADJA
+Flughäfen O - NN
+
+Fraport O - NE
+AG O - NN
+Frankfurt O - NE
+Airport O - FM
+Services O - FM
+Worldwide O - FM
+Betreibergesellschaft O - NN
+des O - ART
+Flughafens O - NN
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+Beteiligung O - NN
+an O - APPR
+anderen O - ADJA
+Flughäfen O - NN
+
+LG O - NE
+Electronics O - FM
+südkoreanisches O - ADJA
+Unternehmen O - NN
+
+LGe O - NE
+südkoreanisches O - ADJA
+Unternehmen O - NN
+
+Facebook O - NE
+soziales O - ADJA
+Netzwerk O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Facebook O - NE
+Inc O - FM
+. O - $.
+
+facebook.com O - NE
+soziales O - ADJA
+Netzwerk O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Facebook O - NE
+Inc O - FM
+. O - $.
+
+FB O - NE
+soziales O - ADJA
+Netzwerk O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Facebook O - NE
+Inc O - FM
+. O - $.
+
+FACEBOOK O - NE
+soziales O - ADJA
+Netzwerk O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Facebook O - NE
+Inc O - FM
+. O - $.
+
+Volker O - NE
+Weininger O - NE
+deutscher O - ADJA
+Kabarettist O - NN
+, O - $,
+Autor O - NN
+und O - KON
+Büttenredner O - NN
+
+EQS O - NE
+Group O - FM
+AG O - NN
+Wirtschaftsinformationsdienst O - NN
+, O - $,
+Ad O - FM
+-hoc O - FM
+-Dienstleister O - TRUNC
+
+Passauer O - ADJA
+Neue O - ADJA
+Presse O - NN
+Regionalzeitung O - NN
+der O - ART
+Verlagsgruppe O - NN
+Passau O - NE
+Gmb O - NE
+H O - NN
+
+Landauer O - ADJA
+Neue O - ADJA
+Presse O - NN
+Regionalzeitung O - NN
+der O - ART
+Verlagsgruppe O - NN
+Passau O - NE
+Gmb O - NE
+H O - NN
+
+Bayerwald O - NE
+-Bote O - ADJA
+Regionalzeitung O - NN
+der O - ART
+Verlagsgruppe O - NN
+Passau O - NE
+Gmb O - NE
+H O - NN
+
+Alt O - NE
+-Neuöttinger O - ADJA
+Anzeiger O - NN
+Regionalzeitung O - NN
+der O - ART
+Verlagsgruppe O - NN
+Passau O - NE
+Gmb O - NE
+H O - NN
+
+Burghauser O - ADJA
+Anzeiger O - NN
+Regionalzeitung O - NN
+der O - ART
+Verlagsgruppe O - NN
+Passau O - NE
+Gmb O - NE
+H O - NN
+
+Deggendorfer O - ADJA
+Zeitung O - NN
+Regionalzeitung O - NN
+der O - ART
+Verlagsgruppe O - NN
+Passau O - NE
+Gmb O - NE
+H O - NN
+
+Rottaler O - ADJA
+Anzeiger O - NN
+Regionalzeitung O - NN
+der O - ART
+Verlagsgruppe O - NN
+Passau O - NE
+Gmb O - NE
+H O - NN
+
+Vilshofener O - ADJA
+Anzeiger O - NN
+Regionalzeitung O - NN
+der O - ART
+Verlagsgruppe O - NN
+Passau O - NE
+Gmb O - NE
+H O - NN
+
+Direc O - NE
+TV O - FM
+ein O - ART
+amerikanischer O - ADJA
+Fernsehsatellitenbetreiber O - NN
+und O - KON
+Programmanbieter O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+El O - NE
+Segundo O - NE
+. O - $.
+
+Direc O - NE
+TV O - FM
+Es O - PPER
+ist O - VAFIN
+der O - ART
+größte O - ADJA
+Pay O - FM
+-TV O - TRUNC
+-Anbieter O - TRUNC
+der O - ART
+Welt O - NN
+. O - $.
+
+Direc O - NE
+TV O - FM
+Direc O - NE
+TV O - FM
+ist O - VAFIN
+im O - APPRART
+Besitz O - NN
+der O - ART
+Direc O - NE
+TV O - FM
+Group O - FM
+, O - $,
+die O - PRELS
+wiederum O - ADV
+von O - APPR
+AT&T O - NE
+gehalten O - VVPP
+wird O - VAFIN
+und O - KON
+steht O - VVFIN
+in O - APPR
+Konkurrenz O - NN
+zum O - APPRART
+DISH O - NE
+Network O - FM
+und O - KON
+lokalen O - ADJA
+Kabelnetzbetreibern O - NN
+. O - $.
+
+The O - FM
+DIRECTV O - NE
+Group O - FM
+ein O - ART
+amerikanischer O - ADJA
+Fernsehsatellitenbetreiber O - NN
+und O - KON
+Programmanbieter O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+El O - NE
+Segundo O - NE
+. O - $.
+
+The O - FM
+DIRECTV O - NE
+Group O - FM
+Es O - PPER
+ist O - VAFIN
+der O - ART
+größte O - ADJA
+Pay O - FM
+-TV O - TRUNC
+-Anbieter O - TRUNC
+der O - ART
+Welt O - NN
+. O - $.
+
+The O - FM
+DIRECTV O - NE
+Group O - FM
+Direc O - NE
+TV O - FM
+ist O - VAFIN
+im O - APPRART
+Besitz O - NN
+der O - ART
+Direc O - NE
+TV O - FM
+Group O - FM
+, O - $,
+die O - PRELS
+wiederum O - ADV
+von O - APPR
+AT&T O - NE
+gehalten O - VVPP
+wird O - VAFIN
+und O - KON
+steht O - VVFIN
+in O - APPR
+Konkurrenz O - NN
+zum O - APPRART
+DISH O - NE
+Network O - FM
+und O - KON
+lokalen O - ADJA
+Kabelnetzbetreibern O - NN
+. O - $.
+
+The O - FM
+DIRECTV O - NE
+Group O - FM
+, O - $,
+Inc O - NE
+. O - $.
+ein O - ART
+amerikanischer O - ADJA
+Fernsehsatellitenbetreiber O - NN
+und O - KON
+Programmanbieter O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+El O - NE
+Segundo O - NE
+. O - $.
+
+The O - FM
+DIRECTV O - NE
+Group O - FM
+, O - $,
+Inc O - NE
+. O - $.
+Es O - PPER
+ist O - VAFIN
+der O - ART
+größte O - ADJA
+Pay O - FM
+-TV O - TRUNC
+-Anbieter O - TRUNC
+der O - ART
+Welt O - NN
+. O - $.
+
+The O - FM
+DIRECTV O - NE
+Group O - FM
+, O - $,
+Inc O - FM
+. O - $.
+Direc O - NE
+TV O - FM
+ist O - VAFIN
+im O - APPRART
+Besitz O - NN
+der O - ART
+Direc O - NE
+TV O - FM
+Group O - FM
+, O - $,
+die O - PRELS
+wiederum O - ADV
+von O - APPR
+AT&T O - NE
+gehalten O - VVPP
+wird O - VAFIN
+und O - KON
+steht O - VVFIN
+in O - APPR
+Konkurrenz O - NN
+zum O - APPRART
+DISH O - NE
+Network O - FM
+und O - KON
+lokalen O - ADJA
+Kabelnetzbetreibern O - NN
+. O - $.
+
+Studio O - NN
+Canal O - NE
+Filmproduktionsgesellschaft O - NN
+
+Le O - FM
+Studio O - FM
+Canal O - FM
++ O - KON
+Filmproduktionsgesellschaft O - NN
+
+Canal O - NE
+Plus O - NE
+Filmproduktionsgesellschaft O - NN
+
+Canal O - NE
++ O - KON
+Distribution O - FM
+Filmproduktionsgesellschaft O - NN
+
+Canal O - NE
++ O - KON
+Production O - FM
+Filmproduktionsgesellschaft O - NN
+
+Canal O - NE
++ O - KON
+Image O - FM
+Filmproduktionsgesellschaft O - NN
+
+Studio O - FM
+Canal O - FM
+S.A O - NE
+. O - $.
+Filmproduktionsgesellschaft O - NN
+
+Studio O - FM
+Canal O - FM
+Images O - FM
+S.A O - NE
+. O - $.
+Filmproduktionsgesellschaft O - NN
+
+Katastrophenschutzministerium O - NN
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+Zivilschutzministerium O - NN
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+Katastrophenschutzminister O - NN
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+Zivilschutzminister O - NN
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+Luftwaffe O - NN
+Militärische O - ADJA
+Teilstreitkraft O - NN
+der O - ART
+Bundeswehr O - NN
+
+Deutsche O - ADJA
+Luftwaffe O - NN
+Militärische O - ADJA
+Teilstreitkraft O - NN
+der O - ART
+Bundeswehr O - NN
+
+Deutsch O - NN
+Luftwaffe O - NN
+Militärische O - ADJA
+Teilstreitkraft O - NN
+der O - ART
+Bundeswehr O - NN
+
+Sascha O - NE
+Staat O - NN
+deutscher O - ADJA
+Sportjournalist O - NN
+, O - $,
+Moderator O - NN
+und O - KON
+Autor O - NN
+
+arte O - ADJA
+deutsch O - NN
+-französischer O - ADJA
+Fernsehkanal O - NN
+für O - APPR
+Kultur O - NN
+
+Arte.tv O - NN
+deutsch O - ADJD
+-französischer O - ADJA
+Fernsehkanal O - NN
+für O - APPR
+Kultur O - NN
+
+Association O - FM
+Relative O - FM
+a O - FM
+la O - FM
+Television O - FM
+Europeenne O - NE
+deutsch O - ADJD
+-französischer O - ADJA
+Fernsehkanal O - NN
+für O - APPR
+Kultur O - NN
+
+Association O - FM
+Relative O - FM
+à O - FM
+la O - FM
+Télévision O - FM
+Européenne O - FM
+deutsch O - NE
+-französischer O - ADJA
+Fernsehkanal O - NN
+für O - APPR
+Kultur O - NN
+
+Arte O - NN
+HD O - NN
+deutsch O - ADJD
+-französischer O - ADJA
+Fernsehkanal O - NN
+für O - APPR
+Kultur O - NN
+
+Südwestrundfunk O - NN
+deutsche O - ADJA
+Rundfunkanstalt O - NN
+
+SWR O - NE
+deutsche O - ADJA
+Rundfunkanstalt O - NN
+
+Kanye O - NE
+West O - NE
+US O - NE
+-amerikanischer O - ADJA
+Rapper O - NN
+, O - $,
+Sänger O - NN
+und O - KON
+Musikproduzent O - NN
+
+Kanye O - NE
+Omari O - NE
+West O - NE
+US O - NE
+-amerikanischer O - ADJA
+Rapper O - NN
+, O - $,
+Sänger O - NN
+und O - KON
+Musikproduzent O - NN
+
+You O - FM
+Tube O - FM
+Internet O - FM
+-Videoportal O - TRUNC
+
+YT O - NE
+Internet O - NN
+-Videoportal O - TRUNC
+
+ARD O - NE
+Zusammenschluss O - NN
+von O - APPR
+deutschen O - ADJA
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+Regional O - NN
+- O - TRUNC
+und O - KON
+Bundesrundfunkanstalten O - NN
+
+Arbeitsgemeinschaft O - NN
+der O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+Rundfunkanstalten O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+Zusammenschluss O - NN
+von O - APPR
+deutschen O - ADJA
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+Regional O - NN
+- O - TRUNC
+und O - KON
+Bundesrundfunkanstalten O - NN
+
+Deutsche O - ADJA
+Bahn O - NN
+staatliches O - ADJA
+Verkehrsunternehmen O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+DB O - NE
+staatliches O - ADJA
+Verkehrsunternehmen O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Deutsche O - ADJA
+Bahn O - NN
+AG O - NN
+staatliches O - ADJA
+Verkehrsunternehmen O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Deutsche O - ADJA
+Bahn O - NN
+Aktiengesellschaft O - NN
+staatliches O - ADJA
+Verkehrsunternehmen O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+DBAG O - NE
+staatliches O - ADJA
+Verkehrsunternehmen O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+DB O - NE
+AG O - NN
+staatliches O - ADJA
+Verkehrsunternehmen O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Bahn O - NN
+staatliches O - ADJA
+Verkehrsunternehmen O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Börsen O - NN
+-Zeitung O - TRUNC
+Regelmäßig O - ADJD
+erscheinende O - ADJA
+Zeitung O - NN
+
+Börsenzeitung O - NN
+Regelmäßig O - ADJD
+erscheinende O - ADJA
+Zeitung O - NN
+
+trivago O - NE
+eine O - ART
+Hotel O - NN
+-Metasuche O - TRUNC
+im O - APPRART
+Internet O - NN
+. O - $.
+
+trivago O - NE
+Dort O - ADV
+können O - VMFIN
+die O - ART
+Preise O - NN
+von O - APPR
+Hotels O - NN
+, O - $,
+Hostels O - NN
+oder O - KON
+„ O - $(
+Bed O - FM
+and O - FM
+Breakfast“-Unterkünften O - NN
+verglichen O - VVPP
+werden O - VAINF
+. O - $.
+
+trivago O - NE
+Die O - ART
+Website O - NN
+durchsucht O - VVFIN
+nach O - APPR
+eigenen O - ADJA
+Angaben O - NN
+Preise O - NN
+von O - APPR
+mehr O - ADV
+als O - KOKOM
+einer O - ART
+Million O - NN
+Hotels O - NN
+weltweit O - ADJD
+aus O - APPR
+über O - ADV
+250 O - CARD
+Buchungsseiten O - NN
+. O - $.
+
+Vin O - NE
+Diesel O - NE
+US O - FM
+-amerikanischer O - ADJA
+Schauspieler O - NN
+, O - $,
+Drehbuchautor O - NN
+, O - $,
+Filmregisseur O - NN
+und O - KON
+- O - TRUNC
+produzent O - ADJD
+
+Mark O - NN
+Sinclair O - NE
+US O - FM
+-amerikanischer O - ADJA
+Schauspieler O - NN
+, O - $,
+Drehbuchautor O - NN
+, O - $,
+Filmregisseur O - NN
+und O - KON
+- O - TRUNC
+produzent O - ADJD
+
+Mark O - NN
+Sinclair O - NE
+Vincent O - NE
+US O - NE
+-amerikanischer O - ADJA
+Schauspieler O - NN
+, O - $,
+Drehbuchautor O - NN
+, O - $,
+Filmregisseur O - NN
+und O - KON
+- O - TRUNC
+produzent O - ADJD
+
+Cubana O - NE
+Kubanische O - ADJA
+Fluggesellschaft O - NN
+
+Cubana O - NE
+de O - FM
+Aviación O - NE
+Kubanische O - ADJA
+Fluggesellschaft O - NN
+
+thyssenkrupp O - NE
+AG O - NN
+größtes O - ADJA
+deutsches O - ADJA
+Stahl O - NN
+- O - $(
+und O - KON
+Technologieunternehmen O - NN
+
+Thyssen O - NE
+Krupp O - NE
+AG O - NN
+größtes O - ADJA
+deutsches O - ADJA
+Stahl O - NN
+- O - $(
+und O - KON
+Technologieunternehmen O - NN
+
+Nicolás O - NE
+Maduro O - NE
+venezolanischer O - ADJA
+Präsident O - NN
+
+Nicolas O - NE
+Maduro O - NE
+venezolanischer O - ADJA
+Präsident O - NN
+
+Hans O - NE
+-Böckler O - NE
+-Stiftung O - TRUNC
+gewerkschaftsnahe O - ADJA
+Stiftung O - NN
+, O - $,
+Begabtenförderungswerk O - NN
+
+Claus O - NE
+Döring O - NE
+Deutscher O - ADJA
+Journalist O - NN
+und O - KON
+Chefredakteur O - NN
+
+MSV O - NE
+Duisburg O - NE
+deutscher O - ADJA
+Fußballverein O - NN
+
+Meidericher O - ADJA
+Spielverein O - NN
+deutscher O - ADJA
+Fußballverein O - NN
+
+Meidericher O - ADJA
+Spielverein O - NN
+02 O - CARD
+deutscher O - ADJA
+Fußballverein O - NN
+
+Meidericher O - ADJA
+SV O - NE
+Duisburg O - NE
+deutscher O - ADJA
+Fußballverein O - NN
+
+Meidericher O - NE
+SV O - NE
+deutscher O - ADJA
+Fußballverein O - NN
+
+Panasonic O - NE
+Corporation O - FM
+japanischer O - ADJA
+Elektronikkonzern O - NN
+
+France O - NE
+Info O - FM
+französischer O - ADJA
+Radiosender O - NN
+
+TV O - NN
+Spielfilm O - NN
+deutsche O - ADJA
+Programmzeitschrift O - NN
+
+Tvspielfilm.de O - NN
+deutsche O - ADJA
+Programmzeitschrift O - NN
+
+TV O - NN
+Spielfilm.de O - NE
+deutsche O - ADJA
+Programmzeitschrift O - NN
+
+TV O - NN
+SPIELFILM O - NN
+deutsche O - ADJA
+Programmzeitschrift O - NN
+
+Valve O - NE
+Corporation O - FM
+US O - FM
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+und O - KON
+Onlinedistributor O - NN
+für O - APPR
+Computerspiele O - NN
+
+Valve O - NE
+Software O - NN
+US O - FM
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+und O - KON
+Onlinedistributor O - NN
+für O - APPR
+Computerspiele O - NN
+
+Valve O - NE
+US O - FM
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+und O - KON
+Onlinedistributor O - NN
+für O - APPR
+Computerspiele O - NN
+
+VALVe O - NE
+US O - FM
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+und O - KON
+Onlinedistributor O - NN
+für O - APPR
+Computerspiele O - NN
+
+Flughafen O - NN
+Berlin O - NE
+Brandenburg O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+BER O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+BBI O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Berlin O - NE
+-Brandenburg O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Berlin O - NE
+Brandenburg O - NE
+International O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Berlin O - NE
+-Brandenburg O - NE
+International O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Willy O - NE
+-Brandt O - NE
+-Flughafen O - TRUNC
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Berlin O - NE
+Brandenburg O - NE
+International O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Großflughafen O - NN
+Berlin O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Berlin O - NE
+Brandenburg O - NE
+Airport O - NN
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Berlin O - NE
+Brandenburg O - NE
+„ O - $(
+Willy O - NE
+Brandt O - NE
+“ O - $(
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+EDDB O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Berlin O - NE
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Berliner O - ADJA
+Flughafen O - NN
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Giorgi O - NE
+Tschanturia O - NE
+georgischer O - ADJA
+Fußballspieler O - NN
+
+Daisy O - NE
+Ridley O - NE
+britische O - ADJA
+Schauspielerin O - NN
+
+Daisy O - NE
+Jazz O - NE
+Isobel O - NE
+Ridley O - NE
+britische O - ADJA
+Schauspielerin O - NN
+
+FC O - NE
+Watford O - NE
+englischer O - ADJA
+Fußballverein O - NN
+
+Watford O - NE
+FC O - NE
+englischer O - ADJA
+Fußballverein O - NN
+
+Watford O - NE
+Football O - FM
+Club O - NN
+englischer O - ADJA
+Fußballverein O - NN
+
+The O - FM
+Hornets O - NE
+englischer O - ADJA
+Fußballverein O - NN
+
+Sahra O - NE
+Wagenknecht O - NE
+Volkswirtin O - NN
+, O - $,
+deutsche O - ADJA
+Politikerin O - NN
+( O - $(
+Die O - ART
+Linke O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+, O - $,
+Autorin O - NN
+
+Sarah O - NE
+Wagenknecht O - NE
+-Niemeyer O - NE
+Volkswirtin O - NN
+, O - $,
+deutsche O - ADJA
+Politikerin O - NN
+( O - $(
+Die O - ART
+Linke O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+, O - $,
+Autorin O - NN
+
+Sahra O - NE
+Wagenknecht O - NE
+-Niemeyer O - NE
+Volkswirtin O - NN
+, O - $,
+deutsche O - ADJA
+Politikerin O - NN
+( O - $(
+Die O - ART
+Linke O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+, O - $,
+Autorin O - NN
+
+Sarah O - NE
+Wagenknecht O - NE
+Volkswirtin O - NN
+, O - $,
+deutsche O - ADJA
+Politikerin O - NN
+( O - $(
+Die O - ART
+Linke O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+, O - $,
+Autorin O - NN
+
+Jonas O - NE
+Hofmann O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+SAF O - NE
+-Holland O - NE
+Unternehmen O - NN
+aus O - APPR
+Luxemburg O - NE
+
+Richie O - NE
+Gecko O - NE
+Name O - NN
+eines O - ART
+fiktiven O - ADJA
+Charakters O - NN
+in O - APPR
+der O - ART
+Filmreihe O - NN
+From O - FM
+Dusk O - FM
+till O - FM
+Dawn O - NE
+. O - $.
+
+George O - NE
+Clooney O - NE
+US O - NE
+-amerikanischer O - ADJA
+Schauspieler O - NN
+und O - KON
+Regisseur O - NN
+
+George O - NE
+Timothy O - NE
+Clooney O - NE
+US O - NE
+-amerikanischer O - ADJA
+Schauspieler O - NN
+und O - KON
+Regisseur O - NN
+
+Clooney O - NE
+, O - $,
+George O - NE
+US O - NE
+-amerikanischer O - ADJA
+Schauspieler O - NN
+und O - KON
+Regisseur O - NN
+
+Felix O - NE
+Passlack O - NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Solar O - FM
+City O - FM
+eine O - ART
+US O - FM
+-amerikanische O - ADJA
+Aktiengesellschaft O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+San O - NE
+Mateo O - NE
+, O - $,
+Kalifornien O - NE
+, O - $,
+die O - PRELS
+Solarstromanlagen O - NN
+konzipiert O - VVFIN
+, O - $,
+vertreibt O - VVFIN
+, O - $,
+installiert O - VVPP
+und O - KON
+auf O - APPR
+Wunsch O - NN
+auch O - ADV
+finanziert O - VVPP
+, O - $,
+vermietet O - VVPP
+und O - KON
+betreibt O - VVFIN
+. O - $.
+
+Solar O - FM
+City O - FM
+Außerdem O - PROAV
+liefert O - VVFIN
+es O - PPER
+Strom O - NN
+und O - KON
+plant O - VVFIN
+, O - $,
+installiert O - VVPP
+und O - KON
+betreibt O - VVFIN
+Ladestationen O - NN
+für O - APPR
+Elektroautos O - NN
+. O - $.
+
+Christlich O - ADJD
+-Soziale O - ADJA
+Union O - NN
+in O - APPR
+Bayern O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Bayern O - NE
+
+CSU O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Bayern O - NE
+
+Christlich O - ADJD
+-Soziale O - ADJA
+Union O - NN
+in O - APPR
+Bayern O - NE
+e O - FM
+. O - $.
+V O - NN
+. O - $.
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Bayern O - NE
+
+Christlich O - ADJD
+-Soziale O - ADJA
+Union O - NN
+in O - APPR
+Bayern O - NE
+e O - FM
+. O - $.
+V O - NN
+. O - $.
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Bayern O - NE
+
+Deutsche O - ADJA
+Presse O - NN
+-Agentur O - TRUNC
+größte O - ADJA
+Nachrichtenagentur O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Deutsche O - ADJA
+Presseagentur O - NN
+größte O - ADJA
+Nachrichtenagentur O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+dpa O - NE
+größte O - ADJA
+Nachrichtenagentur O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+dpa O - NE
+Deutsche O - ADJA
+Presse O - NN
+-Agentur O - TRUNC
+Gmb O - NE
+H O - NN
+größte O - ADJA
+Nachrichtenagentur O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Bundesanstalt O - NN
+für O - APPR
+Finanzdienstleistungsaufsicht O - NN
+deutsche O - ADJA
+Bundesanstalt O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+Bonn O - NE
+
+Ba O - NE
+Fin O - NE
+deutsche O - ADJA
+Bundesanstalt O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+Bonn O - NE
+
+Thorsten O - NE
+Zacharias O - NE
+deutscher O - ADJA
+Handball O - NN
+-Schiedsrichter O - TRUNC
+
+Donald O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Donald O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Donald O - NE
+John O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Donald O - NE
+John O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Donald O - NE
+J O - NE
+. O - $.
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Donald O - NE
+J O - NE
+. O - $.
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Donald O - NE
+J O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Donald O - NE
+J O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Präsident O - NN
+Donald O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Präsident O - NN
+Donald O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Präsident O - NN
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Präsident O - NN
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Präsident O - NN
+Donald O - NE
+J O - NE
+. O - $.
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Präsident O - NN
+Donald O - NE
+J O - NE
+. O - $.
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Präsident O - NN
+Donald O - NE
+John O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+Präsident O - NN
+Donald O - NE
+John O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+US O - NE
+-Präsident O - TRUNC
+Donald O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+US O - FM
+-Präsident O - TRUNC
+Donald O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+US O - FM
+-Präsident O - TRUNC
+Trump O - NE
+45 O - CARD
+. O - $.
+
+US O - FM
+-Präsident O - FM
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+US O - NE
+-Präsident O - TRUNC
+Donald O - NE
+J O - NE
+. O - $.
+Trump O - NE
+45 O - CARD
+. O - $.
+
+US O - FM
+-Präsident O - TRUNC
+Donald O - NE
+J O - NE
+. O - $.
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+US O - FM
+-Präsident O - TRUNC
+Donald O - NE
+John O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+US O - FM
+-Präsident O - TRUNC
+Donald O - NE
+John O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+The O - FM
+Donald O - NE
+45 O - CARD
+. O - $.
+
+The O - FM
+Donald O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+POTUS O - NE
+45 O - CARD
+45 O - CARD
+. O - $.
+
+POTUS O - NE
+45 O - CARD
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+President O - NN
+Donald O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+President O - NN
+Donald O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+President O - FM
+Trump O - NE
+45 O - CARD
+. O - $.
+
+President O - FM
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+President O - NN
+Donald O - NE
+J O - NE
+. O - $.
+Trump O - NE
+45 O - CARD
+. O - $.
+
+President O - NN
+Donald O - NE
+J O - NE
+. O - $.
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+President O - NN
+Donald O - NE
+John O - NE
+Trump O - NE
+45 O - CARD
+. O - $.
+
+President O - NN
+Donald O - NE
+John O - NE
+Trump O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+DJT O - NE
+45 O - CARD
+. O - $.
+
+DJT O - NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+TSV O - NE
+Uetersen O - NE
+deutscher O - ADJA
+Sportverein O - NN
+
+FC O - NE
+Bayern O - NE
+München O - NE
+Sportverein O - NN
+aus O - APPR
+München O - NE
+, O - $,
+Bayern O - NE
+
+FCB O - NE
+Sportverein O - NN
+aus O - APPR
+München O - NE
+, O - $,
+Bayern O - NE
+
+Bayern O - NE
+München O - NE
+Sportverein O - NN
+aus O - APPR
+München O - NE
+, O - $,
+Bayern O - NE
+
+FC O - NE
+Bayern O - NE
+Sportverein O - NN
+aus O - APPR
+München O - NE
+, O - $,
+Bayern O - NE
+
+Bayern O - NE
+Sportverein O - NN
+aus O - APPR
+München O - NE
+, O - $,
+Bayern O - NE
+
+Fußball O - NN
+-Club O - TRUNC
+Bayern O - NE
+München O - NE
+e O - NN
+. O - $.
+V O - CARD
+. O - $.
+Sportverein O - NN
+aus O - APPR
+München O - NE
+, O - $,
+Bayern O - NE
+
+Oanda O - NE
+Corporation O - FM
+Internet O - NN
+-basierte O - ADJA
+Devisenhandels O - NN
+- O - $(
+und O - KON
+Währungsinformationsdienste O - NN
+. O - $.
+
+Alpenländischer O - ADJA
+Kreditorenverband O - NN
+ein O - ART
+österreichischer O - ADJA
+, O - $,
+seit O - APPR
+1924 O - CARD
+bestehender O - ADJA
+Verband O - NN
+im O - APPRART
+Dienste O - NN
+seiner O - PPOSAT
+Mitglieder O - NN
+bzw O - NE
+. O - $.
+Mandanten O - NN
+und O - KON
+ist O - VAFIN
+eine O - ART
+unabhängige O - ADJA
+Organisation O - NN
+. O - $.
+
+Ralph O - NE
+Hirschberger O - NE
+deutscher O - ADJA
+Fotograf O - NN
+
+Ralf O - NE
+Hirschberger O - NE
+deutscher O - ADJA
+Fotograf O - NN
+
+Vereinigte O - ADJA
+Wirtschaftsdienste O - NN
+ein O - ART
+europäischer O - ADJA
+Dienstleister O - NN
+für O - APPR
+Finanzinformationen O - NN
+. O - $.
+
+Vereinigte O - ADJA
+Wirtschaftsdienste O - NN
+Im O - APPRART
+Geschäftsjahr O - NN
+2016 O - CARD
+beschäftigte O - VVFIN
+vwd O - NE
+in O - APPR
+Belgien O - NE
+, O - $,
+Deutschland O - NE
+, O - $,
+Frankreich O - NE
+, O - $,
+Italien O - NE
+, O - $,
+den O - ART
+Niederlanden O - NE
+und O - KON
+der O - ART
+Schweiz O - NE
+450 O - CARD
+Mitarbeiter O - NN
+und O - KON
+erzielte O - VVFIN
+einen O - ART
+Umsatz O - NN
+von O - APPR
+80 O - CARD
+Millionen O - NN
+Euro O - NN
+. O - $.
+
+Vwd O - NE
+ein O - ART
+europäischer O - ADJA
+Dienstleister O - NN
+für O - APPR
+Finanzinformationen O - NN
+. O - $.
+
+Vwd O - NE
+Im O - APPRART
+Geschäftsjahr O - NN
+2016 O - CARD
+beschäftigte O - VVFIN
+vwd O - NE
+in O - APPR
+Belgien O - NE
+, O - $,
+Deutschland O - NE
+, O - $,
+Frankreich O - NE
+, O - $,
+Italien O - NE
+, O - $,
+den O - ART
+Niederlanden O - NE
+und O - KON
+der O - ART
+Schweiz O - NE
+450 O - CARD
+Mitarbeiter O - NN
+und O - KON
+erzielte O - VVFIN
+einen O - ART
+Umsatz O - NN
+von O - APPR
+80 O - CARD
+Millionen O - NN
+Euro O - NN
+. O - $.
+
+VWD O - NE
+ein O - ART
+europäischer O - ADJA
+Dienstleister O - NN
+für O - APPR
+Finanzinformationen O - NN
+. O - $.
+
+VWD O - NE
+Im O - APPRART
+Geschäftsjahr O - NN
+2016 O - CARD
+beschäftigte O - VVFIN
+vwd O - NE
+in O - APPR
+Belgien O - NE
+, O - $,
+Deutschland O - NE
+, O - $,
+Frankreich O - NE
+, O - $,
+Italien O - NE
+, O - $,
+den O - ART
+Niederlanden O - NE
+und O - KON
+der O - ART
+Schweiz O - NE
+450 O - CARD
+Mitarbeiter O - NN
+und O - KON
+erzielte O - VVFIN
+einen O - ART
+Umsatz O - NN
+von O - APPR
+80 O - CARD
+Millionen O - NN
+Euro O - NN
+. O - $.
+
+Robert O - NE
+Bosch O - NE
+Gmb O - NE
+H O - NN
+deutsches O - ADJA
+Unternehmen O - NN
+
+Bosch O - NE
+deutsches O - ADJA
+Unternehmen O - NN
+
+Werkstätte O - NN
+für O - APPR
+Feinmechanik O - NN
+und O - KON
+Elektrotechnik O - NN
+deutsches O - ADJA
+Unternehmen O - NN
+
+Energiekontor O - NN
+deutsches O - ADJA
+Unternehmen O - NN
+im O - APPRART
+Bereich O - NN
+Erneuerbare O - ADJA
+Energien O - NN
+
+Energiekontor O - NN
+AG O - NN
+deutsches O - ADJA
+Unternehmen O - NN
+im O - APPRART
+Bereich O - NN
+Erneuerbare O - ADJA
+Energien O - NN
+
+Fußballverband O - NN
+Niederrhein O - NE
+Dachorganisation O - NN
+von O - APPR
+1.225 O - CARD
+Fußballvereinen O - NN
+mit O - APPR
+413.921 O - CARD
+Mitgliedern O - NN
+und O - KON
+9.606 O - CARD
+Mannschaften O - NN
+. O - $.
+
+Fußballverband O - NN
+Niederrhein O - NE
+Der O - ART
+FVN O - NE
+wurde O - VAFIN
+im O - APPRART
+Januar O - NN
+1947 O - CARD
+gegründet O - VVPP
+und O - KON
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+21 O - CARD
+Landesverbänden O - NN
+des O - ART
+DFB O - NE
+sowie O - KON
+zum O - APPRART
+Westdeutschen O - ADJA
+Fußballverband O - NN
+. O - $.
+
+Geschichte O - NN
+des O - ART
+Fußballverbands O - NN
+Niederrhein O - NE
+Dachorganisation O - NN
+von O - APPR
+1.225 O - CARD
+Fußballvereinen O - NN
+mit O - APPR
+413.921 O - CARD
+Mitgliedern O - NN
+und O - KON
+9.606 O - CARD
+Mannschaften O - NN
+. O - $.
+
+Geschichte O - NN
+des O - ART
+Fußballverbands O - NN
+Niederrhein O - NE
+Der O - ART
+FVN O - NE
+wurde O - VAFIN
+im O - APPRART
+Januar O - NN
+1947 O - CARD
+gegründet O - VVPP
+und O - KON
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+21 O - CARD
+Landesverbänden O - NN
+des O - ART
+DFB O - NE
+sowie O - KON
+zum O - APPRART
+Westdeutschen O - ADJA
+Fußballverband O - NN
+. O - $.
+
+Fußball O - NN
+-Verband O - TRUNC
+Niederrhein O - NE
+Dachorganisation O - NN
+von O - APPR
+1.225 O - CARD
+Fußballvereinen O - NN
+mit O - APPR
+413.921 O - CARD
+Mitgliedern O - NN
+und O - KON
+9.606 O - CARD
+Mannschaften O - NN
+. O - $.
+
+Fußball O - NN
+-Verband O - TRUNC
+Niederrhein O - NE
+Der O - ART
+FVN O - NE
+wurde O - VAFIN
+im O - APPRART
+Januar O - NN
+1947 O - CARD
+gegründet O - VVPP
+und O - KON
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+21 O - CARD
+Landesverbänden O - NN
+des O - ART
+DFB O - NE
+sowie O - KON
+zum O - APPRART
+Westdeutschen O - ADJA
+Fußballverband O - NN
+. O - $.
+
+FVN O - NE
+Dachorganisation O - NN
+von O - APPR
+1.225 O - CARD
+Fußballvereinen O - NN
+mit O - APPR
+413.921 O - CARD
+Mitgliedern O - NN
+und O - KON
+9.606 O - CARD
+Mannschaften O - NN
+. O - $.
+
+FVN O - NE
+Der O - ART
+FVN O - NE
+wurde O - VAFIN
+im O - APPRART
+Januar O - NN
+1947 O - CARD
+gegründet O - VVPP
+und O - KON
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+21 O - CARD
+Landesverbänden O - NN
+des O - ART
+DFB O - NE
+sowie O - KON
+zum O - APPRART
+Westdeutschen O - ADJA
+Fußballverband O - NN
+. O - $.
+
+Robert O - NE
+Rodriguez O - NE
+US O - NE
+-amerikanischer O - ADJA
+Regisseur O - NN
+, O - $,
+Drehbuchautor O - NN
+, O - $,
+Filmkomponist O - NN
+und O - KON
+Filmproduzent O - NN
+
+Robert O - NE
+Anthony O - NE
+Rodriguez O - NE
+US O - NE
+-amerikanischer O - ADJA
+Regisseur O - NN
+, O - $,
+Drehbuchautor O - NN
+, O - $,
+Filmkomponist O - NN
+und O - KON
+Filmproduzent O - NN
+
+Robert O - NE
+Rodríguez O - NE
+US O - NE
+-amerikanischer O - ADJA
+Regisseur O - NN
+, O - $,
+Drehbuchautor O - NN
+, O - $,
+Filmkomponist O - NN
+und O - KON
+Filmproduzent O - NN
+
+Premier O - FM
+League O - FM
+höchste O - ADJA
+Spielklasse O - NN
+im O - APPRART
+englischen O - ADJA
+Fußball O - NN
+
+Holger O - NE
+Münch O - NE
+deutscher O - ADJA
+Präsident O - NN
+des O - ART
+Bundeskriminalamtes O - NN
+, O - $,
+ehemaliger O - ADJA
+Polizeipräsident O - NN
+Bremen O - NE
+und O - KON
+ehemaliger O - ADJA
+Direktor O - NN
+des O - ART
+Landeskriminalamts O - NN
+
+Volker O - NE
+Kefer O - NE
+deutscher O - ADJA
+Manager O - NN
+, O - $,
+ehemaliges O - ADJA
+Mitglied O - NN
+des O - ART
+Vorstandes O - NN
+der O - ART
+Deutschen O - ADJA
+Bahn O - NN
+
+Deutsche O - ADJA
+Oracle O - NE
+-Anwendergruppe O - TRUNC
+eine O - PIS
+der O - ART
+wichtigsten O - ADJA
+unabhängigen O - ADJA
+Informationsplattformen O - NN
+zu O - APPR
+Oracle O - NE
+-nahen O - ADJA
+Themen O - NN
+im O - APPRART
+deutschsprachigen O - ADJA
+Raum O - NN
+. O - $.
+
+Deutsche O - ADJA
+ORACLE O - NE
+-Anwendergruppe O - TRUNC
+e O - NN
+. O - $.
+V O - CARD
+. O - $.
+eine O - PIS
+der O - ART
+wichtigsten O - ADJA
+unabhängigen O - ADJA
+Informationsplattformen O - NN
+zu O - APPR
+Oracle O - NE
+-nahen O - ADJA
+Themen O - NN
+im O - APPRART
+deutschsprachigen O - ADJA
+Raum O - NN
+. O - $.
+
+Deutsche O - ADJA
+ORACLE O - NE
+-Anwendergruppe O - TRUNC
+e O - NN
+. O - $.
+V O - CARD
+. O - $.
+eine O - PIS
+der O - ART
+wichtigsten O - ADJA
+unabhängigen O - ADJA
+Informationsplattformen O - NN
+zu O - APPR
+Oracle O - NE
+-nahen O - ADJA
+Themen O - NN
+im O - APPRART
+deutschsprachigen O - ADJA
+Raum O - NN
+. O - $.
+
+Bundeskanzleramt O - NN
+Behörde O - NN
+des O - ART
+deutschen O - ADJA
+Bundeskanzlers O - NN
+
+BKAmt O - NE
+Behörde O - NN
+des O - ART
+deutschen O - ADJA
+Bundeskanzlers O - NN
+
+DAX O - NE
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+DAX O - NE
+-Index O - TRUNC
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+Deutscher O - ADJA
+Aktienindex O - NN
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+DAX30 O - NE
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+Short O - FM
+DAX O - NE
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+^ O - FM
+GDAXI O - NE
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+DAX O - NE
+30 O - CARD
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+L O - NE
+-DAX O - NE
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+L/E O - NE
+-Dax O - NE
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+Der O - ART
+Dax O - NE
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+Harvard O - NE
+University O - FM
+private O - ADJA
+Universität O - NN
+in O - APPR
+Cambridge O - NE
+, O - $,
+Massachusetts O - NE
+
+Harvard O - NE
+-Universität O - NN
+private O - ADJA
+Universität O - NN
+in O - APPR
+Cambridge O - NE
+, O - $,
+Massachusetts O - NE
+
+Universität O - NN
+Harvard O - NE
+private O - ADJA
+Universität O - NN
+in O - APPR
+Cambridge O - NE
+, O - $,
+Massachusetts O - NE
+
+Harvard O - NE
+private O - ADJA
+Universität O - NN
+in O - APPR
+Cambridge O - NE
+, O - $,
+Massachusetts O - NE
+
+Thomas O - NE
+Müller O - NE
+Deutscher O - ADJA
+Fußballspieler O - NN
+
+Müller O - NE
+, O - $,
+Thomas O - NE
+Deutscher O - NE
+Fußballspieler O - NN
+
+Dpa O - NE
+-AFX O - NE
+Wirtschaftsnachrichten O - NN
+eine O - ART
+deutschsprachige O - ADJA
+Nachrichtenagentur O - NN
+für O - APPR
+Wirtschafts O - NN
+- O - TRUNC
+und O - KON
+Finanznachrichten O - NN
+. O - $.
+
+Dpa O - NE
+-AFX O - $(
+Wirtschaftsnachrichten O - NN
+Die O - ART
+Zielgruppe O - NN
+von O - APPR
+dpa O - NE
+-AFX O - FM
+sind O - VAFIN
+Banken O - NN
+, O - $,
+Finanzdienstleister O - NN
+und O - KON
+Medien O - NN
+. O - $.
+
+Dpa O - NE
+-AFX O - NE
+Wirtschaftsnachrichten O - NN
+Gmb O - NE
+H O - NN
+eine O - ART
+deutschsprachige O - ADJA
+Nachrichtenagentur O - NN
+für O - APPR
+Wirtschafts O - NN
+- O - TRUNC
+und O - KON
+Finanznachrichten O - NN
+. O - $.
+
+Dpa O - NE
+-AFX O - NE
+Wirtschaftsnachrichten O - NN
+Gmb O - NE
+H O - NN
+Die O - ART
+Zielgruppe O - NN
+von O - APPR
+dpa O - NE
+-AFX O - NE
+sind O - VAFIN
+Banken O - NN
+, O - $,
+Finanzdienstleister O - NN
+und O - KON
+Medien O - NN
+. O - $.
+
+dpa O - NE
+-AFX O - FM
+eine O - ART
+deutschsprachige O - ADJA
+Nachrichtenagentur O - NN
+für O - APPR
+Wirtschafts O - NN
+- O - TRUNC
+und O - KON
+Finanznachrichten O - NN
+. O - $.
+
+dpa O - NE
+-AFX O - $(
+Die O - ART
+Zielgruppe O - NN
+von O - APPR
+dpa O - NE
+-AFX O - NE
+sind O - VAFIN
+Banken O - NN
+, O - $,
+Finanzdienstleister O - NN
+und O - KON
+Medien O - NN
+. O - $.
+
+Freiheitliche O - ADJA
+Partei O - NN
+Österreichs O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Österreich O - NE
+
+Freiheitliche O - ADJA
+Partei O - NN
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Österreich O - NE
+
+FPÖ O - NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Österreich O - NE
+
+Focus O - FM
+Online O - FM
+deutschsprachige O - ADJA
+Nachrichten O - NN
+-Website O - TRUNC
+
+FOCUS O - NE
+ONLINE O - NE
+deutschsprachige O - ADJA
+Nachrichten O - NN
+-Website O - TRUNC
+
+focus.de O - NE
+deutschsprachige O - ADJA
+Nachrichten O - NN
+-Website O - TRUNC
+
+Bergische O - ADJA
+Universität O - NN
+Wuppertal O - NE
+Universität O - NN
+in O - APPR
+Deutschland O - NE
+
+Maschinenbauschule O - NN
+Elberfeld O - NE
+-Barmen O - TRUNC
+Universität O - NN
+in O - APPR
+Deutschland O - NE
+
+Gesamthochschule O - NN
+Wuppertal O - NE
+Universität O - NN
+in O - APPR
+Deutschland O - NE
+
+Uni O - NN
+Wuppertal O - NE
+Universität O - NN
+in O - APPR
+Deutschland O - NE
+
+Universität O - NN
+Wuppertal O - NE
+Universität O - NN
+in O - APPR
+Deutschland O - NE
+
+Brig–Visp–Zermatt O - NE
+-Bahn O - TRUNC
+meterspurige O - ADJA
+Schmalspurbahn O - NN
+in O - APPR
+der O - ART
+Schweiz O - NE
+
+Flughafen O - NN
+München O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Franz O - NE
+Joseph O - NE
+Strauß O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Franz O - NE
+-Josef O - NE
+-Strauß O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+EDDM O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+München O - NE
+Franz O - NE
+Josef O - NE
+Strauß O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Airport O - NN
+München O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+Franz O - NE
+Josef O - NE
+Strauss O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+München O - NE
+Franz O - NE
+-Josef O - NE
+-Strauß O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+München O - NE
+-Franz O - NE
+Josef O - NE
+Strauß O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+München O - NE
+II O - CARD
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Munich O - NE
+Airport O - FM
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Franz O - NE
+-Josef O - NE
+-Strauß O - TRUNC
+-Flughafen O - TRUNC
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Flughafen O - NN
+MUC O - NE
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Pay O - NE
+Pal O - NE
+US O - FM
+-amerikanischer O - ADJA
+Betreiber O - NN
+eines O - ART
+gleichnamigen O - ADJA
+Online O - FM
+-Bezahlsystems O - TRUNC
+
+Pay O - FM
+Pal O - FM
+Holdings O - FM
+, O - $,
+Inc O - NE
+. O - $.
+US O - FM
+-amerikanischer O - ADJA
+Betreiber O - NN
+eines O - ART
+gleichnamigen O - ADJA
+Online O - FM
+-Bezahlsystems O - TRUNC
+
+Anton O - NE
+Hofreiter O - NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+Bündnis O - NN
+90/Die O - ADJA
+Grünen O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+
+Toni O - NE
+Hofreiter O - NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+Bündnis O - NN
+90/Die O - ADJA
+Grünen O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+
+Hofreiter O - NN
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+Bündnis O - NN
+90/Die O - ADJA
+Grünen O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+
+Tengelmann O - NE
+deutsches O - ADJA
+Unternehmen O - NN
+
+Unternehmensgruppe O - NN
+Tengelmann O - NE
+deutsches O - ADJA
+Unternehmen O - NN
+
+Tengelmann O - NE
+International O - NE
+Gmb O - NE
+H O - NE
+deutsches O - ADJA
+Unternehmen O - NN
+
+Tengelmann O - NE
+Warenhandelsgesellschaft O - NN
+KG O - NE
+deutsches O - ADJA
+Unternehmen O - NN
+
+Holger O - NE
+Stahlknecht O - NE
+deutscher O - ADJA
+Politiker O - NN
+, O - $,
+Md O - NE
+L O - NE
+, O - $,
+Landesminister O - NN
+in O - APPR
+Sachsen O - NE
+-Anhalt O - TRUNC
