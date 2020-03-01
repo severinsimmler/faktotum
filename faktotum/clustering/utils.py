@@ -165,6 +165,7 @@ class SemiSupervisedKMeans:
         X = pd.DataFrame(X)
         X["y"] = self.y
         for _, cluster in X.groupby("y"):
+            print(X.iloc[:, :-1])
             yield random.choice(X.iloc[:, :-1].values)
 
 class Clustering:
