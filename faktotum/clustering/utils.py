@@ -85,7 +85,7 @@ class Embeddings:
     def _classic_vectorization(
         self, sentence, token_indices, model, add_adj=False, add_nn=False, add_per=False
     ):
-        self._add_tokens(token_indices, add_adj, add_nn, add_per)
+        self._add_tokens(sentence, token_indices, add_adj, add_nn, add_per)
         tokens = [token[0] for i, token in enumerate(sentence) if i in token_indices]
         return sum(self._get_classic_embedding(tokens, model)) / len(tokens)
 
@@ -95,7 +95,7 @@ class Embeddings:
         text = " ".join(token[0] for token in sentence)
         sentence_ = Sentence(text, use_tokenizer=False)
         model.embed(sentence_)
-        self._add_tokens(token_indices, add_adj, add_nn, add_per)
+        self._add_tokens(sentence, token_indices, add_adj, add_nn, add_per)
         tokens = [token for i, token in enumerate(sentence_) if i in token_indices]
         return sum(self._get_bert_embedding(tokens)) / len(tokens)
 
@@ -119,7 +119,7 @@ class Embeddings:
             yield current_person, indices
 
     @staticmethod
-    def _add_tokens(token_indices, add_adj, add_nn, add_per):
+    def _add_tokens(sentence, token_indices, add_adj, add_nn, add_per):
         if add_adj:
             adjs = [i for i, token in enumerate(sentence) if "ADJA" in token[3]]
             token_indices.extend(adjs)

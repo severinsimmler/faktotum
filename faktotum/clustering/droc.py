@@ -39,10 +39,10 @@ def compare_embeddings(model_directory):
     }:
         for suffix, features in [
             ("", {"add_adj": False, "add_nn": False, "add_per": False}),
-            ("+ ADJ", {"add_adj": True, "add_nn": False, "add_per": False}),
-            ("+ NN", {"add_adj": False, "add_nn": True, "add_per": False}),
-            ("+ PER", {"add_adj": False, "add_nn": False, "add_per": True}),
-            ("+ ADJ + NN + PER", {"add_adj": True, "add_nn": True, "add_per": True}),
+            (" + ADJ", {"add_adj": True, "add_nn": False, "add_per": False}),
+            (" + NN", {"add_adj": False, "add_nn": True, "add_per": False}),
+            (" + PER", {"add_adj": False, "add_nn": False, "add_per": True}),
+            (" + ADJ + NN + PER", {"add_adj": True, "add_nn": True, "add_per": True}),
         ]:
             approach = approach + suffix
             logging.info(approach)
