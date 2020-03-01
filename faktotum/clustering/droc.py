@@ -1,7 +1,7 @@
 import json
 import logging
 from pathlib import Path
-from sklearn.utils.testing import ignore_warnings
+from sklearn.utils import ignore_warnings
 from sklearn.exceptions import ConvergenceWarning
 
 import pandas as pd
@@ -29,7 +29,7 @@ def compare_embeddings(model_directory):
     data = load_data()
     embeddings = Embeddings(model_directory, "gutenberg")
 
-    for embedding, model in {
+    for embedding, model in [
         ("CBOW_{w2v}", embeddings.cbow_w2v),
         ("Skipgram_{w2v}", embeddings.skipgram_w2v),
         ("Facebook CBOW_{ft}", embeddings.cbow_ft_fb),
@@ -40,14 +40,14 @@ def compare_embeddings(model_directory):
         ("mBERT", embeddings.bert_m),
         ("mBERT_{\ddagger}", embeddings.bert_ma),
         ("BERT_{ner}", embeddings.bert_ner),
-    }:
-        for suffix, features in {
+    ]:
+        for suffix, features in [
             ("", {"add_adj": False, "add_nn": False, "add_per": False}),
             (" + ADJ", {"add_adj": True, "add_nn": False, "add_per": False}),
             (" + NN", {"add_adj": False, "add_nn": True, "add_per": False}),
             (" + PER", {"add_adj": False, "add_nn": False, "add_per": True}),
             (" + ADJ + NN + PER", {"add_adj": True, "add_nn": True, "add_per": True}),
-        }:
+        ]:
             approach = embedding + suffix
             logging.info(approach)
             scores = list()
