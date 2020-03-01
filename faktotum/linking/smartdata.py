@@ -32,6 +32,8 @@ class EntityLinker:
                 else:
                     yield sentence
                     sentence = list()
+        if sentence:
+            yield sentence
 
     def _build_knowledge_base(self):
         context = defaultdict(list)
