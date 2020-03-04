@@ -85,7 +85,8 @@ class EntityLinker:
                     tokens.append(token[0])
             text = " ".join(tokens)
         sentence = Sentence(text, use_tokenizer=False)
-        EMBEDDING.embed(sentence)
+        yield [0]
+        #EMBEDDING.embed(sentence)
         for entity, indices in index.items():
             vector = sentence[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
@@ -123,14 +124,13 @@ class EntityLinker:
                             for i, token in enumerate(context):
                                 if token[2] != "-" and token[0] == mention[0]:
                                     if token[0] not in _matches:
-                                        """vector = list(
+                                        vector = list(
                                             self._vectorize(
                                                 context,
                                                 index={token[2]: [i]},
                                                 mask_entity=mask_entity,
                                             )
-                                        )"""
-                                        vector = [0]
+                                        )
                                         if len(matches[token[2]]) > 1:
                                             print(token[0], token[2], mention[0], mention[2])
                                         matches[token[2]].append(vector)
