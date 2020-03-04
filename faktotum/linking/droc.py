@@ -101,7 +101,11 @@ class EntityLinker:
             kb = self._build_knowledge_base(novel)
             for sentence in novel:
                 mentions = [token for token in sentence if token[2] != "-"]
-                mention_vectors = [self._vectorize(sentence, {token[2]: i}) for i, token in enumerate(sentence) if token[2] != "-"]
+                mention_vectors = [
+                    list(self._vectorize(sentence, {token[2]: i}))
+                    for i, token in enumerate(sentence)
+                    if token[2] != "-"
+                ]
                 for mention, mention_vector in zip(mentions, mention_vectors):
                     matches = defaultdict(list)
                     for values in kb.values():
