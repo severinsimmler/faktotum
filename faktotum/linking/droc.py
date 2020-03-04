@@ -85,8 +85,7 @@ class EntityLinker:
                     tokens.append(token[0])
             text = " ".join(tokens)
         sentence = Sentence(text, use_tokenizer=False)
-        yield [0]
-        #EMBEDDING.embed(sentence)
+        EMBEDDING.embed(sentence)
         for entity, indices in index.items():
             vector = sentence[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
