@@ -79,9 +79,9 @@ class EntityLinker:
             vector = None
             for i in indices:
                 if not vector:
-                    vector = token.get_embedding().numpy()
+                    vector = sentence[i].get_embedding().numpy()
                 else:
-                    vector = vector + token.get_embedding().numpy()
+                    vector = vector + sentence[i].get_embedding().numpy()
             yield entity, len(indices)
 
     def clustering(self):
