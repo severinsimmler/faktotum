@@ -9,6 +9,7 @@ import re
 import pandas as pd
 import tqdm
 from flair.embeddings import BertEmbeddings
+from flair.data import Sentence
 from sklearn.cluster import AgglomerativeClustering
 
 EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
@@ -55,12 +56,18 @@ class EntityLinker:
     @staticmethod
     def _vectorize(sentence, mask_entity: bool = False):
         tokens = list()
-        index = list()
+        index = defaultdict(list)
         for i, token in enumerate(sentence):
             if token[2] == "-":
                 tokens.append(token[0])
             else:
-                index.append(i)
+                if index[token[2]]:
+                    if index[token[2]][-1] + 1 == i:
+                        index[token[2]].append(i)
+                    else:
+                        print("ERROR: Same entity multiple times.")
+                else:
+                    index[token[2]].append(i)
                 if mask_entity:
                     tokens.append("[MASK]")
                 else:
@@ -68,14 +75,14 @@ class EntityLinker:
         text = " ".join(tokens)
         sentence = Sentence(text, use_tokenizer=False)
         EMBEDDING.embed(sentence)
-        tokens = [token for i, token in enumerate(sentence) if i in index]
-        vector = None
-        for token in tokens:
-            if not vector:
-                vector = token.get_embedding().numpy()
-            else:
-                vector = vector + token.get_embedding().numpy()
-        return vector / len(tokens)
+        for entity, indices in index.items():
+            vector = None
+            for i in indices:
+                if not vector:
+                    vector = token.get_embedding().numpy()
+                else:
+                    vector = vector + token.get_embedding().numpy()
+            yield entity, len(indices)
 
     def clustering(self):
         for novel in tqdm.tqdm(self.dataset.values()):
