@@ -122,15 +122,14 @@ class EntityLinker:
                         for context in valid_sentences:
                             for i, token in enumerate(context):
                                 if token[2] != "-" and token[0] == mention[0]:
-                                    print(token[2], mention[2])
                                     if token[0] not in _matches:
-                                        vector = list(
+                                        """vector = list(
                                             self._vectorize(
                                                 context,
                                                 index={token[2]: [i]},
                                                 mask_entity=mask_entity,
                                             )
-                                        )
+                                        )"""
                                         if len(matches[token[2]]) > 1:
                                             print(token[0], token[2], mention[0], mention[2])
                                         matches[token[2]].append(vector)
