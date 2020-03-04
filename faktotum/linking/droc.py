@@ -195,6 +195,7 @@ class EntityLinker:
                             if mention[0] == mention_[0]:
                                 matches.add(mention_[2])
                     if not skip:
+                        print(len(matches))
                         if len(matches) == 0:
                             fn += 1
                         elif len(matches) == 1:
