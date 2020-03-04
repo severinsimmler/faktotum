@@ -67,7 +67,7 @@ class EntityLinker:
                 mentions = [token for token in sentence if token[2] != "-"]
                 for mention in mentions:
                     matches = set()
-                    for values in kb.values():
+                    for identifier, values in kb.items():
                         valid_sentences = list()
                         for context in values["CONTEXT"]:
                             # Filter the current sentence
@@ -77,8 +77,8 @@ class EntityLinker:
                             token for token in valid_sentences if token[2] != "-"
                         ]
                         for mention_ in mentions_:
-                            if mention[0].lower() == mention_[0].lower():
-                                matches.add(mention[2])
+                            if mention[0] == mention_[0]:
+                                matches.add(mention_[2])
                     if len(matches) == 0:
                         fn += 1
                     elif len(matches) == 1:
