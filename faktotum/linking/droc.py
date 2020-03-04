@@ -173,7 +173,7 @@ class EntityLinker:
                     {"precision": precision, "recall": recall, "f1": f1,}
                 )
             except ZeroDivisionError:
-                pass
+                print(tp, fp, tn)
         return pd.DataFrame(stats).describe()
 
     @staticmethod
