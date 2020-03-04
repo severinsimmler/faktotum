@@ -123,18 +123,14 @@ class EntityLinker:
                         for context in valid_sentences:
                             for i, token in enumerate(context):
                                 if token[2] != "-" and token[0] == mention[0]:
-                                    if token[0] not in _matches:
-                                        vector = list(
+                                    vector = list(
                                             self._vectorize(
                                                 context,
                                                 index={token[2]: [i]},
                                                 mask_entity=mask_entity,
                                             )
                                         )
-                                        if len(matches[token[2]]) > 1:
-                                            print(token[0], token[2], mention[0], mention[2])
-                                        matches[token[2]].append(vector)
-                                        _matches.add(token[0])
+                                    matches[token[2]].append(vector)
                     if not skip:
                         if len(matches) == 0:
                             fn += 1
@@ -144,6 +140,7 @@ class EntityLinker:
                             else:
                                 fp += 1
                         else:
+                            print(matches.keys())
                             max_score = 0.0
                             candidate = None
                             for identifier, vector in matches.items():
@@ -195,7 +192,6 @@ class EntityLinker:
                             if mention[0] == mention_[0]:
                                 matches.add(mention_[2])
                     if not skip:
-                        print(len(matches))
                         if len(matches) == 0:
                             fn += 1
                         elif len(matches) == 1:
