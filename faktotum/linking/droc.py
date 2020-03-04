@@ -129,6 +129,8 @@ class EntityLinker:
                                         )
                                     )
                                     matches[token[2]].append(vector)
+                                    if len(matches[token[2]]) > 1:
+                                        print(token[0], token[2], mention[0], mention[2])
                     if not skip:
                         if len(matches) == 0:
                             fn += 1
