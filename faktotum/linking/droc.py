@@ -1,5 +1,6 @@
 import flair
 import torch
+
 flair.device = torch.device("cpu")
 
 from pathlib import Path
@@ -54,25 +55,34 @@ class EntityLinker:
         return kb
 
     @staticmethod
-    def _vectorize(sentence, mask_entity: bool = False):
-        tokens = list()
-        index = defaultdict(list)
-        for i, token in enumerate(sentence):
-            if token[2] == "-":
-                tokens.append(token[0])
-            else:
-                if index[token[2]]:
-                    if index[token[2]][-1] + 1 == i:
-                        index[token[2]].append(i)
-                    else:
-                        print("ERROR: Same entity multiple times.")
+    def _vectorize(sentence, index=None, mask_entity: bool = False):
+        if not index:
+            tokens = list()
+            index = defaultdict(list)
+            for i, token in enumerate(sentence):
+                if token[2] == "-":
+                    tokens.append(token[0])
                 else:
-                    index[token[2]].append(i)
-                if mask_entity:
+                    if index[token[2]]:
+                        if index[token[2]][-1] + 1 == i:
+                            index[token[2]].append(i)
+                        else:
+                            print("ERROR: Same entity multiple times.")
+                    else:
+                        index[token[2]].append(i)
+                    if mask_entity:
+                        tokens.append("[MASK]")
+                    else:
+                        tokens.append(token[0])
+            text = " ".join(tokens)
+        else:
+            tokens = list()
+            for i, token in enumerate(sentence):
+                if i in list(index.values()) and mask_entity:
                     tokens.append("[MASK]")
                 else:
                     tokens.append(token[0])
-        text = " ".join(tokens)
+            text = " ".join(tokens)
         sentence = Sentence(text, use_tokenizer=False)
         EMBEDDING.embed(sentence)
         for entity, indices in index.items():
@@ -81,7 +91,7 @@ class EntityLinker:
                 vector = vector + sentence[i].get_embedding().numpy()
             yield entity, vector / len(indices)
 
-    def similarities(self):
+    def similarities(self, mask_entity=False):
         stats = list()
         for novel in tqdm.tqdm(self.dataset.values()):
             tp = 0
@@ -91,7 +101,7 @@ class EntityLinker:
             for sentence in novel:
                 mentions = [token for token in sentence if token[2] != "-"]
                 for mention in mentions:
-                    matches = set()
+                    matches = defaultdict(list)
                     for values in kb.values():
                         if len(values["CONTEXT"]) == 1:
                             skip = True
@@ -101,13 +111,18 @@ class EntityLinker:
                         for context in values["CONTEXT"]:
                             # Filter the current sentence
                             if context != sentence:
-                                valid_sentences.extend(context)
-                        mentions_ = [
-                            token for token in valid_sentences if token[2] != "-"
-                        ]
-                        for mention_ in mentions_:
-                            if mention[0] == mention_[0]:
-                                matches.add(mention_[2])
+                                valid_sentences.append(context)
+                        for context in valid_sentences:
+                            for i, token in enumerate(context):
+                                if token[2] != "-" and token[0] == mention[0]:
+                                    vector = list(
+                                        self._vectorize(
+                                            context,
+                                            indices={token[2]: [i]},
+                                            mask_entity=mask_entity,
+                                        )
+                                    )
+                                    matches[token[2]].append(vector)
                     if not skip:
                         if len(matches) == 0:
                             fn += 1
@@ -115,6 +130,8 @@ class EntityLinker:
                             if list(matches)[0] == mention[2]:
                                 tp += 1
                             else:
+                                for identifier, vector in matches.items():
+                                    print(identifier, vector)
                                 fp += 1
                         else:
                             # If ambiguous, it's a FN
@@ -173,7 +190,7 @@ class EntityLinker:
                     {"precision": precision, "recall": recall, "f1": f1,}
                 )
             except ZeroDivisionError:
-                print(tp, fp, fn)
+                pass
         return pd.DataFrame(stats).describe()
 
     @staticmethod
