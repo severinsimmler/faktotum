@@ -1,9 +1,17 @@
+import flair
+import torch
+flair.device = torch.device("cpu")
+
 from pathlib import Path
 from collections import defaultdict
 import json
 import re
 import pandas as pd
 import tqdm
+from flair.embeddings import BertEmbeddings
+from sklearn.cluster import AgglomerativeClustering
+
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
@@ -45,17 +53,35 @@ class EntityLinker:
         return kb
 
     @staticmethod
-    def _vectorize(sentence):
-        model = NICE
-        text = " ".join([token[0] for token in sentence])
+    def _vectorize(sentence, mask_entity: bool = False):
+        tokens = list()
+        index = list()
+        for i, token in enumerate(sentence):
+            if token[2] == "-":
+                tokens.append(token[0])
+            else:
+                index.append(i)
+                if mask_entity:
+                    tokens.append("[MASK]")
+                else:
+                    tokens.append(token[0])
+        text = " ".join(tokens)
         sentence = Sentence(text, use_tokenizer=False)
-        model.embed(sentence)
+        EMBEDDING.embed(sentence)
+        tokens = [token for i, token in enumerate(sentence) if i in index]
+        vector = None
+        for token in tokens:
+            if not vector:
+                vector = token.get_embedding().numpy()
+            else:
+                vector = vector + token.get_embedding().numpy()
+        return vector / len(tokens)
 
     def clustering(self):
         for novel in tqdm.tqdm(self.dataset.values()):
             kb = self._build_knowledge_base(novel)
             matrix = np.array([self._vectorize(sentence) for sentence in novel])
-            clusters = KMeans().fit_transform(matrix)
+            clusters = AgglomerativeClustering().fit_transform(matrix)
 
     def rule_based(self):
         stats = list()
