@@ -81,11 +81,48 @@ class EntityLinker:
                 vector = vector + sentence[i].get_embedding().numpy()
             yield entity, vector / len(indices)
 
-    def clustering(self):
+    def similarities(self):
+                stats = list()
         for novel in tqdm.tqdm(self.dataset.values()):
+            tp = 0
+            fp = 0
+            fn = 0
             kb = self._build_knowledge_base(novel)
-            matrix = np.array([self._vectorize(sentence) for sentence in novel])
-            clusters = AgglomerativeClustering().fit_transform(matrix)
+            for sentence in novel:
+                mentions = [token for token in sentence if token[2] != "-"]
+                for mention in mentions:
+                    matches = set()
+                    for values in kb.values():
+                        if len(values["CONTEXT"]) == 1:
+                            continue
+                        valid_sentences = list()
+                        for context in values["CONTEXT"]:
+                            # Filter the current sentence
+                            if context != sentence:
+                                valid_sentences.extend(context)
+                        mentions_ = [
+                            token for token in valid_sentences if token[2] != "-"
+                        ]
+                        for mention_ in mentions_:
+                            if mention[0] == mention_[0]:
+                                matches.add(mention_[2])
+                    if len(matches) == 0:
+                        fn += 1
+                    elif len(matches) == 1:
+                        if list(matches)[0] == mention[2]:
+                            tp += 1
+                        else:
+                            fp += 1
+                    else:
+                        # If ambiguous, it's a FN
+                        fn += 1
+            precision = self.precision(tp, fp)
+            recall = self.recall(tp, fn)
+            f1 = self.f1(precision, recall)
+            stats.append(
+                {"precision": precision, "recall": recall, "f1": f1,}
+            )
+        return pd.DataFrame(stats).describe()
 
     def rule_based(self):
         stats = list()
@@ -99,6 +136,8 @@ class EntityLinker:
                 for mention in mentions:
                     matches = set()
                     for values in kb.values():
+                        if len(values["CONTEXT"]) == 1:
+                            continue
                         valid_sentences = list()
                         for context in values["CONTEXT"]:
                             # Filter the current sentence
