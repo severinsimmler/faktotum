@@ -94,7 +94,9 @@ class EntityLinker:
                     matches = set()
                     for values in kb.values():
                         if len(values["CONTEXT"]) == 1:
+                            skip = True
                             continue
+                        skip = False
                         valid_sentences = list()
                         for context in values["CONTEXT"]:
                             # Filter the current sentence
@@ -106,16 +108,17 @@ class EntityLinker:
                         for mention_ in mentions_:
                             if mention[0] == mention_[0]:
                                 matches.add(mention_[2])
-                    if len(matches) == 0:
-                        fn += 1
-                    elif len(matches) == 1:
-                        if list(matches)[0] == mention[2]:
-                            tp += 1
+                    if not skip:
+                        if len(matches) == 0:
+                            fn += 1
+                        elif len(matches) == 1:
+                            if list(matches)[0] == mention[2]:
+                                tp += 1
+                            else:
+                                fp += 1
                         else:
-                            fp += 1
-                    else:
-                        # If ambiguous, it's a FN
-                        fn += 1
+                            # If ambiguous, it's a FN
+                            fn += 1
             precision = self.precision(tp, fp)
             recall = self.recall(tp, fn)
             f1 = self.f1(precision, recall)
@@ -137,7 +140,9 @@ class EntityLinker:
                     matches = set()
                     for values in kb.values():
                         if len(values["CONTEXT"]) == 1:
+                            skip = True
                             continue
+                        skip = False
                         valid_sentences = list()
                         for context in values["CONTEXT"]:
                             # Filter the current sentence
@@ -149,16 +154,17 @@ class EntityLinker:
                         for mention_ in mentions_:
                             if mention[0] == mention_[0]:
                                 matches.add(mention_[2])
-                    if len(matches) == 0:
-                        fn += 1
-                    elif len(matches) == 1:
-                        if list(matches)[0] == mention[2]:
-                            tp += 1
+                    if not skip:
+                        if len(matches) == 0:
+                            fn += 1
+                        elif len(matches) == 1:
+                            if list(matches)[0] == mention[2]:
+                                tp += 1
+                            else:
+                                fp += 1
                         else:
-                            fp += 1
-                    else:
-                        # If ambiguous, it's a FN
-                        fn += 1
+                            # If ambiguous, it's a FN
+                            fn += 1
             precision = self.precision(tp, fp)
             recall = self.recall(tp, fn)
             f1 = self.f1(precision, recall)
