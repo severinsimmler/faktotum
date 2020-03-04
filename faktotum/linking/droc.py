@@ -108,6 +108,7 @@ class EntityLinker:
                 ]
                 for mention, mention_vector in zip(mentions, mention_vectors):
                     matches = defaultdict(list)
+                    _matches = set()
                     for values in kb.values():
                         if len(values["CONTEXT"]) == 1:
                             skip = True
@@ -121,16 +122,18 @@ class EntityLinker:
                         for context in valid_sentences:
                             for i, token in enumerate(context):
                                 if token[2] != "-" and token[0] == mention[0]:
-                                    vector = list(
-                                        self._vectorize(
-                                            context,
-                                            index={token[2]: [i]},
-                                            mask_entity=mask_entity,
+                                    if token[0] not in _matches:
+                                        vector = list(
+                                            self._vectorize(
+                                                context,
+                                                index={token[2]: [i]},
+                                                mask_entity=mask_entity,
+                                            )
                                         )
-                                    )
-                                    matches[token[2]].append(vector)
-                                    if len(matches[token[2]]) > 1:
-                                        print(token[0], token[2], mention[0], mention[2])
+                                        if len(matches[token[2]]) > 1:
+                                            print(token[0], token[2], mention[0], mention[2])
+                                        matches[token[2]].append(vector)
+                                        _matches.add(token[0])
                     if not skip:
                         if len(matches) == 0:
                             fn += 1
@@ -152,12 +155,15 @@ class EntityLinker:
                                 tp += 1
                             else:
                                 fp += 1
-            precision = self.precision(tp, fp)
-            recall = self.recall(tp, fn)
-            f1 = self.f1(precision, recall)
-            stats.append(
-                {"precision": precision, "recall": recall, "f1": f1,}
-            )
+            try:
+                precision = self.precision(tp, fp)
+                recall = self.recall(tp, fn)
+                f1 = self.f1(precision, recall)
+                stats.append(
+                    {"precision": precision, "recall": recall, "f1": f1,}
+                )
+            except ZeroDivisionError:
+                pass
         return pd.DataFrame(stats).describe()
 
     def rule_based(self):
