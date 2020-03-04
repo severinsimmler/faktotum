@@ -141,6 +141,8 @@ class EntityLinker:
                             max_score = 0.0
                             candidate = None
                             for identifier, vector in matches.items():
+                                print(mention_vector)
+                                print(vector)
                                 score = cosine_similarity(mention_vector, vector)
                                 if score > max_score:
                                     max_score = score
