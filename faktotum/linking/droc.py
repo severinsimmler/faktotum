@@ -82,7 +82,7 @@ class EntityLinker:
             yield entity, vector / len(indices)
 
     def similarities(self):
-                stats = list()
+        stats = list()
         for novel in tqdm.tqdm(self.dataset.values()):
             tp = 0
             fp = 0
