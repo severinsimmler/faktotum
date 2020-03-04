@@ -181,6 +181,7 @@ class EntityLinker:
                                 fp += 1
                         else:
                             # If ambiguous, it's a FN
+                            print(list(matches))
                             fn += 1
             try:
                 precision = self.precision(tp, fp)
