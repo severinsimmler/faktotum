@@ -90,7 +90,7 @@ class EntityLinker:
             vector = sentence[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
                 vector = vector + sentence[i].get_embedding().numpy()
-            yield vector / len(indices)
+            yield (vector / len(indices)).reshape(1, -1)
 
     def similarities(self, mask_entity=False):
         stats = list()
