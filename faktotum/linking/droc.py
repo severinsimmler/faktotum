@@ -24,7 +24,7 @@ class EntityLinker:
             return json.load(file_)
 
     @staticmethod
-    def _build_knowledge_base(novel):
+    def _build_knowledge_base(novel, threshold: int = 1):
         context = defaultdict(list)
         mentions = defaultdict(set)
         for sentence in novel:
@@ -39,8 +39,9 @@ class EntityLinker:
                         mentions[token[2]].add(token[0])
         kb = defaultdict(dict)
         for key in mentions:
-            kb[key]["CONTEXT"] = context[key]
-            kb[key]["MENTIONS"] = mentions[key]
+            if len(context[key]) >= threshold:
+                kb[key]["CONTEXT"] = context[key]
+                kb[key]["MENTIONS"] = mentions[key]
         return kb
 
     @staticmethod
@@ -58,19 +59,16 @@ class EntityLinker:
 
     def rule_based(self):
         stats = list()
-        X = list()
         for novel in tqdm.tqdm(self.dataset.values()):
             tp = 0
             fp = 0
             fn = 0
             kb = self._build_knowledge_base(novel)
-            for x in kb.values():
-                X.append(len(x["CONTEXT"]))
             for sentence in novel:
                 mentions = [token for token in sentence if token[2] != "-"]
                 for mention in mentions:
                     matches = set()
-                    for identifier, values in kb.items():
+                    for values in kb.values():
                         valid_sentences = list()
                         for context in values["CONTEXT"]:
                             # Filter the current sentence
@@ -98,7 +96,6 @@ class EntityLinker:
             stats.append(
                 {"precision": precision, "recall": recall, "f1": f1,}
             )
-        print(pd.Series(X).describe())
         return pd.DataFrame(stats).describe()
 
     @staticmethod
