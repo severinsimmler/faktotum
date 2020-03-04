@@ -90,7 +90,7 @@ class EntityLinker:
             vector = sentence[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
                 vector = vector + sentence[i].get_embedding().numpy()
-            yield entity, vector / len(indices)
+            yield vector / len(indices)
 
     def similarities(self, mask_entity=False):
         stats = list()
@@ -143,7 +143,7 @@ class EntityLinker:
                             for identifier, vector in matches.items():
                                 print(mention_vector)
                                 print(vector)
-                                score = cosine_similarity(mention_vector, vector)
+                                score = cosine_similarity(mention_vector[0], vector[0][0])
                                 if score > max_score:
                                     max_score = score
                                     candidate = identifier
