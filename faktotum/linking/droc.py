@@ -108,11 +108,10 @@ class EntityLinker:
                 ]
                 for mention, mention_vector in zip(mentions, mention_vectors):
                     matches = defaultdict(list)
-                    _matches = set()
                     for values in kb.values():
                         if len(values["CONTEXT"]) == 1:
                             skip = True
-                            continue
+                            break
                         skip = False
                         valid_sentences = list()
                         for context in values["CONTEXT"]:
