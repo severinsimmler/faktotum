@@ -118,7 +118,7 @@ class EntityLinker:
                                     vector = list(
                                         self._vectorize(
                                             context,
-                                            indices={token[2]: [i]},
+                                            index={token[2]: [i]},
                                             mask_entity=mask_entity,
                                         )
                                     )
