@@ -102,7 +102,7 @@ class EntityLinker:
             for sentence in novel:
                 mentions = [token for token in sentence if token[2] != "-"]
                 mention_vectors = [
-                    list(self._vectorize(sentence, {token[2]: i}))
+                    list(self._vectorize(sentence, {token[2]: [i]}))
                     for i, token in enumerate(sentence)
                     if token[2] != "-"
                 ]
@@ -145,7 +145,7 @@ class EntityLinker:
                                 if score > max_score:
                                     max_score = score
                                     candidate = identifier
-                            print(candidate, mention[2])
+                            print(candidate, mention[2], max_score)
                             if candidate == mention[2]:
                                 tp += 1
                             else:
@@ -195,7 +195,6 @@ class EntityLinker:
                                 fp += 1
                         else:
                             # If ambiguous, it's a FN
-                            print(list(matches))
                             fn += 1
             try:
                 precision = self.precision(tp, fp)
