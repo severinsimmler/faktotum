@@ -130,6 +130,7 @@ class EntityLinker:
                                                 mask_entity=mask_entity,
                                             )
                                         )"""
+                                        vector = [0]
                                         if len(matches[token[2]]) > 1:
                                             print(token[0], token[2], mention[0], mention[2])
                                         matches[token[2]].append(vector)
