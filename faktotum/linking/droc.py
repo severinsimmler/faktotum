@@ -82,7 +82,7 @@ class EntityLinker:
                     vector = sentence[i].get_embedding().numpy()
                 else:
                     vector = vector + sentence[i].get_embedding().numpy()
-            yield entity, len(indices)
+            yield entity, vector / len(indices)
 
     def clustering(self):
         for novel in tqdm.tqdm(self.dataset.values()):
