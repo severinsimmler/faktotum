@@ -12,6 +12,7 @@ import tqdm
 from flair.embeddings import BertEmbeddings
 from flair.data import Sentence
 from sklearn.cluster import AgglomerativeClustering
+from sklearn.metrics.pairwise import cosine_similarity
 
 EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
@@ -100,7 +101,8 @@ class EntityLinker:
             kb = self._build_knowledge_base(novel)
             for sentence in novel:
                 mentions = [token for token in sentence if token[2] != "-"]
-                for mention in mentions:
+                mention_vectors = [self._vectorize(sentence, {token[2]: i}) for i, token in enumerate(sentence) if token[2] != "-"]
+                for mention, mention_vector in zip(mentions, mention_vectors):
                     matches = defaultdict(list)
                     for values in kb.values():
                         if len(values["CONTEXT"]) == 1:
@@ -130,12 +132,20 @@ class EntityLinker:
                             if list(matches)[0] == mention[2]:
                                 tp += 1
                             else:
-                                for identifier, vector in matches.items():
-                                    print(identifier, vector)
                                 fp += 1
                         else:
-                            # If ambiguous, it's a FN
-                            fn += 1
+                            max_score = 0.0
+                            candidate = None
+                            for identifier, vector in matches.items():
+                                score = cosine_similarity(mention_vector, vector)
+                                if score > max_score:
+                                    max_score = score
+                                    candidate = identifier
+                            print(candidate, mention[2])
+                            if candidate == mention[2]:
+                                tp += 1
+                            else:
+                                fp += 1
             precision = self.precision(tp, fp)
             recall = self.recall(tp, fn)
             f1 = self.f1(precision, recall)
