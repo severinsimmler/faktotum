@@ -165,12 +165,15 @@ class EntityLinker:
                         else:
                             # If ambiguous, it's a FN
                             fn += 1
-            precision = self.precision(tp, fp)
-            recall = self.recall(tp, fn)
-            f1 = self.f1(precision, recall)
-            stats.append(
-                {"precision": precision, "recall": recall, "f1": f1,}
-            )
+            try:
+                precision = self.precision(tp, fp)
+                recall = self.recall(tp, fn)
+                f1 = self.f1(precision, recall)
+                stats.append(
+                    {"precision": precision, "recall": recall, "f1": f1,}
+                )
+            except ZeroDivisionError:
+                pass
         return pd.DataFrame(stats).describe()
 
     @staticmethod
