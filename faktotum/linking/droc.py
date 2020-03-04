@@ -111,7 +111,7 @@ class EntityLinker:
                     for values in kb.values():
                         if len(values["CONTEXT"]) == 1:
                             skip = True
-                            break
+                            continue
                         skip = False
                         valid_sentences = list()
                         for context in values["CONTEXT"]:
@@ -138,7 +138,6 @@ class EntityLinker:
                             else:
                                 fp += 1
                         else:
-                            print(matches.keys())
                             max_score = 0.0
                             candidate = None
                             for identifier, vector in matches.items():
@@ -146,7 +145,6 @@ class EntityLinker:
                                 if score > max_score:
                                     max_score = score
                                     candidate = identifier
-                            print(candidate, mention[2], max_score)
                             if candidate == mention[2]:
                                 tp += 1
                             else:
