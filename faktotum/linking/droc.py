@@ -98,15 +98,17 @@ class EntityLinker:
                     mention_vectors = list(self._vectorize(sentence, indices, return_id=True))
 
                     for identifier, mention_vector in mention_vectors:
-                        max_sim = 0.0
+                        max_score = 0.0
                         best_candidate = None
                         for person, contexts in kb.items():
                             for context, candidate_vector in zip(contexts["CONTEXTS"], contexts["EMBEDDINGS"]):
                                 if context != sentence:
-                                    print(mention_vector, candidate_vector)
-                                    print(candidate_vector)
-                                    print(cosine_similarity(mention_vector, candidate_vector))
-                        return
+                                    score = cosine_similarity(mention_vector, candidate_vector)
+                                    if score > max_score:
+                                        max_score = score
+                                        best_candidate = person
+
+                        return best_candidate, identifier
 
 
                 for mention, mention_vector in zip(mentions, mention_vectors):
