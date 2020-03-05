@@ -100,13 +100,14 @@ class EntityLinker:
             fn = 0
             kb = self._build_knowledge_base(novel)
             for sentence in novel:
-                mentions = [token for token in sentence if token[2] != "-"]
-                indices = defaultdict(list)
-                for i, token in enumerate(sentence):
-                    if token[2] != "-":
-                        indices[token[2]].append(i)
-                mention_vectors = list(self._vectorize(sentence, indices))
-                return mention_vectors
+                if mentions:
+                    mentions = [token for token in sentence if token[2] != "-"]
+                    indices = defaultdict(list)
+                    for i, token in enumerate(sentence):
+                        if token[2] != "-":
+                            indices[token[2]].append(i)
+                    mention_vectors = list(self._vectorize(sentence, indices))
+                    return mention_vectors
 
 
                 for mention, mention_vector in zip(mentions, mention_vectors):
