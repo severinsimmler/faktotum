@@ -36,7 +36,7 @@ class EntityLinker:
 
     def _build_knowledge_base(self, novel, threshold: int = 1, mask_entity: bool = False):
         context = defaultdict(list)
-        mentions = defaultdict(list)
+        mentions = defaultdict(set)
         embeddings = defaultdict(list)
         for sentence in novel:
             for i, token in enumerate(sentence):
