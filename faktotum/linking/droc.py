@@ -34,7 +34,7 @@ class EntityLinker:
         with textfile.open("r", encoding="utf-8") as file_:
             return json.load(file_)
 
-    def _build_knowledge_base(self, novel, threshold: int = 1, mask_entity: bool = False):
+    def _build_knowledge_base(self, novel, threshold: int = 1, mask_entity: bool = False, build_embeddings=True):
         context = defaultdict(list)
         mentions = defaultdict(set)
         embeddings = defaultdict(list)
@@ -43,8 +43,9 @@ class EntityLinker:
                 if token[2] != "-":
                     if sentence not in context[token[2]]:
                         context[token[2]].append(sentence)
-                        vector = next(self._vectorize(sentence, index={token[2]: [i]}, mask_entity=mask_entity))
-                        embeddings[token[2]].append(vector)
+                        if build_embeddings:
+                            vector = next(self._vectorize(sentence, index={token[2]: [i]}, mask_entity=mask_entity))
+                            embeddings[token[2]].append(vector)
         for sentence in novel:
             for token in sentence:
                 if token[2] != "-":
@@ -55,7 +56,8 @@ class EntityLinker:
         for key in mentions:
             if len(context[key]) > threshold:
                 kb[key]["CONTEXTS"] = context[key]
-                kb[key]["EMBEDDINGS"] = embeddings[key]
+                if build_embeddings:
+                    kb[key]["EMBEDDINGS"] = embeddings[key]
                 kb[key]["MENTIONS"] = mentions[key]
         return kb
 
@@ -131,13 +133,13 @@ class EntityLinker:
             tp = 0
             fp = 0
             fn = 0
-            kb = self._build_knowledge_base(novel)
+            kb = self._build_knowledge_base(novel, build_embeddings=False)
             for sentence in novel:
                 mentions = [token for token in sentence if token[2] != "-"]
                 for mention in mentions:
                     matches = set()
                     for values in kb.values():
-                        if len(values["CONTEXT"]) == 1:
+                        if len(values["CONTEXTS"]) == 1:
                             skip = True
                             continue
                         skip = False
