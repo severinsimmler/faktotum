@@ -101,7 +101,7 @@ class EntityLinker:
                         max_sim = 0.0
                         best_candidate = None
                         for person, contexts in kb.items():
-                            for context, candidate_vector in (contexts["CONTEXTS"], contexts["EMBEDDINGS"]):
+                            for context, candidate_vector in zip(contexts["CONTEXTS"], contexts["EMBEDDINGS"]):
                                 if context != sentence:
                                     print(mention_vector, candidate_vector)
                                     print(candidate_vector)
