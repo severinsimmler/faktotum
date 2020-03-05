@@ -54,7 +54,7 @@ class EntityLinker:
         kb = defaultdict(dict)
         for key in mentions:
             if len(context[key]) > threshold:
-                kb[key]["CONTEXT"] = context[key]
+                kb[key]["CONTEXTS"] = context[key]
                 kb[key]["EMBEDDINGS"] = embeddings[key]
                 kb[key]["MENTIONS"] = mentions[key]
         return kb
