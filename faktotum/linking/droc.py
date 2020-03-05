@@ -100,7 +100,10 @@ class EntityLinker:
             fn = 0
             kb = self._build_knowledge_base(novel)
             for sentence in novel:
-                if [token for token in sentence if token[2] != "-"]:
+                is_mentioned = [token for token in sentence if token[2] != "-"]
+                if not is_mentioned:
+                    continue
+                if is_mentioned:
                     indices = defaultdict(list)
                     for i, token in enumerate(sentence):
                         if token[2] != "-":
