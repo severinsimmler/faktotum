@@ -108,52 +108,12 @@ class EntityLinker:
                                         max_score = score
                                         best_candidate = person
 
-                        return best_candidate, identifier
-
-
-                for mention, mention_vector in zip(mentions, mention_vectors):
-                    matches = defaultdict(list)
-                    for values in kb.values():
-                        if len(values["CONTEXT"]) == 1:
-                            skip = True
-                            continue
-                        skip = False
-                        valid_sentences = list()
-                        for context in values["CONTEXT"]:
-                            # Filter the current sentence
-                            if context != sentence:
-                                valid_sentences.append(context)
-                        for context in valid_sentences:
-                            for i, token in enumerate(context):
-                                if token[2] != "-" and token[0] == mention[0]:
-                                    vector = list(
-                                            self._vectorize(
-                                                context,
-                                                index={token[2]: [i]},
-                                                mask_entity=mask_entity,
-                                            )
-                                        )
-                                    matches[token[2]].append(vector)
-                    if not skip:
-                        if len(matches) == 0:
-                            fn += 1
-                        elif len(matches) == 1:
-                            if list(matches)[0] == mention[2]:
-                                tp += 1
-                            else:
-                                fp += 1
+                        if best_candidate == identifier:
+                            tp += 1
                         else:
-                            max_score = 0.0
-                            candidate = None
-                            for identifier, vector in matches.items():
-                                score = cosine_similarity(mention_vector[0], vector[0][0])[0][0]
-                                if score > max_score:
-                                    max_score = score
-                                    candidate = identifier
-                            if candidate == mention[2]:
-                                tp += 1
-                            else:
-                                fp += 1
+                            fp += 1
+
+            print(tp / len(kb))
             try:
                 precision = self.precision(tp, fp)
                 recall = self.recall(tp, fn)
