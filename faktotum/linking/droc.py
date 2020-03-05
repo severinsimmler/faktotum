@@ -71,7 +71,6 @@ class EntityLinker:
                 else:
                     tokens.append(token[0])
             text = " ".join(tokens)
-            print(text)
             sentence_ = Sentence(text, use_tokenizer=False)
             EMBEDDING.embed(sentence_)
             vector = sentence_[indices[0]].get_embedding().numpy()
@@ -98,7 +97,7 @@ class EntityLinker:
                     for i, token in enumerate(sentence):
                         if token[2] != "-":
                             indices[token[2]].append(i)
-                    mention_vectors = list(self._vectorize(sentence, indices, return_id=True))
+                    mention_vectors = list(self._vectorize(sentence, indices, return_id=True, mask_entity=mask_entity))
 
                     for identifier, mention_vector in mention_vectors:
                         max_score = 0.0
