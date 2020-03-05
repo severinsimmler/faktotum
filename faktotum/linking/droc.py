@@ -111,7 +111,7 @@ class EntityLinker:
                     mention_vectors = list(self._vectorize(sentence, indices))
                     for mention_vector in mention_vectors:
                         for person, contexts in kb.items():
-                            for context in contexts:
+                            for context in contexts["CONTEXT"]:
                                 if context != sentence:
                                     candidate = defaultdict(list)
                                     for i, token in enumerate(context):
