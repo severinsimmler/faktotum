@@ -43,7 +43,7 @@ class EntityLinker:
                 if token[2] != "-":
                     if sentence not in context[token[2]]:
                         context[token[2]].append(sentence)
-                        vector = next(self._vectorize(sentence, index={token[2]: [i]}, mask_entity=False))
+                        vector = next(self._vectorize(sentence, index={token[2]: [i]}, mask_entity=mask_entity))
                         embeddings[token[2]].append(vector)
         for sentence in novel:
             for token in sentence:
@@ -86,7 +86,7 @@ class EntityLinker:
             fp = 0
             fn = 0
             kb = self._build_knowledge_base(novel)
-            for sentence in novel:
+            for sentence in tqdm.tqdm(novel):
                 is_mentioned = [token for token in sentence if token[2] != "-"]
                 if not is_mentioned:
                     continue
@@ -113,7 +113,7 @@ class EntityLinker:
                         else:
                             fp += 1
 
-            print(tp / len(kb))
+            print(tp / (tp + fp))
             try:
                 precision = self.precision(tp, fp)
                 recall = self.recall(tp, fn)
