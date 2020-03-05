@@ -34,8 +34,7 @@ class EntityLinker:
         with textfile.open("r", encoding="utf-8") as file_:
             return json.load(file_)
 
-    @staticmethod
-    def _build_knowledge_base(novel, threshold: int = 1, mask_entity: bool = False):
+    def _build_knowledge_base(self, novel, threshold: int = 1, mask_entity: bool = False):
         context = defaultdict(list)
         mentions = defaultdict(list)
         embeddings = defaultdict(list)
