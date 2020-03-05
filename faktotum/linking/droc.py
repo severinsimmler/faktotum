@@ -69,11 +69,11 @@ class EntityLinker:
                 else:
                     tokens.append(token[0])
             text = " ".join(tokens)
-            sentence = Sentence(text, use_tokenizer=False)
-            EMBEDDING.embed(sentence)
-            vector = sentence[indices[0]].get_embedding().numpy()
+            sentence_ = Sentence(text, use_tokenizer=False)
+            EMBEDDING.embed(sentence_)
+            vector = sentence_[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
-                vector = vector + sentence[i].get_embedding().numpy()
+                vector = vector + sentence_[i].get_embedding().numpy()
             if return_id:
                 yield person, (vector / len(indices)).reshape(1, -1)
             else:
