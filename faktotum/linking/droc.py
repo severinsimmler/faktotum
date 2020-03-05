@@ -156,7 +156,7 @@ class EntityLinker:
                                 matches.add(mention_[2])
                     if not skip:
                         if len(matches) == 0:
-                            fn += 1
+                            fp += 1
                         elif len(matches) == 1:
                             if list(matches)[0] == mention[2]:
                                 tp += 1
@@ -164,7 +164,7 @@ class EntityLinker:
                                 fp += 1
                         else:
                             # If ambiguous, it's a FN
-                            fn += 1
+                            fp += 1
             stats.append({"accuracy": (tp / (tp + fp))})
             # try:
             #     precision = self.precision(tp, fp)
