@@ -113,16 +113,16 @@ class EntityLinker:
                         else:
                             fp += 1
 
-            print(tp / (tp + fp))
-            try:
-                precision = self.precision(tp, fp)
-                recall = self.recall(tp, fn)
-                f1 = self.f1(precision, recall)
-                stats.append(
-                    {"precision": precision, "recall": recall, "f1": f1,}
-                )
-            except ZeroDivisionError:
-                pass
+            stats.append({"accuracy": (tp / (tp + fp))})
+            # try:
+            #     precision = self.precision(tp, fp)
+            #     recall = self.recall(tp, fn)
+            #     f1 = self.f1(precision, recall)
+            #     stats.append(
+            #         {"precision": precision, "recall": recall, "f1": f1,}
+            #     )
+            # except ZeroDivisionError:
+            #     pass
         return pd.DataFrame(stats).describe()
 
     def rule_based(self):
@@ -163,15 +163,16 @@ class EntityLinker:
                         else:
                             # If ambiguous, it's a FN
                             fn += 1
-            try:
-                precision = self.precision(tp, fp)
-                recall = self.recall(tp, fn)
-                f1 = self.f1(precision, recall)
-                stats.append(
-                    {"precision": precision, "recall": recall, "f1": f1,}
-                )
-            except ZeroDivisionError:
-                pass
+            stats.append({"accuracy": (tp / (tp + fp))})
+            # try:
+            #     precision = self.precision(tp, fp)
+            #     recall = self.recall(tp, fn)
+            #     f1 = self.f1(precision, recall)
+            #     stats.append(
+            #         {"precision": precision, "recall": recall, "f1": f1,}
+            #     )
+            # except ZeroDivisionError:
+            #     pass
         return pd.DataFrame(stats).describe()
 
     @staticmethod
