@@ -70,8 +70,8 @@ class EntityLinker:
                     tokens.append("[MASK]")
                 else:
                     tokens.append(token[0])
-            print(text)
             text = " ".join(tokens)
+            print(text)
             sentence_ = Sentence(text, use_tokenizer=False)
             EMBEDDING.embed(sentence_)
             vector = sentence_[indices[0]].get_embedding().numpy()
