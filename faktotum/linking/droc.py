@@ -109,7 +109,7 @@ class EntityLinker:
                         if token[2] != "-":
                             indices[token[2]].append(i)
                     mention_vectors = list(self._vectorize(sentence, indices))
-                    for mention_vector in mention_vectors:
+                    for identifier, mention_vector in mention_vectors:
                         for person, contexts in kb.items():
                             for context in contexts["CONTEXT"]:
                                 if context != sentence:
@@ -117,7 +117,7 @@ class EntityLinker:
                                     for i, token in enumerate(context):
                                         if token[2] == person:
                                             indices[person].append(i)
-                                    candidate_vector = list(self._vectorize(context, candidate))[0]
+                                    candidate_vector = list(self._vectorize(context, candidate))[0][1]
                                     print(mention_vector, candidate_vector)
                                     print(candidate_vector)
                                     print(cosine_similarity(mention_vector, candidate_vector))
