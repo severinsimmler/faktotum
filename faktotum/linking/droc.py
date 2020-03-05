@@ -115,7 +115,7 @@ class EntityLinker:
                         else:
                             fp += 1
 
-            stats.append({"accuracy": (tp / (tp + fp))})
+            stats.append({"accuracy": self.accuracy(tp, fp)), "precision": self.precision(tp, fp)})
             # try:
             #     precision = self.precision(tp, fp)
             #     recall = self.recall(tp, fn)
@@ -165,7 +165,7 @@ class EntityLinker:
                         else:
                             # If ambiguous, it's a FN
                             fp += 1
-            stats.append({"accuracy": (tp / (tp + fp))})
+            stats.append({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp))})
             # try:
             #     precision = self.precision(tp, fp)
             #     recall = self.recall(tp, fn)
@@ -188,3 +188,7 @@ class EntityLinker:
     @staticmethod
     def f1(precision: float, recall: float) -> float:
         return 2 * ((precision * recall) / (precision + recall))
+
+    @staticmethod
+    def accuracy(tp: int, fp: int) -> float:
+        return tp / (tp + fp)
