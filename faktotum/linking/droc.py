@@ -144,7 +144,7 @@ class EntityLinker:
                             continue
                         skip = False
                         valid_sentences = list()
-                        for context in values["CONTEXT"]:
+                        for context in values["CONTEXTS"]:
                             # Filter the current sentence
                             if context != sentence:
                                 valid_sentences.extend(context)
