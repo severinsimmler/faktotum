@@ -38,7 +38,7 @@ class EntityLinker:
         context = defaultdict(list)
         mentions = defaultdict(set)
         embeddings = defaultdict(list)
-        for sentence in tqdm.tqdm(novel):
+        for sentence in novel:
             for i, token in enumerate(sentence):
                 if token[2] != "-":
                     if sentence not in context[token[2]]:
