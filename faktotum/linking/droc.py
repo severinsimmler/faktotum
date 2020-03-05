@@ -35,62 +35,47 @@ class EntityLinker:
             return json.load(file_)
 
     @staticmethod
-    def _build_knowledge_base(novel, threshold: int = 1):
+    def _build_knowledge_base(novel, threshold: int = 1, mask_entity: bool = False):
         context = defaultdict(list)
-        mentions = defaultdict(set)
+        mentions = defaultdict(list)
+        embeddings = defaultdict(list)
         for sentence in novel:
-            for token in sentence:
+            for i, token in enumerate(sentence):
                 if token[2] != "-":
                     if sentence not in context[token[2]]:
                         context[token[2]].append(sentence)
+                        vector = next(self._vectorize(sentence, index={token[2]: [i]}, mask_entity=False))
+                        embeddings[token[2]].append(vector)
         for sentence in novel:
             for token in sentence:
                 if token[2] != "-":
                     if token[0] not in mentions[token[2]]:
                         mentions[token[2]].add(token[0])
+
         kb = defaultdict(dict)
         for key in mentions:
             if len(context[key]) > threshold:
                 kb[key]["CONTEXT"] = context[key]
+                kb[key]["EMBEDDINGS"] = embeddings[key]
                 kb[key]["MENTIONS"] = mentions[key]
         return kb
 
     @staticmethod
-    def _vectorize(sentence, index=None, mask_entity: bool = False):
-        if not index:
-            tokens = list()
-            index = defaultdict(list)
-            for i, token in enumerate(sentence):
-                if token[2] == "-":
-                    tokens.append(token[0])
-                else:
-                    if index[token[2]]:
-                        if index[token[2]][-1] + 1 == i:
-                            index[token[2]].append(i)
-                        else:
-                            print("ERROR: Same entity multiple times.")
-                    else:
-                        index[token[2]].append(i)
-                    if mask_entity:
-                        tokens.append("[MASK]")
-                    else:
-                        tokens.append(token[0])
-            text = " ".join(tokens)
-        else:
+    def _vectorize(sentence, index, mask_entity: bool = False):
+        for person, indices in index.items():
             tokens = list()
             for i, token in enumerate(sentence):
-                if i in list(index.values()) and mask_entity:
+                if i in indices and mask_entity:
                     tokens.append("[MASK]")
                 else:
                     tokens.append(token[0])
             text = " ".join(tokens)
-        sentence = Sentence(text, use_tokenizer=False)
-        EMBEDDING.embed(sentence)
-        for entity, indices in index.items():
+            sentence = Sentence(text, use_tokenizer=False)
+            EMBEDDING.embed(sentence)
             vector = sentence[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
                 vector = vector + sentence[i].get_embedding().numpy()
-            yield entity, (vector / len(indices)).reshape(1, -1)
+            yield (vector / len(indices)).reshape(1, -1)
 
     def similarities(self, mask_entity=False):
         stats = list()
