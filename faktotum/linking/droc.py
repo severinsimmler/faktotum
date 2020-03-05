@@ -25,7 +25,7 @@ class EntityLinker:
         self.test = self._load_corpus("test")
         self.dev = self._load_corpus("dev")
         self.dataset = dict()
-        for i, data in enumerate({self.test, self.dev, self.train}):
+        for i, data in enumerate([self.test, self.dev, self.train]):
             for key, value in data.items():
                 self.dataset[f"{i}_{key}"] = value
 
