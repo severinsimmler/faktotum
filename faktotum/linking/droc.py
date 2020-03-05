@@ -25,9 +25,9 @@ class EntityLinker:
         self.test = self._load_corpus("test")
         self.dev = self._load_corpus("dev")
         self.dataset = dict()
-        self.dataset.update(self.train)
-        self.dataset.update(self.dev)
-        self.dataset.update(self.test)
+        for i, data in enumerate({self.test, self.dev, self.train}):
+            for key, value in data.items():
+                self.dataset[f"{i}_{key}"] = value
 
     def _load_corpus(self, dataset: str):
         textfile = Path(self.corpus_folder, f"{dataset}.txt")
