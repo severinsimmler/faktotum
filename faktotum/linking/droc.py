@@ -117,7 +117,9 @@ class EntityLinker:
                                     for i, token in enumerate(context):
                                         if token[2] == person:
                                             indices[person].append(i)
-                                    candidate_vector = list(self._vectorize(context, candidate))
+                                    candidate_vector = list(self._vectorize(context, candidate))[0]
+                                    print(mention_vector, candidate_vector)
+                                    print(candidate_vector)
                                     print(cosine_similarity(mention_vector, candidate_vector))
                         return
 
