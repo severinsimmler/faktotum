@@ -50,7 +50,7 @@ class EntityLinker:
                         mentions[token[2]].add(token[0])
         kb = defaultdict(dict)
         for key in mentions:
-            if len(context[key]) >= threshold:
+            if len(context[key]) > threshold:
                 kb[key]["CONTEXT"] = context[key]
                 kb[key]["MENTIONS"] = mentions[key]
         return kb
@@ -90,7 +90,7 @@ class EntityLinker:
             vector = sentence[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
                 vector = vector + sentence[i].get_embedding().numpy()
-            yield (vector / len(indices)).reshape(1, -1)
+            yield entity, (vector / len(indices)).reshape(1, -1)
 
     def similarities(self, mask_entity=False):
         stats = list()
@@ -100,16 +100,23 @@ class EntityLinker:
             fn = 0
             kb = self._build_knowledge_base(novel)
             for sentence in novel:
-                mentions = [token for token in sentence if token[2] != "-"]
-                if not mentions:
-                    continue
-                if mentions:
+                if [token for token in sentence if token[2] != "-"]:
                     indices = defaultdict(list)
                     for i, token in enumerate(sentence):
                         if token[2] != "-":
                             indices[token[2]].append(i)
                     mention_vectors = list(self._vectorize(sentence, indices))
-                    return mention_vectors
+                    for mention_vector in mention_vectors:
+                        for person, contexts in kb.items():
+                            for context in contexts:
+                                if context != sentence:
+                                    candidate = defaultdict(list)
+                                    for i, token in enumerate(context):
+                                        if token[2] == person:
+                                            indices[person].append(i)
+                                    candidate_vector = list(self._vectorize(context, candidate))
+                                    print(cosine_similarity(mention_vector, candidate_vector))
+                        return
 
 
                 for mention, mention_vector in zip(mentions, mention_vectors):
