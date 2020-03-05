@@ -34,7 +34,13 @@ class EntityLinker:
         with textfile.open("r", encoding="utf-8") as file_:
             return json.load(file_)
 
-    def _build_knowledge_base(self, novel, threshold: int = 1, mask_entity: bool = False, build_embeddings=True):
+    def _build_knowledge_base(
+        self,
+        novel,
+        threshold: int = 1,
+        mask_entity: bool = False,
+        build_embeddings=True,
+    ):
         context = defaultdict(list)
         mentions = defaultdict(set)
         embeddings = defaultdict(list)
@@ -44,7 +50,13 @@ class EntityLinker:
                     if sentence not in context[token[2]]:
                         context[token[2]].append(sentence)
                         if build_embeddings:
-                            vector = next(self._vectorize(sentence, index={token[2]: [i]}, mask_entity=mask_entity))
+                            vector = next(
+                                self._vectorize(
+                                    sentence,
+                                    index={token[2]: [i]},
+                                    mask_entity=mask_entity,
+                                )
+                            )
                             embeddings[token[2]].append(vector)
         for sentence in novel:
             for token in sentence:
@@ -97,15 +109,23 @@ class EntityLinker:
                     for i, token in enumerate(sentence):
                         if token[2] != "-":
                             indices[token[2]].append(i)
-                    mention_vectors = list(self._vectorize(sentence, indices, return_id=True, mask_entity=mask_entity))
+                    mention_vectors = list(
+                        self._vectorize(
+                            sentence, indices, return_id=True, mask_entity=mask_entity
+                        )
+                    )
 
                     for identifier, mention_vector in mention_vectors:
                         max_score = 0.0
                         best_candidate = None
                         for person, contexts in kb.items():
-                            for context, candidate_vector in zip(contexts["CONTEXTS"], contexts["EMBEDDINGS"]):
+                            for context, candidate_vector in zip(
+                                contexts["CONTEXTS"], contexts["EMBEDDINGS"]
+                            ):
                                 if context != sentence:
-                                    score = cosine_similarity(mention_vector, candidate_vector)
+                                    score = cosine_similarity(
+                                        mention_vector, candidate_vector
+                                    )
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
@@ -115,7 +135,9 @@ class EntityLinker:
                         else:
                             fp += 1
 
-            stats.append({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)})
+            stats.append(
+                {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+            )
             # try:
             #     precision = self.precision(tp, fp)
             #     recall = self.recall(tp, fn)
@@ -165,7 +187,9 @@ class EntityLinker:
                         else:
                             # If ambiguous, it's a FN
                             fp += 1
-            stats.append({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)})
+            stats.append(
+                {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+            )
             # try:
             #     precision = self.precision(tp, fp)
             #     recall = self.recall(tp, fn)
