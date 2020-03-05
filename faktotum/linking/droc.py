@@ -165,7 +165,7 @@ class EntityLinker:
                         else:
                             # If ambiguous, it's a FN
                             fp += 1
-            stats.append({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp))})
+            stats.append({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)})
             # try:
             #     precision = self.precision(tp, fp)
             #     recall = self.recall(tp, fn)
