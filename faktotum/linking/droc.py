@@ -81,7 +81,7 @@ class EntityLinker:
 
     def similarities(self, mask_entity=False):
         stats = list()
-        for novel in tqdm.tqdm(self.dataset.values()):
+        for novel in tqdm.tqdm(self.test.values()):
             tp = 0
             fp = 0
             fn = 0
@@ -127,7 +127,7 @@ class EntityLinker:
 
     def rule_based(self):
         stats = list()
-        for novel in tqdm.tqdm(self.dataset.values()):
+        for novel in tqdm.tqdm(self.test.values()):
             tp = 0
             fp = 0
             fn = 0
