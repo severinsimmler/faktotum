@@ -60,7 +60,7 @@ class EntityLinker:
         return kb
 
     @staticmethod
-    def _vectorize(sentence, index, mask_entity: bool = False):
+    def _vectorize(sentence, index, mask_entity: bool = False, return_id=False):
         for person, indices in index.items():
             tokens = list()
             for i, token in enumerate(sentence):
@@ -74,7 +74,10 @@ class EntityLinker:
             vector = sentence[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
                 vector = vector + sentence[i].get_embedding().numpy()
-            yield (vector / len(indices)).reshape(1, -1)
+            if return_id:
+                yield person, (vector / len(indices)).reshape(1, -1)
+            else:
+                yield (vector / len(indices)).reshape(1, -1)
 
     def similarities(self, mask_entity=False):
         stats = list()
@@ -92,16 +95,14 @@ class EntityLinker:
                     for i, token in enumerate(sentence):
                         if token[2] != "-":
                             indices[token[2]].append(i)
-                    mention_vectors = list(self._vectorize(sentence, indices))
+                    mention_vectors = list(self._vectorize(sentence, indices, return_id=True))
+
                     for identifier, mention_vector in mention_vectors:
+                        max_sim = 0.0
+                        best_candidate = None
                         for person, contexts in kb.items():
-                            for context in contexts["CONTEXT"]:
+                            for context, candidate_vector in (contexts["CONTEXTS"], contexts["EMBEDDINGS"]):
                                 if context != sentence:
-                                    candidate = defaultdict(list)
-                                    for i, token in enumerate(context):
-                                        if token[2] == person:
-                                            indices[person].append(i)
-                                    candidate_vector = list(self._vectorize(context, candidate))[0][1]
                                     print(mention_vector, candidate_vector)
                                     print(candidate_vector)
                                     print(cosine_similarity(mention_vector, candidate_vector))
