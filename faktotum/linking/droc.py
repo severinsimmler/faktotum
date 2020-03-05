@@ -70,6 +70,7 @@ class EntityLinker:
                     tokens.append("[MASK]")
                 else:
                     tokens.append(token[0])
+            print(text)
             text = " ".join(tokens)
             sentence_ = Sentence(text, use_tokenizer=False)
             EMBEDDING.embed(sentence_)
