@@ -72,7 +72,6 @@ except ImportError:
 
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.ERROR)
 
 
 MODEL_CLASSES = {
@@ -199,7 +198,7 @@ def mask_tokens(
     for i, dim in enumerate(labels):
         for j, id_ in enumerate(dim):
             if id_ not in entity_ids:
-                labels[i][j] = -100
+                labels[i][j] = -1
 
     for i, dim in enumerate(inputs):
         for j, id_ in enumerate(dim):
