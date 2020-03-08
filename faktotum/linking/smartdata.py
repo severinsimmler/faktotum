@@ -159,7 +159,10 @@ class EntityLinker:
                         is_org = True
                     else:
                         is_org = False
-                    print(len(self._get_candidates(mention, is_org=is_org)))
+                    X = self._get_candidates(mention, is_org=is_org)
+                    print(mention)
+                    print([self.kb[x]["MENTIONS"][0] for x in X])
+                    
                     raise
                     for candidate in self._get_candidates(mention):
                         for context in self.kb[candidate]["MENTIONS"]:
