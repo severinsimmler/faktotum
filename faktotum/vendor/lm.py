@@ -204,7 +204,7 @@ def mask_tokens(
     for i, dim in enumerate(inputs):
         for j, id_ in enumerate(dim):
             if id_ in entity_ids:
-                inputs[i][j] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)[0]
+                inputs[i][j] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
     print(inputs)
     print(labels)    
     raise
