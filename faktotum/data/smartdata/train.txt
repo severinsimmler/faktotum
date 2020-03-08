@@ -615,8 +615,8 @@ Trainer O - NN
 Zoran B-PER Q220490 NE Q220490
 Barišić I-PER Q220490 NE Q220490
 ab O - APPR
-21:05 B-PER - CARD NIL
-Uhr I-PER - NN NIL
+21:05 O - CARD
+Uhr O - NN
 ( O - $(
 live O - ADJD
 auf O - APPR
