@@ -117,7 +117,7 @@ class EntityLinker:
 
     @staticmethod
     def _string_similarity(a, b):
-        return SequenceMatcher(None, a, b).ratio()
+        return difflib.SequenceMatcher(None, a, b).ratio()
 
     def _get_candidates(self, mention):
         candidates = set()
