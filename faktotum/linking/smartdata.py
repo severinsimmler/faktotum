@@ -45,12 +45,12 @@ class EntityLinker:
                 current_entity.append(token)
             elif token[2].startswith("Q") and last_index + 1 != i:
                 if current_entity:
-                    yield current_id, current_entity
+                    yield current_entity[0][2], current_entity
                 current_entity = [token]
             current_id = token[2]
             last_index = i
         if current_entity:
-            yield current_id, current_entity
+            yield current_entity[0][2], current_entity
 
     def rule_based(self):
         tp = 0
