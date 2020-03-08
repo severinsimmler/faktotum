@@ -159,7 +159,7 @@ class EntityLinker:
                         is_org = True
                     else:
                         is_org = False
-                    for candidate in self._get_candidates(mention):
+                    for candidate in self._get_candidates(mention, is_org):
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
                                 text = context + " " + self.kb[candidate].get("DESCRIPTION")
