@@ -910,6 +910,7 @@ def main():
         logger.info("Training new model from scratch")
         model = model_class(config=config)
 
+    model.resize_token_embeddings(len(tokenizer))
     model.to(args.device)
 
     if args.local_rank == 0:
