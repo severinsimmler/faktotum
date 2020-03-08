@@ -196,14 +196,17 @@ def mask_tokens(
 
     entity_ids = tokenizer.convert_tokens_to_ids(ENTITIES)
     labels = inputs.clone()
-    for i, dim in enumerate(inputs):
+    for i, dim in enumerate(labels):
         for j, id_ in enumerate(dim):
             if id_ not in entity_ids:
                 labels[i][j] = -100
-    print(inputs.shape)
-    print(labels.shape)
-    print(labels)
 
+    for i, dim in enumerate(inputs):
+        for j, id_ in enumerate(dim):
+            if id_ in entity_ids:
+                inputs[i][j] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)[0]
+    print(inputs)
+    print(labels)    
     raise
 
 
