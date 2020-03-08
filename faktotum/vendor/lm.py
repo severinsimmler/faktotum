@@ -195,19 +195,14 @@ def mask_tokens(
         )
 
     entity_ids = tokenizer.convert_tokens_to_ids(ENTITIES)
-    labels = list()
-    for dim in inputs:
-        _dim = list()
-        for id_ in dim:
-            if id_ in entity_ids:
-                #_dim.append(tokenizer.convert_tokens_to_ids(tokenizer.mask_token)[0])
-                _dim.append(id_)
-            else:
+    labels = inputs.clone()
+    for i, dim in enumerate(inputs):
+        for j, id_ in enumerate(dim):
+            if id_ not in entity_ids:
                 _dim.append(-100)
-            labels.append(_dim)
-    labels = torch.tensor(labels)
     print(inputs.shape)
     print(labels.shape)
+    print(labels)
 
     raise
 
