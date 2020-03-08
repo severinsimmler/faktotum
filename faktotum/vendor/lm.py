@@ -194,11 +194,20 @@ def mask_tokens(
             "This tokenizer does not have a mask token which is necessary for masked language modeling. Remove the --mlm flag if you want to use this tokenizer."
         )
 
-    labels = inputs.clone()
-
     entity_ids = tokenizer.convert_tokens_to_ids(ENTITIES)
-    for id_ in labels:
-        print(id_)
+    labels = list()
+    for dim in inputs:
+        _dim = list()
+        for id_ in dim:
+            if id_ in entity_ids:
+                #_dim.append(tokenizer.convert_tokens_to_ids(tokenizer.mask_token)[0])
+                _dim.append(id_)
+            else:
+                _dim.append(-100)
+            labels.append(_dim)
+    labels = torch.tensor(labels)
+    print(labels)
+
     raise
 
 
