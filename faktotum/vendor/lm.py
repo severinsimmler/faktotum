@@ -769,6 +769,9 @@ def main():
         # Load a trained model and vocabulary that you have fine-tuned
         model = model_class.from_pretrained(args.output_dir)
         tokenizer = tokenizer_class.from_pretrained(args.output_dir)
+        with open("entities.json", "r", encoding="utf-8") as f:
+            entities = json.load(f)
+        tokenizer.add_tokens(entities)
         model.to(args.device)
 
     # Evaluation
