@@ -176,11 +176,11 @@ class EntityLinker:
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
 
                             score = cosine_similarity(mention_vector, candidate_vector)[0][0]
-                            print(score)
                             if score > max_score:
                                 max_score = score
                                 best_candidate = candidate
 
+                    print(best_candidate, identifier)
                     if best_candidate == identifier:
                         tp += 1
                     else:
