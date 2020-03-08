@@ -96,7 +96,7 @@ class EntityLinker:
         }
 
     @staticmethod
-    def _vectorize(sentence, index, mask_entity: bool = False, return_type: bool = False return_str: bool = False, return_id=False):
+    def _vectorize(sentence, index, mask_entity: bool = False, return_type: bool = False, return_str: bool = False, return_id=False):
         for person, indices in index.items():
             tokens = list()
             entity = [token[0] for i, token in enumerate(sentence) if i in indices]
