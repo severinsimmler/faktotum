@@ -3,9 +3,12 @@ from collections import defaultdict
 import json
 import re
 import tqdm
-
+import difflib
+from faktotum import utils
 
 class EntityLinker:
+    _string_similarity_threshold = .5
+
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
         self.corpus_folder = Path(module_folder, "data", "smartdata")
@@ -56,7 +59,7 @@ class EntityLinker:
         tp = 0
         fp = 0
 
-        for sentence in self.dataset:
+        for sentence in tqdm.tqdm(self.test):
             spans = self.get_entity_spans(sentence)
             for identifier, entity in spans:
                 text = " ".join([token[0] for token in entity])
@@ -73,13 +76,97 @@ class EntityLinker:
                         fp += 1
                 else:
                     fp += 1
-
         precision = self.precision(tp, fp)
         accuracy = self.accuracy(tp, fp)
         return {
             "precision": precision,
             "accuracy": accuracy,
         }
+
+    @staticmethod
+    def _vectorize(sentence, index, mask_entity: bool = False, return_str: bool = False, return_id=False):
+        for person, indices in index.items():
+            tokens = list()
+            entity = [token[0] for i, token in enumerate(sentence) if i in indices]
+            for i, token in enumerate(sentence):
+                if i in indices and mask_entity:
+                    tokens.append("[MASK]")
+                else:
+                    tokens.append(token[0])
+            text = " ".join(tokens)
+            sentence_ = Sentence(text, use_tokenizer=False)
+            EMBEDDING.embed(sentence_)
+            vector = sentence_[indices[0]].get_embedding().numpy()
+            for i in indices[1:]:
+                vector = vector + sentence_[i].get_embedding().numpy()
+            if return_id and return_str:
+                yield person, " ".join(entity), (vector / len(indices)).reshape(1, -1)
+            else:
+                yield (vector / len(indices)).reshape(1, -1)
+
+    @staticmethod
+    def _string_similarity(a, b):
+        return SequenceMatcher(None, a, b).ratio()
+
+    def _get_candidates(mention):
+        candidates = set()
+        mention = mention.lower()
+        for key, value in self.kb.items():
+            for context in value["MENTIONS"]:
+                score = self._string_similarity(mention, context.lower())
+                if score >= self._string_similarity_threshold:
+                    candidates.add(key)
+        return candidates
+
+    def similarities(self, mask_entity=False):
+        tp = 0
+        fp = 0
+        for sentence in tqdm.tqdm(self.dataset.values()):
+            is_mentioned = [token for token in sentence if token[2] != "-"]
+            if not is_mentioned:
+                continue
+            if is_mentioned:
+                indices = defaultdict(list)
+                for i, token in enumerate(sentence):
+                    if token[2] != "-":
+                        indices[token[2]].append(i)
+                mention_vectors = list(
+                    self._vectorize(
+                        sentence, indices, return_id=True, return_str=True, mask_entity=mask_entity
+                    )
+                )
+                for identifier, mention, mention_vector in mention_vectors:
+                    max_score = 0.0
+                    best_candidate = None
+                    print(len(self._get_candidates(mention)))
+                    raise
+                    for candidate in self._get_candidates(mention):
+                        for context in self.kb[candidate]["MENTIONS"]:
+                            if self.kb[candidate].get("DESCRIPTION"):
+                                text = context + " " + self.kb[candidate].get("DESCRIPTION")
+                            else:
+                                text = context
+                            
+                            indices = list(range(len(list(utils.tokenize(context)))))
+                            sentence_ = Sentence(text, use_tokenizer=False)
+                            EMBEDDING.embed(sentence_)
+                            vector = sentence_[indices[0]].get_embedding().numpy()
+                            for i in indices[1:]:
+                                vector = vector + sentence_[i].get_embedding().numpy()
+                            candidate_vector = (vector / len(indices)).reshape(1, -1)
+
+                            score = cosine_similarity(mention_vector, candidate_vector)
+                            if score > max_score:
+                                max_score = score
+                                best_candidate = person
+
+                    if best_candidate == identifier:
+                        tp += 1
+                    else:
+                        fp += 1
+
+        return {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:
