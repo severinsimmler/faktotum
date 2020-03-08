@@ -1,10 +1,21 @@
+import flair
+import torch
+
+flair.device = torch.device("cpu")
+
 from pathlib import Path
 from collections import defaultdict
 import json
 import re
+import pandas as pd
 import tqdm
-import difflib
-from faktotum import utils
+from flair.embeddings import BertEmbeddings
+from flair.data import Sentence
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.metrics.pairwise import cosine_similarity
+
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+
 
 class EntityLinker:
     _string_similarity_threshold = .5
@@ -121,7 +132,7 @@ class EntityLinker:
     def similarities(self, mask_entity=False):
         tp = 0
         fp = 0
-        for sentence in tqdm.tqdm(self.dataset.values()):
+        for sentence in tqdm.tqdm(self.dataset):
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
                 continue
