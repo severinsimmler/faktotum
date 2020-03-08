@@ -195,7 +195,7 @@ def mask_tokens(
         )
 
     labels = inputs.clone()
-    # We sample a few tokens in each sequence for masked-LM training (with probability args.mlm_probability defaults to 0.15 in Bert/RoBERTa)
+
     probability_matrix = torch.full(labels.shape, args.mlm_probability)
     special_tokens_mask = [
         tokenizer.get_special_tokens_mask(val, already_has_special_tokens=True)
@@ -226,8 +226,8 @@ def mask_tokens(
     inputs[indices_random] = random_words[indices_random]
 
     # The rest of the time (10% of the time) we keep the masked input tokens unchanged
-    print(inputs)
-    print(labels)
+    for i, l in zip(inputs[0], labels[0]):
+        print(i, l)
     raise
     return inputs, labels
 
