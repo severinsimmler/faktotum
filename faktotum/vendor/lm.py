@@ -704,8 +704,16 @@ def main():
 
     if args.tokenizer_name:
         tokenizer = tokenizer_class.from_pretrained(args.tokenizer_name, cache_dir=args.cache_dir)
+        with open("entities.json", "r", encoding="utf-8") as f:
+            entities = json.load(f)
+        added = tokenizer.add_tokens(entities)
+        print(f"Added {added} tokens.")
     elif args.model_name_or_path:
         tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path, cache_dir=args.cache_dir)
+        with open("entities.json", "r", encoding="utf-8") as f:
+            entities = json.load(f)
+        added = tokenizer.add_tokens(entities)
+        print(f"Added {added} tokens.")
     else:
         raise ValueError(
             "You are instantiating a new {} tokenizer. This is not supported, but you can do it from another script, save it,"
@@ -770,10 +778,6 @@ def main():
         # Load a trained model and vocabulary that you have fine-tuned
         model = model_class.from_pretrained(args.output_dir)
         tokenizer = tokenizer_class.from_pretrained(args.output_dir)
-        with open("entities.json", "r", encoding="utf-8") as f:
-            entities = json.load(f)
-        added = tokenizer.add_tokens(entities)
-        print(f"Added {added} tokens.")
         model.to(args.device)
 
     # Evaluation
