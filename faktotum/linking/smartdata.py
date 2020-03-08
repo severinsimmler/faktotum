@@ -159,11 +159,6 @@ class EntityLinker:
                         is_org = True
                     else:
                         is_org = False
-                    X = self._get_candidates(mention, is_org=is_org)
-                    print(mention)
-                    print([self.kb[x]["MENTIONS"][0] for x in X])
-                    
-                    raise
                     for candidate in self._get_candidates(mention):
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
@@ -180,6 +175,7 @@ class EntityLinker:
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
 
                             score = cosine_similarity(mention_vector, candidate_vector)
+                            print(score)
                             if score > max_score:
                                 max_score = score
                                 best_candidate = person
