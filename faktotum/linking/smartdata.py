@@ -19,7 +19,7 @@ EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
-    _string_similarity_threshold = .5
+    _string_similarity_threshold = .75
 
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
@@ -28,10 +28,10 @@ class EntityLinker:
         self.test = list(self._load_corpus("test"))
         self.dev = list(self._load_corpus("dev"))
         self.dataset = self.train + self.test + self.dev
-        h = Path(kb_dir, "humans.json").read_text(encoding="utf-8")
-        o = Path(kb_dir, "organizations.json").read_text(encoding="utf-8")
-        self.kb = json.loads(h)
-        self.kb.update(json.loads(o))
+        self.humans = json.loads(Path(kb_dir, "humans.json").read_text(encoding="utf-8"))
+        self.organizations = json.loads(Path(kb_dir, "organizations.json").read_text(encoding="utf-8"))
+        self.kb = self.humans.copy()
+        self.kb.update(self.organizations.copy())
 
     def _load_corpus(self, dataset: str):
         sentence = list()
@@ -96,10 +96,11 @@ class EntityLinker:
         }
 
     @staticmethod
-    def _vectorize(sentence, index, mask_entity: bool = False, return_str: bool = False, return_id=False):
+    def _vectorize(sentence, index, mask_entity: bool = False, return_type: bool = False return_str: bool = False, return_id=False):
         for person, indices in index.items():
             tokens = list()
             entity = [token[0] for i, token in enumerate(sentence) if i in indices]
+            type_ = "ORG" if any("ORG" in token[1] for token in sentence) else "PER"
             for i, token in enumerate(sentence):
                 if i in indices and mask_entity:
                     tokens.append("[MASK]")
@@ -111,8 +112,8 @@ class EntityLinker:
             vector = sentence_[indices[0]].get_embedding().numpy()
             for i in indices[1:]:
                 vector = vector + sentence_[i].get_embedding().numpy()
-            if return_id and return_str:
-                yield person, " ".join(entity), (vector / len(indices)).reshape(1, -1)
+            if return_id and return_str and return_type:
+                yield person, type_, " ".join(entity), (vector / len(indices)).reshape(1, -1)
             else:
                 yield (vector / len(indices)).reshape(1, -1)
 
@@ -120,11 +121,14 @@ class EntityLinker:
     def _string_similarity(a, b):
         return difflib.SequenceMatcher(None, a, b).ratio()
 
-    def _get_candidates(self, mention):
+    def _get_candidates(self, mention, is_org):
         candidates = set()
         mention = mention.lower()
-        print("candidates:")
-        for key, value in tqdm.tqdm(self.kb.items()):
+        if is_org:
+            kb = self.organizations
+        else:
+            kb = self.humans
+        for key, value in tqdm.tqdm(kb.items()):
             for context in value["MENTIONS"]:
                 score = self._string_similarity(mention, context.lower())
                 if score >= self._string_similarity_threshold:
@@ -145,13 +149,17 @@ class EntityLinker:
                         indices[token[2]].append(i)
                 mention_vectors = list(
                     self._vectorize(
-                        sentence, indices, return_id=True, return_str=True, mask_entity=mask_entity
+                        sentence, indices, return_id=True, return_type=True, return_str=True, mask_entity=mask_entity
                     )
                 )
-                for identifier, mention, mention_vector in mention_vectors:
+                for identifier, type_, mention, mention_vector in mention_vectors:
                     max_score = 0.0
                     best_candidate = None
-                    print(len(self._get_candidates(mention)))
+                    if type_ == "ORG":
+                        is_org = True
+                    else:
+                        is_org = False
+                    print(len(self._get_candidates(mention, is_org=is_org)))
                     raise
                     for candidate in self._get_candidates(mention):
                         for context in self.kb[candidate]["MENTIONS"]:
