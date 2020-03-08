@@ -206,7 +206,8 @@ def mask_tokens(
                 _dim.append(-100)
             labels.append(_dim)
     labels = torch.tensor(labels)
-    print(labels)
+    print(inputs.shape)
+    print(labels.shape)
 
     raise
 
