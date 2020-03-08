@@ -31,100 +31,55 @@ class EntityLinker:
         if sentence:
             yield sentence
 
+    @staticmethod
+    def get_entity_spans(sentence):
+        current_entity = list()
+        last_index = -1
+        current_id = None
+        for i, token in enumerate(sentence):
+            if (
+                token[2].startswith("Q")
+                and last_index + 1 == i
+                and (current_id is not None or token[2] == current_id)
+            ):
+                current_entity.append(token)
+            elif token[2].startswith("Q") and last_index + 1 != i:
+                if current_entity:
+                    yield current_id, current_entity
+                current_entity = [token]
+            current_id = token[2]
+            last_index = i
+        if current_entity:
+            yield current_id, current_entity
+
     def rule_based(self):
         tp = 0
         fp = 0
-        fn = 0
 
         for sentence in self.dataset:
-            entity = dict()
-            boundray = "[START]"
-            ent = list()
-            indices = list()
-            last = "?"
-            i_ = 9999999999999
-            for i, token in enumerate(sentence):
-                if token[1].startswith("B") and token[-1].startswith("Q"):
-                    ent = [token[0]]
-                    indices = [sentence.index(token)]
-                    last = token[-1]
-                elif (
-                    token[1].startswith("I")
-                    and token[-1].startswith("Q")
-                    and i - 1 == i_
-                ):
-                    ent.append(token[0])
-                    indices.append(i)
-                    last = token[-1]
-                else:
-                    if ent:
-                        text = re.sub(r'\s+([?.!"])', r"\1", " ".join(ent))
-                        entity[text] = {"id": last, "indices": indices}
-                i_ = i
-            for text, identifier in entity.items():
-                matches = defaultdict(list)
-                success = False
+            spans = self.get_entity_spans(sentence)
+            for identifier, entity in spans:
+                text = " ".join([token[0] for token in entity])
+                matches = set()
                 for key, value in self.kb.items():
                     if text in value["MENTIONS"]:
-                        matches[text].append(key)
-                        if identifier["id"] == key:
-                            tp += 1
-                            success = True
-                            break
-                        elif identifier["id"] != key:
-                            fp += 1
-                if len(matches[text]) == 0:
-                    fn += 1
-                    hard_to_disamiguate.append(
-                        {
-                            "mention": text,
-                            "id": identifier["id"],
-                            "index": identifier["indices"],
-                            "sentence": sentence,
-                            "candidates": [],
-                        }
-                    )
-                elif len(matches[text]) > 1 and identifier["id"] in matches[text]:
-                    hard_to_disamiguate.append(
-                        {
-                            "mention": text,
-                            "id": identifier["id"],
-                            "index": identifier["indices"],
-                            "sentence": sentence,
-                            "candidates": matches[text],
-                        }
-                    )
-                elif len(matches[text]) > 1 and identifier["id"] not in matches[text]:
-                    hard_to_disamiguate.append(
-                        {
-                            "mention": text,
-                            "id": identifier["id"],
-                            "index": identifier["indices"],
-                            "sentence": sentence,
-                            "candidates": [],
-                        }
-                    )
-                elif not success and matches[text]:
-                    hard_to_disamiguate.append(
-                        {
-                            "mention": text,
-                            "id": identifier["id"],
-                            "index": identifier["indices"],
-                            "sentence": sentence,
-                            "candidates": matches[text],
-                        }
-                    )
+                        matches.add(key)
+                if len(matches) < 1:
+                    fp += 1
+                elif len(matches) == 1:
+                    if list(matches)[0] == identifier:
+                        tp += 1
+                    else:
+                        fp += 1
+                else:
+                    fp += 1
 
         precision = self.precision(tp, fp)
-        recall = self.recall(tp, fn)
-        return (
-            {
-                "precision": precision,
-                "recall": recall,
-                "f1": self.f1(precision, recall),
-            },
-            hard_to_disamiguate,
-        )
+        accuracy = self.accuracy(tp, fp)
+        return {
+            "precision": precision,
+            "accuracy": accuracy,
+        }
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:

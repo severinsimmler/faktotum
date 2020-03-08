@@ -83,6 +83,7 @@ MODEL_CLASSES = {
     "camembert": (CamembertConfig, CamembertForMaskedLM, CamembertTokenizer),
 }
 
+
 class LineByLineTextDataset(Dataset):
     def __init__(
         self, tokenizer: PreTrainedTokenizer, args, file_path: str, block_size=512
@@ -773,9 +774,7 @@ def main():
     parser.add_argument(
         "--server_port", type=str, default="", help="For distant debugging."
     )
-    parser.add_argument(
-        "--corpus", type=str, required=True
-    )
+    parser.add_argument("--corpus", type=str, required=True)
     args = parser.parse_args()
 
     if (
