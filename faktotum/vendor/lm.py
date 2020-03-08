@@ -104,7 +104,8 @@ class TextDataset(Dataset):
 
             tokens = tokenizer.tokenize(text)
             print(tokens)
-            tokenized_text = tokenizer.convert_tokens_to_ids(tokens)
+            tokenized_text = tokens
+            #tokenized_text = tokenizer.convert_tokens_to_ids(tokens)
             print(tokenized_text)
 
             for i in range(0, len(tokenized_text) - block_size + 1, block_size):  # Truncate in block of block_size
@@ -219,8 +220,8 @@ def mask_tokens(inputs: torch.Tensor, tokenizer: PreTrainedTokenizer, args) -> T
 
     # 80% of the time, we replace masked input tokens with tokenizer.mask_token ([MASK])
     indices_replaced = torch.bernoulli(torch.full(labels.shape, 0.8)).bool() & masked_indices
-    print(indices_replaced)
     inputs[indices_replaced] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+    print(inputs)
 
     # 10% of the time, we replace masked input tokens with random word
     indices_random = torch.bernoulli(torch.full(labels.shape, 0.5)).bool() & masked_indices & ~indices_replaced
