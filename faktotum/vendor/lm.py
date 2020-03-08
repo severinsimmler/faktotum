@@ -95,19 +95,16 @@ class TextDataset(Dataset):
             directory, args.model_type + "_cached_lm_" + str(block_size) + "_" + filename
         )
 
-        if os.path.exists(cached_features_file) and not args.overwrite_cache:
-            logger.info("Loading features from cached file %s", cached_features_file)
-            with open(cached_features_file, "rb") as handle:
-                self.examples = pickle.load(handle)
-        else:
+        if True:
             logger.info("Creating features from dataset file at %s", directory)
 
             self.examples = []
             with open(file_path, encoding="utf-8") as f:
                 text = f.read()
 
-            tokenized_text = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(text))
-            print(text)
+            tokens = tokenizer.tokenize(text)
+            print(tokens)
+            tokenized_text = tokenizer.convert_tokens_to_ids(tokens)
             print(tokenized_text)
 
             for i in range(0, len(tokenized_text) - block_size + 1, block_size):  # Truncate in block of block_size
