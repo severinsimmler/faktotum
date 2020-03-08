@@ -123,7 +123,8 @@ class EntityLinker:
     def _get_candidates(self, mention):
         candidates = set()
         mention = mention.lower()
-        for key, value in self.kb.items():
+        print("candidates:")
+        for key, value in tqdm.tqdm(self.kb.items()):
             for context in value["MENTIONS"]:
                 score = self._string_similarity(mention, context.lower())
                 if score >= self._string_similarity_threshold:
