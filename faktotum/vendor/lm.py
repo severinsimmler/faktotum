@@ -228,6 +228,7 @@ def mask_tokens(
     # The rest of the time (10% of the time) we keep the masked input tokens unchanged
     print(inputs)
     print(labels)
+    raise
     return inputs, labels
 
 
