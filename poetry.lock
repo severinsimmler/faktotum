@@ -1544,16 +1544,12 @@ docs = ["recommonmark", "sphinx", "sphinx-markdown-tables", "sphinx-rtd-theme"]
 mecab = ["mecab-python3"]
 quality = ["black", "isort", "flake8"]
 serving = ["pydantic", "uvicorn", "fastapi", "starlette"]
-sklearn = ["scikit-learn (0.22.1)"]
+sklearn = ["scikit-learn"]
 testing = ["pytest", "pytest-xdist"]
 tf = ["tensorflow"]
 tf-cpu = ["tensorflow-cpu"]
 torch = ["torch"]
 
-[package.source]
-reference = "b29fed790bdaa4be38b6d2c5de88e307474ea38d"
-type = "git"
-url = "https://github.com/huggingface/transformers"
 [[package]]
 category = "dev"
 description = "a fork of Python 2 and 3 ast modules with type comment support"
@@ -1636,7 +1632,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "3767eafa31624987e4d9a5c157383a4f823ba311b4fbe920c90f54f85909cd82"
+content-hash = "e2fe76a2478507aa8af2e3c8b5e12a0c7806d7942c7482d38bdd452ab2d3e598"
 python-versions = "3.7.*"
 
 [metadata.files]
@@ -2576,7 +2572,10 @@ traitlets = [
     {file = "traitlets-4.3.3-py2.py3-none-any.whl", hash = "sha256:70b4c6a1d9019d7b4f6846832288f86998aa3b9207c6821f3578a6a6a467fe44"},
     {file = "traitlets-4.3.3.tar.gz", hash = "sha256:d023ee369ddd2763310e4c3eae1ff649689440d4ae59d7485eb4cfbbe3e359f7"},
 ]
-transformers = []
+transformers = [
+    {file = "transformers-2.5.1-py3-none-any.whl", hash = "sha256:d08269bc7c088b47e3586002c4b10fa55d42330c9777b77ba60c3692efd5f283"},
+    {file = "transformers-2.5.1.tar.gz", hash = "sha256:c4b775ebffce65e1d8f2e5db74c5efdc4426ebecdaee1516c90573aafa1ceaf4"},
+]
 typed-ast = [
     {file = "typed_ast-1.4.1-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:73d785a950fc82dd2a25897d525d003f6378d1cb23ab305578394694202a58c3"},
     {file = "typed_ast-1.4.1-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:aaee9905aee35ba5905cfb3c62f3e83b3bec7b39413f0a7f19be4e547ea01ebb"},
