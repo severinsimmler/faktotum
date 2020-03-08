@@ -119,7 +119,7 @@ class EntityLinker:
     def _string_similarity(a, b):
         return SequenceMatcher(None, a, b).ratio()
 
-    def _get_candidates(mention):
+    def _get_candidates(self, mention):
         candidates = set()
         mention = mention.lower()
         for key, value in self.kb.items():
