@@ -83,10 +83,6 @@ MODEL_CLASSES = {
     "camembert": (CamembertConfig, CamembertForMaskedLM, CamembertTokenizer),
 }
 
-with open("entities.json", "r", encoding="utf-8") as f:
-    ENTITIES = json.load(f)
-
-
 class LineByLineTextDataset(Dataset):
     def __init__(
         self, tokenizer: PreTrainedTokenizer, args, file_path: str, block_size=512
@@ -192,6 +188,9 @@ def mask_tokens(
         raise ValueError(
             "This tokenizer does not have a mask token which is necessary for masked language modeling. Remove the --mlm flag if you want to use this tokenizer."
         )
+
+    with open(f"{args.corpus}/entities.json", "r", encoding="utf-8") as f:
+        ENTITIES = json.load(f)
 
     entity_ids = tokenizer.convert_tokens_to_ids(ENTITIES)
     labels = inputs.clone()
@@ -773,6 +772,9 @@ def main():
     )
     parser.add_argument(
         "--server_port", type=str, default="", help="For distant debugging."
+    )
+    parser.add_argument(
+        "--corpus", type=str, required=True
     )
     args = parser.parse_args()
 
