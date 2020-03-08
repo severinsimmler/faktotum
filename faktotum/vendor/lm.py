@@ -24,6 +24,7 @@ import argparse
 import glob
 import logging
 import os
+import json
 import pickle
 import random
 import re
@@ -771,7 +772,8 @@ def main():
         tokenizer = tokenizer_class.from_pretrained(args.output_dir)
         with open("entities.json", "r", encoding="utf-8") as f:
             entities = json.load(f)
-        tokenizer.add_tokens(entities)
+        added = tokenizer.add_tokens(entities)
+        print(f"Added {added} tokens.")
         model.to(args.device)
 
     # Evaluation
