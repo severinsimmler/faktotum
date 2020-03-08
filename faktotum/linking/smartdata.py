@@ -19,7 +19,7 @@ EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
-    _string_similarity_threshold = .75
+    _string_similarity_threshold = .9
 
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
