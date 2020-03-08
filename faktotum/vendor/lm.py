@@ -875,18 +875,10 @@ def main():
         tokenizer = tokenizer_class.from_pretrained(
             args.tokenizer_name, cache_dir=args.cache_dir
         )
-        with open("entities.json", "r", encoding="utf-8") as f:
-            entities = json.load(f)
-        added = tokenizer.add_tokens(entities)
-        print(f"Added {added} tokens.")
     elif args.model_name_or_path:
         tokenizer = tokenizer_class.from_pretrained(
             args.model_name_or_path, cache_dir=args.cache_dir
         )
-        with open("entities.json", "r", encoding="utf-8") as f:
-            entities = json.load(f)
-        added = tokenizer.add_tokens(entities)
-        print(f"Added {added} tokens.")
     else:
         raise ValueError(
             "You are instantiating a new {} tokenizer. This is not supported, but you can do it from another script, save it,"
@@ -911,6 +903,11 @@ def main():
     else:
         logger.info("Training new model from scratch")
         model = model_class(config=config)
+
+    with open(f"{args.corpus}/entities.json", "r", encoding="utf-8") as f:
+        entities = json.load(f)
+    added = tokenizer.add_tokens(entities)
+    print(f"Added {added} tokens.")
 
     model.resize_token_embeddings(len(tokenizer))
     model.to(args.device)
