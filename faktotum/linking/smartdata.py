@@ -175,11 +175,11 @@ class EntityLinker:
                                 vector = vector + sentence_[i].get_embedding().numpy()
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
 
-                            score = cosine_similarity(mention_vector, candidate_vector)
+                            score = cosine_similarity(mention_vector, candidate_vector)[0][0]
                             print(score)
                             if score > max_score:
                                 max_score = score
-                                best_candidate = person
+                                best_candidate = candidate
 
                     if best_candidate == identifier:
                         tp += 1
