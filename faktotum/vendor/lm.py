@@ -215,7 +215,6 @@ def mask_tokens(
         torch.bernoulli(torch.full(labels.shape, 0.8)).bool() & masked_indices
     )
     inputs[indices_replaced] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
-    print(labels)
 
     # 10% of the time, we replace masked input tokens with random word
     indices_random = (
@@ -227,6 +226,8 @@ def mask_tokens(
     inputs[indices_random] = random_words[indices_random]
 
     # The rest of the time (10% of the time) we keep the masked input tokens unchanged
+    print(inputs)
+    print(labels)
     return inputs, labels
 
 
