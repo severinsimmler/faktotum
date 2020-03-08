@@ -198,7 +198,7 @@ def mask_tokens(
     for i, dim in enumerate(labels):
         for j, id_ in enumerate(dim):
             if id_ not in entity_ids:
-                labels[i][j] = -1
+                labels[i][j] = -100
 
     for i, dim in enumerate(inputs):
         for j, id_ in enumerate(dim):
