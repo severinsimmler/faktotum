@@ -138,15 +138,6 @@ class EntityLinker:
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
-            # try:
-            #     precision = self.precision(tp, fp)
-            #     recall = self.recall(tp, fn)
-            #     f1 = self.f1(precision, recall)
-            #     stats.append(
-            #         {"precision": precision, "recall": recall, "f1": f1,}
-            #     )
-            # except ZeroDivisionError:
-            #     pass
         return pd.DataFrame(stats).describe()
 
     def rule_based(self):
@@ -190,15 +181,6 @@ class EntityLinker:
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
-            # try:
-            #     precision = self.precision(tp, fp)
-            #     recall = self.recall(tp, fn)
-            #     f1 = self.f1(precision, recall)
-            #     stats.append(
-            #         {"precision": precision, "recall": recall, "f1": f1,}
-            #     )
-            # except ZeroDivisionError:
-            #     pass
         return pd.DataFrame(stats).describe()
 
     @staticmethod

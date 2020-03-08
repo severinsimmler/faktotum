@@ -31,26 +31,6 @@ class EntityLinker:
         if sentence:
             yield sentence
 
-    def _build_knowledge_base(self):
-        context = defaultdict(list)
-        mentions = defaultdict(set)
-        for sentence in self.dataset:
-            for token in sentence:
-                if token[2] != "-":
-                    if sentence not in context[token[2]]:
-                        context[token[2]].append(sentence)
-        for sentence in self.dataset:
-            for token in sentence:
-                if token[2] != "-":
-                    if token[0] not in mentions[token[2]]:
-                        mentions[token[2]].add(token[0])
-
-        kb = defaultdict(dict)
-        for key in mentions:
-            kb[key]["context"] = context[key]
-            kb[key]["mentions"] = mentions[key]
-        return kb
-
     def rule_based(self):
         tp = 0
         fp = 0
@@ -157,3 +137,7 @@ class EntityLinker:
     @staticmethod
     def f1(precision: float, recall: float) -> float:
         return 2 * ((precision * recall) / (precision + recall))
+
+    @staticmethod
+    def accuracy(tp: int, fp: int) -> float:
+        return tp / (tp + fp)
