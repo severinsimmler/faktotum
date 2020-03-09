@@ -231,6 +231,7 @@ class EntityLinker:
                 )
 
                 for identifier, mention_vector in mention_vectors:
+                    print(kb[identifier])
                     candidates = kb[identifier]["EMBEDDINGS"]
                     for candidate in candidates:
                         instance = np.concatenate((mention_vector, candidate))
