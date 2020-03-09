@@ -45,7 +45,7 @@ def ward(model_directory):
     X, y = embeddings.vectorize(data, embeddings.entity_bert)
     clustering = Clustering("ward", X, y)
     score = clustering.evaluate()
-    return values
+    return score
 
 
 def compare_embeddings(model_directory):
