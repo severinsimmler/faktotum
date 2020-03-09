@@ -31,6 +31,7 @@ def ward(model_directory):
         clustering = Clustering("ward", X, y)
         score = clustering.evaluate()
         scores.append(score)
+        print(score)
     scores = pd.DataFrame(scores)
     values = {
         index: f"{mean} (±{std})"
@@ -38,7 +39,7 @@ def ward(model_directory):
             scores.columns, scores.mean().round(2), scores.std().round(2)
         )
     }
-return values
+    return values
 
 
 def compare_embeddings(model_directory):
