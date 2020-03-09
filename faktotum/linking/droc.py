@@ -80,7 +80,6 @@ class EntityLinker:
                                 )
                             )
                             embeddings[token[2]].append(vector)
-            break
         for sentence in novel:
             for token in sentence:
                 if token[2] != "-":
