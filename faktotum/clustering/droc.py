@@ -21,7 +21,7 @@ def load_data(all_=True):
         ]
     else:
         files = [Path(data_folder, "test.txt"), Path(data_folder, "dev.txt")]
-    for file_ in data_folder.glob("*.txt"):
+    for file_ in files:
         with file_.open("r", encoding="utf-8") as file_:
             data.update(json.load(file_))
     return data
