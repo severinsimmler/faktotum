@@ -15,12 +15,14 @@ from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 import difflib
 from faktotum import utils
+from strsimpy.jaro_winkler import JaroWinkler
 
+JARO_WINKLER = JaroWinkler()
 EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted")
 
 
 class EntityLinker:
-    _string_similarity_threshold = 0.9 # TODO: aus daten schwellenwert ableiten
+    _string_similarity_threshold = 0.478836
 
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
@@ -143,7 +145,7 @@ class EntityLinker:
 
     @staticmethod
     def _string_similarity(a, b):
-        return difflib.SequenceMatcher(None, a, b).ratio()
+        return JARO_WINKLER.similarities(a, b)
 
     def _get_candidates(self, mention, is_org):
         candidates = set()
