@@ -33,6 +33,23 @@ class EntityLinker:
             for key, value in data.items():
                 self.test[f"{i}_{key}"] = value
 
+
+    @staticmethod
+    def precision(tp: int, fp: int) -> float:
+        return tp / (tp + fp)
+
+    @staticmethod
+    def recall(tp: int, fn: int) -> float:
+        return tp / (tp + fn)
+
+    @staticmethod
+    def f1(precision: float, recall: float) -> float:
+        return 2 * ((precision * recall) / (precision + recall))
+
+    @staticmethod
+    def accuracy(tp: int, fp: int) -> float:
+        return tp / (tp + fp)
+
     def _load_corpus(self, dataset: str):
         textfile = Path(self.corpus_folder, f"{dataset}.txt")
         with textfile.open("r", encoding="utf-8") as file_:
@@ -187,18 +204,43 @@ class EntityLinker:
             )
         return pd.DataFrame(stats).describe()
 
-    @staticmethod
-    def precision(tp: int, fp: int) -> float:
-        return tp / (tp + fp)
+    def _generate_training_data(self):
+        X = list()
+        y = list()
+        train = list()
+        for novel in self.train.values():
+            train.extend(novel)
+        kb = self._build_knowledge_base(train)
+        for sentence in train:
+            is_mentioned = [token for token in sentence if token[2] != "-"]
+            if not is_mentioned:
+                continue
+            if is_mentioned:
+                indices = defaultdict(list)
+                for i, token in enumerate(sentence):
+                    if token[2] != "-":
+                        indices[token[2]].append(i)
+                mention_vectors = list(
+                    self._vectorize(
+                        sentence, indices, return_id=True, mask_entity=mask_entity
+                    )
+                )
 
-    @staticmethod
-    def recall(tp: int, fn: int) -> float:
-        return tp / (tp + fn)
+                for identifier, mention_vector in mention_vectors:
+                    candidates = kb[identifier]["EMBEDDINGS"]
+                    for candidate in candidates:
+                        instance = np.concatenate((mention_vector, candidate))
+                        X.append(instance)
+                        y.append(1.0)
+                    negative = random.sample([person for person in kb if person != identifier], k=len(candidates))
+                    for id_ in negative:
+                        negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
+                        instance = np.concatenate((mention_vector, negative_candidate))
+                        X.append(instance)
+                        y.append(0.0)
+                    print(X)
+                    print(y)
+                    raise
 
-    @staticmethod
-    def f1(precision: float, recall: float) -> float:
-        return 2 * ((precision * recall) / (precision + recall))
-
-    @staticmethod
-    def accuracy(tp: int, fp: int) -> float:
-        return tp / (tp + fp)
+    def regression(self):
+        pass
