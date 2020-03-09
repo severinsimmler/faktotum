@@ -107,10 +107,10 @@ class EntityLinker:
                     fp += 1
         precision = self.precision(tp, fp)
         accuracy = self.accuracy(tp, fp)
-        return {
+        return pd.Series({
             "precision": precision,
             "accuracy": accuracy,
-        }
+        })
 
     @staticmethod
     def _vectorize(
@@ -164,7 +164,7 @@ class EntityLinker:
     def similarities(self, mask_entity=False):
         tp = 0
         fp = 0
-        for sentence in tqdm.tqdm(self.dataset):
+        for sentence in tqdm.tqdm(self.test):
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
                 continue
@@ -221,7 +221,7 @@ class EntityLinker:
                     else:
                         fp += 1
 
-        return {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+        return pd.Series({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)})
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:
