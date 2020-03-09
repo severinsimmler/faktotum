@@ -56,20 +56,27 @@ class EntityLinker:
         last_index = -1
         current_id = None
         for i, token in enumerate(sentence):
-            if (
-                token[2].startswith("Q")
-                and last_index + 1 == i
-                and token[2] == current_id
-            ):
+            if token[2].startswith("Q") and not current_entity:
                 current_entity.append(token)
-            elif token[2].startswith("Q") and last_index + 1 != i:
-                if current_entity:
+                current_id = token[2]
+                last_index = i
+            elif token[2].startswith("Q") and current_entity:
+                if last_index + 1 == i and current_id == token[2]:
+                    current_entity.append(token)
+                    last_index = i
+                elif current_id != token[2]:
                     yield current_entity[0][2], current_entity
-                current_entity = [token]
-            current_id = token[2]
-            last_index = i
+                    current_entity = [token]
+                    last_index = i
+                    current_id = token[2]
+            elif not token[2].startswith("Q") and current_entity:
+                yield current_entity[0][2], current_entity
+                current_entity = list()
+                last_index = i
+                current_id = None
         if current_entity:
             yield current_entity[0][2], current_entity
+
 
     def rule_based(self):
         tp = 0
