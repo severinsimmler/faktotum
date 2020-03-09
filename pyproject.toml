@@ -22,6 +22,7 @@ tensorflow = "^2.1.0"
 seqeval = "^0.0.12"
 sklearn-crfsuite = "^0.3.6"
 joblib = "^0.14.1"
+strsimpy = "^0.1.3"
 
 [tool.poetry.scripts]
 fasttext = "extract:scripts.fasttext.run"

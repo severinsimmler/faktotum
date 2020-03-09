@@ -16,7 +16,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import difflib
 from faktotum import utils
 
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc")
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted")
 
 
 class EntityLinker:
@@ -81,7 +81,11 @@ class EntityLinker:
             for identifier, entity in spans:
                 text = " ".join([token[0] for token in entity])
                 matches = set()
-                for key, value in self.kb.items():
+                if "-PER" in entity[0][2]:
+                    kb = self.humans
+                else:
+                    kb = self.organizations
+                for key, value in kb.items():
                     if text in value["MENTIONS"]:
                         matches.add(key)
                 if len(matches) < 1:
