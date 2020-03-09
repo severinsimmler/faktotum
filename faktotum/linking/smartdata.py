@@ -18,7 +18,9 @@ from faktotum import utils
 from strsimpy.jaro_winkler import JaroWinkler
 
 JARO_WINKLER = JaroWinkler()
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted")
+EMBEDDING = BertEmbeddings(
+    "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
+)
 
 
 class EntityLinker:
@@ -63,7 +65,11 @@ class EntityLinker:
                 current_id = token[2]
                 last_index = i
             elif token[2].startswith("Q") and current_entity:
-                if last_index + 1 == i and current_id == token[2] and token[1].startswith("I-"):
+                if (
+                    last_index + 1 == i
+                    and current_id == token[2]
+                    and token[1].startswith("I-")
+                ):
                     current_entity.append(token)
                     last_index = i
                 elif current_id != token[2]:
@@ -78,7 +84,6 @@ class EntityLinker:
                 current_id = None
         if current_entity:
             yield current_entity[0][2], current_entity
-
 
     def rule_based(self):
         tp = 0
@@ -107,10 +112,7 @@ class EntityLinker:
                     fp += 1
         precision = self.precision(tp, fp)
         accuracy = self.accuracy(tp, fp)
-        return pd.Series({
-            "precision": precision,
-            "accuracy": accuracy,
-        })
+        return pd.Series({"precision": precision, "accuracy": accuracy,})
 
     @staticmethod
     def _vectorize(
@@ -145,7 +147,7 @@ class EntityLinker:
 
     @staticmethod
     def _string_similarity(a, b):
-        return JARO_WINKLER.similarities(a, b)
+        return JARO_WINKLER.similarity(a, b)
 
     def _get_candidates(self, mention, is_org):
         candidates = set()
@@ -221,7 +223,9 @@ class EntityLinker:
                     else:
                         fp += 1
 
-        return pd.Series({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)})
+        return pd.Series(
+            {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+        )
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:

@@ -1,5 +1,6 @@
 from tensorflow.keras import models, layers
 
+
 class Regression:
     @staticmethod
     def _build_model(self, input_shape):
