@@ -20,15 +20,14 @@ EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/bert-multi-presse-
 
 
 class EntityLinker:
-    _string_similarity_threshold = 0.9  # TODO: aus daten schwellenwert ableiten
+    _string_similarity_threshold = 0.9 # TODO: aus daten schwellenwert ableiten
 
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
-        self.corpus_folder = Path(module_folder, "data", "smartdata")
+        self.corpus_folder = Path(module_folder, "data", "smartdata", "linking")
         self.train = list(self._load_corpus("train"))
         self.test = list(self._load_corpus("test"))
-        self.dev = list(self._load_corpus("dev"))
-        self.dataset = self.train + self.test + self.dev
+        self.dataset = self.train + self.test
         self.humans = json.loads(
             Path(kb_dir, "humans.json").read_text(encoding="utf-8")
         )
