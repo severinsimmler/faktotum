@@ -181,7 +181,7 @@ def _rotate_checkpoints(args, checkpoint_prefix="checkpoint", use_mtime=False) -
 
 
 def mask_tokens(
-    inputs: torch.Tensor, tokenizer: PreTrainedTokenizer, args
+    inputs: torch.Tensor, tokenizer: PreTrainedTokenizer, args, mask_all=False
 ) -> Tuple[torch.Tensor, torch.Tensor]:
     """ Prepare masked tokens inputs/labels for masked language modeling: 80% MASK, 10% random, 10% original. """
 
@@ -195,15 +195,47 @@ def mask_tokens(
 
     entity_ids = tokenizer.convert_tokens_to_ids(ENTITIES)
     labels = inputs.clone()
-    for i, dim in enumerate(labels):
-        for j, id_ in enumerate(dim):
-            if id_ not in entity_ids:
+
+    if mask_all:
+        for i, dim in enumerate(labels):
+            for j, id_ in enumerate(dim):
+                if id_ not in entity_ids:
+                    labels[i][j] = -100
+
+        for i, dim in enumerate(inputs):
+            for j, id_ in enumerate(dim):
+                if id_ in entity_ids:
+                    inputs[i][j] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+    else:
+        for i, dim in enumerate(labels):
+            for j, id_ in enumerate(dim):
                 labels[i][j] = -100
 
-    for i, dim in enumerate(inputs):
-        for j, id_ in enumerate(dim):
-            if id_ in entity_ids:
-                inputs[i][j] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+        for i, dim in enumerate(inputs):
+            for j, id_ in enumerate(dim):
+                if id_ in entity_ids:
+                    before = j - 1
+                    current = j
+                    after = j + 1
+                    if before < 0:
+                        after += 1
+                    if after > len(labels[i]):
+                        if before - 1 >= 0:
+                            before -= 1
+                    indices = [before, current, after]
+                    mask_index = random.choice(indices)
+                    labels[i][mask_index] = inputs[i][mask_index].clone()
+
+        for i, dim in enumerate(labels):
+            for j, id_ in enumerate(dim):
+                if id_ != -100:
+                    options = ["mask", "random", "original"]
+                    probs = [.8, .1, .1]
+                    do = np.random.choice(options, size=1, p=probs)
+                    if do == "mask":
+                        inputs[i][j] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+                    elif do == "random":
+                        inputs[i][j] = random.randint(0, len(tokenizer))
 
     return inputs, labels
 
