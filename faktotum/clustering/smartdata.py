@@ -22,7 +22,7 @@ def load_data(all_=True):
             Path(package_folder, "data", "wikidata.txt"),
         ]
     else:
-        files = [Path(data_folder, "test.txt")]
+        files = [Path(data_folder, "test.txt"), Path(data_folder, "dev.txt")]
     for file_ in files:
         text = file_.read_text(encoding="utf-8")
         for line in text.split("\n"):
@@ -34,6 +34,18 @@ def load_data(all_=True):
                     sentence = list()
         if sentence:
             yield sentence
+
+
+def ward(model_directory):
+    stats = list()
+    index = list()
+
+    data = load_data(all_=False)
+    embeddings = Embeddings(model_directory, "smartdata", load="all-masked")
+    X, y = embeddings.vectorize(data, embeddings.entity_bert)
+    clustering = Clustering("ward", X, y)
+    score = clustering.evaluate()
+    return values
 
 
 def compare_embeddings(model_directory):
