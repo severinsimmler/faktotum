@@ -41,8 +41,8 @@ def ward(model_directory):
     index = list()
 
     data = load_data(all_=False)
-    embeddings = Embeddings(model_directory, "smartdata", load="all-masked")
-    X, y = embeddings.vectorize(data, embeddings.entity_bert)
+    embeddings = Embeddings(model_directory, "smartdata", load="bert-multi-adapted")
+    X, y = embeddings.vectorize(data, embeddings.bert_ma)
     clustering = Clustering("ward", X, y)
     score = clustering.evaluate()
     return score
