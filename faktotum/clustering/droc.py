@@ -24,7 +24,7 @@ def ward(model_directory):
     index = list()
 
     data = load_data()
-    embeddings = Embeddings(model_directory, "gutenberg")
+    embeddings = Embeddings(model_directory, "gutenberg", load="all-masked")
     scores = list()
     for novel in data.values():
         X, y = embeddings.vectorize(novel, embeddings.entity_bert)
