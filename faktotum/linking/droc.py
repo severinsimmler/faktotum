@@ -15,6 +15,8 @@ from flair.data import Sentence
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 from faktotum.regression import Regression
+import random
+
 
 EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
