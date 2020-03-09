@@ -61,7 +61,7 @@ class EntityLinker:
                 current_id = token[2]
                 last_index = i
             elif token[2].startswith("Q") and current_entity:
-                if last_index + 1 == i and current_id == token[2]:
+                if last_index + 1 == i and current_id == token[2] and token[1].startswith("I-"):
                     current_entity.append(token)
                     last_index = i
                 elif current_id != token[2]:
