@@ -166,6 +166,7 @@ class EntityLinker:
     def similarities(self, mask_entity=False):
         tp = 0
         fp = 0
+        num_candidates = list()
         for sentence in tqdm.tqdm(self.test):
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
@@ -192,11 +193,19 @@ class EntityLinker:
                         is_org = True
                     else:
                         is_org = False
-                    for candidate in self._get_candidates(mention, is_org):
+                    candidates = list(self._get_candidates(mention, is_org))
+                    num_candidates.append(len(candidates))
+                    for candidate in candidates:
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
                                 t = list(utils.tokenize(context))
-                                t.extend(list(utils.tokenize(self.kb[candidate].get("DESCRIPTION"))))
+                                t.extend(
+                                    list(
+                                        utils.tokenize(
+                                            self.kb[candidate].get("DESCRIPTION")
+                                        )
+                                    )
+                                )
                                 text = " ".join(t)
                             else:
                                 t = list(utils.tokenize(context))
@@ -222,8 +231,13 @@ class EntityLinker:
                     else:
                         fp += 1
 
+        s = pd.Series(num_candidates)
         return pd.Series(
-            {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+            {
+                "accuracy": self.accuracy(tp, fp),
+                "precision": self.precision(tp, fp),
+                "median_candidates": s.median(),
+            }
         )
 
     @staticmethod
