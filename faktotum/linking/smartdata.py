@@ -196,7 +196,7 @@ class EntityLinker:
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
                                 t = list(utils.tokenize(context))
-                                t.extend(list(utils.tokenize(self.kb[candidate].get("DESCRIPTION")))
+                                t.extend(list(utils.tokenize(self.kb[candidate].get("DESCRIPTION"))))
                                 text = " ".join(t)
                             else:
                                 t = list(utils.tokenize(context))
