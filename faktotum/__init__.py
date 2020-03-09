@@ -5,3 +5,4 @@ from faktotum.ontologia import FastText, TfIdf, Word2Vec
 from faktotum.utils import sentencize, tokenize
 from faktotum import vendor
 from faktotum import clustering
+from faktotum import regression

@@ -13,6 +13,7 @@ from flair.embeddings import BertEmbeddings
 from flair.data import Sentence
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
+from faktotum.regression import Regression
 
 EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
@@ -65,7 +66,7 @@ class EntityLinker:
         context = defaultdict(list)
         mentions = defaultdict(set)
         embeddings = defaultdict(list)
-        for sentence in novel:
+        for sentence in tqdm.tqdm(novel):
             for i, token in enumerate(sentence):
                 if token[2] != "-":
                     if sentence not in context[token[2]]:
@@ -79,6 +80,7 @@ class EntityLinker:
                                 )
                             )
                             embeddings[token[2]].append(vector)
+            break
         for sentence in novel:
             for token in sentence:
                 if token[2] != "-":
@@ -204,14 +206,14 @@ class EntityLinker:
             )
         return pd.DataFrame(stats).describe()
 
-    def _generate_training_data(self):
+    def _generate_data(self, dataset):
         X = list()
         y = list()
-        train = list()
-        for novel in self.train.values():
-            train.extend(novel)
-        kb = self._build_knowledge_base(train)
-        for sentence in train:
+        data = list()
+        for novel in dataset.values():
+            data.extend(novel)
+        kb = self._build_knowledge_base(data)
+        for sentence in data:
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
                 continue
@@ -238,9 +240,57 @@ class EntityLinker:
                         instance = np.concatenate((mention_vector, negative_candidate))
                         X.append(instance)
                         y.append(0.0)
-                    print(X)
-                    print(y)
-                    raise
+        return np.array(X), np.array(y)
 
     def regression(self):
-        pass
+        X_train, y_train = self._generate_data(self.train)
+        X_test, y_test = self._generate_data(self.test)
+        model = Regression()
+        history = model.fit(X_train, y_train)
+        test_mse_score, test_mae_score = model.evaluate(X_test, y_test)
+        print("MSE", test_mse_score)
+        print("MAE", test_mae_score)
+
+        # EVALUATION
+        stats = list()
+        for novel in tqdm.tqdm(self.test.values()):
+            tp = 0
+            fp = 0
+            fn = 0
+            kb = self._build_knowledge_base(novel, build_embeddings=False)
+            for sentence in novel:
+                is_mentioned = [token for token in sentence if token[2] != "-"]
+                if not is_mentioned:
+                    continue
+                elif is_mentioned:
+                    indices = defaultdict(list)
+                    for i, token in enumerate(sentence):
+                        if token[2] != "-":
+                            indices[token[2]].append(i)
+                    mention_vectors = list(
+                        self._vectorize(
+                            sentence, indices, return_id=True, mask_entity=mask_entity
+                        )
+                    )
+
+                    for identifier, mention_vector in mention_vectors:
+                        for person, contexts in kb.items():
+                            for context, candidate_vector in zip(
+                                contexts["CONTEXTS"], contexts["EMBEDDINGS"]
+                            ):
+                                if context != sentence:
+                                    instance = np.array(np.concatenate((mention_vector, candidate_vector)))
+                                    score = model.predict(instance)[0][0]
+                                    if score > max_score:
+                                        max_score = score
+                                        best_candidate = person
+
+                        if best_candidate == identifier:
+                            tp += 1
+                        else:
+                            fp += 1
+
+        stats.append(
+            {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+        )
+    return pd.DataFrame(stats).describe()
