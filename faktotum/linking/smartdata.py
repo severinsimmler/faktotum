@@ -20,7 +20,7 @@ EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
-    _string_similarity_threshold = .9
+    _string_similarity_threshold = 0.9  # TODO: aus daten schwellenwert ableiten
 
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
@@ -29,8 +29,12 @@ class EntityLinker:
         self.test = list(self._load_corpus("test"))
         self.dev = list(self._load_corpus("dev"))
         self.dataset = self.train + self.test + self.dev
-        self.humans = json.loads(Path(kb_dir, "humans.json").read_text(encoding="utf-8"))
-        self.organizations = json.loads(Path(kb_dir, "organizations.json").read_text(encoding="utf-8"))
+        self.humans = json.loads(
+            Path(kb_dir, "humans.json").read_text(encoding="utf-8")
+        )
+        self.organizations = json.loads(
+            Path(kb_dir, "organizations.json").read_text(encoding="utf-8")
+        )
         self.kb = self.humans.copy()
         self.kb.update(self.organizations.copy())
 
@@ -97,7 +101,14 @@ class EntityLinker:
         }
 
     @staticmethod
-    def _vectorize(sentence, index, mask_entity: bool = False, return_type: bool = False, return_str: bool = False, return_id=False):
+    def _vectorize(
+        sentence,
+        index,
+        mask_entity: bool = False,
+        return_type: bool = False,
+        return_str: bool = False,
+        return_id=False,
+    ):
         for person, indices in index.items():
             tokens = list()
             entity = [token[0] for i, token in enumerate(sentence) if i in indices]
@@ -114,7 +125,9 @@ class EntityLinker:
             for i in indices[1:]:
                 vector = vector + sentence_[i].get_embedding().numpy()
             if return_id and return_str and return_type:
-                yield person, type_, " ".join(entity), (vector / len(indices)).reshape(1, -1)
+                yield person, type_, " ".join(entity), (vector / len(indices)).reshape(
+                    1, -1
+                )
             else:
                 yield (vector / len(indices)).reshape(1, -1)
 
@@ -150,7 +163,12 @@ class EntityLinker:
                         indices[token[2]].append(i)
                 mention_vectors = list(
                     self._vectorize(
-                        sentence, indices, return_id=True, return_type=True, return_str=True, mask_entity=mask_entity
+                        sentence,
+                        indices,
+                        return_id=True,
+                        return_type=True,
+                        return_str=True,
+                        mask_entity=mask_entity,
                     )
                 )
                 for identifier, type_, mention, mention_vector in mention_vectors:
@@ -163,10 +181,14 @@ class EntityLinker:
                     for candidate in self._get_candidates(mention, is_org):
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
-                                text = context + " " + self.kb[candidate].get("DESCRIPTION")
+                                text = (
+                                    context
+                                    + " "
+                                    + self.kb[candidate].get("DESCRIPTION")
+                                )
                             else:
                                 text = context
-                            
+
                             indices = list(range(len(list(utils.tokenize(context)))))
                             sentence_ = Sentence(text, use_tokenizer=False)
                             EMBEDDING.embed(sentence_)
@@ -175,19 +197,19 @@ class EntityLinker:
                                 vector = vector + sentence_[i].get_embedding().numpy()
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
 
-                            score = cosine_similarity(mention_vector, candidate_vector)[0][0]
+                            score = cosine_similarity(mention_vector, candidate_vector)[
+                                0
+                            ][0]
                             if score > max_score:
                                 max_score = score
                                 best_candidate = candidate
 
-                    print(best_candidate, identifier)
                     if best_candidate == identifier:
                         tp += 1
                     else:
                         fp += 1
 
         return {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
-
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:

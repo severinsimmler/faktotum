@@ -14,7 +14,7 @@ from flair.data import Sentence
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc")
 
 
 class EntityLinker:
