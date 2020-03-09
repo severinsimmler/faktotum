@@ -231,17 +231,20 @@ class EntityLinker:
                 )
 
                 for identifier, mention_vector in mention_vectors:
-                    candidates = kb[identifier]["EMBEDDINGS"]
-                    for candidate in candidates:
-                        instance = np.concatenate((mention_vector, candidate))
-                        X.append(instance)
-                        y.append(1.0)
-                    negative = random.sample([person for person in kb if person != identifier], k=len(candidates))
-                    for id_ in negative:
-                        negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
-                        instance = np.concatenate((mention_vector, negative_candidate))
-                        X.append(instance)
-                        y.append(0.0)
+                    try:
+                        candidates = kb[identifier]["EMBEDDINGS"]
+                        for candidate in candidates:
+                            instance = np.concatenate((mention_vector, candidate))
+                            X.append(instance)
+                            y.append(1.0)
+                        negative = random.sample([person for person in kb if person != identifier], k=len(candidates))
+                        for id_ in negative:
+                            negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
+                            instance = np.concatenate((mention_vector, negative_candidate))
+                            X.append(instance)
+                            y.append(0.0)
+                    except KeyError:
+                        print("ohoh")
         return np.array(X), np.array(y)
 
     def regression(self):
