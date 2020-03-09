@@ -214,7 +214,7 @@ class EntityLinker:
         data = list()
         for novel in dataset.values():
             data.extend(novel)
-        kb = self._build_knowledge_base(data, build_embeddings=True)
+        kb = self._build_knowledge_base(data, build_embeddings=True, threshold=2)
         for sentence in data:
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
@@ -231,18 +231,17 @@ class EntityLinker:
                 )
 
                 for identifier, mention_vector in mention_vectors:
-                    if kb[identifier]:
-                        candidates = kb[identifier]["EMBEDDINGS"]
-                        for candidate in candidates:
-                            instance = np.concatenate((mention_vector, candidate))
-                            X.append(instance)
-                            y.append(1.0)
-                        negative = random.sample([person for person in kb if person != identifier], k=len(candidates))
-                        for id_ in negative:
-                            negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
-                            instance = np.concatenate((mention_vector, negative_candidate))
-                            X.append(instance)
-                            y.append(0.0)
+                    candidates = kb[identifier]["EMBEDDINGS"]
+                    for candidate in candidates:
+                        instance = np.concatenate((mention_vector, candidate))
+                        X.append(instance)
+                        y.append(1.0)
+                    negative = random.sample([person for person in kb if person != identifier], k=len(candidates))
+                    for id_ in negative:
+                        negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
+                        instance = np.concatenate((mention_vector, negative_candidate))
+                        X.append(instance)
+                        y.append(0.0)
         return np.array(X), np.array(y)
 
     def regression(self):
