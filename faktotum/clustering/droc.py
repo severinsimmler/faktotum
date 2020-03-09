@@ -9,10 +9,18 @@ from faktotum.clustering.utils import Clustering, Embeddings
 logging.basicConfig(format="%(message)s", level=logging.INFO)
 
 
-def load_data():
+def load_data(all_=True):
     package_folder = Path(__file__).parent.parent
     data_folder = Path(package_folder, "data", "droc", "linking")
     data = dict()
+    if all_:
+        files = [
+            Path(data_folder, "train.txt"),
+            Path(data_folder, "dev.txt"),
+            Path(data_folder, "test.txt"),
+        ]
+    else:
+        files = [Path(data_folder, "test.txt"), Path(data_folder, "dev.txt")]
     for file_ in data_folder.glob("*.txt"):
         with file_.open("r", encoding="utf-8") as file_:
             data.update(json.load(file_))
@@ -23,7 +31,7 @@ def ward(model_directory):
     stats = list()
     index = list()
 
-    data = load_data()
+    data = load_data(all_=False)
     embeddings = Embeddings(model_directory, "gutenberg", load="all-masked")
     scores = list()
     for novel in data.values():
