@@ -269,7 +269,7 @@ class EntityLinker:
                             indices[token[2]].append(i)
                     mention_vectors = list(
                         self._vectorize(
-                            sentence, indices, return_id=True, mask_entity=mask_entity
+                            sentence, indices, return_id=True, mask_entity=False
                         )
                     )
 
