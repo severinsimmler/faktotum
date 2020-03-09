@@ -37,7 +37,6 @@ class EntityLinker:
             for key, value in data.items():
                 self.test[f"{i}_{key}"] = value
 
-
     @staticmethod
     def precision(tp: int, fp: int) -> float:
         return tp / (tp + fp)
@@ -231,17 +230,23 @@ class EntityLinker:
                 )
 
                 for identifier, mention_vector in mention_vectors:
-                    candidates = kb[identifier]["EMBEDDINGS"]
-                    for candidate in candidates:
-                        instance = np.concatenate((mention_vector[0], candidate[0]))
-                        X.append(instance)
-                        y.append(1.0)
-                    negative = random.sample([person for person in kb if person != identifier], k=len(candidates))
-                    for id_ in negative:
-                        negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
-                        instance = np.concatenate((mention_vector[0], negative_candidate[0]))
-                        X.append(instance)
-                        y.append(0.0)
+                    if identifier in kb:
+                        candidates = kb[identifier]["EMBEDDINGS"]
+                        for candidate in candidates:
+                            instance = np.concatenate((mention_vector[0], candidate[0]))
+                            X.append(instance)
+                            y.append(1.0)
+                        negative = random.sample(
+                            [person for person in kb if person != identifier],
+                            k=len(candidates),
+                        )
+                        for id_ in negative:
+                            negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
+                            instance = np.concatenate(
+                                (mention_vector[0], negative_candidate[0])
+                            )
+                            X.append(instance)
+                            y.append(0.0)
         return np.array(X[0]), np.array(y)
 
     def regression(self):
@@ -281,7 +286,11 @@ class EntityLinker:
                                 contexts["CONTEXTS"], contexts["EMBEDDINGS"]
                             ):
                                 if context != sentence:
-                                    instance = np.array(np.concatenate((mention_vector[0], candidate_vector[0])))
+                                    instance = np.array(
+                                        np.concatenate(
+                                            (mention_vector[0], candidate_vector[0])
+                                        )
+                                    )
                                     score = model.predict(instance)[0][0]
                                     if score > max_score:
                                         max_score = score

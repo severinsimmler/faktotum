@@ -230,10 +230,12 @@ def mask_tokens(
             for j, id_ in enumerate(dim):
                 if id_ != -100:
                     options = ["mask", "random", "original"]
-                    probs = [.8, .1, .1]
+                    probs = [0.8, 0.1, 0.1]
                     do = np.random.choice(options, size=1, p=probs)
                     if do == "mask":
-                        inputs[i][j] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+                        inputs[i][j] = tokenizer.convert_tokens_to_ids(
+                            tokenizer.mask_token
+                        )
                     elif do == "random":
                         inputs[i][j] = random.randint(0, len(tokenizer))
 
