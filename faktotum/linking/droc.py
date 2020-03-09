@@ -293,4 +293,4 @@ class EntityLinker:
         stats.append(
             {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
         )
-    return pd.DataFrame(stats).describe()
+        return pd.DataFrame(stats).describe()
