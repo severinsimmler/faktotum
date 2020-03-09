@@ -35,7 +35,7 @@ def ward(model_directory):
     embeddings = Embeddings(model_directory, "gutenberg", load="ner")
     scores = list()
     for novel in data.values():
-        X, y = embeddings.vectorize(novel, embeddings.entity_bert)
+        X, y = embeddings.vectorize(novel, embeddings.bert_ner)
         clustering = Clustering("ward", X, y)
         score = clustering.evaluate()
         scores.append(score)
