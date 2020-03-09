@@ -96,7 +96,7 @@ class EntityLinker:
                 if build_embeddings:
                     kb[key]["EMBEDDINGS"] = embeddings[key]
                 kb[key]["MENTIONS"] = mentions[key]
-        return kb
+        return {key: value for key, value in kb.items() if value}
 
     @staticmethod
     def _vectorize(sentence, index, mask_entity: bool = False, return_id=False):
@@ -231,21 +231,18 @@ class EntityLinker:
                 )
 
                 for identifier, mention_vector in mention_vectors:
-                    try:
-                        candidates = kb[identifier]["EMBEDDINGS"]
-                        for candidate in candidates:
-                            instance = np.concatenate((mention_vector, candidate))
-                            X.append(instance)
-                            y.append(1.0)
-                        negative = random.sample([person for person in kb if person != identifier], k=len(candidates))
-                        for id_ in negative:
-                            negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
-                            instance = np.concatenate((mention_vector, negative_candidate))
-                            X.append(instance)
-                            y.append(0.0)
-                    except KeyError:
-                        print("ohoh")
-        return np.array(X), np.array(y)
+                    candidates = kb[identifier]["EMBEDDINGS"]
+                    for candidate in candidates:
+                        instance = np.concatenate((mention_vector[0], candidate[0]))
+                        X.append(instance)
+                        y.append(1.0)
+                    negative = random.sample([person for person in kb if person != identifier], k=len(candidates))
+                    for id_ in negative:
+                        negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
+                        instance = np.concatenate((mention_vector[0], negative_candidate[0]))
+                        X.append(instance)
+                        y.append(0.0)
+        return np.array(X[0]), np.array(y)
 
     def regression(self):
         X_train, y_train = self._generate_data(self.train)
@@ -284,7 +281,7 @@ class EntityLinker:
                                 contexts["CONTEXTS"], contexts["EMBEDDINGS"]
                             ):
                                 if context != sentence:
-                                    instance = np.array(np.concatenate((mention_vector, candidate_vector)))
+                                    instance = np.array(np.concatenate((mention_vector[0], candidate_vector[0])))
                                     score = model.predict(instance)[0][0]
                                     if score > max_score:
                                         max_score = score
