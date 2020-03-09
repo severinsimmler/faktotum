@@ -257,7 +257,7 @@ class EntityLinker:
             tp = 0
             fp = 0
             fn = 0
-            kb = self._build_knowledge_base(novel, build_embeddings=False)
+            kb = self._build_knowledge_base(novel, build_embeddings=True)
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
                 if not is_mentioned:
