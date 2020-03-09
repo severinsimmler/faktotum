@@ -195,13 +195,12 @@ class EntityLinker:
                     for candidate in self._get_candidates(mention, is_org):
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
-                                text = (
-                                    context
-                                    + " "
-                                    + self.kb[candidate].get("DESCRIPTION")
-                                )
+                                t = list(utils.tokenize(context))
+                                t.extend(list(utils.tokenize(self.kb[candidate].get("DESCRIPTION")))
+                                text = " ".join(t)
                             else:
-                                text = context
+                                t = list(utils.tokenize(context))
+                                text = " ".join(t)
 
                             indices = list(range(len(list(utils.tokenize(context)))))
                             sentence_ = Sentence(text, use_tokenizer=False)

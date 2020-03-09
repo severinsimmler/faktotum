@@ -249,9 +249,10 @@ class EntityLinker:
                             y.append(0.0)
         return np.array(X[0]), np.array(y)
 
-    def regression(self):
-        X_train, y_train = self._generate_data(self.train)
-        X_test, y_test = self._generate_data(self.test)
+    def regression(self, X_train=None, y_train=None, X_test=None, y_test=None):
+        if not X_train:
+            X_train, y_train = self._generate_data(self.train)
+            X_test, y_test = self._generate_data(self.test)
         model = Regression()
         history = model.fit(X_train, y_train)
         test_mse_score, test_mae_score = model.evaluate(X_test, y_test)
