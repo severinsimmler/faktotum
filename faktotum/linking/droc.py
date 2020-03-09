@@ -9,6 +9,7 @@ import json
 import re
 import pandas as pd
 import tqdm
+import numpy as np
 from flair.embeddings import BertEmbeddings
 from flair.data import Sentence
 from sklearn.cluster import AgglomerativeClustering
@@ -212,7 +213,6 @@ class EntityLinker:
         for novel in dataset.values():
             data.extend(novel)
         kb = self._build_knowledge_base(data, build_embeddings=True)
-        print(kb)
         for sentence in data:
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
