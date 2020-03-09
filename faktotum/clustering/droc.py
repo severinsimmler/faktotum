@@ -19,6 +19,28 @@ def load_data():
     return data
 
 
+def ward(model_directory):
+    stats = list()
+    index = list()
+
+    data = load_data()
+    embeddings = Embeddings(model_directory, "gutenberg")
+    scores = list()
+    for novel in data.values():
+        X, y = embeddings.vectorize(novel, embeddings.entity_bert)
+        clustering = Clustering("ward", X, y)
+        score = clustering.evaluate()
+        scores.append(score)
+    scores = pd.DataFrame(scores)
+    values = {
+        index: f"{mean} (±{std})"
+        for index, mean, std in zip(
+            scores.columns, scores.mean().round(2), scores.std().round(2)
+        )
+    }
+return values
+
+
 def compare_embeddings(model_directory):
     stats = list()
     index = list()

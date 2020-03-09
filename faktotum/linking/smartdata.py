@@ -16,7 +16,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import difflib
 from faktotum import utils
 
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc")
 
 
 class EntityLinker:

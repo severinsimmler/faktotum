@@ -135,7 +135,6 @@ class EntityLinker:
                         else:
                             fp += 1
 
-            print(self.accuracy(tp, fp))
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
