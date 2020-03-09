@@ -212,7 +212,8 @@ class EntityLinker:
         data = list()
         for novel in dataset.values():
             data.extend(novel)
-        kb = self._build_knowledge_base(data)
+        kb = self._build_knowledge_base(data, build_embeddings=True)
+        print(kb)
         for sentence in data:
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
