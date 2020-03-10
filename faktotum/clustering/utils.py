@@ -83,7 +83,9 @@ class Embeddings:
             if corpus == "gutenberg":
                 path = str(Path(model_directory, "entity-embeddings-droc-all-masked"))
             else:
-                path = str(Path(model_directory, "entity-embeddings-smartdata-all-masked"))
+                path = str(
+                    Path(model_directory, "entity-embeddings-smartdata-all-masked")
+                )
             logging.info(f"Loading {path}...")
             self.entity_all_bert = BertEmbeddings(path)
 
@@ -94,7 +96,6 @@ class Embeddings:
                 path = str(Path(model_directory, "entity-embeddings-smartdata"))
             logging.info(f"Loading {path}...")
             self.entity_bert = BertEmbeddings(path)
-
 
     def vectorize(self, sentences, model, add_adj=False):
         X = list()

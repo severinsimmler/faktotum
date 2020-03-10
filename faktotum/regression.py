@@ -4,12 +4,10 @@ from sklearn import metrics
 
 
 class Model(torch.nn.Module):
-    input_size = 3
-    output_size = 1
-
-    def __init__(self):
+    def __init__(self, input_size):
         super(Model, self).__init__()
-        self.linear = torch.nn.Linear(self.input_size, self.output_size)
+        output_size = 1
+        self.linear = torch.nn.Linear(input_size, output_size)
 
     def forward(self, X):
         return self.linear(X)
@@ -17,16 +15,18 @@ class Model(torch.nn.Module):
 
 class Regression:
     def fit(self, X_train, y_train, epochs=100, lr: float = 0.01):
-        self._model = Model()
+        self._model = Model(X_train.shape[1])
         if torch.cuda.is_available():
             self._model.cuda()
-        criterion = torch.nn.MSELoss() 
+        criterion = torch.nn.MSELoss()
         optimizer = torch.optim.SGD(self._model.parameters(), lr=lr)
 
         for epoch in range(epochs):
             if torch.cuda.is_available():
                 inputs = Variable(torch.from_numpy(X_train).cuda()).float()
-                labels = Variable(torch.from_numpy(y_train.reshape(-1, 1)).cuda()).float()
+                labels = Variable(
+                    torch.from_numpy(y_train.reshape(-1, 1)).cuda()
+                ).float()
             else:
                 inputs = Variable(torch.from_numpy(X_train)).float()
                 labels = Variable(torch.from_numpy(y_train.reshape(-1, 1))).float()
@@ -40,7 +40,7 @@ class Regression:
 
             optimizer.step()
 
-            print(f'Epoch {epoch}, loss {loss.item()}')
+            print(f"Epoch {epoch}, loss {loss.item()}")
 
     def evaluate(self, X_test, y_test):
         with torch.no_grad():
