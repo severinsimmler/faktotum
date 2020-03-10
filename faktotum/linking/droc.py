@@ -12,7 +12,7 @@ import tqdm
 import numpy as np
 from flair.embeddings import BertEmbeddings
 from flair.data import Sentence
-form sklearn import preprocessing
+from sklearn import preprocessing
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 from faktotum.regression import Regression
