@@ -13,7 +13,7 @@ class Model(torch.nn.Module):
             torch.nn.ReLU(),
             torch.nn.Linear(1000, 500),
             torch.nn.ReLU(),
-            torch.nn.Linear(500, 1)
+            torch.nn.Linear(500, 1),
         )
 
     def forward(self, x):
@@ -24,7 +24,9 @@ class Regression:
     # todo: normalization
     # kleinere learning rate 1e-3
     #  If your target is missing the feature dimension ([batch_size] instead of [batch_size, 1]), an unwanted broadcast might be applied.
-    def fit(self, X_train, y_train, epochs=1000, lr: float = 1e-3, batch_size: int = 256):
+    def fit(
+        self, X_train, y_train, epochs=1000, lr: float = 1e-3, batch_size: int = 256
+    ):
         self._model = Model(X_train.shape[1])
         if torch.cuda.is_available():
             self._model.cuda()
@@ -57,14 +59,14 @@ class Regression:
 
                 optimizer.step()
 
-                print(f"Epoch {epoch}, loss {loss.item()}")
+            print(f"Epoch {epoch}, loss {loss.item()}")
 
-                early_stopping(loss, self._model)
+            early_stopping(loss, self._model)
 
-                if early_stopping.early_stop:
-                    print("Early stopping")
-                    self._model.load_state_dict(torch.load("checkpoint.pt"))
-                    return
+            if early_stopping.early_stop:
+                print("Early stopping")
+                self._model.load_state_dict(torch.load("checkpoint.pt"))
+                return
 
         torch.save(self._model.state_dict(), "final-model.pt")
 
@@ -75,7 +77,10 @@ class Regression:
             else:
                 inputs = Variable(torch.from_numpy(X_test)).float()
             outputs = self._model(inputs).cpu().data.numpy().reshape(1, -1)[0]
-            return metrics.mean_squared_error(y_test, outputs), metrics.mean_absolute_error(y_test, outputs)
+            return (
+                metrics.mean_squared_error(y_test, outputs),
+                metrics.mean_absolute_error(y_test, outputs),
+            )
 
     def predict(self, X):
         with torch.no_grad():
