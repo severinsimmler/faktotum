@@ -24,7 +24,7 @@ class Regression:
     # todo: normalization
     # kleinere learning rate 1e-3
     #  If your target is missing the feature dimension ([batch_size] instead of [batch_size, 1]), an unwanted broadcast might be applied.
-    def fit(self, X_train, y_train, epochs=1000, lr: float = 1e-3):
+    def fit(self, X_train, y_train, epochs=1000, lr: float = 1e-3, batch_size: int = 256):
         self._model = Model(X_train.shape[1])
         if torch.cuda.is_available():
             self._model.cuda()
