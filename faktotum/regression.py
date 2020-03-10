@@ -1,6 +1,8 @@
 import torch
-from torch.autograd import Variable
 from sklearn import metrics
+from torch.autograd import Variable
+
+from faktotum.utils import EarlyStopping
 
 
 class Model(torch.nn.Module):
@@ -20,6 +22,7 @@ class Regression:
             self._model.cuda()
         criterion = torch.nn.MSELoss()
         optimizer = torch.optim.SGD(self._model.parameters(), lr=lr)
+        early_stopping = EarlyStopping(patience=3, verbose=True)
 
         for epoch in range(epochs):
             if torch.cuda.is_available():
@@ -42,6 +45,14 @@ class Regression:
 
             print(f"Epoch {epoch}, loss {loss.item()}")
 
+            early_stopping(loss, self._model)
+
+            if early_stopping.early_stop:
+                print("Early stopping")
+                self._model.load_state_dict(torch.load("checkpoint.pt"))
+                break
+        torch.save(self._model.state_dict(), "best-model.pt")
+
     def evaluate(self, X_test, y_test):
         with torch.no_grad():
             if torch.cuda.is_available():
@@ -49,4 +60,4 @@ class Regression:
             else:
                 inputs = Variable(torch.from_numpy(X_test)).float()
             outputs = self._model(inputs).cpu().data.numpy().reshape(1, -1)[0]
-            return metrics.mean_squared_error(y_test, outputs)
+            return metrics.mean_squared_error(y_test, outputs), metrics.mean_absolute_error(y_test, outputs)
