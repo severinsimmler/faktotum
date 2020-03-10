@@ -292,7 +292,8 @@ class EntityLinker:
                                             (mention_vector[0], candidate_vector[0])
                                         )
                                     )
-                                    score = model.predict(instance)[0][0]
+                                    score = model.predict(instance)
+                                    print(score)
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
