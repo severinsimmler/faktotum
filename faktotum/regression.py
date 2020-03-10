@@ -61,3 +61,11 @@ class Regression:
                 inputs = Variable(torch.from_numpy(X_test)).float()
             outputs = self._model(inputs).cpu().data.numpy().reshape(1, -1)[0]
             return metrics.mean_squared_error(y_test, outputs), metrics.mean_absolute_error(y_test, outputs)
+
+    def predict(self, X):
+        with torch.no_grad():
+            if torch.cuda.is_available():
+                inputs = Variable(torch.from_numpy(X).cuda()).float()
+            else:
+                inputs = Variable(torch.from_numpy(X)).float()
+            return self._model(inputs).cpu().data.numpy().reshape(1, -1)[0]
