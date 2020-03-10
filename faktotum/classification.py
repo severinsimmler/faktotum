@@ -1,6 +1,7 @@
 import torch
 from sklearn import metrics
 from torch.autograd import Variable
+import torch.nn.functional as F
 
 from faktotum.utils import EarlyStopping
 
@@ -20,7 +21,7 @@ class Model(torch.nn.Module):
         return self.features(x)
 
 
-class Regression:
+class Classifier:
     # todo: normalization
     # kleinere learning rate 1e-3
     #  If your target is missing the feature dimension ([batch_size] instead of [batch_size, 1]), an unwanted broadcast might be applied.
@@ -30,8 +31,8 @@ class Regression:
         self._model = Model(X_train.shape[1])
         if torch.cuda.is_available():
             self._model.cuda()
-        criterion = torch.nn.MSELoss()
-        optimizer = torch.optim.SGD(self._model.parameters(), lr=lr)
+        criterion = torch.nn.CrossEntropyLoss()
+        optimizer = torch.optim.Adam(self._model.parameters(), lr=lr)
         early_stopping = EarlyStopping(patience=5, verbose=True)
 
         for epoch in range(epochs):
@@ -88,4 +89,14 @@ class Regression:
                 inputs = Variable(torch.from_numpy(X).cuda()).float()
             else:
                 inputs = Variable(torch.from_numpy(X)).float()
+
+            pred = F.softmax(self.forward(inputs))
+            ans = []
+            #Pick the class with maximum weight
+            for t in pred:
+                if t[0]>t[1]:
+                    ans.append(0)
+                else:
+                    ans.append(1)
+            return torch.tensor(ans)
             return self._model(inputs).cpu().data.numpy().reshape(1, -1)[0]
