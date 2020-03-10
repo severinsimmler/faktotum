@@ -252,7 +252,7 @@ class EntityLinker:
         return np.array(X), np.array(y)
 
     def regression(
-        self, X_train=None, y_train=None, X_test=None, y_test=None, generate_data=False
+        self, X_train=None, y_train=None, X_test=None, y_test=None, generate_data=False, mask_entity=True
     ):
         if generate_data:
             X_train, y_train = self._generate_data(self.train)
@@ -269,7 +269,7 @@ class EntityLinker:
             tp = 0
             fp = 0
             fn = 0
-            kb = self._build_knowledge_base(novel, build_embeddings=True)
+            kb = self._build_knowledge_base(novel, mask_entity=mask_entity, build_embeddings=True)
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
                 if not is_mentioned:
@@ -281,7 +281,7 @@ class EntityLinker:
                             indices[token[2]].append(i)
                     mention_vectors = list(
                         self._vectorize(
-                            sentence, indices, return_id=True, mask_entity=True
+                            sentence, indices, return_id=True, mask_entity=mask_entity
                         )
                     )
 
