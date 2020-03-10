@@ -293,7 +293,6 @@ class EntityLinker:
                                         )
                                     )
                                     score = model.predict(instance)
-                                    print(score)
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
