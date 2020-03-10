@@ -16,7 +16,10 @@ class Model(torch.nn.Module):
 
 
 class Regression:
-    def fit(self, X_train, y_train, epochs=100, lr: float = 0.01):
+    # todo: normalization
+    # kleinere learning rate 1e-3
+    #  If your target is missing the feature dimension ([batch_size] instead of [batch_size, 1]), an unwanted broadcast might be applied.
+    def fit(self, X_train, y_train, epochs=100, lr: float = 1e-3):
         self._model = Model(X_train.shape[1])
         if torch.cuda.is_available():
             self._model.cuda()
@@ -47,10 +50,10 @@ class Regression:
 
             early_stopping(loss, self._model)
 
-            if early_stopping.early_stop:
-                print("Early stopping")
-                self._model.load_state_dict(torch.load("checkpoint.pt"))
-                break
+            #if early_stopping.early_stop:
+            #    print("Early stopping")
+            #    self._model.load_state_dict(torch.load("checkpoint.pt"))
+            #    break
         torch.save(self._model.state_dict(), "best-model.pt")
 
     def evaluate(self, X_test, y_test):
