@@ -12,6 +12,7 @@ import tqdm
 import numpy as np
 from flair.embeddings import BertEmbeddings
 from flair.data import Sentence
+form sklearn import preprocessing
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 from faktotum.regression import Regression
@@ -298,6 +299,7 @@ class EntityLinker:
                                             (mention_vector[0], candidate_vector[0])
                                         )
                                     )
+                                    instance = preprocessing.normalize(instance)
                                     score = model.predict(instance)[0]
                                     if score > max_score:
                                         max_score = score
