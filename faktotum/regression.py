@@ -9,7 +9,7 @@ class Model(torch.nn.Module):
     def __init__(self, input_size):
         super(Model, self).__init__()
         self.features = torch.nn.Sequential(
-            torch.nn.Linear(input_size, 5000),
+            torch.nn.Linear(input_size, 1000),
             torch.nn.ReLU(),
             torch.nn.Linear(1000, 500),
             torch.nn.ReLU(),
@@ -33,33 +33,40 @@ class Regression:
         early_stopping = EarlyStopping(patience=3, verbose=True)
 
         for epoch in range(epochs):
-            if torch.cuda.is_available():
-                inputs = Variable(torch.from_numpy(X_train).cuda()).float()
-                labels = Variable(
-                    torch.from_numpy(y_train.reshape(-1, 1)).cuda()
-                ).float()
-            else:
-                inputs = Variable(torch.from_numpy(X_train)).float()
-                labels = Variable(torch.from_numpy(y_train.reshape(-1, 1))).float()
+            inputs = Variable(torch.from_numpy(X_train)).float()
+            labels = Variable(torch.from_numpy(y_train.reshape(-1, 1))).float()
 
-            optimizer.zero_grad()
+            permutation = torch.randperm(inputs.size()[0])
 
-            outputs = self._model(inputs)
+            for i in range(0, inputs.size()[0], batch_size):
+                optimizer.zero_grad()
 
-            loss = criterion(outputs, labels)
-            loss.backward()
+                indices = permutation[i : i + batch_size]
+                batch_x, batch_y = inputs[indices], labels[indices]
 
-            optimizer.step()
+                if torch.cuda.is_available():
+                    batch_x = batch_x.cuda()
+                    batch_y = batch_y.cuda()
 
-            print(f"Epoch {epoch}, loss {loss.item()}")
+                optimizer.zero_grad()
 
-            early_stopping(loss, self._model)
+                outputs = self._model(batch_x)
 
-            if early_stopping.early_stop:
-                print("Early stopping")
-                self._model.load_state_dict(torch.load("checkpoint.pt"))
-                break
-        torch.save(self._model.state_dict(), "best-model.pt")
+                loss = criterion(outputs, batch_y)
+                loss.backward()
+
+                optimizer.step()
+
+                print(f"Epoch {epoch}, loss {loss.item()}")
+
+                early_stopping(loss, self._model)
+
+                if early_stopping.early_stop:
+                    print("Early stopping")
+                    self._model.load_state_dict(torch.load("checkpoint.pt"))
+                    return
+
+        torch.save(self._model.state_dict(), "final-model.pt")
 
     def evaluate(self, X_test, y_test):
         with torch.no_grad():
