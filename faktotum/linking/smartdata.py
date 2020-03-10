@@ -6,6 +6,7 @@ flair.device = torch.device("cpu")
 from pathlib import Path
 from collections import defaultdict
 import json
+from collections import Counter
 import re
 import pandas as pd
 import tqdm
@@ -24,7 +25,7 @@ EMBEDDING = BertEmbeddings(
 
 
 class EntityLinker:
-    _string_similarity_threshold = .9#0.942387
+    MAX_CANDIDATES = 0  # TODO
 
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
@@ -150,7 +151,7 @@ class EntityLinker:
         return JARO_WINKLER.similarity(a, b)
 
     def _get_candidates(self, mention, is_org):
-        candidates = set()
+        candidates = dict()
         mention = mention.lower()
         if is_org:
             kb = self.organizations
@@ -159,14 +160,17 @@ class EntityLinker:
         for key, value in kb.items():
             for context in value["MENTIONS"]:
                 score = self._string_similarity(mention, context.lower())
-                if score >= self._string_similarity_threshold:
-                    candidates.add(key)
-        return candidates
+                if key not in candidates:
+                    candidates[key] = score
+                else:
+                    if score > candidates[key]:
+                        candidates[key] = score
+        c = Counter(candidates)
+        return [x[0] for x in c.most_common(self.MAX_CANDIDATES)]
 
     def similarities(self, mask_entity=False):
         tp = 0
         fp = 0
-        num_candidates = list()
         for sentence in tqdm.tqdm(self.test):
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
@@ -193,11 +197,7 @@ class EntityLinker:
                         is_org = True
                     else:
                         is_org = False
-                    candidates = list(self._get_candidates(mention, is_org))
-                    num_candidates.append(len(candidates))
-                    print(num_candidates)
-                    continue
-                    for candidate in candidates:
+                    for candidate in self._get_candidates(mention, is_org):
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
                                 t = list(utils.tokenize(context))
@@ -233,14 +233,10 @@ class EntityLinker:
                     else:
                         fp += 1
 
-        s = pd.Series(num_candidates)
-        return pd.Series(
-            {
-                "accuracy": self.accuracy(tp, fp),
-                "precision": self.precision(tp, fp),
-                "median_candidates": s.median(),
-            }
-        )
+        return {
+            "accuracy": self.accuracy(tp, fp),
+            "precision": self.precision(tp, fp),
+        }
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:

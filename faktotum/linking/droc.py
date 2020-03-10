@@ -253,7 +253,13 @@ class EntityLinker:
         return np.array(X), np.array(y)
 
     def regression(
-        self, X_train=None, y_train=None, X_test=None, y_test=None, generate_data=False, mask_entity=True
+        self,
+        X_train=None,
+        y_train=None,
+        X_test=None,
+        y_test=None,
+        generate_data=False,
+        mask_entity=True,
     ):
         if generate_data:
             X_train, y_train = self._generate_data(self.train)
@@ -270,7 +276,9 @@ class EntityLinker:
             tp = 0
             fp = 0
             fn = 0
-            kb = self._build_knowledge_base(novel, mask_entity=mask_entity, build_embeddings=True)
+            kb = self._build_knowledge_base(
+                novel, mask_entity=mask_entity, build_embeddings=True
+            )
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
                 if not is_mentioned:
@@ -299,7 +307,9 @@ class EntityLinker:
                                             (mention_vector[0], candidate_vector[0])
                                         )
                                     )
-                                    instance = preprocessing.normalize(np.array([instance]))
+                                    instance = preprocessing.normalize(
+                                        np.array([instance])
+                                    )
                                     score = model.predict(instance)[0]
                                     print(score)
                                     if score > max_score:
@@ -310,9 +320,10 @@ class EntityLinker:
                             tp += 1
                         else:
                             fp += 1
-            result = {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+            result = {
+                "accuracy": self.accuracy(tp, fp),
+                "precision": self.precision(tp, fp),
+            }
             print(result)
-            stats.append(
-                result
-            )
+            stats.append(result)
         return pd.DataFrame(stats).describe()

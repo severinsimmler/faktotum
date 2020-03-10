@@ -92,9 +92,9 @@ class Classifier:
 
             pred = F.softmax(self.forward(inputs))
             ans = []
-            #Pick the class with maximum weight
+            # Pick the class with maximum weight
             for t in pred:
-                if t[0]>t[1]:
+                if t[0] > t[1]:
                     ans.append(0)
                 else:
                     ans.append(1)

@@ -22,7 +22,11 @@ def load_data(all_=True):
             Path(package_folder, "data", "wikidata.txt"),
         ]
     else:
-        files = [Path(data_folder, "test.txt"), Path(data_folder, "dev.txt")]
+        files = [
+            Path(data_folder, "test.txt"),
+            Path(data_folder, "dev.txt"),
+            Path(package_folder, "data", "wikidata.txt"),
+        ]
     for file_ in files:
         text = file_.read_text(encoding="utf-8")
         for line in text.split("\n"):
