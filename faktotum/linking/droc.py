@@ -301,6 +301,7 @@ class EntityLinker:
                                     )
                                     instance = preprocessing.normalize(np.array([instance]))
                                     score = model.predict(instance)[0]
+                                    print(score)
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
