@@ -13,7 +13,7 @@ class Model(torch.nn.Module):
             torch.nn.ReLU(),
             torch.nn.Linear(1000, 500),
             torch.nn.ReLU(),
-            torch.nn.Linear(500, 1),
+            torch.nn.Linear(500, 1)
         )
 
     def forward(self, x):
@@ -24,7 +24,7 @@ class Regression:
     # todo: normalization
     # kleinere learning rate 1e-3
     #  If your target is missing the feature dimension ([batch_size] instead of [batch_size, 1]), an unwanted broadcast might be applied.
-    def fit(self, X_train, y_train, epochs=1000, lr: float = 1e-3, batch_size: int = 128):
+    def fit(self, X_train, y_train, epochs=1000, lr: float = 1e-3):
         self._model = Model(X_train.shape[1])
         if torch.cuda.is_available():
             self._model.cuda()
@@ -33,40 +33,33 @@ class Regression:
         early_stopping = EarlyStopping(patience=3, verbose=True)
 
         for epoch in range(epochs):
-            inputs = Variable(torch.from_numpy(X_train)).float()
-            labels = Variable(torch.from_numpy(y_train.reshape(-1, 1))).float()
+            if torch.cuda.is_available():
+                inputs = Variable(torch.from_numpy(X_train).cuda()).float()
+                labels = Variable(
+                    torch.from_numpy(y_train.reshape(-1, 1)).cuda()
+                ).float()
+            else:
+                inputs = Variable(torch.from_numpy(X_train)).float()
+                labels = Variable(torch.from_numpy(y_train.reshape(-1, 1))).float()
 
-            permutation = torch.randperm(inputs.size()[0])
+            optimizer.zero_grad()
 
-            for i in range(0, inputs.size()[0], batch_size):
-                optimizer.zero_grad()
+            outputs = self._model(inputs)
 
-                indices = permutation[i : i + batch_size]
-                batch_x, batch_y = inputs[indices], labels[indices]
+            loss = criterion(outputs, labels)
+            loss.backward()
 
-                if torch.cuda.is_available():
-                    batch_x = batch_x.cuda()
-                    batch_y = batch_y.cuda()
+            optimizer.step()
 
-                optimizer.zero_grad()
+            print(f"Epoch {epoch}, loss {loss.item()}")
 
-                outputs = self._model(batch_x)
+            early_stopping(loss, self._model)
 
-                loss = criterion(outputs, batch_y)
-                loss.backward()
-
-                optimizer.step()
-
-                print(f"Epoch {epoch}, loss {loss.item()}")
-
-                early_stopping(loss, self._model)
-
-                if early_stopping.early_stop:
-                    print("Early stopping")
-                    self._model.load_state_dict(torch.load("checkpoint.pt"))
-                    return
-
-        torch.save(self._model.state_dict(), "final-model.pt")
+            if early_stopping.early_stop:
+                print("Early stopping")
+                self._model.load_state_dict(torch.load("checkpoint.pt"))
+                break
+        torch.save(self._model.state_dict(), "best-model.pt")
 
     def evaluate(self, X_test, y_test):
         with torch.no_grad():
@@ -75,10 +68,7 @@ class Regression:
             else:
                 inputs = Variable(torch.from_numpy(X_test)).float()
             outputs = self._model(inputs).cpu().data.numpy().reshape(1, -1)[0]
-            return (
-                metrics.mean_squared_error(y_test, outputs),
-                metrics.mean_absolute_error(y_test, outputs),
-            )
+            return metrics.mean_squared_error(y_test, outputs), metrics.mean_absolute_error(y_test, outputs)
 
     def predict(self, X):
         with torch.no_grad():
