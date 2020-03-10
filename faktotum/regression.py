@@ -20,6 +20,7 @@ class Model(torch.nn.Module):
             torch.nn.Linear(input_size, 1000),
             torch.nn.ReLU(),
             torch.nn.Linear(1000, 500),
+            torch.nn.Dropout(),
             torch.nn.ReLU(),
             torch.nn.Linear(500, 1),
         )
