@@ -207,13 +207,13 @@ class EntityLinker:
             )
         return pd.DataFrame(stats).describe()
 
-    def _generate_data(self, dataset):
+    def _generate_data(self, dataset, mask_entity=True):
         X = list()
         y = list()
         data = list()
         for novel in dataset.values():
             data.extend(novel)
-        kb = self._build_knowledge_base(data, build_embeddings=True, threshold=2)
+        kb = self._build_knowledge_base(data, build_embeddings=True, threshold=2, mask_entity=mask_entity)
         for sentence in data:
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
@@ -225,7 +225,7 @@ class EntityLinker:
                         indices[token[2]].append(i)
                 mention_vectors = list(
                     self._vectorize(
-                        sentence, indices, return_id=True, mask_entity=False
+                        sentence, indices, return_id=True, mask_entity=mask_entity
                     )
                 )
 
