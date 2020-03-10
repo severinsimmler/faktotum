@@ -282,6 +282,8 @@ class EntityLinker:
                     )
 
                     for identifier, mention_vector in mention_vectors:
+                        max_score = 0.0
+                        best_candidate = None
                         for person, contexts in kb.items():
                             for context, candidate_vector in zip(
                                 contexts["CONTEXTS"], contexts["EMBEDDINGS"]
