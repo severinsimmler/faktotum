@@ -247,7 +247,7 @@ class EntityLinker:
                             )
                             X.append(instance)
                             y.append(0.0)
-        return np.array(X[0]), np.array(y)
+        return np.array(X), np.array(y)
 
     def regression(self, X_train=None, y_train=None, X_test=None, y_test=None):
         if not X_train:
