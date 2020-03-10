@@ -20,8 +20,7 @@ class Model(torch.nn.Module):
             torch.nn.Linear(input_size, 1000),
             torch.nn.ReLU(),
             torch.nn.Linear(1000, 500),
-            torch.nn.Dropout(),
-            torch.nn.Softmax(),
+            torch.nn.ReLU(),
             torch.nn.Linear(500, 1),
         )
 
@@ -39,7 +38,7 @@ class Regression:
         self._model = Model(X_train.shape[1])
         if torch.cuda.is_available():
             self._model.cuda()
-        criterion = torch.nn.CrossEntropyLoss()
+        criterion = torch.nn.MSELoss()
         optimizer = torch.optim.SGD(self._model.parameters(), lr=lr)
         early_stopping = EarlyStopping(patience=5, verbose=True)
 
