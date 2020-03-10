@@ -299,7 +299,7 @@ class EntityLinker:
                                             (mention_vector[0], candidate_vector[0])
                                         )
                                     )
-                                    instance = preprocessing.normalize(np.array([instance]))[0]
+                                    instance = preprocessing.normalize(np.array([instance]))
                                     score = model.predict(instance)[0]
                                     if score > max_score:
                                         max_score = score
