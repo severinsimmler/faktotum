@@ -156,7 +156,7 @@ class EntityLinker:
             kb = self.organizations
         else:
             kb = self.humans
-        for key, value in tqdm.tqdm(kb.items()):
+        for key, value in kb.items():
             for context in value["MENTIONS"]:
                 score = self._string_similarity(mention, context.lower())
                 if score >= self._string_similarity_threshold:
