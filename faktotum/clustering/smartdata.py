@@ -25,7 +25,6 @@ def load_data(all_=True):
         files = [
             Path(data_folder, "test.txt"),
             Path(data_folder, "dev.txt"),
-            Path(package_folder, "data", "wikidata.txt"),
         ]
     for file_ in files:
         text = file_.read_text(encoding="utf-8")
