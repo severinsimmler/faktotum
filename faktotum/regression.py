@@ -1,5 +1,5 @@
 import torch
-from sklearn import metrics, model_selection
+from sklearn import metrics, preprocessing
 from torch.autograd import Variable
 
 from faktotum.utils import EarlyStopping
@@ -42,7 +42,7 @@ class Regression:
         optimizer = torch.optim.SGD(self._model.parameters(), lr=lr)
         early_stopping = EarlyStopping(patience=5, verbose=True)
 
-        X_train, y_train, X_val, y_val = model_selection.train_test_split(X_train, y_train, test_size=0.1)
+        X_train = preprocessing.normalize(X_train)
 
         for epoch in range(epochs):
             inputs = Variable(torch.from_numpy(X_train)).float()
