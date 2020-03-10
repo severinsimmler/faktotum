@@ -249,8 +249,8 @@ class EntityLinker:
                             y.append(0.0)
         return np.array(X), np.array(y)
 
-    def regression(self, X_train=None, y_train=None, X_test=None, y_test=None):
-        if not X_train:
+    def regression(self, X_train=None, y_train=None, X_test=None, y_test=None, generate_data=False):
+        if generate_data:
             X_train, y_train = self._generate_data(self.train)
             X_test, y_test = self._generate_data(self.test)
         model = Regression()
