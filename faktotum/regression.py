@@ -19,9 +19,9 @@ class Model(torch.nn.Module):
         self.features = torch.nn.Sequential(
             torch.nn.Linear(input_size, 1000),
             torch.nn.ReLU(),
-            torch.nn.Conv1d(1000, 500, 1),
+            torch.nn.Linear(1000, 500),
             torch.nn.Dropout(),
-            torch.nn.ReLU(),
+            torch.nn.Softmax(),
             torch.nn.Linear(500, 1),
         )
 
