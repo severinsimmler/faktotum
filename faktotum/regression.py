@@ -9,7 +9,7 @@ class Model(torch.nn.Module):
     def __init__(self, input_size):
         super(Model, self).__init__()
         self.features = nn.Sequential(
-            torch.nn.Linear(input_size, 5000)
+            torch.nn.Linear(input_size, 5000),
             torch.nn.ReLU(),
             torch.nn.Linear(5000, 4000),
             torch.nn.ReLU(),
