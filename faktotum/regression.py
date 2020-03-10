@@ -1,6 +1,7 @@
 import torch
 from sklearn import metrics
 from torch.autograd import Variable
+import torch.nn.functional as F
 
 from faktotum.utils import EarlyStopping
 
@@ -9,10 +10,15 @@ class Model(torch.nn.Module):
     def __init__(self, input_size):
         super(Model, self).__init__()
         output_size = 1
-        self.linear = torch.nn.Linear(input_size, output_size)
+        self.hidden1 = torch.nn.Linear(input_size, 1000)
+        self.hidden2 = torch.nn.Linear(1000, 500)
+        self.predict = torch.nn.Linear(500, output_size)   
 
-    def forward(self, X):
-        return self.linear(X)
+    def forward(self, x):
+        x = F.relu(self.hidden1(x))     
+        x = F.relu(self.hidden2(x))
+        x = self.predict(x)            
+        return x
 
 
 class Regression:
