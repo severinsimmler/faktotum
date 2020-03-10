@@ -81,6 +81,7 @@ class Regression:
         torch.save(self._model.state_dict(), "final-model.pt")
 
     def evaluate(self, X_test, y_test):
+        X_test = preprocessing.normalize(X_test)
         with torch.no_grad():
             if torch.cuda.is_available():
                 inputs = Variable(torch.from_numpy(X_test).cuda()).float()
