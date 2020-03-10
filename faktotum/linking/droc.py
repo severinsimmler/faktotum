@@ -307,8 +307,9 @@ class EntityLinker:
                             tp += 1
                         else:
                             fp += 1
-
-        stats.append(
-            {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
-        )
+            result = {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+            print(result)
+            stats.append(
+                result
+            )
         return pd.DataFrame(stats).describe()

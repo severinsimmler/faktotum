@@ -1,8 +1,16 @@
 import torch
-from sklearn import metrics
+from sklearn import metrics, model_selection
 from torch.autograd import Variable
 
 from faktotum.utils import EarlyStopping
+
+"""
+    (word_reprojection_map): Linear(in_features=4396, out_features=4396, bias=True)
+    (rnn): GRU(4396, 512)
+    (dropout): Dropout(p=0.5, inplace=False)
+  )
+  (decoder): Linear(in_features=512, out_features=2, bias=True)
+"""
 
 
 class Model(torch.nn.Module):
@@ -33,6 +41,8 @@ class Regression:
         criterion = torch.nn.MSELoss()
         optimizer = torch.optim.SGD(self._model.parameters(), lr=lr)
         early_stopping = EarlyStopping(patience=5, verbose=True)
+
+        X_train, y_train, X_val, y_val = model_selection.train_test_split(X_train, y_train, test_size=0.1)
 
         for epoch in range(epochs):
             inputs = Variable(torch.from_numpy(X_train)).float()
