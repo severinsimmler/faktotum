@@ -24,7 +24,7 @@ EMBEDDING = BertEmbeddings(
 
 
 class EntityLinker:
-    _string_similarity_threshold = 0.689922
+    _string_similarity_threshold = 0.942387
 
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
