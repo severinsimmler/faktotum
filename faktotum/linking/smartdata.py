@@ -16,6 +16,7 @@ from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 import difflib
 from faktotum import utils
+import statistics
 from strsimpy.jaro_winkler import JaroWinkler
 
 JARO_WINKLER = JaroWinkler()
@@ -25,7 +26,7 @@ EMBEDDING = BertEmbeddings(
 
 
 class EntityLinker:
-    MAX_CANDIDATES = 0  # TODO
+    SIMILARITY_THRESHOLD = 0.942387
 
     def __init__(self, kb_dir: str):
         module_folder = Path(__file__).resolve().parent.parent
@@ -151,7 +152,7 @@ class EntityLinker:
         return JARO_WINKLER.similarity(a, b)
 
     def _get_candidates(self, mention, is_org):
-        candidates = dict()
+        candidates = set()
         mention = mention.lower()
         if is_org:
             kb = self.organizations
@@ -160,17 +161,14 @@ class EntityLinker:
         for key, value in kb.items():
             for context in value["MENTIONS"]:
                 score = self._string_similarity(mention, context.lower())
-                if key not in candidates:
-                    candidates[key] = score
-                else:
-                    if score > candidates[key]:
-                        candidates[key] = score
-        c = Counter(candidates)
-        return [x[0] for x in c.most_common(self.MAX_CANDIDATES)]
+                if score >= self.SIMILARITY_THRESHOLD:
+                    candidates.add(key)
+        return list(candidates)
 
     def similarities(self, mask_entity=False):
         tp = 0
         fp = 0
+        num_candidates = list()
         for sentence in tqdm.tqdm(self.test):
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
@@ -197,7 +195,10 @@ class EntityLinker:
                         is_org = True
                     else:
                         is_org = False
-                    for candidate in self._get_candidates(mention, is_org):
+                    candidates = self._get_candidates(mention, is_org)
+                    num_candidates = len(candidates)
+                    print("Candidates:", len(candidates))
+                    for candidate in candidates:
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
                                 t = list(utils.tokenize(context))
@@ -233,6 +234,7 @@ class EntityLinker:
                     else:
                         fp += 1
 
+        print("Average number of candidates:", statistics.mean(num_candidates))
         return {
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
