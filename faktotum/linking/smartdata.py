@@ -196,7 +196,7 @@ class EntityLinker:
                     else:
                         is_org = False
                     candidates = self._get_candidates(mention, is_org)
-                    num_candidates = len(candidates)
+                    num_candidates.append(len(candidates))
                     print("Candidates:", len(candidates))
                     for candidate in candidates:
                         for context in self.kb[candidate]["MENTIONS"]:
