@@ -21,7 +21,7 @@ from strsimpy.jaro_winkler import JaroWinkler
 
 JARO_WINKLER = JaroWinkler()
 EMBEDDING = BertEmbeddings(
-    "/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata"
+    "/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata-all-masked"
 )
 
 
@@ -238,7 +238,7 @@ class EntityLinker:
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
             "num_candidates": statistics.mean(num_candidates),
-            "embedding": "zufällig-masked"
+            "embedding": "entity-embeddings-smartdata-all-masked"
         }
 
     @staticmethod
