@@ -74,7 +74,7 @@ def normalize_bert_dataset(dataset, model_name_or_path, max_len=128):
 
 
 class EarlyStopping:
-    def __init__(self, patience=7, verbose=False, delta=0):
+    def __init__(self, patience=10, verbose=False, delta=0):
         self.patience = patience
         self.verbose = verbose
         self.counter = 0

@@ -31,7 +31,7 @@ class Regression:
             self._model.cuda()
         criterion = torch.nn.MSELoss()
         optimizer = torch.optim.SGD(self._model.parameters(), lr=lr)
-        early_stopping = EarlyStopping(patience=7, verbose=True)
+        early_stopping = EarlyStopping(patience=10, verbose=True)
 
         for epoch in range(epochs):
             inputs = Variable(torch.from_numpy(X_train)).float()

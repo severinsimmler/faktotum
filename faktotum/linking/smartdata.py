@@ -413,7 +413,7 @@ class EntityLinker:
                                         (mention_vector[0], candidate_vector[0])
                                     )
                                 )
-                            score = model.predict(instance)[0]
+                            score = model.predict(np.array([instance]))[0]
                             print(score)
                             if score > max_score:
                                 max_score = score
