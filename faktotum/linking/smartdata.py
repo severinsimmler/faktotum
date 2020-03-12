@@ -241,7 +241,7 @@ class EntityLinker:
             "embedding": "language-models/presse/multi"
         }
 
-        def _generate_data(self, data, mask_entity=True):
+    def _generate_data(self, data, mask_entity=True):
         X = list()
         y = list()
         for sentence in data:
