@@ -6,6 +6,14 @@ import torch.nn.functional as F
 from faktotum.utils import EarlyStopping
 
 
+"""
+    (word_reprojection_map): Linear(in_features=4396, out_features=4396, bias=True)
+    (rnn): GRU(4396, 512)
+    (dropout): Dropout(p=0.5, inplace=False)
+  )
+  (decoder): Linear(in_features=512, out_features=2, bias=True)
+"""
+
 class Model(torch.nn.Module):
     def __init__(self, input_size):
         super(Model, self).__init__()

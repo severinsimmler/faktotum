@@ -4,14 +4,6 @@ from torch.autograd import Variable
 
 from faktotum.utils import EarlyStopping
 
-"""
-    (word_reprojection_map): Linear(in_features=4396, out_features=4396, bias=True)
-    (rnn): GRU(4396, 512)
-    (dropout): Dropout(p=0.5, inplace=False)
-  )
-  (decoder): Linear(in_features=512, out_features=2, bias=True)
-"""
-
 
 class Model(torch.nn.Module):
     def __init__(self, input_size):
@@ -31,9 +23,6 @@ class Model(torch.nn.Module):
 
 
 class Regression:
-    # todo: normalization
-    # kleinere learning rate 1e-3
-    #  If your target is missing the feature dimension ([batch_size] instead of [batch_size, 1]), an unwanted broadcast might be applied.
     def fit(
         self, X_train, y_train, epochs=1000, lr: float = 1e-3, batch_size: int = 256
     ):
@@ -42,9 +31,7 @@ class Regression:
             self._model.cuda()
         criterion = torch.nn.MSELoss()
         optimizer = torch.optim.SGD(self._model.parameters(), lr=lr)
-        early_stopping = EarlyStopping(patience=5, verbose=True)
-
-        X_train = preprocessing.normalize(X_train)
+        early_stopping = EarlyStopping(patience=7, verbose=True)
 
         for epoch in range(epochs):
             inputs = Variable(torch.from_numpy(X_train)).float()
@@ -102,3 +89,4 @@ class Regression:
             else:
                 inputs = Variable(torch.from_numpy(X)).float()
             return self._model(inputs).cpu().data.numpy().reshape(1, -1)[0]
+5
