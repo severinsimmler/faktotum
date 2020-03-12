@@ -412,7 +412,7 @@ class EntityLinker:
                                         np.concatenate(
                                             (mention_vector[0], candidate_vector[0])
                                         )
-                                    )
+                                    ).reshape(1, -1)
                             print(instance.shape)
                             print(instance)
                             score = model.predict(np.array([instance]))[0]
