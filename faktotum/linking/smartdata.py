@@ -425,7 +425,7 @@ class EntityLinker:
                 "accuracy": self.accuracy(tp, fp),
                 "precision": self.precision(tp, fp),
             }
-        return result
+        return pd.DataFrame(result)
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:
