@@ -408,13 +408,10 @@ class EntityLinker:
                             for i in indices[1:]:
                                 vector = vector + sentence_[i].get_embedding().numpy()
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
-                            instance = np.array(
-                                    np.concatenate(
+                            instance = np.concatenate(
                                         (mention_vector[0], candidate_vector[0])
                                     )
-                                )
-                            print(instance)
-                            score = model.predict(instance)[0]
+                            score = model.predict([instance])[0]
                             print(score)
                             if score > max_score:
                                 max_score = score
