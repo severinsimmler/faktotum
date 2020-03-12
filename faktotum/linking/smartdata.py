@@ -16,9 +16,12 @@ from flair.data import Sentence
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 import difflib
+import random
 from faktotum import utils
 import statistics
 from strsimpy.jaro_winkler import JaroWinkler
+
+random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
 EMBEDDING = BertEmbeddings(
