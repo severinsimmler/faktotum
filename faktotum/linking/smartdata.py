@@ -20,6 +20,7 @@ import random
 from faktotum import utils
 import statistics
 from strsimpy.jaro_winkler import JaroWinkler
+from faktotum import utils
 
 random.seed(23)
 
