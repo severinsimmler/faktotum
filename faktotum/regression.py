@@ -88,5 +88,5 @@ class Regression:
                 inputs = Variable(torch.from_numpy(X).cuda()).float()
             else:
                 inputs = Variable(torch.from_numpy(X)).float()
+            self._model.eval()
             return self._model(inputs).cpu().data.numpy().reshape(1, -1)[0]
-5
