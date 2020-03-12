@@ -414,7 +414,7 @@ class EntityLinker:
                                     )
                                 )
                             print(instance)
-                            score = model.predict(instance))[0]
+                            score = model.predict(instance)[0]
                             print(score)
                             if score > max_score:
                                 max_score = score
