@@ -15,6 +15,7 @@ from flair.embeddings import BertEmbeddings
 from flair.data import Sentence
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
+from faktotum.regression import Regression
 import difflib
 import random
 from faktotum import utils
