@@ -353,62 +353,81 @@ class EntityLinker:
         print("MAE", test_mae_score)
 
         # EVALUATION
-        stats = list()
-        for novel in tqdm.tqdm(self.test.values()):
-            tp = 0
-            fp = 0
-            fn = 0
-            kb = self._build_knowledge_base(
-                novel, mask_entity=mask_entity, build_embeddings=True
-            )
-            for sentence in novel:
-                is_mentioned = [token for token in sentence if token[2] != "-"]
-                if not is_mentioned:
-                    continue
-                elif is_mentioned:
-                    indices = defaultdict(list)
-                    for i, token in enumerate(sentence):
-                        if token[2] != "-":
-                            indices[token[2]].append(i)
-                    mention_vectors = list(
-                        self._vectorize(
-                            sentence, indices, return_id=True, mask_entity=mask_entity
-                        )
+        tp = 0
+        fp = 0
+        fn = 0
+        for sentence in tqdm.tqdm(self.test):
+            is_mentioned = [token for token in sentence if token[2] != "-"]
+            if not is_mentioned:
+                continue
+            elif is_mentioned:
+                indices = defaultdict(list)
+                for i, token in enumerate(sentence):
+                    if token[2] != "-":
+                        indices[token[2]].append(i)
+                mention_vectors = list(
+                    self._vectorize(
+                        sentence,
+                        indices,
+                        return_id=True,
+                        return_type=True,
+                        return_str=True,
+                        mask_entity=mask_entity,
                     )
-
-                    for identifier, mention_vector in mention_vectors:
-                        max_score = 0.0
-                        best_candidate = None
-                        for person, contexts in kb.items():
-                            for context, candidate_vector in zip(
-                                contexts["CONTEXTS"], contexts["EMBEDDINGS"]
-                            ):
-                                if context != sentence:
-                                    instance = np.array(
-                                        np.concatenate(
-                                            (mention_vector[0], candidate_vector[0])
+                )
+                for identifier, type_, mention, mention_vector in mention_vectors:
+                    max_score = 0.0
+                    best_candidate = None
+                    if type_ == "ORG":
+                        is_org = True
+                    else:
+                        is_org = False
+                    candidates = self._get_candidates(mention, is_org)
+                    num_candidates.append(len(candidates))
+                    print("Candidates:", len(candidates))
+                    for candidate in candidates:
+                        for context in self.kb[candidate]["MENTIONS"]:
+                            t = list(utils.tokenize(context))
+                            if mask_entity:
+                                t = ["[MASK]" for _ in t]
+                            if self.kb[candidate].get("DESCRIPTION"):
+                                t.extend(
+                                    list(
+                                        utils.tokenize(
+                                            self.kb[candidate].get("DESCRIPTION")
                                         )
                                     )
-                                    instance = preprocessing.normalize(
-                                        np.array([instance])
-                                    )
-                                    score = model.predict(instance)[0]
-                                    print(score)
-                                    if score > max_score:
-                                        max_score = score
-                                        best_candidate = person
+                                )
+                                text = " ".join(t)
+                            else:
+                                text = " ".join(t)
 
-                        if best_candidate == identifier:
-                            tp += 1
-                        else:
-                            fp += 1
-            result = {
+                            indices = list(range(len(list(utils.tokenize(context)))))
+                            sentence_ = Sentence(text, use_tokenizer=False)
+                            EMBEDDING.embed(sentence_)
+                            vector = sentence_[indices[0]].get_embedding().numpy()
+                            for i in indices[1:]:
+                                vector = vector + sentence_[i].get_embedding().numpy()
+                            candidate_vector = (vector / len(indices)).reshape(1, -1)
+                            instance = np.array(
+                                    np.concatenate(
+                                        (mention_vector[0], candidate_vector[0])
+                                    )
+                                )
+                            score = model.predict(instance)[0]
+                            print(score)
+                            if score > max_score:
+                                max_score = score
+                                best_candidate = person
+                    if best_candidate == identifier:
+                        tp += 1
+                    else:
+                        fp += 1
+        result = {
                 "accuracy": self.accuracy(tp, fp),
                 "precision": self.precision(tp, fp),
             }
-            print(result)
-            stats.append(result)
-        return pd.DataFrame(stats).describe()
+        return result
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:
