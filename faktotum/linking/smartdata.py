@@ -241,10 +241,10 @@ class EntityLinker:
             "embedding": "language-models/presse/multi"
         }
 
-    def _generate_data(self, data, mask_entity=True):
+    def _generate_data(self, data, mask_entity=False):
         X = list()
         y = list()
-        for sentence in data:
+        for sentence in tqdm.tqdm(data):
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
                 continue
@@ -276,7 +276,7 @@ class EntityLinker:
                                 t.extend(
                                     list(
                                         utils.tokenize(
-                                            self.kb[candidate].get("DESCRIPTION")
+                                            self.kb[identifier].get("DESCRIPTION")
                                         )
                                     )
                                 )
