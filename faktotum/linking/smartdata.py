@@ -413,13 +413,10 @@ class EntityLinker:
                                             (mention_vector[0], candidate_vector[0])
                                         )
                                     ).reshape(1, -1)
-                            print(instance.shape)
-                            print(instance)
                             score = model.predict(instance)[0]
-                            print(score)
                             if score > max_score:
                                 max_score = score
-                                best_candidate = person
+                                best_candidate = candidate
                     if best_candidate == identifier:
                         tp += 1
                     else:
