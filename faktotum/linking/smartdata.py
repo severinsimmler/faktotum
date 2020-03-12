@@ -9,6 +9,7 @@ import json
 from collections import Counter
 import re
 import pandas as pd
+import numpy as np
 import tqdm
 from flair.embeddings import BertEmbeddings
 from flair.data import Sentence
