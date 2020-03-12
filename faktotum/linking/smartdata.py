@@ -21,7 +21,7 @@ from strsimpy.jaro_winkler import JaroWinkler
 
 JARO_WINKLER = JaroWinkler()
 EMBEDDING = BertEmbeddings(
-    "/mnt/data/users/simmler/language-models/presse/multi"
+    "/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata"
 )
 
 
