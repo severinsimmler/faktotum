@@ -34,10 +34,10 @@ def ward(model_directory):
     data = load_data(all_=False)
     embeddings = Embeddings(model_directory, "gutenberg", load="entity")
     scores = list()
-    for novel in data.values():
-        X, y = embeddings.vectorize(novel, embeddings.entity_bert)
+    for i, novel in enumerate(data.values()):
+        X, y, strs = embeddings.vectorize(novel, embeddings.entity_bert, return_str=True)
         clustering = Clustering("ward", X, y)
-        score = clustering.evaluate()
+        score = clustering.evaluate(i=i, strs=strs)
         scores.append(score)
         print(score)
     scores = pd.DataFrame(scores)

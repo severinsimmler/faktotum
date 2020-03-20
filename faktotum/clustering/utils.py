@@ -97,9 +97,10 @@ class Embeddings:
             logging.info(f"Loading {path}...")
             self.entity_bert = BertEmbeddings(path)
 
-    def vectorize(self, sentences, model, add_adj=False):
+    def vectorize(self, sentences, model, add_adj=False, return_str=False):
         X = list()
         y = list()
+        strs = list()
         if isinstance(model, BertEmbeddings):
             _vectorize = self._bert_vectorization
         else:
@@ -107,10 +108,17 @@ class Embeddings:
         for sentence in sentences:
             persons = list(self._group_persons(sentence))
             for identifier, indices in persons:
+                person = list()
+                for index in indices:
+                    person.append(sentence[index])
+                strs.append(person)
                 vector = _vectorize(sentence, indices, model, add_adj)
                 X.append(vector)
                 y.append(identifier)
-        return np.array(X), np.array(y)
+        if return_str:
+            return np.array(X), np.array(y), strs
+        else:
+            return np.array(X), np.array(y)
 
     def _classic_vectorization(self, sentence, token_indices, model, add_adj=False):
         self._add_tokens(sentence, token_indices, add_adj)
@@ -206,7 +214,7 @@ class Clustering:
             "ward": AgglomerativeClustering,
         }
 
-    def evaluate(self):
+    def evaluate(self, i=None, strs=None):
         y_ = self.model.fit_predict(self.X)
         homogeneity = metrics.homogeneity_score(self.y, y_)
         completeness = metrics.completeness_score(self.y, y_)
@@ -214,6 +222,10 @@ class Clustering:
         ari = metrics.adjusted_rand_score(self.y, y_)
         ami = metrics.adjusted_mutual_info_score(self.y, y_)
         fmi = metrics.fowlkes_mallows_score(self.y, y_)
+        if strs:
+            with open(f"ward-droc-{i}.json", "w", encoding="utf-8") as f:
+                data = {"gold": list(self.y), "pred": y_, "str": strs}
+                json.dump(data, f, ensure_ascii=False, indent=4)
         return {
             "Homogeneity": round(homogeneity, 2),
             "Completeness": round(completeness, 2),
