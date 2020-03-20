@@ -225,7 +225,7 @@ class Clustering:
         fmi = metrics.fowlkes_mallows_score(self.y, y_)
         if strs:
             with open(f"ward-droc-{i}.json", "w", encoding="utf-8") as f:
-                data = {"gold": list(self.y), "pred": y_, "str": strs}
+                data = {"gold": list(self.y), "pred": list(y_), "str": strs}
                 json.dump(data, f, ensure_ascii=False, indent=4)
         return {
             "Homogeneity": round(homogeneity, 2),
