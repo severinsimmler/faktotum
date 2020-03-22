@@ -113,9 +113,8 @@ class Embeddings:
                 for index in indices:
                     person.append(sentence[index])
                 strs.append({"sentence": sentence, "index": index})
-                vector = _vectorize(sentence, indices, model, add_adj)
+                vector = _vectorize(sentence, indices, model, add_adj).reshape(1, -1)
                 X.append(vector)
-                print(identifier, vector)
                 y.append(identifier)
         if return_str:
             return np.array(X), np.array(y), strs
