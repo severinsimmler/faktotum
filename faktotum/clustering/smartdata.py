@@ -12,18 +12,18 @@ logging.basicConfig(format="%(message)s", level=logging.INFO)
 def load_data(all_=True):
     sentence = list()
     package_folder = Path(__file__).parent.parent
-    data_folder = Path(package_folder, "data", "smartdata")
+    data_folder = Path(package_folder, "data", "smartdata", "linking")
     data = dict()
     if all_:
         files = [
             Path(data_folder, "train.txt"),
-            Path(data_folder, "dev.txt"),
             Path(data_folder, "test.txt"),
+            Path(package_folder, "data", "wikidata.txt"),
         ]
     else:
         files = [
             Path(data_folder, "test.txt"),
-            Path(data_folder, "dev.txt"),
+            Path(package_folder, "data", "wikidata-test.txt"),
         ]
     for file_ in files:
         text = file_.read_text(encoding="utf-8")
@@ -50,6 +50,8 @@ def ward(model_directory):
         ("random", embeddings.entity_bert),
     ]:
         X, y, strs = embeddings.vectorize(data, e, return_str=True)
+        print(X)
+        print(X.shape)
         clustering = Clustering("ward", X, y)
         score = clustering.evaluate(strs=strs, i=name)
         print(name)

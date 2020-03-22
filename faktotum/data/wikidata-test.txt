@@ -1,0 +1,1728 @@
+Ferratum O Q11859513 NE
+Unternehmen O - NN
+in O - APPR
+Finnland O - NE
+
+Ralf O Q64764848 NE
+Hirschberger O Q64764848 NE
+deutscher O - ADJA
+Fotograf O - NN
+
+YPG O Q277036 NE
+Bewaffnete O - ADJA
+kurdische O - ADJA
+Miliz O - NN
+in O - APPR
+Syrien O - NE
+
+twitter.com O Q918 NE
+Mikrobloggingdienst O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Twitter O - NE
+Inc O - FM
+. O - $.
+
+Geschichte O Q1478441 NN
+des O Q1478441 ART
+Fußballverbands O Q1478441 NN
+Niederrhein O Q1478441 NE
+Der O - ART
+FVN O - NE
+wurde O - VAFIN
+im O - APPRART
+Januar O - NN
+1947 O - CARD
+gegründet O - VVPP
+und O - KON
+gehört O - VVFIN
+zu O - APPR
+den O - ART
+21 O - CARD
+Landesverbänden O - NN
+des O - ART
+DFB O - NE
+sowie O - KON
+zum O - APPRART
+Westdeutschen O - ADJA
+Fußballverband O - NN
+. O - $.
+
+Jonas O Q822781 NE
+Hofmann O Q822781 NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Energiekontor O Q1341306 NN
+AG O Q1341306 NN
+deutsches O - ADJA
+Unternehmen O - NN
+im O - APPRART
+Bereich O - NN
+Erneuerbare O - ADJA
+Energien O - NN
+
+Heribert O Q895570 NE
+Bruchhagen O Q895570 NE
+deutscher O - ADJA
+Fußballspieler O - NN
+und O - KON
+Funktionär O - NN
+
+Bayern O Q15789 NE
+Sportverein O - NN
+aus O - APPR
+München O - NE
+, O - $,
+Bayern O - NE
+
+HR1 O Q1632263 NE
+deutscher O - ADJA
+Hörfunksender O - NN
+
+Kaiser O Q897187 NE
+’s O Q897187 NE
+Tengelmann O Q897187 NE
+ehemalige O - ADJA
+deutsche O - ADJA
+Supermarktkette O - NN
+, O - $,
+übernommen O - VVPP
+von O - APPR
+Edeka O - NE
+und O - KON
+von O - APPR
+REWE O - NE
+
+George O Q23844 NE
+Timothy O Q23844 NE
+Clooney O Q23844 NE
+US O - NE
+-amerikanischer O - ADJA
+Schauspieler O - NN
+und O - KON
+Regisseur O - NN
+
+Thomas O Q43666 NE
+Müller O Q43666 NE
+Deutscher O - ADJA
+Fußballspieler O - NN
+
+Madonna O Q1744 NE
+US O - FM
+-amerikanische O - ADJA
+Sängerin O - NN
+, O - $,
+Autorin O - NN
+, O - $,
+Model O - NN
+, O - $,
+Schauspielerin O - NN
+, O - $,
+Produzentin O - NN
+und O - KON
+Stilikone O - NN
+
+Solar O Q7555824 FM
+City O Q7555824 FM
+Außerdem O - PROAV
+liefert O - VVFIN
+es O - PPER
+Strom O - NN
+und O - KON
+plant O - VVFIN
+, O - $,
+installiert O - VVPP
+und O - KON
+betreibt O - VVFIN
+Ladestationen O - NN
+für O - APPR
+Elektroautos O - NN
+. O - $.
+
+thyssenkrupp O Q137910 NE
+AG O Q137910 NN
+größtes O - ADJA
+deutsches O - ADJA
+Stahl O - NN
+- O - $(
+und O - KON
+Technologieunternehmen O - NN
+
+Solar O Q7555940 FM
+Power O Q7555940 FM
+International O Q7555940 FM
+Internationale O - ADJA
+Konferenz O - NN
+. O - $.
+
+Smart O Q186012 FM
+Digital O Q186012 FM
+Assistant O Q186012 FM
+taiwanesischer O - ADJA
+Elektronikgeräte O - NN
+-Hersteller O - TRUNC
+
+Aufklärungsgeschwader O Q759780 NN
+51 O Q759780 CARD
+ein O - ART
+Aufklärungsgeschwader O - NN
+der O - ART
+Bundeswehr O - NN
+. O - $.
+
+Holger O Q3139325 NE
+Stahlknecht O Q3139325 NE
+deutscher O - ADJA
+Politiker O - NN
+, O - $,
+Md O - NE
+L O - NE
+, O - $,
+Landesminister O - NN
+in O - APPR
+Sachsen O - NE
+-Anhalt O - TRUNC
+
+Zaman O Q145400 NE
+türkische O - ADJA
+Tageszeitung O - NN
+
+From O Q2414469 FM
+Software O Q2414469 NN
+japanischer O - ADJA
+Publisher O - NN
+für O - APPR
+Computerspiele O - NN
+
+Cubana O Q849910 NE
+de O Q849910 FM
+Aviación O Q849910 NE
+Kubanische O - ADJA
+Fluggesellschaft O - NN
+
+US O Q22686 FM
+-Präsident O Q22686 TRUNC
+Donald O Q22686 NE
+John O Q22686 NE
+Trump O Q22686 NE
+Präsident O - NN
+der O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+The O Q1706651 FM
+Miami O Q1706651 NE
+Herald O Q1706651 NE
+amerikanische O - ADJA
+Zeitung O - NN
+
+BSky O Q918390 NE
+B O Q918390 NN
+Britischer O - ADJA
+Medienkonzern O - NN
+
+Escada O Q600986 NE
+Mode O - NN
+-Unternehmen O - TRUNC
+
+Javier O Q410758 NE
+Hernández O Q410758 NE
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+Junge O Q497594 ADJA
+Union O Q497594 NN
+Jugendorganisation O - NN
+von O - APPR
+CDU O - NE
+und O - KON
+CSU O - NE
+
+EU O Q458 NE
+europäischer O - ADJA
+Staatenverbund O - NN
+
+dpa O Q312653 NE
+größte O - ADJA
+Nachrichtenagentur O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Borussia O Q41420 NE
+09 O Q41420 CARD
+Fußballverein O - NN
+aus O - APPR
+Dortmund O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+University O Q3551328 FM
+of O Q3551328 FM
+Talca O Q3551328 NE
+Universität O - NN
+in O - APPR
+Chile O - NN
+
+Lufthansa O Q9325 NE
+Group O Q9325 NE
+deutscher O - ADJA
+Luftfahrtkonzern O - NN
+
+VWD O Q2514979 NE
+ein O - ART
+europäischer O - ADJA
+Dienstleister O - NN
+für O - APPR
+Finanzinformationen O - NN
+. O - $.
+
+Brian O Q12572999 NE
+Krzanich O Q12572999 NE
+Amerikanischer O - ADJA
+Chemiker O - NN
+, O - $,
+Ingenieur O - NN
+, O - $,
+Unternehmer O - NN
+und O - KON
+Geschäftsmann O - NN
+
+Boulez O Q156193 NE
+französischer O - ADJA
+Komponist O - NN
+, O - $,
+Dirigent O - NN
+und O - KON
+Musiktheoretiker O - NN
+
+Neuer O Q107365 ADJA
+, O Q107365 $,
+Manuel O Q107365 NE
+deutscher O - ADJA
+Fußballtorhüter O - NN
+
+José O Q485165 NE
+Carreras O Q485165 NE
+Spanischer O - ADJA
+Tenor O - NN
+
+Yahoo.com O Q37093 NE
+Internetunternehmen O - NN
+aus O - APPR
+Kalifornien O - NE
+
+Deutsche O Q1203625 ADJA
+Oracle O Q1203625 NE
+-Anwendergruppe O Q1203625 TRUNC
+eine O - PIS
+der O - ART
+wichtigsten O - ADJA
+unabhängigen O - ADJA
+Informationsplattformen O - NN
+zu O - APPR
+Oracle O - NE
+-nahen O - ADJA
+Themen O - NN
+im O - APPRART
+deutschsprachigen O - ADJA
+Raum O - NN
+. O - $.
+
+Vf O Q692586 NE
+R O Q692586 NE
+Aalen O Q692586 NE
+deutscher O - ADJA
+Fußballverein O - NN
+
+Christian O Q22279773 NE
+Pulisic O Q22279773 NE
+US O - FM
+-Amerikanischer O - ADJA
+Fußballspieler O - NN
+
+Heidekreuzbahn O Q1354909 NN
+als O - KOKOM
+Teil O - NN
+der O - ART
+Netinera O - NE
+-Gruppe O - TRUNC
+ein O - ART
+nichtbundeseigenes O - ADJA
+Eisenbahnverkehrsunternehmen O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Soltau O - NE
+. O - $.
+
+Statoil O Q4992912 NE
+Fuel O Q4992912 FM
+& O Q4992912 KON
+Retail O Q4992912 NE
+Norwegisches O - ADJA
+Energieeinzelhandelsunternehmen O - NN
+, O - $,
+das O - PRELS
+2010 O - CARD
+durch O - APPR
+die O - ART
+Abtrennung O - NN
+des O - ART
+Downstream O - NN
+-Geschäfts O - TRUNC
+von O - APPR
+Statoil O - NE
+ASA O - NE
+in O - APPR
+ein O - ART
+separates O - ADJA
+börsennotiertes O - ADJA
+Unternehmen O - NN
+gegründet O - VVPP
+wurde O - VAFIN
+. O - $.
+
+EQS O Q16978036 NE
+Group O Q16978036 FM
+AG O Q16978036 NN
+Wirtschaftsinformationsdienst O - NN
+, O - $,
+Ad O - FM
+-hoc O - FM
+-Dienstleister O - TRUNC
+
+AG O Q480675 NN
+Frankfurt O Q480675 NE
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+Holger O Q1624578 NE
+Münch O Q1624578 NE
+deutscher O - ADJA
+Präsident O - NN
+des O - ART
+Bundeskriminalamtes O - NN
+, O - $,
+ehemaliger O - ADJA
+Polizeipräsident O - NN
+Bremen O - NE
+und O - KON
+ehemaliger O - ADJA
+Direktor O - NN
+des O - ART
+Landeskriminalamts O - NN
+
+Kunis O Q37628 NE
+US O - NE
+-amerikanische O - ADJA
+Schauspielerin O - NN
+und O - KON
+Synchronsprecherin O - NN
+
+Franz O Q44054 NE
+Marc O Q44054 NE
+deutscher O - ADJA
+Maler O - NN
+
+Landesbetrieb O Q1548258 NN
+Straßenbau O Q1548258 NN
+Nordrhein O Q1548258 NE
+-Westfalen O Q1548258 NE
+als O - KOKOM
+Straßenbauverwaltung O - NN
+verantwortlich O - ADJD
+für O - APPR
+die O - ART
+Planung O - NN
+, O - $,
+den O - ART
+Bau O - NN
+und O - KON
+den O - ART
+Betrieb O - NN
+des O - ART
+überörtlichen O - ADJA
+Straßennetzes O - NN
+in O - APPR
+Nordrhein O - NE
+-Westfalen O - NE
+( O - $(
+NRW O - NE
+) O - $(
+und O - KON
+wurde O - VAFIN
+als O - KOKOM
+Landesbehörde O - NN
+zum O - APPRART
+1 O - CARD
+. O - $.
+
+facebook.com O Q355 NE
+soziales O - ADJA
+Netzwerk O - NN
+des O - ART
+US O - FM
+-amerikanischen O - ADJA
+Unternehmens O - NN
+Facebook O - NE
+Inc O - FM
+. O - $.
+
+Bundesliga O Q82595 NN
+höchste O - ADJA
+Spielklasse O - NN
+im O - APPRART
+deutschen O - ADJA
+Männerfußball O - NN
+
+Javier O Q165125 NE
+Hernandez O Q165125 NE
+mexikanischer O - ADJA
+Fußballspieler O - NN
+
+Freescale O Q863675 NE
+Semiconductor O Q863675 FM
+texanischer O - ADJA
+Halbleiterhersteller O - NN
+
+Brenntag O Q828445 NN
+ein O - ART
+Chemiedistributor O - NN
+
+Renzo O Q190148 NE
+Piano O Q190148 NE
+italienischer O - ADJA
+Architekt O - NN
+
+Jabo O Q1678269 NE
+G O Q1678269 NN
+33 O Q1678269 CARD
+ein O - ART
+fliegender O - ADJA
+Kampfverband O - NN
+der O - ART
+Luftwaffe O - NN
+der O - ART
+Bundeswehr O - NN
+, O - $,
+der O - PRELS
+mit O - APPR
+dem O - ART
+Waffensystem O - NN
+Panavia O - NE
+Tornado O - NE
+IDS O - NE
+ausgerüstet O - VVPP
+ist O - VAFIN
+. O - $.
+
+Hofreiter O Q103519 NN
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+Bündnis O - NN
+90/Die O - ADJA
+Grünen O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+
+Voltas O Q1742326 NE
+Hersteller O - NN
+von O - APPR
+Gabelstaplern O - NN
+, O - $,
+Lagertechnikgeräten O - NN
+und O - KON
+Flurförderzeugen O - NN
+
+Sports O Q7579661 FM
+Direct O Q7579661 FM
+Sportartikel O - NN
+- O - $(
+und O - KON
+Mode O - NN
+-Einzelhandelskette O - TRUNC
+
+Wa O Q166032 NE
+Po O Q166032 NE
+Tageszeitung O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Washington O - NE
+, O - $,
+D.C O - NE
+. O - $.
+
+Bundeswehr O Q56010 NN
+Streitkräfte O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+Giovanni O Q124138 NE
+Vincenzo O Q124138 NE
+Infantino O Q124138 NE
+Schweizer O - ADJA
+Fußballfunktionär O - NN
+
+UHD O Q25399479 NE
+Organisation O - NN
+
+TVR O Q17056328 NE
+News O Q17056328 FM
+eine O - ART
+inhabergeführte O - ADJA
+TV O - NN
+-Nachrichtenagentur O - TRUNC
+und O - KON
+Fernsehproduktionsfirma O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Hamburg O - NE
+. O - $.
+
+CES O Q646089 NN
+Messe O - NN
+für O - APPR
+Unterhaltungselektronik O - NN
+
+Amazon.com O Q3884 NE
+, O Q3884 $,
+Inc O Q3884 FM
+. O Q3884 $.
+US O - FM
+-amerikanisches O - ADJA
+E O - NN
+-Commerce O - FM
+-Versandhaus O - TRUNC
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Seattle O - NE
+, O - $,
+Washington O - NE
+
+MARS O Q64667160 NE
+Corporation O Q64667160 FM
+Entwickler O - NN
+von O - APPR
+Videospielen O - NN
+. O - $.
+
+TSV O Q479753 NE
+Uetersen O Q479753 NE
+deutscher O - ADJA
+Sportverein O - NN
+
+BMW O Q26678 NE
+AG O Q26678 NN
+deutscher O - ADJA
+Automobil O - NN
+- O - $(
+und O - KON
+Motorradhersteller O - NN
+
+Pierre O Q44977 NE
+-Emerick O Q44977 NE
+Aubameyang O Q44977 NE
+gabunischer O - ADJA
+Fußballspieler O - NN
+
+Klaus O Q18584620 NE
+Bouillon O Q18584620 NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+CDU O - NE
+) O - $(
+und O - KON
+Innenminister O - NN
+des O - ART
+Saarlandes O - NN
+
+Maple O Q22674632 NE
+Bank O Q22674632 NN
+ein O - ART
+deutsches O - ADJA
+Kreditinstitut O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+einer O - ART
+Niederlassung O - NN
+im O - APPRART
+kanadischen O - ADJA
+Toronto O - NE
+und O - KON
+im O - APPRART
+niederländischen O - ADJA
+Den O - NE
+Haag O - NE
+. O - $.
+
+SSV O Q701290 NE
+Ulm O Q701290 NE
+1846 O Q701290 CARD
+deutscher O - ADJA
+Sportverein O - NN
+
+Olaf O Q120630 NE
+Lies O Q120630 NE
+Deutscher O - ADJA
+Politiker O - NN
+( O - $(
+SPD O - NE
+) O - $(
+, O - $,
+Md O - NE
+L O - NE
+
+Ba O Q314211 NE
+Fin O Q314211 NE
+deutsche O - ADJA
+Bundesanstalt O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+und O - KON
+Bonn O - NE
+
+Börsen O Q855176 NN
+-Zeitung O Q855176 TRUNC
+Regelmäßig O - ADJD
+erscheinende O - ADJA
+Zeitung O - NN
+
+Hidetaka O Q11454590 NE
+Miyazaki O Q11454590 NE
+japanischer O - ADJA
+Spieleentwickler O - NN
+, O - $,
+Designer O - NN
+, O - $,
+Schriftsteller O - NN
+und O - KON
+Präsident O - NN
+von O - APPR
+From O - FM
+Software O - NN
+
+Boutros O Q1257 NE
+Boutros O Q1257 NE
+-Ghali O Q1257 NE
+ägyptischer O - ADJA
+Politiker O - NN
+und O - KON
+sechster O - ADJA
+Generalsekretär O - NN
+der O - ART
+Vereinten O - ADJA
+Nationen O - NN
+
+BNetz O Q269138 NE
+A O Q269138 NN
+deutsche O - ADJA
+Bundesbehörde O - NN
+
+Google O Q95 NE
+Inc O Q95 FM
+. O Q95 $.
+US O - FM
+-amerikanisches O - ADJA
+Technologieunternehmen O - NN
+mit O - APPR
+Hauptsitz O - NN
+in O - APPR
+Mountain O - NE
+View O - NE
+, O - $,
+Kalifornien O - NE
+
+UEFA O Q35572 NE
+europäischer O - ADJA
+Fußballverband O - NN
+
+The O Q9684 FM
+New O Q9684 FM
+York O Q9684 FM
+Times O Q9684 NE
+englischsprachige O - ADJA
+Tageszeitung O - NN
+aus O - APPR
+New O - NE
+York O - NE
+
+Christlich O Q49763 ADJD
+-Soziale O Q49763 ADJA
+Union O Q49763 NN
+in O Q49763 APPR
+Bayern O Q49763 NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Bayern O - NE
+
+La O Q20758202 FM
+Ge O Q20758202 NE
+So O Q20758202 NE
+Berliner O - ADJA
+Behörde O - NN
+
+DAX O Q155718 NE
+30 O Q155718 CARD
+Aktienindex O - NN
+der O - ART
+30 O - CARD
+größten O - ADJA
+börsennotierten O - ADJA
+deutschen O - ADJA
+Unternehmen O - NN
+
+Shaun O Q191104 NE
+Mark O Q191104 NE
+Bean O Q191104 NE
+britischer O - ADJA
+Schauspieler O - NN
+
+VALVe O Q193559 NE
+US O - FM
+-amerikanisches O - ADJA
+Entwicklungsstudio O - NN
+und O - KON
+Onlinedistributor O - NN
+für O - APPR
+Computerspiele O - NN
+
+Osman O Q16733889 NE
+Orsal O Q16733889 NE
+Fotojournalist O - NN
+bei O - APPR
+der O - ART
+internationalen O - ADJA
+Nachrichtenagentur O - NN
+Reuters O - NE
+. O - $.
+
+Daesh O Q2429253 NE
+dschihadistisch O - ADJD
+-salafistische O - ADJA
+Organisation O - NN
+, O - $,
+deren O - PRELAT
+Ziel O - NN
+die O - ART
+Errichtung O - NN
+eines O - ART
+weltweiten O - ADJA
+Kalifats O - NN
+ist O - VAFIN
+. O - $.
+
+Alstom O Q309084 NE
+Französischer O - ADJA
+Konzern O - NN
+im O - APPRART
+Energie O - NN
+- O - TRUNC
+und O - KON
+Transportbereich O - NN
+
+Sigmar O Q160902 NE
+Hartmut O Q160902 NE
+Gabriel O Q160902 NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+SPD O - NE
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+
+The O Q1056839 FM
+DIRECTV O Q1056839 NE
+Group O Q1056839 FM
+ein O - ART
+amerikanischer O - ADJA
+Fernsehsatellitenbetreiber O - NN
+und O - KON
+Programmanbieter O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+El O - NE
+Segundo O - NE
+. O - $.
+
+Deutscher O Q696935 ADJA
+Akademischer O Q696935 ADJA
+Austauschdienst O Q696935 NN
+e O Q696935 FM
+. O Q696935 $.
+V O Q696935 CARD
+. O Q696935 $.
+Gemeinschaftseinrichtung O - NN
+der O - ART
+deutschen O - ADJA
+Hochschulen O - NN
+und O - KON
+Studierendenschaften O - NN
+zur O - APPRART
+Pflege O - NN
+ihrer O - PPOSAT
+internationalen O - ADJA
+Beziehungen O - NN
+
+Thorsten O Q2429303 NE
+Zacharias O Q2429303 NE
+deutscher O - ADJA
+Handball O - NN
+-Schiedsrichter O - TRUNC
+
+Kimberly O Q186304 NE
+Noel O Q186304 NE
+Kardashian O Q186304 NE
+West O Q186304 NE
+US O - FM
+-amerikanische O - ADJA
+Reality O - FM
+-TV O - FM
+-Teilnehmerin O - TRUNC
+, O - $,
+Model O - NE
+, O - $,
+Schauspielerin O - NN
+und O - KON
+Unternehmerin O - NN
+
+Sarah O Q77193 NE
+Wagenknecht O Q77193 NE
+Volkswirtin O - NN
+, O - $,
+deutsche O - ADJA
+Politikerin O - NN
+( O - $(
+Die O - ART
+Linke O - NN
+) O - $(
+, O - $,
+Md O - NE
+B O - NN
+, O - $,
+Autorin O - NN
+
+Deutsche O Q157645 ADJA
+Post O Q157645 NN
+World O Q157645 FM
+Net O Q157645 NE
+deutsches O - ADJA
+Logistikunternehmen O - NN
+
+Columbia O Q49088 NE
+University O Q49088 FM
+Universität O - NN
+in O - APPR
+den O - ART
+Vereinigten O - ADJA
+Staaten O - NN
+
+Deutsche O Q2357618 ADJA
+Städte O Q2357618 NN
+-Reklame O Q2357618 TRUNC
+Unternehmen O - NN
+zur O - APPRART
+Vermarktung O - NN
+von O - APPR
+Außenwerbung O - NN
+
+Salman O Q7405402 NE
+bin O Q7405402 NE
+Ibrahim O Q7405402 NE
+Al O Q7405402 NE
+Chalifa O Q7405402 NE
+bahrainischer O - ADJA
+Fußballfunktionär O - NN
+
+Uniper O Q19839259 NE
+AG O Q19839259 NN
+deutsches O - ADJA
+Unternehmen O - NN
+der O - ART
+Energiewirtschaft O - NN
+
+Channing O Q212064 NE
+Tatum O Q212064 NE
+US O - FM
+-amerikanischer O - ADJA
+Schauspieler O - NN
+
+Institut O Q958316 NN
+der O Q958316 ART
+deutschen O Q958316 ADJA
+Wirtschaft O Q958316 NN
+Denkfabrik O - NN
+für O - APPR
+Interessen O - NN
+von O - APPR
+Arbeitgebern O - NN
+
+HC O Q44733 NE
+Strache O Q44733 NN
+ehemaliger O - ADJA
+österreichischer O - ADJA
+Politiker O - NN
+( O - $(
+ehemals O - ADV
+FPÖ O - NE
+) O - $(
+
+Douglas O Q391680 NE
+Costa O Q391680 NE
+de O Q391680 NE
+Souza O Q391680 NE
+brasilianischer O - ADJA
+Fußballspieler O - NN
+
+SAF O Q1806059 NE
+-Holland O Q1806059 NE
+Unternehmen O - NN
+aus O - APPR
+Luxemburg O - NE
+
+Kommanditgesellschaft O Q19823288 NN
+auf O Q19823288 APPR
+Aktien O Q19823288 NN
+Rechtsform O - NN
+der O - ART
+KGa O - NE
+A O - NN
+in O - APPR
+Deutschland O - NE
+
+Sony O Q41187 NE
+japanischer O - ADJA
+, O - $,
+internationaler O - ADJA
+Konzern O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Minato O - NE
+, O - $,
+Tokio O - NE
+
+Pat O Q2451348 NE
+Conroy O Q2451348 NE
+Schriftsteller O - NN
+
+OSRAM O Q310481 NE
+Licht O Q310481 NN
+AG O Q310481 NN
+Hersteller O - NN
+von O - APPR
+Leuchtmitteln O - NN
+und O - KON
+Lichttechnik O - NN
+
+SWR O Q700133 NE
+deutsche O - ADJA
+Rundfunkanstalt O - NN
+
+Felix O Q20995048 NE
+Passlack O Q20995048 NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+NATO O Q7184 NE
+militärisches O - ADJA
+Bündnis O - NN
+europäischer O - ADJA
+und O - KON
+nordamerikanischer O - ADJA
+Staaten O - NN
+
+Columbia O Q43380 FM
+Broadcasting O Q43380 FM
+System O Q43380 FM
+Fernseh O - NN
+-Netzwerk O - TRUNC
+in O - APPR
+den O - ART
+USA O - NE
+
+Alpenländischer O Q2650798 ADJA
+Kreditorenverband O Q2650798 NN
+ein O - ART
+österreichischer O - ADJA
+, O - $,
+seit O - APPR
+1924 O - CARD
+bestehender O - ADJA
+Verband O - NN
+im O - APPRART
+Dienste O - NN
+seiner O - PPOSAT
+Mitglieder O - NN
+bzw O - NE
+. O - $.
+Mandanten O - NN
+und O - KON
+ist O - VAFIN
+eine O - ART
+unabhängige O - ADJA
+Organisation O - NN
+. O - $.
+
+HAW O Q1622234 NE
+Coburg O Q1622234 NE
+eine O - ART
+1971 O - CARD
+gegründete O - ADJA
+Fachhochschule O - NN
+im O - APPRART
+nordbayerischen O - ADJA
+Coburg O - NE
+mit O - APPR
+rund O - ADV
+5300 O - CARD
+Studierenden O - NN
+. O - $.
+
+Seppo O Q1704521 NE
+Eichkorn O Q1704521 NE
+deutscher O - ADJA
+Fußballtrainer O - NN
+
+Joachim O Q1690169 NE
+Herrmann O Q1690169 NE
+deutscher O - ADJA
+Politiker O - NN
+( O - $(
+CSU O - NE
+) O - $(
+, O - $,
+Md O - NE
+L O - NE
+, O - $,
+Innenminister O - NN
+Bayern O - NE
+
+Freie O Q13124 ADJA
+Demokraten O Q13124 NN
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Intel O Q248 NE
+US O - NE
+-amerikanischer O - ADJA
+Halbleiterhersteller O - NN
+
+Samsung O Q20718 NE
+Semiconductor O Q20718 NE
+südkoreanischer O - ADJA
+Elektronikkonzern O - NN
+
+Unternehmensgruppe O Q832996 NN
+Tengelmann O Q832996 NE
+deutsches O - ADJA
+Unternehmen O - NN
+
+A O Q567 NN
+. O Q567 $.
+Merkel O Q567 NE
+achte O - VVFIN
+Inhaberin O - NN
+des O - ART
+Amtes O - NN
+Bundeskanzler/in O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+( O - $(
+seit O - APPR
+2005 O - CARD
+) O - $(
+
+IVZ O Q1662517 NE
+Kooperation O - NN
+von O - APPR
+ARD O - NE
+und O - KON
+Deutschlandradio O - NE
+, O - $,
+im O - APPRART
+Rahmen O - NN
+einer O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+, O - $,
+nicht O - PTKNEG
+-rechtsfähigen O - ADJA
+Verwaltungsgemeinschaft O - NN
+mit O - APPR
+Sitz O - NN
+im O - APPRART
+Rundfunk O - NN
+Berlin O - NE
+-Brandenburg O - NE
+in O - APPR
+Potsdam O - NE
+. O - $.
+
+Ahmet O Q58198 NE
+Davudoğlu O Q58198 NE
+türkischer O - ADJA
+Politiker O - NN
+; O - $.
+Politikwissenschaftler O - NN
+
+e O Q58024 FM
+Bay O Q58024 FM
+US O - FM
+-amerikanisches O - ADJA
+, O - $,
+weltweit O - ADJD
+größtes O - ADJA
+Internetauktionshaus O - NN
+
+WPP O Q1318049 NE
+Werbedienstleister O - NN
+und O - KON
+Medienunternehmen O - NN
+
+LG O Q162345 NE
+Electronics O Q162345 FM
+südkoreanisches O - ADJA
+Unternehmen O - NN
+
+Bachirou O Q464669 NE
+Salou O Q464669 NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Af O Q6721203 NE
+D O Q6721203 NN
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+OTS O Q680662 NE
+Österreichische O - ADJA
+Nachrichtenagentur O - NN
+
+Netflix O Q907311 NE
+US O - FM
+-amerikanischer O - ADJA
+Streaming O - FM
+-Anbieter O - TRUNC
+
+German O Q1514031 NE
+Pellets O Q1514031 NE
+Produzent O - NN
+und O - KON
+Händler O - NN
+von O - APPR
+Holzpellets O - NN
+
+SETS O Q171240 NE
+Börse O - NN
+von O - APPR
+London O - NE
+
+Internationaler O Q253414 ADJA
+Verband O Q253414 NN
+des O Q253414 ART
+Association O Q253414 FM
+Football O Q253414 FM
+Fußball O - NN
+-Weltverband O - TRUNC
+
+Ministry O Q2986560 FM
+of O Q2986560 FM
+Economic O Q2986560 FM
+Affairs O Q2986560 FM
+and O Q2986560 FM
+Climate O Q2986560 FM
+Policy O Q2986560 FM
+Ministerium O - NN
+für O - APPR
+Wirtschaft O - NN
+und O - KON
+Klimapolitik O - NN
+
+Bauamt O Q811094 NN
+Amt O - NN
+einer O - ART
+öffentlich O - ADJD
+-rechtlichen O - ADJA
+Körperschaft O - NN
+für O - APPR
+Bauangelegenheiten O - NN
+
+GDL O Q553062 NE
+Deutsche O - ADJA
+Gewerkschaft O - NN
+
+E.ON O Q270223 NE
+Holdinggesellschaft O - NN
+eines O - ART
+deutschen O - ADJA
+Energiekonzerns O - NN
+
+Oracle O Q30291065 NE
+( O Q30291065 $(
+Germany O Q30291065 NE
+) O Q30291065 $(
+Software O - NN
+-Unternehmen O - TRUNC
+aus O - APPR
+München O - NE
+. O - $.
+
+Telegraphen O Q81230 NN
+-Bauanstalt O Q81230 TRUNC
+von O Q81230 APPR
+Siemens O Q81230 NE
+& O Q81230 KON
+Halske O Q81230 NE
+Technologiekonzern O - NN
+
+Mitteldeutsche O Q1940107 ADJA
+Zeitung O Q1940107 NN
+deutsche O - ADJA
+regionale O - ADJA
+Tageszeitung O - NN
+
+Sascha O Q65794843 NE
+Staat O Q65794843 NN
+deutscher O - ADJA
+Sportjournalist O - NN
+, O - $,
+Moderator O - NN
+und O - KON
+Autor O - NN
+
+DICE O Q722027 NE
+schwedisches O - ADJA
+Spieleentwickler O - NN
+-Studio O - TRUNC
+
+Josef O Q15440930 NE
+Schwaiger O Q15440930 NE
+österreichischer O - ADJA
+Politiker O - NN
+( O - $(
+ÖVP O - NE
+) O - $(
+, O - $,
+Salzburger O - ADJA
+Landesrat O - NN
+
+SPD O Q49768 NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Deutsche O Q157852 ADJA
+Börse O Q157852 NN
+deutsche O - ADJA
+Aktiengesellschaft O - NN
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Frankfurt O - NE
+am O - APPRART
+Main O - NE
+
+Jérôme O Q151260 NE
+Agyenim O Q151260 NE
+Boateng O Q151260 NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Borussia O Q101959 NE
+M O Q101959 NE
+'Gladbach O Q101959 NE
+Sportverein O - NN
+aus O - APPR
+Mönchengladbach O - NE
+, O - $,
+Nordrhein O - NE
+-Westfalen O - NE
+
+DGAP O Q879172 NE
+deutsches O - ADJA
+Netzwerk O - NN
+und O - KON
+Denkfabrik O - NN
+für O - APPR
+Außenpolitik O - NN
+
+FOCUS O Q33108673 NE
+ONLINE O Q33108673 NE
+deutschsprachige O - ADJA
+Nachrichten O - NN
+-Website O - TRUNC
+
+Willy O Q160556 NE
+-Brandt O Q160556 NE
+-Flughafen O Q160556 TRUNC
+im O - APPRART
+Bau O - NN
+befindlicher O - ADJA
+Flughafen O - NN
+in O - APPR
+Deutschland O - NE
+
+Mark O Q178166 NN
+Sinclair O Q178166 NE
+US O - FM
+-amerikanischer O - ADJA
+Schauspieler O - NN
+, O - $,
+Drehbuchautor O - NN
+, O - $,
+Filmregisseur O - NN
+und O - KON
+- O - TRUNC
+produzent O - ADJD
+
+Immofinanz O Q1660121 NN
+Unternehmen O - NN
+für O - APPR
+Immobilien O - NN
+
+Mobilezone O Q1680518 NE
+ein O - ART
+in O - APPR
+der O - ART
+Mobil O - NN
+- O - TRUNC
+und O - KON
+Festnetztelefonie O - NN
+tätiges O - ADJA
+unabhängiges O - ADJA
+Schweizer O - ADJA
+Unternehmen O - NN
+, O - $,
+das O - PRELS
+seit O - APPR
+2001 O - CARD
+an O - APPR
+der O - ART
+Schweizer O - ADJA
+Börse O - NN
+SIX O - NE
+kotiert O - VVPP
+ist O - VAFIN
+. O - $.
+
+Robert O Q234021 NE
+Bosch O Q234021 NE
+Gmb O Q234021 NE
+H O Q234021 NN
+deutsches O - ADJA
+Unternehmen O - NN
+
+Linkem O Q3833050 ADJA
+Italienisches O - ADJA
+Unternehmen O - NN
+. O - $.
+
+You O Q866 FM
+Tube O Q866 FM
+Internet O - FM
+-Videoportal O - TRUNC
+
+Thomas O Q702233 NE
+Tuchel O Q702233 NE
+deutscher O - ADJA
+Fußballspieler O - NN
+und O - KON
+- O - $(
+trainer O - NN
+
+Robert O Q47284 NE
+Rodríguez O Q47284 NE
+US O - NE
+-amerikanischer O - ADJA
+Regisseur O - NN
+, O - $,
+Drehbuchautor O - NN
+, O - $,
+Filmkomponist O - NN
+und O - KON
+Filmproduzent O - NN
+
+Runjaic O Q1785131 NE
+deutscher O - ADJA
+Fußballtrainer O - NN
+
+Panasonic O Q53247 NE
+Corporation O Q53247 FM
+japanischer O - ADJA
+Elektronikkonzern O - NN
+
+US O Q76 FM
+-Präsident O Q76 TRUNC
+Barack O Q76 NE
+Obama O Q76 NE
+44 O - CARD
+. O - $.
+
+Meidericher O Q154293 ADJA
+Spielverein O Q154293 NN
+deutscher O - ADJA
+Fußballverein O - NN
+
+United O Q29468 FM
+States O Q29468 FM
+Republican O Q29468 FM
+Party O Q29468 FM
+US O - FM
+-amerikanische O - ADJA
+Partei O - NN
+
+Bill O Q213512 NE
+Cosby O Q213512 NE
+US O - NE
+-amerikanischer O - ADJA
+Schauspieler O - NN
+, O - $,
+Komiker O - NN
+, O - $,
+Sänger O - NN
+und O - KON
+Autor O - NN
+
+Lahm O Q43682 NE
+, O Q43682 $,
+Philipp O Q43682 NE
+deutscher O - ADJA
+Fußballspieler O - NN
+
+Christlich O Q49762 ADJD
+Demokratische O Q49762 ADJA
+Union O Q49762 NN
+Deutschlands O Q49762 NE
+politische O - ADJA
+Partei O - NN
+in O - APPR
+Deutschland O - NE
+
+Solarwatt O Q1304269 NE
+ein O - ART
+deutscher O - ADJA
+Hersteller O - NN
+und O - KON
+Anbieter O - NN
+von O - APPR
+Photovoltaikanlagen O - NN
+für O - APPR
+Eigenheime O - NN
+und O - KON
+Kleingewerbe O - NN
+. O - $.
+
+Condor O Q312517 NE
+Flugdienst O Q312517 NN
+Deutsche O - ADJA
+Charterfluggesellschaft O - NN
+
+Kanye O Q15935 NE
+Omari O Q15935 NE
+West O Q15935 NE
+US O - NE
+-amerikanischer O - ADJA
+Rapper O - NN
+, O - $,
+Sänger O - NN
+und O - KON
+Musikproduzent O - NN
+
+Dreamies O Q695087 NN
+US O - FM
+-amerikanischer O - ADJA
+Nahrungsmittelkonzern O - NN
+
+Zivilschutzminister O Q1735655 NN
+Wikimedia O - NE
+-Begriffsklärungsseite O - TRUNC
+
+E O Q701755 NN
+-Neukauf O Q701755 TRUNC
+Unternehmensverbund O - NN
+
+General O Q54173 FM
+Electric O Q54173 FM
+einer O - PIS
+der O - ART
+größten O - ADJA
+Mischkonzerne O - NN
+der O - ART
+Welt O - NN
+
+Vereinte O Q547951 ADJA
+Dienstleistungsgewerkschaft O Q547951 NN
+Gewerkschaft O - NN
+
+German O Q5551250 FM
+Startups O Q5551250 FM
+Group O Q5551250 FM
+Deutsches O - ADJA
+im O - APPRART
+Jahr O - NN
+2012 O - CARD
+gegründetes O - ADJA
+Unternehmen O - NN
+. O - $.
+
+Warner O Q126399 NE
+Bros O Q126399 NE
+. O Q126399 $.
+Pictures O Q126399 FM
+US O - FM
+-amerikanische O - ADJA
+Film O - NN
+- O - $(
+, O - $,
+Fernseh O - NN
+- O - TRUNC
+und O - KON
+Musikproduktionsfirma O - NN
+
+Sportclub O Q131215 NN
+Rapid O Q131215 NE
+österreichischer O - ADJA
+Fußballklub O - NN
+
+Eybl O Q1385678 NE
+International O Q1385678 FM
+Das O - ART
+operative O - ADJA
+Geschäft O - NN
+des O - ART
+Unternehmens O - NN
+wurde O - VAFIN
+per O - APPR
+Ende O - NN
+2008 O - CARD
+an O - APPR
+Prevent O - NN
+DEV O - NE
+mit O - APPR
+Sitz O - NN
+in O - APPR
+Wolfsburg O - NE
+veräußert O - VVPP
+, O - $,
+die O - PRELS
+seither O - ADV
+die O - ART
+Geschäfte O - NN
+fortführt O - VVFIN
+. O - $.
+
+Swarovski O Q611115 NE
+KG O Q611115 NN
+oesterreichische O - ADJA
+Unternehmensgruppe O - NN
+
+RTL O Q320187 NE
+Crime O Q320187 NE
+( O Q320187 $(
+Deutschland O Q320187 NE
+) O Q320187 $(
+deutscher O - ADJA
+Fernsehsender O - NN
+
+Trumpf O Q1652680 NE
+Hüttinger O Q1652680 NE
+ein O - ART
+deutsches O - ADJA
+Unternehmen O - NN
+im O - APPRART
+Bereich O - NN
+der O - ART
+DC O - NN
+- O - $(
+, O - $,
+Mittelfrequenz O - NN
+- O - $(
+und O - KON
+Hochfrequenzgeneratoren O - NN
+für O - APPR
+die O - ART
+Plasmaanregung O - NN
+, O - $,
+Induktionserwärmung O - NN
+und O - KON
+CO2 O - NE
+-Laseranregung O - TRUNC
+. O - $.
+
+Deutsche O Q9322 ADJA
+Bahn O Q9322 NN
+Aktiengesellschaft O Q9322 NN
+staatliches O - ADJA
+Verkehrsunternehmen O - NN
+der O - ART
+Bundesrepublik O - NN
+Deutschland O - NE
+
+dpa O Q1253717 NE
+-AFX O Q1253717 $(
+Die O - ART
+Zielgruppe O - NN
+von O - APPR
+dpa O - NE
+-AFX O - NE
+sind O - VAFIN
+Banken O - NN
+, O - $,
+Finanzdienstleister O - NN
+und O - KON
+Medien O - NN
+. O - $.
+
+Technische O Q157808 ADJA
+Universität O Q157808 NN
+München O Q157808 NE
+Technische O - ADJA
+Universität O - NN
+in O - APPR
+Bayern O - NE
+
+Andreas O Q500309 NE
+Rudolph O Q500309 NE
+deutscher O - ADJA
+Handballspieler O - NN
+und O - KON
+- O - $(
+funktionär O - ADJD
+
+Ubisoft O Q188273 NE
+französischer O - ADJA
+Publisher O - NN
+für O - APPR
+Computerspiele O - NN
