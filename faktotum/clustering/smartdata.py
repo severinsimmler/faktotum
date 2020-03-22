@@ -19,7 +19,6 @@ def load_data(all_=True):
             Path(data_folder, "train.txt"),
             Path(data_folder, "dev.txt"),
             Path(data_folder, "test.txt"),
-            Path(package_folder, "data", "wikidata.txt"),
         ]
     else:
         files = [
@@ -53,6 +52,9 @@ def ward(model_directory):
         X, y, strs = embeddings.vectorize(data, e, return_str=True)
         clustering = Clustering("ward", X, y)
         score = clustering.evaluate(strs=strs, i=name)
+        print(name)
+        print(score)
+        print()
     return score
 
 

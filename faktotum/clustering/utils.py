@@ -115,6 +115,7 @@ class Embeddings:
                 strs.append({"sentence": sentence, "index": index})
                 vector = _vectorize(sentence, indices, model, add_adj)
                 X.append(vector)
+                print(identifier, vector)
                 y.append(identifier)
         if return_str:
             return np.array(X), np.array(y), strs
