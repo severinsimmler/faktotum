@@ -45,7 +45,6 @@ def ward(model_directory):
     data = list(load_data(all_=False))
     embeddings = Embeddings(model_directory, "presse", load="all")
     for name, e in [
-        ("vanilla", embeddings.bert_ma),
         ("all", embeddings.entity_all_bert),
         ("random", embeddings.entity_bert),
     ]:
