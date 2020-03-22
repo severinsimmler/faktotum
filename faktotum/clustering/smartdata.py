@@ -99,9 +99,9 @@ def compare_algorithms(model_directory, embedding):
     data = list(load_data(all_=False))
     embeddings = Embeddings(model_directory, "presse", load=embedding)
 
+    X, y = embeddings.vectorize(data, embeddings.bert_ma)
     for algorithm in {"kmeans", "ward", "semi-supervised-kmeans"}:
         scores = list()
-        X, y = embeddings.vectorize(data, embeddings.bert_ma)
         clustering = Clustering(algorithm, X, y)
         score = clustering.evaluate()
         stats.append(score)
