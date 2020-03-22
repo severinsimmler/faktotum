@@ -42,7 +42,7 @@ def ward(model_directory):
     stats = list()
     index = list()
 
-    data = load_data(all_=False)
+    data = list(load_data(all_=False))
     embeddings = Embeddings(model_directory, "presse", load="all")
     for name, e in [
         ("vanilla", embeddings.bert_ma),
