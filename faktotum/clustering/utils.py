@@ -224,7 +224,7 @@ class Clustering:
         ami = metrics.adjusted_mutual_info_score(self.y, y_)
         fmi = metrics.fowlkes_mallows_score(self.y, y_)
         if strs:
-            with open(f"ward-droc-{i}.json", "w", encoding="utf-8") as f:
+            with open(f"ward-smartdata-{i}.json", "w", encoding="utf-8") as f:
                 data = {"gold": list(self.y), "pred": [int(x) for x in y_], "str": strs}
                 json.dump(data, f, ensure_ascii=False, indent=4)
         return {

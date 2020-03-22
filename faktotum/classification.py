@@ -14,6 +14,7 @@ from faktotum.utils import EarlyStopping
   (decoder): Linear(in_features=512, out_features=2, bias=True)
 """
 
+
 class Model(torch.nn.Module):
     def __init__(self, input_size):
         super(Model, self).__init__()

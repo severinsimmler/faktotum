@@ -44,10 +44,15 @@ def ward(model_directory):
     index = list()
 
     data = load_data(all_=False)
-    embeddings = Embeddings(model_directory, "presse", load="ner")
-    X, y = embeddings.vectorize(data, embeddings.bert_ner)
-    clustering = Clustering("ward", X, y)
-    score = clustering.evaluate()
+    embeddings = Embeddings(model_directory, "presse", load="all")
+    for name, e in [
+        ("vanilla", embeddings.bert_ma),
+        ("all", embeddings.entity_all_bert),
+        ("random", embeddings.entity_bert),
+    ]:
+        X, y, strs = embeddings.vectorize(data, e, return_str=True)
+        clustering = Clustering("ward", X, y)
+        score = clustering.evaluate(strs=strs, i=name)
     return score
 
 

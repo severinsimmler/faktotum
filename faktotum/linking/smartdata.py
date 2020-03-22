@@ -26,9 +26,9 @@ from faktotum import utils
 random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
-#EMBEDDING = BertEmbeddings(
+# EMBEDDING = BertEmbeddings(
 #    "/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata-all-masked"
-#)
+# )
 
 
 class EntityLinker:
@@ -244,7 +244,7 @@ class EntityLinker:
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
             "num_candidates": statistics.mean(num_candidates),
-            "embedding": "language-models/presse/multi"
+            "embedding": "language-models/presse/multi",
         }
 
     def _generate_data(self, data, mask_entity=False):
@@ -296,7 +296,9 @@ class EntityLinker:
                             for i in indices[1:]:
                                 vector = vector + sentence_[i].get_embedding().numpy()
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
-                            instance = np.concatenate((mention_vector[0], candidate_vector[0]))
+                            instance = np.concatenate(
+                                (mention_vector[0], candidate_vector[0])
+                            )
                             X.append(instance)
                             y.append(1.0)
                         if type_ == "ORG":
@@ -315,22 +317,24 @@ class EntityLinker:
                             if kb[id_].get("DESCRIPTION"):
                                 t.extend(
                                     list(
-                                        utils.tokenize(
-                                            self.kb[id_].get("DESCRIPTION")
-                                        )
+                                        utils.tokenize(self.kb[id_].get("DESCRIPTION"))
                                     )
                                 )
                                 text = " ".join(t)
                             else:
                                 text = " ".join(t)
-                            indices = list(range(len(list(utils.tokenize(negative_candidate)))))
+                            indices = list(
+                                range(len(list(utils.tokenize(negative_candidate))))
+                            )
                             sentence_ = Sentence(text, use_tokenizer=False)
                             EMBEDDING.embed(sentence_)
                             vector = sentence_[indices[0]].get_embedding().numpy()
                             for i in indices[1:]:
                                 vector = vector + sentence_[i].get_embedding().numpy()
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
-                            instance = np.concatenate((mention_vector[0], candidate_vector[0]))
+                            instance = np.concatenate(
+                                (mention_vector[0], candidate_vector[0])
+                            )
                             X.append(instance)
                             y.append(0.0)
         return np.array(X), np.array(y)
@@ -409,10 +413,8 @@ class EntityLinker:
                                 vector = vector + sentence_[i].get_embedding().numpy()
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
                             instance = np.array(
-                                        np.concatenate(
-                                            (mention_vector[0], candidate_vector[0])
-                                        )
-                                    ).reshape(1, -1)
+                                np.concatenate((mention_vector[0], candidate_vector[0]))
+                            ).reshape(1, -1)
                             score = model.predict(instance)[0]
                             if score > max_score:
                                 max_score = score
@@ -422,9 +424,9 @@ class EntityLinker:
                     else:
                         fp += 1
         result = {
-                "accuracy": self.accuracy(tp, fp),
-                "precision": self.precision(tp, fp),
-            }
+            "accuracy": self.accuracy(tp, fp),
+            "precision": self.precision(tp, fp),
+        }
         return result
 
     @staticmethod
