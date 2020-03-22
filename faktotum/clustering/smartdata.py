@@ -96,7 +96,7 @@ def compare_algorithms(model_directory, embedding):
     stats = list()
     index = list()
 
-    data = list(load_data())
+    data = list(load_data(all_=False))
     embeddings = Embeddings(model_directory, "presse", load=embedding)
 
     for algorithm in {"kmeans", "ward", "semi-supervised-kmeans"}:
