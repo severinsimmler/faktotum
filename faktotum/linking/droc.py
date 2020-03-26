@@ -170,7 +170,7 @@ class EntityLinker:
                                         "pred": best_mention,
                                         "true_id": identifier,
                                         "pred_id": best_candidate,
-                                        "score": max_score[0][0],
+                                        "score": float(max_score[0][0]),
                                         "sentence": " ".join([token[0] for token in sentence]),
                                         "context": " ".join([token[0] for token in best_sent])})
                         else:
@@ -179,7 +179,7 @@ class EntityLinker:
                                         "pred": best_mention,
                                         "true_id": identifier,
                                         "pred_id": best_candidate,
-                                        "score": max_score[0][0],
+                                        "score": float(max_score[0][0]),
                                         "sentence": " ".join([token[0] for token in sentence]),
                                         "context": " ".join([token[0] for token in best_sent])})
             with open(f"droc-{i}.json", "w", encoding="utf-8") as f:
