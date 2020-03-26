@@ -166,6 +166,13 @@ class EntityLinker:
 
                         if best_candidate == identifier:
                             tp += 1
+                            print({"true": name,
+                                        "pred": best_mention,
+                                        "true_id": identifier,
+                                        "pred_id": best_candidate,
+                                        "score": max_score,
+                                        "sentence": " ".join([token[0] for token in sentence]),
+                                        "context": best_sent})
                             tps.append({"true": name,
                                         "pred": best_mention,
                                         "true_id": identifier,
