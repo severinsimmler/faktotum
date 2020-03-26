@@ -102,18 +102,18 @@ def test():
     similarity_loss = RankingLoss(margin=0.15)
 
     similarity_model = EntitySimilarityLearner(source_embeddings=source_embedding,
-                                               target_embeddings=target_embedding,
-                                               similarity_measure=similarity_measure,
-                                               similarity_loss=similarity_loss)
+                                                target_embeddings=target_embedding,
+                                                similarity_measure=similarity_measure,
+                                                similarity_loss=similarity_loss)
 
     print(similarity_model)
 
-    trainer: ModelTrainer = ModelTrainer(similarity_model, corpus, optimizer=torch.optim.SGD)
+    trainer: ModelTrainer = ModelTrainer(similarity_model,corpus, optimizer=torch.optim.SGD)
 
     trainer.train(
         'droc-cosine-ranking',
         learning_rate=2,
-        mini_batch_size=128,
+        mini_batch_size=32,
         max_epochs=1000,
         min_learning_rate=1e-6,
         shuffle=True,
@@ -122,48 +122,6 @@ def test():
         embeddings_storage_mode='none'
     )
 
-"""
-import json
-from pathlib import Path
 
-import torch
-
-import flair
-from flair.data import DataPair, DataPoint, Sentence
-from flair.datasets import FlairDataset
-from flair.embeddings import DocumentRNNEmbeddings, BertEmbeddings
-from flair.models.similarity_learning_model import SimilarityLearner, CosineSimilarity, RankingLoss
-from flair.trainers import ModelTrainer
-from faktotum.similarity import EntitySimilarityLearner, FaktotumDataset
-
-corpus = FaktotumDataset()
-embedding = BertEmbeddings('/mnt/data/users/simmler/model-zoo/ner-droc')
-
-source_embedding = embedding
-target_embedding = embedding
-
-similarity_measure = CosineSimilarity()
-
-similarity_loss = RankingLoss(margin=0.15)
-
-similarity_model = EntitySimilarityLearner(source_embeddings=source_embedding,
-                                            target_embeddings=target_embedding,
-                                            similarity_measure=similarity_measure,
-                                            similarity_loss=similarity_loss)
-
-print(similarity_model)
-
-trainer: ModelTrainer = ModelTrainer(similarity_model,corpus, optimizer=torch.optim.SGD)
-
-trainer.train(
-    'droc-cosine-ranking',
-    learning_rate=2,
-    mini_batch_size=32,
-    max_epochs=1000,
-    min_learning_rate=1e-6,
-    shuffle=True,
-    anneal_factor=0.5,
-    patience=4,
-    embeddings_storage_mode='none'
-)
-"""
+if __name__ == "__main__":
+    test()
