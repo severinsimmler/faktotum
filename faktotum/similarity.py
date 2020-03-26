@@ -19,7 +19,7 @@ class FaktotumDataset(FlairDataset):
         self.dev = list()
         self.test = list()
 
-        for instance in self._load_corpus("dev"):
+        for instance in self._load_corpus("train"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.INDEX = instance["sentence_index"]
@@ -27,7 +27,7 @@ class FaktotumDataset(FlairDataset):
             point = DataPair(a, b)
             self.train.append(point)
 
-        for instance in self._load_corpus("dev"):
+        for instance in self._load_corpus("test"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.INDEX = instance["sentence_index"]
