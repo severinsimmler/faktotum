@@ -144,8 +144,9 @@ class EntitySimilarityLearner(SimilarityLearner):
                         break
 
         targets = torch.zeros_like(similarity_matrix).to(flair.device)
-        print(targets)
-        print(targets.shape)
+
+        with open("nice.json") as f:
+            json.dump(index_map, f, ensure_ascii=False, indent=4)
 
         for data_point in data_points:
             first_indices = index_map["first"][data_point.first.ID]
