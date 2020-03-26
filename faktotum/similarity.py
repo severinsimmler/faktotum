@@ -15,7 +15,7 @@ class FaktotumDataset(FlairDataset):
     def __init__(self, in_memory: bool = True, **kwargs):
         super(FaktotumDataset, self).__init__()
 
-        self.data_points: List[DataPair] = []
+        self.train: List[DataPair] = []
         self.dev = list()
         self.test = list()
 
@@ -128,7 +128,7 @@ from flair.datasets import FlairDataset
 from flair.embeddings import DocumentRNNEmbeddings, BertEmbeddings
 from flair.models.similarity_learning_model import SimilarityLearner, CosineSimilarity, RankingLoss
 from flair.trainers import ModelTrainer
-from faktotum.similarity import EntitySimilarityLearner
+from faktotum.similarity import EntitySimilarityLearner, FaktotumDataset
 
 corpus = FaktotumDataset()
 embedding = BertEmbeddings('/mnt/data/users/simmler/model-zoo/ner-droc')
@@ -147,7 +147,7 @@ similarity_model = EntitySimilarityLearner(source_embeddings=source_embedding,
 
 print(similarity_model)
 
-trainer: ModelTrainer = ModelTrainer(similarity_model, x, optimizer=torch.optim.SGD)
+trainer: ModelTrainer = ModelTrainer(similarity_model,corpus, optimizer=torch.optim.SGD)
 
 trainer.train(
     'droc-cosine-ranking',
