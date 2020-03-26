@@ -19,7 +19,7 @@ from faktotum.regression import Regression
 import random
 
 
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc-all-masked")
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc")
 
 
 class EntityLinker:
