@@ -200,6 +200,7 @@ class EntityLinker:
                     max_score = 0.0
                     best_candidate = None
                     best_context = None
+                    best_sent = None
                     if type_ == "ORG":
                         is_org = True
                     else:
@@ -238,19 +239,26 @@ class EntityLinker:
                                 max_score = score
                                 best_candidate = candidate
                                 best_context = context
+                                best_sent = text
 
                     if best_candidate == identifier:
                         tp += 1
                         tps.append({"true": mention,
                                     "pred": best_context,
                                     "true_id": identifier,
-                                    "pred_id": best_candidate})
+                                    "pred_id": best_candidate,
+                                    "score": max_score,
+                                    "sentence": " ".join([token[0] for token in sentence]),
+                                    "context": best_sent})
                     else:
                         fp += 1
                         fps.append({"true": mention,
                                     "pred": best_context,
                                     "true_id": identifier,
-                                    "pred_id": best_candidate})
+                                    "pred_id": best_candidate,
+                                    "score": max_score,
+                                    "sentence": " ".join([token[0] for token in sentence]),
+                                    "context": best_sent})
         with open("fps-tps.json", "w", encoding="utf-8") as f:
             json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
         with open("scores.json", "w", encoding="utf-8") as f:

@@ -149,6 +149,7 @@ class EntityLinker:
                         max_score = 0.0
                         best_candidate = None
                         best_mention = None
+                        best_sent = None
                         for person, contexts in kb.items():
                             for context, candidate_vector, mention in zip(
                                 contexts["CONTEXTS"], contexts["EMBEDDINGS"], contexts["MENTIONS"]
@@ -161,19 +162,26 @@ class EntityLinker:
                                         max_score = score
                                         best_candidate = person
                                         best_mention = mention
+                                        best_sent = context
 
                         if best_candidate == identifier:
                             tp += 1
                             tps.append({"true": name,
                                         "pred": best_mention,
                                         "true_id": identifier,
-                                        "pred_id": best_candidate})
+                                        "pred_id": best_candidate,
+                                        "score": max_score,
+                                        "sentence": " ".join([token[0] for token in sentence]),
+                                        "context": best_sent})
                         else:
                             fp += 1
                             fps.append({"true": name,
                                         "pred": best_mention,
                                         "true_id": identifier,
-                                        "pred_id": best_candidate})
+                                        "pred_id": best_candidate,
+                                        "score": max_score,
+                                        "sentence": " ".join([token[0] for token in sentence]),
+                                        "context": best_sent})
             with open(f"droc-{i}.json", "w", encoding="utf-8") as f:
                 json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
             stats.append(
