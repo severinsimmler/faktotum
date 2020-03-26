@@ -19,7 +19,7 @@ class FaktotumDataset(FlairDataset):
         self.dev = list()
         self.test = list()
 
-        for instance in self._load_corpus("train"):
+        for instance in self._load_corpus("dev"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.INDEX = instance["sentence_index"]
@@ -27,7 +27,7 @@ class FaktotumDataset(FlairDataset):
             point = DataPair(a, b)
             self.train.append(point)
 
-        for instance in self._load_corpus("test"):
+        for instance in self._load_corpus("dev"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.INDEX = instance["sentence_index"]
@@ -68,6 +68,7 @@ class EntitySimilarityLearner(SimilarityLearner):
             source_embedding_tensor = torch.stack(
                 [point[point.INDEX].embedding for point in data_points]
             ).to(flair.device)
+            print("SOURCE", source_embedding_tensor)
 
             if self.source_mapping is not None:
                 source_embedding_tensor = self.source_mapping(source_embedding_tensor)
@@ -84,6 +85,7 @@ class EntitySimilarityLearner(SimilarityLearner):
             [point[point.INDEX].embedding for point in data_points]
         ).to(flair.device)
 
+        print("TARGET", target_embedding_tensor)
         if self.target_mapping is not None:
             target_embedding_tensor = self.target_mapping(target_embedding_tensor)
 
