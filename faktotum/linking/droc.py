@@ -19,7 +19,7 @@ from faktotum.regression import Regression
 import random
 
 
-# EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc")
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
@@ -67,12 +67,13 @@ class EntityLinker:
         build_embeddings=True,
     ):
         context = defaultdict(list)
-        mentions = defaultdict(set)
+        mentions = defaultdict(list)
         embeddings = defaultdict(list)
         for sentence in tqdm.tqdm(novel):
             for i, token in enumerate(sentence):
                 if token[2] != "-":
                     if sentence not in context[token[2]]:
+                        mentions.append(token[0])
                         context[token[2]].append(sentence)
                         if build_embeddings:
                             vector = next(
@@ -83,12 +84,6 @@ class EntityLinker:
                                 )
                             )
                             embeddings[token[2]].append(vector)
-        for sentence in novel:
-            for token in sentence:
-                if token[2] != "-":
-                    if token[0] not in mentions[token[2]]:
-                        mentions[token[2]].add(token[0])
-
         kb = defaultdict(dict)
         for key in mentions:
             if len(context[key]) > threshold:
@@ -99,7 +94,7 @@ class EntityLinker:
         return {key: value for key, value in kb.items() if value}
 
     @staticmethod
-    def _vectorize(sentence, index, mask_entity: bool = False, return_id=False):
+    def _vectorize(sentence, index, mask_entity: bool = False, return_id=False, return_str=False):
         for person, indices in index.items():
             tokens = list()
             for i, token in enumerate(sentence):
@@ -111,19 +106,29 @@ class EntityLinker:
             sentence_ = Sentence(text, use_tokenizer=False)
             EMBEDDING.embed(sentence_)
             vector = sentence_[indices[0]].get_embedding().numpy()
+            name = [sentence_[indices[0]]]
             for i in indices[1:]:
                 vector = vector + sentence_[i].get_embedding().numpy()
+                name.append(sentence_[i].text)
             if return_id:
-                yield person, (vector / len(indices)).reshape(1, -1)
+                if return_str:
+                    yield person, (vector / len(indices)).reshape(1, -1), " ".join(name)
+                else:
+                    yield person, (vector / len(indices)).reshape(1, -1)
             else:
-                yield (vector / len(indices)).reshape(1, -1)
+                if return_str:
+                    yield (vector / len(indices)).reshape(1, -1), " ".join(name)
+                else:
+                    yield (vector / len(indices)).reshape(1, -1)
 
     def similarities(self, mask_entity=False):
         stats = list()
-        for novel in tqdm.tqdm(self.test.values()):
+        for i, novel in tqdm.tqdm(enumerate(self.test.values())):
             tp = 0
             fp = 0
             fn = 0
+            tps = list()
+            fps = list()
             kb = self._build_knowledge_base(novel)
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
@@ -136,16 +141,17 @@ class EntityLinker:
                             indices[token[2]].append(i)
                     mention_vectors = list(
                         self._vectorize(
-                            sentence, indices, return_id=True, mask_entity=mask_entity
+                            sentence, indices, return_id=True, mask_entity=mask_entity, return_str=True
                         )
                     )
 
-                    for identifier, mention_vector in mention_vectors:
+                    for identifier, mention_vector, name in mention_vectors:
                         max_score = 0.0
                         best_candidate = None
+                        best_mention = None
                         for person, contexts in kb.items():
-                            for context, candidate_vector in zip(
-                                contexts["CONTEXTS"], contexts["EMBEDDINGS"]
+                            for context, candidate_vector, mention in zip(
+                                contexts["CONTEXTS"], contexts["EMBEDDINGS"], contexts["MENTIONS"]
                             ):
                                 if context != sentence:
                                     score = cosine_similarity(
@@ -154,12 +160,16 @@ class EntityLinker:
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
+                                        best_mention = mention
 
                         if best_candidate == identifier:
                             tp += 1
+                            tps.append({name: best_mention})
                         else:
                             fp += 1
-
+                            fps.append({name: best_mention})
+            with open(f"droc-{i}.json", "w", encoding="utf-8") as f:
+                json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
