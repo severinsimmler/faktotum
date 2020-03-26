@@ -124,7 +124,7 @@ class EntitySimilarityLearner(SimilarityLearner):
 
         index_map = {"first": {}, "second": {}}
         person_indices = defaultdict(list)
-        for data_point_id, (data_point, person) in enumerate(zip(data_points, ids)):
+        for data_point_id, data_point in enumerate(data_points):
             add_to_index_map(index_map["first"], data_point.first.ID, data_point_id)
             add_to_index_map(index_map["second"], data_point.second.ID, data_point_id)
             person_indices[data_point.ID].append(data_point_id)
