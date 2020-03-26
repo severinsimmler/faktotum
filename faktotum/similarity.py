@@ -136,12 +136,10 @@ class EntitySimilarityLearner(SimilarityLearner):
                     if i in point_ids:
                         index_map["first"][sent_id].extend(value)
                         index_map["first"][sent_id] = sorted(list(set(index_map["first"][sent_id])))
-                        break
                 for sent_id, point_ids in index_map["second"].items():
                     if i in point_ids:
                         index_map["second"][sent_id].extend(value)
                         index_map["second"][sent_id] = sorted(list(set(index_map["second"][sent_id])))
-                        break
 
         targets = torch.zeros_like(similarity_matrix).to(flair.device)
 
@@ -177,7 +175,7 @@ def test():
     trainer: ModelTrainer = ModelTrainer(similarity_model,corpus, optimizer=torch.optim.SGD)
 
     trainer.train(
-        'TEST',
+        'droc-cosine-bcp-improved-loss',
         mini_batch_size=32,
         embeddings_storage_mode='none'
     )
