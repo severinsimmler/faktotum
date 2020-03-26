@@ -123,7 +123,7 @@ class EntityLinker:
 
     def similarities(self, mask_entity=False):
         stats = list()
-        for i, novel in tqdm.tqdm(enumerate(self.test.values())):
+        for i, novel in enumerate(self.test.values()):
             tp = 0
             fp = 0
             fn = 0
