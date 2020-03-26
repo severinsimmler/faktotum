@@ -19,7 +19,7 @@ from faktotum.regression import Regression
 import random
 
 
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+#EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
@@ -27,16 +27,16 @@ class EntityLinker:
         module_folder = Path(__file__).resolve().parent.parent
         self.corpus_folder = Path(module_folder, "data", "droc", "linking")
         self.train = self._load_corpus("train")
-        test = self._load_corpus("test")
-        dev = self._load_corpus("dev")
+        self.test = self._load_corpus("test")
+        self.dev = self._load_corpus("dev")
         self.dataset = dict()
-        for i, data in enumerate([test, dev, self.train]):
+        for i, data in enumerate([self.test, self.dev, self.train]):
             for key, value in data.items():
                 self.dataset[f"{i}_{key}"] = value
-        self.test = dict()
-        for i, data in enumerate([test, dev]):
-            for key, value in data.items():
-                self.test[f"{i}_{key}"] = value
+        #self.test = dict()
+        #for i, data in enumerate([test, dev]):
+        #    for key, value in data.items():
+        #        self.test[f"{i}_{key}"] = value
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:

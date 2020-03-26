@@ -26,9 +26,9 @@ from faktotum import utils
 random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
-EMBEDDING = BertEmbeddings(
+"""EMBEDDING = BertEmbeddings(
     "/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata"
-)
+)"""
 
 
 class EntityLinker:
