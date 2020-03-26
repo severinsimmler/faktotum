@@ -116,7 +116,22 @@ def test():
         embeddings_storage_mode='none'
     )
 
+"""
+import json
+from pathlib import Path
 
+import torch
+
+import flair
+from flair.data import DataPair, DataPoint, Sentence
+from flair.datasets import FlairDataset
+from flair.embeddings import DocumentRNNEmbeddings, BertEmbeddings
+from flair.models.similarity_learning_model import SimilarityLearner, CosineSimilarity, RankingLoss
+from flair.trainers import ModelTrainer
+from faktotum.similarity import EntitySimilarityLearner
+
+corpus = FaktotumDataset()
+embedding = BertEmbeddings('/mnt/data/users/simmler/model-zoo/ner-droc')
 
 source_embedding = embedding
 target_embedding = embedding
@@ -145,3 +160,4 @@ trainer.train(
     patience=4,
     embeddings_storage_mode='none'
 )
+"""
