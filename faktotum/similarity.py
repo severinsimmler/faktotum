@@ -83,7 +83,7 @@ class EntitySimilarityLearner(SimilarityLearner):
         if self.source_mapping is not None:
             source_embedding_tensor = self.source_mapping(source_embedding_tensor)
 
-        return [point.ID for point in data_points], Variable(source_embedding_tensor, requires_grad=True)
+        return Variable(source_embedding_tensor, requires_grad=True)
 
     def _embed_target(self, data_points):
 
