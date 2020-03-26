@@ -176,7 +176,7 @@ def test():
     trainer: ModelTrainer = ModelTrainer(similarity_model,corpus, optimizer=torch.optim.SGD)
 
     trainer.train(
-        'droc-cosine-bceloss',
+        'TEST',
         mini_batch_size=32,
         embeddings_storage_mode='none'
     )
