@@ -106,7 +106,7 @@ class EntityLinker:
             sentence_ = Sentence(text, use_tokenizer=False)
             EMBEDDING.embed(sentence_)
             vector = sentence_[indices[0]].get_embedding().numpy()
-            name = [sentence_[indices[0]]]
+            name = [sentence_[indices[0]].text]
             for i in indices[1:]:
                 vector = vector + sentence_[i].get_embedding().numpy()
                 name.append(sentence_[i].text)
