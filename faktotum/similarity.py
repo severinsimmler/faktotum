@@ -60,36 +60,36 @@ class EntitySimilarityLearner(SimilarityLearner):
     def __init__(self, **kwargs):
         super(EntitySimilarityLearner, self).__init__(**kwargs)
 
-        def _embed_source(self, data_points):
-            data_points = [point.first for point in data_points]
+    def _embed_source(self, data_points):
+        data_points = [point.first for point in data_points]
 
-            self.source_embeddings.embed(data_points)
+        self.source_embeddings.embed(data_points)
 
-            source_embedding_tensor = torch.stack(
-                [point[point.INDEX].embedding for point in data_points]
-            ).to(flair.device)
-            print("SOURCE", source_embedding_tensor)
+        source_embedding_tensor = torch.stack(
+            [point[point.INDEX].embedding for point in data_points]
+        ).to(flair.device)
+        print("SOURCE", source_embedding_tensor)
 
-            if self.source_mapping is not None:
-                source_embedding_tensor = self.source_mapping(source_embedding_tensor)
+        if self.source_mapping is not None:
+            source_embedding_tensor = self.source_mapping(source_embedding_tensor)
 
-            return source_embedding_tensor
+        return source_embedding_tensor
 
-        def _embed_target(self, data_points):
+    def _embed_target(self, data_points):
 
-            data_points = [point.second for point in data_points]
+        data_points = [point.second for point in data_points]
 
-            self.target_embeddings.embed(data_points)
+        self.target_embeddings.embed(data_points)
 
-            target_embedding_tensor = torch.stack(
-                [point[point.INDEX].embedding for point in data_points]
-            ).to(flair.device)
+        target_embedding_tensor = torch.stack(
+            [point[point.INDEX].embedding for point in data_points]
+        ).to(flair.device)
 
-            print("TARGET", target_embedding_tensor)
-            if self.target_mapping is not None:
-                target_embedding_tensor = self.target_mapping(target_embedding_tensor)
+        print("TARGET", target_embedding_tensor)
+        if self.target_mapping is not None:
+            target_embedding_tensor = self.target_mapping(target_embedding_tensor)
 
-            return target_embedding_tensor
+        return target_embedding_tensor
 
 
 def test():
