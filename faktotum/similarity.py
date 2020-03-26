@@ -58,7 +58,7 @@ class FaktotumDataset(FlairDataset):
     @staticmethod
     def _load_corpus(name):
         module = Path(__file__).resolve().parent
-        data = Path(module, "data", "smartdata", "similarity", f"{name}.json").read_text(encoding="utf-8")
+        data = Path(module, "data", "droc", "similarity", f"{name}.json").read_text(encoding="utf-8")
         return json.loads(data)
 
     def __len__(self):
@@ -158,7 +158,7 @@ class EntitySimilarityLearner(SimilarityLearner):
 
 def test():
     corpus = FaktotumDataset()
-    embedding = BertEmbeddings('/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted')
+    embedding = BertEmbeddings('/mnt/data/users/simmler/model-zoo/ner-droc')
 
     source_embedding = embedding
     target_embedding = embedding
