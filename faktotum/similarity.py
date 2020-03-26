@@ -99,19 +99,17 @@ def test():
 
     similarity_measure = CosineSimilarity()
 
-    similarity_loss = RankingLoss(margin=0.15)
+    similarity_loss = PairwiseBCELoss()
 
     similarity_model = EntitySimilarityLearner(source_embeddings=source_embedding,
                                                 target_embeddings=target_embedding,
                                                 similarity_measure=similarity_measure,
                                                 similarity_loss=similarity_loss)
 
-    print(similarity_model)
-
     trainer: ModelTrainer = ModelTrainer(similarity_model,corpus, optimizer=torch.optim.SGD)
 
     trainer.train(
-        'droc-cosine-ranking',
+        'droc-cosine-bceloss',
         learning_rate=2,
         mini_batch_size=32,
         max_epochs=1000,
