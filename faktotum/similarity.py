@@ -23,7 +23,7 @@ class FaktotumDataset(FlairDataset):
             point = DataPair(Sentence(instance["sentence"], use_tokenizer=False), Sentence(instance["context"], use_tokenizer=False))
             point.sentence_index = instance["sentence_index"]
             point.context_index = instance["context_index"]
-            self.data_points.append(point)
+            self.train.append(point)
 
         for instance in self._load_corpus("test"):
             point = DataPair(Sentence(instance["sentence"], use_tokenizer=False), Sentence(instance["context"], use_tokenizer=False))
