@@ -4,6 +4,7 @@ from pathlib import Path
 import torch
 
 import flair
+from flair.data import DataPair, DataPoint
 from flair.datasets import FlairDataset
 from flair.embeddings import DocumentRNNEmbeddings, BertEmbeddings
 from flair.models.similarity_learning_model import SimilarityLearner, CosineSimilarity, RankingLoss
