@@ -73,7 +73,7 @@ class EntityLinker:
             for i, token in enumerate(sentence):
                 if token[2] != "-":
                     if sentence not in context[token[2]]:
-                        mentions.append(token[0])
+                        mentions[token[2]].append(token[0])
                         context[token[2]].append(sentence)
                         if build_embeddings:
                             vector = next(
