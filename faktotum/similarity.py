@@ -147,7 +147,7 @@ class EntitySimilarityLearner(SimilarityLearner):
 
         with open("nice.json") as f:
             json.dump(index_map, f, ensure_ascii=False, indent=4)
-
+        print("jetzt")
         for data_point in data_points:
             first_indices = index_map["first"][data_point.first.ID]
             second_indices = index_map["second"][data_point.second.ID]
