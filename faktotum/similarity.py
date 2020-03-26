@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import Union
 from collections import defaultdict
 import uuid
 import torch
