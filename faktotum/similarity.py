@@ -20,21 +20,27 @@ class FaktotumDataset(FlairDataset):
         self.test = list()
 
         for instance in self._load_corpus("train"):
-            point = DataPair(Sentence(instance["sentence"], use_tokenizer=False), Sentence(instance["context"], use_tokenizer=False))
-            point.sentence_index = instance["sentence_index"]
-            point.context_index = instance["context_index"]
+            a = Sentence(instance["sentence"], use_tokenizer=False)
+            b = Sentence(instance["context"], use_tokenizer=False)
+            a.INDEX = instance["sentence_index"]
+            b.INDEX = instance["context_index"]
+            point = DataPair(a, b)
             self.train.append(point)
 
         for instance in self._load_corpus("test"):
-            point = DataPair(Sentence(instance["sentence"], use_tokenizer=False), Sentence(instance["context"], use_tokenizer=False))
-            point.sentence_index = instance["sentence_index"]
-            point.context_index = instance["context_index"]
+            a = Sentence(instance["sentence"], use_tokenizer=False)
+            b = Sentence(instance["context"], use_tokenizer=False)
+            a.INDEX = instance["sentence_index"]
+            b.INDEX = instance["context_index"]
+            point = DataPair(a, b)
             self.test.append(point)
 
         for instance in self._load_corpus("dev"):
-            point = DataPair(Sentence(instance["sentence"], use_tokenizer=False), Sentence(instance["context"], use_tokenizer=False))
-            point.sentence_index = instance["sentence_index"]
-            point.context_index = instance["context_index"]
+            a = Sentence(instance["sentence"], use_tokenizer=False)
+            b = Sentence(instance["context"], use_tokenizer=False)
+            a.INDEX = instance["sentence_index"]
+            b.INDEX = instance["context_index"]
+            point = DataPair(a, b)
             self.dev.append(point)
 
     @staticmethod
@@ -60,7 +66,7 @@ class EntitySimilarityLearner(SimilarityLearner):
             self.source_embeddings.embed(data_points)
 
             source_embedding_tensor = torch.stack(
-                [point[point.sentence_index].embedding for point in data_points]
+                [point[point.INDEX].embedding for point in data_points]
             ).to(flair.device)
 
             if self.source_mapping is not None:
@@ -75,7 +81,7 @@ class EntitySimilarityLearner(SimilarityLearner):
         self.target_embeddings.embed(data_points)
 
         target_embedding_tensor = torch.stack(
-            [point[point.sentence_index].embedding for point in data_points]
+            [point[point.INDEX].embedding for point in data_points]
         ).to(flair.device)
 
         if self.target_mapping is not None:
@@ -152,7 +158,7 @@ trainer: ModelTrainer = ModelTrainer(similarity_model,corpus, optimizer=torch.op
 trainer.train(
     'droc-cosine-ranking',
     learning_rate=2,
-    mini_batch_size=128,
+    mini_batch_size=32,
     max_epochs=1000,
     min_learning_rate=1e-6,
     shuffle=True,
