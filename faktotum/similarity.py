@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
-
+from collections import defaultdict
+import uuid
 import torch
 from torch.autograd import Variable
 import flair
@@ -19,20 +20,26 @@ class FaktotumDataset(FlairDataset):
         self.dev = list()
         self.test = list()
 
-        for instance in self._load_corpus("train"):
+        for instance in self._load_corpus("dev"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.INDEX = instance["sentence_index"]
             b.INDEX = instance["context_index"]
+            a.ID = instance["sentence_id"]
+            b.ID = instance["context_id"]
             point = DataPair(a, b)
+            point.ID = instance["person_id"]
             self.train.append(point)
 
-        for instance in self._load_corpus("test"):
+        for instance in self._load_corpus("dev"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.INDEX = instance["sentence_index"]
             b.INDEX = instance["context_index"]
+            a.ID = instance["sentence_id"]
+            b.ID = instance["context_id"]
             point = DataPair(a, b)
+            point.ID = instance["person_id"]
             self.test.append(point)
 
         for instance in self._load_corpus("dev"):
@@ -40,7 +47,10 @@ class FaktotumDataset(FlairDataset):
             b = Sentence(instance["context"], use_tokenizer=False)
             a.INDEX = instance["sentence_index"]
             b.INDEX = instance["context_index"]
+            a.ID = instance["sentence_id"]
+            b.ID = instance["context_id"]
             point = DataPair(a, b)
+            point.ID = instance["person_id"]
             self.dev.append(point)
 
     @staticmethod
@@ -72,7 +82,7 @@ class EntitySimilarityLearner(SimilarityLearner):
         if self.source_mapping is not None:
             source_embedding_tensor = self.source_mapping(source_embedding_tensor)
 
-        return Variable(source_embedding_tensor, requires_grad=True)
+        return [point.ID for point in data_points], Variable(source_embedding_tensor, requires_grad=True)
 
     def _embed_target(self, data_points):
 
@@ -88,6 +98,63 @@ class EntitySimilarityLearner(SimilarityLearner):
             target_embedding_tensor = self.target_mapping(target_embedding_tensor)
 
         return Variable(target_embedding_tensor, requires_grad=True)
+
+    def forward_loss(self, data_points: Union[List[DataPoint], DataPoint]) -> torch.tensor:
+        mapped_source_embeddings = self._embed_source(data_points)
+        mapped_target_embeddings = self._embed_target(data_points)
+
+        if self.interleave_embedding_updates:
+            # 1/3 only source branch of model, 1/3 only target branch of model, 1/3 both
+            detach_modality_id = torch.randint(0, 3, (1,)).item()
+            if detach_modality_id == 0:
+                mapped_source_embeddings.detach()
+            elif detach_modality_id == 1:
+                mapped_target_embeddings.detach()
+
+        similarity_matrix = self.similarity_measure.forward(
+            (mapped_source_embeddings, mapped_target_embeddings)
+        )
+
+        def add_to_index_map(hashmap, key, val):
+            if key not in hashmap:
+                hashmap[key] = [val]
+            else:
+                hashmap[key] += [val]
+
+        index_map = {"first": {}, "second": {}}
+        person_indices = defaultdict(list)
+        for data_point_id, (data_point, person) in enumerate(zip(data_points, ids)):
+            add_to_index_map(index_map["first"], data_point.first.ID, data_point_id)
+            add_to_index_map(index_map["second"], data_point.second.ID, data_point_id)
+            person_indices[data_point.ID].append(data_point_id)
+
+        for key, value in person_indices.items():
+            for i in  value:
+                for sent_id, point_ids in index_map["first"].items():
+                    if i in point_ids:
+                        index_map["first"][sent_id].extend(value)
+                        index_map["first"][sent_id] = sorted(list(set(index_map["first"][sent_id])))
+                        break
+                for sent_id, point_ids in index_map["second"].items():
+                    if i in point_ids:
+                        index_map["second"][sent_id].extend(value)
+                        index_map["second"][sent_id] = sorted(list(set(index_map["second"][sent_id])))
+                        break
+
+        targets = torch.zeros_like(similarity_matrix).to(flair.device)
+        print(targets)
+
+        for data_point in data_points:
+            first_indices = index_map["first"][data_point.first.ID]
+            second_indices = index_map["second"][data_point.second.ID]
+            for first_index, second_index in itertools.product(
+                first_indices, second_indices
+            ):
+                targets[first_index, second_index] = 1.0
+
+        loss = self.similarity_loss(similarity_matrix, targets)
+
+        return loss
 
 
 def test():
@@ -110,13 +177,7 @@ def test():
 
     trainer.train(
         'droc-cosine-bceloss',
-        learning_rate=2,
         mini_batch_size=32,
-        max_epochs=1000,
-        min_learning_rate=1e-6,
-        shuffle=True,
-        anneal_factor=0.5,
-        patience=4,
         embeddings_storage_mode='none'
     )
 
