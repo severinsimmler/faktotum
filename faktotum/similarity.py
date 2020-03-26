@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import Union, List
 from collections import defaultdict
 import uuid
+import itertools
 import torch
 from torch.autograd import Variable
 import flair
@@ -144,6 +145,7 @@ class EntitySimilarityLearner(SimilarityLearner):
 
         targets = torch.zeros_like(similarity_matrix).to(flair.device)
         print(targets)
+        print(targets.shape)
 
         for data_point in data_points:
             first_indices = index_map["first"][data_point.first.ID]
