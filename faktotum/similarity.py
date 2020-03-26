@@ -7,7 +7,7 @@ import flair
 from flair.data import DataPair, DataPoint, Sentence
 from flair.datasets import FlairDataset
 from flair.embeddings import DocumentRNNEmbeddings, BertEmbeddings
-from flair.models.similarity_learning_model import SimilarityLearner, CosineSimilarity, RankingLoss
+from flair.models.similarity_learning_model import SimilarityLearner, CosineSimilarity, PairwiseBCELoss
 from flair.trainers import ModelTrainer
 
 
