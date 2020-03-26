@@ -27,7 +27,7 @@ random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
 EMBEDDING = BertEmbeddings(
-    "/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata"
+    "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
 )
 
 
@@ -241,10 +241,16 @@ class EntityLinker:
 
                     if best_candidate == identifier:
                         tp += 1
-                        tps.append({mention: best_context})
+                        tps.append({"true": mention,
+                                    "pred": best_context,
+                                    "true_id": identifier,
+                                    "pred_id": best_candidate})
                     else:
                         fp += 1
-                        fps.append({mention: best_context})
+                        fps.append({"true": mention,
+                                    "pred": best_context,
+                                    "true_id": identifier,
+                                    "pred_id": best_candidate})
         with open("fps-tps.json", "w", encoding="utf-8") as f:
             json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
         with open("scores.json", "w", encoding="utf-8") as f:
