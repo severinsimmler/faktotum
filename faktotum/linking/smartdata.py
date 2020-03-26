@@ -252,13 +252,14 @@ class EntityLinker:
                                     "context": " ".join([token[0] for token in best_sent])})
                     else:
                         fp += 1
-                        fps.append({"true": mention,
-                                    "pred": best_context,
-                                    "true_id": identifier,
-                                    "pred_id": best_candidate,
-                                    "score": max_score,
-                                    "sentence": " ".join([token[0] for token in sentence]),
-                                    "context": " ".join([token[0] for token in best_sent])})
+                        if best_sent:
+                            fps.append({"true": mention,
+                                        "pred": best_context,
+                                        "true_id": identifier,
+                                        "pred_id": best_candidate,
+                                        "score": max_score,
+                                        "sentence": " ".join([token[0] for token in sentence]),
+                                        "context": " ".join([token[0] for token in best_sent])})
         with open("fps-tps.json", "w", encoding="utf-8") as f:
             json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
         with open("scores.json", "w", encoding="utf-8") as f:
