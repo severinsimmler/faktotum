@@ -174,6 +174,8 @@ class EntityLinker:
     def similarities(self, mask_entity=False):
         tp = 0
         fp = 0
+        tps = list()
+        fps = list()
         num_candidates = list()
         for sentence in tqdm.tqdm(self.test):
             is_mentioned = [token for token in sentence if token[2] != "-"]
@@ -197,6 +199,7 @@ class EntityLinker:
                 for identifier, type_, mention, mention_vector in mention_vectors:
                     max_score = 0.0
                     best_candidate = None
+                    best_context = None
                     if type_ == "ORG":
                         is_org = True
                     else:
@@ -234,12 +237,23 @@ class EntityLinker:
                             if score > max_score:
                                 max_score = score
                                 best_candidate = candidate
+                                best_context = context
 
                     if best_candidate == identifier:
                         tp += 1
+                        tps.append({mention: best_context})
                     else:
                         fp += 1
-
+                        fps.append({mention: best_context})
+        with open("fps-tps.json", "w", encoding="utf-8") as f:
+            json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
+        with open("scores.json", "w", encoding="utf-8") as f:
+            json.dump({
+            "accuracy": self.accuracy(tp, fp),
+            "precision": self.precision(tp, fp),
+            "num_candidates": statistics.mean(num_candidates),
+            "embedding": "language-models/presse/multi",
+        }, indent=4, ensure_ascii=False)
         return {
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
