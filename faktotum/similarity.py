@@ -266,9 +266,8 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
 
         all_embs: List[torch.Tensor] = list()
         for index, sentence in zip(indices, sentences):
-            print(indices)
             all_embs += [
-                emb for i, token in enumerate(sentence) for emb in token.get_each_embedding() if i in indices
+                emb for i, token in enumerate(sentence) for emb in token.get_each_embedding() if i in index
             ]
 
             nb_padding_tokens = longest_token_sequence_in_batch - len(indices)
