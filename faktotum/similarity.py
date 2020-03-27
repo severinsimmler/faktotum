@@ -177,20 +177,25 @@ class EntitySimilarity(SimilarityLearner):
         return vector / len(vectors)
 
     def _embed_source(self, data_points):
-        self.source_embeddings.embed(data_points, [index.entity_indices for index in data_points])
+        self.source_embeddings.embed(data_points)
 
         entities = list()
         for sentence in data_points:
-            entities.append(sentence.embedding)
+            sentence_embedding = sentence.embedding
+            token_embedding = self._average_vectors([token.embedding for token in sentence if i in sentence.entity_indices])
+            entity = (sentence_embedding + token_embedding) / 2
+            entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
         return Variable(entities, requires_grad=True)
 
     def _embed_target(self, data_points):
-        self.target_embeddings.embed(data_points, [index.entity_indices for index in data_points])
+        self.target_embeddings.embed(data_points)
 
         entities = list()
         for sentence in data_points:
-            entities.append(sentence.embedding)
+            token_embedding = self._average_vectors([token.embedding for token in sentence if i in sentence.entity_indices])
+            entity = (sentence.embedding + token_embedding) / 2
+            entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
         return Variable(entities, requires_grad=True)
 
@@ -354,7 +359,7 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
 
 def test():
     corpus = FaktotumDataset("droc")
-    embedding = EntityEmbeddings(
+    embedding = DocumentRNNEmbeddings(
         embeddings=[
             BertEmbeddings(
         "/mnt/data/users/simmler/model-zoo/ner-droc"
