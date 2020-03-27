@@ -147,36 +147,36 @@ class EntitySimilarity(SimilarityLearner):
         fp = 0
         with torch.no_grad():
             for batch in data_loader:
-            data_points = [data_point for data_point in batch if data_point.similar == 1]
-            
-            sources = list()
-            sources_ = set()
-            targets = list()
-            targets_ = set()
-            for point in data_points:
-                if point.first.identifier not in sources_:
-                    sources.append(point.first)
-                    sources_.add(point.first.identifier)
-                if point.second.identifier not in targets_:
-                    targets.append(point.second)
-                    targets_.add(point.second.identifier)
+                data_points = [data_point for data_point in batch if data_point.similar == 1]
+                
+                sources = list()
+                sources_ = set()
+                targets = list()
+                targets_ = set()
+                for point in data_points:
+                    if point.first.identifier not in sources_:
+                        sources.append(point.first)
+                        sources_.add(point.first.identifier)
+                    if point.second.identifier not in targets_:
+                        targets.append(point.second)
+                        targets_.add(point.second.identifier)
 
-            sources = self._embed_entities(sources).to(self.eval_device)
-            targets = self._embed_entities(targets).to(self.eval_device)
+                sources = self._embed_entities(sources).to(self.eval_device)
+                targets = self._embed_entities(targets).to(self.eval_device)
 
-            print("Evaluating")
-            for source in tqdm.tqdm(sources):
-                best_score = 0.0
-                best_label = None
-                for target in targets:
-                    score = self.similarity_measure(source, target).item()
-                    if score > best_score:
-                        best_score = score
-                        best_label = target.person
-                if best_label == source.person:
-                    tp += 1
-                else:
-                    fp += 1
+                print("Evaluating")
+                for source in tqdm.tqdm(sources):
+                    best_score = 0.0
+                    best_label = None
+                    for target in targets:
+                        score = self.similarity_measure(source, target).item()
+                        if score > best_score:
+                            best_score = score
+                            best_label = target.person
+                    if best_label == source.person:
+                        tp += 1
+                    else:
+                        fp += 1
         
         precision = tp / (tp + fp)
         print("PRECISION", precision)
