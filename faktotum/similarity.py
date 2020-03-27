@@ -181,7 +181,7 @@ class EntitySimilarityLearner(SimilarityLearner):
 
 
 def test():
-    corpus = FaktotumDataset()
+    corpus = FaktotumDataset("smartdata")
     embedding = BertEmbeddings(
         "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
     )
