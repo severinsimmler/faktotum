@@ -152,17 +152,15 @@ class EntitySimilarity(SimilarityLearner):
         tp = 0
         fp = 0
         with torch.no_grad():
-            targets = list()
+            targets = defaultdict(list)
             for batch in data_loader:
-                _targets = list()
+                _targets = defaultdict(list)
                 targets_ = set()
                 for point in batch:
                     if point.second.identifier not in targets_:
-                        _targets.append(point.second)
+                        _targets[point.second.person.split("_")[0]].append(point.second)
                         targets_.add(point.second.identifier)
                 targets.extend(_targets)
-            target_persons = [point.person for point in targets]
-            targets = self._embed_entities(targets).to(self.eval_device)
 
             for batch in data_loader:
                 data_points = [data_point for data_point in batch if data_point.similar == 1]
@@ -177,6 +175,8 @@ class EntitySimilarity(SimilarityLearner):
                 sources = self._embed_entities(sources).to(self.eval_device)
 
                 for source_person, source in zip(source_persons, sources):
+                    target_persons = [point.person for point in targets.get(source_person.split("_")[0])]
+                    targets = self._embed_entities(targets.get(source_person.split("_")[0])).to(self.eval_device)
                     best_score = 0.0
                     best_label = None
                     for target_person, target in zip(target_persons, targets):
