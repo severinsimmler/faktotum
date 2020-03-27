@@ -233,9 +233,9 @@ class EntitySimilarity(SimilarityLearner):
 
 
 def test():
-    corpus = FaktotumDataset("smartdata")
+    corpus = FaktotumDataset("droc")
     embedding = BertEmbeddings(
-        "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
+        "/mnt/data/users/simmler/model-zoo/ner-droc"
     )
 
     similarity_measure = CosineSimilarity()
