@@ -369,7 +369,7 @@ def test():
         embeddings=[BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc"),],
         bidirectional=True,
         dropout=0.25,
-        hidden_size=256,
+        hidden_size=512,
         rnn_type="LSTM",
     )
 
