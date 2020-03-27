@@ -219,7 +219,7 @@ def test():
 
     trainer.train(
         "smartdata-cosine-bcp-improved-loss",
-        mini_batch_size=8,
+        mini_batch_size=32,
         embeddings_storage_mode="none",
     )
 
