@@ -50,37 +50,28 @@ class FaktotumDataset(FlairDataset):
         for instance in self._load_corpus("train"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
-            a.INDEX = instance["sentence_index"]
-            b.INDEX = instance["context_index"]
-            a.ID = instance["sentence_id"]
-            b.ID = instance["context_id"]
+            a.entity_indices = instance["sentence_indices"]
+            b.entity_indices = instance["context_indices"]
             point = DataPair(a, b)
-            point.ID = instance["person_id"]
-            point.Y = instance["y"]
+            point.similar = instance["similar"]
             self.train.append(point)
 
         for instance in self._load_corpus("test"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
-            a.INDEX = instance["sentence_index"]
-            b.INDEX = instance["context_index"]
-            a.ID = instance["sentence_id"]
-            b.ID = instance["context_id"]
+            a.entity_indices = instance["sentence_indices"]
+            b.entity_indices = instance["context_indices"]
             point = DataPair(a, b)
-            point.ID = instance["person_id"]
-            point.Y = instance["y"]
+            point.similar = instance["similar"]
             self.test.append(point)
 
         for instance in self._load_corpus("dev"):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
-            a.INDEX = instance["sentence_index"]
-            b.INDEX = instance["context_index"]
-            a.ID = instance["sentence_id"]
-            b.ID = instance["context_id"]
+            a.entity_indices = instance["sentence_indices"]
+            b.entity_indices = instance["context_indices"]
             point = DataPair(a, b)
-            point.ID = instance["person_id"]
-            point.Y = instance["y"]
+            point.similar = instance["similar"]
             self.dev.append(point)
 
         self.data_points = self.train + self.test + self.dev
@@ -117,7 +108,7 @@ class EntitySimilarity(SimilarityLearner):
 
         entities = list()
         for sentence in data_points:
-            entity = [sentence[index].embedding for index in sentence.INDEX]
+            entity = [sentence[index].embedding for index in sentence.entity_indices]
             entity = self._average_vectors(entity)
             entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
@@ -130,7 +121,7 @@ class EntitySimilarity(SimilarityLearner):
 
         entities = list()
         for sentence in data_points:
-            entity = [sentence[index].embedding for index in sentence.INDEX]
+            entity = [sentence[index].embedding for index in sentence.entity_indices]
             entity = self._average_vectors(entity)
             entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
@@ -138,7 +129,7 @@ class EntitySimilarity(SimilarityLearner):
 
     @staticmethod
     def _get_y(data_points):
-        return torch.tensor([sentence.Y for sentence in data_points]).to(flair.device)
+        return torch.tensor([sentence.similar for sentence in data_points]).to(flair.device)
 
     def forward_loss(
         self, data_points: Union[List[DataPoint], DataPoint]
