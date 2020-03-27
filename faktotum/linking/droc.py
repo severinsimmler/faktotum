@@ -78,17 +78,16 @@ class EntityLinker:
                         mentions[token[2]].append(token[0])
                         context[token[2]].append(sentence)
                         if build_embeddings:
-                            vector = next(
-                                self._vectorize(
+                            persons = self.get_persons(sentence).get(token[2])
+                            for vector in self._vectorize(
                                     sentence,
-                                    persons={token[2]: [i]},
+                                    persons=persons,
                                     mask_entity=mask_entity,
                                     similarity_model=similarity_model,
                                     source=source,
                                     target=target
-                                )
-                            )
-                            embeddings[token[2]].append(vector)
+                                ):
+                                    embeddings[token[2]].append(vector)
         kb = defaultdict(dict)
         for key in mentions:
             if len(context[key]) > threshold:
@@ -121,7 +120,6 @@ class EntityLinker:
 
     def _vectorize(self, sentence, persons, mask_entity: bool = False, return_id=False, return_str=False, similarity_model=False, source=False, target=False):
         for person, indices in persons.items():
-            print(indices)
             for mention in indices:
                 tokens = list()
                 for i, token in enumerate(sentence):
