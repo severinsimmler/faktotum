@@ -143,8 +143,11 @@ class EntitySimilarity(SimilarityLearner):
         out_path: Path = None,
         embedding_storage_mode="none",
     ) -> (Result, float):
+        tp = 0
+        fp = 0
         with torch.no_grad():
-            data_points = [data_point for data_point in data_loader if data_point.similar == 1]
+            for batch in data_loader:
+            data_points = [data_point for data_point in batch if data_point.similar == 1]
             
             sources = list()
             sources_ = set()
@@ -162,8 +165,6 @@ class EntitySimilarity(SimilarityLearner):
             targets = self._embed_entities(targets).to(self.eval_device)
 
             print("Evaluating")
-            tp = 0
-            fp = 0
             for source in tqdm.tqdm(sources):
                 best_score = 0.0
                 best_label = None
