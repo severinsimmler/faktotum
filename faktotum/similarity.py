@@ -178,8 +178,8 @@ class EntitySimilarity(SimilarityLearner):
         )
 
 class EntityEmbeddings(DocumentRNNEmbeddings):
-    def __init__(*args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(**kwargs):
+        super().__init__(**kwargs)
 
     def _add_embeddings_internal(self, sentences, indices):
         """Add embeddings to all sentences in the given list of sentences. If embeddings are already added, update
@@ -300,7 +300,7 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
 def test():
     corpus = FaktotumDataset("droc")
     embedding = EntityEmbeddings(
-        [
+        embeddings=[
             BertEmbeddings(
         "/mnt/data/users/simmler/model-zoo/ner-droc"
         ),
