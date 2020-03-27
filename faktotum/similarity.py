@@ -88,9 +88,9 @@ class FaktotumDataset(FlairDataset):
             self.dev.append(point)
 
         self.data_points = self.train + self.test + self.dev
-        self.train = self.train[:200]
-        self.test = self.test[:50]
-        self.dev = self.dev[:50]
+        self.train = self.train[:300]
+        self.test = self.test[:100]
+        self.dev = self.dev[:100]
 
     def _load_corpus(self, dataset):
         module = Path(__file__).resolve().parent
@@ -170,8 +170,6 @@ class EntitySimilarity(SimilarityLearner):
                         sources = self._embed_entities(sources).to(self.eval_device)
                         targets = self._embed_entities(targets).to(self.eval_device)
 
-                        print(sources)
-
                         print("Evaluating")
                         for person, source in tqdm.tqdm(zip(persons, sources)):
                             best_score = 0.0
@@ -181,6 +179,7 @@ class EntitySimilarity(SimilarityLearner):
                                 if score > best_score:
                                     best_score = score
                                     best_label = person
+                            print(best_label, person)
                             if best_label == person:
                                 tp += 1
                             else:
