@@ -291,9 +291,8 @@ class _DocumentRNNEmbeddings(DocumentEmbeddings):
                 batch_first=True,
             )
         elif rnn_type == "Transformer":
-            self.rnn = torch.nn.Transformer(
-                d_model=self.embeddings_dimension,
-            )
+            encoder_layer = nn.TransformerEncoderLayer(d_model=self.embeddings_dimension, nhead=8)
+            self.rnn = nn.TransformerEncoder(encoder_layer, num_layers=6)
         else:
             self.rnn = torch.nn.GRU(
                 self.embeddings_dimension,
