@@ -53,9 +53,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
-            a.identifier = instance["sentence_identifier"]
+            #a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
-            b.identifier = instance["context_identifier"]
+            #b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.train.append(point)
@@ -65,9 +65,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
-            a.identifier = instance["sentence_identifier"]
+            #a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
-            b.identifier = instance["context_identifier"]
+            #b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.test.append(point)
@@ -77,9 +77,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
-            a.identifier = instance["sentence_identifier"]
+            #a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
-            b.identifier = instance["context_identifier"]
+            #b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.dev.append(point)
