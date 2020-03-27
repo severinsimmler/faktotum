@@ -22,6 +22,7 @@ from faktotum import utils
 import statistics
 from strsimpy.jaro_winkler import JaroWinkler
 from faktotum import utils
+from faktotum.similarity import EntitySimilarity
 
 random.seed(23)
 
@@ -368,33 +369,18 @@ class EntityLinker:
                             y.append(0.0)
         return np.array(X), np.array(y)
 
-    def regression(
-        self,
-        X_train=None,
-        y_train=None,
-        X_test=None,
-        y_test=None,
-        generate_data=False,
-        mask_entity=True,
-    ):
-        if generate_data:
-            X_train, y_train = self._generate_data(self.train)
-            X_test, y_test = self._generate_data(self.test)
-        model = Regression()
-        history = model.fit(X_train, y_train)
-        test_mse_score, test_mae_score = model.evaluate(X_test, y_test)
-        print("MSE", test_mse_score)
-        print("MAE", test_mae_score)
-
-        # EVALUATION
+    def similarities(self, mask_entity=False):
+        network = EntitySimilarity.load(model_path)
         tp = 0
         fp = 0
-        fn = 0
+        tps = list()
+        fps = list()
+        num_candidates = list()
         for sentence in tqdm.tqdm(self.test):
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
                 continue
-            elif is_mentioned:
+            if is_mentioned:
                 indices = defaultdict(list)
                 for i, token in enumerate(sentence):
                     if token[2] != "-":
@@ -412,17 +398,19 @@ class EntityLinker:
                 for identifier, type_, mention, mention_vector in mention_vectors:
                     max_score = 0.0
                     best_candidate = None
+                    best_context = None
+                    best_sent = None
                     if type_ == "ORG":
                         is_org = True
                     else:
                         is_org = False
                     candidates = self._get_candidates(mention, is_org)
+                    num_candidates.append(len(candidates))
+                    print("Candidates:", len(candidates))
                     for candidate in candidates:
                         for context in self.kb[candidate]["MENTIONS"]:
-                            t = list(utils.tokenize(context))
-                            if mask_entity:
-                                t = ["[MASK]" for _ in t]
                             if self.kb[candidate].get("DESCRIPTION"):
+                                t = list(utils.tokenize(context))
                                 t.extend(
                                     list(
                                         utils.tokenize(
@@ -432,6 +420,7 @@ class EntityLinker:
                                 )
                                 text = " ".join(t)
                             else:
+                                t = list(utils.tokenize(context))
                                 text = " ".join(t)
 
                             indices = list(range(len(list(utils.tokenize(context)))))
@@ -441,22 +430,50 @@ class EntityLinker:
                             for i in indices[1:]:
                                 vector = vector + sentence_[i].get_embedding().numpy()
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
-                            instance = np.array(
-                                np.concatenate((mention_vector[0], candidate_vector[0]))
-                            ).reshape(1, -1)
-                            score = model.predict(instance)[0]
+
+                            score = network.get_similarity(
+                                        torch.tensor(mention_vector), torch.tensor(candidate_vector)
+                                    ).item()
                             if score > max_score:
                                 max_score = score
                                 best_candidate = candidate
+                                best_context = context
+                                best_sent = text
+
                     if best_candidate == identifier:
                         tp += 1
+                        tps.append({"true": mention,
+                                    "pred": best_context,
+                                    "true_id": identifier,
+                                    "pred_id": best_candidate,
+                                    "score": max_score,
+                                    "sentence": " ".join([token[0] for token in sentence]),
+                                    "context": " ".join([token[0] for token in best_sent])})
                     else:
                         fp += 1
-        result = {
+                        if best_sent:
+                            fps.append({"true": mention,
+                                        "pred": best_context,
+                                        "true_id": identifier,
+                                        "pred_id": best_candidate,
+                                        "score": max_score,
+                                        "sentence": " ".join([token[0] for token in sentence]),
+                                        "context": " ".join([token[0] for token in best_sent])})
+        with open("fps-tps.json", "w", encoding="utf-8") as f:
+            json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
+        with open("scores.json", "w", encoding="utf-8") as f:
+            json.dump({
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
+            "num_candidates": statistics.mean(num_candidates),
+            "embedding": "language-models/presse/multi",
+        }, indent=4, ensure_ascii=False)
+        return {
+            "accuracy": self.accuracy(tp, fp),
+            "precision": self.precision(tp, fp),
+            "num_candidates": statistics.mean(num_candidates),
+            "embedding": "language-models/presse/multi",
         }
-        return result
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:

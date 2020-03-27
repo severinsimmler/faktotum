@@ -37,6 +37,7 @@ class FaktotumDataset(FlairDataset):
             b.ID = instance["context_id"]
             point = DataPair(a, b)
             point.ID = instance["person_id"]
+            point.Y = instance["y"]
             self.train.append(point)
 
         for instance in self._load_corpus("test"):
@@ -48,6 +49,7 @@ class FaktotumDataset(FlairDataset):
             b.ID = instance["context_id"]
             point = DataPair(a, b)
             point.ID = instance["person_id"]
+            point.Y = instance["y"]
             self.test.append(point)
 
         for instance in self._load_corpus("dev"):
@@ -59,6 +61,7 @@ class FaktotumDataset(FlairDataset):
             b.ID = instance["context_id"]
             point = DataPair(a, b)
             point.ID = instance["person_id"]
+            point.Y = instance["y"]
             self.dev.append(point)
 
         self.data_points = self.train + self.test + self.dev
@@ -77,107 +80,146 @@ class FaktotumDataset(FlairDataset):
         return self.data_points[index]
 
 
-class _CosineSimilarity(SimilarityMeasure):
-    def forward(self, x):
-        input_modality_0 = x[0]
-        input_modality_1 = x[1]
-        cos = torch.nn.CosineSimilarity(dim=-1)
-        return cos(input_modality_0, input_modality_1)
-
-
-
 class EntitySimilarity(SimilarityLearner):
     def __init__(self, **kwargs):
         super(EntitySimilarityLearner, self).__init__(**kwargs)
 
-    def _embed_source(self, data_points):
+    @staticmethod
+    def _average_vectors(vectors):
+        vector = vectors[0]
+        for v in vectors[1:]:
+            vector = vector + v
+        return vector / len(vectors)
+
+    def _embed_source(self, data_points, entity_indices):
         data_points = [point.first for point in data_points]
 
         self.source_embeddings.embed(data_points)
 
-        source_embedding_tensor = torch.stack(
-            [point[point.INDEX].embedding for point in data_points]
-        ).to(flair.device)
-
-        if self.source_mapping is not None:
-            source_embedding_tensor = self.source_mapping(source_embedding_tensor)
-
-        return Variable(source_embedding_tensor, requires_grad=True)
+        entities = list()
+        for sentence in data_points:
+            entity = [sentence[index].embedding for index in sentence.INDEX]
+            entity = self._average_vectors(entity)
+            entities.append(entity)
+        entities = torch.stack(entities).to(flair.device)
+        return Variable(entities, requires_grad=True)
 
     def _embed_target(self, data_points):
-
         data_points = [point.second for point in data_points]
 
-        self.target_embeddings.embed(data_points)
+        self.source_embeddings.embed(data_points)
 
-        target_embedding_tensor = torch.stack(
-            [point[point.INDEX].embedding for point in data_points]
-        ).to(flair.device)
+        entities = list()
+        for sentence in data_points:
+            entity = [sentence[index].embedding for index in sentence.INDEX]
+            entity = self._average_vectors(entity)
+            entities.append(entity)
+        entities = torch.stack(entities).to(flair.device)
+        return Variable(entities, requires_grad=True)
 
-        if self.target_mapping is not None:
-            target_embedding_tensor = self.target_mapping(target_embedding_tensor)
-
-        return Variable(target_embedding_tensor, requires_grad=True)
+    @staticmethod
+    def _get_y(data_points):
+        return torch.tensor([sentence.Y for sentence in data_points]).to(flair.device)
 
     def forward_loss(
         self, data_points: Union[List[DataPoint], DataPoint]
     ) -> torch.tensor:
-        mapped_source_embeddings = self._embed_source(data_points)
-        mapped_target_embeddings = self._embed_target(data_points)
+        source = self._embed_source(data_points)
+        target = self._embed_target(data_points)
+        y = self._get_y(data_points)
+        return self.similarity_loss(source, target, y)
 
-        if self.interleave_embedding_updates:
-            # 1/3 only source branch of model, 1/3 only target branch of model, 1/3 both
-            detach_modality_id = torch.randint(0, 3, (1,)).item()
-            if detach_modality_id == 0:
-                mapped_source_embeddings.detach()
-            elif detach_modality_id == 1:
-                mapped_target_embeddings.detach()
+    def evaluate(
+        self,
+        data_loader: DataLoader,
+        out_path: Path = None,
+        embedding_storage_mode="none",
+    ) -> (Result, float):
+        # assumes that for each data pair there's at least one embedding per modality
 
-        similarity_matrix = self.similarity_measure.forward(
-            (mapped_source_embeddings, mapped_target_embeddings)
+        with torch.no_grad():
+            # pre-compute embeddings for all targets in evaluation dataset
+            target_index = {}
+            all_target_embeddings = []
+            for data_points in data_loader:
+                target_inputs = []
+                for data_point in data_points:
+                    if str(data_point.second) not in target_index:
+                        target_index[str(data_point.second)] = len(target_index)
+                        target_inputs.append(data_point)
+                if target_inputs:
+                    all_target_embeddings.append(
+                        self._embed_target(target_inputs).to(self.eval_device)
+                    )
+                store_embeddings(data_points, embedding_storage_mode)
+            all_target_embeddings = torch.cat(all_target_embeddings, dim=0)  # [n0, d0]
+            assert len(target_index) == all_target_embeddings.shape[0]
+
+            ranks = []
+            for data_points in data_loader:
+                batch_embeddings = self._embed_source(data_points)
+
+                batch_source_embeddings = batch_embeddings.to(self.eval_device)
+                # compute the similarity
+                batch_similarity_matrix = self.similarity_measure.forward(
+                    [batch_source_embeddings, all_target_embeddings]
+                )
+
+                # sort the similarity matrix across modality 1
+                batch_modality_1_argsort = torch.argsort(
+                    batch_similarity_matrix, descending=True, dim=1
+                )
+
+                # get the ranks, so +1 to start counting ranks from 1
+                batch_modality_1_ranks = (
+                    torch.argsort(batch_modality_1_argsort, dim=1) + 1
+                )
+
+                batch_target_indices = [
+                    target_index[str(data_point.second)] for data_point in data_points
+                ]
+
+                batch_gt_ranks = batch_modality_1_ranks[
+                    torch.arange(batch_similarity_matrix.shape[0]),
+                    torch.tensor(batch_target_indices),
+                ]
+                ranks.extend(batch_gt_ranks.tolist())
+
+                store_embeddings(data_points, embedding_storage_mode)
+
+        ranks = np.array(ranks)
+        median_rank = np.median(ranks)
+        recall_at = {k: np.mean(ranks <= k) for k in self.recall_at_points}
+
+        results_header = ["Median rank"] + [
+            "Recall@top" + str(r) for r in self.recall_at_points
+        ]
+        results_header_str = "\t".join(results_header)
+        epoch_results = [str(median_rank)] + [
+            str(recall_at[k]) for k in self.recall_at_points
+        ]
+        epoch_results_str = "\t".join(epoch_results)
+        detailed_results = ", ".join(
+            [f"{h}={v}" for h, v in zip(results_header, epoch_results)]
         )
 
-        def add_to_index_map(hashmap, key, val):
-            if key not in hashmap:
-                hashmap[key] = [val]
-            else:
-                hashmap[key] += [val]
+        validated_measure = sum(
+            [
+                recall_at[r] * w
+                for r, w in zip(self.recall_at_points, self.recall_at_points_weights)
+            ]
+        )
 
-        index_map = {"first": {}, "second": {}}
-        person_indices = defaultdict(list)
-        for data_point_id, data_point in enumerate(data_points):
-            add_to_index_map(index_map["first"], data_point.first.ID, data_point_id)
-            add_to_index_map(index_map["second"], data_point.second.ID, data_point_id)
-            person_indices[data_point.ID].append(data_point_id)
+        return (
+            Result(
+                validated_measure,
+                results_header_str,
+                epoch_results_str,
+                detailed_results,
+            ),
+            0,
+        )
 
-        for key, value in person_indices.items():
-            for i in value:
-                for sent_id, point_ids in index_map["first"].items():
-                    if i in point_ids:
-                        index_map["first"][sent_id].extend(value)
-                        index_map["first"][sent_id] = sorted(
-                            list(set(index_map["first"][sent_id]))
-                        )
-                for sent_id, point_ids in index_map["second"].items():
-                    if i in point_ids:
-                        index_map["second"][sent_id].extend(value)
-                        index_map["second"][sent_id] = sorted(
-                            list(set(index_map["second"][sent_id]))
-                        )
-
-        targets = torch.zeros_like(similarity_matrix).to(flair.device)
-
-        for data_point in data_points:
-            first_indices = index_map["first"][data_point.first.ID]
-            second_indices = index_map["second"][data_point.second.ID]
-            for first_index, second_index in itertools.product(
-                first_indices, second_indices
-            ):
-                targets[first_index, second_index] = 1.0
-
-        loss = self.similarity_loss(similarity_matrix, targets)
-
-        return loss
 
 
 def test():
@@ -188,9 +230,9 @@ def test():
 
     similarity_measure = CosineSimilarity()
 
-    similarity_loss = RankingLoss()
+    similarity_loss = torch.nn.CosineEmbeddingLoss()
 
-    similarity_model = EntitySimilarityLearner(
+    similarity_model = EntitySimilarity(
         source_embeddings=embedding,
         target_embeddings=embedding,
         similarity_measure=similarity_measure,
