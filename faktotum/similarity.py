@@ -271,7 +271,7 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
                     for emb in token.get_each_embedding():
                         all_embs.append(emb)
 
-            nb_padding_tokens = longest_token_sequence_in_batch - len(sentence)
+            nb_padding_tokens = longest_token_sequence_in_batch - len(indices)
 
             if nb_padding_tokens > 0:
                 t = pre_allocated_zero_tensor[
