@@ -81,7 +81,7 @@ class EntityLinker:
                             persons = self.get_persons(sentence).get(token[2])
                             for vector in self._vectorize(
                                     sentence,
-                                    persons=persons,
+                                    persons={token[2]: persons},
                                     mask_entity=mask_entity,
                                     similarity_model=similarity_model,
                                     source=source,
