@@ -120,19 +120,6 @@ class EntitySimilarity(SimilarityLearner):
             vector = vector + v
         return vector / len(vectors)
 
-    def _embed_entities(self, data_points):
-        self.source_embeddings.embed(data_points)
-
-        entities = list()
-        for sentence in data_points:
-            entity = [sentence[index].embedding for index in sentence.entity_indices]
-            entity = self._average_vectors(entity)
-            entities.append(entity)
-            if sentence.identifier == "0_0_5":
-                print(entity)
-        entities = torch.stack(entities).to(flair.device)
-        return Variable(entities, requires_grad=True)
-
     @staticmethod
     def _get_y(data_points):
         return torch.tensor([sentence.similar for sentence in data_points]).to(flair.device)
@@ -172,7 +159,6 @@ class EntitySimilarity(SimilarityLearner):
         )
 
 
-
 def test():
     corpus = FaktotumDataset("droc")
     embedding = DocumentRNNEmbeddings(
@@ -203,8 +189,9 @@ def test():
     )
 
     trainer.train(
-        "smartdata-cosine-bcp-improved-loss",
+        "droc-similarity-model",
         mini_batch_size=32,
+        max_epochs=10,
         embeddings_storage_mode="none",
     )
 
