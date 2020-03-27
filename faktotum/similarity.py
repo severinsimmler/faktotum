@@ -182,7 +182,8 @@ class EntitySimilarity(SimilarityLearner):
                                 tp += 1
                             else:
                                 fp += 1
-        
+        print("TP", tp)
+        print("FP", fp)
         precision = tp / (tp + fp)
         print("PRECISION", precision)
 
