@@ -123,14 +123,11 @@ class EntitySimilarity(SimilarityLearner):
     def _embed_source(self, data_points):
         self.source_embeddings.embed(data_points)
 
-        ID = None
         entities = list()
         for sentence in data_points:
             entity = [sentence[index].embedding for index in sentence.entity_indices]
             entity = self._average_vectors(entity)
-            if ID is None:
-                ID = sentence.identifier
-            if sentence.identifier == ID:
+            if sentence.identifier == "0_0_5":
                 print(entity)
             entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
