@@ -121,6 +121,7 @@ class EntityLinker:
 
     def _vectorize(self, sentence, persons, mask_entity: bool = False, return_id=False, return_str=False, similarity_model=False, source=False, target=False):
         for person, indices in persons.items():
+            print(indices)
             for mention in indices:
                 tokens = list()
                 for i, token in enumerate(sentence):
