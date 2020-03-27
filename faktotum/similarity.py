@@ -37,6 +37,7 @@ import itertools
 
 from typing import Union, List
 from pathlib import Path
+import tqdm
 
 
 class FaktotumDataset(FlairDataset):
@@ -47,7 +48,8 @@ class FaktotumDataset(FlairDataset):
         self.dev = list()
         self.test = list()
 
-        for instance in self._load_corpus("test"):
+        print("Train")
+        for instance in tqdm.tqdm(self._load_corpus("test")):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
@@ -56,7 +58,8 @@ class FaktotumDataset(FlairDataset):
             point.similar = instance["similar"]
             self.train.append(point)
 
-        for instance in self._load_corpus("test"):
+        print("Test")
+        for instance in tqdm.tqdm(self._load_corpus("test")):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
@@ -65,7 +68,8 @@ class FaktotumDataset(FlairDataset):
             point.similar = instance["similar"]
             self.test.append(point)
 
-        for instance in self._load_corpus("dev"):
+        print("Dev")
+        for instance in tqdm.tqdm(self._load_corpus("dev")):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
