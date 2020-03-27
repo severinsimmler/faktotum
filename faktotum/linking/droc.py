@@ -20,7 +20,7 @@ from faktotum.similarity import EntitySimilarity
 import random
 
 
-#EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
