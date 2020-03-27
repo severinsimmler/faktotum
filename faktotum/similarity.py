@@ -91,9 +91,6 @@ class FaktotumDataset(FlairDataset):
             self.dev.append(point)
 
         self.data_points = self.train + self.test + self.dev
-        self.train = self.train[:5000]
-        self.test = self.test[:1000]
-        self.dev = self.dev[:1000]
 
     def _load_corpus(self, dataset):
         module = Path(__file__).resolve().parent
