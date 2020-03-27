@@ -119,7 +119,6 @@ class EntityLinker:
                     persons[token[2]].append([i])
         return persons
 
-
     def _vectorize(self, sentence, persons, mask_entity: bool = False, return_id=False, return_str=False, similarity_model=False, source=False, target=False):
         for person, indices in persons.items():
             for mention in indices:
@@ -139,23 +138,21 @@ class EntityLinker:
                     elif target:
                         e = self.network.target_embeddings
                     e.embed(sentence_)
-                vector = sentence_[indices[0]].get_embedding().numpy()
-                name = [sentence_[indices[0]].text]
-                for i in indices[1:]:
+                vector = sentence_[mention[0]].get_embedding().numpy()
+                name = [sentence_[mention[0]].text]
+                for i in mention[1:]:
                     vector = vector + sentence_[i].get_embedding().numpy()
                     name.append(sentence_[i].text)
                 if return_id:
                     if return_str:
-                        yield person, (vector / len(indices)).reshape(1, -1), " ".join(name)
+                        yield person, (vector / len(mention)).reshape(1, -1), " ".join(name)
                     else:
-                        yield person, (vector / len(indices)).reshape(1, -1)
+                        yield person, (vector / len(mention)).reshape(1, -1)
                 else:
                     if return_str:
-                        yield (vector / len(indices)).reshape(1, -1), " ".join(name)
+                        yield (vector / len(mention)).reshape(1, -1), " ".join(name)
                     else:
-                        yield (vector / len(indices)).reshape(1, -1)
-
-
+                        yield (vector / len(mention)).reshape(1, -1)
 
     def similarities(self, mask_entity=False):
         stats = list()
