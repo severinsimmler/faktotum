@@ -189,7 +189,7 @@ def test():
     source_embedding = embedding
     target_embedding = embedding
 
-    similarity_measure = ModelSimilarity()
+    similarity_measure = ModelSimilarity(embedding)
 
     similarity_loss = PairwiseBCELoss()
 
