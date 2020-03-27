@@ -39,6 +39,62 @@ from typing import Union, List
 from pathlib import Path
 import tqdm
 
+import os
+import re
+import logging
+from abc import abstractmethod
+from collections import Counter
+from functools import lru_cache
+from pathlib import Path
+from typing import List, Union, Dict, Tuple
+
+import hashlib
+
+import gensim
+import numpy as np
+import torch
+from bpemb import BPEmb
+from deprecated import deprecated
+
+import torch.nn.functional as F
+from torch.nn import ParameterList, Parameter
+from torch.nn import Sequential, Linear, Conv2d, ReLU, MaxPool2d, Dropout2d
+from torch.nn import AdaptiveAvgPool2d, AdaptiveMaxPool2d
+from torch.nn import TransformerEncoderLayer, TransformerEncoder
+
+from transformers import (
+    AlbertTokenizer,
+    AlbertModel,
+    BertTokenizer,
+    BertModel,
+    CamembertTokenizer,
+    CamembertModel,
+    RobertaTokenizer,
+    RobertaModel,
+    TransfoXLTokenizer,
+    TransfoXLModel,
+    OpenAIGPTModel,
+    OpenAIGPTTokenizer,
+    GPT2Model,
+    GPT2Tokenizer,
+    XLNetTokenizer,
+    XLMTokenizer,
+    XLNetModel,
+    XLMModel,
+    XLMRobertaTokenizer,
+    XLMRobertaModel,
+    PreTrainedTokenizer,
+    PreTrainedModel,
+)
+
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
+
+import flair
+from flair.data import Corpus
+from flair.nn import LockedDropout, WordDropout
+from flair.data import Dictionary, Token, Sentence, Image
+from flair.file_utils import cached_path, open_inside_zip
+
 
 class FaktotumDataset(FlairDataset):
     def __init__(self, name: str, in_memory: bool = True, **kwargs):
