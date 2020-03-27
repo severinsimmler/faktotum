@@ -120,31 +120,18 @@ class EntitySimilarity(SimilarityLearner):
             vector = vector + v
         return vector / len(vectors)
 
-    def _embed_source(self, data_points):
+    def _embed_entities(self, data_points):
         self.source_embeddings.embed(data_points)
 
         entities = list()
         for sentence in data_points:
             entity = [sentence[index].embedding for index in sentence.entity_indices]
             entity = self._average_vectors(entity)
+            entities.append(entity)
             if sentence.identifier == "0_0_5":
                 print(entity)
-            entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
         return Variable(entities, requires_grad=True)
-
-    def _embed_target(self, data_points):
-        self.target_embeddings.embed(data_points)
-
-        entities = list()
-        for sentence in data_points:
-            entity = [sentence[index].embedding for index in sentence.entity_indices]
-            entity = self._average_vectors(entity)
-            entities.append(entity)
-        entities = torch.stack(entities).to(flair.device)
-        return Variable(entities, requires_grad=True)
-
-
 
     @staticmethod
     def _get_y(data_points):
@@ -176,7 +163,7 @@ class EntitySimilarity(SimilarityLearner):
             score = score / i
         return (
             Result(
-                score,
+                1 - score,
                 f"{score}",
                 f"{score}",
                 f"{score}",
@@ -197,6 +184,7 @@ def test():
         bidirectional=True,
         dropout=0.25,
         hidden_size=256,
+        rnn_type="LSTM"
     )
 
     similarity_measure = torch.nn.CosineSimilarity(dim=-1)
