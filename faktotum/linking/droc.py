@@ -16,6 +16,7 @@ from sklearn import preprocessing
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 from faktotum.regression import Regression
+from faktotum.similarity import EntitySimilarity
 import random
 
 

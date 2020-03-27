@@ -86,7 +86,7 @@ class _CosineSimilarity(SimilarityMeasure):
 
 
 
-class EntitySimilarityLearner(SimilarityLearner):
+class EntitySimilarity(SimilarityLearner):
     def __init__(self, **kwargs):
         super(EntitySimilarityLearner, self).__init__(**kwargs)
 
@@ -186,16 +186,13 @@ def test():
         "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
     )
 
-    source_embedding = embedding
-    target_embedding = embedding
-
     similarity_measure = CosineSimilarity()
 
     similarity_loss = RankingLoss()
 
     similarity_model = EntitySimilarityLearner(
-        source_embeddings=source_embedding,
-        target_embeddings=target_embedding,
+        source_embeddings=embedding,
+        target_embeddings=embedding,
         similarity_measure=similarity_measure,
         similarity_loss=similarity_loss,
     )
