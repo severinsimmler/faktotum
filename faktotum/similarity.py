@@ -14,7 +14,7 @@ from flair.models.similarity_learning_model import (
     RankingLoss,
     SimilarityLearner,
     SimilarityMeasure,
-    CosineSimilarity,
+    CosineSimilarity
 )
 from flair.trainers import ModelTrainer
 from torch.autograd import Variable
@@ -38,62 +38,6 @@ import itertools
 from typing import Union, List
 from pathlib import Path
 import tqdm
-
-import os
-import re
-import logging
-from abc import abstractmethod
-from collections import Counter
-from functools import lru_cache
-from pathlib import Path
-from typing import List, Union, Dict, Tuple
-
-import hashlib
-
-import gensim
-import numpy as np
-import torch
-from bpemb import BPEmb
-from deprecated import deprecated
-
-import torch.nn.functional as F
-from torch.nn import ParameterList, Parameter
-from torch.nn import Sequential, Linear, Conv2d, ReLU, MaxPool2d, Dropout2d
-from torch.nn import AdaptiveAvgPool2d, AdaptiveMaxPool2d
-from torch.nn import TransformerEncoderLayer, TransformerEncoder
-
-from transformers import (
-    AlbertTokenizer,
-    AlbertModel,
-    BertTokenizer,
-    BertModel,
-    CamembertTokenizer,
-    CamembertModel,
-    RobertaTokenizer,
-    RobertaModel,
-    TransfoXLTokenizer,
-    TransfoXLModel,
-    OpenAIGPTModel,
-    OpenAIGPTTokenizer,
-    GPT2Model,
-    GPT2Tokenizer,
-    XLNetTokenizer,
-    XLMTokenizer,
-    XLNetModel,
-    XLMModel,
-    XLMRobertaTokenizer,
-    XLMRobertaModel,
-    PreTrainedTokenizer,
-    PreTrainedModel,
-)
-
-from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
-
-import flair
-from flair.data import Corpus
-from flair.nn import LockedDropout, WordDropout
-from flair.data import Dictionary, Token, Sentence, Image
-from flair.file_utils import cached_path, open_inside_zip
 
 
 class FaktotumDataset(FlairDataset):
@@ -177,37 +121,31 @@ class EntitySimilarity(SimilarityLearner):
         return vector / len(vectors)
 
     def _embed_source(self, data_points):
-        self.source_embeddings.embed(data_points)
+        self.source_embeddings.embed(data_points, [index for index in sentence.entity_indices])
 
         entities = list()
         for sentence in data_points:
-            sentence_embedding = sentence.embedding
-            token_embedding = self._average_vectors(
-                [token.embedding for i, token in enumerate(sentence) if i in sentence.entity_indices]
-            )
-            entity = (sentence_embedding + token_embedding) / 2
+            entity = [sentence[index].embedding for index in sentence.entity_indices]
+            entity = self._average_vectors(entity)
             entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
         return Variable(entities, requires_grad=True)
 
     def _embed_target(self, data_points):
-        self.target_embeddings.embed(data_points)
+        self.target_embeddings.embed(data_points, [index for index in sentence.entity_indices])
 
         entities = list()
         for sentence in data_points:
-            token_embedding = self._average_vectors(
-                [token.embedding for i, token in enumerate(sentence) if i in sentence.entity_indices]
-            )
-            entity = (sentence.embedding + token_embedding) / 2
+            entity = [sentence[index].embedding for index in sentence.entity_indices]
+            entity = self._average_vectors(entity)
             entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
         return Variable(entities, requires_grad=True)
 
+
     @staticmethod
     def _get_y(data_points):
-        return torch.tensor([sentence.similar for sentence in data_points]).to(
-            flair.device
-        )
+        return torch.tensor([sentence.similar for sentence in data_points]).to(flair.device)
 
     def forward_loss(
         self, data_points: Union[List[DataPoint], DataPoint]
@@ -234,16 +172,20 @@ class EntitySimilarity(SimilarityLearner):
                 i += 1
             score = score / i
         return (
-            Result(1 - score, f"{score}", f"{score}", f"{score}",),
+            Result(
+                1 - score,
+                f"{score}",
+                f"{score}",
+                f"{score}",
+            ),
             0,
         )
 
-
 class EntityEmbeddings(DocumentRNNEmbeddings):
-    def __init__(self, **kwargs):
-        super(EntityEmbeddings, self).__init__(**kwargs)
+    def __init__(*args, **kwargs):
+        super().__init__(*args, **kwargs)
 
-    def _add_embeddings_internal(self, sentences, indices):
+        def _add_embeddings_internal(self, sentences, indices):
         """Add embeddings to all sentences in the given list of sentences. If embeddings are already added, update
          only if embeddings are non-static."""
 
@@ -272,14 +214,12 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
 
         all_embs: List[torch.Tensor] = list()
         for index, sentence in zip(indices, sentences):
-            all_embs += [
-                emb
-                for i, token in enumerate(sentence)
-                for emb in token.get_each_embedding()
-                if i in index
-            ]
+            for i, token in enumerate(sentence):
+                if i in index:
+                    for emb in token.get_each_embedding():
+                        all_embs.append(emb)
 
-            nb_padding_tokens = longest_token_sequence_in_batch - len(index)
+            nb_padding_tokens = longest_token_sequence_in_batch - len(sentence)
 
             if nb_padding_tokens > 0:
                 t = pre_allocated_zero_tensor[
@@ -335,9 +275,7 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
             sentence = sentences[sentence_no]
             sentence.set_embedding(self.name, embedding)
 
-    def embed(
-        self, sentences: Union[Sentence, List[Sentence]], indices
-    ) -> List[Sentence]:
+    def embed(self, sentences: Union[Sentence, List[Sentence]], indices) -> List[Sentence]:
         """Add embeddings to all words in a list of sentences. If embeddings are already added, updates only if embeddings
         are non-static."""
 
@@ -365,13 +303,20 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
 
 def test():
     corpus = FaktotumDataset("droc")
-    embedding = DocumentRNNEmbeddings(
-        embeddings=[BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc"),],
+    embedding = EntityEmbeddings(
+        [
+            BertEmbeddings(
+        "/mnt/data/users/simmler/model-zoo/ner-droc"
+        ),
+        ],
         bidirectional=True,
         dropout=0.25,
-        hidden_size=768,
-        rnn_type="LSTM",
+        hidden_size=256,
+        rnn_type="LSTM"
     )
+    embedding = BertEmbeddings(
+        "/mnt/data/users/simmler/model-zoo/ner-droc"
+        )
 
     similarity_measure = torch.nn.CosineSimilarity(dim=-1)
 
