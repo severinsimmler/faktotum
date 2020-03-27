@@ -57,6 +57,7 @@ class FaktotumDataset(FlairDataset):
             a.person = instance["person"]
             b.entity_indices = instance["context_indices"]
             b.identifier = instance["context_identifier"]
+            b.person = instance["person"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.train.append(point)
@@ -70,6 +71,7 @@ class FaktotumDataset(FlairDataset):
             a.person = instance["person"]
             b.entity_indices = instance["context_indices"]
             b.identifier = instance["context_identifier"]
+            b.person = instance["person"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.test.append(point)
@@ -83,6 +85,7 @@ class FaktotumDataset(FlairDataset):
             a.person = instance["person"]
             b.entity_indices = instance["context_indices"]
             b.identifier = instance["context_identifier"]
+            b.person = instance["person"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.dev.append(point)
