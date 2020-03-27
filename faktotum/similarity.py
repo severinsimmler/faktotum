@@ -59,7 +59,7 @@ class FaktotumDataset(FlairDataset):
             self.train.append(point)
 
         print("Test")
-        for instance in tqdm.tqdm(self._load_corpus("test")):
+        for instance in tqdm.tqdm(self._load_corpus("dev")):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
