@@ -121,7 +121,7 @@ class EntitySimilarity(SimilarityLearner):
         return vector / len(vectors)
 
     def _embed_source(self, data_points):
-        self.source_embeddings.embed(data_points, [index for index in sentence.entity_indices])
+        self.source_embeddings.embed(data_points, [index.entity_indices for index in data_points])
 
         entities = list()
         for sentence in data_points:
@@ -130,7 +130,7 @@ class EntitySimilarity(SimilarityLearner):
         return Variable(entities, requires_grad=True)
 
     def _embed_target(self, data_points):
-        self.target_embeddings.embed(data_points, [index for index in sentence.entity_indices])
+        self.target_embeddings.embed(data_points, [index.entity_indices for index in data_points])
 
         entities = list()
         for sentence in data_points:
@@ -179,7 +179,7 @@ class EntitySimilarity(SimilarityLearner):
 
 class EntityEmbeddings(DocumentRNNEmbeddings):
     def __init__(**kwargs):
-        super().__init__(**kwargs)
+        super(EntityEmbeddings, self).__init__(**kwargs)
 
     def _add_embeddings_internal(self, sentences, indices):
         """Add embeddings to all sentences in the given list of sentences. If embeddings are already added, update
