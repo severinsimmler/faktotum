@@ -123,10 +123,15 @@ class EntitySimilarity(SimilarityLearner):
     def _embed_source(self, data_points):
         self.source_embeddings.embed(data_points)
 
+        ID = None
         entities = list()
         for sentence in data_points:
             entity = [sentence[index].embedding for index in sentence.entity_indices]
             entity = self._average_vectors(entity)
+            if ID is None:
+                ID = sentence.identifier
+            if sentence.identifier == ID:
+                print(entity)
             entities.append(entity)
         entities = torch.stack(entities).to(flair.device)
         return Variable(entities, requires_grad=True)
@@ -151,7 +156,6 @@ class EntitySimilarity(SimilarityLearner):
         self, data_points: Union[List[DataPoint], DataPoint]
     ) -> torch.tensor:
         source = self._embed_source([point.first for point in data_points])
-        print(source[0])
         target = self._embed_target([point.second for point in data_points])
         y = self._get_y(data_points)
         return self.similarity_loss(source, target, y)
