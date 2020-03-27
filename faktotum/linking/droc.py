@@ -135,9 +135,9 @@ class EntityLinker:
                     EMBEDDING.embed(sentence_)
                 else:
                     if source:
-                        e = self.network.source_embedding
+                        e = self.network.source_embeddings
                     elif target:
-                        e = self.network.target_embedding
+                        e = self.network.target_embeddings
                     e.embed(sentence_)
                 vector = sentence_[indices[0]].get_embedding().numpy()
                 name = [sentence_[indices[0]].text]
