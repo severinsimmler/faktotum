@@ -339,6 +339,7 @@ class EntityLinker:
                                         "score": max_score,
                                         "sentence": " ".join([token[0] for token in sentence]),
                                         "context": " ".join([token[0] for token in best_sent])})
+            print({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)})
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
