@@ -152,40 +152,42 @@ class EntitySimilarity(SimilarityLearner):
         tp = 0
         fp = 0
         with torch.no_grad():
+            targets = list()
             for batch in data_loader:
-                if batch:
-                    data_points = [data_point for data_point in batch if data_point.similar == 1]
-                    
-                    sources = list()
-                    sources_ = set()
-                    targets = list()
-                    targets_ = set()
-                    for point in data_points:
-                        if point.first.identifier not in sources_:
-                            sources.append(point.first)
-                            sources_.add(point.first.identifier)
-                        if point.second.identifier not in targets_:
-                            targets.append(point.second)
-                            targets_.add(point.second.identifier)
+                _targets = list()
+                targets_ = set()
+                for point in batch:
+                    if point.second.identifier not in targets_:
+                        _targets.append(point.second)
+                        targets_.add(point.second.identifier)
+                targets.extend(_targets)
+            target_persons = [point.person for point in targets]
+            targets = self._embed_entities(targets).to(self.eval_device)
 
-                    if sources and targets:
-                        source_persons = [point.person for point in sources]
-                        target_persons = [point.person for point in targets]
-                        sources = self._embed_entities(sources).to(self.eval_device)
-                        targets = self._embed_entities(targets).to(self.eval_device)
+            for batch in data_loader:
+                data_points = [data_point for data_point in batch if data_point.similar == 1]
+                sources = list()
+                sources_ = set()
+                for point in data_points:
+                    if point.first.identifier not in sources_:
+                        sources.append(point.first)
+                        sources_.add(point.first.identifier)
 
-                        for source_person, source in zip(source_persons, sources):
-                            best_score = 0.0
-                            best_label = None
-                            for target_person, target in zip(target_persons, targets):
-                                score = self.similarity_measure(source, target).item()
-                                if score > best_score:
-                                    best_score = score
-                                    best_label = target_person
-                            if best_label == source_person:
-                                tp += 1
-                            else:
-                                fp += 1
+                source_persons = [point.person for point in sources]
+                sources = self._embed_entities(sources).to(self.eval_device)
+
+                for source_person, source in zip(source_persons, sources):
+                    best_score = 0.0
+                    best_label = None
+                    for target_person, target in zip(target_persons, targets):
+                        score = self.similarity_measure(source, target).item()
+                        if score > best_score:
+                            best_score = score
+                            best_label = target_person
+                    if best_label == source_person:
+                        tp += 1
+                    else:
+                        fp += 1
         print("TP", tp)
         print("FP", fp)
         precision = tp / (tp + fp)
