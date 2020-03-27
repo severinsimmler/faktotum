@@ -91,9 +91,9 @@ class FaktotumDataset(FlairDataset):
             self.dev.append(point)
 
         self.data_points = self.train + self.test + self.dev
-        self.train = self.train[:10000]
-        self.test = self.test[:3000]
-        self.dev = self.dev[:3000]
+        self.train = self.train[:5000]
+        self.test = self.test[:1000]
+        self.dev = self.dev[:1000]
 
     def _load_corpus(self, dataset):
         module = Path(__file__).resolve().parent
@@ -149,56 +149,22 @@ class EntitySimilarity(SimilarityLearner):
         out_path: Path = None,
         embedding_storage_mode="none",
     ) -> (Result, float):
-        tp = 0
-        fp = 0
         with torch.no_grad():
-            targets = defaultdict(list)
-            for batch in data_loader:
-                _targets = defaultdict(list)
-                targets_ = set()
-                for point in batch:
-                    if point.second.identifier not in targets_:
-                        _targets[point.second.person.split("_")[0]].append(point.second)
-                        targets_.add(point.second.identifier)
-                targets.extend(_targets)
-
-            for batch in data_loader:
-                data_points = [data_point for data_point in batch if data_point.similar == 1]
-                sources = list()
-                sources_ = set()
-                for point in data_points:
-                    if point.first.identifier not in sources_:
-                        sources.append(point.first)
-                        sources_.add(point.first.identifier)
-
-                source_persons = [point.person for point in sources]
-                sources = self._embed_entities(sources).to(self.eval_device)
-
-                for source_person, source in zip(source_persons, sources):
-                    target_persons = [point.person for point in targets.get(source_person.split("_")[0])]
-                    targets = self._embed_entities(targets.get(source_person.split("_")[0])).to(self.eval_device)
-                    best_score = 0.0
-                    best_label = None
-                    for target_person, target in zip(target_persons, targets):
-                        score = self.similarity_measure(source, target).item()
-                        if score > best_score:
-                            best_score = score
-                            best_label = target_person
-                    if best_label == source_person:
-                        tp += 1
-                    else:
-                        fp += 1
-        print("TP", tp)
-        print("FP", fp)
-        precision = tp / (tp + fp)
-        print("PRECISION", precision)
-
+            i = 0
+            score = 0.0
+            for data_points in data_loader:
+                source = self._embed_source([point.first for point in data_points])
+                target = self._embed_target([point.second for point in data_points])
+                y = self._get_y(data_points)
+                score += self.similarity_loss(source, target, y).item()
+                i += 1
+            score = score / i
         return (
             Result(
-                precision,
-                f"{precision}",
-                f"{precision}",
-                f"{precision}",
+                score,
+                f"{score}",
+                f"{score}",
+                f"{score}",
             ),
             0,
         )
