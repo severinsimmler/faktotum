@@ -11,7 +11,7 @@ from flair.data import DataPair, DataPoint, Sentence
 from flair.datasets import FlairDataset
 from flair.embeddings import BertEmbeddings, DocumentRNNEmbeddings
 from flair.models.similarity_learning_model import (
-    PairwiseBCELoss,
+    RankingLoss,
     SimilarityLearner,
     SimilarityMeasure,
     ModelSimilarity
@@ -189,10 +189,9 @@ def test():
     source_embedding = embedding
     target_embedding = embedding
 
+    similarity_measure = CosineSimilarity()
 
-    similarity_loss = PairwiseBCELoss()
-
-    similarity_measure = ModelSimilarity(similarity_loss)
+    similarity_loss = RankingLoss()
 
     similarity_model = EntitySimilarityLearner(
         source_embeddings=source_embedding,
