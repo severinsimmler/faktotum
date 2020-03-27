@@ -105,7 +105,7 @@ class EntitySimilarity(SimilarityLearner):
             vector = vector + v
         return vector / len(vectors)
 
-    def _embed_source(self, data_points, entity_indices):
+    def _embed_source(self, data_points):
         data_points = [point.first for point in data_points]
 
         self.source_embeddings.embed(data_points)
