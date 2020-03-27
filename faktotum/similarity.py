@@ -187,7 +187,7 @@ def test():
 
     trainer.train(
         "droc-similarity-model",
-        mini_batch_size=32,
+        mini_batch_size=128,
         max_epochs=10,
         embeddings_storage_mode="none",
     )
