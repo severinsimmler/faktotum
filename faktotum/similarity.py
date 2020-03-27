@@ -182,6 +182,7 @@ def test():
         bidirectional=True,
         dropout=0.25,
         hidden_size=256,
+        rnn_type="LSTM"
     )
 
     similarity_measure = torch.nn.CosineSimilarity(dim=-1)
