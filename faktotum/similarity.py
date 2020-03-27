@@ -170,7 +170,7 @@ class EntitySimilarity(SimilarityLearner):
                         sources = self._embed_entities(sources).to(self.eval_device)
                         targets = self._embed_entities(targets).to(self.eval_device)
 
-                        for person, source in tqdm.tqdm(zip(persons, sources)):
+                        for person, source in zip(persons, sources):
                             best_score = 0.0
                             best_label = None
                             for target in targets:
