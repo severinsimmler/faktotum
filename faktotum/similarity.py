@@ -166,19 +166,20 @@ class EntitySimilarity(SimilarityLearner):
                             targets_.add(point.second.identifier)
 
                     if sources and targets:
-                        persons = [point.person for point in sources]
+                        source_persons = [point.person for point in sources]
+                        target_persons = [point.person for point in targets]
                         sources = self._embed_entities(sources).to(self.eval_device)
                         targets = self._embed_entities(targets).to(self.eval_device)
 
-                        for person, source in zip(persons, sources):
+                        for source_person, source in zip(source_persons, sources):
                             best_score = 0.0
                             best_label = None
-                            for target in targets:
+                            for target_person, target in zip(target_persons, targets):
                                 score = self.similarity_measure(source, target).item()
                                 if score > best_score:
                                     best_score = score
-                                    best_label = person
-                            if best_label == person:
+                                    best_label = target_person
+                            if best_label == source_person:
                                 tp += 1
                             else:
                                 fp += 1
