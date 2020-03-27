@@ -53,9 +53,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
-            #a.identifier = instance["sentence_identifier"]
+            a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
-            #b.identifier = instance["context_identifier"]
+            b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.train.append(point)
@@ -65,9 +65,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
-            #a.identifier = instance["sentence_identifier"]
+            a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
-            #b.identifier = instance["context_identifier"]
+            b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.test.append(point)
@@ -77,9 +77,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
-            #a.identifier = instance["sentence_identifier"]
+            a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
-            #b.identifier = instance["context_identifier"]
+            b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.dev.append(point)
@@ -159,100 +159,30 @@ class EntitySimilarity(SimilarityLearner):
             targets = self._embed_entities(targets).to(self.eval_device)
 
             print("Evaluating")
+            tp = 0
+            fp = 0
             for source in tqdm.tqdm(sources):
-                best_score = None
+                best_score = 0.0
                 best_label = None
                 for target in targets:
-                    pass
-
-
-
-
-
-            for data_point in data_loader:
-                # Evaluate only positive examples
-                if data_point.similar == 1:
-                    source = self._embed_source([data_point.first])
-
-            
-            # pre-compute embeddings for all targets in evaluation dataset
-            target_index = {}
-            all_target_embeddings = []
-            for data_points in data_loader:
-                target_inputs = []
-                for data_point in data_points:
-                    if str(data_point.second) not in target_index:
-                        target_index[str(data_point.second)] = len(target_index)
-                        target_inputs.append(data_point)
-                if target_inputs:
-                    all_target_embeddings.append(
-                        self._embed_target(target_inputs).to(self.eval_device)
-                    )
-                store_embeddings(data_points, embedding_storage_mode)
-            all_target_embeddings = torch.cat(all_target_embeddings, dim=0)  # [n0, d0]
-            assert len(target_index) == all_target_embeddings.shape[0]
-
-            ranks = []
-            for data_points in data_loader:
-                batch_embeddings = self._embed_source(data_points)
-
-                batch_source_embeddings = batch_embeddings.to(self.eval_device)
-                # compute the similarity
-                batch_similarity_matrix = self.similarity_measure.forward(
-                    [batch_source_embeddings, all_target_embeddings]
-                )
-
-                # sort the similarity matrix across modality 1
-                batch_modality_1_argsort = torch.argsort(
-                    batch_similarity_matrix, descending=True, dim=1
-                )
-
-                # get the ranks, so +1 to start counting ranks from 1
-                batch_modality_1_ranks = (
-                    torch.argsort(batch_modality_1_argsort, dim=1) + 1
-                )
-
-                batch_target_indices = [
-                    target_index[str(data_point.second)] for data_point in data_points
-                ]
-
-                batch_gt_ranks = batch_modality_1_ranks[
-                    torch.arange(batch_similarity_matrix.shape[0]),
-                    torch.tensor(batch_target_indices),
-                ]
-                ranks.extend(batch_gt_ranks.tolist())
-
-                store_embeddings(data_points, embedding_storage_mode)
-
-        ranks = np.array(ranks)
-        median_rank = np.median(ranks)
-        recall_at = {k: np.mean(ranks <= k) for k in self.recall_at_points}
-
-        results_header = ["Median rank"] + [
-            "Recall@top" + str(r) for r in self.recall_at_points
-        ]
-        results_header_str = "\t".join(results_header)
-        epoch_results = [str(median_rank)] + [
-            str(recall_at[k]) for k in self.recall_at_points
-        ]
-        epoch_results_str = "\t".join(epoch_results)
-        detailed_results = ", ".join(
-            [f"{h}={v}" for h, v in zip(results_header, epoch_results)]
-        )
-
-        validated_measure = sum(
-            [
-                recall_at[r] * w
-                for r, w in zip(self.recall_at_points, self.recall_at_points_weights)
-            ]
-        )
+                    score = self.similarity_measure(source, target).item()
+                    if score > best_score:
+                        best_score = score
+                        best_label = target.person
+                if best_label == source.person:
+                    tp += 1
+                else:
+                    fp += 1
+        
+        precision = tp / (tp + fp)
+        print("PRECISION", precision)
 
         return (
             Result(
-                validated_measure,
-                results_header_str,
-                epoch_results_str,
-                detailed_results,
+                precision,
+                f"{precision}",
+                f"{precision}",
+                f"{precision}",
             ),
             0,
         )
