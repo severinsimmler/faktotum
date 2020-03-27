@@ -20,7 +20,7 @@ from faktotum.similarity import EntitySimilarity
 import random
 import torch
 
-#EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+# EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
@@ -34,8 +34,8 @@ class EntityLinker:
         for i, data in enumerate([self.test, self.dev, self.train]):
             for key, value in data.items():
                 self.dataset[f"{i}_{key}"] = value
-        #self.test = dict()
-        #for i, data in enumerate([test, dev]):
+        # self.test = dict()
+        # for i, data in enumerate([test, dev]):
         #    for key, value in data.items():
         #        self.test[f"{i}_{key}"] = value
 
@@ -66,7 +66,9 @@ class EntityLinker:
         threshold: int = 1,
         mask_entity: bool = False,
         build_embeddings=True,
-        similarity_model=False, source=False, target=True
+        similarity_model=False,
+        source=False,
+        target=True,
     ):
         context = defaultdict(list)
         mentions = defaultdict(list)
@@ -80,14 +82,14 @@ class EntityLinker:
                         if build_embeddings:
                             persons = self.get_persons(sentence).get(token[2])
                             for vector in self._vectorize(
-                                    sentence,
-                                    persons={token[2]: persons},
-                                    mask_entity=mask_entity,
-                                    similarity_model=similarity_model,
-                                    source=source,
-                                    target=target
-                                ):
-                                    embeddings[token[2]].append(vector)
+                                sentence,
+                                persons={token[2]: persons},
+                                mask_entity=mask_entity,
+                                similarity_model=similarity_model,
+                                source=source,
+                                target=target,
+                            ):
+                                embeddings[token[2]].append(vector)
         kb = defaultdict(dict)
         for key in mentions:
             if len(context[key]) > threshold:
@@ -100,11 +102,11 @@ class EntityLinker:
     @staticmethod
     def get_persons(sent):
         persons = dict()
-        
+
         for token in sent:
             if token[2] != "-":
                 persons[token[2]] = list()
-        
+
         for i, token in enumerate(sent):
             if token[2] != "-":
                 if persons[token[2]] and persons[token[2]][-1][-1] == i - 1:
@@ -118,7 +120,17 @@ class EntityLinker:
                     persons[token[2]].append([i])
         return persons
 
-    def _vectorize(self, sentence, persons, mask_entity: bool = False, return_id=False, return_str=False, similarity_model=False, source=False, target=False):
+    def _vectorize(
+        self,
+        sentence,
+        persons,
+        mask_entity: bool = False,
+        return_id=False,
+        return_str=False,
+        similarity_model=False,
+        source=False,
+        target=False,
+    ):
         for person, indices in persons.items():
             for mention in indices:
                 tokens = list()
@@ -144,7 +156,9 @@ class EntityLinker:
                     name.append(sentence_[i].text)
                 if return_id:
                     if return_str:
-                        yield person, (vector / len(mention)).reshape(1, -1), " ".join(name)
+                        yield person, (vector / len(mention)).reshape(1, -1), " ".join(
+                            name
+                        )
                     else:
                         yield person, (vector / len(mention)).reshape(1, -1)
                 else:
@@ -173,7 +187,11 @@ class EntityLinker:
                             indices[token[2]].append(i)
                     mention_vectors = list(
                         self._vectorize(
-                            sentence, indices, return_id=True, mask_entity=mask_entity, return_str=True
+                            sentence,
+                            indices,
+                            return_id=True,
+                            mask_entity=mask_entity,
+                            return_str=True,
                         )
                     )
 
@@ -184,7 +202,9 @@ class EntityLinker:
                         best_sent = None
                         for person, contexts in kb.items():
                             for context, candidate_vector, mention in zip(
-                                contexts["CONTEXTS"], contexts["EMBEDDINGS"], contexts["MENTIONS"]
+                                contexts["CONTEXTS"],
+                                contexts["EMBEDDINGS"],
+                                contexts["MENTIONS"],
                             ):
                                 if context != sentence:
                                     score = cosine_similarity(
@@ -198,22 +218,38 @@ class EntityLinker:
 
                         if best_candidate == identifier:
                             tp += 1
-                            tps.append({"true": name,
-                                        "pred": best_mention,
-                                        "true_id": identifier,
-                                        "pred_id": best_candidate,
-                                        "score": float(max_score[0][0]),
-                                        "sentence": " ".join([token[0] for token in sentence]),
-                                        "context": " ".join([token[0] for token in best_sent])})
+                            tps.append(
+                                {
+                                    "true": name,
+                                    "pred": best_mention,
+                                    "true_id": identifier,
+                                    "pred_id": best_candidate,
+                                    "score": float(max_score[0][0]),
+                                    "sentence": " ".join(
+                                        [token[0] for token in sentence]
+                                    ),
+                                    "context": " ".join(
+                                        [token[0] for token in best_sent]
+                                    ),
+                                }
+                            )
                         else:
                             fp += 1
-                            fps.append({"true": name,
-                                        "pred": best_mention,
-                                        "true_id": identifier,
-                                        "pred_id": best_candidate,
-                                        "score": float(max_score[0][0]),
-                                        "sentence": " ".join([token[0] for token in sentence]),
-                                        "context": " ".join([token[0] for token in best_sent])})
+                            fps.append(
+                                {
+                                    "true": name,
+                                    "pred": best_mention,
+                                    "true_id": identifier,
+                                    "pred_id": best_candidate,
+                                    "score": float(max_score[0][0]),
+                                    "sentence": " ".join(
+                                        [token[0] for token in sentence]
+                                    ),
+                                    "context": " ".join(
+                                        [token[0] for token in best_sent]
+                                    ),
+                                }
+                            )
             with open(f"droc-{i}.json", "w", encoding="utf-8") as f:
                 json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
             stats.append(
@@ -317,17 +353,26 @@ class EntityLinker:
             fn = 0
             tps = list()
             fps = list()
-            kb = self._build_knowledge_base(novel, similarity_model=True, source=False, target=True)
+            kb = self._build_knowledge_base(
+                novel, similarity_model=True, source=False, target=True
+            )
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
                 if not is_mentioned:
                     continue
                 if is_mentioned:
                     persons = self.get_persons(sentence)
-                    
+
                     mention_vectors = list(
                         self._vectorize(
-                            sentence, persons, return_id=True, mask_entity=mask_entity, return_str=True, similarity_model=True, source=True, target=False
+                            sentence,
+                            persons,
+                            return_id=True,
+                            mask_entity=mask_entity,
+                            return_str=True,
+                            similarity_model=True,
+                            source=True,
+                            target=False,
                         )
                     )
 
@@ -338,7 +383,9 @@ class EntityLinker:
                         best_sent = None
                         for person, contexts in kb.items():
                             for context, candidate_vector, mention in zip(
-                                contexts["CONTEXTS"], contexts["EMBEDDINGS"], contexts["MENTIONS"]
+                                contexts["CONTEXTS"],
+                                contexts["EMBEDDINGS"],
+                                contexts["MENTIONS"],
                             ):
                                 if context != sentence:
                                     score = cosine_similarity(
@@ -351,23 +398,41 @@ class EntityLinker:
                                         best_sent = context
                         if best_candidate == identifier:
                             tp += 1
-                            tps.append({"true": name,
-                                        "pred": best_mention,
-                                        "true_id": identifier,
-                                        "pred_id": best_candidate,
-                                        "score": max_score,
-                                        "sentence": " ".join([token[0] for token in sentence]),
-                                        "context": " ".join([token[0] for token in best_sent])})
+                            tps.append(
+                                {
+                                    "true": name,
+                                    "pred": best_mention,
+                                    "true_id": identifier,
+                                    "pred_id": best_candidate,
+                                    "score": max_score,
+                                    "sentence": " ".join(
+                                        [token[0] for token in sentence]
+                                    ),
+                                    "context": " ".join(
+                                        [token[0] for token in best_sent]
+                                    ),
+                                }
+                            )
                         else:
                             fp += 1
-                            fps.append({"true": name,
-                                        "pred": best_mention,
-                                        "true_id": identifier,
-                                        "pred_id": best_candidate,
-                                        "score": max_score,
-                                        "sentence": " ".join([token[0] for token in sentence]),
-                                        "context": " ".join([token[0] for token in best_sent])})
-            print({"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)})
+                            fps.append(
+                                {
+                                    "true": name,
+                                    "pred": best_mention,
+                                    "true_id": identifier,
+                                    "pred_id": best_candidate,
+                                    "score": max_score,
+                                    "sentence": " ".join(
+                                        [token[0] for token in sentence]
+                                    ),
+                                    "context": " ".join(
+                                        [token[0] for token in best_sent]
+                                    ),
+                                }
+                            )
+            print(
+                {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+            )
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )

@@ -27,9 +27,9 @@ from faktotum.similarity import EntitySimilarity
 random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
-#EMBEDDING = BertEmbeddings(
+# EMBEDDING = BertEmbeddings(
 #    "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
-#)
+# )
 
 
 class EntityLinker:
@@ -244,32 +244,48 @@ class EntityLinker:
 
                     if best_candidate == identifier:
                         tp += 1
-                        tps.append({"true": mention,
+                        tps.append(
+                            {
+                                "true": mention,
+                                "pred": best_context,
+                                "true_id": identifier,
+                                "pred_id": best_candidate,
+                                "score": max_score,
+                                "sentence": " ".join([token[0] for token in sentence]),
+                                "context": " ".join([token[0] for token in best_sent]),
+                            }
+                        )
+                    else:
+                        fp += 1
+                        if best_sent:
+                            fps.append(
+                                {
+                                    "true": mention,
                                     "pred": best_context,
                                     "true_id": identifier,
                                     "pred_id": best_candidate,
                                     "score": max_score,
-                                    "sentence": " ".join([token[0] for token in sentence]),
-                                    "context": " ".join([token[0] for token in best_sent])})
-                    else:
-                        fp += 1
-                        if best_sent:
-                            fps.append({"true": mention,
-                                        "pred": best_context,
-                                        "true_id": identifier,
-                                        "pred_id": best_candidate,
-                                        "score": max_score,
-                                        "sentence": " ".join([token[0] for token in sentence]),
-                                        "context": " ".join([token[0] for token in best_sent])})
+                                    "sentence": " ".join(
+                                        [token[0] for token in sentence]
+                                    ),
+                                    "context": " ".join(
+                                        [token[0] for token in best_sent]
+                                    ),
+                                }
+                            )
         with open("fps-tps.json", "w", encoding="utf-8") as f:
             json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
         with open("scores.json", "w", encoding="utf-8") as f:
-            json.dump({
-            "accuracy": self.accuracy(tp, fp),
-            "precision": self.precision(tp, fp),
-            "num_candidates": statistics.mean(num_candidates),
-            "embedding": "language-models/presse/multi",
-        }, indent=4, ensure_ascii=False)
+            json.dump(
+                {
+                    "accuracy": self.accuracy(tp, fp),
+                    "precision": self.precision(tp, fp),
+                    "num_candidates": statistics.mean(num_candidates),
+                    "embedding": "language-models/presse/multi",
+                },
+                indent=4,
+                ensure_ascii=False,
+            )
         return {
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
@@ -432,8 +448,9 @@ class EntityLinker:
                             candidate_vector = (vector / len(indices)).reshape(1, -1)
 
                             score = network.get_similarity(
-                                        torch.tensor(mention_vector), torch.tensor(candidate_vector)
-                                    ).item()
+                                torch.tensor(mention_vector),
+                                torch.tensor(candidate_vector),
+                            ).item()
                             if score > max_score:
                                 max_score = score
                                 best_candidate = candidate
@@ -442,32 +459,48 @@ class EntityLinker:
 
                     if best_candidate == identifier:
                         tp += 1
-                        tps.append({"true": mention,
+                        tps.append(
+                            {
+                                "true": mention,
+                                "pred": best_context,
+                                "true_id": identifier,
+                                "pred_id": best_candidate,
+                                "score": max_score,
+                                "sentence": " ".join([token[0] for token in sentence]),
+                                "context": " ".join([token[0] for token in best_sent]),
+                            }
+                        )
+                    else:
+                        fp += 1
+                        if best_sent:
+                            fps.append(
+                                {
+                                    "true": mention,
                                     "pred": best_context,
                                     "true_id": identifier,
                                     "pred_id": best_candidate,
                                     "score": max_score,
-                                    "sentence": " ".join([token[0] for token in sentence]),
-                                    "context": " ".join([token[0] for token in best_sent])})
-                    else:
-                        fp += 1
-                        if best_sent:
-                            fps.append({"true": mention,
-                                        "pred": best_context,
-                                        "true_id": identifier,
-                                        "pred_id": best_candidate,
-                                        "score": max_score,
-                                        "sentence": " ".join([token[0] for token in sentence]),
-                                        "context": " ".join([token[0] for token in best_sent])})
+                                    "sentence": " ".join(
+                                        [token[0] for token in sentence]
+                                    ),
+                                    "context": " ".join(
+                                        [token[0] for token in best_sent]
+                                    ),
+                                }
+                            )
         with open("fps-tps.json", "w", encoding="utf-8") as f:
             json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
         with open("scores.json", "w", encoding="utf-8") as f:
-            json.dump({
-            "accuracy": self.accuracy(tp, fp),
-            "precision": self.precision(tp, fp),
-            "num_candidates": statistics.mean(num_candidates),
-            "embedding": "language-models/presse/multi",
-        }, indent=4, ensure_ascii=False)
+            json.dump(
+                {
+                    "accuracy": self.accuracy(tp, fp),
+                    "precision": self.precision(tp, fp),
+                    "num_candidates": statistics.mean(num_candidates),
+                    "embedding": "language-models/presse/multi",
+                },
+                indent=4,
+                ensure_ascii=False,
+            )
         return {
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
