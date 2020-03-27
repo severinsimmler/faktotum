@@ -206,7 +206,7 @@ def test():
         hidden_size=256,
     )
 
-    similarity_measure = CosineSimilarity()
+    similarity_measure = torch.nn.CosineSimilarity()
 
     similarity_loss = torch.nn.CosineEmbeddingLoss()
 
