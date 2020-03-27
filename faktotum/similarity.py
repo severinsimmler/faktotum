@@ -165,25 +165,26 @@ class EntitySimilarity(SimilarityLearner):
                             targets.append(point.second)
                             targets_.add(point.second.identifier)
 
-                    persons = [point.person for point in sources]
-                    sources = self._embed_entities(sources).to(self.eval_device)
-                    targets = self._embed_entities(targets).to(self.eval_device)
+                    if sources and targets:
+                        persons = [point.person for point in sources]
+                        sources = self._embed_entities(sources).to(self.eval_device)
+                        targets = self._embed_entities(targets).to(self.eval_device)
 
-                    print(sources)
+                        print(sources)
 
-                    print("Evaluating")
-                    for person, source in tqdm.tqdm(zip(persons, sources)):
-                        best_score = 0.0
-                        best_label = None
-                        for target in targets:
-                            score = self.similarity_measure(source, target).item()
-                            if score > best_score:
-                                best_score = score
-                                best_label = person
-                        if best_label == person:
-                            tp += 1
-                        else:
-                            fp += 1
+                        print("Evaluating")
+                        for person, source in tqdm.tqdm(zip(persons, sources)):
+                            best_score = 0.0
+                            best_label = None
+                            for target in targets:
+                                score = self.similarity_measure(source, target).item()
+                                if score > best_score:
+                                    best_score = score
+                                    best_label = person
+                            if best_label == person:
+                                tp += 1
+                            else:
+                                fp += 1
         
         precision = tp / (tp + fp)
         print("PRECISION", precision)
