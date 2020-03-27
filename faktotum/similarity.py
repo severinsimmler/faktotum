@@ -53,7 +53,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
+            a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
+            b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.train.append(point)
@@ -63,7 +65,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
+            a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
+            b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.test.append(point)
@@ -73,7 +77,9 @@ class FaktotumDataset(FlairDataset):
             a = Sentence(instance["sentence"], use_tokenizer=False)
             b = Sentence(instance["context"], use_tokenizer=False)
             a.entity_indices = instance["sentence_indices"]
+            a.identifier = instance["sentence_identifier"]
             b.entity_indices = instance["context_indices"]
+            b.identifier = instance["context_identifier"]
             point = DataPair(a, b)
             point.similar = instance["similar"]
             self.dev.append(point)
@@ -105,22 +111,7 @@ class EntitySimilarity(SimilarityLearner):
             vector = vector + v
         return vector / len(vectors)
 
-    def _embed_source(self, data_points):
-        data_points = [point.first for point in data_points]
-
-        self.source_embeddings.embed(data_points)
-
-        entities = list()
-        for sentence in data_points:
-            entity = [sentence[index].embedding for index in sentence.entity_indices]
-            entity = self._average_vectors(entity)
-            entities.append(entity)
-        entities = torch.stack(entities).to(flair.device)
-        return Variable(entities, requires_grad=True)
-
-    def _embed_target(self, data_points):
-        data_points = [point.second for point in data_points]
-
+    def _embed_entities(self, data_points):
         self.source_embeddings.embed(data_points)
 
         entities = list()
@@ -138,8 +129,8 @@ class EntitySimilarity(SimilarityLearner):
     def forward_loss(
         self, data_points: Union[List[DataPoint], DataPoint]
     ) -> torch.tensor:
-        source = self._embed_source(data_points)
-        target = self._embed_target(data_points)
+        source = self._embed_source([point.first for point in data_points])
+        target = self._embed_target([point.second for point in data_points])
         y = self._get_y(data_points)
         return self.similarity_loss(source, target, y)
 
@@ -149,9 +140,40 @@ class EntitySimilarity(SimilarityLearner):
         out_path: Path = None,
         embedding_storage_mode="none",
     ) -> (Result, float):
-        # assumes that for each data pair there's at least one embedding per modality
-
         with torch.no_grad():
+            data_points = [data_point for data_point in data_loader if data_point.similar == 1]
+            
+            sources = list()
+            sources_ = set()
+            targets = list()
+            targets_ = set()
+            for point in data_points:
+                if point.first.identifier not in sources_:
+                    sources.append(point.first)
+                    sources_.add(point.first.identifier)
+                if point.second.identifier not in targets_:
+                    targets.append(point.second)
+                    targets_.add(point.second.identifier)
+
+            sources = self._embed_entities(sources).to(self.eval_device)
+            targets = self._embed_entities(targets).to(self.eval_device)
+
+            print("Evaluating")
+            for source in tqdm.tqdm(sources):
+                best_score = None
+                best_label = None
+                for target in targets:
+
+
+
+
+
+            for data_point in data_loader:
+                # Evaluate only positive examples
+                if data_point.similar == 1:
+                    source = self._embed_source([data_point.first])
+
+            
             # pre-compute embeddings for all targets in evaluation dataset
             target_index = {}
             all_target_embeddings = []
@@ -238,8 +260,15 @@ class EntitySimilarity(SimilarityLearner):
 
 def test():
     corpus = FaktotumDataset("droc")
-    embedding = BertEmbeddings(
+    embedding = DocumentRNNEmbeddings(
+        [
+            BertEmbeddings(
         "/mnt/data/users/simmler/model-zoo/ner-droc"
+        ),
+        ],
+        bidirectional=True,
+        dropout=0.25,
+        hidden_size=256,
     )
 
     similarity_measure = CosineSimilarity()
