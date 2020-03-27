@@ -163,6 +163,7 @@ class EntitySimilarity(SimilarityLearner):
                 best_score = None
                 best_label = None
                 for target in targets:
+                    pass
 
 
 
