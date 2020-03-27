@@ -341,15 +341,14 @@ class EntityLinker:
                                 contexts["CONTEXTS"], contexts["EMBEDDINGS"], contexts["MENTIONS"]
                             ):
                                 if context != sentence:
-                                    score = network.get_similarity(
-                                        torch.tensor(mention_vector), torch.tensor(candidate_vector)
-                                    ).item()
+                                    score = cosine_similarity(
+                                        mention_vector, candidate_vector
+                                    )
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
                                         best_mention = mention
                                         best_sent = context
-
                         if best_candidate == identifier:
                             tp += 1
                             tps.append({"true": name,
