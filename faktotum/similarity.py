@@ -95,7 +95,7 @@ from flair.data import Corpus
 from flair.nn import LockedDropout, WordDropout
 from flair.data import Dictionary, Token, Sentence, Image
 from flair.file_utils import cached_path, open_inside_zip
-
+from flair.embeddings import *
 
 class FaktotumDataset(FlairDataset):
     def __init__(self, name: str, in_memory: bool = True, **kwargs):
@@ -227,7 +227,7 @@ class EntitySimilarity(SimilarityLearner):
         )
 
 
-class DocumentRNNEmbeddings(DocumentEmbeddings):
+class _DocumentRNNEmbeddings(DocumentEmbeddings):
     def __init__(
         self,
         embeddings: List[TokenEmbeddings],
@@ -448,7 +448,7 @@ class DocumentRNNEmbeddings(DocumentEmbeddings):
 
 def test():
     corpus = FaktotumDataset("droc")
-    embedding = DocumentRNNEmbeddings(
+    embedding = _DocumentRNNEmbeddings(
         [
             BertEmbeddings(
         "/mnt/data/users/simmler/model-zoo/ner-droc"
