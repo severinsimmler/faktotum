@@ -161,7 +161,7 @@ class EntitySimilarity(SimilarityLearner):
             score = score / i
         return (
             Result(
-                score,
+                1 - score,
                 f"{score}",
                 f"{score}",
                 f"{score}",
