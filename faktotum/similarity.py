@@ -269,7 +269,7 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
             for i, token in enumerate(sentence):
                 if i in index:
                     for emb in token.get_each_embedding():
-                        all_embs.append(emb)
+                        all_embs.extend(emb)
 
             nb_padding_tokens = longest_token_sequence_in_batch - len(indices)
 
