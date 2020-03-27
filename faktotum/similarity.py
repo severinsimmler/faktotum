@@ -151,6 +151,7 @@ class EntitySimilarity(SimilarityLearner):
         self, data_points: Union[List[DataPoint], DataPoint]
     ) -> torch.tensor:
         source = self._embed_source([point.first for point in data_points])
+        print(source[0])
         target = self._embed_target([point.second for point in data_points])
         y = self._get_y(data_points)
         return self.similarity_loss(source, target, y)
@@ -181,128 +182,23 @@ class EntitySimilarity(SimilarityLearner):
             0,
         )
 
-class EntityEmbeddings(DocumentRNNEmbeddings):
-    def __init__(*args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-    def _add_embeddings_internal(self, sentences, indices):
-        """Add embeddings to all sentences in the given list of sentences. If embeddings are already added, update
-         only if embeddings are non-static."""
-
-        # TODO: remove in future versions
-        if not hasattr(self, "locked_dropout"):
-            self.locked_dropout = None
-        if not hasattr(self, "word_dropout"):
-            self.word_dropout = None
-
-        if type(sentences) is Sentence:
-            sentences = [sentences]
-
-        self.rnn.zero_grad()
-
-        # embed words in the sentence
-        self.embeddings.embed(sentences)
-
-        lengths: List[int] = [len(index) for index in indices]
-        longest_token_sequence_in_batch: int = max(lengths)
-
-        pre_allocated_zero_tensor = torch.zeros(
-            self.embeddings.embedding_length * longest_token_sequence_in_batch,
-            dtype=torch.float,
-            device=flair.device,
-        )
-
-        all_embs: List[torch.Tensor] = list()
-        for index, sentence in zip(indices, sentences):
-            for i, token in enumerate(sentence):
-                if i in index:
-                    for emb in token.get_each_embedding():
-                        all_embs.append(emb)
-
-            nb_padding_tokens = longest_token_sequence_in_batch - len(sentence)
-
-            if nb_padding_tokens > 0:
-                t = pre_allocated_zero_tensor[
-                    : self.embeddings.embedding_length * nb_padding_tokens
-                ]
-                all_embs.append(t)
-
-        sentence_tensor = torch.cat(all_embs).view(
-            [
-                len(sentences),
-                longest_token_sequence_in_batch,
-                self.embeddings.embedding_length,
-            ]
-        )
-
-        # before-RNN dropout
-        if self.dropout:
-            sentence_tensor = self.dropout(sentence_tensor)
-        if self.locked_dropout:
-            sentence_tensor = self.locked_dropout(sentence_tensor)
-        if self.word_dropout:
-            sentence_tensor = self.word_dropout(sentence_tensor)
-
-        # reproject if set
-        if self.reproject_words:
-            sentence_tensor = self.word_reprojection_map(sentence_tensor)
-
-        # push through RNN
-        packed = pack_padded_sequence(
-            sentence_tensor, lengths, enforce_sorted=False, batch_first=True
-        )
-        rnn_out, hidden = self.rnn(packed)
-        outputs, output_lengths = pad_packed_sequence(rnn_out, batch_first=True)
-
-        # after-RNN dropout
-        if self.dropout:
-            outputs = self.dropout(outputs)
-        if self.locked_dropout:
-            outputs = self.locked_dropout(outputs)
-
-        # extract embeddings from RNN
-        for sentence_no, length in enumerate(lengths):
-            last_rep = outputs[sentence_no, length - 1]
-
-            embedding = last_rep
-            if self.bidirectional:
-                first_rep = outputs[sentence_no, 0]
-                embedding = torch.cat([first_rep, last_rep], 0)
-
-            if self.static_embeddings:
-                embedding = embedding.detach()
-
-            sentence = sentences[sentence_no]
-            sentence.set_embedding(self.name, embedding)
-
-    def embed(self, sentences: Union[Sentence, List[Sentence]], indices) -> List[Sentence]:
-        """Add embeddings to all words in a list of sentences. If embeddings are already added, updates only if embeddings
-        are non-static."""
-
-        # if only one sentence is passed, convert to list of sentence
-        if (type(sentences) is Sentence) or (type(sentences) is Image):
-            sentences = [sentences]
-
-        everything_embedded: bool = True
-
-        if self.embedding_type == "word-level":
-            for sentence in sentences:
-                for token in sentence.tokens:
-                    if self.name not in token._embeddings.keys():
-                        everything_embedded = False
-        else:
-            for sentence in sentences:
-                if self.name not in sentence._embeddings.keys():
-                    everything_embedded = False
-
-        if not everything_embedded or not self.static_embeddings:
-            self._add_embeddings_internal(sentences, indices)
-
-        return sentences
-
 
 def test():
     corpus = FaktotumDataset("droc")
+
+
+    embedding = DocumentRNNEmbeddings(
+    [
+        BertEmbeddings(
+        "/mnt/data/users/simmler/model-zoo/ner-droc"
+        ),
+    ],
+    bidirectional=True,
+    dropout=0.25,
+    hidden_size=256,
+    )
+
+
     embedding = BertEmbeddings(
         "/mnt/data/users/simmler/model-zoo/ner-droc"
         )
