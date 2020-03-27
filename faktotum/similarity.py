@@ -14,7 +14,7 @@ from flair.models.similarity_learning_model import (
     RankingLoss,
     SimilarityLearner,
     SimilarityMeasure,
-    ModelSimilarity
+    CosineSimilarity
 )
 from flair.trainers import ModelTrainer
 from torch.autograd import Variable
@@ -77,7 +77,7 @@ class FaktotumDataset(FlairDataset):
         return self.data_points[index]
 
 
-class CosineSimilarity(SimilarityMeasure):
+class _CosineSimilarity(SimilarityMeasure):
     def forward(self, x):
         input_modality_0 = x[0]
         input_modality_1 = x[1]
