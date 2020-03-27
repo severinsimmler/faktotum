@@ -169,6 +169,7 @@ class EntitySimilarity(SimilarityLearner):
                         persons = [point.person for point in sources]
                         sources = self._embed_entities(sources).to(self.eval_device)
                         targets = self._embed_entities(targets).to(self.eval_device)
+                        print("PERSONS IN BATCH", len(persons))
 
                         print("Evaluating")
                         for person, source in tqdm.tqdm(zip(persons, sources)):
@@ -179,7 +180,6 @@ class EntitySimilarity(SimilarityLearner):
                                 if score > best_score:
                                     best_score = score
                                     best_label = person
-                            print(best_label, person)
                             if best_label == person:
                                 tp += 1
                             else:
