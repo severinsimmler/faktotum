@@ -66,6 +66,7 @@ class EntityLinker:
         threshold: int = 1,
         mask_entity: bool = False,
         build_embeddings=True,
+        similarity_model=False, source=False, target=True
     ):
         context = defaultdict(list)
         mentions = defaultdict(list)
@@ -82,6 +83,9 @@ class EntityLinker:
                                     sentence,
                                     index={token[2]: [i]},
                                     mask_entity=mask_entity,
+                                    similarity_model=similarity_model,
+                                    source=source,
+                                    target=target
                                 )
                             )
                             embeddings[token[2]].append(vector)
@@ -95,32 +99,63 @@ class EntityLinker:
         return {key: value for key, value in kb.items() if value}
 
     @staticmethod
-    def _vectorize(sentence, index, mask_entity: bool = False, return_id=False, return_str=False):
-        for person, indices in index.items():
-            tokens = list()
-            for i, token in enumerate(sentence):
-                if i in indices and mask_entity:
-                    tokens.append("[MASK]")
+    def get_persons(sent):
+        persons = dict()
+        
+        for token in sent:
+            if token[2] != "-":
+                persons[token[2]] = list()
+        
+        for i, token in enumerate(sent):
+            if token[2] != "-":
+                if persons[token[2]] and persons[token[2]][-1][-1] == i - 1:
+                    # wenn entität aus mehreren tokens besteht
+                    persons[token[2]][-1].append(i)
+                elif persons[token[2]] and persons[token[2]][-1] != i - 1:
+                    # wenn entität mehrmals im satz vorkommt
+                    persons[token[2]].append([i])
+                elif not persons[token[2]]:
+                    # wenn entität zum ersten mal vorkommt
+                    persons[token[2]].append([i])
+        return persons
+
+
+    def _vectorize(self, sentence, persons, mask_entity: bool = False, return_id=False, return_str=False, similarity_model=False, source=False, target=False):
+        for person, indices in persons.items():
+            for mention in indices:
+                tokens = list()
+                for i, token in enumerate(sentence):
+                    if i in indices and mask_entity:
+                        tokens.append("[MASK]")
+                    else:
+                        tokens.append(token[0])
+                text = " ".join(tokens)
+                sentence_ = Sentence(text, use_tokenizer=False)
+                if not similarity_model:
+                    EMBEDDING.embed(sentence_)
                 else:
-                    tokens.append(token[0])
-            text = " ".join(tokens)
-            sentence_ = Sentence(text, use_tokenizer=False)
-            EMBEDDING.embed(sentence_)
-            vector = sentence_[indices[0]].get_embedding().numpy()
-            name = [sentence_[indices[0]].text]
-            for i in indices[1:]:
-                vector = vector + sentence_[i].get_embedding().numpy()
-                name.append(sentence_[i].text)
-            if return_id:
-                if return_str:
-                    yield person, (vector / len(indices)).reshape(1, -1), " ".join(name)
+                    if source:
+                        e = self.network.source_embedding
+                    elif target:
+                        e = self.network.target_embedding
+                    e.embed(sentence_)
+                vector = sentence_[indices[0]].get_embedding().numpy()
+                name = [sentence_[indices[0]].text]
+                for i in indices[1:]:
+                    vector = vector + sentence_[i].get_embedding().numpy()
+                    name.append(sentence_[i].text)
+                if return_id:
+                    if return_str:
+                        yield person, (vector / len(indices)).reshape(1, -1), " ".join(name)
+                    else:
+                        yield person, (vector / len(indices)).reshape(1, -1)
                 else:
-                    yield person, (vector / len(indices)).reshape(1, -1)
-            else:
-                if return_str:
-                    yield (vector / len(indices)).reshape(1, -1), " ".join(name)
-                else:
-                    yield (vector / len(indices)).reshape(1, -1)
+                    if return_str:
+                        yield (vector / len(indices)).reshape(1, -1), " ".join(name)
+                    else:
+                        yield (vector / len(indices)).reshape(1, -1)
+
+
 
     def similarities(self, mask_entity=False):
         stats = list()
@@ -278,7 +313,7 @@ class EntityLinker:
         return np.array(X), np.array(y)
 
     def model(self, model_path, mask_entity=False):
-        network = EntitySimilarity.load(model_path)
+        self.network = EntitySimilarity.load(model_path)
         stats = list()
         for i, novel in enumerate(self.test.values()):
             tp = 0
@@ -286,19 +321,17 @@ class EntityLinker:
             fn = 0
             tps = list()
             fps = list()
-            kb = self._build_knowledge_base(novel)
+            kb = self._build_knowledge_base(novel, similarity_model=True, source=False, target=True)
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
                 if not is_mentioned:
                     continue
                 if is_mentioned:
-                    indices = defaultdict(list)
-                    for i, token in enumerate(sentence):
-                        if token[2] != "-":
-                            indices[token[2]].append(i)
+                    persons = self.get_persons(sentence)
+                    
                     mention_vectors = list(
                         self._vectorize(
-                            sentence, indices, return_id=True, mask_entity=mask_entity, return_str=True
+                            sentence, persons, return_id=True, mask_entity=mask_entity, return_str=True, similarity_model=True, source=True, target=False
                         )
                     )
 
