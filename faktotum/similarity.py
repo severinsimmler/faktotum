@@ -150,37 +150,40 @@ class EntitySimilarity(SimilarityLearner):
         fp = 0
         with torch.no_grad():
             for batch in data_loader:
-                data_points = [data_point for data_point in batch if data_point.similar == 1]
-                
-                sources = list()
-                sources_ = set()
-                targets = list()
-                targets_ = set()
-                for point in data_points:
-                    if point.first.identifier not in sources_:
-                        sources.append(point.first)
-                        sources_.add(point.first.identifier)
-                    if point.second.identifier not in targets_:
-                        targets.append(point.second)
-                        targets_.add(point.second.identifier)
+                if batch:
+                    data_points = [data_point for data_point in batch if data_point.similar == 1]
+                    
+                    sources = list()
+                    sources_ = set()
+                    targets = list()
+                    targets_ = set()
+                    for point in data_points:
+                        if point.first.identifier not in sources_:
+                            sources.append(point.first)
+                            sources_.add(point.first.identifier)
+                        if point.second.identifier not in targets_:
+                            targets.append(point.second)
+                            targets_.add(point.second.identifier)
 
-                persons = [point.person for point in sources]
-                sources = self._embed_entities(sources).to(self.eval_device)
-                targets = self._embed_entities(targets).to(self.eval_device)
+                    persons = [point.person for point in sources]
+                    sources = self._embed_entities(sources).to(self.eval_device)
+                    targets = self._embed_entities(targets).to(self.eval_device)
 
-                print("Evaluating")
-                for person, source in tqdm.tqdm(zip(persons, sources)):
-                    best_score = 0.0
-                    best_label = None
-                    for target in targets:
-                        score = self.similarity_measure(source, target).item()
-                        if score > best_score:
-                            best_score = score
-                            best_label = person
-                    if best_label == person:
-                        tp += 1
-                    else:
-                        fp += 1
+                    print(sources)
+
+                    print("Evaluating")
+                    for person, source in tqdm.tqdm(zip(persons, sources)):
+                        best_score = 0.0
+                        best_label = None
+                        for target in targets:
+                            score = self.similarity_measure(source, target).item()
+                            if score > best_score:
+                                best_score = score
+                                best_label = person
+                        if best_label == person:
+                            tp += 1
+                        else:
+                            fp += 1
         
         precision = tp / (tp + fp)
         print("PRECISION", precision)
