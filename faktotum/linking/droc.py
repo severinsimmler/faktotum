@@ -18,7 +18,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from faktotum.regression import Regression
 from faktotum.similarity import EntitySimilarity
 import random
-
+import torch
 
 EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
@@ -313,7 +313,7 @@ class EntityLinker:
                             ):
                                 if context != sentence:
                                     score = network.get_similarity(
-                                        mention_vector, candidate_vector
+                                        torch.tensor(mention_vector), torch.tensor(candidate_vector)
                                     ).item()
                                     if score > max_score:
                                         max_score = score
