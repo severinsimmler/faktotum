@@ -303,17 +303,6 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
 
 def test():
     corpus = FaktotumDataset("droc")
-    embedding = EntityEmbeddings(
-        [
-            BertEmbeddings(
-        "/mnt/data/users/simmler/model-zoo/ner-droc"
-        ),
-        ],
-        bidirectional=True,
-        dropout=0.25,
-        hidden_size=256,
-        rnn_type="LSTM"
-    )
     embedding = BertEmbeddings(
         "/mnt/data/users/simmler/model-zoo/ner-droc"
         )
