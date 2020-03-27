@@ -178,7 +178,7 @@ class EntitySimilarity(SimilarityLearner):
         )
 
 class EntityEmbeddings(DocumentRNNEmbeddings):
-    def __init__(**kwargs):
+    def __init__(self, **kwargs):
         super(EntityEmbeddings, self).__init__(**kwargs)
 
     def _add_embeddings_internal(self, sentences, indices):
