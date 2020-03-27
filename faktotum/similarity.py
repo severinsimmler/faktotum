@@ -96,7 +96,7 @@ class FaktotumDataset(FlairDataset):
 
 class EntitySimilarity(SimilarityLearner):
     def __init__(self, **kwargs):
-        super(EntitySimilarityLearner, self).__init__(**kwargs)
+        super(EntitySimilarity, self).__init__(**kwargs)
 
     @staticmethod
     def _average_vectors(vectors):
