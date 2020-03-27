@@ -1,24 +1,30 @@
-import json
-from pathlib import Path
-from typing import Union, List
-from collections import defaultdict
-import uuid
 import itertools
-import torch
-from torch.autograd import Variable
+import json
+import uuid
+from collections import defaultdict
+from pathlib import Path
+from typing import List, Union
+
 import flair
+import torch
 from flair.data import DataPair, DataPoint, Sentence
 from flair.datasets import FlairDataset
-from flair.embeddings import DocumentRNNEmbeddings, BertEmbeddings
-from flair.models.similarity_learning_model import SimilarityLearner, CosineSimilarity, PairwiseBCELoss
+from flair.embeddings import BertEmbeddings, DocumentRNNEmbeddings
+from flair.models.similarity_learning_model import (
+    PairwiseBCELoss,
+    SimilarityLearner,
+    SimilarityMeasure,
+    ModelSimilarity
+)
 from flair.trainers import ModelTrainer
+from torch.autograd import Variable
 
 
 class FaktotumDataset(FlairDataset):
-    def __init__(self, in_memory: bool = True, **kwargs):
+    def __init__(self, name: str, in_memory: bool = True, **kwargs):
         super(FaktotumDataset, self).__init__()
-
-        self.train: List[DataPair] = []
+        self.name = name
+        self.train = list()
         self.dev = list()
         self.test = list()
 
@@ -55,10 +61,13 @@ class FaktotumDataset(FlairDataset):
             point.ID = instance["person_id"]
             self.dev.append(point)
 
-    @staticmethod
-    def _load_corpus(name):
+        self.data_points = self.train + self.test + self.dev
+
+    def _load_corpus(self, dataset):
         module = Path(__file__).resolve().parent
-        data = Path(module, "data", "smartdata", "similarity", f"{name}.json").read_text(encoding="utf-8")
+        data = Path(
+            module, "data", self.name, "similarity", f"{dataset}.json"
+        ).read_text(encoding="utf-8")
         return json.loads(data)
 
     def __len__(self):
@@ -66,6 +75,15 @@ class FaktotumDataset(FlairDataset):
 
     def __getitem__(self, index: int = 0) -> DataPair:
         return self.data_points[index]
+
+
+class CosineSimilarity(SimilarityMeasure):
+    def forward(self, x):
+        input_modality_0 = x[0]
+        input_modality_1 = x[1]
+        cos = torch.nn.CosineSimilarity(dim=-1)
+        return cos(input_modality_0, input_modality_1)
+
 
 
 class EntitySimilarityLearner(SimilarityLearner):
@@ -101,7 +119,9 @@ class EntitySimilarityLearner(SimilarityLearner):
 
         return Variable(target_embedding_tensor, requires_grad=True)
 
-    def forward_loss(self, data_points: Union[List[DataPoint], DataPoint]) -> torch.tensor:
+    def forward_loss(
+        self, data_points: Union[List[DataPoint], DataPoint]
+    ) -> torch.tensor:
         mapped_source_embeddings = self._embed_source(data_points)
         mapped_target_embeddings = self._embed_target(data_points)
 
@@ -131,15 +151,19 @@ class EntitySimilarityLearner(SimilarityLearner):
             person_indices[data_point.ID].append(data_point_id)
 
         for key, value in person_indices.items():
-            for i in  value:
+            for i in value:
                 for sent_id, point_ids in index_map["first"].items():
                     if i in point_ids:
                         index_map["first"][sent_id].extend(value)
-                        index_map["first"][sent_id] = sorted(list(set(index_map["first"][sent_id])))
+                        index_map["first"][sent_id] = sorted(
+                            list(set(index_map["first"][sent_id]))
+                        )
                 for sent_id, point_ids in index_map["second"].items():
                     if i in point_ids:
                         index_map["second"][sent_id].extend(value)
-                        index_map["second"][sent_id] = sorted(list(set(index_map["second"][sent_id])))
+                        index_map["second"][sent_id] = sorted(
+                            list(set(index_map["second"][sent_id]))
+                        )
 
         targets = torch.zeros_like(similarity_matrix).to(flair.device)
 
@@ -158,26 +182,32 @@ class EntitySimilarityLearner(SimilarityLearner):
 
 def test():
     corpus = FaktotumDataset()
-    embedding = BertEmbeddings('/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted')
+    embedding = BertEmbeddings(
+        "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
+    )
 
     source_embedding = embedding
     target_embedding = embedding
 
-    similarity_measure = CosineSimilarity()
+    similarity_measure = ModelSimilarity()
 
     similarity_loss = PairwiseBCELoss()
 
-    similarity_model = EntitySimilarityLearner(source_embeddings=source_embedding,
-                                                target_embeddings=target_embedding,
-                                                similarity_measure=similarity_measure,
-                                                similarity_loss=similarity_loss)
+    similarity_model = EntitySimilarityLearner(
+        source_embeddings=source_embedding,
+        target_embeddings=target_embedding,
+        similarity_measure=similarity_measure,
+        similarity_loss=similarity_loss,
+    )
 
-    trainer: ModelTrainer = ModelTrainer(similarity_model,corpus, optimizer=torch.optim.SGD)
+    trainer: ModelTrainer = ModelTrainer(
+        similarity_model, corpus, optimizer=torch.optim.SGD
+    )
 
     trainer.train(
-        'smartdata-cosine-bcp-improved-loss',
+        "smartdata-cosine-bcp-improved-loss",
         mini_batch_size=16,
-        embeddings_storage_mode='none'
+        embeddings_storage_mode="none",
     )
 
 

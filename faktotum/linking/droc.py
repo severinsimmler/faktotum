@@ -276,75 +276,71 @@ class EntityLinker:
                             y.append(0.0)
         return np.array(X), np.array(y)
 
-    def regression(
-        self,
-        X_train=None,
-        y_train=None,
-        X_test=None,
-        y_test=None,
-        generate_data=False,
-        mask_entity=True,
-    ):
-        if generate_data:
-            X_train, y_train = self._generate_data(self.train)
-            X_test, y_test = self._generate_data(self.test)
-        model = Regression()
-        history = model.fit(X_train, y_train)
-        test_mse_score, test_mae_score = model.evaluate(X_test, y_test)
-        print("MSE", test_mse_score)
-        print("MAE", test_mae_score)
-
-        # EVALUATION
+    def model(self, model_path, mask_entity=False):
+        network = EntitySimilarity.load(model_path)
         stats = list()
-        for novel in tqdm.tqdm(self.test.values()):
+        for i, novel in enumerate(self.test.values()):
             tp = 0
             fp = 0
             fn = 0
-            kb = self._build_knowledge_base(
-                novel, mask_entity=mask_entity, build_embeddings=True
-            )
+            tps = list()
+            fps = list()
+            kb = self._build_knowledge_base(novel)
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
                 if not is_mentioned:
                     continue
-                elif is_mentioned:
+                if is_mentioned:
                     indices = defaultdict(list)
                     for i, token in enumerate(sentence):
                         if token[2] != "-":
                             indices[token[2]].append(i)
                     mention_vectors = list(
                         self._vectorize(
-                            sentence, indices, return_id=True, mask_entity=mask_entity
+                            sentence, indices, return_id=True, mask_entity=mask_entity, return_str=True
                         )
                     )
 
-                    for identifier, mention_vector in mention_vectors:
+                    for identifier, mention_vector, name in mention_vectors:
                         max_score = 0.0
                         best_candidate = None
+                        best_mention = None
+                        best_sent = None
                         for person, contexts in kb.items():
-                            for context, candidate_vector in zip(
-                                contexts["CONTEXTS"], contexts["EMBEDDINGS"]
+                            for context, candidate_vector, mention in zip(
+                                contexts["CONTEXTS"], contexts["EMBEDDINGS"], contexts["MENTIONS"]
                             ):
                                 if context != sentence:
-                                    instance = np.array(
-                                        np.concatenate(
-                                            (mention_vector[0], candidate_vector[0])
-                                        )
-                                    )
-                                    score = model.predict(instance)[0]
-                                    print(score)
+                                    score = network.get_similarity(
+                                        mention_vector, candidate_vector
+                                    ).item()
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
+                                        best_mention = mention
+                                        best_sent = context
 
                         if best_candidate == identifier:
                             tp += 1
+                            tps.append({"true": name,
+                                        "pred": best_mention,
+                                        "true_id": identifier,
+                                        "pred_id": best_candidate,
+                                        "score": float(max_score[0][0]),
+                                        "sentence": " ".join([token[0] for token in sentence]),
+                                        "context": " ".join([token[0] for token in best_sent])})
                         else:
                             fp += 1
-            result = {
-                "accuracy": self.accuracy(tp, fp),
-                "precision": self.precision(tp, fp),
-            }
-            print(result)
-            stats.append(result)
+                            fps.append({"true": name,
+                                        "pred": best_mention,
+                                        "true_id": identifier,
+                                        "pred_id": best_candidate,
+                                        "score": float(max_score[0][0]),
+                                        "sentence": " ".join([token[0] for token in sentence]),
+                                        "context": " ".join([token[0] for token in best_sent])})
+            with open(f"droc-{i}.json", "w", encoding="utf-8") as f:
+                json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
+            stats.append(
+                {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
+            )
         return pd.DataFrame(stats).describe()
