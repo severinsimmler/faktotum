@@ -18,6 +18,25 @@ from flair.models.similarity_learning_model import (
 )
 from flair.trainers import ModelTrainer
 from torch.autograd import Variable
+from abc import abstractmethod
+
+import flair
+from flair.data import DataPoint, DataPair
+from flair.embeddings import Embeddings
+from flair.datasets import DataLoader
+from flair.training_utils import Result
+from flair.training_utils import store_embeddings
+
+import torch
+from torch import nn
+import torch.nn.functional as F
+
+import numpy as np
+
+import itertools
+
+from typing import Union, List
+from pathlib import Path
 
 
 class FaktotumDataset(FlairDataset):
