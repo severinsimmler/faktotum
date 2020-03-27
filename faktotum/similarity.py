@@ -145,6 +145,7 @@ class EntitySimilarity(SimilarityLearner):
         return Variable(entities, requires_grad=True)
 
 
+
     @staticmethod
     def _get_y(data_points):
         return torch.tensor([sentence.similar for sentence in data_points]).to(flair.device)
@@ -175,7 +176,7 @@ class EntitySimilarity(SimilarityLearner):
             score = score / i
         return (
             Result(
-                1 - score,
+                score,
                 f"{score}",
                 f"{score}",
                 f"{score}",
@@ -184,25 +185,19 @@ class EntitySimilarity(SimilarityLearner):
         )
 
 
+
 def test():
     corpus = FaktotumDataset("droc")
-
-
     embedding = DocumentRNNEmbeddings(
-    [
-        BertEmbeddings(
+        [
+            BertEmbeddings(
         "/mnt/data/users/simmler/model-zoo/ner-droc"
         ),
-    ],
-    bidirectional=True,
-    dropout=0.25,
-    hidden_size=256,
+        ],
+        bidirectional=True,
+        dropout=0.25,
+        hidden_size=256,
     )
-
-
-    embedding = BertEmbeddings(
-        "/mnt/data/users/simmler/model-zoo/ner-droc"
-        )
 
     similarity_measure = torch.nn.CosineSimilarity(dim=-1)
 
