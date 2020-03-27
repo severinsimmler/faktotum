@@ -121,7 +121,7 @@ class EntitySimilarity(SimilarityLearner):
         return vector / len(vectors)
 
     def _embed_source(self, data_points):
-        self.source_embeddings.embed(data_points, [index for index in sentence.entity_indices])
+        self.source_embeddings.embed(data_points)
 
         entities = list()
         for sentence in data_points:
@@ -132,7 +132,7 @@ class EntitySimilarity(SimilarityLearner):
         return Variable(entities, requires_grad=True)
 
     def _embed_target(self, data_points):
-        self.target_embeddings.embed(data_points, [index for index in sentence.entity_indices])
+        self.target_embeddings.embed(data_points)
 
         entities = list()
         for sentence in data_points:
