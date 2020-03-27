@@ -176,7 +176,7 @@ class EntitySimilarity(SimilarityLearner):
                         score = self.similarity_measure(source, target).item()
                         if score > best_score:
                             best_score = score
-                            best_label = target.person
+                            best_label = person
                     if best_label == person:
                         tp += 1
                     else:
