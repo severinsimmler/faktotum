@@ -1,5 +1,6 @@
 import flair
 import torch
+import tqdm
 from flair.datasets import FlairDataset
 from flair.embeddings import BertEmbeddings, DocumentRNNEmbeddings
 from flair.models.similarity_learning_model import (
