@@ -4,7 +4,7 @@ from pathlib import Path
 import flair
 import torch
 import tqdm
-from flait.data import Sentence, DataPair
+from flair.data import Sentence, DataPair
 from flair.datasets import FlairDataset
 from flair.embeddings import BertEmbeddings, DocumentRNNEmbeddings
 from flair.models.similarity_learning_model import (
