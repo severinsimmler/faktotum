@@ -52,7 +52,7 @@ class FaktotumDataset(FlairDataset):
         return self.data_points[index]
 
 
-def train(corpus_name, embeddings_path):
+def train(corpus_name="droc", embeddings_path="/mnt/data/users/simmler/model-zoo/ner-droc"):
     corpus = FaktotumDataset(corpus_name)
 
     embedding = DocumentRNNEmbeddings(
@@ -84,7 +84,7 @@ def train(corpus_name, embeddings_path):
         f"{corpus_name}-similarity-model",
         learning_rate=2,
         mini_batch_size=64,
-        max_epochs=50,
+        max_epochs=100,
         min_learning_rate=1e-6,
         shuffle=True,
         anneal_factor=0.5,
