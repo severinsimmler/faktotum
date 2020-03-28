@@ -64,6 +64,7 @@ def train(corpus_name="droc", embeddings_path="/mnt/data/users/simmler/model-zoo
         [BertEmbeddings(embeddings_path),],
         bidirectional=True,
         dropout=0.25,
+        rnn_type="LSTM",
         hidden_size=256,
     )
 
