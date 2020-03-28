@@ -158,6 +158,7 @@ class EntitySimilarity(SimilarityLearner):
 
 def test():
     corpus = FaktotumDataset("droc")
+    """
     embedding = DocumentRNNEmbeddings(
         [
             BertEmbeddings(
@@ -183,10 +184,11 @@ def test():
 
     trainer: ModelTrainer = ModelTrainer(
         similarity_model, corpus, optimizer=torch.optim.SGD
-    )
+    )"""
 
+    trainer = ModelTrainer.load_checkpoint("droc-similarity-model/best-model.pt", corpus)
     trainer.train(
-        "droc-similarity-model",
+        "droc-similarity-model1",
         mini_batch_size=64,
         max_epochs=10,
         embeddings_storage_mode="none",
@@ -195,3 +197,5 @@ def test():
 
 if __name__ == "__main__":
     test()
+    # https://omoindrot.github.io/triplet-loss#triplet-mining
+    # https://gombru.github.io/2019/04/03/ranking_loss/
