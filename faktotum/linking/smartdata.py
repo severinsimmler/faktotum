@@ -22,7 +22,6 @@ from faktotum import utils
 import statistics
 from strsimpy.jaro_winkler import JaroWinkler
 from faktotum import utils
-from faktotum.similarity import EntitySimilarity
 
 random.seed(23)
 
