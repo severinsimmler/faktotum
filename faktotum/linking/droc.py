@@ -166,10 +166,6 @@ class EntityLinker:
             score = SENTENCE_MODEL.similarity_measure(
                 source.embedding, target.embedding
             ).item()
-            print(source)
-            print(target)
-            print(score)
-            print()
             return score
 
     def similarities(self, mask_entity=False):
