@@ -145,10 +145,9 @@ class SentenceSimilarityLearner(SimilarityLearner):
                 df = pd.DataFrame({"scores": scores, "agreement": agreement})
                 df = df.sort_values("scores", ascending=False).reset_index(drop=True)
                 df = df[df["agreement"] == True]
-                ranks.append(min(df.index) / len(target_y))
-                ranks.append(max(df.index) / len(target_y))
+                ranks.append(min(df.index) / len(agreement))
+                ranks.append(max(df.index) / len(agreement))
 
-        print(len(target_y))
         results_header_str = "\t".join(
             ["Median rank", "Mean rank", "Standard deviation"]
         )
