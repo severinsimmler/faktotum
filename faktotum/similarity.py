@@ -91,7 +91,7 @@ class SentenceSimilarity(SimilarityLearner):
                     else:
                         y.append(-1.0)
                     _sources.add(str(a.first))
-        print(sources)
+        print(torch.stack(sources))
 
         sources = torch.tensor(sources).to(flair.device)
         targets = torch.tensor(targets).to(flair.device)
