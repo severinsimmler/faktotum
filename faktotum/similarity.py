@@ -148,6 +148,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
                 ranks.append(min(df.index) / len(target_y))
                 ranks.append(max(df.index) / len(target_y))
 
+        print(len(target_y))
         results_header_str = "\t".join(
             ["Median rank", "Mean rank", "Standard deviation"]
         )
