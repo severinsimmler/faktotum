@@ -71,23 +71,19 @@ class SentenceSimilarityLearner(SimilarityLearner):
         super().__init__(**kwargs)
 
     def forward_loss(self, data_points):
-        mapped_source_embeddings = self._embed_source(data_points)
-        mapped_target_embeddings = self._embed_target(data_points)
-
-        similarity_matrix = self.similarity_measure.forward(
-            (mapped_source_embeddings, mapped_target_embeddings)
-        )
+        source_embeddings = self._embed_source(data_points)
+        target_embeddings = self._embed_target(data_points)
 
         sources = list()
         targets = list()
         y = list()
         _sources = set()
 
-        for a in data_points:
-            for b in data_points:
+        for i, a in enumerate(data_points):
+            for j, b in enumerate(data_points):
                 if str(a.first) not in _sources:
-                    sources.append(a.first.embedding)
-                    targets.append(b.second.embedding)
+                    sources.append(source_embeddings[i])
+                    targets.append(target_embeddings[j])
                     if a.first.person == b.second.person:
                         y.append(1.0)
                     else:
