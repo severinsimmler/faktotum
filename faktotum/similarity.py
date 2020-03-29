@@ -66,7 +66,7 @@ class FaktotumDataset(FlairDataset):
         return self.data_points[index]
 
 
-class SentenceSimilarity(SimilarityLearner):
+class SentenceSimilarityLearner(SimilarityLearner):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -163,11 +163,11 @@ def train(
     source_embedding = embedding
     target_embedding = embedding
 
-    similarity_measure = CosineSimilarity()
+    similarity_measure = torch.nn.CosineSimilarity()
 
     similarity_loss = torch.nn.CosineEmbeddingLoss(margin=0.15)
 
-    similarity_model = SentenceSimilarity(
+    similarity_model = SentenceSimilarityLearner(
         source_embeddings=source_embedding,
         target_embeddings=target_embedding,
         similarity_measure=similarity_measure,
