@@ -27,18 +27,24 @@ class FaktotumDataset(FlairDataset):
         for instance in tqdm.tqdm(self._load_corpus("dev")):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
+            sentence.person = instance["person"]
+            context.person = instance["person"]
             point = DataPair(sentence, context)
             self.train.append(point)
 
         for instance in tqdm.tqdm(self._load_corpus("dev")):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
+            sentence.person = instance["person"]
+            context.person = instance["person"]
             point = DataPair(sentence, context)
             self.test.append(point)
 
         for instance in tqdm.tqdm(self._load_corpus("dev")):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
+            sentence.person = instance["person"]
+            context.person = instance["person"]
             point = DataPair(sentence, context)
             self.dev.append(point)
 
@@ -70,32 +76,24 @@ class SentenceSimilarity(SimilarityLearner):
             (mapped_source_embeddings, mapped_target_embeddings)
         )
 
-        def add_to_index_map(hashmap, key, val):
-            if key not in hashmap:
-                hashmap[key] = [val]
-            else:
-                hashmap[key] += [val]
+        sources = list()
+        targets = list()
+        y = list()
 
-        index_map = {"first": {}, "second": {}}
-        for data_point_id, data_point in enumerate(data_points):
-            add_to_index_map(index_map["first"], str(data_point.first), data_point_id)
-            add_to_index_map(index_map["second"], str(data_point.second), data_point_id)
+        for a in data_points:
+            for b in data_points:
+                sources.append(a.embedding)
+                targets.append(b.embedding)
+                if a.first.person == b.second.person:
+                    y.append(1.0)
+                else:
+                    y.append(-1.0)
 
-        targets = torch.zeros_like(similarity_matrix).to(flair.device)
+        sources = torch.tensor(sources).to(flair.device)
+        targets = torch.tensor(targets).to(flair.device)
+        y = torch.tensor(y).to(flair.device)
 
-        for data_point in data_points:
-            first_indices = index_map["first"][str(data_point.first)]
-            second_indices = index_map["second"][str(data_point.second)]
-            for first_index, second_index in itertools.product(
-                first_indices, second_indices
-            ):
-                targets[first_index, second_index] = 1.0
-
-        targets[targets==0.0] = -1.0
-
-        print(targets)
-
-        loss = self.similarity_loss(mapped_source_embeddings, mapped_target_embeddings, targets)
+        loss = self.similarity_loss(sources, targets, y)
 
         return loss
 
