@@ -84,9 +84,6 @@ class EntityLinker:
                                 sentence,
                                 persons={token[2]: persons},
                                 mask_entity=mask_entity,
-                                similarity_model=similarity_model,
-                                source=source,
-                                target=target,
                             ):
                                 embeddings[token[2]].append(vector)
         kb = defaultdict(dict)
