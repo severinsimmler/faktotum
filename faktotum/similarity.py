@@ -79,16 +79,18 @@ class SentenceSimilarity(SimilarityLearner):
         sources = list()
         targets = list()
         y = list()
+        _sources = set()
 
         for a in data_points:
             for b in data_points:
-                sources.append(a.first.embedding)
-                targets.append(b.second.embedding)
-                if a.first.person == b.second.person:
-                    y.append(1.0)
-                else:
-                    y.append(-1.0)
-
+                if str(a.first) not in _sources:
+                    sources.append(a.first.embedding)
+                    targets.append(b.second.embedding)
+                    if a.first.person == b.second.person:
+                        y.append(1.0)
+                    else:
+                        y.append(-1.0)
+                    _sources.add(str(a.first))
         print(sources)
 
         sources = torch.tensor(sources).to(flair.device)
