@@ -168,7 +168,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
 
 
 def train(
-    corpus_name="droc", embeddings_path="/mnt/data/users/simmler/model-zoo/ner-droc"
+    corpus_name="smartdata", embeddings_path="/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
 ):
     corpus = FaktotumDataset(corpus_name)
 
