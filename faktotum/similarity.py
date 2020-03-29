@@ -159,7 +159,12 @@ class SentenceSimilarityLearner(SimilarityLearner):
             ["Median max rank", "Median min rank", "Best", "Worst"]
         )
         epoch_results_str = "\t".join(
-            [str(np.median(ranks_max)), str(np.median(ranks_min)), str(max(ranks_min)), str(min(ranks_max))]
+            [
+                str(np.median(ranks_max)),
+                str(np.median(ranks_min)),
+                str(max(ranks_min)),
+                str(min(ranks_max)),
+            ]
         )
         return (
             Result(np.median(ranks_max), results_header_str, epoch_results_str, "",),
@@ -168,7 +173,8 @@ class SentenceSimilarityLearner(SimilarityLearner):
 
 
 def train(
-    corpus_name="smartdata", embeddings_path="/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
+    corpus_name="smartdata",
+    embeddings_path="/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted",
 ):
     corpus = FaktotumDataset(corpus_name)
 
@@ -201,7 +207,7 @@ def train(
     trainer.train(
         f"{corpus_name}-similarity-model",
         learning_rate=2,
-        mini_batch_size=64,
+        mini_batch_size=32,
         max_epochs=100,
         min_learning_rate=1e-6,
         shuffle=True,
