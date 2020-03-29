@@ -57,6 +57,48 @@ class FaktotumDataset(FlairDataset):
         return self.data_points[index]
 
 
+class SentenceSimilarity(SimilarityLearner):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def forward_loss(self, data_points):
+        mapped_source_embeddings = self._embed_source(data_points)
+        mapped_target_embeddings = self._embed_target(data_points)
+
+        similarity_matrix = self.similarity_measure.forward(
+            (mapped_source_embeddings, mapped_target_embeddings)
+        )
+
+        def add_to_index_map(hashmap, key, val):
+            if key not in hashmap:
+                hashmap[key] = [val]
+            else:
+                hashmap[key] += [val]
+
+        index_map = {"first": {}, "second": {}}
+        for data_point_id, data_point in enumerate(data_points):
+            add_to_index_map(index_map["first"], str(data_point.first), data_point_id)
+            add_to_index_map(index_map["second"], str(data_point.second), data_point_id)
+
+        targets = torch.zeros_like(similarity_matrix).to(flair.device)
+
+        for data_point in data_points:
+            first_indices = index_map["first"][str(data_point.first)]
+            second_indices = index_map["second"][str(data_point.second)]
+            for first_index, second_index in itertools.product(
+                first_indices, second_indices
+            ):
+                targets[first_index, second_index] = 1.0
+
+        targets[targets==0.0] = -1.0
+
+        print(targets)
+
+        loss = self.similarity_loss(mapped_source_embeddings, mapped_target_embeddings, targets)
+
+        return loss
+
+
 def train(corpus_name="droc", embeddings_path="/mnt/data/users/simmler/model-zoo/ner-droc"):
     corpus = FaktotumDataset(corpus_name)
 
@@ -73,9 +115,9 @@ def train(corpus_name="droc", embeddings_path="/mnt/data/users/simmler/model-zoo
 
     similarity_measure = CosineSimilarity()
 
-    similarity_loss = RankingLoss(margin=0.15)
+    similarity_loss = torch.nn.CosineEmbeddingLoss(margin=0.15)
 
-    similarity_model = SimilarityLearner(
+    similarity_model = SentenceSimilarity(
         source_embeddings=source_embedding,
         target_embeddings=target_embedding,
         similarity_measure=similarity_measure,
