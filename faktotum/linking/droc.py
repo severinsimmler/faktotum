@@ -337,9 +337,9 @@ class EntityLinker:
                                 if context != sentence:
                                     token_score = cosine_similarity(
                                         mention_vector, candidate_vector
-                                    )
+                                    )[0][0]
                                     sentence_score = self.get_sentence_similarity(sentence, context)
-                                    print(token_score, sentence_score, ((token_score + sentence_score) / 2))
+                                    score = (token_score + sentence_score) / 2
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
