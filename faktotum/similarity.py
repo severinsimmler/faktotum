@@ -104,32 +104,49 @@ class SentenceSimilarityLearner(SimilarityLearner):
         embedding_storage_mode="none",
     ) -> (Result, float):
         ranks = list()
+
         with torch.no_grad():
             targets = list()
             targets_y = list()
+            target_sentences = list()
             for data_points in data_loader:
-                targets.extend([tensor for tensor in self._embed_target(data_points).to(self.eval_device)])
+                targets.extend(
+                    [
+                        tensor
+                        for tensor in self._embed_target(data_points).to(
+                            self.eval_device
+                        )
+                    ]
+                )
                 targets_y.extend([sentence.second.person for sentence in data_points])
+                target_sentences.extend(
+                    [str(sentence.second) for sentence in data_points]
+                )
                 store_embeddings(data_points, embedding_storage_mode)
 
             for data_points in data_loader:
                 sources = self._embed_source(data_points).to(self.eval_device)
                 sources_y = [sentence.first.person for sentence in data_points]
+                source_sentences = [str(sentence.first) for sentence in data_points]
 
                 scores = list()
                 agreement = list()
-                for source, source_y in zip(sources, sources_y):
-                    for target, target_y in zip(targets, targets_y):
-                        score = self.similarity_measure(source, target).item()
-                        scores.append(score)
-                        print(score, source_y, target_y)
-                        agreement.append(source_y == target_y)
+                for source, source_y, source_sentence in zip(
+                    sources, sources_y, source_sentences
+                ):
+                    for target, target_y, target_sentence in zip(
+                        targets, targets_y, target_sentences
+                    ):
+                        if source_sentence != target_sentence:
+                            score = self.similarity_measure(source, target).item()
+                            scores.append(score)
+                            agreement.append(source_y == target_y)
 
                 df = pd.DataFrame({"scores": scores, "agreement": agreement})
                 df = df.sort_values("scores", ascending=False).reset_index(drop=True)
                 df = df[df["agreement"] == True]
-                rank = min(df.index)
-                ranks.append(1 - (rank / len(targets_y)))
+                ranks.append(min(df.index))
+                ranks.append(max(df.index))
 
         results_header_str = "\t".join(
             ["Median rank", "Mean rank", "Standard deviation"]
