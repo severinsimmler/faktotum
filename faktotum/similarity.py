@@ -150,10 +150,10 @@ class SentenceSimilarityLearner(SimilarityLearner):
                 ranks_max.append(1 - max(df.index) / len(agreement))
 
         results_header_str = "\t".join(
-            ["Median rank", "Mean rank", "Standard deviation"]
+            ["Median max rank", "Median min rank", "Best", "Worst"]
         )
         epoch_results_str = "\t".join(
-            [str(np.median(ranks)), str(np.mean(ranks)), str(np.std(ranks))]
+            [str(np.median(ranks_max)), str(np.median(ranks_min)), str(max(ranks_min), str(min(ranks_max)))]
         )
         return (
             Result(np.median(ranks_max), results_header_str, epoch_results_str, "",),
