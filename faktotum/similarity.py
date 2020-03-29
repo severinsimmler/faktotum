@@ -95,9 +95,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
         targets = torch.stack(targets).to(flair.device)
         y = torch.tensor(y).to(flair.device)
 
-        loss = self.similarity_loss(sources, targets, y)
-
-        return loss
+        return self.similarity_loss(sources, targets, y)
 
     def evaluate(
         self,
@@ -110,7 +108,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
             targets = list()
             targets_y = list()
             for data_points in data_loader:
-                targets.extend(self._embed_target(data_points).to(self.eval_device))
+                targets.extend([tensor for tensor in self._embed_target(data_points).to(self.eval_device)])
                 targets_y.extend([sentence.second.person for sentence in data_points])
                 store_embeddings(data_points, embedding_storage_mode)
 
@@ -124,6 +122,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
                     for target, target_y in zip(targets, targets_y):
                         score = self.similarity_measure(source, target).item()
                         scores.append(score)
+                        print(score, source_y, target_y)
                         agreement.append(source_y == target_y)
 
                 df = pd.DataFrame({"scores": scores, "agreement": agreement})
