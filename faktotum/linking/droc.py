@@ -154,7 +154,7 @@ class EntityLinker:
                         yield (vector / len(mention)).reshape(1, -1)
 
     @staticmethod
-    def get_sentence_similarities(source, target):
+    def get_sentence_similarity(source, target):
         with torch.no_grad():
             source = Sentence(" ".join([t[0] for t in source]), use_tokenizer=False)
             SENTENCE_MODEL.source_embeddings.embed(source)
