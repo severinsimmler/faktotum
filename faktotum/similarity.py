@@ -103,7 +103,8 @@ class SentenceSimilarityLearner(SimilarityLearner):
         out_path: Path = None,
         embedding_storage_mode="none",
     ) -> (Result, float):
-        ranks = list()
+        ranks_min = list()
+        ranks_max = list()
 
         with torch.no_grad():
             targets = list()
@@ -145,8 +146,8 @@ class SentenceSimilarityLearner(SimilarityLearner):
                 df = pd.DataFrame({"scores": scores, "agreement": agreement})
                 df = df.sort_values("scores", ascending=False).reset_index(drop=True)
                 df = df[df["agreement"] == True]
-                ranks.append(min(df.index) / len(agreement))
-                ranks.append(max(df.index) / len(agreement))
+                ranks_min.append(1 - min(df.index) / len(agreement))
+                ranks_max.append(1 - max(df.index) / len(agreement))
 
         results_header_str = "\t".join(
             ["Median rank", "Mean rank", "Standard deviation"]
@@ -155,7 +156,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
             [str(np.median(ranks)), str(np.mean(ranks)), str(np.std(ranks))]
         )
         return (
-            Result(np.median(ranks), results_header_str, epoch_results_str, "",),
+            Result(np.median(ranks_max), results_header_str, epoch_results_str, "",),
             0,
         )
 
