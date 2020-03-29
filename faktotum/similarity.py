@@ -6,8 +6,8 @@ import flair
 import pandas as pd
 import torch
 import tqdm
-from flair.data import Sentence, DataPair
-from flair.datasets import FlairDataset
+from flair.data import DataPair, Sentence
+from flair.datasets import DataLoader, FlairDataset
 from flair.embeddings import BertEmbeddings, DocumentRNNEmbeddings
 from flair.models.similarity_learning_model import (
     CosineSimilarity,
@@ -15,6 +15,7 @@ from flair.models.similarity_learning_model import (
     SimilarityLearner,
 )
 from flair.trainers import ModelTrainer
+from flair.training_utils import Result, store_embeddings
 
 
 class FaktotumDataset(FlairDataset):
@@ -127,26 +128,28 @@ class SentenceSimilarity(SimilarityLearner):
                         score = self.similarity_measure(source, target).item()
                         scores.append(score)
                         agreement.append(source_y == target_y)
-                
+
                 df = pd.DataFrame({"scores": scores, "agreement": agreement})
                 df = df.sort_values("scores", ascending=False).reset_index(drop=True)
                 df = df[df["agreement"] == True]
                 rank = min(df.index)
                 ranks.append(1 - (rank / len(targets_y)))
-        
-        results_header_str = "\t".join(["Median rank", "Mean rank", "Standard deviation"])
-        epoch_results_str = "\t".join([str(np.median(ranks)), str(np.mean(ranks)), str(np.std(ranks))])
+
+        results_header_str = "\t".join(
+            ["Median rank", "Mean rank", "Standard deviation"]
+        )
+        epoch_results_str = "\t".join(
+            [str(np.median(ranks)), str(np.mean(ranks)), str(np.std(ranks))]
+        )
         return (
-            Result(
-                np.mean(ranks),
-                results_header_str,
-                epoch_results_str,
-                "",
-            ),
+            Result(np.mean(ranks), results_header_str, epoch_results_str, "",),
             0,
         )
 
-def train(corpus_name="droc", embeddings_path="/mnt/data/users/simmler/model-zoo/ner-droc"):
+
+def train(
+    corpus_name="droc", embeddings_path="/mnt/data/users/simmler/model-zoo/ner-droc"
+):
     corpus = FaktotumDataset(corpus_name)
 
     embedding = DocumentRNNEmbeddings(
