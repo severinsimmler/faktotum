@@ -154,6 +154,7 @@ class EntityLinker:
                     else:
                         yield (vector / len(mention)).reshape(1, -1)
 
+    @staticmethod
     def get_sentence_similarities(source, target):
         with torch.no_grad():
             source = Sentence(" ".join([t[0] for t in source]), use_tokenizer=False)
