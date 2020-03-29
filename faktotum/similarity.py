@@ -26,7 +26,7 @@ class FaktotumDataset(FlairDataset):
         self.dev = list()
         self.test = list()
 
-        for instance in tqdm.tqdm(self._load_corpus("test")):
+        for instance in tqdm.tqdm(self._load_corpus("dev")):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
@@ -121,6 +121,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
                 agreement = list()
                 for source, source_y in zip(sources, sources_y):
                     for target, target_y in zip(targets, targets_y):
+                        print(source)
                         score = self.similarity_measure(source, target).item()
                         scores.append(score)
                         agreement.append(source_y == target_y)
