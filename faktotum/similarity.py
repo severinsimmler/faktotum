@@ -27,7 +27,7 @@ class FaktotumDataset(FlairDataset):
         self.dev = list()
         self.test = list()
 
-        for instance in tqdm.tqdm(self._load_corpus("test")):
+        for instance in tqdm.tqdm(self._load_corpus("train")):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
@@ -35,7 +35,7 @@ class FaktotumDataset(FlairDataset):
             point = DataPair(sentence, context)
             self.train.append(point)
 
-        for instance in tqdm.tqdm(self._load_corpus("dev")):
+        for instance in tqdm.tqdm(self._load_corpus("test")):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
@@ -65,6 +65,12 @@ class FaktotumDataset(FlairDataset):
 
     def __getitem__(self, index: int = 0):
         return self.data_points[index]
+
+    def __repr__(self):
+        return f"<FaktotumCorpus: {len(self.train)} train, {len(self.test)} test, {len(self.dev)} dev>"
+
+    def __str__(self):
+        return f"<FaktotumCorpus: {len(self.train)} train, {len(self.test)} test, {len(self.dev)} dev>"
 
 
 class SentenceSimilarityLearner(SimilarityLearner):
