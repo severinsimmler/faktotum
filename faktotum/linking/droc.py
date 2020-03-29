@@ -20,7 +20,10 @@ import random
 import torch
 
 EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
-SENTENCE_MODEL = SentenceSimilarityLearner.load("/home/simmler/git/faktotum/droc-similarity-model/best-model.pt")
+SENTENCE_MODEL = SentenceSimilarityLearner.load(
+    "/home/simmler/git/faktotum/droc-similarity-model/best-model.pt"
+)
+
 
 class EntityLinker:
     def __init__(self):
@@ -122,7 +125,7 @@ class EntityLinker:
         persons,
         mask_entity: bool = False,
         return_id=False,
-        return_str=False
+        return_str=False,
     ):
         for person, indices in persons.items():
             for mention in indices:
@@ -160,7 +163,11 @@ class EntityLinker:
             SENTENCE_MODEL.source_embeddings.embed(source)
             target = Sentence(" ".join([t[0] for t in target]), use_tokenizer=False)
             SENTENCE_MODEL.target_embeddings.embed(target)
-            return SENTENCE_MODEL.similarity_measure(source.embedding, target.embedding).item()
+            score = SENTENCE_MODEL.similarity_measure(
+                source.embedding, target.embedding
+            ).item()
+            print(score)
+            return score
 
     def similarities(self, mask_entity=False):
         stats = list()
@@ -303,9 +310,7 @@ class EntityLinker:
             fn = 0
             tps = list()
             fps = list()
-            kb = self._build_knowledge_base(
-                novel
-            )
+            kb = self._build_knowledge_base(novel)
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
                 if not is_mentioned:
@@ -338,7 +343,9 @@ class EntityLinker:
                                     token_score = cosine_similarity(
                                         mention_vector, candidate_vector
                                     )[0][0]
-                                    sentence_score = self.get_sentence_similarity(sentence, context)
+                                    sentence_score = self.get_sentence_similarity(
+                                        sentence, context
+                                    )
                                     score = (token_score + sentence_score) / 2
                                     if score > max_score:
                                         max_score = score
