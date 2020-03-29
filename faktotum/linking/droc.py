@@ -307,7 +307,7 @@ class EntityLinker:
             tps = list()
             fps = list()
             kb = self._build_knowledge_base(
-                novel, similarity_model=True, source=False, target=True
+                novel
             )
             for sentence in novel:
                 is_mentioned = [token for token in sentence if token[2] != "-"]
