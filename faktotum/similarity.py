@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 import flair
+import numpy as np
 import pandas as pd
 import torch
 import tqdm
