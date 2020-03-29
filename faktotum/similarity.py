@@ -82,8 +82,8 @@ class SentenceSimilarity(SimilarityLearner):
 
         for a in data_points:
             for b in data_points:
-                sources.append(a.embedding)
-                targets.append(b.embedding)
+                sources.append(a.first.embedding)
+                targets.append(b.second.embedding)
                 if a.first.person == b.second.person:
                     y.append(1.0)
                 else:
