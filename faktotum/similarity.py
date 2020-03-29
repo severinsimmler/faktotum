@@ -153,7 +153,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
             ["Median max rank", "Median min rank", "Best", "Worst"]
         )
         epoch_results_str = "\t".join(
-            [str(np.median(ranks_max)), str(np.median(ranks_min)), str(max(ranks_min), str(min(ranks_max)))]
+            [str(np.median(ranks_max)), str(np.median(ranks_min)), str(max(ranks_min)), str(min(ranks_max))]
         )
         return (
             Result(np.median(ranks_max), results_header_str, epoch_results_str, "",),
