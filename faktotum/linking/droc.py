@@ -159,7 +159,7 @@ class EntityLinker:
             source = Sentence(" ".join([t[0] for t in source]), use_tokenizer=False)
             SENTENCE_MODEL.source_embeddings.embed(source)
             target = Sentence(" ".join([t[0] for t in target]), use_tokenizer=False)
-            SENTENCE_MODEL.target_embeddings.embed(sentence)
+            SENTENCE_MODEL.target_embeddings.embed(target)
             return SENTENCE_MODEL.similarity_measure(source.embedding, target.embedding).item()
 
     def similarities(self, mask_entity=False):
