@@ -323,9 +323,6 @@ class EntityLinker:
                             return_id=True,
                             mask_entity=mask_entity,
                             return_str=True,
-                            similarity_model=True,
-                            source=True,
-                            target=False,
                         )
                     )
 
