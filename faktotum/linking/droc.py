@@ -15,28 +15,26 @@ from flair.data import Sentence
 from sklearn import preprocessing
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
-from faktotum.regression import Regression
+from faktotum.similarity import SentenceSimilarityLearner
 import random
 import torch
 
-# EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
-
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+SENTENCE_MODEL = SentenceSimilarityLearner.load("/home/simmler/git/faktotum/droc-similarity-model/best-model.pt")
 
 class EntityLinker:
     def __init__(self):
         module_folder = Path(__file__).resolve().parent.parent
         self.corpus_folder = Path(module_folder, "data", "droc", "linking")
         self.train = self._load_corpus("train")
-        self.test = self._load_corpus("test")
-        self.dev = self._load_corpus("dev")
         self.dataset = dict()
         for i, data in enumerate([self.test, self.dev, self.train]):
             for key, value in data.items():
                 self.dataset[f"{i}_{key}"] = value
-        # self.test = dict()
-        # for i, data in enumerate([test, dev]):
-        #    for key, value in data.items():
-        #        self.test[f"{i}_{key}"] = value
+        self.test = dict()
+        for i, data in enumerate([test, dev]):
+            for key, value in data.items():
+                self.test[f"{i}_{key}"] = value
 
     @staticmethod
     def precision(tp: int, fp: int) -> float:
@@ -125,10 +123,7 @@ class EntityLinker:
         persons,
         mask_entity: bool = False,
         return_id=False,
-        return_str=False,
-        similarity_model=False,
-        source=False,
-        target=False,
+        return_str=False
     ):
         for person, indices in persons.items():
             for mention in indices:
@@ -140,14 +135,7 @@ class EntityLinker:
                         tokens.append(token[0])
                 text = " ".join(tokens)
                 sentence_ = Sentence(text, use_tokenizer=False)
-                if not similarity_model:
-                    EMBEDDING.embed(sentence_)
-                else:
-                    if source:
-                        e = self.network.source_embeddings
-                    elif target:
-                        e = self.network.target_embeddings
-                    e.embed(sentence_)
+                EMBEDDING.embed(sentence_)
                 vector = sentence_[mention[0]].get_embedding().numpy()
                 name = [sentence_[mention[0]].text]
                 for i in mention[1:]:
@@ -165,6 +153,14 @@ class EntityLinker:
                         yield (vector / len(mention)).reshape(1, -1), " ".join(name)
                     else:
                         yield (vector / len(mention)).reshape(1, -1)
+
+    def get_sentence_similarities(source, target):
+        with torch.no_grad():
+            source = Sentence(" ".join([t[0] for t in source]), use_tokenizer=False)
+            SENTENCE_MODEL.source_embeddings.embed(source)
+            target = Sentence(" ".join([t[0] for t in target]), use_tokenizer=False)
+            SENTENCE_MODEL.target_embeddings.embed(sentence)
+            return SENTENCE_MODEL.similarity_measure(source.embedding, target.embedding).item()
 
     def similarities(self, mask_entity=False):
         stats = list()
@@ -299,52 +295,7 @@ class EntityLinker:
             )
         return pd.DataFrame(stats)
 
-    def _generate_data(self, dataset, mask_entity=True):
-        X = list()
-        y = list()
-        data = list()
-        for novel in dataset.values():
-            data.extend(novel)
-        kb = self._build_knowledge_base(
-            data, build_embeddings=True, threshold=2, mask_entity=mask_entity
-        )
-        for sentence in data:
-            is_mentioned = [token for token in sentence if token[2] != "-"]
-            if not is_mentioned:
-                continue
-            if is_mentioned:
-                indices = defaultdict(list)
-                for i, token in enumerate(sentence):
-                    if token[2] != "-":
-                        indices[token[2]].append(i)
-                mention_vectors = list(
-                    self._vectorize(
-                        sentence, indices, return_id=True, mask_entity=mask_entity
-                    )
-                )
-
-                for identifier, mention_vector in mention_vectors:
-                    if identifier in kb:
-                        candidates = kb[identifier]["EMBEDDINGS"]
-                        for candidate in candidates:
-                            instance = np.concatenate((mention_vector[0], candidate[0]))
-                            X.append(instance)
-                            y.append(1.0)
-                        negative = random.sample(
-                            [person for person in kb if person != identifier],
-                            k=len(candidates),
-                        )
-                        for id_ in negative:
-                            negative_candidate = random.choice(kb[id_]["EMBEDDINGS"])
-                            instance = np.concatenate(
-                                (mention_vector[0], negative_candidate[0])
-                            )
-                            X.append(instance)
-                            y.append(0.0)
-        return np.array(X), np.array(y)
-
-    def model(self, model_path, mask_entity=False):
-        self.network = EntitySimilarity.load(model_path)
+    def sentence_ranking(self, mask_entity=False):
         stats = list()
         for i, novel in enumerate(self.test.values()):
             tp = 0
@@ -387,9 +338,11 @@ class EntityLinker:
                                 contexts["MENTIONS"],
                             ):
                                 if context != sentence:
-                                    score = cosine_similarity(
+                                    token_score = cosine_similarity(
                                         mention_vector, candidate_vector
                                     )
+                                    sentence_score = self.get_sentence_similarity(sentence, context)
+                                    print(token_score, sentence_score, ((token_score + sentence_score) / 2))
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
