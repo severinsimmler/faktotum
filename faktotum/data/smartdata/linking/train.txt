@@ -362,7 +362,7 @@ Zielke I-PER Q49006056 NE
 wird O - VAFIN 
 angeblich O - ADJD 
 neuer O - ADJA 
-Commerzbank B-ORG - NN 
+Commerzbank B-ORG Q157617 NN 
 - O - $( 
 Chef O - NN 
 . O - $. 
@@ -417,7 +417,6 @@ den O - ART
 Punkt O - NN 
 : O - $. 
 
---------------------------------------------------------------------------- O - $( 
 Herr O - NN 
 Friedhelm B-PER Q1457233 NE 
 Loh I-PER Q1457233 NE 
@@ -6781,6 +6780,7 @@ verteidigte O - VVFIN
 das O - ART
 Vorgehen O - NN
 . O - $.
+
 Zahlreiche O - ADJA
 Türken O - NN
 hatten O - VAFIN
@@ -6896,6 +6896,7 @@ und O - KON
 7 O - CARD
 Plus O - NN
 : O - $.
+
 Foto O - NN
 soll O - VMFIN
 beide O - PIDAT
@@ -6933,6 +6934,7 @@ iPhone O - NN
 zeigen O - VVINF
 soll O - VMFIN
 . O - $.
+
 Wenn O - KOUS
 das O - ART
 Bild O - NN
@@ -6970,6 +6972,7 @@ es O - PPER
 vorbei O - ADV
 ist O - VAFIN
 . O - $.
+
 WPP O - NE
 - O - $(
 Tochter O - NN
@@ -6977,6 +6980,7 @@ kauft O - VVFIN
 deutsche O - ADJA
 Digitalagentur O - NN
 : O - $.
+
 Aus O - APPR
 Conrad B-ORG - NE NIL
 Caine I-ORG - NE NIL
@@ -6989,6 +6993,7 @@ kauft O - VVFIN
 deutsche O - ADJA
 Digitalagentur O - NN
 : O - $.
+
 Aus O - APPR
 Conrad B-ORG - NE NIL
 Caine I-ORG - NE NIL
@@ -6996,12 +7001,14 @@ wird O - VAFIN
 Possible B-ORG - NE NIL
 22 O - CARD
 . O - $.
+
 Januar O - NN
 2016 O - CARD
 , O - $,
 aktualisiert O - VVPP
 22 O - CARD
 . O - $.
+
 Januar O - NN
 2016 O - CARD
 , O - $,
@@ -7015,8 +7022,10 @@ eigene O - ADJA
 Firma O - NN
 gegründet O - VVPP
 . O - $.
+
 Bild O - NN
 : O - $.
+
 PR O - NN
 von O - APPR
 Axel B-PER - NE NIL
@@ -7026,6 +7035,7 @@ Catrin B-PER - NE NIL
 Bialek I-PER - NE NIL
 Quelle O - NN
 : O - $.
+
 Handelsblatt B-ORG Q819697 NN Q819697
 Online I-ORG Q819697 FM Q819697
 Der O - ART
@@ -7059,6 +7069,7 @@ haben O - VAFIN
 dazu O - PROAV
 beigetragen O - VVPP
 . O - $.
+
 Schnelle O - ADJA
 Schnittfolgen O - NN
 verschaffen O - VVFIN
@@ -7071,6 +7082,7 @@ das O - ART
 nötige O - ADJA
 Tempo O - NN
 . O - $.
+
 Computeranimierte O - ADJA
 Grafiken O - NN
 veranschaulichen O - VVFIN
@@ -7134,6 +7146,7 @@ ins O - APPRART
 Kino O - NN
 kommen O - VVINF
 . O - $.
+
 Im O - APPRART
 Zwei O - CARD
 - O - $(
@@ -7158,6 +7171,7 @@ bis O - APPR
 fortgesetzt O - VVPP
 werden O - VAINF
 . O - $.
+
 Das O - PDS
 teilten O - VVFIN
 die O - ART
@@ -7185,6 +7199,7 @@ zufolge O - APPO
 noch O - ADV
 nicht O - PTKNEG
 . O - $.
+
 Der O - ART
 Unfall O - NN
 habe O - VAFIN
@@ -7196,6 +7211,7 @@ Wattener O - ADJA
 Lizum O - NE
 ereignet O - VVPP
 . O - $.
+
 In O - APPR
 Tirol O - NE
 herrschte O - VVFIN
@@ -7206,6 +7222,7 @@ der O - ART
 fünfteiligen O - ADJA
 Skala O - NN
 . O - $.
+
 Kommentar O - NN
 schreiben O - VVINF
 Bitte O - ADJD
@@ -7223,6 +7240,7 @@ Artikel O - NN
 zu O - PTKZU
 verfassen O - VVINF
 . O - $.
+
 Debatten O - NN
 auf O - APPR
 unseren O - PPOSAT
@@ -7231,6 +7249,7 @@ werden O - VAFIN
 bewusst O - ADJD
 geführt O - VVPP
 . O - $.
+
 Kommentare O - NN
 , O - $,
 die O - PRELS
@@ -7278,9 +7297,11 @@ Haftstrafe O - NN
 ohne O - APPR
 Bewährung O - NN
 . O - $.
+
 − O - $(
 Foto O - NN
 : O - $.
+
 Roland B-PER - NE NIL
 Binder I-PER - NE NIL
 Verurteilt O - VVPP
@@ -7306,9 +7327,11 @@ Haftstrafe O - NN
 ohne O - APPR
 Bewährung O - NN
 . O - $.
+
 − O - $(
 Foto O - NN
 : O - $.
+
 Roland B-PER - NE NIL
 Binder I-PER - NE NIL
 Zu O - APPR
@@ -7352,6 +7375,7 @@ jähriger O - ADJA
 Arzt O - NN
 verurteilt O - VVPP
 . O - $.
+
 Der O - ART
 Mann O - NN
 hatte O - VAFIN
@@ -7384,6 +7408,7 @@ sexuellen O - ADJA
 Handlungen O - NN
 veranlasst O - VVPP
 . O - $.
+
 Vorsitzende O - NN
 Richterin O - NN
 Gisela B-PER - NE NIL
@@ -7414,6 +7439,7 @@ in O - APPR
 Topform O - NE
 Dormagen O - NE
 . O - $.
+
 300 O - CARD
 Gäste O - NN
 bei O - APPR
@@ -7427,6 +7453,7 @@ Blau I-ORG - NE NIL
 Weiß I-ORG - NE NIL
 Delhoven I-ORG - NE NIL
 . O - $.
+
 Von O - APPR
 Franziska B-PER - NE NIL
 Gräfe I-PER - NE NIL
@@ -7444,6 +7471,7 @@ mer O - FM
 immer O - ADV
 joot O - ADJD
 : O - $.
+
 Ihrem O - PPOSAT
 Sessionsmotto O - NN
 machte O - VVFIN
@@ -7462,6 +7490,7 @@ Samstag O - NN
 alle O - PIDAT
 Ehre O - NN
 . O - $.
+
 Gut O - ADJD
 300 O - CARD
 kostümierte O - ADJA
@@ -7559,6 +7588,7 @@ neue O - ADJA
 Schuhe O - NN
 ausgedacht O - VVPP
 . O - $.
+
 Das O - PDS
 könnte O - VMFIN
 Sie O - PPER
@@ -7600,6 +7630,7 @@ erneuten O - ADJA
 Erholungsversuch O - NN
 gestartet O - VVPP
 . O - $.
+
 Der O - ART
 Dax O - NE
 stieg O - VVFIN
@@ -7614,6 +7645,7 @@ auf O - APPR
 9879,32 O - CARD
 Punkte O - NN
 . O - $.
+
 Der O - ART
 deutsche O - ADJA
 Leitindex O - NN
@@ -7649,6 +7681,7 @@ im O - APPRART
 Minus O - NN
 schloss O - VVFIN
 . O - $.
+
 Die O - ART
 Anleger O - NN
 sorgen O - VVFIN
@@ -7657,6 +7690,7 @@ um O - APPR
 Chinas O - NE
 Wirtschaft O - NN
 . O - $.
+
 Der O - ART
 MDax O - NN
 der O - ART
@@ -7689,6 +7723,7 @@ auf O - APPR
 der O - ART
 Stelle O - NN
 . O - $.
+
 Der O - ART
 Eurozonen O - NN
 - O - $(
@@ -7698,6 +7733,7 @@ EuroStoxx O - NE
 stieg O - VVFIN
 moderat O - ADJD
 . O - $.
+
 Die O - ART
 Anleger O - NN
 blieben O - VVFIN
@@ -7736,6 +7772,7 @@ Drei O - CARD
 Tenöre O - NN
 hin O - PTKVZ
 . O - $.
+
 Auf O - APPR
 dem O - ART
 Tourplan O - NN
@@ -7751,6 +7788,7 @@ zwei O - CARD
 - O - $(
 Termine O - NN
 . O - $.
+
 José B-PER Q485165 NE Q485165
 Carreras I-PER Q485165 NE Q485165
 dazu O - PROAV
@@ -7766,6 +7804,7 @@ Pläne O - NN
 zu O - PTKZU
 haben O - VAINF
 . O - $.
+
 Der O - ART
 frühere O - ADJA
 Nationalspieler O - NN
@@ -7810,6 +7849,7 @@ auf O - APPR
 Charlie O - NE
 Hebdo O - NE
 : O - $.
+
 Satiremagazin O - NN
 feiert O - VVFIN
 Überleben O - NN
@@ -7830,6 +7870,7 @@ Peter B-PER - NE NIL
 Heusch I-PER - NE NIL
 Foto O - NN
 : O - $.
+
 BENOIT O - NE
 TESSIER O - NE
 / O - $(
@@ -7844,6 +7885,7 @@ Flucht O - NN
 
 Mainz O - NE
 : O - $.
+
 Bus O - NN
 hängt O - VVFIN
 halb O - ADJD
@@ -7866,6 +7908,7 @@ für O - APPR
 Ihren O - PPOSAT
 Beitrag O - NN
 ! O - $.
+
 Ihr O - PPOSAT
 Kommentar O - NN
 JuraForum.de O - NE
@@ -7898,6 +7941,7 @@ Wissenschaft O - NN
 | O - FM
 Autor O - NN
 : O - $.
+
 idw O - NE
 | O - FM
 Jetzt O - ADV
@@ -7935,6 +7979,7 @@ zunehmender O - ADJA
 Magnitude O - NN
 03.03.2016 O - FM
 : O - $.
+
 Geowissenschaftler O - NN
 und O - KON
 Katastrophenschützer O - NN
@@ -7945,6 +7990,7 @@ der O - ART
 Megacity O - NN
 Istanbul O - NE
 : O - $.
+
 mit O - APPR
 sehr O - ADV
 hoher O - ADJA
@@ -7963,10 +8009,12 @@ Erdbeben O - NN
 zu O - PTKZU
 rechnen O - VVINF
 . O - $.
+
 Die O - ART
 Frage O - NN
 ist O - VAFIN
 : O - $.
+
 wie O - PWAV
 stark O - ADJD
 kann O - VMFIN
@@ -8033,6 +8081,7 @@ Brinkstraße O - NN
 B8 O - NE
 ) O - $(
 . O - $.
+
 Für O - APPR
 diesen O - PDAT
 Neubau O - NN
@@ -8041,6 +8090,7 @@ ein O - ART
 Planfeststellungsverfahren O - NN
 notwendig O - ADJD
 . O - $.
+
 Verantwortlich O - ADJD
 ist O - VAFIN
 für O - APPR
@@ -8075,6 +8125,7 @@ lange O - ADJD
 aushalten O - VVINF
 kann O - VMFIN
 . O - $.
+
 So O - ADV
 lässt O - VVFIN
 sich O - PRF
@@ -8090,6 +8141,7 @@ vor O - APPR
 sich O - PRF
 hat O - VAFIN
 . O - $.
+
 Rajoy B-PER Q10819 NE Q10819
 wird O - VAFIN
 als O - KOKOM
@@ -8114,6 +8166,7 @@ für O - APPR
 überall O - ADV
 erreicht O - VVPP
 . O - $.
+
 B O - NN
 Dieser O - PDAT
 Artikel O - NN
@@ -8123,6 +8176,7 @@ unter O - APPR
 der O - ART
 Adresse O - NN
 : O - $.
+
 www.tagesschau.de O - FM
 / O - KON
 ausland O - FM
@@ -8138,6 +8192,7 @@ schwere O - ADJA
 Überschwemmungen O - NN
 Stand O - NN
 : O - $.
+
 29.12.2015 O - NN
 00:16 O - CARD
 Uhr O - NN
@@ -8153,12 +8208,14 @@ und O - KON
 Überschwemmungen O - NN
 heim O - PTKVZ
 . O - $.
+
 Besonders O - ADV
 schwer O - ADJD
 betroffen O - VVPP
 ist O - VAFIN
 Paraguay O - NE
 . O - $.
+
 Allein O - ADV
 dort O - ADV
 mussten O - VMFIN
@@ -8166,6 +8223,7 @@ mussten O - VMFIN
 Menschen O - NN
 fliehen O - VVINF
 . O - $.
+
 In O - APPR
 den O - ART
 nächsten O - ADJA
@@ -8176,6 +8234,7 @@ weitere O - ADJA
 Niederschläge O - NN
 geben O - VVINF
 . O - $.
+
 Von O - APPR
 Ivo B-PER - NE NIL
 Marusczyk I-PER - NE NIL
@@ -8241,6 +8300,7 @@ ein O - ART
 Brückengeländer O - NN
 gerutscht O - VVPP
 . O - $.
+
 Er O - PPER
 hing O - VVFIN
 mit O - APPR
@@ -8251,6 +8311,7 @@ der O - ART
 Autobahn O - NN
 A60 O - FM
 . O - $.
+
 Beim O - APPRART
 Unfall O - NN
 sind O - VAFIN
@@ -8268,6 +8329,7 @@ die O - ART
 Feuerwehr O - NN
 mitteilte O - VVFIN
 . O - $.
+
 Zum O - APPRART
 Zeitpunkt O - NN
 des O - ART
@@ -8287,6 +8349,7 @@ aber O - ADV
 sicher O - ADJD
 verlassen O - VVINF
 . O - $.
+
 Die O - ART
 Feuerwehr O - NN
 konnte O - VMFIN
@@ -8351,6 +8414,7 @@ Bundespräsident O - NN
 und O - KON
 Kanzler O - NN
 . O - $.
+
 Schnee O - NN
 und O - KON
 Eis O - NN
@@ -8383,6 +8447,7 @@ schneebedeckten O - ADJA
 Straßen O - NN
 angesagt O - VVPP
 . O - $.
+
 Tobias B-PER - NE NIL
 Hase I-PER - NE NIL
 / O - $(
@@ -8419,6 +8484,7 @@ miteinander O - ADV
 verknüpft O - VVPP
 sind O - VAFIN
 . O - $.
+
 Bei O - APPR
 der O - ART
 Fernerkundung O - NN
@@ -8444,6 +8510,7 @@ der O - ART
 Praxisf O - NN
 Bayern O - NE
 : O - $.
+
 Weitere O - ADJA
 Länder O - NN
 zu O - APPR
@@ -8464,6 +8531,7 @@ Empfänger O - NN
 E-Mail O - NE
 Tipp O - NN
 : O - $.
+
 mehrere O - PIAT
 E-Mailadressen O - NN
 mit O - APPR
@@ -8481,8 +8549,10 @@ das O - ART
 Eingabefeld O - NN
 ein O - PTKVZ
 . O - $.
+
 Tipp O - NN
 : O - $.
+
 das O - ART
 Bild O - NN
 anklicken O - VVINF
@@ -8497,6 +8567,7 @@ E-Mail O - NE
 Twittern O - NN
 Foto O - NN
 : O - $.
+
 dpa B-ORG Q312653 NE Q312653
 München O - NE
 ( O - $(
@@ -8558,6 +8629,7 @@ der O - ART
 Zerfall O - NN
 Jugoslawiens O - NE
 . O - $.
+
 Die O - ART
 USA O - NE
 verhinderten O - VVFIN
@@ -8582,6 +8654,7 @@ besser O - ADJD
 aber O - KON
 manches O - PIS
 . O - $.
+
 Die O - ART
 Fans O - NN
 des O - ART
@@ -8635,6 +8708,7 @@ und O - KON
 einer O - ART
 Schule O - NN
 . O - $.
+
 An O - APPR
 der O - ART
 Universidad B-ORG Q3551328 FM Q3551328
@@ -8660,11 +8734,13 @@ Richtigkeit O - NN
 der O - ART
 Angaben O - NN
 . O - $.
+
 Bitte O - ADJD
 beachten O - VVFIN
 Sie O - PPER
 auch O - ADV
 : O - $.
+
 Nutzungsbasierte O - ADJA
 Onlinewerbung O - NN
 Zur O - APPRART
@@ -8895,6 +8971,7 @@ im O - APPRART
 Schichtbetrieb O - NN
 gearbeitet O - VVPP
 . O - $.
+
 Hier O - ADV
 nimmt O - VVFIN
 gerade O - ADV
@@ -8905,10 +8982,12 @@ einen O - ART
 Notruf O - NN
 entgegen.Foto O - PTKVZ
 : O - $.
+
 Martin B-PER - NE NIL
 Möller I-PER - NE NIL
 Gelsenkirchen O - NE
 . O - $.
+
 WAZ B-ORG Q561840 NE Q561840
 stellt O - VVFIN
 in O - APPR
@@ -8924,6 +9003,7 @@ vor O - PTKVZ
 
 Foto O - NN
 : O - $.
+
 Kay B-PER - NE NIL
 Nietfeld I-PER - NE NIL
 Kay B-PER - NE NIL
@@ -9081,12 +9161,14 @@ Einsenden O - NN
 des O - ART
 Links O - NN
 . O - $.
+
 Ihr O - PPOSAT
 Link O - NN
 wurde O - VAFIN
 erfolgreich O - ADJD
 eingesendet O - VVPP
 . O - $.
+
 * O - $(
 Pflichtfeld O - NN
 Vier O - CARD
@@ -9121,6 +9203,7 @@ seien O - VAFIN
 verletzt O - VVPP
 worden O - VAPP
 . O - $.
+
 Die O - ART
 schwimmende O - ADJA
 Plattform O - NN
@@ -9135,6 +9218,7 @@ zum O - APPRART
 Festland O - NN
 fahren O - VVINF
 . O - $.
+
 Statoil B-ORG Q4992912 NE Q4992912
 hatte O - VAFIN
 die O - ART
@@ -9164,6 +9248,7 @@ Geduld O - NN
 komplett O - ADJD
 verloren O - VVPP
 . O - $.
+
 Mittlerweile O - ADV
 geklärt O - VVPP
 ist O - VAFIN
@@ -9252,6 +9337,7 @@ der O - ART
 - O - $(
 Jährige O - NN
 . O - $.
+
 Auch O - ADV
 andere O - ADJA
 Blockbuster O - NN
@@ -9294,6 +9380,7 @@ Mrd O - NN
 
 ROUNDUP O - NE
 : O - $.
+
 Kunststoff O - NN
 in O - APPR
 Mars O - NN
@@ -9422,6 +9509,7 @@ derzeit O - ADV
 noch O - ADV 
 unklar O - ADJD 
 . O - $. 
+
 Konkrete O - ADJA 
 Informationen O - NN 
 sollen O - VMFIN 
@@ -9437,6 +9525,7 @@ kommenden O - ADJA
 Monaten O - NN 
 folgen O - VVINF 
 . O - $. 
+
 Bei O - APPR 
 dem O - ART 
 Projekt O - NN 
@@ -9460,6 +9549,7 @@ vor O - APPR
 3 O - CARD 
 Minuten O - NN 
 : O - $. 
+
 Mark B-PER Q36215 NE Q36215
 Zuckerberg I-PER Q36215 NE Q36215
 räumt O - VVFIN 
@@ -9527,6 +9617,7 @@ Hosting O - NN
 der O - ART
 Finanzmarktinformationen O - NN
 : O - $.
+
 vwd B-ORG Q2514979 NE Q2514979
 Vereinigte B-ORG Q2514979 ADJA Q2514979
 Wirtschaftsdienste I-ORG Q2514979 NN Q2514979
@@ -9573,6 +9664,7 @@ gegen O - APPR
 den O - ART
 Euro O - NN
 . O - $.
+
 Das O - PDS
 war O - VAFIN
 keine O - PIAT
@@ -9589,6 +9681,7 @@ Kanzlerin O - NN
 Angela O - NE
 Merkel O - NE
 . O - $.
+
 AfD B-ORG Q6721203 NE Q6721203
 - O - $(
 Wähler O - NN
@@ -9602,6 +9695,7 @@ März O - NN
 2016 O - CARD
 schließen O - VVINF
 . O - $.
+
 Den O - ART
 Stellenabbau O - NN
 plant O - VVFIN
@@ -9610,6 +9704,7 @@ Unternehmen O - NN
 schon O - ADV
 länger O - ADJD
 : O - $.
+
 Oracle B-ORG Q30291065 NE Q30291065
 will O - VMFIN
 seinen O - PPOSAT
@@ -9661,12 +9756,14 @@ und O - KON
 unglaublich O - ADJD
 warmherzig O - ADJD
 . O - $.
+
 Dafür O - PROAV
 bin O - VAFIN
 ich O - PPER
 sehr O - ADV
 dankbar O - ADJD
 . O - $.
+
 Immer O - ADV
 wieder O - ADV
 muss O - VMFIN
@@ -9699,6 +9796,7 @@ großzügig O - ADJD
 unterstützt O - VVPP
 haben O - VAFIN
 . O - $.
+
 Begleitet O - VVPP
 wird O - VAFIN
 der O - ART
@@ -9781,6 +9879,7 @@ enormen O - ADJA
 Imageschaden O - NN
 befürchtet O - VVFIN
 . O - $.
+
 Lies B-PER Q120630 NE Q120630
 hatte O - VAFIN
 seinen O - PPOSAT
@@ -9935,22 +10034,27 @@ Stimmrechte O - NN
 Sonstiger O - ADJA
 Grund O - NN
 : O - $.
+
 3 O - CARD
 . O - $.
+
 Angaben O - NN
 zum O - APPRART
 Mitteilungspflichtigen O - NN
 Name O - NN
 : O - $.
+
 Registrierter O - ADJA
 Sitz O - NN
 und O - KON
 Staat O - NN
 : O - $.
+
 BlackRock B-ORG - NE NIL
 , I-ORG - $, NIL
 Inc I-ORG - NE NIL
 . I-ORG - $. NIL
+
 Wilmington O - NE
 , O - $,
 DE O - NE
@@ -9960,6 +10064,7 @@ von O - APPR
 Amerika O - NE
 4 O - CARD
 . O - $.
+
 Namen O - NN
 der O - ART
 Aktionäre O - NN
@@ -9975,14 +10080,17 @@ abweichend O - ADJD
 von O - APPR
 3 O - CARD
 . O - $.
+
 5 O - CARD
 . O - $.
+
 Datum O - NN
 der O - ART
 Schwellenberührung O - NN
 18.03.2016 O - FM
 6 O - CARD
 . O - $.
+
 Gesamtstimmrechtsanteile O - NN
 An O - APPR
 « O - $(
@@ -9998,6 +10106,7 @@ in O - APPR
 Führung O - NN
 11 O - CARD
 . O - $.
+
 Januar O - NN
 2016 O - CARD
 06:15 O - CARD
@@ -10029,6 +10138,7 @@ weiter O - ADV
 in O - APPR
 Führung O - NN
 . O - $.
+
 Das O - ART
 Weltraum O - NN
 - O - $(
@@ -10055,6 +10165,7 @@ USA O - NE
 und O - KON
 Kanada O - NE
 . O - $.
+
 Fullscreen O - NN
 Daisy B-PER Q16738674 NE Q16738674
 Ridley I-PER Q16738674 NE Q16738674
@@ -10085,6 +10196,7 @@ mit O - APPR
 einer O - ART
 Schweigeminute O - NN
 . O - $.
+
 Der O - ART
 Ägypter O - NN
 war O - VAFIN
@@ -10122,12 +10234,14 @@ Unternehmen O - NN
 am O - APPRART
 Dienstag O - NN
 . O - $.
+
 Eine O - ART
 Erstickungsgefahr O - NN
 sei O - VAFIN
 nicht O - PTKNEG
 auszuschließen O - VVIZU
 . O - $.
+
 Mars B-ORG Q695087 NE Q695087
 habe O - VAFIN
 sich O - PRF
@@ -10155,6 +10269,7 @@ für O - APPR
 Montag O - NN
 erarbeitet O - VVPP
 . O - $.
+
 Der O - ART
 Streik O - NN
 , O - $,
@@ -10193,6 +10308,7 @@ FI4000106299 O - FM
 , O - $,
 WKN O - NE
 : O - $.
+
 A1W9NS O - NE
 ) O - $(
 , O - $,
@@ -10280,6 +10396,7 @@ Braunschweig O - NE
 und O - KON
 Uelzen O - NE
 . O - $.
+
 Ebenfalls O - ADV
 betroffen O - VVPP
 ist O - VAFIN
@@ -10305,6 +10422,7 @@ Soltau O - NE
 - O - $(
 Uelzen O - NE
 . O - $.
+
 NICHT O - PTKNEG
 betroffen O - VVPP
 ist O - VAFIN
@@ -10325,6 +10443,7 @@ Lüneburg O - NE
 - O - $(
 Dannenberg O - NE
 . O - $.
+
 Auf O - APPR
 den O - ART
 betroffenen O - ADJA
@@ -10345,6 +10464,7 @@ Züge O - NN
 fahren O - VVINF
 können O - VMINF
 . O - $.
+
 Nach O - APPR
 dem O - ART
 Ende O - NN
@@ -10376,6 +10496,7 @@ Flughafen O - NN
 in O - APPR
 Roissy O - NE
 . O - $.
+
 Durch O - APPR
 den O - ART
 Fluglotzenstreik O - NN
@@ -10389,8 +10510,10 @@ am O - APPRART
 Boden O - NN
 bleiben O - VVINF
 . O - $.
+
 Foto O - NN
 : O - $.
+
 Ian O - NE
 Langsdon O - NE
 / O - $(
@@ -10415,6 +10538,7 @@ Flugausfällen O - NN
 und O - KON
 Verspätungen O - NN
 . O - $.
+
 Jede O - PIDAT
 fünfte O - ADJA
 Maschine O - NN
@@ -10483,12 +10607,14 @@ Zaman B-ORG Q145400 NE Q145400
 ) O - $(
 Quelle O - NN
 : O - $.
+
 Transfermarkt.at O - NE
 - O - $(
 Heute O - ADV
 Am O - APPRART
 29 O - CARD
 . O - $.
+
 Premier B-ORG Q9448 FM Q9448
 League I-ORG Q9448 FM Q9448
 - O - $(
@@ -10549,6 +10675,7 @@ EMPFINDLICHEN O - ADJA
 STELLEN O - NN
 GESTREIKT O - VVPP
 . O - $.
+
 Nach O - APPR
 Berechnungen O - NN
 des O - ART
@@ -10592,6 +10719,7 @@ kündigte O - VVFIN
 Intel O - NE
 an O - PTKVZ
 . O - $.
+
 Zunächst O - ADV
 werden O - VAFIN
 die O - ART
@@ -10615,6 +10743,7 @@ etwa O - ADV
 Milliarden O - NN
 Dollar O - NN
 . O - $.
+
 Die O - ART
 Sparmaßnahmen O - NN
 sollen O - VMFIN
@@ -10629,6 +10758,7 @@ Sie O - NN
 sind O - VAFIN
 hier O - ADV
 : O - $.
+
 Home O - FM
 > O - FM
 Nachrichten O - NN
@@ -10637,6 +10767,7 @@ Ausland O - NN
 > O - FM
 Idomeni O - NE
 : O - $.
+
 Flüchtlinge O - NN
 fliehen O - VVFIN
 vor O - APPR
@@ -10752,6 +10883,7 @@ andere O - ADJA
 Stimmung O - NN
 auf O - PTKVZ
 . O - $.
+
 Scheich O - NE
 Salman B-PER Q7405402 NE Q7405402
 bin I-PER Q7405402 VAFIN Q7405402
@@ -10837,16 +10969,19 @@ Filesharing O - NN
 mal O - ADV
 gelesen O - VVPP
 . O - $.
+
 Hilfreiche O - ADJA
 Tipps O - NN
 bei O - APPR
 Filesharingabmahnung O - NN
 . O - $.
+
 Beratung O - NN
 auch O - ADV
 am O - APPRART
 Wochenende O - NN
 ! O - $.
+
 Die O - ART
 Münchener O - ADJA
 Anwaltskanzlei O - NN
@@ -10874,6 +11009,7 @@ noch O - ADV
 nicht O - PTKNEG 
 bekannt O - ADJD 
 . O - $. 
+
 Gewiss O - ADJD 
 ist O - VAFIN 
 nur O - ADV 
@@ -10888,6 +11024,7 @@ VR O - NE
 erscheinen O - VVINF 
 soll O - VMFIN 
 . O - $. 
+
 Im O - APPRART 
 Rahmen O - NN 
 der O - ART 
@@ -10962,6 +11099,7 @@ hinter O - APPR
 die O - ART
 Kulissen O - NN
 . O - $.
+
 Die O - ART
 Polizeibeamten O - NN
 in O - APPR
@@ -10975,8 +11113,10 @@ Schichten O - NN
 - O - $(
 Betrieb O - NN
 . O - $.
+
 110 O - CARD
 . O - $.
+
 Wer O - PWS
 die O - ART
 Nummer O - NN
@@ -10986,6 +11126,7 @@ kann O - VMFIN
 sicher O - ADJD
 sein O - VAINF
 : O - $.
+
 Minuten O - NN
 später O - ADJD
 sind O - VAFIN
@@ -10993,6 +11134,7 @@ Beamte O - NN
 vor O - APPR
 Ort O - NN
 . O - $.
+
 Doch O - KON
 hinter O - APPR
 dem O - ART
@@ -11001,6 +11143,7 @@ steckt O - VVFIN
 viel O - ADV
 mehr O - PIS
 . O - $.
+
 Die O - ART
 Polizei O - NN
 ist O - VAFIN
@@ -11008,6 +11151,7 @@ ein O - ART
 komplexes O - ADJA
 System O - NN
 . O - $.
+
 Damit O - KOUS
 im O - APPRART
 Falle O - NN
@@ -11030,6 +11174,7 @@ das O - ART
 andere O - ADJA
 greifen O - VVINF
 . O - $.
+
 Die O - ART
 WAZ B-ORG Q561840 NE Q561840
 hat O - VAFIN
@@ -11129,6 +11274,7 @@ erklärt O - VVFIN
 
 Foto O - NN
 : O - $.
+
 Carsten B-PER - NE NIL
 Rehder I-PER - NE NIL
 Carsten B-PER - NE NIL
@@ -11163,10 +11309,12 @@ an O - PTKVZ
 
 Foto O - NN 
 : O - $. 
+
 Kay B-PER - NE 
 Nietfeld I-PER - NE 
 Bild O - NN 
 : O - $. 
+
 dpa B-ORG - NE 
 - I-ORG - $( 
 infocom I-ORG - NE 
@@ -11191,6 +11339,7 @@ in O - APPR
 Aussicht O - NN
 gestellt O - VVPP
 . O - $.
+
 Zunächst O - ADV
 zehn O - CARD
 Folgen O - NN
@@ -11203,11 +11352,13 @@ Uhr O - NN
 zu O - PTKZU
 sehen O - VVINF
 . O - $.
+
 Und O - KON
 darum O - PROAV
 geht O - VVFIN
 es O - PPER
 : O - $.
+
 Die O - ART
 beiden O - PIDAT
 Bankräuber O - NN
@@ -11264,6 +11415,7 @@ sein O - VAINF
 
 Foto O - NN
 : O - $.
+
 Carsten B-PER - NE NIL
 Rehder I-PER - NE NIL
 Carsten B-PER - NE NIL
@@ -11380,16 +11532,19 @@ Stunden O - NN
 Verspätung O - NN
 bzw O - PTKVZ
 . O - $.
+
 Annullierung O - NN
 je O - ADV
 nach O - APPR
 Fluggstrecke O - NN
 vor O - PTKVZ
 . O - $.
+
 Bis O - APPR
 1.500 O - CARD
 Kilometer O - NN
 : O - $.
+
 2 O - CARD
 Bus O - NN
 hängt O - VVFIN
@@ -11399,6 +11554,7 @@ der O - ART
 A60 O - FM
 FOTO O - NE
 : O - $.
+
 dpa B-ORG Q312653 NE Q312653
 , O - $,
 fve O - FM
@@ -11490,6 +11646,7 @@ Dr. B-PER - NN NIL
 - I-PER - $( NIL
 Ing I-PER - NE NIL
 . I-PER - $. NIL
+
 Gabriele B-PER - NE NIL
 Hoeborn I-PER - NE NIL
 ist O - VAFIN
@@ -11500,6 +11657,7 @@ Dr. B-PER - NN NIL
 - I-PER - $( NIL
 Ing I-PER - NE NIL
 . I-PER - $. NIL
+
 Gabriele B-PER - NE NIL
 Hoeborn I-PER - NE NIL
 vom O - APPRART
@@ -11562,6 +11720,7 @@ AG I-ORG - NN
 Unternehmensgeburtstag O - NN
 feiern O - VVINF
 . O - $.
+
 Während O - KOUS
 am O - APPRART
 Montag O - NN
@@ -11579,12 +11738,14 @@ die O - ART
 Bänder O - NN
 weiter O - PTKVZ
 . O - $.
+
 Einige O - PIAT
 Mitarbeiter O - NN
 waren O - VAFIN
 darum O - PROAV
 sauer O - ADJD
 . O - $.
+
 Denn O - KON
 in O - APPR
 anderen O - ADJA
@@ -11611,12 +11772,14 @@ Fehler O - NN
 beim O - APPRART
 Senden O - NN
 . O - $.
+
 Ihre O - PPOSAT
 Korrekutr O - NN
 wurde O - VAFIN
 erfolgreich O - ADJD
 gesendet O - VVPP
 . O - $.
+
 * O - $(
 Pflichtfeld O - NN
 Bitte O - ADJD
@@ -11635,18 +11798,21 @@ einen O - ART
 Link O - NN
 an O - PTKVZ
 . O - $.
+
 Fehler O - NN
 beim O - APPRART
 Einsenden O - NN
 des O - ART
 Links O - NN
 . O - $.
+
 Ihr O - PPOSAT
 Link O - NN
 wurde O - VAFIN
 erfolgreich O - ADJD
 eingesendet O - VVPP
 . O - $.
+
 * O - $(
 Pflichtfeld O - NN
 Beide O - PIDAT
@@ -11674,11 +11840,13 @@ Investment O - NN
 tätig O - ADJD
 sei O - VAFIN
 . O - $.
+
 Pleite O - NN
 der O - ART
 Firma O - NN
 Slav O - NE
 : O - $.
+
 Keine O - PIAT
 Mitarbeiter O - NN
 b O - NN
@@ -11705,6 +11873,7 @@ den O - ART
 täglichen O - ADJA
 Newsletter O - NN
 . O - $.
+
 Kommentare O - NN
 ( O - $(
 7 O - CARD
@@ -11727,6 +11896,7 @@ die O - ART
 geballten O - ADJA
 Fäuste O - NN
 . O - $.
+
 « O - $(
 Ich O - PPER
 kenne O - VVFIN
@@ -11743,6 +11913,7 @@ sie O - PPER
 und O - KON
 nickt O - VVFIN
 . O - $.
+
 « O - $(
 Aber O - KON
 ich O - PPER
@@ -11750,16 +11921,19 @@ frage O - VVFIN
 nicht O - PTKNEG
 nach O - PTKVZ
 . O - $.
+
 Das O - PDS
 schmerzt O - VVFIN
 zu O - PTKA
 sehr O - ADV
 . O - $.
+
 Das O - PDS
 ist O - VAFIN
 eine O - ART
 Katastrophe O - NN
 . O - $.
+
 » O - $(
 Es O - PPER
 ist O - VAFIN
@@ -11809,6 +11983,7 @@ den O - ART
 täglichen O - ADJA
 Newsletter O - NN
 . O - $.
+
 Kommentare O - NN
 « O - $(
 Das O - PDS
@@ -11823,6 +11998,7 @@ sagt O - VVFIN
 Martin B-PER - NE NIL
 Künzel I-PER - NE NIL
 . O - $.
+
 « O - $(
 Wir O - PPER
 eröffnen O - VVFIN
@@ -11834,6 +12010,7 @@ Bau O - NN
 und O - KON
 Gewerbeinspektorat O - NN
 . O - $.
+
 Und O - KON
 wenn O - KOUS
 sie O - PPER
@@ -11849,6 +12026,7 @@ wir O - PPER
 die O - PDS
 an O - PTKVZ
 . O - $.
+
 » O - $(
 Die O - ART
 gestrige O - ADJA
@@ -11874,10 +12052,12 @@ einem O - ART
 Riesenknatsch O - NN
 gipfelte O - VVFIN
 . O - $.
+
 Ein O - ART
 kurzer O - ADJA
 Rückblick O - NN
 : O - $.
+
 Anfang O - NN
 August O - NN
 wurde O - VAFIN
@@ -11904,6 +12084,7 @@ Playboxx O - NE
 umtaufen O - VVINF
 wollte O - VMFIN
 . O - $.
+
 Er O - PPER
 sollte O - VMFIN
 den O - ART
@@ -11930,6 +12111,7 @@ mehr O - ADV
 gezahlt O - VVPP
 hatten O - VAFIN
 . O - $.
+
 Deshalb O - PROAV
 wurde O - VAFIN
 ein O - ART
@@ -11951,6 +12133,7 @@ Eröffnung O - NN
 im O - APPRART
 August O - NN
 . O - $.
+
 Tweet O - NE
 Der O - ART
 Chip O - NN
@@ -11997,6 +12180,7 @@ ein O - ART
 Jahr O - NN
 zuvor O - ADV
 . O - $.
+
 Finanzvorstand O - NN
 Dieter B-PER - NE NIL
 Wemmer I-PER - NE NIL
@@ -12021,6 +12205,7 @@ Milliarden O - NN
 Euro O - NN
 steigert O - VVFIN
 . O - $.
+
 Allerdings O - ADV
 könnten O - VMFIN
 erneute O - ADJA
@@ -12040,9 +12225,11 @@ Freitag O - NN
 in O - APPR
 München O - NE
 . O - $.
+
 ROUNDUP O - NE
 2 O - CARD
 : O - $.
+
 Streik O - NN
 bei O - APPR
 Lufthansa B-ORG Q9325 NE Q9325
@@ -12134,6 +12321,7 @@ von O - APPR
 2,54 O - CARD
 Prozent O - NN
 . O - $.
+
 Zuvor O - ADV
 hatte O - VAFIN
 der O - ART
@@ -12147,6 +12335,7 @@ in O - APPR
 Folge O - NN
 hingelegt O - VVPP
 . O - $.
+
 Der O - ART
 Index O - NN
 der O - ART
@@ -12201,8 +12390,10 @@ das O - ART
 Eingabefeld O - NN
 ein O - PTKVZ
 . O - $.
+
 Tipp O - NN
 : O - $.
+
 das O - ART
 Bild O - NN
 anklicken O - VVINF
@@ -12246,6 +12437,7 @@ bundesweit O - ADJD
 Wohnungen O - NN
 durchsucht O - VVPP
 . O - $.
+
 Dabei O - PROAV
 stellte O - VVFIN
 sie O - PPER
@@ -12295,12 +12487,14 @@ Speichermarkt O - NN
 zu O - PTKZU
 etablieren O - VVINF
 . O - $.
+
 Die O - ART
 Produktionskapazitäten O - NN
 werden O - VAFIN
 dafür O - PROAV
 ausgebaut O - VVPP
 . O - $.
+
 Diesen O - PDAT
 Artikel O - NN
 teilen O - VVINF
@@ -12316,6 +12510,7 @@ den O - ART
 Entschädigungsfall O - NN
 festgestellt O - VVPP
 . O - $.
+
 Das O - ART
 AG B-ORG Q480675 NN Q480675
 Frankfurt I-ORG Q480675 NE Q480675
@@ -12337,6 +12532,7 @@ der O - ART
 Emittent O - NN
 verantwortlich O - ADJD
 . O - $.
+
 Adhoc O - NE
 - O - $(
 Mitteilung O - NN
@@ -12394,6 +12590,7 @@ der O - ART
 Z O - NN
 Ausschreibung O - NN
 : O - $.
+
 Sindelfingen O - NE
 , O - $,
 Umberto O - NE
@@ -12404,9 +12601,11 @@ Straße O - NN
 - O - $(
 Rohbauarbeiten O - NN
 . O - $.
+
 Twittern O - NN
 Foto O - NN
 : O - $.
+
 dpa B-ORG Q312653 NE Q312653
 Saarbrücken O - NE
 ( O - $(
@@ -12467,6 +12666,7 @@ Dienst O - NN
 von O - APPR
 Bericht O - NN
 : O - $.
+
 Experten O - NN
 erwarten O - VVFIN
 Verzögerung O - NN
@@ -12503,6 +12703,7 @@ Turgi O - NE
 und O - KON
 Oberentfelden O - NN
 . O - $.
+
 Wie O - PWAV
 viele O - PIS
 der O - ART
@@ -12526,6 +12727,7 @@ noch O - ADV
 immer O - ADV
 unklar O - ADJD
 . O - $.
+
 Volkswirtschaftsminister O - NN
 Urs O - NE
 Hofmann O - NE
@@ -12577,6 +12779,7 @@ Internetseiten O - NN
 Entertainment B-ORG - FM NIL
 GmbH I-ORG - NN NIL
 . O - $.
+
 Jupiter O - NE
 Ascending O - NE
 ist O - VAFIN
@@ -12600,6 +12803,7 @@ Geschwister I-PER Q195719 NN Q195719
 
 13 O - CARD
 . O - $.
+
 März O - NN
 2016 O - CARD
 , O - $,
@@ -12607,6 +12811,7 @@ März O - NN
 Uhr O - NN
 Berlin O - NE
 . O - $.
+
 Externe O - ADJA
 Experten O - NN
 gehen O - VVFIN
@@ -12626,6 +12831,7 @@ in O - APPR
 Berlin O - NE
 aus O - PTKVZ
 . O - $.
+
 In O - APPR
 einem O - ART
 vertraulichen O - ADJA
@@ -12636,6 +12842,7 @@ werde O - VAFIN
 der O - ART
 8 O - CARD
 . O - $.
+
 Dezember O - NN
 2016 O - CARD
 für O - APPR
@@ -12675,6 +12882,7 @@ Reihe O - NN
 gefragt O - VVPP
 wurde O - VAFIN
 . O - $.
+
 Dark O - FM
 Souls O - NE
 läge O - VVFIN
@@ -12702,9 +12910,11 @@ Kölliken O - NE
 fertiggestellt O - VVPP
 … O - $.
 . O - $.
+
 Burdafashion O - NE
 Fotocredits O - NE
 : O - $.
+
 Universal B-ORG Q4005797 FM Q4005797
 Home I-ORG Q4005797 FM Q4005797
 Entertainment I-ORG Q4005797 FM Q4005797
@@ -12804,6 +13014,7 @@ Fachpresse O - NN
 überzeugen O - VVINF
 können O - VMINF
 . O - $.
+
 Aktuell O - ADJD
 ist O - VAFIN
 ein O - ART
@@ -12828,6 +13039,7 @@ nun O - ADV
 leider O - ADV
 enttäuscht O - VVPP
 . O - $.
+
 Denn O - KON
 Hidetaka B-PER Q11454590 NE Q11454590
 Miyazaki I-PER Q11454590 NE Q11454590
@@ -12873,11 +13085,13 @@ Richtigkeit O - NN
 der O - ART
 Angaben O - NN
 . O - $.
+
 Bitte O - ADJD
 beachten O - VVFIN
 Sie O - PPER
 auch O - ADV
 : O - $.
+
 Nutzungsbasierte O - ADJA
 Onlinewerbung O - NN
 Zur O - APPRART
@@ -13112,6 +13326,7 @@ Metzelder I-PER Q152984 NE Q152984
 
 Foto O - NN
 : O - $.
+
 David B-PER - NE NIL
 Ebener I-PER - NE NIL
 Berlin O - NE
@@ -13150,6 +13365,7 @@ Januar O - NN
 zu O - PTKZU
 rechnen O - VVINF
 . O - $.
+
 Offiziell O - ADJD
 heisst O - VVFIN
 es O - PPER
@@ -13164,6 +13380,7 @@ abgeschlossen O - VVPP
 sein O - VAINF
 sollen O - VMFIN
 . O - $.
+
 Der O - ART
 Start O - NN
 des O - ART
@@ -13200,14 +13417,8 @@ Emittent O - NN
 Herausgeber O - NN
 verantwortlich O - ADJD
 . O - $.
---------------------------------------------------------------------------- O - TRUNC
-+ O - FM
-+ O - FM
-+ O - KON
+
 Quasi-Ad-hoc-Mitteilung O - NN
-+ O - KON
-+ O - KON
-+ O - KON
 zur O - APPRART
 sofortigen O - ADJA
 Veröffentlichung O - NN
@@ -13246,6 +13457,7 @@ Mali O - NE
 und O - KON
 Nigeria O - NE
 . O - $.
+
 Ebenfalls O - ADV
 forderte O - VVFIN
 Herrmann B-PER Q1690169 NE Q1690169
@@ -13310,6 +13522,7 @@ nicht O - PTKNEG
 ausbezahlt O - VVPP
 wurden O - VAFIN
 . O - $.
+
 Dabei O - PROAV
 sind O - VAFIN
 die O - ART
@@ -13320,6 +13533,7 @@ EU O - NE
 klar O - ADJD
 geregelt O - VVPP
 : O - $.
+
 Passagieren O - NN
 steht O - VVFIN
 bei O - APPR
@@ -13337,6 +13551,7 @@ bis O - APPR
 Euro O - NN
 zu O - PTKVZ
 . O - $.
+
 Doch O - KON
 häufig O - ADJD
 schaffen O - VVFIN
@@ -13349,8 +13564,10 @@ ihre O - PPOSAT
 Ansprüche O - NN
 durchzusetzen O - VVIZU
 . O - $.
+
 Experten O - NN
 : O - $.
+
 Airlines O - NN
 wimmeln O - VVFIN
 Forderungen O - NN
@@ -13365,6 +13582,7 @@ Verhalten O - NN
 der O - ART
 Airlines O - NN
 . O - $.
+
 Viele O - PIDAT
 Passagiere O - NN
 werden O - VAFIN
@@ -13383,6 +13601,7 @@ Forderungen O - NN
 würden O - VAFIN
 abgewimmelt O - VVPP
 . O - $.
+
 Das O - PDS
 bestätigen O - VVFIN
 auch O - ADV
@@ -13408,6 +13627,7 @@ steigt O - VVFIN
 die O - ART
 Mini-Ausgabe O - NN
 . O - $.
+
 UTE O - NE
 GALLBRONNER O - NE
 | O - FM
@@ -13420,6 +13640,7 @@ für O - APPR
 eine O - ART
 Medaille O - NN
 : O - $.
+
 Am O - APPRART
 Samstag O - NN
 ist O - VAFIN
@@ -13429,6 +13650,7 @@ wieder O - ADV
 Ausdauer O - NN
 gefragt O - VVPP
 . O - $.
+
 Es O - PPER
 geht O - VVFIN
 in O - APPR
@@ -13443,9 +13665,11 @@ Aktivitäten O - NN
 für O - APPR
 Kinder O - NN
 . O - $.
+
 Im O - APPRART
 Fokus O - NN
 : O - $.
+
 Die O - ART
 Einstein O - NE
 - O - $(
@@ -13455,6 +13679,7 @@ ihre O - PPOSAT
 jugendlichen O - ADJA
 Ableger O - NN
 . O - $.
+
 Während O - KOUS
 die O - ART
 großen O - ADJA
@@ -13463,6 +13688,7 @@ erst O - ADV
 am O - APPRART
 7 O - CARD
 . O - $.
+
 August O - NN
 dran O - PROAV
 sind O - VAFIN
@@ -13511,6 +13737,7 @@ Group I-ORG - FM NIL
 Konflikte O - NN
 YPG O - NE
 : O - $.
+
 Türkische O - ADJA
 Vorwürfe O - NN
 sind O - VAFIN
@@ -13564,6 +13791,7 @@ Selbstverständnis O - NN
 des O - ART
 Unternehmenspatriarchen O - NN
 . O - $.
+
 „ O - $(
 Wenn O - KOUS
 sich O - PRF
@@ -13594,6 +13822,7 @@ Manager O - NN
 gerne O - ADV
 zitiert O - VVPP
 . O - $.
+
 Ein O - ART
 letzter O - ADJA
 Versuch O - NN
@@ -13633,6 +13862,7 @@ Seidenberg I-PER - NE NIL
 war O - VAFIN
 groß O - ADJD
 : O - $.
+
 Im O - APPRART
 September O - NN
 war O - VAFIN
@@ -13709,6 +13939,7 @@ und O - KON
 verwüstete O - ADJA
 Städte O - NN
 : O - $.
+
 Ein O - ART
 schweres O - ADJA
 Erdbeben O - NN
@@ -13716,6 +13947,7 @@ hat O - VAFIN
 Ecuador O - NE
 getroffen O - VVPP
 . O - $.
+
 Mindestens O - ADV
 233 O - CARD
 Menschen O - NN
@@ -13730,6 +13962,7 @@ Hunderte O - NN
 wurden O - VAFIN
 verletzt O - VVPP
 . O - $.
+
 Die O - ART
 Behörden O - NN
 rechnen O - VVFIN
@@ -13744,6 +13977,7 @@ am O - APPRART
 Sonntag O - NN
 an O - PTKVZ
 . O - $.
+
 Das O - ART
 Epizentrum O - NN
 des O - ART
@@ -13773,6 +14007,7 @@ landesweit O - ADJD
 zu O - PTKZU
 spüren O - VVINF
 . O - $.
+
 Die O - ART
 Regierung O - NN
 rief O - VVFIN
@@ -13783,6 +14018,7 @@ den O - ART
 Ausnahmezustand O - NN
 aus O - PTKVZ
 . O - $.
+
 Das O - ART
 komplette O - ADJA
 Ausmaß O - NN
@@ -13793,6 +14029,7 @@ noch O - ADV
 schwer O - ADJD
 abzuschätzen O - VVIZU
 . O - $.
+
 Nach O - APPR
 Regierungsangaben O - NN
 war O - VAFIN
@@ -13805,6 +14042,7 @@ Ecuador O - NE
 seit O - APPR
 1979 O - CARD
 . O - $.
+
 Präsident O - NN
 Rafael O - NE
 Correa O - NE
@@ -13826,12 +14064,14 @@ vermögendsten O - ADJD
 
 Quelle O - NE
 : O - $.
+
 Fredrik B-PER - NE NIL
 von I-PER - APPR NIL
 Erichsen I-PER - NE NIL
 Tweet O - NE
 Frankfurt O - NE
 . O - $.
+
 Angesichts O - APPR
 wieder O - ADV
 verstärkter O - ADJA
@@ -13844,6 +14084,7 @@ am O - APPRART
 Freitag O - NN
 nachgegeben O - VVPP
 . O - $.
+
 Der O - ART
 Dax B-ORG Q155718 NE Q155718
 fiel O - VVFIN
@@ -13869,6 +14110,7 @@ außen O - ADV
 geholt O - VVPP
 werden O - VAINF
 . O - $.
+
 Denn O - KON
 gerade O - ADV
 Passlack O - NE
@@ -13880,6 +14122,7 @@ eine O - ART
 herausragende O - ADJA
 Zukunft O - NN
 . O - $.
+
 Vorbereitung O - NN
 So O - ADV
 trainiert O - VVFIN
@@ -13897,6 +14140,7 @@ rechten O - ADJA
 offensiven O - ADJA
 Mittelfeld O - NN
 . O - $.
+
 Da O - ADV
 fühle O - VVFIN
 ich O - PPER
@@ -13918,6 +14162,7 @@ finden O - VVFIN
 Sie O - PPER
 hier O - ADV
 . O - $.
+
 * O - $(
 Übernahme O - NN
 von O - APPR
@@ -14016,6 +14261,7 @@ ausgetragen O - VVPP
 wie O - KOKOM
 2015 O - CARD
 . O - $.
+
 Ein O - ART
 Ausblick O - NN
 , O - $,
@@ -14026,6 +14272,7 @@ Branchen O - NN
 verhandelt O - VVPP
 wird O - VAFIN
 . O - $.
+
 Metall O - NN
 , O - $,
 Chemie O - NN
@@ -14046,6 +14293,7 @@ wichtigen O - ADJA
 Industriesparten O - NN
 gespickt O - VVPP
 . O - $.
+
 Bereits O - ADV
 im O - APPRART
 ersten O - ADJA
@@ -14066,6 +14314,7 @@ unter O - APPR
 anderem O - PIS
 Metall O - NN
 . O - $.
+
 Nach O - APPR
 einer O - ART
 Zusammenstellung O - NN
@@ -14107,6 +14356,7 @@ M O - NN
 -18-5 O - CARD
 ) O - $(
 . O - $.
+
 openPR.de O - NE
 / O - FM
 t892327 O - FM
@@ -14136,6 +14386,7 @@ Stuttgart O - NE
 führen O - VVFIN
 aus O - PTKVZ
 : O - $.
+
 Die O - ART
 Finanzaufsicht O - NN
 BaFin B-ORG - NE 
@@ -14166,6 +14417,7 @@ Wirtschafts O - NN
 und O - KON
 Energiekrise O - NN
 . O - $.
+
 Der O - ART
 sozialistische O - ADJA
 Präsident O - NN
@@ -14179,6 +14431,7 @@ er O - PPER
 darauf O - PROAV
 nicht O - PTKNEG
 . O - $.
+
 Kanye B-PER Q15935 NE Q15935
 West I-PER Q15935 NE Q15935
 und O - KON
@@ -14239,6 +14492,7 @@ Mannschaft O - NN
 Tabellen O - NN
 -13 O - CARD
 . O - $.
+
 in O - APPR
 der O - ART
 Kreisliga O - NN
@@ -14253,6 +14507,7 @@ Spielbetrieb O - NN
 teilnehmen O - VVINF
 können O - VMINF
 . O - $.
+
 Die O - ART
 drei O - CARD
 Teams O - NN
@@ -14271,6 +14526,7 @@ Top O - FM
 - O - $(
 News O - FM
 : O - $.
+
 Das O - PDS
 ist O - VAFIN
 heute O - ADV
@@ -14319,6 +14575,7 @@ größer O - ADJD
 als O - KOKOM
 damals O - ADV
 . O - $.
+
 Erstens O - ADV
 handelt O - VVFIN
 es O - PPER
@@ -14389,6 +14646,7 @@ gemäß O - APPR
 26 O - CARD
 Abs O - NN
 . O - $.
+
 1 O - CARD
 WpHG O - NN
 mit O - APPR
@@ -14454,6 +14712,7 @@ war O - VAFIN
 zunächst O - ADV
 unklar O - ADJD
 . O - $.
+
 Die O - ART
 A60 O - NE
 Richtung O - NN
@@ -14466,6 +14725,7 @@ halbe O - ADJA
 Stunde O - NN
 gesperrt O - VVPP
 . O - $.
+
 Nähere O - ADJA
 Einzelheiten O - NN
 zum O - APPRART
@@ -14475,6 +14735,7 @@ zunächst O - ADV
 nicht O - PTKNEG
 bekannt O - ADJD
 . O - $.
+
 ( O - $(
 dpa B-ORG Q312653 NE Q312653
 ) O - $(
@@ -14515,6 +14776,7 @@ Kommentare O - NN
 Pressemeldungen O - NN
 11 O - CARD
 . O - $.
+
 Jan O - NE
 2016 O - CARD
 Seit O - APPR
@@ -14541,13 +14803,16 @@ mit O - APPR
 % O - NN
 ) O - $(
 . O - $.
+
 Grafik O - NN
 : O - $.
+
 Öko O - NE
 Invest O - FM
 Versenden O - NN
 PPVX O - NE
 : O - $.
+
 Fiel O - NE
 letzte O - ADJA
 Woche O - NN
@@ -14580,6 +14845,7 @@ um O - APPR
 8.0 O - CARD
 % O - NN
 . O - $.
+
 Seit O - APPR
 Jahresanfang O - NN
 2016 O - CARD
@@ -14601,6 +14867,7 @@ Erdölaktienindex O - NN
 % O - NN
 ) O - $(
 . O - $.
+
 Derzeit O - ADV
 ist O - VAFIN
 nur O - ADV
@@ -14619,6 +14886,7 @@ mit O - APPR
 im O - APPRART
 Plus O - NN
 . O - $.
+
 Der O - ART
 einzige O - ADJA
 Gewinner O - NN
@@ -14676,6 +14944,7 @@ einschließlich O - APPR
 der O - ART
 Pressefreiheit O - NN
 . O - $.
+
 Es O - PPER
 sei O - VAFIN
 klar O - ADJD
@@ -14742,6 +15011,7 @@ Plus O - NE
 Mitglieder O - NN
 gratis O - ADV
 ! O - $.
+
 Jetzt O - ADV
 freischalten O - VVINF
 25.01.2016 O - FM
@@ -14780,15 +15050,18 @@ Verletzungen O - NN
 gekommen O - VVPP
 ist O - VAFIN
 . O - $.
+
 Hier O - ADV
 klicken O - VVINF
 und O - KON
 teilen O - VVINF
 : O - $.
+
 Hier O - ADV
 Newsletter O - NN
 bestellen O - VVINF
 : O - $.
+
 Ich O - PPER
 m O - NE
 chte O - VVFIN
@@ -14818,11 +15091,13 @@ erhalten O - VVINF
 
 Foto O - NN
 : O - $.
+
 Patrick B-PER - NE NIL
 B. I-PER - NE NIL
 Kraemer I-PER - NE NIL
 Bild O - NN NIL
 : O - $.
+
 dpa B-ORG Q312653 NE Q312653
 - I-ORG - $(
 infocom I-ORG - NE
@@ -14850,6 +15125,7 @@ die O - ART
 Episode O - NN
 ausgestrahlt O - VVPP
 . O - $.
+
 Die B-PER - ART NIL
 Seidenbergs I-PER - NE NIL
 selbst O - ADV
@@ -14861,6 +15137,7 @@ noch O - ADV
 nicht O - PTKNEG
 gesehen O - VVPP
 . O - $.
+
 „ O - $(
 Wir O - PPER
 sind O - VAFIN
@@ -14878,6 +15155,7 @@ sagte O - VVFIN
 Britta B-PER - NE NIL
 Seidenberg I-PER - NE NIL
 . O - $.
+
 Die O - ART
 Familie O - NN
 hatte O - VAFIN
@@ -14903,6 +15181,7 @@ großen O - ADJA
 Leinwand O - NN
 anzusehen O - VVIZU
 . O - $.
+
 Doch O - KON
 dann O - ADV
 kommt O - VVFIN
@@ -14911,15 +15190,18 @@ anders O - ADV
 als O - KOKOM
 gedacht O - VVPP
 : O - $.
+
 Dienstagabend O - NN
 , O - $,
 20 O - CARD
 Uhr O - NN
 . O - $.
+
 Der O - ART
 Fernseher O - NN
 streikt O - VVFIN
 . O - $.
+
 Erwartungsvoll O - ADJD
 sitzen O - VVFIN
 Freunde O - NN
@@ -14932,6 +15214,7 @@ Familie O - NN
 im O - APPRART
 Restaurant O - NN
 . O - $.
+
 30 O - CARD
 Leute O - NN
 , O - $,
@@ -14956,6 +15239,7 @@ ihrer O - PPOSAT
 dunklen O - ADJA
 Seite O - NN
 . O - $.
+
 Statt O - APPR
 bunter O - ADJA
 Bilder O - NN
@@ -14963,6 +15247,7 @@ Bilder O - NN
 reines O - ADJA
 Schwarz O - NN
 . O - $.
+
 Und O - KON
 das O - PDS
 bereits O - ADV
@@ -15038,8 +15323,10 @@ Jade O - NE
 Hotline O - FM
 an O - PTKVZ
 : O - $.
+
 Telefon O - NN
 : O - $.
+
 0 O - CARD
 44 O - CARD
 21 O - CARD
@@ -15083,6 +15370,7 @@ aus O - APPR
 nordwestlicher O - ADJA
 Richtung O - NN
 . O - $.
+
 In O - APPR
 der O - ART
 Nacht O - NN
@@ -15094,6 +15382,7 @@ bei O - APPR
 5 O - CARD
 Grad O - NN
 . O - $.
+
 Morgen O - ADV
 gibt O - VVFIN
 es O - PPER
@@ -15109,6 +15398,7 @@ bei O - APPR
 12 O - CARD
 Grad O - NN
 . O - $.
+
 Am O - APPRART
 Freitag O - NN
 kommen O - VVFIN
@@ -15128,6 +15418,7 @@ bei O - APPR
 10 O - CARD
 Grad O - NN
 . O - $.
+
 Gemeldet O - VVPP
 vom O - APPRART
 Bundesamt B-ORG Q1005487 NN Q1005487
@@ -15170,6 +15461,7 @@ vor O - ADV
 nicht O - PTKNEG
 rentabel O - ADJD
 . O - $.
+
 Zu O - PTKA
 lange O - ADJD
 hat O - VAFIN
@@ -15254,6 +15546,7 @@ für O - APPR
 2017 O - CARD
 geplant O - VVPP
 . O - $.
+
 Straight O - FM
 Outta O - NE
 Compton O - NE
@@ -15290,6 +15583,7 @@ München O - NE
 geben O - VVINF
 werde O - VAFIN
 . O - $.
+
 Auch O - ADV
 Air B-ORG Q156829 NE Q156829
 Berlin I-ORG Q156829 NE Q156829
@@ -15366,6 +15660,7 @@ POL B-ORG - NE NIL
 - I-ORG - $( NIL
 HA I-ORG - NE NIL
 : O - $.
+
 Unfall O - NN
 unter O - APPR
 Alkohol O - NN
@@ -15396,6 +15691,7 @@ die O - ART
 Polizei O - NN
 hinzu O - PTKVZ
 . O - $.
+
 Gegen O - APPR
 21.15 O - CARD
 Uhr O - NN
@@ -15407,6 +15703,7 @@ in O - APPR
 der O - ART
 Veilchenstraße O - NN
 . O - $.
+
 Der O - ART
 Pkw O - NN
 setzte O - VVFIN
@@ -15424,6 +15721,7 @@ entstand O - VVFIN
 erheblicher O - ADJA
 Sachschaden O - NN
 . O - $.
+
 Dennoch O - ADV
 blieb O - VVFIN
 der O - ART
@@ -15434,6 +15732,7 @@ dem O - ART
 Audi O - NN
 sitzen O - VVINF
 . O - $.
+
 Auch O - ADV
 beim O - APPRART
 Eintreffen O - NN
@@ -15463,6 +15762,7 @@ erinnern O - VVINF
 zu O - PTKZU
 können O - VMINF
 . O - $.
+
 Ein O - ART
 Alkoholtest O - NN
 ergab O - VVFIN
@@ -15483,6 +15783,7 @@ genommen O - VVPP
 zu O - PTKZU
 haben O - VAINF
 . O - $.
+
 Er O - PPER
 musste O - VMFIN
 mit O - ADV
@@ -15501,6 +15802,7 @@ Ermittlungen O - NN
 dauern O - VVFIN
 an O - PTKVZ
 . O - $.
+
 Eine O - ART
 erste O - ADJA
 Schätzung O - NN
@@ -15517,10 +15819,12 @@ ca. O - ADV
 3500 O - CARD
 Euro O - NN
 . O - $.
+
 Rückfragen O - NN
 bitte O - VVFIN
 an O - PTKVZ
 : O - $.
+
 E-Mail O - NN
 Tödliches O - ADJA
 Autorennen O - NN
@@ -15555,11 +15859,13 @@ beteiligten O - ADJA
 Fahrzeugs O - NN
 ermittelt O - VVPP
 . O - $.
+
 Er O - PPER
 wird O - VAFIN
 noch O - ADV
 vernommen O - VVPP
 . O - $.
+
 Um O - KOUI
 das O - ART
 Video O - NN
@@ -15571,6 +15877,7 @@ benötigen O - VVFIN
 Sie O - PPER
 Javascript O - NE
 . O - $.
+
 Bitte O - ADJD
 aktivieren O - VVFIN
 Sie O - PPER
@@ -15579,6 +15886,7 @@ in O - APPR
 Ihrem O - PPOSAT
 Browser O - NN
 . O - $.
+
 0:56 O - CARD
 min O - FM
 | O - FM
@@ -15647,6 +15955,7 @@ am O - APPRART
 Sonntag O - NN
 an O - PTKVZ
 . O - $.
+
 © O - FM
 REUTERS B-ORG Q130879 NE Q130879
 , O - $,
@@ -15761,6 +16070,7 @@ nach O - APPR
 oben O - ADV
 getrieben O - VVPP
 . O - $.
+
 Die O - ART
 Gornergrat B-ORG Q667247 NE Q667247
 Bahn I-ORG - NN
@@ -15798,6 +16108,7 @@ Straße O - NN
 ist O - VAFIN
 marode O - ADJD
 . O - $.
+
 Doch O - KON
 vor O - APPR
 der O - ART
@@ -15823,6 +16134,7 @@ Jahr O - NN
 2019 O - CARD
 hinziehen O - VVFIN
 . O - $.
+
 | O - FM
 © O - FM
 Frank B-PER - NE NIL
@@ -15843,6 +16155,7 @@ Kanalarbeiten O - NN
 und O - KON
 Fahrbahnerneuerung O - NN
 : O - $.
+
 Von O - APPR
 April O - NN
 2016 O - CARD
@@ -15863,6 +16176,7 @@ komplett O - ADJD
 gekappt O - VVPP
 Herford O - NE
 . O - $.
+
 Anliegern O - NN
 und O - KON
 Geschäftsleuten O - NN
@@ -15873,6 +16187,7 @@ drohen O - VVFIN
 dürre O - ADJA
 Zeiten O - NN
 . O - $.
+
 Wegen O - APPR
 der O - ART
 Erneuerung O - NN
@@ -15890,6 +16205,7 @@ versiegt O - VVFIN
 der O - ART
 Verkehrsfluss O - NN
 . O - $.
+
 War O - VAFIN
 diese O - PDAT
 wichtige O - ADJA
@@ -15916,6 +16232,7 @@ bis O - APPR
 komplett O - ADJD
 gesperrt O - VVPP
 . O - $.
+
 Betroffen O - VVPP
 ist O - VAFIN
 der O - ART
@@ -15943,6 +16260,7 @@ Kriminalitätsentwicklung O - NN
 zu O - PTKZU
 prognostizieren O - VVINF
 ; O - $.
+
 aktuelle O - ADJA
 Satellitendaten O - NN
 für O - APPR
@@ -15962,6 +16280,7 @@ von O - APPR
 unschätzbarem O - ADJA
 Wert O - NN
 . O - $.
+
 Insgesamt O - ADV
 rund O - ADV
 200 O - CARD
@@ -15980,6 +16299,7 @@ bei O - APPR
 der O - ART
 3 O - CARD
 . O - $.
+
 Münchner O - ADJA
 Gi O - NE
 - O - $(
@@ -16020,6 +16340,7 @@ und O - KON
 51 O - CARD
 Jahren O - NN
 . O - $.
+
 « O - $(
 Sie O - PPER
 haben O - VAFIN
@@ -16038,6 +16359,7 @@ zu O - APPR
 K O - NN
 14 O - CARD
 . O - $.
+
 Januar O - NN
 2016 O - CARD
 Verständlichkeit O - NN
@@ -16121,6 +16443,7 @@ nur O - ADV
 sagen O - VVINF
 .... O - $.
 . O - $.
+
 als O - KOKOM
 das O - PDS
 mit O - APPR
@@ -16154,6 +16477,7 @@ rund O - ADV
 Mitarbeiter O - NN
 betroffen O - VVPP
 . O - $.
+
 Laut O - APPR
 DOAG B-ORG Q1203625 NE Q1203625
 treffe O - VVFIN
@@ -16233,6 +16557,7 @@ es O - PPER
 mehr O - PIAT
 Diebstähle O - NN
 . O - $.
+
 Die O - ART
 Aufklärungsquote O - NN
 sank O - VVFIN
@@ -16253,6 +16578,7 @@ seit O - APPR
 sieben O - CARD
 Jahren O - NN
 . O - $.
+
 Die O - ART
 Polizei O - NN
 sei O - VAFIN
@@ -16276,10 +16602,12 @@ Autors O - NN
 Twitter O - NE
 Stv O - NE
 . O - $.
+
 Ressortleiter O - NN
 Sport O - NN
 Foto O - NN
 : O - $.
+
 pa O - FM
 / O - $(
 augenklick O - FM
@@ -16313,6 +16641,7 @@ Foto I-ORG - NN NIL
 Services I-ORG - FM NIL
 Duisburg O - NE
 . O - $.
+
 Die O - ART
 Zebras O - NN
 hoffen O - VVFIN
@@ -16322,6 +16651,7 @@ auf O - APPR
 die O - ART
 Wende O - NN
 . O - $.
+
 Bei O - APPR
 der O - ART
 0:1-Pleite O - NN
@@ -16351,6 +16681,7 @@ der O - ART
 Belegschaft O - NN
 gehen O - VVINF
 . O - $.
+
 Intel B-ORG Q248 NE Q248
 - O - $(
 Chef O - NN
@@ -16393,6 +16724,7 @@ weiblichen O - ADJA
 Vornamen O - NN
 erhalten O - VVPP
 . O - $.
+
 Im O - APPRART
 anderen O - PIS
 schlich O - VVFIN
@@ -16402,12 +16734,14 @@ ein O - ART
 Schreibfehler O - NN
 ein O - PTKVZ
 . O - $.
+
 Die O - ART
 Stimmzettel O - NN
 werden O - VAFIN
 nun O - ADV
 nachgedruckt O - VVPP
 . O - $.
+
 « O - $(
 Die O - ART
 mit O - APPR
@@ -16432,6 +16766,7 @@ Wahlleiter O - NN
 Ingo B-PER - NE NIL
 Happel I-PER - NE NIL
 . O - $.
+
 © O - FM
 We O - FM
 Von O - APPR
@@ -16446,6 +16781,7 @@ Paul O - NE
 in O - APPR
 Hochheim O - NE
 . O - $.
+
 Die O - ART
 Gemeinde O - NN
 soll O - VMFIN
@@ -16457,8 +16793,10 @@ in O - APPR
 Flörsheim O - NE
 zusammentun O - VVINF
 . O - $.
+
 Foto O - NN
 : O - $.
+
 Rolf B-PER - NE NIL
 Oeser I-PER - NE NIL
 Das O - ART
@@ -16479,11 +16817,13 @@ Fusions O - NN
 Pläne O - NN
 korrigiert O - VVPP
 . O - $.
+
 St. O - NE
 Martinus O - NE
 bleibt O - VVFIN
 eigenständig O - ADJD
 . O - $.
+
 Aufgeschoben O - VVPP
 ist O - VAFIN
 aber O - ADV
@@ -16493,6 +16833,7 @@ aufgehoben O - VVPP
 heißt O - VVFIN
 es O - PPER
 . O - $.
+
 Drucken O - NN
 per O - APPR
 Mail O - NE
@@ -16501,6 +16842,7 @@ Protest O - NN
 hat O - VAFIN
 gewirkt O - VVPP
 . O - $.
+
 Im O - APPRART
 vergangenen O - ADJA
 Herbst O - NN
@@ -16547,6 +16889,7 @@ Typs O - NN
 zu O - PTKZU
 fusionieren O - VVINF
 . O - $.
+
 Nun O - ADV
 hat O - VAFIN
 das O - ART
@@ -16555,6 +16898,7 @@ dieser O - PDAT
 Forderung O - NN
 nachgegeben O - VVPP
 . O - $.
+
 So O - ADV
 wird O - VAFIN
 die O - ART
@@ -16590,6 +16934,7 @@ Raum O - NN
 weiterentwickeln O - VVINF
 sollen O - VMFIN
 . O - $.
+
 „ O - $(
 Das O - ART
 Bistum O - NN
@@ -16639,6 +16984,7 @@ einen O - ART
 Traum O - NN
 erfüllt O - VVPP
 : O - $.
+
 Der O - ART
 31 O - CARD
 - O - $(
@@ -16658,9 +17004,11 @@ für O - APPR
 Autos O - NN
 aus O - PTKVZ
 . O - $.
+
 Hurrikan O - NN
 Alex O - NE
 : O - $.
+
 Besonderer O - ADJA
 Sturm O - NN
 im O - APPRART
@@ -16669,6 +17017,7 @@ Satellitenbild O - NN
 der O - ART
 Woche O - NN
 : O - $.
+
 Alex O - NE
 , O - $,
 was O - PWS
@@ -16684,6 +17033,7 @@ der O - ART
 Internationalen O - ADJA
 Raumstation O - NN
 : O - $.
+
 Staunen O - NN
 ber O - APPR
 den O - ART
@@ -16700,6 +17050,7 @@ zu O - PTKA
 weit O - ADJD
 stlich O - ADJD
 : O - $.
+
 Hurrikane O - NN
 gibt O - VVFIN
 es O - PPER
@@ -16714,6 +17065,7 @@ West O - NN
 - O - $(
 Atlantik O - NN
 . O - $.
+
 Warum O - PWAV
 hat O - VAFIN
 Alex O - NE
@@ -16738,6 +17090,7 @@ te O - FM
 im O - APPRART
 Dezember O - NN
 . O - $.
+
 Saison O - NN
 f O - FM
 r O - FM
@@ -16747,11 +17100,13 @@ eigentlich O - ADV
 vom O - APPRART
 1 O - CARD
 . O - $.
+
 Juni O - NN
 bis O - APPR
 zum O - APPRART
 30 O - CARD
 . O - $.
+
 November O - NN
 , O - $,
 wenn O - KOUS
@@ -16774,6 +17129,7 @@ rme O - FM
 entfachen O - VVINF
 kann O - VMFIN
 . O - $.
+
 Doch O - KON
 diese O - PDAT
 Woche O - NN
@@ -16781,6 +17137,7 @@ drehte O - VVFIN
 Alex O - NE
 auf O - PTKVZ
 . O - $.
+
 Alex O - NE
 war O - VAFIN
 der O - ART
@@ -16790,6 +17147,7 @@ Hurrikan O - NN
 seit O - APPR
 1938 O - CARD
 . O - $.
+
 Und O - KON
 es O - PPER
 war O - VAFIN
@@ -16818,6 +17176,7 @@ Mal O - NN
 seit O - APPR
 1978 O - CARD
 . O - $.
+
 Am O - APPRART
 Donnerstag O - NN
 um O - APPR
@@ -16845,6 +17204,7 @@ Tweet O - FM
 ROUNDUP O - NE
 2 O - CARD
 : O - $.
+
 Anlegerflucht O - NN
 und O - KON
 Börsenturbulenzen O - NN
@@ -16901,6 +17261,7 @@ Jahren O - NN
 
 23 O - CARD
 . O - $.
+
 Februar O - NN
 2016 O - CARD
 16:13 O - CARD
@@ -16916,8 +17277,10 @@ der O - ART
 Rückrufaktion O - NN
 betroffen O - VVPP
 . O - $.
+
 Foto O - NN
 : O - $.
+
 Gero B-PER - NE NIL
 Breloer I-PER - NE NIL
 / O - $(
@@ -16942,6 +17305,7 @@ sie O - PPER
 höchste O - ADJA
 Einschaltquoten O - NN
 . O - $.
+
 Auch O - ADV
 in O - APPR
 Europa O - NE
@@ -16951,8 +17315,10 @@ Serie O - NN
 sehr O - ADV
 beliebt O - ADJD
 . O - $.
+
 Hintergrund O - NN
 : O - $.
+
 Jerry B-PER Q217037 NE Q217037
 Bruckheimer I-PER Q217037 NE Q217037
 produzierte O - VVFIN
@@ -17003,6 +17369,7 @@ Donnerstag O - NN
 in O - APPR
 Essen O - NE
 . O - $.
+
 Das O - ART
 Unternehmen O - NN
 habe O - VAFIN
@@ -17018,6 +17385,7 @@ noch O - ADV
 nicht O - PTKNEG
 aus O - PTKVZ
 . O - $.
+
 Der O - ART
 Umbau O - NN
 gehe O - VVFIN
@@ -17027,6 +17395,7 @@ brauche O - VVFIN
 seine O - PPOSAT
 Zeit O - NN
 . O - $.
+
 Mit O - APPR
 einem O - ART
 neuen O - ADJA
@@ -17110,6 +17479,7 @@ der O - ART
 Emittent O - NN
 verantwortlich O - ADJD
 . O - $.
+
 - O - $(
 Konzernumsatz O - NN
 legt O - VVFIN
@@ -17120,6 +17490,7 @@ auf O - APPR
 1.060,7 O - CARD
 Mio O - NN
 . O - $.
+
 Euro O - NN
 zu O - PTKVZ
 - O - $(
@@ -17153,6 +17524,7 @@ Luxemburg O - NE
 , O - $,
 11 O - CARD
 . O - $.
+
 März O - NN
 2016 O - CARD
 - O - $(
@@ -17232,6 +17604,7 @@ Millionen O - NN
 Euro O - NN
 bzw O - PTKVZ
 . O - $.
+
 die O - ART
 Gemeinden O - NN
 , O - $,
@@ -17243,6 +17616,7 @@ ebenfalls O - ADV
 dieser O - PDAT
 Summe O - NN
 . O - $.
+
 “ O - $(
 Jeder O - PIDAT
 Euro O - NN
@@ -17257,6 +17631,7 @@ ist O - VAFIN
 gut O - ADJD
 investiert O - VVPP
 . O - $.
+
 Dabei O - PROAV
 setzen O - VVFIN
 wir O - PPER
@@ -17386,6 +17761,7 @@ mit O - APPR
 Essen O - NN
 schwierig O - ADJD
 . O - $.
+
 Das O - ART
 Essen O - NN
 wurde O - VAFIN
@@ -17396,6 +17772,7 @@ geholt O - VVPP
 und O - KON
 serviert O - VVPP
 . O - $.
+
 Nach O - APPR
 höchstens O - ADV
 3 O - CARD
@@ -17410,6 +17787,7 @@ ins O - APPRART
 Habana B-ORG - NN NIL
 libre I-ORG - FM NIL
 . O - $.
+
 Da O - ADV
 bekamen O - VVFIN
 wir O - PPER
@@ -17426,6 +17804,7 @@ ausreichend O - ADJD
 waren O - VAFIN
 ) O - $(
 . O - $.
+
 Im O - APPRART
 Hotel O - NN
 bekamen O - VVFIN
@@ -17453,6 +17832,7 @@ geliefert O - VVPP
 werde O - VAFIN
 ) O - $(
 . O - $.
+
 Um O - APPR
 uns O - PPER
 hat O - VAFIN
@@ -17462,6 +17842,7 @@ wirklich O - ADJD
 richtig O - ADJD
 gekümmert O - VVPP
 . O - $.
+
 Ich O - PPER
 wäre O - VAFIN
 danach O - PROAV
@@ -17476,6 +17857,7 @@ Ausgleichszahlung O - NN
 zu O - PTKZU
 verlangen O - VVINF
 . O - $.
+
 Mit O - APPR
 der O - ART
 Condor B-ORG Q312517 NN Q312517
@@ -17489,6 +17871,7 @@ im O - APPRART
 Dingolfinger O - ADJA
 Werk O - NN
 . O - $.
+
 Dort O - ADV
 gibt O - VVFIN
 es O - PPER
@@ -17504,6 +17887,7 @@ in O - APPR
 den O - ART
 Kantinen O - NN
 . O - $.
+
 Da O - ADV
 können O - VMFIN
 sich O - PRF
@@ -17517,6 +17901,7 @@ in O - APPR
 München O - NE
 anschauen O - VVINF
 . O - $.
+
 Im O - APPRART
 nächsten O - ADJA
 Jahr O - NN
@@ -17528,12 +17913,14 @@ vor O - APPR
 der O - ART
 Tür O - NN
 . O - $.
+
 Dann O - ADV
 jährt O - VVFIN
 sich O - PRF
 zum O - APPRART
 50 O - CARD
 . O - $.
+
 Mal O - ADV
 die O - ART
 Übernahme O - NN
@@ -17647,6 +18034,7 @@ ein O - ART
 bisschen O - VVINF
 können O - VMINF
 . O - $.
+
 Je O - ADV
 nach O - APPR
 Alter O - NN
@@ -17692,6 +18080,7 @@ Märkte O - NN
 zu O - PTKZU
 investieren O - VVINF
 . O - $.
+
 WPP B-ORG Q1318049 NE Q1318049
 machte O - VVFIN
 zuletzt O - ADV
@@ -17726,6 +18115,7 @@ offenbar O - ADJD
 Einschnitte O - NN
 bevor O - PTKVZ
 . O - $.
+
 » O - $(
 Quelle O - NN
 0:3 O - CARD
@@ -17736,18 +18126,22 @@ dem O - ART
 Rennen O - NN
 Oberwasser O - NN
 : O - $.
+
 Joshua B-PER - NE NIL
 Wiechens I-PER - NE NIL
 überspringt O - VVFIN
 Torben B-PER - NN NIL
 Runne I-PER - NE NIL
 . O - $.
+
 Foto O - NN
 : O - $.
+
 nls O - NE
 Bisperoder O - NE
 Jubeltaumel O - NE
 : O - $.
+
 In O - APPR
 Salzhemmendorf O - NE
 hatte O - VAFIN
@@ -17759,13 +18153,16 @@ Grund O - NN
 zur O - APPRART
 Freude O - NN
 . O - $.
+
 Foto O - NN
 : O - $.
+
 nls O - NE
 Hameln B-ORG - NIL
 - I-ORG - $( 
 Pyrmont I-ORG - NIL
 . O - $.
+
 Mit O - APPR
 der O - ART
 0:3-Heimpleite O - NN
@@ -17789,16 +18186,19 @@ Fußball O - NN
 - O - $(
 Kreisliga O - NN
 . O - $.
+
 Hameln O - NE
 - O - $(
 Pyrmont O - NE
 . O - $.
+
 Blau O - ADJD
 - O - $(
 Weiß O - NE
 sieht O - VVFIN
 Schwarz O - NE
 . O - $.
+
 Und O - KON
 zwar O - ADV
 richtig O - ADJD
@@ -17816,12 +18216,14 @@ eigener O - ADJA
 Kulisse O - NN
 verspielt O - VVPP
 . O - $.
+
 So O - ADV
 sieht O - VVFIN
 es O - PPER
 jedenfalls O - ADV
 aus O - PTKVZ
 . O - $.
+
 Erst O - ADV
 die O - ART
 1:5-Pleite O - NN
@@ -17841,6 +18243,7 @@ bitteres O - ADJA
 gegen O - APPR
 Bisperode B-ORG - NE NIL
 . O - $.
+
 Die O - ART
 Titelchancen O - NN
 der O - ART
@@ -17859,6 +18262,7 @@ den O - ART
 Nullpunkt O - NN
 gesunken O - VVPP
 . O - $.
+
 Auch O - ADV
 der O - ART
 Relegationsplatz O - NN
@@ -17871,6 +18275,7 @@ weite O - ADJA
 Ferne O - NN
 gerückt O - VVPP
 . O - $.
+
 Eitel O - NE
 Sonnenschein O - NN
 herrscht O - VVFIN
@@ -17914,6 +18319,7 @@ interessantes O - ADJA
 Gespräch O - NN
 hatte O - VAFIN
 . O - $.
+
 Es O - PPER
 gilt O - VVFIN
 aber O - ADV
@@ -17974,6 +18380,7 @@ passende O - ADJA
 Videomaterial O - NN
 anschauen O - VVINF
 . O - $.
+
 Wir O - PPER
 sehen O - VVFIN
 den O - ART
@@ -17991,6 +18398,7 @@ Action O - NN
 und O - KON
 mehr O - PIS
 . O - $.
+
 Das O - ART
 Ganze O - NN
 wird O - VAFIN
@@ -18022,6 +18430,7 @@ Tech O - FM
 Demo O - NN
 handelt O - VVFIN
 . O - $.
+
 Zudem O - PROAV
 ist O - VAFIN
 unbekannt O - ADJD
@@ -18032,6 +18441,7 @@ wann O - PWAV
 Star O - FM
 Wars O - FM
 : O - $.
+
 Trials O - FM
 of O - FM
 Tatooine O - FM
@@ -18040,6 +18450,7 @@ offiziell O - ADJD
 veröffentlicht O - VVPP
 wird O - VAFIN
 . O - $.
+
 Wenn O - KOUS
 sich O - PRF
 aber O - ADV
@@ -18060,6 +18471,7 @@ ist O - VAFIN
 es O - PPER
 nicht O - PTKNEG
 . O - $.
+
 Und O - KON
 als O - KOKOM
 ( O - $(
@@ -18093,6 +18505,7 @@ medialen O - ADJA
 Erdbeben O - NN
 nachgehen O - VVINF
 . O - $.
+
 Die O - ART
 Differenz O - NN
 zwischen O - APPR
@@ -18104,6 +18517,7 @@ die O - ART
 eigentliche O - ADJA
 Information O - NN
 . O - $.
+
 Zur O - APPRART
 Beleuchtung O - NN
 des O - ART
@@ -18116,6 +18530,7 @@ alte O - ADJA
 Geschichte O - NN
 zurückgreifen O - VVINF
 . O - $.
+
 Die O - ART
 Personen O - NN
 des O - ART
@@ -18123,6 +18538,7 @@ folgenden O - ADJA
 Dramas O - NN
 sind O - VAFIN
 : O - $.
+
 Ein O - ART
 König O - NN
 mit O - APPR
@@ -18310,11 +18726,13 @@ weiter O - ADV
 für O - APPR
 Verunsicherung O - NN
 . O - $.
+
 Voriger O - ADJA
 Artikel O - NN
 Artikel O - NN
 veröffentlicht O - VVPP
 : O - $.
+
 Freitag O - NN
 , O - $,
 13.11.2015 O - NN
@@ -18323,6 +18741,7 @@ Uhr O - NN
 Artikel O - NN
 aktualisiert O - VVPP
 : O - $.
+
 Freitag O - NN
 , O - $,
 13.11.2015 O - NN
@@ -18382,6 +18801,7 @@ der O - ART
 Emittent O - NN
 verantwortlich O - ADJD
 . O - $.
+
 --------------------------------------------------------------------------- O - $(
 Startschuss O - NN
 für O - APPR
@@ -18415,6 +18835,7 @@ gibt O - VVFIN
 auch O - ADV
 Lichtblicke O - NN
 . O - $.
+
 Aufholbedarf O - NN
 der O - ART
 Versicherer O - NN
