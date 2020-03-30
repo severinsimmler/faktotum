@@ -17,6 +17,23 @@ from flair.models.similarity_learning_model import (
 )
 from flair.trainers import ModelTrainer
 from flair.training_utils import Result, store_embeddings
+import flair
+from flair.data import DataPoint, DataPair
+from flair.embeddings import Embeddings
+from flair.datasets import DataLoader
+from flair.training_utils import Result
+from flair.training_utils import store_embeddings
+
+import torch
+from torch import nn
+import torch.nn.functional as F
+
+import numpy as np
+
+import itertools
+
+from typing import Union, List
+from pathlib import Path
 
 
 class FaktotumDataset(FlairDataset):
@@ -31,7 +48,9 @@ class FaktotumDataset(FlairDataset):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
+            sentence.indices = instance["indices"]
             context.person = instance["person"]
+            context.indices = instance["indices"]
             point = DataPair(sentence, context)
             self.train.append(point)
 
@@ -39,7 +58,9 @@ class FaktotumDataset(FlairDataset):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
+            sentence.indices = instance["indices"]
             context.person = instance["person"]
+            context.indices = instance["indices"]
             point = DataPair(sentence, context)
             self.test.append(point)
 
@@ -47,7 +68,9 @@ class FaktotumDataset(FlairDataset):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
+            sentence.indices = instance["indices"]
             context.person = instance["person"]
+            context.indices = instance["indices"]
             point = DataPair(sentence, context)
             self.dev.append(point)
 
@@ -73,9 +96,149 @@ class FaktotumDataset(FlairDataset):
         return f"<FaktotumCorpus: {len(self.train)} train, {len(self.test)} test, {len(self.dev)} dev>"
 
 
+class EntityEmbeddings(DocumentRNNEmbeddings):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def embed(self, sentences, indices) -> List[Sentence]:
+        # if only one sentence is passed, convert to list of sentence
+        if (type(sentences) is Sentence) or (type(sentences) is Image):
+            sentences = [sentences]
+
+        everything_embedded: bool = True
+
+        if self.embedding_type == "word-level":
+            for sentence in sentences:
+                for token in sentence.tokens:
+                    if self.name not in token._embeddings.keys():
+                        everything_embedded = False
+        else:
+            for sentence in sentences:
+                if self.name not in sentence._embeddings.keys():
+                    everything_embedded = False
+
+        if not everything_embedded or not self.static_embeddings:
+            self._add_embeddings_internal(sentences, indices)
+
+        return sentences
+
+    def _add_embeddings_internal(self, sentences, indices):
+        """Add embeddings to all sentences in the given list of sentences. If embeddings are already added, update
+         only if embeddings are non-static."""
+
+        # TODO: remove in future versions
+        if not hasattr(self, "locked_dropout"):
+            self.locked_dropout = None
+        if not hasattr(self, "word_dropout"):
+            self.word_dropout = None
+
+        if type(sentences) is Sentence:
+            sentences = [sentences]
+
+        self.rnn.zero_grad()
+
+        # embed words in the sentence
+        self.embeddings.embed(sentences)
+
+        lengths: List[int] = [len(index) for index in indices]
+        longest_token_sequence_in_batch: int = max(lengths)
+
+        pre_allocated_zero_tensor = torch.zeros(
+            self.embeddings.embedding_length * longest_token_sequence_in_batch,
+            dtype=torch.float,
+            device=flair.device,
+        )
+
+        all_embs: List[torch.Tensor] = list()
+        for index, sentence in zip(indices, sentences):
+            all_embs += [
+                emb for i, token in enumerate(sentence) for emb in token.get_each_embedding() if i in index
+            ]
+            nb_padding_tokens = longest_token_sequence_in_batch - len(index)
+
+            if nb_padding_tokens > 0:
+                t = pre_allocated_zero_tensor[
+                    : self.embeddings.embedding_length * nb_padding_tokens
+                ]
+                all_embs.append(t)
+
+        sentence_tensor = torch.cat(all_embs).view(
+            [
+                len(sentences),
+                longest_token_sequence_in_batch,
+                self.embeddings.embedding_length,
+            ]
+        )
+
+        # before-RNN dropout
+        if self.dropout:
+            sentence_tensor = self.dropout(sentence_tensor)
+        if self.locked_dropout:
+            sentence_tensor = self.locked_dropout(sentence_tensor)
+        if self.word_dropout:
+            sentence_tensor = self.word_dropout(sentence_tensor)
+
+        # reproject if set
+        if self.reproject_words:
+            sentence_tensor = self.word_reprojection_map(sentence_tensor)
+
+        # push through RNN
+        packed = pack_padded_sequence(
+            sentence_tensor, lengths, enforce_sorted=False, batch_first=True
+        )
+        rnn_out, hidden = self.rnn(packed)
+        outputs, output_lengths = pad_packed_sequence(rnn_out, batch_first=True)
+
+        # after-RNN dropout
+        if self.dropout:
+            outputs = self.dropout(outputs)
+        if self.locked_dropout:
+            outputs = self.locked_dropout(outputs)
+
+        # extract embeddings from RNN
+        for sentence_no, length in enumerate(lengths):
+            last_rep = outputs[sentence_no, length - 1]
+
+            embedding = last_rep
+            if self.bidirectional:
+                first_rep = outputs[sentence_no, 0]
+                embedding = torch.cat([first_rep, last_rep], 0)
+
+            if self.static_embeddings:
+                embedding = embedding.detach()
+
+            sentence = sentences[sentence_no]
+            sentence.set_embedding(self.name, embedding)
+
+
 class SentenceSimilarityLearner(SimilarityLearner):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+    def _embed_source(self, data_points):
+        data_points = [point.first for point in data_points]
+        indices = [point.second.indices for point in data_points]
+
+        self.source_embeddings.embed(data_points, indices)
+
+        source_embedding_tensor = torch.stack(
+            [point.embedding for point in data_points]
+        ).to(flair.device)
+
+        return source_embedding_tensor
+
+    def _embed_target(self, data_points):
+
+        data_points = [point.second for point in data_points]
+        indices = [point.second.indices for point in data_points]
+
+        self.target_embeddings.embed(data_points, indices)
+
+        target_embedding_tensor = torch.stack(
+            [point.embedding for point in data_points]
+        ).to(flair.device)
+
+        return target_embedding_tensor
 
     def forward_loss(self, data_points):
         source_embeddings = self._embed_source(data_points)
@@ -173,12 +336,12 @@ class SentenceSimilarityLearner(SimilarityLearner):
 
 
 def train(
-    corpus_name="smartdata",
-    embeddings_path="/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted",
+    corpus_name="droc",
+    embeddings_path="/mnt/data/users/simmler/model-zoo/ner-droc",
 ):
     corpus = FaktotumDataset(corpus_name)
 
-    embedding = DocumentRNNEmbeddings(
+    embedding = EntityEmbeddings(
         [BertEmbeddings(embeddings_path),],
         bidirectional=True,
         dropout=0.25,
