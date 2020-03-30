@@ -37,7 +37,7 @@ from pathlib import Path
 from flair.nn import LockedDropout, WordDropout
 from flair.data import Dictionary, Token, Sentence, Image
 from flair.file_utils import cached_path, open_inside_zip
-
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 class FaktotumDataset(FlairDataset):
     def __init__(self, name: str, in_memory: bool = True, **kwargs):
