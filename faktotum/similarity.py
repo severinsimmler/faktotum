@@ -217,7 +217,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
 
     def _embed_source(self, data_points):
         data_points = [point.first for point in data_points]
-        indices = [point.second.indices for point in data_points]
+        indices = [point.first.indices for point in data_points]
 
         self.source_embeddings.embed(data_points, indices)
 
