@@ -44,7 +44,7 @@ class FaktotumDataset(FlairDataset):
         self.dev = list()
         self.test = list()
 
-        for instance in tqdm.tqdm(self._load_corpus("train")):
+        for instance in tqdm.tqdm(self._load_corpus("test")):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
@@ -54,7 +54,7 @@ class FaktotumDataset(FlairDataset):
             point = DataPair(sentence, context)
             self.train.append(point)
 
-        for instance in tqdm.tqdm(self._load_corpus("test")):
+        for instance in tqdm.tqdm(self._load_corpus("dev")):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
