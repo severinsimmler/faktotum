@@ -34,6 +34,9 @@ import itertools
 
 from typing import Union, List
 from pathlib import Path
+from flair.nn import LockedDropout, WordDropout
+from flair.data import Dictionary, Token, Sentence, Image
+from flair.file_utils import cached_path, open_inside_zip
 
 
 class FaktotumDataset(FlairDataset):
