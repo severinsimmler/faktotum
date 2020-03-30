@@ -371,7 +371,7 @@ def train(
         f"{corpus_name}-similarity-model",
         learning_rate=2,
         mini_batch_size=32,
-        max_epochs=100,
+        max_epochs=1000,
         min_learning_rate=1e-6,
         shuffle=True,
         anneal_factor=0.5,
