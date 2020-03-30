@@ -19,10 +19,10 @@ from faktotum.similarity import SentenceSimilarityLearner
 import random
 import torch
 
-#EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
-#SENTENCE_MODEL = SentenceSimilarityLearner.load(
+# EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+# SENTENCE_MODEL = SentenceSimilarityLearner.load(
 #    "/home/simmler/git/faktotum/droc-similarity-model/best-model.pt"
-#)
+# )
 
 
 class EntityLinker:

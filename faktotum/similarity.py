@@ -1,43 +1,29 @@
 import itertools
 import json
 from pathlib import Path
+from typing import List, Union
 
 import flair
 import numpy as np
 import pandas as pd
 import torch
+import torch.nn.functional as F
 import tqdm
-from flair.data import DataPair, Sentence
+from flair.data import DataPair, DataPoint, Dictionary, Image, Sentence, Token
 from flair.datasets import DataLoader, FlairDataset
-from flair.embeddings import BertEmbeddings, DocumentRNNEmbeddings
+from flair.embeddings import BertEmbeddings, DocumentRNNEmbeddings, Embeddings
+from flair.file_utils import cached_path, open_inside_zip
 from flair.models.similarity_learning_model import (
     CosineSimilarity,
     RankingLoss,
     SimilarityLearner,
 )
+from flair.nn import LockedDropout, WordDropout
 from flair.trainers import ModelTrainer
 from flair.training_utils import Result, store_embeddings
-import flair
-from flair.data import DataPoint, DataPair
-from flair.embeddings import Embeddings
-from flair.datasets import DataLoader
-from flair.training_utils import Result
-from flair.training_utils import store_embeddings
-
-import torch
 from torch import nn
-import torch.nn.functional as F
-
-import numpy as np
-
-import itertools
-
-from typing import Union, List
-from pathlib import Path
-from flair.nn import LockedDropout, WordDropout
-from flair.data import Dictionary, Token, Sentence, Image
-from flair.file_utils import cached_path, open_inside_zip
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
+
 
 class FaktotumDataset(FlairDataset):
     def __init__(self, name: str, in_memory: bool = True, **kwargs):
@@ -104,10 +90,7 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
         super().__init__(**kwargs)
 
     def embed(self, sentences, indices) -> List[Sentence]:
-
-
         everything_embedded: bool = True
-
         if self.embedding_type == "word-level":
             for sentence in sentences:
                 for token in sentence.tokens:
@@ -117,17 +100,11 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
             for sentence in sentences:
                 if self.name not in sentence._embeddings.keys():
                     everything_embedded = False
-
         if not everything_embedded or not self.static_embeddings:
             self._add_embeddings_internal(sentences, indices)
-
         return sentences
 
     def _add_embeddings_internal(self, sentences, indices):
-        """Add embeddings to all sentences in the given list of sentences. If embeddings are already added, update
-         only if embeddings are non-static."""
-
-        # TODO: remove in future versions
         if not hasattr(self, "locked_dropout"):
             self.locked_dropout = None
         if not hasattr(self, "word_dropout"):
@@ -138,7 +115,6 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
 
         self.rnn.zero_grad()
 
-        # embed words in the sentence
         self.embeddings.embed(sentences)
 
         lengths: List[int] = [len(index) for index in indices]
@@ -153,7 +129,10 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
         all_embs: List[torch.Tensor] = list()
         for index, sentence in zip(indices, sentences):
             all_embs += [
-                emb for i, token in enumerate(sentence) for emb in token.get_each_embedding() if i in index
+                emb
+                for i, token in enumerate(sentence)
+                for emb in token.get_each_embedding()
+                if i in index
             ]
             nb_padding_tokens = longest_token_sequence_in_batch - len(index)
 
@@ -212,7 +191,7 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
             sentence.set_embedding(self.name, embedding)
 
 
-class SentenceSimilarityLearner(SimilarityLearner):
+class EntitySimilarityLearner(SimilarityLearner):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -336,8 +315,7 @@ class SentenceSimilarityLearner(SimilarityLearner):
 
 
 def train(
-    corpus_name="droc",
-    embeddings_path="/mnt/data/users/simmler/model-zoo/ner-droc",
+    corpus_name="droc", embeddings_path="/mnt/data/users/simmler/model-zoo/ner-droc",
 ):
     corpus = FaktotumDataset(corpus_name)
 
@@ -356,7 +334,7 @@ def train(
 
     similarity_loss = torch.nn.CosineEmbeddingLoss(margin=0.15)
 
-    similarity_model = SentenceSimilarityLearner(
+    similarity_model = EntitySimilarityLearner(
         source_embeddings=source_embedding,
         target_embeddings=target_embedding,
         similarity_measure=similarity_measure,
