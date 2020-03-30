@@ -101,9 +101,7 @@ class EntityEmbeddings(DocumentRNNEmbeddings):
         super().__init__(**kwargs)
 
     def embed(self, sentences, indices) -> List[Sentence]:
-        # if only one sentence is passed, convert to list of sentence
-        if (type(sentences) is Sentence) or (type(sentences) is Image):
-            sentences = [sentences]
+
 
         everything_embedded: bool = True
 
