@@ -48,9 +48,9 @@ class FaktotumDataset(FlairDataset):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
-            sentence.indices = instance["indices"]
+            sentence.indices = instance["sentence_indices"]
             context.person = instance["person"]
-            context.indices = instance["indices"]
+            context.indices = instance["context_indices"]
             point = DataPair(sentence, context)
             self.train.append(point)
 
@@ -58,9 +58,9 @@ class FaktotumDataset(FlairDataset):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
-            sentence.indices = instance["indices"]
+            sentence.indices = instance["sentence_indices"]
             context.person = instance["person"]
-            context.indices = instance["indices"]
+            context.indices = instance["context_indices"]
             point = DataPair(sentence, context)
             self.test.append(point)
 
@@ -68,9 +68,9 @@ class FaktotumDataset(FlairDataset):
             sentence = Sentence(instance["sentence"], use_tokenizer=False)
             context = Sentence(instance["context"], use_tokenizer=False)
             sentence.person = instance["person"]
-            sentence.indices = instance["indices"]
+            sentence.indices = instance["sentence_indices"]
             context.person = instance["person"]
-            context.indices = instance["indices"]
+            context.indices = instance["context_indices"]
             point = DataPair(sentence, context)
             self.dev.append(point)
 
