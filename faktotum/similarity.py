@@ -342,7 +342,7 @@ def train(
     corpus = FaktotumDataset(corpus_name)
 
     embedding = EntityEmbeddings(
-        [BertEmbeddings(embeddings_path),],
+        embeddings=[BertEmbeddings(embeddings_path),],
         bidirectional=True,
         dropout=0.25,
         rnn_type="LSTM",
