@@ -346,7 +346,7 @@ def train(
     )
 
     trainer.train(
-        f"{corpus_name}-similarity-model",
+        f"{corpus_name}-similarity-model-gru",
         learning_rate=2,
         mini_batch_size=32,
         max_epochs=1000,
