@@ -323,7 +323,7 @@ def train(
         embeddings=[BertEmbeddings(embeddings_path),],
         bidirectional=True,
         dropout=0.25,
-        rnn_type="LSTM",
+        rnn_type="GRU",
         hidden_size=256,
     )
 
