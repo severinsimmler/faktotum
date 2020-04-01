@@ -17,10 +17,12 @@ from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 import random
 import torch
+from faktotum.similarity import EntitySimilarityLearner, EntityEmbeddings
 
+#EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc-all-masked")
 
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc-all-masked")
-
+model = EntitySimilarityLearner.load("/mnt/data/users/simmler/model-zoo/similarity-lstm-droc/best-model.pt")
+EMBEDDING = model.source_embeddings
 
 class EntityLinker:
     def __init__(self):
@@ -134,36 +136,39 @@ class EntityLinker:
                         tokens.append(token[0])
                 text = " ".join(tokens)
                 sentence_ = Sentence(text, use_tokenizer=False)
-                EMBEDDING.embed(sentence_)
-                vector = sentence_[mention[0]].get_embedding().numpy()
-                name = [sentence_[mention[0]].text]
-                for i in mention[1:]:
-                    vector = vector + sentence_[i].get_embedding().numpy()
-                    name.append(sentence_[i].text)
-                if return_id:
-                    if return_str:
-                        yield person, (vector / len(mention)).reshape(1, -1), " ".join(
-                            name
-                        )
+                if isinstance(EMBEDDING, EntityEmbeddings):
+                    EMBEDDING.embed(sentence_, mention)
+                    if return_id:
+                        if return_str:
+                            yield person, sentence_.embedding.numpy().reshape(1, -1), " ".join(
+                                name
+                            )
+                        else:
+                            yield person, sentence_.embedding.numpy().reshape(1, -1)
                     else:
-                        yield person, (vector / len(mention)).reshape(1, -1)
+                        if return_str:
+                            yield sentence_.embedding.numpy().reshape(1, -1), " ".join(name)
+                        else:
+                            yield sentence_.embedding.numpy().reshape(1, -1)
                 else:
-                    if return_str:
-                        yield (vector / len(mention)).reshape(1, -1), " ".join(name)
+                    EMBEDDING.embed(sentence_)
+                    vector = sentence_[mention[0]].get_embedding().numpy()
+                    name = [sentence_[mention[0]].text]
+                    for i in mention[1:]:
+                        vector = vector + sentence_[i].get_embedding().numpy()
+                        name.append(sentence_[i].text)
+                    if return_id:
+                        if return_str:
+                            yield person, (vector / len(mention)).reshape(1, -1), " ".join(
+                                name
+                            )
+                        else:
+                            yield person, (vector / len(mention)).reshape(1, -1)
                     else:
-                        yield (vector / len(mention)).reshape(1, -1)
-
-    @staticmethod
-    def get_sentence_similarity(source, target):
-        with torch.no_grad():
-            source = Sentence(" ".join([t[0] for t in source]), use_tokenizer=False)
-            SENTENCE_MODEL.source_embeddings.embed(source)
-            target = Sentence(" ".join([t[0] for t in target]), use_tokenizer=False)
-            SENTENCE_MODEL.target_embeddings.embed(target)
-            score = SENTENCE_MODEL.similarity_measure(
-                source.embedding, target.embedding
-            ).item()
-            return score
+                        if return_str:
+                            yield (vector / len(mention)).reshape(1, -1), " ".join(name)
+                        else:
+                            yield (vector / len(mention)).reshape(1, -1)
 
     def similarities(self, mask_entity=False):
         stats = list()
