@@ -19,7 +19,7 @@ import random
 import torch
 
 
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc-all-masked")
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc")
 
 
 class EntityLinker:
@@ -298,4 +298,3 @@ class EntityLinker:
             with open("predictions.json", "w", encoding="utf-8") as f:
                 json.dump(predictions, f, ensure_ascii=False, indent=4)
         return pd.DataFrame(stats)
-
