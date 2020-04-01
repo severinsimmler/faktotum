@@ -21,7 +21,7 @@ from faktotum.similarity import EntitySimilarityLearner, EntityEmbeddings
 
 #EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc-all-masked")
 
-model = EntitySimilarityLearner.load("/mnt/data/users/simmler/model-zoo/similarity-lstm-droc/best-model.pt")
+model = EntitySimilarityLearner.load("/mnt/data/users/simmler/model-zoo/similarity-gru-droc/best-model.pt")
 EMBEDDING = model.source_embeddings
 
 class EntityLinker:
