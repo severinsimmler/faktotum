@@ -289,6 +289,7 @@ class EntityLinker:
                             else:
                                 fp += 1
                         else:
+                            prediction.append({"pred": "NIL", "gold": person})
                             fp += 1
                         predictions[i] = prediction
             stats.append(
