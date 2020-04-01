@@ -140,16 +140,16 @@ class EntityLinker:
                     EMBEDDING.embed(sentence_, [mention])
                     if return_id:
                         if return_str:
-                            yield person, sentence_.embedding.numpy().reshape(1, -1), " ".join(
+                            yield person, sentence_.embedding.detach().numpy().reshape(1, -1), " ".join(
                                 name
                             )
                         else:
-                            yield person, sentence_.embedding.numpy().reshape(1, -1)
+                            yield person, sentence_.embedding.detach().numpy().reshape(1, -1)
                     else:
                         if return_str:
-                            yield sentence_.embedding.numpy().reshape(1, -1), " ".join(name)
+                            yield sentence_.embedding.detach().numpy().reshape(1, -1), " ".join(name)
                         else:
-                            yield sentence_.embedding.numpy().reshape(1, -1)
+                            yield sentence_.embedding.detach().numpy().reshape(1, -1)
                 else:
                     EMBEDDING.embed(sentence_)
                     vector = sentence_[mention[0]].get_embedding().numpy()
