@@ -137,7 +137,7 @@ class EntityLinker:
                 text = " ".join(tokens)
                 sentence_ = Sentence(text, use_tokenizer=False)
                 if isinstance(EMBEDDING, EntityEmbeddings):
-                    EMBEDDING.embed(sentence_, mention)
+                    EMBEDDING.embed(sentence_, [mention])
                     if return_id:
                         if return_str:
                             yield person, sentence_.embedding.numpy().reshape(1, -1), " ".join(
