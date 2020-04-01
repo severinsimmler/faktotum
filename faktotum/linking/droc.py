@@ -15,7 +15,6 @@ from flair.data import Sentence
 from sklearn import preprocessing
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
-from faktotum.similarity import SentenceSimilarityLearner
 import random
 import torch
 
