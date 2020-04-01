@@ -260,7 +260,7 @@ class EntityLinker:
 
     def rule_based(self):
         stats = list()
-        predictions = dict()
+        predictions = dict() 
         for i, novel in enumerate(self.test.values()):
             tp = 0
             fp = 0
