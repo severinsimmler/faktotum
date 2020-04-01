@@ -266,36 +266,25 @@ class EntityLinker:
             fn = 0
             kb = self._build_knowledge_base(novel, build_embeddings=False)
             for sentence in novel:
-                mentions = [token for token in sentence if token[2] != "-"]
-                for mention in mentions:
+                persons = self.get_persons(sentence)
+                for person, indices in persons.items():
+                    text = " ".join([token[0] for i, token in enumerate(sentence) if i in indices])
                     matches = set()
                     for values in kb.values():
-                        if len(values["CONTEXTS"]) == 1:
-                            skip = True
-                            continue
-                        skip = False
-                        valid_sentences = list()
-                        for context in values["CONTEXTS"]:
-                            # Filter the current sentence
-                            if context != sentence:
-                                valid_sentences.extend(context)
-                        mentions_ = [
-                            token for token in valid_sentences if token[2] != "-"
-                        ]
-                        for mention_ in mentions_:
-                            if mention[0] == mention_[0]:
-                                matches.add(mention_[2])
-                    if not skip:
-                        if len(matches) == 0:
-                            fp += 1
-                        elif len(matches) == 1:
-                            if list(matches)[0] == mention[2]:
-                                tp += 1
-                            else:
-                                fp += 1
+                        if len(values["CONTEXTS"]) > 1:
+                            for context in values["CONTEXTS"]:
+                                if context != sentence:
+                                    for context_person, indices in self.get_persons(context).items():
+                                        context_text = " ".join([token[0] for i, token in enumerate(context) if i in indices])
+                                        if text == context_text:
+                                            matches.add(context_text)
+                    if len(matches) == 1:
+                        if list(matches)[0] == person:
+                            tp += 1
                         else:
-                            # If ambiguous, it's a FN
                             fp += 1
+                    else:
+                        fp += 1
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
