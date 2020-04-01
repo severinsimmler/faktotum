@@ -277,7 +277,7 @@ class EntityLinker:
                                     for context_person, indices in self.get_persons(context).items():
                                         context_text = " ".join([token[0] for i, token in enumerate(context) if i in indices])
                                         if text == context_text:
-                                            matches.add(context_text)
+                                            matches.add(context_person)
                     if len(matches) == 1:
                         if list(matches)[0] == person:
                             tp += 1
