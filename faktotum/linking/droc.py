@@ -19,7 +19,7 @@ import random
 import torch
 
 
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
+#EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 
 
 class EntityLinker:
@@ -267,17 +267,19 @@ class EntityLinker:
             kb = self._build_knowledge_base(novel, build_embeddings=False)
             for sentence in novel:
                 persons = self.get_persons(sentence)
-                for person, indices in persons.items():
-                    text = " ".join([token[0] for i, token in enumerate(sentence) if i in indices])
-                    matches = set()
-                    for values in kb.values():
-                        if len(values["CONTEXTS"]) > 1:
-                            for context in values["CONTEXTS"]:
-                                if context != sentence:
-                                    for context_person, indices in self.get_persons(context).items():
-                                        context_text = " ".join([token[0] for i, token in enumerate(context) if i in indices])
-                                        if text == context_text:
-                                            matches.add(context_person)
+                for person, index in persons.items():
+                    for indices in index:
+                        text = " ".join([token[0] for i, token in enumerate(sentence) if i in indices])
+                        matches = set()
+                        for values in kb.values():
+                            if len(values["CONTEXTS"]) > 1:
+                                for context in values["CONTEXTS"]:
+                                    if context != sentence:
+                                        for context_person, index in self.get_persons(context).items():
+                                            for indices in index:
+                                                context_text = " ".join([token[0] for i, token in enumerate(context) if i in indices])
+                                                if text == context_text:
+                                                    matches.add(context_person)
                     if len(matches) == 1:
                         if list(matches)[0] == person:
                             tp += 1
