@@ -260,10 +260,12 @@ class EntityLinker:
 
     def rule_based(self):
         stats = list()
+        predictions = dict()
         for novel in tqdm.tqdm(self.test.values()):
             tp = 0
             fp = 0
             fn = 0
+            prediction = list()
             kb = self._build_knowledge_base(novel, build_embeddings=False)
             for sentence in novel:
                 persons = self.get_persons(sentence)
@@ -280,15 +282,19 @@ class EntityLinker:
                                                 context_text = " ".join([token[0] for i, token in enumerate(context) if i in indices])
                                                 if text == context_text:
                                                     matches.add(context_person)
-                    if len(matches) == 1:
-                        if list(matches)[0] == person:
-                            tp += 1
+                        if len(matches) == 1:
+                            prediction.append({"pred": list(matches)[0], "gold": person})
+                            if list(matches)[0] == person:
+                                tp += 1
+                            else:
+                                fp += 1
                         else:
                             fp += 1
-                    else:
-                        fp += 1
+                        predictions[i] = prediction
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
+            with open("predictions.json", "w", encoding="utf-8") as f:
+                json.dump(predictions, f, ensure_ascii=False, indent=4)
         return pd.DataFrame(stats)
 
