@@ -31,7 +31,7 @@ JARO_WINKLER = JaroWinkler()
 #model = EntitySimilarityLearner.load(
 #    "/mnt/data/users/simmler/model-zoo/similarity-lstm-smartdata/best-model.pt"
 #)
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata")#model.source_embeddings
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata-all-masked")#model.source_embeddings
 
 
 class EntityLinker:
