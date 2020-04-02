@@ -230,7 +230,6 @@ class EntityLinker:
     def _get_candidates(self, mention, is_org):
         candidates = set()
         mention = mention.lower()
-        print(mention)
         if is_org:
             kb = self.organizations
         else:
@@ -240,8 +239,6 @@ class EntityLinker:
                 score = self._string_similarity(mention, context.lower())
                 if score >= self.SIMILARITY_THRESHOLD:
                     candidates.add(key)
-        print(candidates)
-        print()
         return list(candidates)
 
     def similarities(self, mask_entity=False):
@@ -268,6 +265,7 @@ class EntityLinker:
                     )
                 )
                 for identifier, type_, mention, mention_vector in mention_vectors:
+                    print(identifier, type_, mention, mention_vector)
                     max_score = 0.0
                     best_candidate = None
                     best_context = None
