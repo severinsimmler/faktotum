@@ -236,11 +236,12 @@ class EntityLinker:
         else:
             kb = self.humans
         for key, value in kb.items():
+            if " " + mention + " " in " ".join(value["MENTIONS"]).lower():
+                candidates.add(key)
             for context in value["MENTIONS"]:
                 score = self._string_similarity(mention, context.lower())
                 if score >= self.SIMILARITY_THRESHOLD:
                     candidates.add(key)
-        print(candidates)
         return list(candidates)
 
     def similarities(self, mask_entity=False):
