@@ -1,682 +1,2074 @@
 [
     {
         "sentence": "Zum einen lobte Mark Zuckerberg Deutschland und die Hauptstadt in den höchsten Tönen .",
+        "sentence_indices": [
+            [
+                3,
+                4
+            ]
+        ],
         "context": "Mark Zuckerberg US -amerikanischer Unternehmer",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q36215"
     },
     {
         "sentence": "Zum einen lobte Mark Zuckerberg Deutschland und die Hauptstadt in den höchsten Tönen .",
+        "sentence_indices": [
+            [
+                3,
+                4
+            ]
+        ],
         "context": "Mark Elliot Zuckerberg US -amerikanischer Unternehmer",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q36215"
     },
     {
         "sentence": "Die beiden YouTube - Stars covern Justin Bieber Quelle :",
+        "sentence_indices": [
+            [
+                6,
+                7
+            ]
+        ],
         "context": "Justin Bieber kanadischer Popmusiker",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q34086"
     },
     {
         "sentence": "Die beiden YouTube - Stars covern Justin Bieber Quelle :",
+        "sentence_indices": [
+            [
+                6,
+                7
+            ]
+        ],
         "context": "Justin Drew Bieber kanadischer Popmusiker",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q34086"
     },
     {
         "sentence": "Mit seinem Break - Up Song Love Yourself ist Justin Bieber einmal mehr ein internationaler Hit gelungen .",
+        "sentence_indices": [
+            [
+                9,
+                10
+            ]
+        ],
         "context": "Justin Bieber kanadischer Popmusiker",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q34086"
     },
     {
         "sentence": "Mit seinem Break - Up Song Love Yourself ist Justin Bieber einmal mehr ein internationaler Hit gelungen .",
+        "sentence_indices": [
+            [
+                9,
+                10
+            ]
+        ],
         "context": "Justin Drew Bieber kanadischer Popmusiker",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q34086"
     },
     {
         "sentence": "Während Justin Bieber in seinem Songtext von einer Beziehung erzählt , in der sie ihn nur ausnutzen wollte , erzählen die beiden YouTube - Stars in ihrem genialen Cover Love Yourself vs F*ck Yourself von einem Im abgelaufenen Jahr schnitt das Unternehmen besser ab als erhofft Foto :",
+        "sentence_indices": [
+            [
+                1,
+                2
+            ]
+        ],
         "context": "Justin Bieber kanadischer Popmusiker",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q34086"
     },
     {
         "sentence": "Während Justin Bieber in seinem Songtext von einer Beziehung erzählt , in der sie ihn nur ausnutzen wollte , erzählen die beiden YouTube - Stars in ihrem genialen Cover Love Yourself vs F*ck Yourself von einem Im abgelaufenen Jahr schnitt das Unternehmen besser ab als erhofft Foto :",
+        "sentence_indices": [
+            [
+                1,
+                2
+            ]
+        ],
         "context": "Justin Drew Bieber kanadischer Popmusiker",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q34086"
     },
     {
         "sentence": "2013 hatten München und Umgebung in einer Volksbefragung gegen Winterspiele 2022 vot Verbraucherschutzminister Reinhold Jost :",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Reinhold Jost deutscher Politiker",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q2141429"
     },
     {
         "sentence": "Beim Reiseverkehr haben Verbraucherinnen und Verbraucher Rechte Pressemitteilung vom 28.01.2016 - 16:50 Uhr Anlässlich des Starts der Messe „ Reisemarkt Saarbrücken Freizeit 2016 erinnert Verbraucherschutzminister Reinhold Jost an die Rechte von Verbraucherinnen und Verbrauchern beim Reiseverkehr .",
+        "sentence_indices": [
+            [
+                25,
+                26
+            ]
+        ],
         "context": "Reinhold Jost deutscher Politiker",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q2141429"
     },
     {
         "sentence": "Ken Wolter - shutterstock.com Vorstandschefin Marissa Mayer dürfte nach Vorlage der Quartalszahlen am Dienstag ankündigen , dass 15 Prozent der Arbeitsplätze gestrichen und mehrere Geschäftsbereiche geschlossen werden , berichtete das Wall Street Journal am Montag unter Berufung auf eingeweihte Kreise .",
+        "sentence_indices": [
+            [
+                5,
+                6
+            ]
+        ],
         "context": "Marissa Mayer US -amerikanische Informatikerin und Managerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q14086"
     },
     {
         "sentence": "Ken Wolter - shutterstock.com Vorstandschefin Marissa Mayer dürfte nach Vorlage der Quartalszahlen am Dienstag ankündigen , dass 15 Prozent der Arbeitsplätze gestrichen und mehrere Geschäftsbereiche geschlossen werden , berichtete das Wall Street Journal am Montag unter Berufung auf eingeweihte Kreise .",
+        "sentence_indices": [
+            [
+                5,
+                6
+            ]
+        ],
         "context": "Marissa Ann Mayer US -amerikanische Informatikerin und Managerin",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q14086"
     },
     {
         "sentence": "Die Manipulation mit einer speziellen Software sei auf höchster Ebene geplant und genehmigt gewesen , auch der damalige Vorstandschef Martin Winterkorn sei beteiligt gewesen , heißt es in einer gemeinsamen Mitteilung der Generalstaatsanwälte von New York und Massachusetts , Eric Schneiderman und Maura Healey vom Dienstag .",
+        "sentence_indices": [
+            [
+                19,
+                20
+            ]
+        ],
         "context": "Martin Winterkorn deutscher Manager",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q68355"
     },
     {
         "sentence": "Die Manipulation mit einer speziellen Software sei auf höchster Ebene geplant und genehmigt gewesen , auch der damalige Vorstandschef Martin Winterkorn sei beteiligt gewesen , heißt es in einer gemeinsamen Mitteilung der Generalstaatsanwälte von New York und Massachusetts , Eric Schneiderman und Maura Healey vom Dienstag .",
+        "sentence_indices": [
+            [
+                19,
+                20
+            ]
+        ],
         "context": "Winterkorn deutscher Manager",
+        "context_indices": [
+            0
+        ],
         "person": "Q68355"
     },
     {
         "sentence": "Die Manipulation mit einer speziellen Software sei auf höchster Ebene geplant und genehmigt gewesen , auch der damalige Vorstandschef Martin Winterkorn sei beteiligt gewesen , heißt es in einer gemeinsamen Mitteilung der Generalstaatsanwälte von New York und Massachusetts , Eric Schneiderman und Maura Healey vom Dienstag .",
+        "sentence_indices": [
+            [
+                39,
+                40
+            ]
+        ],
         "context": "Eric Schneiderman Generalstaatsanwalt",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q5387459"
     },
     {
         "sentence": "Die Manipulation mit einer speziellen Software sei auf höchster Ebene geplant und genehmigt gewesen , auch der damalige Vorstandschef Martin Winterkorn sei beteiligt gewesen , heißt es in einer gemeinsamen Mitteilung der Generalstaatsanwälte von New York und Massachusetts , Eric Schneiderman und Maura Healey vom Dienstag .",
+        "sentence_indices": [
+            [
+                42,
+                43
+            ]
+        ],
         "context": "Maura Healey US -amerikanische Juristin , Attorney General von Massachusetts",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q16205062"
     },
     {
         "sentence": "Die Manipulation mit einer speziellen Software sei auf höchster Ebene geplant und genehmigt gewesen , auch der damalige Vorstandschef Martin Winterkorn sei beteiligt gewesen , heißt es in einer gemeinsamen Mitteilung der Generalstaatsanwälte von New York und Massachusetts , Eric Schneiderman und Maura Healey vom Dienstag .",
+        "sentence_indices": [
+            [
+                42,
+                43
+            ]
+        ],
         "context": "Maura T . Healey US -amerikanische Juristin , Attorney General von Massachusetts",
+        "context_indices": [
+            0,
+            1,
+            2,
+            3
+        ],
         "person": "Q16205062"
     },
     {
         "sentence": "Die Manipulation mit einer speziellen Software sei auf höchster Ebene geplant und genehmigt gewesen , auch der damalige Vorstandschef Martin Winterkorn sei beteiligt gewesen , heißt es in einer gemeinsamen Mitteilung der Generalstaatsanwälte von New York und Massachusetts , Eric Schneiderman und Maura Healey vom Dienstag .",
+        "sentence_indices": [
+            [
+                42,
+                43
+            ]
+        ],
         "context": "Maura Tracy Healey US -amerikanische Juristin , Attorney General von Massachusetts",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q16205062"
     },
     {
         "sentence": "© 1999 -2016 finanzen.net GmbH SPD weist Einmischung der Bezirksregierung zurück 19.12.2015 | 05:37 Uhr 2015-12-19T05:37:26 +01:00 Auf ziemliches Unverständnis bei Duisburgs SPD stößt die Einflussnahme der Düsseldorfer Bezirksregierung bei der Frage der Neuordnung des Nahverkehrs und die von Regierungspräsidentin Anne Lütkes gewünschte effizienteren Kooperation von Duisburg , Mülheim und Essen .",
+        "sentence_indices": [
+            [
+                40,
+                41
+            ]
+        ],
         "context": "Annemarie Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "© 1999 -2016 finanzen.net GmbH SPD weist Einmischung der Bezirksregierung zurück 19.12.2015 | 05:37 Uhr 2015-12-19T05:37:26 +01:00 Auf ziemliches Unverständnis bei Duisburgs SPD stößt die Einflussnahme der Düsseldorfer Bezirksregierung bei der Frage der Neuordnung des Nahverkehrs und die von Regierungspräsidentin Anne Lütkes gewünschte effizienteren Kooperation von Duisburg , Mülheim und Essen .",
+        "sentence_indices": [
+            [
+                40,
+                41
+            ]
+        ],
         "context": "Anne Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "© 1999 -2016 finanzen.net GmbH SPD weist Einmischung der Bezirksregierung zurück 19.12.2015 | 05:37 Uhr 2015-12-19T05:37:26 +01:00 Auf ziemliches Unverständnis bei Duisburgs SPD stößt die Einflussnahme der Düsseldorfer Bezirksregierung bei der Frage der Neuordnung des Nahverkehrs und die von Regierungspräsidentin Anne Lütkes gewünschte effizienteren Kooperation von Duisburg , Mülheim und Essen .",
+        "sentence_indices": [
+            [
+                40,
+                41
+            ]
+        ],
         "context": "Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "Wie berichtet hat Lütkes die drei OB zum Rapport nach Düsseldorf zitiert , nachdem Duisburg ein Fusion in der gemeinsamen Verkehrsgesellschaft Via abgelehnt hatte .",
+        "sentence_indices": [
+            [
+                3
+            ]
+        ],
         "context": "Annemarie Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "Wie berichtet hat Lütkes die drei OB zum Rapport nach Düsseldorf zitiert , nachdem Duisburg ein Fusion in der gemeinsamen Verkehrsgesellschaft Via abgelehnt hatte .",
+        "sentence_indices": [
+            [
+                3
+            ]
+        ],
         "context": "Anne Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "Wie berichtet hat Lütkes die drei OB zum Rapport nach Düsseldorf zitiert , nachdem Duisburg ein Fusion in der gemeinsamen Verkehrsgesellschaft Via abgelehnt hatte .",
+        "sentence_indices": [
+            [
+                3
+            ]
+        ],
         "context": "Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "SPD - Fraktions - Chef Herbert Mettler zeigt sich überrascht über die Äußerungen von Regierungspräsidentin Lütkes und erklärt im bissigen Unterton :",
+        "sentence_indices": [
+            [
+                15
+            ]
+        ],
         "context": "Annemarie Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "SPD - Fraktions - Chef Herbert Mettler zeigt sich überrascht über die Äußerungen von Regierungspräsidentin Lütkes und erklärt im bissigen Unterton :",
+        "sentence_indices": [
+            [
+                15
+            ]
+        ],
         "context": "Anne Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "SPD - Fraktions - Chef Herbert Mettler zeigt sich überrascht über die Äußerungen von Regierungspräsidentin Lütkes und erklärt im bissigen Unterton :",
+        "sentence_indices": [
+            [
+                15
+            ]
+        ],
         "context": "Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "„ Ich vermute , Frau Lütkes scheint im Fall der Via nicht alle Fakten zu kennen .",
+        "sentence_indices": [
+            [
+                5
+            ]
+        ],
         "context": "Annemarie Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "„ Ich vermute , Frau Lütkes scheint im Fall der Via nicht alle Fakten zu kennen .",
+        "sentence_indices": [
+            [
+                5
+            ]
+        ],
         "context": "Anne Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "„ Ich vermute , Frau Lütkes scheint im Fall der Via nicht alle Fakten zu kennen .",
+        "sentence_indices": [
+            [
+                5
+            ]
+        ],
         "context": "Lütkes deutsche Politikerin , Md L",
+        "context_indices": [
+            0
+        ],
         "person": "Q566306"
     },
     {
         "sentence": "Martin Zielke wird angeblich neuer Commerzbank - Chef .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ]
+        ],
         "context": "Martin Zielke deutscher Bankmanager",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q49006056"
     },
     {
         "sentence": "Martin Zielke wird angeblich neuer Commerzbank - Chef .",
+        "sentence_indices": [
+            [
+                5
+            ]
+        ],
         "context": "Commerzbank",
+        "context_indices": [
+            0
+        ],
         "person": "Q157617"
     },
     {
         "sentence": "Kleine - Ruse Von Rolf Masselink Vor einer Ausweitung des Übungsbetriebs auf dem Luft - / Bodenschießplatz Nordhorn - Range hat Landrat Friedrich Kethorn gewarnt .",
+        "sentence_indices": [
+            [
+                22,
+                23
+            ]
+        ],
         "context": "Friedrich Kethorn deutscher Politiker , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q1460367"
     },
     {
         "sentence": "Deutsche - Bank - Aufsichtsratschef Paul Achleitner bringt den umfassenden Vorstands - und Konzernumbau bei der Deutschen Bank auf den Punkt :",
+        "sentence_indices": [
+            [
+                5,
+                6
+            ]
+        ],
         "context": "Paul Achleitner österreichischer Bankmanager",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q86697"
     },
     {
         "sentence": "Deutsche - Bank - Aufsichtsratschef Paul Achleitner bringt den umfassenden Vorstands - und Konzernumbau bei der Deutschen Bank auf den Punkt :",
+        "sentence_indices": [
+            [
+                5,
+                6
+            ]
+        ],
         "context": "Paul Michael Achleitner österreichischer Bankmanager",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q86697"
     },
     {
         "sentence": "Herr Friedhelm Loh , Deutschland hat uns gemäß § 21 Abs .",
+        "sentence_indices": [
+            [
+                1,
+                2
+            ]
+        ],
         "context": "Friedhelm Loh deutscher Unternehmer",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q1457233"
     },
     {
         "sentence": "15,00016 % der Stimmrechte ( das entspricht 1372177 Stimmrechten ) sind Herrn Loh gemäß § 22 Abs .",
+        "sentence_indices": [
+            [
+                12
+            ]
+        ],
         "context": "T.C . Loh",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q36689623"
     },
     {
         "sentence": "15,00016 % der Stimmrechte ( das entspricht 1372177 Stimmrechten ) sind Herrn Loh gemäß § 22 Abs .",
+        "sentence_indices": [
+            [
+                12
+            ]
+        ],
         "context": "Loh",
+        "context_indices": [
+            0
+        ],
         "person": "Q36689623"
     },
     {
         "sentence": "Kramny und die bessere Balance Stuttgarts Daniel Didavi ( l. ) und Timo Werner freuen sich über wichtige Punkte im Abstiegskampf .",
+        "sentence_indices": [
+            [
+                6,
+                7
+            ]
+        ],
         "context": "Daniel Didavi deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q77388"
     },
     {
         "sentence": "Kramny und die bessere Balance Stuttgarts Daniel Didavi ( l. ) und Timo Werner freuen sich über wichtige Punkte im Abstiegskampf .",
+        "sentence_indices": [
+            [
+                12,
+                13
+            ]
+        ],
         "context": "Timo Werner deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q3529022"
     },
     {
         "sentence": "© Getty Images In der Winterpause ließ Jürgen Kramny das 4 -1-4-1-System einstudieren .",
+        "sentence_indices": [
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Jürgen Kramny deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q111032"
     },
     {
         "sentence": "© Getty Images In der Winterpause ließ Jürgen Kramny das 4 -1-4-1-System einstudieren .",
+        "sentence_indices": [
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Kramny deutscher Fußballspieler",
+        "context_indices": [
+            0
+        ],
         "person": "Q111032"
     },
     {
         "sentence": "Im Mittelfeld gab Serey Dié den Staubsauger zwischen den beiden Viererketten .",
+        "sentence_indices": [
+            [
+                3,
+                4
+            ]
+        ],
         "context": "Serey Dié ivorischer Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q525816"
     },
     {
         "sentence": "Im Mittelfeld gab Serey Dié den Staubsauger zwischen den beiden Viererketten .",
+        "sentence_indices": [
+            [
+                3,
+                4
+            ]
+        ],
         "context": "Serey Die ivorischer Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q525816"
     },
     {
         "sentence": "Im Mittelfeld gab Serey Dié den Staubsauger zwischen den beiden Viererketten .",
+        "sentence_indices": [
+            [
+                3,
+                4
+            ]
+        ],
         "context": "Sereso Geoffroy Gonzaroua Die ivorischer Fußballspieler",
+        "context_indices": [
+            0,
+            1,
+            2,
+            3
+        ],
         "person": "Q525816"
     },
     {
         "sentence": "Im Mittelfeld gab Serey Dié den Staubsauger zwischen den beiden Viererketten .",
+        "sentence_indices": [
+            [
+                3,
+                4
+            ]
+        ],
         "context": "Die Serey Geoffrey ivorischer Fußballspieler",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q525816"
     },
     {
         "sentence": "In einem exklusiven Interview mit GALA ( Ausgabe 9 / 16 , ab morgen im Handel ) fordert Schauspiel - Ikone Iris Berben ( 65 ) neue Ideale 24.02.16 | 11:21 Uhr | 1 mal gelesen | presseportal.de Iris Berben :",
+        "sentence_indices": [
+            [
+                21,
+                22
+            ],
+            [
+                38,
+                39
+            ]
+        ],
         "context": "Iris Berben deutsche Schauspielerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q71662"
     },
     {
         "sentence": "In einem exklusiven Interview mit GALA ( Ausgabe 9 / 16 , ab morgen im Handel ) fordert Schauspiel - Ikone Iris Berben ( 65 ) neue Ideale .",
+        "sentence_indices": [
+            [
+                21,
+                22
+            ]
+        ],
         "context": "Iris Berben deutsche Schauspielerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q71662"
     },
     {
         "sentence": "dpa Weimar ( dpa / th ) - In der Debatte über die Zukunft des Landesverwaltungsamts warnt Präsident Frank Roßner vor Schnellschüssen .",
+        "sentence_indices": [
+            [
+                18,
+                19
+            ]
+        ],
         "context": "Frank Roßner deutscher Politiker",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q1444059"
     },
     {
         "sentence": "Es handle sich um ein provisorisches Abkommen , das auf internationalen Garantien fuße , zitierte der oppositionsnahe Fernsehsender Orient TV am Montag den Vorsitzenden des Hohen Verhandlungsrats , Riad Hidschab .",
+        "sentence_indices": [
+            [
+                28,
+                29
+            ]
+        ],
         "context": "Riyad Farid Hidschab syrischer Politiker",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q354642"
     },
     {
         "sentence": "Es handle sich um ein provisorisches Abkommen , das auf internationalen Garantien fuße , zitierte der oppositionsnahe Fernsehsender Orient TV am Montag den Vorsitzenden des Hohen Verhandlungsrats , Riad Hidschab .",
+        "sentence_indices": [
+            [
+                28,
+                29
+            ]
+        ],
         "context": "Riyad Farid Hijab syrischer Politiker",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q354642"
     },
     {
         "sentence": "Es handle sich um ein provisorisches Abkommen , das auf internationalen Garantien fuße , zitierte der oppositionsnahe Fernsehsender Orient TV am Montag den Vorsitzenden des Hohen Verhandlungsrats , Riad Hidschab .",
+        "sentence_indices": [
+            [
+                28,
+                29
+            ]
+        ],
         "context": "Riad Hijab syrischer Politiker",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q354642"
     },
     {
         "sentence": "Es handle sich um ein provisorisches Abkommen , das auf internationalen Garantien fuße , zitierte der oppositionsnahe Fernsehsender Orient TV am Montag den Vorsitzenden des Hohen Verhandlungsrats , Riad Hidschab .",
+        "sentence_indices": [
+            [
+                28,
+                29
+            ]
+        ],
         "context": "Riad Farid Hedschab syrischer Politiker",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q354642"
     },
     {
         "sentence": "Es handle sich um ein provisorisches Abkommen , das auf internationalen Garantien fuße , zitierte der oppositionsnahe Fernsehsender Orient TV am Montag den Vorsitzenden des Hohen Verhandlungsrats , Riad Hidschab .",
+        "sentence_indices": [
+            [
+                28,
+                29
+            ]
+        ],
         "context": "Riad Hidschab syrischer Politiker",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q354642"
     },
     {
         "sentence": "Intel - Chef Brian Krzanich will stärker auf Chips für Rechenzentren und Cloud - Computing sowie die Vernetzung von Alltagstechnik und Maschinen im Internet der Dinge setzen .",
+        "sentence_indices": [
+            [
+                3,
+                4
+            ]
+        ],
         "context": "Brian Krzanich Amerikanischer Chemiker , Ingenieur , Unternehmer und Geschäftsmann",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q12572999"
     },
     {
         "sentence": "Das ist das Ziel des Programms KitaPlus , das Bundesfamilienministerin Manuela Schwesig und Arbeitsministerin Andrea Nahles ( beide SPD ) am Dienstag in Berlin vorstellten .",
+        "sentence_indices": [
+            [
+                10,
+                11
+            ]
+        ],
         "context": "Manuela Schwesig deutsche Politikerin ( SPD ) , Ministerpräsidentin des Landes Mecklenburg -Vorpommern , Md L",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q72845"
     },
     {
         "sentence": "Das ist das Ziel des Programms KitaPlus , das Bundesfamilienministerin Manuela Schwesig und Arbeitsministerin Andrea Nahles ( beide SPD ) am Dienstag in Berlin vorstellten .",
+        "sentence_indices": [
+            [
+                14,
+                15
+            ]
+        ],
         "context": "Andrea Nahles deutsche Politikerin ( SPD )",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q62810"
     },
     {
         "sentence": "Das ist das Ziel des Programms KitaPlus , das Bundesfamilienministerin Manuela Schwesig und Arbeitsministerin Andrea Nahles ( beide SPD ) am Dienstag in Berlin vorstellten .",
+        "sentence_indices": [
+            [
+                14,
+                15
+            ]
+        ],
         "context": "Andrea Maria Nahles deutsche Politikerin ( SPD )",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q62810"
     },
     {
         "sentence": "Das ist das Ziel des Programms KitaPlus , das Bundesfamilienministerin Manuela Schwesig und Arbeitsministerin Andrea Nahles ( beide SPD ) am Dienstag in Berlin vorstellten .",
+        "sentence_indices": [
+            [
+                14,
+                15
+            ]
+        ],
         "context": "Nahles deutsche Politikerin ( SPD )",
+        "context_indices": [
+            0
+        ],
         "person": "Q62810"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                9,
+                10
+            ]
+        ],
         "context": "Jean Todt französischer Rennfahrer und Formel -1 -Teamchef",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q171998"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Franziskus 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Francis 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "François 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Francisco 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Bergoglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Jorge Mario Bergoglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Franziskus I . 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Franciscus 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Papst Franziskus 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Jorge Beroglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Jorge Cardinal Bergoglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Cardinal Jorge Mario Bergoglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1,
+            2,
+            3
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Cardinal Jorge Bergoglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Pope Francis I 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Pope Francis 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Jorge Bergoglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Cardinal Bergoglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "pape François 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "François Ier 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "François I 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Francisco I 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Papa Francisco 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Mario Bergoglio 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Papa Francisco I 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Papst will für Michael Schumacher beten FIA - Präsident Jean Todt hat mit Papst Franziskus gesprochen .",
+        "sentence_indices": [
+            [
+                13,
+                14
+            ]
+        ],
         "context": "Francisco S . J . 266 . Papst der römisch -katholischen Kirche",
+        "context_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
         "person": "Q450675"
     },
     {
         "sentence": "Franziskus kenne Schumacher und habe auch von dem Unfall gehört , erklärte Todt .",
+        "sentence_indices": [
+            [
+                12
+            ]
+        ],
         "context": "Todt",
+        "context_indices": [
+            0
+        ],
         "person": "Q48169691"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Lukas Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Lukas Josef Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Poldi deutscher Fußballspieler",
+        "context_indices": [
+            0
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Łukasz Józef Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Łukasz Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Lucas Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Lukasz Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "AFP / Getty Images Lukas Podolski stand nach langer Verletzungspause erstmals wieder in der Startelf Es war ein Hoffnungsschimmer .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Lukas Podolsky deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Lukas Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Lukas Josef Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Poldi deutscher Fußballspieler",
+        "context_indices": [
+            0
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Łukasz Józef Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Łukasz Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Lucas Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Lukasz Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Zum ersten Mal seit über sechs Wochen stand Podolski wieder in der Startformation des Titelverteidigers .",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Lukas Podolsky deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Lukas Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Lukas Josef Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Poldi deutscher Fußballspieler",
+        "context_indices": [
+            0
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Łukasz Józef Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Łukasz Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Lucas Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Lukasz Podolski deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Lukas Podolski verkauft jetzt in Köln Klamotten Lukas Podolski hat in der Kölner Altstadt sein erstes eigenes Geschäft eröffnet .",
+        "sentence_indices": [
+            [
+                0,
+                1
+            ],
+            [
+                7,
+                8
+            ]
+        ],
         "context": "Lukas Podolsky deutscher Fußballspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q134976"
     },
     {
         "sentence": "Durch den Verkauf alluvialer Lulo - Diamanten mit einem Gesamtgewicht von 178 Karat wurden Bruttoeinnahmen in Höhe von 420 AUD erzielt , was einem durchschnittlichen Verkaufspreis von 2.36 AUD pro Karat für die alluvialen Rohförderdiamanten auf Lulo entsprich Investoren sichern Stabilität und Wachstum von Hightex / Die international erfolgreiche Bauunternehmerin Jelena Baturina und Fir Rimsting ( ots ) - Unter neuer Führung geht das Jahrzehnte alte Traditionsunternehmen Hightex aus dem bayerischen Rimsting in das Jahr 2016 .",
+        "sentence_indices": [
+            [
+                50,
+                51
+            ]
+        ],
         "context": "Jelena Nikolajewna Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Durch den Verkauf alluvialer Lulo - Diamanten mit einem Gesamtgewicht von 178 Karat wurden Bruttoeinnahmen in Höhe von 420 AUD erzielt , was einem durchschnittlichen Verkaufspreis von 2.36 AUD pro Karat für die alluvialen Rohförderdiamanten auf Lulo entsprich Investoren sichern Stabilität und Wachstum von Hightex / Die international erfolgreiche Bauunternehmerin Jelena Baturina und Fir Rimsting ( ots ) - Unter neuer Führung geht das Jahrzehnte alte Traditionsunternehmen Hightex aus dem bayerischen Rimsting in das Jahr 2016 .",
+        "sentence_indices": [
+            [
+                50,
+                51
+            ]
+        ],
         "context": "Yelena Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Durch den Verkauf alluvialer Lulo - Diamanten mit einem Gesamtgewicht von 178 Karat wurden Bruttoeinnahmen in Höhe von 420 AUD erzielt , was einem durchschnittlichen Verkaufspreis von 2.36 AUD pro Karat für die alluvialen Rohförderdiamanten auf Lulo entsprich Investoren sichern Stabilität und Wachstum von Hightex / Die international erfolgreiche Bauunternehmerin Jelena Baturina und Fir Rimsting ( ots ) - Unter neuer Führung geht das Jahrzehnte alte Traditionsunternehmen Hightex aus dem bayerischen Rimsting in das Jahr 2016 .",
+        "sentence_indices": [
+            [
+                50,
+                51
+            ]
+        ],
         "context": "Elena Batourina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Durch den Verkauf alluvialer Lulo - Diamanten mit einem Gesamtgewicht von 178 Karat wurden Bruttoeinnahmen in Höhe von 420 AUD erzielt , was einem durchschnittlichen Verkaufspreis von 2.36 AUD pro Karat für die alluvialen Rohförderdiamanten auf Lulo entsprich Investoren sichern Stabilität und Wachstum von Hightex / Die international erfolgreiche Bauunternehmerin Jelena Baturina und Fir Rimsting ( ots ) - Unter neuer Führung geht das Jahrzehnte alte Traditionsunternehmen Hightex aus dem bayerischen Rimsting in das Jahr 2016 .",
+        "sentence_indices": [
+            [
+                50,
+                51
+            ]
+        ],
         "context": "Baturina russische Unternehmerin",
+        "context_indices": [
+            0
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Durch den Verkauf alluvialer Lulo - Diamanten mit einem Gesamtgewicht von 178 Karat wurden Bruttoeinnahmen in Höhe von 420 AUD erzielt , was einem durchschnittlichen Verkaufspreis von 2.36 AUD pro Karat für die alluvialen Rohförderdiamanten auf Lulo entsprich Investoren sichern Stabilität und Wachstum von Hightex / Die international erfolgreiche Bauunternehmerin Jelena Baturina und Fir Rimsting ( ots ) - Unter neuer Führung geht das Jahrzehnte alte Traditionsunternehmen Hightex aus dem bayerischen Rimsting in das Jahr 2016 .",
+        "sentence_indices": [
+            [
+                50,
+                51
+            ]
+        ],
         "context": "Jelena Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Durch den Verkauf alluvialer Lulo - Diamanten mit einem Gesamtgewicht von 178 Karat wurden Bruttoeinnahmen in Höhe von 420 AUD erzielt , was einem durchschnittlichen Verkaufspreis von 2.36 AUD pro Karat für die alluvialen Rohförderdiamanten auf Lulo entsprich Investoren sichern Stabilität und Wachstum von Hightex / Die international erfolgreiche Bauunternehmerin Jelena Baturina und Fir Rimsting ( ots ) - Unter neuer Führung geht das Jahrzehnte alte Traditionsunternehmen Hightex aus dem bayerischen Rimsting in das Jahr 2016 .",
+        "sentence_indices": [
+            [
+                50,
+                51
+            ]
+        ],
         "context": "Helena Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Durch den Verkauf alluvialer Lulo - Diamanten mit einem Gesamtgewicht von 178 Karat wurden Bruttoeinnahmen in Höhe von 420 AUD erzielt , was einem durchschnittlichen Verkaufspreis von 2.36 AUD pro Karat für die alluvialen Rohförderdiamanten auf Lulo entsprich Investoren sichern Stabilität und Wachstum von Hightex / Die international erfolgreiche Bauunternehmerin Jelena Baturina und Fir Rimsting ( ots ) - Unter neuer Führung geht das Jahrzehnte alte Traditionsunternehmen Hightex aus dem bayerischen Rimsting in das Jahr 2016 .",
+        "sentence_indices": [
+            [
+                50,
+                51
+            ]
+        ],
         "context": "Yelena Nikolayevna Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Durch den Verkauf alluvialer Lulo - Diamanten mit einem Gesamtgewicht von 178 Karat wurden Bruttoeinnahmen in Höhe von 420 AUD erzielt , was einem durchschnittlichen Verkaufspreis von 2.36 AUD pro Karat für die alluvialen Rohförderdiamanten auf Lulo entsprich Investoren sichern Stabilität und Wachstum von Hightex / Die international erfolgreiche Bauunternehmerin Jelena Baturina und Fir Rimsting ( ots ) - Unter neuer Führung geht das Jahrzehnte alte Traditionsunternehmen Hightex aus dem bayerischen Rimsting in das Jahr 2016 .",
+        "sentence_indices": [
+            [
+                50,
+                51
+            ]
+        ],
         "context": "Elena Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Als strategischer Investor sichert die international erfolgreiche Bauunternehmerin Jelena Baturina mit der Übernahme von 75 Prozent der Firmenanteile gemeinsam mit Klaus - Michael Koch , der 25 Prozent der Anteile hält , Stabilität , Wachstum und die künftige Weltmarktführerschaft von Hightex .",
+        "sentence_indices": [
+            [
+                8,
+                9
+            ]
+        ],
         "context": "Jelena Nikolajewna Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Als strategischer Investor sichert die international erfolgreiche Bauunternehmerin Jelena Baturina mit der Übernahme von 75 Prozent der Firmenanteile gemeinsam mit Klaus - Michael Koch , der 25 Prozent der Anteile hält , Stabilität , Wachstum und die künftige Weltmarktführerschaft von Hightex .",
+        "sentence_indices": [
+            [
+                8,
+                9
+            ]
+        ],
         "context": "Yelena Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Als strategischer Investor sichert die international erfolgreiche Bauunternehmerin Jelena Baturina mit der Übernahme von 75 Prozent der Firmenanteile gemeinsam mit Klaus - Michael Koch , der 25 Prozent der Anteile hält , Stabilität , Wachstum und die künftige Weltmarktführerschaft von Hightex .",
+        "sentence_indices": [
+            [
+                8,
+                9
+            ]
+        ],
         "context": "Elena Batourina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Als strategischer Investor sichert die international erfolgreiche Bauunternehmerin Jelena Baturina mit der Übernahme von 75 Prozent der Firmenanteile gemeinsam mit Klaus - Michael Koch , der 25 Prozent der Anteile hält , Stabilität , Wachstum und die künftige Weltmarktführerschaft von Hightex .",
+        "sentence_indices": [
+            [
+                8,
+                9
+            ]
+        ],
         "context": "Baturina russische Unternehmerin",
+        "context_indices": [
+            0
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Als strategischer Investor sichert die international erfolgreiche Bauunternehmerin Jelena Baturina mit der Übernahme von 75 Prozent der Firmenanteile gemeinsam mit Klaus - Michael Koch , der 25 Prozent der Anteile hält , Stabilität , Wachstum und die künftige Weltmarktführerschaft von Hightex .",
+        "sentence_indices": [
+            [
+                8,
+                9
+            ]
+        ],
         "context": "Jelena Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Als strategischer Investor sichert die international erfolgreiche Bauunternehmerin Jelena Baturina mit der Übernahme von 75 Prozent der Firmenanteile gemeinsam mit Klaus - Michael Koch , der 25 Prozent der Anteile hält , Stabilität , Wachstum und die künftige Weltmarktführerschaft von Hightex .",
+        "sentence_indices": [
+            [
+                8,
+                9
+            ]
+        ],
         "context": "Helena Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Als strategischer Investor sichert die international erfolgreiche Bauunternehmerin Jelena Baturina mit der Übernahme von 75 Prozent der Firmenanteile gemeinsam mit Klaus - Michael Koch , der 25 Prozent der Anteile hält , Stabilität , Wachstum und die künftige Weltmarktführerschaft von Hightex .",
+        "sentence_indices": [
+            [
+                8,
+                9
+            ]
+        ],
         "context": "Yelena Nikolayevna Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "Als strategischer Investor sichert die international erfolgreiche Bauunternehmerin Jelena Baturina mit der Übernahme von 75 Prozent der Firmenanteile gemeinsam mit Klaus - Michael Koch , der 25 Prozent der Anteile hält , Stabilität , Wachstum und die künftige Weltmarktführerschaft von Hightex .",
+        "sentence_indices": [
+            [
+                8,
+                9
+            ]
+        ],
         "context": "Elena Baturina russische Unternehmerin",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q466610"
     },
     {
         "sentence": "1 Bundeswirtschaftsminister Sigmar Gabriel weilt derzeit im Urlaub , zu Hause gerät er wegen seiner Ministererlaubnis für die Tengelmann Fusion mit Edeka immer mehr in Bedrängnis .",
+        "sentence_indices": [
+            [
+                2,
+                3
+            ]
+        ],
         "context": "Sigmar Gabriel deutscher Politiker ( SPD ) , Md B",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q160902"
     },
     {
         "sentence": "1 Bundeswirtschaftsminister Sigmar Gabriel weilt derzeit im Urlaub , zu Hause gerät er wegen seiner Ministererlaubnis für die Tengelmann Fusion mit Edeka immer mehr in Bedrängnis .",
+        "sentence_indices": [
+            [
+                2,
+                3
+            ]
+        ],
         "context": "Siggi Pop deutscher Politiker ( SPD ) , Md B",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q160902"
     },
     {
         "sentence": "1 Bundeswirtschaftsminister Sigmar Gabriel weilt derzeit im Urlaub , zu Hause gerät er wegen seiner Ministererlaubnis für die Tengelmann Fusion mit Edeka immer mehr in Bedrängnis .",
+        "sentence_indices": [
+            [
+                2,
+                3
+            ]
+        ],
         "context": "Sigmar Hartmut Gabriel deutscher Politiker ( SPD ) , Md B",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q160902"
     },
     {
         "sentence": "März 2016 1 Staatssekretär Roland Krämer ( Mitte ) übergab die Zuwendung zur Fremdwasserentflechtung im Freisener Ortsteil Eitzweiler an Ortsvorsteher Gerald Linn ( li .",
+        "sentence_indices": [
+            [
+                4,
+                5
+            ]
+        ],
         "context": "Roland Krämer",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q26225953"
     },
     {
         "sentence": "Christian Bauer ) der nassforsch - dropsige Kommissar Stellbrink ( Devid Striesow ) so putzig auf seiner roten Mofette über die majestätischen Brücken von Saarbrücken düst oder relativ absurd in einem Ein - Raum - Dachaufbau über der St POL - CLP :",
+        "sentence_indices": [
+            [
+                8
+            ]
+        ],
         "context": "Stellbrink",
+        "context_indices": [
+            0
+        ],
         "person": "Q54597214"
     },
     {
         "sentence": "Christian Bauer ) der nassforsch - dropsige Kommissar Stellbrink ( Devid Striesow ) so putzig auf seiner roten Mofette über die majestätischen Brücken von Saarbrücken düst oder relativ absurd in einem Ein - Raum - Dachaufbau über der St POL - CLP :",
+        "sentence_indices": [
+            [
+                10,
+                11
+            ]
+        ],
         "context": "Devid Striesow deutscher Schauspieler",
+        "context_indices": [
+            0,
+            1
+        ],
         "person": "Q86919"
     },
     {
         "sentence": "Ein geopolitisches Tagebuch “ - von Nikolai Starikow Felsen in der Globalisierungs - Brandung Buchtipp von Harry Popow Es ist tatsächlich eine Tragödie .",
+        "sentence_indices": [
+            [
+                6,
+                7
+            ]
+        ],
         "context": "Nikolai Wiktorowitsch Starikow russischer Politiker , Schriftsteller und Publizist",
+        "context_indices": [
+            0,
+            1,
+            2
+        ],
         "person": "Q4439891"
     }
 ]
