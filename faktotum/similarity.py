@@ -347,7 +347,7 @@ def train(
     )
 
     trainer.train(
-        f"/mnt/data/users/simmler/model-zoo/{corpus_name}-similarity-gru-{corpus_name}",
+        f"/mnt/data/users/simmler/model-zoo/similarity-gru-{corpus_name}",
         learning_rate=2,
         mini_batch_size=32,
         max_epochs=1000,
