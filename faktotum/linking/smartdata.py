@@ -29,7 +29,7 @@ random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
 model = EntitySimilarityLearner.load(
-    "/mnt/data/users/simmler/model-zoo/similarity-gru-smartdata/best-model.pt"
+    "/mnt/data/users/simmler/model-zoo/similarity-lstm-smartdata/best-model.pt"
 )
 EMBEDDING = model.source_embeddings
 
