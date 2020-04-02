@@ -234,11 +234,12 @@ class EntityLinker:
             kb = self.organizations
         else:
             kb = self.humans
-        for key, value in tqdm.tqdm(kb.items()):
+        for key, value in kb.items():
             for context in value["MENTIONS"]:
-                #score = self._string_similarity(mention, context.lower())
-                #if score >= self.SIMILARITY_THRESHOLD:
-                candidates.add(key)
+                score = self._string_similarity(mention, context.lower())
+                if score >= self.SIMILARITY_THRESHOLD:
+                    candidates.add(key)
+        print(candidates)
         return list(candidates)
 
     def similarities(self, mask_entity=False):
