@@ -192,6 +192,7 @@ class EntityLinker:
     ):
         for person, indices in persons.items():
             tokens = list()
+            print(person, indices)
             entity = [token[0] for i, token in enumerate(sentence) if i in indices]
             type_ = "ORG" if any("ORG" in token[1] for token in sentence) else "PER"
             for i, token in enumerate(sentence):
@@ -200,6 +201,7 @@ class EntityLinker:
                 else:
                     tokens.append(token[0])
             text = " ".join(tokens)
+            print(text)
             sentence_ = Sentence(text, use_tokenizer=False)
             if isinstance(EMBEDDING, EntityEmbeddings):
                 for mention in indices:
@@ -265,7 +267,6 @@ class EntityLinker:
                     )
                 )
                 for identifier, type_, mention, mention_vector in mention_vectors:
-                    print(identifier, type_, mention, mention_vector)
                     max_score = 0.0
                     best_candidate = None
                     best_context = None
