@@ -128,6 +128,37 @@ class EntityLinker:
             json.dump(prediction, f)
         return pd.Series({"precision": precision, "accuracy": accuracy,})
 
+    def string_similarities(self):
+        tp = 0
+        fp = 0
+        prediction = list()
+        for sentence in tqdm.tqdm(self.test):
+            spans = self.get_entity_spans(sentence)
+            for identifier, entity in spans:
+                max_score = 0.0
+                best_identifier = None
+                text = " ".join([token[0] for token in entity])
+                if "-PER" in entity[0][2]:
+                    kb = self.humans
+                else:
+                    kb = self.organizations
+                for key, value in kb.items():
+                    for mention in value["MENTIONS"]:
+                        score = self._string_similarity(mention, text)
+                        if score > max_score:
+                            max_score = score
+                            best_identifier = key
+                prediction.append({"pred": best_identifier, "gold": identifier})
+                if identifier == best_identifier:
+                    tp += 1
+                else:
+                    fp += 1
+        precision = self.precision(tp, fp)
+        accuracy = self.accuracy(tp, fp)
+        with open("prediction.json", "w", encoding="utf-8") as f:
+            json.dump(prediction, f)
+        return pd.Series({"precision": precision, "accuracy": accuracy,})
+
     @staticmethod
     def get_persons(sent):
         persons = dict()
