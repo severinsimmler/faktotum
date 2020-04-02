@@ -202,6 +202,7 @@ class EntityLinker:
                     tokens.append(token[0])
             text = " ".join(tokens)
             print(text)
+            raise
             sentence_ = Sentence(text, use_tokenizer=False)
             if isinstance(EMBEDDING, EntityEmbeddings):
                 for mention in indices:
