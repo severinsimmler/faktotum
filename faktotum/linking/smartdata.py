@@ -230,6 +230,7 @@ class EntityLinker:
     def _get_candidates(self, mention, is_org):
         candidates = set()
         mention = mention.lower()
+        print(mention)
         if is_org:
             kb = self.organizations
         else:
