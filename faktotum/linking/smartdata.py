@@ -241,6 +241,7 @@ class EntityLinker:
                 if score >= self.SIMILARITY_THRESHOLD:
                     candidates.add(key)
         print(candidates)
+        print()
         return list(candidates)
 
     def similarities(self, mask_entity=False):
