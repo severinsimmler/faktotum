@@ -190,39 +190,39 @@ class EntityLinker:
         return_str: bool = False,
         return_id=False,
     ):
-        for person, mention in persons.items():
-            for indices in mention:
-                tokens = list()
-                entity = [token[0] for i, token in enumerate(sentence) if i in indices]
-                type_ = "ORG" if any("ORG" in token[1] for token in sentence) else "PER"
-                for i, token in enumerate(sentence):
-                    if i in indices and mask_entity:
-                        tokens.append("[MASK]")
-                    else:
-                        tokens.append(token[0])
-                text = " ".join(tokens)
-                sentence_ = Sentence(text, use_tokenizer=False)
-                if isinstance(EMBEDDING, EntityEmbeddings):
-                    for mention in indices:
-                        EMBEDDING.embed(sentence_, [mention])
-                        if return_id and return_str and return_type:
-                            yield person, type_, " ".join(
-                                entity
-                            ), sentence_.embedding.detach().numpy().reshape(1, -1)
-                        else:
-                            yield sentence_.embedding.detach().numpy().reshape(1, -1)
+        for person, indices in persons.items():
+            tokens = list()
+            type_ = "ORG" if any("ORG" in token[1] for token in sentence) else "PER"
+            for i, token in enumerate(sentence):
+                if i in indices and mask_entity:
+                    tokens.append("[MASK]")
                 else:
-                    EMBEDDING.embed(sentence_)
-                    for mention in indices:
-                        vector = sentence_[mention[0]].get_embedding().numpy()
-                        for i in mention[1:]:
-                            vector = vector + sentence_[i].get_embedding().numpy()
-                        if return_id and return_str and return_type:
-                            yield person, type_, " ".join(entity), (
-                                vector / len(mention)
-                            ).reshape(1, -1)
-                        else:
-                            yield (vector / len(mention)).reshape(1, -1)
+                    tokens.append(token[0])
+            text = " ".join(tokens)
+            sentence_ = Sentence(text, use_tokenizer=False)
+            if isinstance(EMBEDDING, EntityEmbeddings):
+                for mention in indices:
+                    entity = [token[0] for i, token in enumerate(sentence) if i in mention]
+                    EMBEDDING.embed(sentence_, [mention])
+                    if return_id and return_str and return_type:
+                        yield person, type_, " ".join(
+                            entity
+                        ), sentence_.embedding.detach().numpy().reshape(1, -1)
+                    else:
+                        yield sentence_.embedding.detach().numpy().reshape(1, -1)
+            else:
+                EMBEDDING.embed(sentence_)
+                for mention in indices:
+                    entity = [token[0] for i, token in enumerate(sentence) if i in mention]
+                    vector = sentence_[mention[0]].get_embedding().numpy()
+                    for i in mention[1:]:
+                        vector = vector + sentence_[i].get_embedding().numpy()
+                    if return_id and return_str and return_type:
+                        yield person, type_, " ".join(entity), (
+                            vector / len(mention)
+                        ).reshape(1, -1)
+                    else:
+                        yield (vector / len(mention)).reshape(1, -1)
 
     @staticmethod
     def _string_similarity(a, b):
@@ -241,7 +241,6 @@ class EntityLinker:
                 if score >= self.SIMILARITY_THRESHOLD:
                     candidates.add(key)
         print(candidates)
-        raise
         return list(candidates)
 
     def similarities(self, mask_entity=False):
