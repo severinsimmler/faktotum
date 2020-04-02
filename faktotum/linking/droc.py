@@ -20,10 +20,13 @@ import torch
 from faktotum.similarity import EntitySimilarityLearner, EntityEmbeddings
 from strsimpy.jaro_winkler import JaroWinkler
 
-#EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc-all-masked")
+# EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc-all-masked")
 JARO_WINKLER = JaroWinkler()
-model = EntitySimilarityLearner.load("/mnt/data/users/simmler/model-zoo/similarity-gru-droc/best-model.pt")
+model = EntitySimilarityLearner.load(
+    "/mnt/data/users/simmler/model-zoo/similarity-gru-droc/best-model.pt"
+)
 EMBEDDING = model.source_embeddings
+
 
 class EntityLinker:
     def __init__(self):
@@ -142,14 +145,18 @@ class EntityLinker:
                     name = [sentence_[i].text for i in mention]
                     if return_id:
                         if return_str:
-                            yield person, sentence_.embedding.detach().numpy().reshape(1, -1), " ".join(
-                                name
-                            )
+                            yield person, sentence_.embedding.detach().numpy().reshape(
+                                1, -1
+                            ), " ".join(name)
                         else:
-                            yield person, sentence_.embedding.detach().numpy().reshape(1, -1)
+                            yield person, sentence_.embedding.detach().numpy().reshape(
+                                1, -1
+                            )
                     else:
                         if return_str:
-                            yield sentence_.embedding.detach().numpy().reshape(1, -1), " ".join(name)
+                            yield sentence_.embedding.detach().numpy().reshape(
+                                1, -1
+                            ), " ".join(name)
                         else:
                             yield sentence_.embedding.detach().numpy().reshape(1, -1)
                 else:
@@ -161,9 +168,9 @@ class EntityLinker:
                         name.append(sentence_[i].text)
                     if return_id:
                         if return_str:
-                            yield person, (vector / len(mention)).reshape(1, -1), " ".join(
-                                name
-                            )
+                            yield person, (vector / len(mention)).reshape(
+                                1, -1
+                            ), " ".join(name)
                         else:
                             yield person, (vector / len(mention)).reshape(1, -1)
                     else:
@@ -265,7 +272,6 @@ class EntityLinker:
             json.dump(predictions, f, ensure_ascii=False, indent=4)
         return pd.DataFrame(stats).describe()
 
-
     def string_similarities(self, mask_entity=False):
         stats = list()
         predictions = dict()
@@ -291,7 +297,6 @@ class EntityLinker:
                             return_id=True,
                             mask_entity=mask_entity,
                             return_str=True,
-                            
                         )
                     )
                     for identifier, mention_vector, name in mention_vectors:
@@ -360,7 +365,7 @@ class EntityLinker:
 
     def rule_based(self):
         stats = list()
-        predictions = dict() 
+        predictions = dict()
         for i, novel in enumerate(self.test.values()):
             tp = 0
             fp = 0
@@ -371,19 +376,37 @@ class EntityLinker:
                 persons = self.get_persons(sentence)
                 for person, index in persons.items():
                     for indices in index:
-                        text = " ".join([token[0] for i, token in enumerate(sentence) if i in indices])
+                        text = " ".join(
+                            [
+                                token[0]
+                                for i, token in enumerate(sentence)
+                                if i in indices
+                            ]
+                        )
                         matches = set()
                         for values in kb.values():
                             if len(values["CONTEXTS"]) > 1:
                                 for context in values["CONTEXTS"]:
                                     if context != sentence:
-                                        for context_person, index in self.get_persons(context).items():
+                                        for context_person, index in self.get_persons(
+                                            context
+                                        ).items():
                                             for indices in index:
-                                                context_text = " ".join([token[0] for i, token in enumerate(context) if i in indices])
+                                                context_text = " ".join(
+                                                    [
+                                                        token[0]
+                                                        for i, token in enumerate(
+                                                            context
+                                                        )
+                                                        if i in indices
+                                                    ]
+                                                )
                                                 if text == context_text:
                                                     matches.add(context_person)
                         if len(matches) == 1:
-                            prediction.append({"pred": list(matches)[0], "gold": person})
+                            prediction.append(
+                                {"pred": list(matches)[0], "gold": person}
+                            )
                             if list(matches)[0] == person:
                                 tp += 1
                             else:

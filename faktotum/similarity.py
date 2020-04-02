@@ -315,7 +315,8 @@ class EntitySimilarityLearner(SimilarityLearner):
 
 
 def train(
-    corpus_name="smartdata", embeddings_path="/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted",
+    corpus_name="smartdata",
+    embeddings_path="/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted",
 ):
     corpus = FaktotumDataset(corpus_name)
 
@@ -323,7 +324,7 @@ def train(
         embeddings=[BertEmbeddings(embeddings_path),],
         bidirectional=True,
         dropout=0.25,
-        rnn_type="LSTM",
+        rnn_type="GRU",
         hidden_size=256,
     )
 
@@ -346,7 +347,7 @@ def train(
     )
 
     trainer.train(
-        f"/mnt/data/users/simmler/model-zoo/{corpus_name}-similarity-lstm-{corpus_name}",
+        f"/mnt/data/users/simmler/model-zoo/{corpus_name}-similarity-gru-{corpus_name}",
         learning_rate=2,
         mini_batch_size=32,
         max_epochs=1000,

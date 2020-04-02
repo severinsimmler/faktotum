@@ -26,9 +26,9 @@ from faktotum import utils
 random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
-# EMBEDDING = BertEmbeddings(
-#    "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
-# )
+EMBEDDING = BertEmbeddings(
+    "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
+)
 
 
 class EntityLinker:
@@ -96,7 +96,7 @@ class EntityLinker:
     def rule_based(self):
         tp = 0
         fp = 0
-
+        prediction = list()
         for sentence in tqdm.tqdm(self.test):
             spans = self.get_entity_spans(sentence)
             for identifier, entity in spans:
@@ -111,7 +111,9 @@ class EntityLinker:
                         matches.add(key)
                 if len(matches) < 1:
                     fp += 1
+                    prediction.append({"pred": "NIL", "gold": person})
                 elif len(matches) == 1:
+                    prediction.append({"pred": list(matches)[0], "gold": person})
                     if list(matches)[0] == identifier:
                         tp += 1
                     else:
@@ -120,18 +122,41 @@ class EntityLinker:
                     fp += 1
         precision = self.precision(tp, fp)
         accuracy = self.accuracy(tp, fp)
+        with open("prediction.json", "w", encoding="utf-8") as f:
+            json.dump(prediciton, f)
         return pd.Series({"precision": precision, "accuracy": accuracy,})
+
+    @staticmethod
+    def get_persons(sent):
+        persons = dict()
+
+        for token in sent:
+            if token[2] != "-":
+                persons[token[2]] = list()
+
+        for i, token in enumerate(sent):
+            if token[2] != "-":
+                if persons[token[2]] and persons[token[2]][-1][-1] == i - 1:
+                    # wenn entität aus mehreren tokens besteht
+                    persons[token[2]][-1].append(i)
+                elif persons[token[2]] and persons[token[2]][-1] != i - 1:
+                    # wenn entität mehrmals im satz vorkommt
+                    persons[token[2]].append([i])
+                elif not persons[token[2]]:
+                    # wenn entität zum ersten mal vorkommt
+                    persons[token[2]].append([i])
+        return persons
 
     @staticmethod
     def _vectorize(
         sentence,
-        index,
+        persons,
         mask_entity: bool = False,
         return_type: bool = False,
         return_str: bool = False,
         return_id=False,
     ):
-        for person, indices in index.items():
+        for person, indices in persons.items():
             tokens = list()
             entity = [token[0] for i, token in enumerate(sentence) if i in indices]
             type_ = "ORG" if any("ORG" in token[1] for token in sentence) else "PER"
@@ -142,16 +167,25 @@ class EntityLinker:
                     tokens.append(token[0])
             text = " ".join(tokens)
             sentence_ = Sentence(text, use_tokenizer=False)
-            EMBEDDING.embed(sentence_)
-            vector = sentence_[indices[0]].get_embedding().numpy()
-            for i in indices[1:]:
-                vector = vector + sentence_[i].get_embedding().numpy()
-            if return_id and return_str and return_type:
-                yield person, type_, " ".join(entity), (vector / len(indices)).reshape(
-                    1, -1
-                )
+            if isinstance(EMBEDDING, EntityEmbeddings):
+                EMBEDDING.embed(sentence_, [indices])
+                if return_id and return_str and return_type:
+                    yield person, type_, " ".join(
+                        entity
+                    ), sentence_.embedding.detach().numpy().reshape(1, -1)
+                else:
+                    yield sentence_.embedding.detach().numpy().reshape(1, -1)
             else:
-                yield (vector / len(indices)).reshape(1, -1)
+                EMBEDDING.embed(sentence_)
+                vector = sentence_[indices[0]].get_embedding().numpy()
+                for i in indices[1:]:
+                    vector = vector + sentence_[i].get_embedding().numpy()
+                if return_id and return_str and return_type:
+                    yield person, type_, " ".join(entity), (
+                        vector / len(indices)
+                    ).reshape(1, -1)
+                else:
+                    yield (vector / len(indices)).reshape(1, -1)
 
     @staticmethod
     def _string_similarity(a, b):
@@ -176,20 +210,18 @@ class EntityLinker:
         fp = 0
         tps = list()
         fps = list()
+        prediction = list()
         num_candidates = list()
         for sentence in tqdm.tqdm(self.test):
             is_mentioned = [token for token in sentence if token[2] != "-"]
             if not is_mentioned:
                 continue
             if is_mentioned:
-                indices = defaultdict(list)
-                for i, token in enumerate(sentence):
-                    if token[2] != "-":
-                        indices[token[2]].append(i)
+                persons = self.get_persons(sentence)
                 mention_vectors = list(
                     self._vectorize(
                         sentence,
-                        indices,
+                        persons,
                         return_id=True,
                         return_type=True,
                         return_str=True,
@@ -207,7 +239,6 @@ class EntityLinker:
                         is_org = False
                     candidates = self._get_candidates(mention, is_org)
                     num_candidates.append(len(candidates))
-                    print("Candidates:", len(candidates))
                     for candidate in candidates:
                         for context in self.kb[candidate]["MENTIONS"]:
                             if self.kb[candidate].get("DESCRIPTION"):
@@ -226,11 +257,21 @@ class EntityLinker:
 
                             indices = list(range(len(list(utils.tokenize(context)))))
                             sentence_ = Sentence(text, use_tokenizer=False)
-                            EMBEDDING.embed(sentence_)
-                            vector = sentence_[indices[0]].get_embedding().numpy()
-                            for i in indices[1:]:
-                                vector = vector + sentence_[i].get_embedding().numpy()
-                            candidate_vector = (vector / len(indices)).reshape(1, -1)
+                            if isinstance(EMBEDDING, EntityEmbeddings):
+                                EMBEDDING.embed(sentence_, [indices])
+                                candidate_vector = (
+                                    sentence_.embedding.detach().numpy().reshape(1, -1)
+                                )
+                            else:
+                                EMBEDDING.embed(sentence_)
+                                vector = sentence_[indices[0]].get_embedding().numpy()
+                                for i in indices[1:]:
+                                    vector = (
+                                        vector + sentence_[i].get_embedding().numpy()
+                                    )
+                                candidate_vector = (vector / len(indices)).reshape(
+                                    1, -1
+                                )
 
                             score = cosine_similarity(mention_vector, candidate_vector)[
                                 0
@@ -241,6 +282,7 @@ class EntityLinker:
                                 best_context = context
                                 best_sent = text
 
+                    prediction.append({"pred": best_candidate, "gold": identifier})
                     if best_candidate == identifier:
                         tp += 1
                         tps.append(
@@ -285,221 +327,8 @@ class EntityLinker:
                 indent=4,
                 ensure_ascii=False,
             )
-        return {
-            "accuracy": self.accuracy(tp, fp),
-            "precision": self.precision(tp, fp),
-            "num_candidates": statistics.mean(num_candidates),
-            "embedding": "language-models/presse/multi",
-        }
-
-    def _generate_data(self, data, mask_entity=False):
-        X = list()
-        y = list()
-        for sentence in tqdm.tqdm(data):
-            is_mentioned = [token for token in sentence if token[2] != "-"]
-            if not is_mentioned:
-                continue
-            if is_mentioned:
-                indices = defaultdict(list)
-                for i, token in enumerate(sentence):
-                    if token[2] != "-":
-                        indices[token[2]].append(i)
-                mention_vectors = list(
-                    self._vectorize(
-                        sentence,
-                        indices,
-                        return_id=True,
-                        return_type=True,
-                        return_str=True,
-                        mask_entity=mask_entity,
-                    )
-                )
-                for identifier, type_, mention, mention_vector in mention_vectors:
-                    true_candidate = self.kb.get(identifier)
-                    if not true_candidate:
-                        continue
-                    else:
-                        for context in true_candidate["MENTIONS"]:
-                            t = list(utils.tokenize(context))
-                            if mask_entity:
-                                t = ["[MASK]" for _ in t]
-                            if true_candidate.get("DESCRIPTION"):
-                                t.extend(
-                                    list(
-                                        utils.tokenize(
-                                            self.kb[identifier].get("DESCRIPTION")
-                                        )
-                                    )
-                                )
-                                text = " ".join(t)
-                            else:
-                                text = " ".join(t)
-                            indices = list(range(len(list(utils.tokenize(context)))))
-                            sentence_ = Sentence(text, use_tokenizer=False)
-                            EMBEDDING.embed(sentence_)
-                            vector = sentence_[indices[0]].get_embedding().numpy()
-                            for i in indices[1:]:
-                                vector = vector + sentence_[i].get_embedding().numpy()
-                            candidate_vector = (vector / len(indices)).reshape(1, -1)
-                            instance = np.concatenate(
-                                (mention_vector[0], candidate_vector[0])
-                            )
-                            X.append(instance)
-                            y.append(1.0)
-                        if type_ == "ORG":
-                            kb = self.organizations
-                        else:
-                            kb = self.humans
-                        negative = random.sample(
-                            [person for person in kb if person != identifier],
-                            k=len(true_candidate["MENTIONS"]),
-                        )
-                        for id_ in negative:
-                            negative_candidate = random.choice(kb[id_]["MENTIONS"])
-                            t = list(utils.tokenize(negative_candidate))
-                            if mask_entity:
-                                t = ["[MASK]" for _ in t]
-                            if kb[id_].get("DESCRIPTION"):
-                                t.extend(
-                                    list(
-                                        utils.tokenize(self.kb[id_].get("DESCRIPTION"))
-                                    )
-                                )
-                                text = " ".join(t)
-                            else:
-                                text = " ".join(t)
-                            indices = list(
-                                range(len(list(utils.tokenize(negative_candidate))))
-                            )
-                            sentence_ = Sentence(text, use_tokenizer=False)
-                            EMBEDDING.embed(sentence_)
-                            vector = sentence_[indices[0]].get_embedding().numpy()
-                            for i in indices[1:]:
-                                vector = vector + sentence_[i].get_embedding().numpy()
-                            candidate_vector = (vector / len(indices)).reshape(1, -1)
-                            instance = np.concatenate(
-                                (mention_vector[0], candidate_vector[0])
-                            )
-                            X.append(instance)
-                            y.append(0.0)
-        return np.array(X), np.array(y)
-
-    def similarities(self, mask_entity=False):
-        network = EntitySimilarity.load(model_path)
-        tp = 0
-        fp = 0
-        tps = list()
-        fps = list()
-        num_candidates = list()
-        for sentence in tqdm.tqdm(self.test):
-            is_mentioned = [token for token in sentence if token[2] != "-"]
-            if not is_mentioned:
-                continue
-            if is_mentioned:
-                indices = defaultdict(list)
-                for i, token in enumerate(sentence):
-                    if token[2] != "-":
-                        indices[token[2]].append(i)
-                mention_vectors = list(
-                    self._vectorize(
-                        sentence,
-                        indices,
-                        return_id=True,
-                        return_type=True,
-                        return_str=True,
-                        mask_entity=mask_entity,
-                    )
-                )
-                for identifier, type_, mention, mention_vector in mention_vectors:
-                    max_score = 0.0
-                    best_candidate = None
-                    best_context = None
-                    best_sent = None
-                    if type_ == "ORG":
-                        is_org = True
-                    else:
-                        is_org = False
-                    candidates = self._get_candidates(mention, is_org)
-                    num_candidates.append(len(candidates))
-                    print("Candidates:", len(candidates))
-                    for candidate in candidates:
-                        for context in self.kb[candidate]["MENTIONS"]:
-                            if self.kb[candidate].get("DESCRIPTION"):
-                                t = list(utils.tokenize(context))
-                                t.extend(
-                                    list(
-                                        utils.tokenize(
-                                            self.kb[candidate].get("DESCRIPTION")
-                                        )
-                                    )
-                                )
-                                text = " ".join(t)
-                            else:
-                                t = list(utils.tokenize(context))
-                                text = " ".join(t)
-
-                            indices = list(range(len(list(utils.tokenize(context)))))
-                            sentence_ = Sentence(text, use_tokenizer=False)
-                            EMBEDDING.embed(sentence_)
-                            vector = sentence_[indices[0]].get_embedding().numpy()
-                            for i in indices[1:]:
-                                vector = vector + sentence_[i].get_embedding().numpy()
-                            candidate_vector = (vector / len(indices)).reshape(1, -1)
-
-                            score = network.get_similarity(
-                                torch.tensor(mention_vector),
-                                torch.tensor(candidate_vector),
-                            ).item()
-                            if score > max_score:
-                                max_score = score
-                                best_candidate = candidate
-                                best_context = context
-                                best_sent = text
-
-                    if best_candidate == identifier:
-                        tp += 1
-                        tps.append(
-                            {
-                                "true": mention,
-                                "pred": best_context,
-                                "true_id": identifier,
-                                "pred_id": best_candidate,
-                                "score": max_score,
-                                "sentence": " ".join([token[0] for token in sentence]),
-                                "context": " ".join([token[0] for token in best_sent]),
-                            }
-                        )
-                    else:
-                        fp += 1
-                        if best_sent:
-                            fps.append(
-                                {
-                                    "true": mention,
-                                    "pred": best_context,
-                                    "true_id": identifier,
-                                    "pred_id": best_candidate,
-                                    "score": max_score,
-                                    "sentence": " ".join(
-                                        [token[0] for token in sentence]
-                                    ),
-                                    "context": " ".join(
-                                        [token[0] for token in best_sent]
-                                    ),
-                                }
-                            )
-        with open("fps-tps.json", "w", encoding="utf-8") as f:
-            json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)
-        with open("scores.json", "w", encoding="utf-8") as f:
-            json.dump(
-                {
-                    "accuracy": self.accuracy(tp, fp),
-                    "precision": self.precision(tp, fp),
-                    "num_candidates": statistics.mean(num_candidates),
-                    "embedding": "language-models/presse/multi",
-                },
-                indent=4,
-                ensure_ascii=False,
-            )
+        with open("prediction.json", "w", encoding="utf-8") as f:
+            json.dump(prediciton, f)
         return {
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
