@@ -360,6 +360,7 @@ class EntityLinker:
                     "num_candidates": statistics.mean(num_candidates),
                     "embedding": "language-models/presse/multi",
                 },
+                f,
                 indent=4,
                 ensure_ascii=False,
             )
