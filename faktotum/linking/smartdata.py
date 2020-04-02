@@ -170,24 +170,26 @@ class EntityLinker:
             text = " ".join(tokens)
             sentence_ = Sentence(text, use_tokenizer=False)
             if isinstance(EMBEDDING, EntityEmbeddings):
-                EMBEDDING.embed(sentence_, [indices])
-                if return_id and return_str and return_type:
-                    yield person, type_, " ".join(
-                        entity
-                    ), sentence_.embedding.detach().numpy().reshape(1, -1)
-                else:
-                    yield sentence_.embedding.detach().numpy().reshape(1, -1)
+                for mention in indices:
+                    EMBEDDING.embed(sentence_, [mention])
+                    if return_id and return_str and return_type:
+                        yield person, type_, " ".join(
+                            entity
+                        ), sentence_.embedding.detach().numpy().reshape(1, -1)
+                    else:
+                        yield sentence_.embedding.detach().numpy().reshape(1, -1)
             else:
                 EMBEDDING.embed(sentence_)
-                vector = sentence_[indices[0]].get_embedding().numpy()
-                for i in indices[1:]:
-                    vector = vector + sentence_[i].get_embedding().numpy()
-                if return_id and return_str and return_type:
-                    yield person, type_, " ".join(entity), (
-                        vector / len(indices)
-                    ).reshape(1, -1)
-                else:
-                    yield (vector / len(indices)).reshape(1, -1)
+                for mention in indices:
+                    vector = sentence_[mention[0]].get_embedding().numpy()
+                    for i in mention[1:]:
+                        vector = vector + sentence_[i].get_embedding().numpy()
+                    if return_id and return_str and return_type:
+                        yield person, type_, " ".join(entity), (
+                            vector / len(mention)
+                        ).reshape(1, -1)
+                    else:
+                        yield (vector / len(mention)).reshape(1, -1)
 
     @staticmethod
     def _string_similarity(a, b):
@@ -330,7 +332,7 @@ class EntityLinker:
                 ensure_ascii=False,
             )
         with open("prediction.json", "w", encoding="utf-8") as f:
-            json.dump(prediciton, f)
+            json.dump(prediction, f)
         return {
             "accuracy": self.accuracy(tp, fp),
             "precision": self.precision(tp, fp),
