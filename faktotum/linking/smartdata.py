@@ -22,6 +22,8 @@ from faktotum import utils
 import statistics
 from strsimpy.jaro_winkler import JaroWinkler
 from faktotum import utils
+from faktotum.similarity import EntitySimilarityLearner, EntityEmbeddings
+from strsimpy.jaro_winkler import JaroWinkler
 
 random.seed(23)
 
