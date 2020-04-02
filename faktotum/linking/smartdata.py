@@ -125,7 +125,7 @@ class EntityLinker:
         precision = self.precision(tp, fp)
         accuracy = self.accuracy(tp, fp)
         with open("prediction.json", "w", encoding="utf-8") as f:
-            json.dump(prediciton, f)
+            json.dump(prediction, f)
         return pd.Series({"precision": precision, "accuracy": accuracy,})
 
     @staticmethod
