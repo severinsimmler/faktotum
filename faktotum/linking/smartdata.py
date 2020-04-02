@@ -113,9 +113,9 @@ class EntityLinker:
                         matches.add(key)
                 if len(matches) < 1:
                     fp += 1
-                    prediction.append({"pred": "NIL", "gold": person})
+                    prediction.append({"pred": "NIL", "gold": identifier})
                 elif len(matches) == 1:
-                    prediction.append({"pred": list(matches)[0], "gold": person})
+                    prediction.append({"pred": list(matches)[0], "gold": identifier})
                     if list(matches)[0] == identifier:
                         tp += 1
                     else:
