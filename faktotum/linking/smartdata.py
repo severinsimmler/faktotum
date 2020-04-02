@@ -29,7 +29,7 @@ random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
 EMBEDDING = BertEmbeddings(
-    "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
+    "/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata-all-masked"
 )
 
 
