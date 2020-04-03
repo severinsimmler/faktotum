@@ -330,7 +330,7 @@ class EntityLinker:
                                 "pred": best_context,
                                 "true_id": identifier,
                                 "pred_id": best_candidate,
-                                "score": max_score,
+                                "score": float(max_score),
                                 "sentence": " ".join([token[0] for token in sentence]),
                                 "context": " ".join([token[0] for token in best_sent]),
                             }
@@ -344,7 +344,7 @@ class EntityLinker:
                                     "pred": best_context,
                                     "true_id": identifier,
                                     "pred_id": best_candidate,
-                                    "score": max_score,
+                                    "score": float(max_score),
                                     "sentence": " ".join(
                                         [token[0] for token in sentence]
                                     ),
