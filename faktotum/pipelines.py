@@ -105,6 +105,8 @@ def _get_best_candidate(vector, kb):
     best_score = 0.0
     for identifier, values in kb.items():
         for candidate in values["EMBEDDINGS"]:
+            vector = vector.reshape(1, -1)
+            candidate = candidate.reshape(1, -1)
             score = sklearn.metrics.pairwise.cosine_similarity(vector, candidate)
             if score > best_score:
                 best_score = score
