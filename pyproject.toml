@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Extracting information from unstructured text."
 authors = ["Severin Simmler <severin.simmler@stud-mail.uni-wuerzburg.de>"]
 license = "MIT"
+exclude = ["faktotum/research/data"]
 
 [tool.poetry.dependencies]
 python = "3.7.*"
