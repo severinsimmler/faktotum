@@ -1,6 +1,7 @@
-from typing import List, Dict, Union
-import transformers
+from typing import Dict, List, Union
+
 import pandas as pd
+import transformers
 
 Entities = List[Dict[str, Union[str, float]]]
 Pipeline = transformers.pipelines.Pipeline

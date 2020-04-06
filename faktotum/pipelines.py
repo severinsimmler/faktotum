@@ -1,13 +1,59 @@
-import transformers
-import pandas as pd
-import faktotum
-import tqdm
-from faktotum.typing import Entities, Pipeline, KnowledgeBase, TaggedTokens
 import numpy as np
+import pandas as pd
+import tqdm
+import transformers
 
-MODELS = {"ner": {"literary-texts": "severinsimmler/literary-german-bert", "press-texts": "severinsimmler/german-press-bert"},
-          "ned": {"literary-texts": "severinsimmler/literary-german-bert", "press-texts": "severinsimmler/bert-base-german-press-cased"}}
+import faktotum
+from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
 
+MODELS = {
+    "ner": {
+        "literary-texts": "severinsimmler/literary-german-bert",
+        "press-texts": "severinsimmler/german-press-bert",
+    },
+    "ned": {
+        "literary-texts": "severinsimmler/literary-german-bert",
+        "press-texts": "severinsimmler/bert-base-german-press-cased",
+    },
+}
+
+
+def nel(text: str, kb: KnowledgeBase, domain: str = "literary-texts"):
+    tagged_tokens = ner(text, domain)
+    return ned(tagged_tokens, kb, domain)
+
+
+def ner(text: str, domain: str = "literary-texts"):
+    model_name = MODELS["ner"][domain]
+    pipeline = transformers.pipeline(
+        "ner", model=model_name, tokenizer=model_name, ignore_labels=[]
+    )
+    sentences = [(i, sentence) for i, sentence in enumerate(faktotum.sentencize(text))]
+    predictions = list()
+    for i, sentence in tqdm.tqdm(sentences):
+        sentence = "".join(str(token) for token in sentence)
+        prediction = _predict_labels(pipeline, sentence, i)
+        predictions.extend(prediction)
+    return pd.DataFrame(predictions).loc[:, ["sentence_id", "word", "entity", "score"]]
+
+
+def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-texts"):
+    model_name = MODELS["ned"][domain]
+    pipeline = transformers.pipeline(
+        "feature-extraction", model=model_name, tokenizer=model_name
+    )
+    for sentence_id, sentence in tokens.groupby("sentence_id"):
+        sentence["entity_id"] = "O"
+        text = " ".join(sentence["word"])
+        entities = sentence[sentence["entity"] != "O"]
+        mentions = _group_mentions(entities)
+        features = _extract_features(pipeline, text)
+        for mention in mentions:
+            vector = _pool_entity(mention, features)
+            best_candidate, score = _get_best_candidate(vector, kb)
+            sentence.iloc[mention, -1] = best_candidate
+        tokens.iloc[sentence_id] = sentence
+    return tokens
 
 
 def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Entities:
@@ -21,41 +67,46 @@ def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Enti
                 entities.append(token)
     return entities
 
+
 def _extract_features(pipeline: Pipeline, sentence: str) -> Entities:
     vectors = list()
-    for token_id, vector in zip(pipeline.tokenizer.encode(sentence), np.squeeze(pipeline(sentence))):
+    for token_id, vector in zip(
+        pipeline.tokenizer.encode(sentence), np.squeeze(pipeline(sentence))
+    ):
         token = pipeline.tokenizer.decode([token_id])
-        if token not in {"[CLS]", "[SEP]", "[MASK]"}:
-            if token.startswith("##"):
-                vectors[-1] += vector
-            else:
-                vectors.append(vector)
+        if token not in {"[CLS]", "[SEP]", "[MASK]"} and not token.startswith("##"):
+            vectors.append(vector)
     return vectors
 
 
-def nel(text: str, kb: KnowledgeBase, domain: str = "literary-texts"):
-    tagged_tokens = ner(text, domain)
-    return ned(tagged_tokens, kb, domain)
+def _get_best_candidate(vector, kb):
+    best_candidate = "NIL"
+    best_score = 0.0
+    for identifier, values in kb.items():
+        for candidate in values["EMBEDDINGS"]:
+            score = sklearn.metrics.pairwise.cosine_similarity(vector, candidate)
+            if score > best_score:
+                best_score = score
+                best_candidate = identifier
+    return best_candidate, best_score
 
 
-def ner(text: str, domain: str = "literary-texts"):
-    model_name = MODELS["ner"][domain]
-    pipeline = transformers.pipeline("ner", model=model_name, tokenizer=model_name, ignore_labels=[])
-    sentences = [(i, sentence) for i, sentence in enumerate(faktotum.sentencize(text))]
-    predictions = list()
-    for i, sentence in tqdm.tqdm(sentences):
-        sentence = "".join(str(token) for token in sentence)
-        prediction = _predict_labels(pipeline, sentence, i)
-        predictions.extend(prediction)
-    return pd.DataFrame(predictions).loc[:, ["sentence_id", "word", "entity", "score"]]
+def _pool_entity(indices, features):
+    entity = features[indices[0]]
+    for index in indices[1:]:
+        entity += features[index]
+    return entity
 
 
-def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-texts"):
-    model_name = MODELS["ned"][domain]
-    pipeline = transformers.pipeline("feature-extraction", model=model_name, tokenizer=model_name)
-    for sentence_id, sentence in tokens.groupby("sentence_id"):
-        sentence = sentence.reset_index(drop=True)
-        text = " ".join(sentence["word"])
-        entity_indices = sentence[sentence["entity"] != "O"]
-        features = _extract_features(pipeline, text)
-        yield features
+def _group_mentions(entities):
+    mention = list()
+    for row, token in entities.iterrows():
+        if token["entity"].startswith("B"):
+            if mention:
+                yield mention
+                mention = list()
+            mention.append(row)
+        elif token["entity"].startswith("I"):
+            if mention:
+                if mention[-1] == row - 1:
+                    mention.append(row)

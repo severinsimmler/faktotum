@@ -28,10 +28,12 @@ from strsimpy.jaro_winkler import JaroWinkler
 random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
-#model = EntitySimilarityLearner.load(
+# model = EntitySimilarityLearner.load(
 #    "/mnt/data/users/simmler/model-zoo/similarity-lstm-smartdata/best-model.pt"
-#)
-EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted")#model.source_embeddings
+# )
+EMBEDDING = BertEmbeddings(
+    "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
+)  # model.source_embeddings
 
 
 class EntityLinker:
@@ -202,7 +204,9 @@ class EntityLinker:
             sentence_ = Sentence(text, use_tokenizer=False)
             if isinstance(EMBEDDING, EntityEmbeddings):
                 for mention in indices:
-                    entity = [token[0] for i, token in enumerate(sentence) if i in mention]
+                    entity = [
+                        token[0] for i, token in enumerate(sentence) if i in mention
+                    ]
                     EMBEDDING.embed(sentence_, [mention])
                     if return_id and return_str and return_type:
                         yield person, type_, " ".join(
@@ -213,7 +217,9 @@ class EntityLinker:
             else:
                 EMBEDDING.embed(sentence_)
                 for mention in indices:
-                    entity = [token[0] for i, token in enumerate(sentence) if i in mention]
+                    entity = [
+                        token[0] for i, token in enumerate(sentence) if i in mention
+                    ]
                     vector = sentence_[mention[0]].get_embedding().numpy()
                     for i in mention[1:]:
                         vector = vector + sentence_[i].get_embedding().numpy()
