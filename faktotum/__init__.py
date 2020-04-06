@@ -6,3 +6,5 @@ from faktotum.utils import sentencize, tokenize
 from faktotum import vendor
 from faktotum import clustering
 from faktotum import regression, classification
+from faktotum import pipelines
+from faktotum.pipelines import ner
