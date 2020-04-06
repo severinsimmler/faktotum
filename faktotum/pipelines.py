@@ -111,6 +111,8 @@ def _get_best_candidate(vector, kb):
 
 
 def _pool_entity(indices, features):
+    print(indices)
+    print(features)
     entity = features[indices[0]]
     for index in indices[1:]:
         entity += features[index]
