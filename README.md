@@ -80,7 +80,7 @@ where an identifier maps to a list of contexts and a list of indices referring t
 ...     data = json.load(f)
 >>> kb = faktotum.KnowledgeBase(data, domain="literary-texts")
 >>> text = "Er hieß Eduard. Ihr Name war Klara, manchmal auch Klärchen."
->>> faktotum.nel(text, domain="literary-texts")
+>>> faktotum.nel(text, kb, domain="literary-texts")
     sentence_id      word entity entity_id
 0             0        Er    NaN       NaN
 1             0      hieß    NaN       NaN
