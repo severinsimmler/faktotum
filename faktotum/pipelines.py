@@ -3,7 +3,7 @@ import pandas as pd
 import tqdm
 import transformers
 
-from faktotum.utils import sentencize, MODELS, pool_entity, extract_features
+from faktotum.utils import sentencize, MODELS, pool_entity, extract_features, align_index
 from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, Pipeline, TaggedTokens
 
