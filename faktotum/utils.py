@@ -5,7 +5,7 @@ faktotum.utils
 This module provides general helper functions.
 """
 
-from typing import Generator
+from typing import Generator, List
 import numpy as np
 import syntok.segmenter
 import syntok.tokenizer
@@ -64,7 +64,7 @@ def pool_entity(indices, features):
     return entity
 
 
-def extract_features(pipeline: Pipeline, sentence: str) -> Entities:
+def extract_features(pipeline: Pipeline, sentence: List[str]) -> Entities:
     vectors = list()
     for token_id, vector in zip(
         pipeline.tokenizer.encode(sentence), np.squeeze(pipeline(sentence))
@@ -72,4 +72,6 @@ def extract_features(pipeline: Pipeline, sentence: str) -> Entities:
         token = pipeline.tokenizer.decode([token_id])
         if token not in {"[CLS]", "[SEP]", "[MASK]"} and not token.startswith("##"):
             vectors.append(vector)
+    if len(vectors) != len(sentence):
+        raise ValueError("Oops, tokenization mismatch.")
     return vectors
