@@ -96,3 +96,72 @@ where an identifier maps to a list of contexts and a list of indices referring t
 11            1  Klärchen  B-PER        Q2
 12            1         .    NaN       NaN
 ```
+
+Or with a knowledge base with two records related to press releases:
+
+```json
+{
+    "Q1": {
+        "CONTEXTS": [
+            [
+                "Apple",
+                "produziert",
+                "Software",
+                "und",
+                "Hardware",
+                "."
+            ]
+        ],
+        "ENTITY_INDICES": [
+            [
+                0
+            ]
+        ]
+    },
+    "Q2": {
+        "CONTEXTS": [
+            [
+                "Apple",
+                "ist",
+                "ein",
+                "Plattenlabel",
+                "."
+            ]
+        ],
+        "ENTITY_INDICES": [
+            [
+                0
+            ]
+        ]
+    }
+}
+```
+
+set the `domain` argument to `press-texts`:
+
+```python
+>>> import json
+>>> import faktotum
+>>> with open("kb.json", "r", encoding="utf-8") as f:
+...     data = json.load(f)
+>>> kb = faktotum.KnowledgeBase(data, domain="press-texts")
+>>> text = "Apple hat kürzlich neue Computer vorgestellt. Das erste Musikalbum auf Apple ist 1968 erschienen."
+>>> faktotum.nel(text, kb, "press-texts")
+    sentence_id         word entity entity_id
+0             0        Apple  B-ORG        Q1
+1             0          hat    NaN       NaN
+2             0     kürzlich    NaN       NaN
+3             0         neue    NaN       NaN
+4             0     Computer    NaN       NaN
+5             0  vorgestellt    NaN       NaN
+6             0            .    NaN       NaN
+7             1          Das    NaN       NaN
+8             1        erste    NaN       NaN
+9             1   Musikalbum    NaN       NaN
+10            1          auf    NaN       NaN
+11            1        Apple  B-ORG        Q2
+12            1          ist    NaN       NaN
+13            1         1968    NaN       NaN
+14            1   erschienen    NaN       NaN
+15            1            .    NaN       NaN
+```
