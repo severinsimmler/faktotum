@@ -4,6 +4,7 @@ import tqdm
 import transformers
 
 from faktotum import utils
+from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
 
 MODELS = {
@@ -55,28 +56,6 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
     for mention, candidate in identifiers:
         tokens.iloc[mention, -1] = candidate
     return tokens
-
-
-class KnowledgeBase:
-    def __init__(self, data, domain):
-        self.data = data
-        self._model_name = MODELS["ned"][domain]
-        self._pipeline = transformers.pipeline("feature-extraction", model=self._model_name, tokenizer=self._model_name)
-        self._vectorize_contexts()
-
-    def _vectorize_contexts(self):
-        for key, value in self.data.items():
-            for indices, context in zip(value["ENTITY_INDICES"], value["CONTEXTS"]):
-                features = _extract_features(self._pipeline, context)
-                embeddings = _pool_entity(indices, features)
-                if "EMBEDDINGS" not in self.data[key]:
-                    self.data[key]["EMBEDDINGS"] = [embeddings]
-                else:
-                    self.data[key]["EMBEDDINGS"].append(embeddings)
-
-    def items(self):
-        for key, value in self.data.items():
-            yield key, value
 
 
 def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Entities:
