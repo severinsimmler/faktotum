@@ -70,7 +70,7 @@ def extract_features(pipeline: Pipeline, sentence: List[str]) -> Entities:
     index = dict()
     for i, token in enumerate(sentence):
         subtokens = [t for t in pipeline.tokenizer.tokenize(token) if not t.startswith("##")]
-        index[i] = len(subtokens)
+        index[i] = subtokens
     for token, vector in zip(
         pipeline.tokenizer.tokenize(text), np.squeeze(pipeline(text))
     ):
