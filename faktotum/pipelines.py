@@ -88,6 +88,9 @@ def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Enti
             if token["word"].startswith("##"):
                 entities[-1]["word"] += token["word"][2:]
             else:
+                del token["score"]
+                if token["entity"] == "O":
+                    token["entity"] = np.nan
                 entities.append(token)
     return entities
 
@@ -108,13 +111,14 @@ def _get_best_candidate(vector, kb):
     best_score = 0.0
     for identifier, values in kb.items():
         for candidate in values["EMBEDDINGS"]:
-            vector = vector.reshape(1, -1)
-            candidate = candidate.reshape(1, -1)
-            score = sklearn.metrics.pairwise.cosine_similarity(vector, candidate)
+            score = cosine_similarity(vector, candidate)
             if score > best_score:
                 best_score = score
                 best_candidate = identifier
     return best_candidate, best_score
+
+def _cosine_similarity(x, y):
+    return np.dot(x, y)/(np.linalg.norm(x)*np.linalg.norm(y))
 
 
 def _pool_entity(indices, features):
