@@ -9,6 +9,7 @@ from typing import Generator
 
 import syntok.segmenter
 import syntok.tokenizer
+from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
 
 TOKENIZER = syntok.tokenizer.Tokenizer()
 MODELS = {
