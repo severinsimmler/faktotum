@@ -43,17 +43,19 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
     pipeline = transformers.pipeline(
         "feature-extraction", model=model_name, tokenizer=model_name
     )
+    identifiers = list()
     for sentence_id, sentence in tokens.groupby("sentence_id"):
         text = " ".join(sentence.loc[:, "word"])
         entities = sentence.dropna()
-        entities.loc[:, "entity_id"] = np.nan
         mentions = _group_mentions(entities)
         features = _extract_features(pipeline, text)
         for mention in mentions:
             vector = _pool_entity(mention, features)
             best_candidate, score = _get_best_candidate(vector, kb)
-            entities.iloc[mention, -1] = best_candidate
-        tokens.iloc[sentence_id, entities.index] = entities.loc["entity_id"]
+            identifiers.append((mention, best_candidate))
+    tokens["entity_id"] = np.nan
+    for mention, candidate in identifiers:
+        tokens.iloc[mention, -1] = candidate
     return tokens
 
 
