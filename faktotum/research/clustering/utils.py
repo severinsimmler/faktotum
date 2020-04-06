@@ -98,6 +98,22 @@ class Embeddings:
             logging.info(f"Loading {path}...")
             self.entity_bert = BertEmbeddings(path)
 
+        if load in {"lstm", "all"}:
+            if corpus == "gutenberg":
+                path = str(Path(model_directory, "similarity-lstm-droc"))
+            else:
+                path = str(Path(model_directory, "similarity-lstm-smartdata"))
+            logging.info(f"Loading {path}...")
+            self.bert = BertEmbeddings(path)
+
+        if load in {"gru", "all"}:
+            if corpus == "gutenberg":
+                path = str(Path(model_directory, "similarity-gru-droc"))
+            else:
+                path = str(Path(model_directory, "similarity-gru-smartdata"))
+            logging.info(f"Loading {path}...")
+            self.bert = BertEmbeddings(path)
+
     def vectorize(self, sentences, model, add_adj=False, return_str=False):
         X = list()
         y = list()
@@ -217,21 +233,11 @@ class Clustering:
 
     def evaluate(self, i=None, strs=None):
         y_ = self.model.fit_predict(self.X)
-        homogeneity = metrics.homogeneity_score(self.y, y_)
-        completeness = metrics.completeness_score(self.y, y_)
-        v_measure = metrics.v_measure_score(self.y, y_)
         ari = metrics.adjusted_rand_score(self.y, y_)
-        ami = metrics.adjusted_mutual_info_score(self.y, y_)
-        fmi = metrics.fowlkes_mallows_score(self.y, y_)
         if strs:
             with open(f"ward-smartdata-{i}.json", "w", encoding="utf-8") as f:
                 data = {"gold": list(self.y), "pred": [int(x) for x in y_], "str": strs}
                 json.dump(data, f, ensure_ascii=False, indent=4)
         return {
-            "Homogeneity": round(homogeneity, 2),
-            "Completeness": round(completeness, 2),
-            "V-Measure": round(v_measure, 2),
             "ARI": round(ari, 2),
-            "AMI": round(ami, 2),
-            "FMI": round(fmi, 2),
         }

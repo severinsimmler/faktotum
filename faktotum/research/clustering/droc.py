@@ -27,12 +27,12 @@ def load_data(all_=True):
     return data
 
 
-def ward(model_directory):
+def ward(model_directory, load):
     stats = list()
     index = list()
 
-    data = load_data(all_=False)
-    embeddings = Embeddings(model_directory, "gutenberg", load="entity")
+    data = load_data(all_=True)
+    embeddings = Embeddings(model_directory, "gutenberg", load=load)
     scores = list()
     for i, novel in enumerate(data.values()):
         X, y, strs = embeddings.vectorize(
