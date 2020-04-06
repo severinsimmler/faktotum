@@ -1,4 +1,4 @@
-# Extract information from unstructured text
+# Extract and disambiguate named entities from unstructured text
 
 ## Installation
 
