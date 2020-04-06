@@ -43,7 +43,7 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
         "feature-extraction", model=model_name, tokenizer=model_name
     )
     for sentence_id, sentence in tokens.groupby("sentence_id"):
-        sentence["entity_id"] = "O"
+        sentence.loc[:, "entity_id"] = "O"
         text = " ".join(sentence.loc[:, "word"])
         entities = sentence[sentence.loc[:, "entity"] != "O"]
         mentions = _group_mentions(entities)
@@ -130,3 +130,5 @@ def _group_mentions(entities):
             if mention:
                 if mention[-1] == row - 1:
                     mention.append(row)
+    if mention:
+        yield mention
