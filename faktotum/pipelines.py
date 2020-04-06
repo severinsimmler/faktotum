@@ -35,7 +35,7 @@ def ner(text: str, domain: str = "literary-texts"):
         sentence = "".join(str(token) for token in sentence)
         prediction = _predict_labels(pipeline, sentence, i)
         predictions.extend(prediction)
-    return pd.DataFrame(predictions).loc[:, ["sentence_id", "word", "entity", "score"]]
+    return pd.DataFrame(predictions).loc[:, ["sentence_id", "word", "entity"]]
 
 
 def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-texts"):
@@ -44,17 +44,16 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
         "feature-extraction", model=model_name, tokenizer=model_name
     )
     for sentence_id, sentence in tokens.groupby("sentence_id"):
-        sentence.loc[:, "entity_id"] = "O"
         text = " ".join(sentence.loc[:, "word"])
-        entities = sentence[sentence.loc[:, "entity"] != "O"]
+        entities = sentence.dropna()
+        entities.loc[:, "entity_id"] = np.nan
         mentions = _group_mentions(entities)
         features = _extract_features(pipeline, text)
         for mention in mentions:
             vector = _pool_entity(mention, features)
             best_candidate, score = _get_best_candidate(vector, kb)
-            print(mention, best_candidate, score)
-            sentence.iloc[mention, -1] = best_candidate
-        print(sentence)
+            entities.iloc[mention, -1] = best_candidate
+        tokens.iloc[sentence_id, entities.index] = entities.loc["entity_id"]
     return tokens
 
 
