@@ -44,14 +44,16 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
     )
     for sentence_id, sentence in tokens.groupby("sentence_id"):
         sentence["entity_id"] = "O"
-        text = " ".join(sentence["word"])
-        entities = sentence[sentence["entity"] != "O"]
+        text = " ".join(sentence.loc[:, "word"])
+        entities = sentence[sentence.loc[:, "entity"] != "O"]
+        print(entities)
         mentions = _group_mentions(entities)
         features = _extract_features(pipeline, text)
         for mention in mentions:
             vector = _pool_entity(mention, features)
             best_candidate, score = _get_best_candidate(vector, kb)
             sentence.iloc[mention, -1] = best_candidate
+        print(sentence)
         tokens.iloc[sentence_id] = sentence
     return tokens
 
