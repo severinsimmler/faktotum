@@ -66,8 +66,9 @@ def pool_entity(indices, features):
 
 def extract_features(pipeline: Pipeline, sentence: List[str]) -> Entities:
     vectors = list()
+    text = " ".join(sentence)
     for token_id, vector in zip(
-        pipeline.tokenizer.encode(sentence), np.squeeze(pipeline(sentence))
+        pipeline.tokenizer.encode(text), np.squeeze(pipeline(text))
     ):
         token = pipeline.tokenizer.decode([token_id])
         if token not in {"[CLS]", "[SEP]", "[MASK]"} and not token.startswith("##"):
