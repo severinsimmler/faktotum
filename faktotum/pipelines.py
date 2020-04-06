@@ -8,9 +8,9 @@ MODELS = {"ner": {"literary-texts": "severinsimmler/literary-german-bert", "pres
           "ned": {"literary-texts": "severinsimmler/literary-german-bert", "press-texts": "severinsimmler/bert-base-german-press-cased"}}
 
 
-def _predict(pipeline, text, sentence_id):
+def _predict(pipeline, sentence, sentence_id):
     entities = list()
-    for token in pipeline(text):
+    for token in pipeline(sentence):
         token["sentence_id"] = sentence_id
         if token["word"].startswith("##"):
             entities[-1]["word"] += token["word"][2:]
@@ -25,6 +25,7 @@ def ner(text: str, domain: str = "literary-texts"):
     sentences = list(faktotum.sentencize(text))
     predictions = list()
     for i, sentence in tqdm.tqdm(enumerate(sentences)):
+        print(sentence)
         prediction = _predict(pipeline, sentence, i)
         predictions.append(prediction)
     return pd.DataFrame(predictions).loc[:, ["sentence_id", "word", "entity", "score"]]
