@@ -57,5 +57,5 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
         sentence = sentence.reset_index(drop=True)
         text = " ".join(sentence["word"])
         entity_indices = sentence[sentence["entity"] != "O"]
-        features = _extract_features(pipeline, sentence)
+        features = _extract_features(pipeline, text)
         yield features
