@@ -1,4 +1,4 @@
-# Extract and disambiguate named entities from unstructured text
+# Extract and disambiguate named entities from text
 
 ## Installation
 
