@@ -1,46 +1,32 @@
 [tool.poetry]
 name = "faktotum"
-version = "0.1.0"
+version = "1.0.0"
 description = "Extracting information from unstructured text."
 authors = ["Severin Simmler <severin.simmler@stud-mail.uni-wuerzburg.de>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "3.7.*"
-gensim = "^3.8.1"
 syntok = "^1.2.2"
-scipy = "^1.4.1"
 numpy = "^1.16.1"
-scikit-learn = "^0.22.1"
 pandas = "^0.25.3"
-statsmodels = "^0.11.0"
-flair = "^0.4.5"
+strsimpy = "^0.1.3"
 transformers = "^2.5.0"
 tqdm = "^4.41.1"
-tensorboard = "^2.1.0"
 torch = "^1.4.0"
-seqeval = "^0.0.12"
-sklearn-crfsuite = "^0.3.6"
-joblib = "^0.14.1"
-strsimpy = "^0.1.3"
-
-[tool.poetry.scripts]
-fasttext = "extract:scripts.fasttext.run"
-word2vec = "extract:scripts.word2vec.run"
-tfidf = "extract:scripts.tfidf.run"
-tokenizer = "extract:scripts.tokenize_corpus.run"
-corpus-filter = "extract:scripts.filter_corpus.run"
-clustering = "extract:scripts.clustering.run"
-decomposition = "extract:scripts.decomposition.run"
-ner = "extract:scripts.ner.run"
-test-case-selection = "extract:scripts.test_case_selection.run"
-filter-kb = "extract:scripts.knowledge_base.run"
-bert-fine-tuning = "extract:vendor.ner.main"
+seqeval = { version = "^0.0.12", optional = true }
+sklearn-crfsuite = { version = "^0.3.6", optional = true }
+joblib = { version = "^0.14.1", optional = true }
+tensorboard = { version = "^2.1.0", optional = true }
+statsmodels = { version = "^0.11.0", optional = true }
+flair = { version = "^0.4.5", optional = true }
+scikit-learn = { version = "^0.22.1", optional = true }
+scipy = { version = "^1.4.1", optional = true }
+gensim = { version = "^3.8.1", optional = true }
 
 [tool.poetry.dev-dependencies]
 jupyterlab = "^1.2.5"
 black = "^19.10b0"
-jupyterlab-code-formatter = "^1.0.3"
 isort = "^4.3.21"
 
 [build-system]

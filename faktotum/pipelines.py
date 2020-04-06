@@ -1,11 +1,10 @@
 import numpy as np
 import pandas as pd
 import tqdm
-import sklearn.metrics.pairwise
 import transformers
 
-import faktotum
-from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
+import faktotum.research
+from faktotum.research.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
 
 MODELS = {
     "ner": {
