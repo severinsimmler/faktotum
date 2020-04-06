@@ -27,5 +27,5 @@ def ner(text: str, domain: str = "literary-texts"):
     for i, sentence in tqdm.tqdm(enumerate(sentences)):
         sentence = "".join(str(token) for token in sentence)
         prediction = _predict(pipeline, sentence, i)
-        predictions.append(prediction)
-    return pd.DataFrame(predictions)#.loc[:, ["sentence_id", "word", "entity", "score"]]
+        predictions.extend(prediction)
+    return pd.DataFrame(predictions).loc[:, ["sentence_id", "word", "entity", "score"]]
