@@ -1,7 +1,7 @@
 import transformers
 
 from faktotum.utils import MODELS
-from faktotutm.pipelines import _extract_features, _pool_entity
+from faktotum.pipelines import _extract_features, _pool_entity
 
 
 class KnowledgeBase:
