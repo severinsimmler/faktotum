@@ -1,3 +1,5 @@
+import logging
+
 import numpy as np
 import pandas as pd
 import tqdm
@@ -5,6 +7,8 @@ import transformers
 
 import faktotum
 from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
+
+logging.getLogger("transformers").setLevel(logging.ERROR)
 
 MODELS = {
     "ner": {
