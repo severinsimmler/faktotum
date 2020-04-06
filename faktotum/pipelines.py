@@ -65,9 +65,9 @@ class KnowledgeBase:
 
     def _vectorize_contexts(self):
         for key, value in self.data.items():
-            for index, context in zip(value["ENTITY_INDICES"], value["CONTEXTS"]):
+            for indices, context in zip(value["ENTITY_INDICES"], value["CONTEXTS"]):
                 features = _extract_features(self._pipeline, context)
-                embeddings = _pool_entity(features, index)
+                embeddings = _pool_entity(indices, features)
                 self.data[key]["EMBEDDINGS"] = embeddings
 
     def items(self):
@@ -111,7 +111,6 @@ def _get_best_candidate(vector, kb):
 
 
 def _pool_entity(indices, features):
-    print(indices[0])
     entity = features[indices[0]]
     for index in indices[1:]:
         entity += features[index]
