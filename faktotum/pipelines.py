@@ -3,8 +3,8 @@ import pandas as pd
 import tqdm
 import transformers
 
-import faktotum.research
-from faktotum.research.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
+from faktotum import utils
+from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
 
 MODELS = {
     "ner": {
@@ -28,7 +28,7 @@ def ner(text: str, domain: str = "literary-texts"):
     pipeline = transformers.pipeline(
         "ner", model=model_name, tokenizer=model_name, ignore_labels=[]
     )
-    sentences = [(i, sentence) for i, sentence in enumerate(faktotum.sentencize(text))]
+    sentences = [(i, sentence) for i, sentence in enumerate(utils.sentencize(text))]
     predictions = list()
     for i, sentence in tqdm.tqdm(sentences):
         sentence = "".join(str(token) for token in sentence)
