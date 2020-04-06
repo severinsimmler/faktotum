@@ -5,7 +5,7 @@ import transformers
 
 from faktotum.utils import sentencize, MODELS, pool_entity, extract_features
 from faktotum.kb import KnowledgeBase
-from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
+from faktotum.typing import Entities, Pipeline, TaggedTokens
 
 
 def nel(text: str, kb: KnowledgeBase, domain: str = "literary-texts"):
@@ -35,9 +35,10 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
     identifiers = list()
     for sentence_id, sentence in tokens.groupby("sentence_id"):
         entities = sentence.dropna()
-        features = extract_features(pipeline, sentence.loc[:, "word"])
+        index_mapping, features = extract_features(pipeline, sentence.loc[:, "word"])
         for indices, mention in _group_mentions(entities):
-            vector = pool_entity(mention, features)
+            aligned_indices = align_index(mention, index_mapping)
+            vector = pool_entity(aligned_indices, features)
             best_candidate, score = _get_best_candidate(vector, kb)
             identifiers.append((indices, best_candidate))
     tokens["entity_id"] = np.nan

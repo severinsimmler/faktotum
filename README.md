@@ -7,7 +7,7 @@ $ pip install faktotum
 ```
 
 ## Getting started
-You can use pre-trained models for both literary texts (`literary-texts`) or press releases (`press-texts`).
+You can use pre-trained models for both literary texts (`literary-texts`) and press releases (`press-texts`).
 
 ### Named Entity Recognition
 ```python

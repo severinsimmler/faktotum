@@ -1,6 +1,6 @@
 import transformers
 
-from faktotum.utils import MODELS, extract_features, pool_entity
+from faktotum.utils import MODELS, extract_features, pool_entity, align_index
 
 
 class KnowledgeBase:
@@ -12,9 +12,10 @@ class KnowledgeBase:
 
     def _vectorize_contexts(self):
         for key, value in self.data.items():
-            for indices, context in zip(value["ENTITY_INDICES"], value["CONTEXTS"]):
-                features = extract_features(self._pipeline, context)
-                embeddings = pool_entity(indices, features)
+            for entity_indices, context in zip(value["ENTITY_INDICES"], value["CONTEXTS"]):
+                index_mapping, features = extract_features(self._pipeline, context)
+                aligned_indices = align_index(entity_indices, index_mapping)
+                embeddings = pool_entity(aligned_indices, features)
                 if "EMBEDDINGS" not in self.data[key]:
                     self.data[key]["EMBEDDINGS"] = [embeddings]
                 else:

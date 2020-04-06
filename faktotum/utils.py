@@ -67,12 +67,21 @@ def pool_entity(indices, features):
 def extract_features(pipeline: Pipeline, sentence: List[str]) -> Entities:
     vectors = list()
     text = " ".join(sentence)
-    for token_id, vector in zip(
-        pipeline.tokenizer.encode(text), np.squeeze(pipeline(text))
+    index = dict()
+    for i, token in enumerate(sentence):
+        subtokens = [t for t in pipeline.tokenizer.tokenize(token) if not t.startswith("##")]
+        index[i] = len(subtokens)
+    for token, vector in zip(
+        pipeline.tokenizer.tokenize(text), np.squeeze(pipeline(text))
     ):
-        token = pipeline.tokenizer.decode([token_id])
         if token not in {"[CLS]", "[SEP]", "[MASK]"} and not token.startswith("##"):
             vectors.append(vector)
-    if len(vectors) != len(sentence):
-        raise ValueError("Oops, tokenization mismatch.")
-    return vectors
+    return index, vectors
+
+
+def align_index(original_indices, subtoken_indices):
+    aligned_indices = list()
+    for i in original_indices:
+        for j, subtokens in enumerate(subtoken_indices[i]):
+            aligned_indices.append(i+j)
+    return aligned_indices
