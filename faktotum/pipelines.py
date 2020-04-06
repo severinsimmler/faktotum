@@ -1,5 +1,3 @@
-import logging
-
 import numpy as np
 import pandas as pd
 import tqdm
@@ -7,8 +5,6 @@ import transformers
 
 import faktotum
 from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
-
-logging.getLogger("transformers").setLevel(logging.ERROR)
 
 MODELS = {
     "ner": {
@@ -50,15 +46,14 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
         sentence["entity_id"] = "O"
         text = " ".join(sentence.loc[:, "word"])
         entities = sentence[sentence.loc[:, "entity"] != "O"]
-        print(entities)
         mentions = _group_mentions(entities)
         features = _extract_features(pipeline, text)
         for mention in mentions:
             vector = _pool_entity(mention, features)
             best_candidate, score = _get_best_candidate(vector, kb)
+            print(mention, best_candidate, score)
             sentence.iloc[mention, -1] = best_candidate
-        print(sentence)
-        tokens.iloc[sentence_id] = sentence
+        tokens.iloc[sentence_id, -1] = list(sentence)
     return tokens
 
 

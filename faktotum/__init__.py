@@ -1,3 +1,8 @@
+import logging
+import transformers
+
+logging.getLogger("transformers").setLevel(logging.ERROR)
+
 from faktotum import evaluation, scripts
 from faktotum.corpus import load_corpus, sentencize_corpus, tokenize_corpus
 from faktotum.knowledge import KnowledgeBase
