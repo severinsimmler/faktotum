@@ -34,9 +34,8 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
     )
     identifiers = list()
     for sentence_id, sentence in tokens.groupby("sentence_id"):
-        text = " ".join(sentence.loc[:, "word"])
         entities = sentence.dropna()
-        features = extract_features(pipeline, text)
+        features = extract_features(pipeline, sentence.loc[:, "word"])
         for indices, mention in _group_mentions(entities):
             vector = pool_entity(mention, features)
             best_candidate, score = _get_best_candidate(vector, kb)
