@@ -19,7 +19,7 @@ MODELS = {
     },
     "ned": {
         "literary-texts": "severinsimmler/literary-german-bert",
-        "press-texts": "severinsimmler/bert-base-german-press-cased",
+        "press-texts": "severinsimmler/bert-adapted-german-press",
     },
 }
 
