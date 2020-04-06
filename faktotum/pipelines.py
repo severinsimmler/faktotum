@@ -70,7 +70,10 @@ class KnowledgeBase:
             for indices, context in zip(value["ENTITY_INDICES"], value["CONTEXTS"]):
                 features = _extract_features(self._pipeline, context)
                 embeddings = _pool_entity(indices, features)
-                self.data[key]["EMBEDDINGS"] = embeddings
+                if "EMBEDDINGS" not in self.data[key]:
+                    self.data[key]["EMBEDDINGS"] = [embeddings]
+                else:
+                    self.data[key]["EMBEDDINGS"].append(embeddings)
 
     def items(self):
         for key, value in self.data.items():
@@ -107,8 +110,6 @@ def _get_best_candidate(vector, kb):
         for candidate in values["EMBEDDINGS"]:
             vector = vector.reshape(1, -1)
             candidate = candidate.reshape(1, -1)
-            print(vector.shape)
-            print(candidate.shape)
             score = sklearn.metrics.pairwise.cosine_similarity(vector, candidate)
             if score > best_score:
                 best_score = score
