@@ -41,7 +41,7 @@ def nel(text: str, kb: KnowledgeBase, domain: str = "literary-texts"):
 def ner(text: str, domain: str = "literary-texts"):
     model_name = MODELS["ner"][domain]
     pipeline = transformers.pipeline("ner", model=model_name, tokenizer=model_name, ignore_labels=[])
-    sentences = [i, sentence for i, sentence in enumerate(faktotum.sentencize(text))]
+    sentences = [(i, sentence) for i, sentence in enumerate(faktotum.sentencize(text))]
     predictions = list()
     for i, sentence in tqdm.tqdm(sentences):
         sentence = "".join(str(token) for token in sentence)
