@@ -3,20 +3,9 @@ import pandas as pd
 import tqdm
 import transformers
 
-from faktotum import utils
+from faktotum.utils import sentencize, MODELS
 from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
-
-MODELS = {
-    "ner": {
-        "literary-texts": "severinsimmler/literary-german-bert",
-        "press-texts": "severinsimmler/german-press-bert",
-    },
-    "ned": {
-        "literary-texts": "severinsimmler/literary-german-bert",
-        "press-texts": "severinsimmler/bert-base-german-press-cased",
-    },
-}
 
 
 def nel(text: str, kb: KnowledgeBase, domain: str = "literary-texts"):
@@ -29,7 +18,7 @@ def ner(text: str, domain: str = "literary-texts"):
     pipeline = transformers.pipeline(
         "ner", model=model_name, tokenizer=model_name, ignore_labels=[]
     )
-    sentences = [(i, sentence) for i, sentence in enumerate(utils.sentencize(text))]
+    sentences = [(i, sentence) for i, sentence in enumerate(sentencize(text))]
     predictions = list()
     for i, sentence in tqdm.tqdm(sentences):
         sentence = "".join(str(token) for token in sentence)

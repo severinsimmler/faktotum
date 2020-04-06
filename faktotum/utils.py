@@ -11,6 +11,16 @@ import syntok.segmenter
 import syntok.tokenizer
 
 TOKENIZER = syntok.tokenizer.Tokenizer()
+MODELS = {
+    "ner": {
+        "literary-texts": "severinsimmler/literary-german-bert",
+        "press-texts": "severinsimmler/german-press-bert",
+    },
+    "ned": {
+        "literary-texts": "severinsimmler/literary-german-bert",
+        "press-texts": "severinsimmler/bert-base-german-press-cased",
+    },
+}
 
 
 def tokenize(text: str) -> Generator[str, None, None]:

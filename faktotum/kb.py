@@ -1,6 +1,6 @@
 import transformers
 
-from faktotum.pipelines import MODELS
+from faktotum.utils import MODELS
 
 
 class KnowledgeBase:
