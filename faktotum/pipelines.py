@@ -3,7 +3,7 @@ import pandas as pd
 import tqdm
 import transformers
 
-from faktotum.utils import sentencize, MODELS
+from faktotum.utils import sentencize, MODELS, pool_entity, extract_features
 from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
 
@@ -36,9 +36,9 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
     for sentence_id, sentence in tokens.groupby("sentence_id"):
         text = " ".join(sentence.loc[:, "word"])
         entities = sentence.dropna()
-        features = _extract_features(pipeline, text)
+        features = extract_features(pipeline, text)
         for indices, mention in _group_mentions(entities):
-            vector = _pool_entity(mention, features)
+            vector = pool_entity(mention, features)
             best_candidate, score = _get_best_candidate(vector, kb)
             identifiers.append((indices, best_candidate))
     tokens["entity_id"] = np.nan
@@ -62,17 +62,6 @@ def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Enti
     return entities
 
 
-def _extract_features(pipeline: Pipeline, sentence: str) -> Entities:
-    vectors = list()
-    for token_id, vector in zip(
-        pipeline.tokenizer.encode(sentence), np.squeeze(pipeline(sentence))
-    ):
-        token = pipeline.tokenizer.decode([token_id])
-        if token not in {"[CLS]", "[SEP]", "[MASK]"} and not token.startswith("##"):
-            vectors.append(vector)
-    return vectors
-
-
 def _get_best_candidate(vector, kb):
     best_candidate = "NIL"
     best_score = 0.0
@@ -86,13 +75,6 @@ def _get_best_candidate(vector, kb):
 
 def _cosine_similarity(x, y):
     return np.dot(x, y)/(np.linalg.norm(x)*np.linalg.norm(y))
-
-
-def _pool_entity(indices, features):
-    entity = features[indices[0]]
-    for index in indices[1:]:
-        entity += features[index]
-    return entity
 
 
 def _group_mentions(entities):

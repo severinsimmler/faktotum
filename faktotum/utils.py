@@ -54,3 +54,21 @@ def sentencize(text: str) -> Generator[str, None, None]:
     for paragraph in syntok.segmenter.process(text):
         for sentence in paragraph:
             yield sentence
+
+
+def pool_entity(indices, features):
+    entity = features[indices[0]]
+    for index in indices[1:]:
+        entity += features[index]
+    return entity
+
+
+def extract_features(pipeline: Pipeline, sentence: str) -> Entities:
+    vectors = list()
+    for token_id, vector in zip(
+        pipeline.tokenizer.encode(sentence), np.squeeze(pipeline(sentence))
+    ):
+        token = pipeline.tokenizer.decode([token_id])
+        if token not in {"[CLS]", "[SEP]", "[MASK]"} and not token.startswith("##"):
+            vectors.append(vector)
+    return vectors
