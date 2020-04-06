@@ -11,6 +11,7 @@ MODELS = {"ner": {"literary-texts": "severinsimmler/literary-german-bert", "pres
 def _predict(pipeline, sentence, sentence_id):
     entities = list()
     for token in pipeline(sentence):
+        print(token)
         token["sentence_id"] = sentence_id
         if token["word"].startswith("##"):
             entities[-1]["word"] += token["word"][2:]
