@@ -6,7 +6,7 @@ This module provides general helper functions.
 """
 
 from typing import Generator
-
+import numpy as np
 import syntok.segmenter
 import syntok.tokenizer
 from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
