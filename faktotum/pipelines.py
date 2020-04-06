@@ -66,7 +66,7 @@ class KnowledgeBase:
     def _vectorize_contexts(self):
         for key, value in self.data.items():
             for index, context in zip(value["ENTITY_INDICES"], value["CONTEXTS"]):
-                features = _extract_features(self.pipeline, context)
+                features = _extract_features(self._pipeline, context)
                 embeddings = _pool_entity(features, index)
                 self.data[key]["EMBEDDINGS"] = embeddings
 
