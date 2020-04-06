@@ -52,7 +52,7 @@ def ner(text: str, domain: str = "literary-texts"):
 
 def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-texts"):
     model_name = MODELS["ned"][domain]
-    pipeline = transformers.pipeline("feature-extraction", model=model_name, tokenizer=model_name, ignore_labels=[])
+    pipeline = transformers.pipeline("feature-extraction", model=model_name, tokenizer=model_name)
     for sentence in tokens.groupby("sentence_id"):
         sentence = sentence.reset_index(drop=True)
         text = " ".join(sentence["word"])
