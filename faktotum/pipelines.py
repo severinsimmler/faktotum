@@ -47,12 +47,11 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
     for sentence_id, sentence in tokens.groupby("sentence_id"):
         text = " ".join(sentence.loc[:, "word"])
         entities = sentence.dropna()
-        mentions = _group_mentions(entities.reset_index())
         features = _extract_features(pipeline, text)
-        for mention in mentions:
+        for indices, mention in _group_mentions(entities):
             vector = _pool_entity(mention, features)
             best_candidate, score = _get_best_candidate(vector, kb)
-            identifiers.append((mention, best_candidate))
+            identifiers.append((indices, best_candidate))
     tokens["entity_id"] = np.nan
     for mention, candidate in identifiers:
         tokens.iloc[mention, -1] = candidate
@@ -131,15 +130,20 @@ def _pool_entity(indices, features):
 
 def _group_mentions(entities):
     mention = list()
-    for row, token in entities.iterrows():
+    indices = list()
+    rows = entities.reset_index().iterrows()
+    for index, (row, token) in zip(entities.index, rows):
         if token["entity"].startswith("B"):
             if mention:
-                yield mention
+                yield indices, mention
                 mention = list()
+                indices = list()
             mention.append(row)
+            indices.append(index)
         elif token["entity"].startswith("I"):
             if mention:
                 if mention[-1] == row - 1:
                     mention.append(row)
+                    indices.append(index)
     if mention:
-        yield mention
+        yield indices, mention
