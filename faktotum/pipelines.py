@@ -26,7 +26,7 @@ def _extract_features(pipeline: Pipeline, sentence: str) -> Entities:
     for token_id, vector in zip(pipeline.tokenizer.encode(sentence), np.squeeze(pipeline(sentence))):
         token = pipeline.tokenizer.decode([token_id])
         if token not in {"[CLS]", "[SEP]", "[MASK]"}:
-            if token["word"].startswith("##"):
+            if token.startswith("##"):
                 vectors[-1] += vector
             else:
                 vectors.append(vector)
