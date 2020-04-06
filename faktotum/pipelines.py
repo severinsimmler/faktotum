@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import tqdm
+import sklearn.metrics.pairwise
 import transformers
 
 import faktotum
@@ -53,7 +54,7 @@ def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-
             best_candidate, score = _get_best_candidate(vector, kb)
             print(mention, best_candidate, score)
             sentence.iloc[mention, -1] = best_candidate
-        tokens.iloc[sentence_id, -1] = list(sentence)
+        print(sentence)
     return tokens
 
 
