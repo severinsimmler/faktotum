@@ -6,7 +6,7 @@ import transformers
 from faktotum.utils import sentencize, MODELS, pool_entity, extract_features, align_index
 from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, Pipeline, TaggedTokens
-
+from strsimpy.jaro_winkler import JaroWinkler
 
 JARO_WINKLER = JaroWinkler()
 
