@@ -120,7 +120,7 @@ class Embeddings:
         X = list()
         y = list()
         strs = list()
-        if isinstance(model, BertEmbeddings):
+        if isinstance(model, BertEmbeddings) or isinstance(model, EntityEmbeddings):
             _vectorize = self._bert_vectorization
         else:
             _vectorize = self._classic_vectorization
