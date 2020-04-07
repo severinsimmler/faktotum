@@ -157,7 +157,7 @@ class Embeddings:
     def _entity_vectorization(self, sentence, token_indices, model, add_adj=False):
         text = " ".join(token[0] for token in sentence)
         sentence_ = Sentence(text, use_tokenizer=False)
-        model.embed(sentence_, token_indices)
+        model.embed(sentence_, [token_indices])
         return sentence_.embedding
 
     @staticmethod
