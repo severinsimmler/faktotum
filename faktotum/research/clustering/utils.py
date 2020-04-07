@@ -79,7 +79,7 @@ class Embeddings:
             else:
                 path = str(Path(model_directory, "ner-smartdata"))
             logging.info(f"Loading {path}...")
-            self.bert_ner = BertEmbeddings(path)
+            self.bert = BertEmbeddings(path)
 
         if load in {"all-masked", "all"}:
             if corpus == "gutenberg":
@@ -89,7 +89,7 @@ class Embeddings:
                     Path(model_directory, "entity-embeddings-smartdata-all-masked")
                 )
             logging.info(f"Loading {path}...")
-            self.entity_all_bert = BertEmbeddings(path)
+            self.bert = BertEmbeddings(path)
 
         if load in {"entity", "all"}:
             if corpus == "gutenberg":
@@ -97,7 +97,7 @@ class Embeddings:
             else:
                 path = str(Path(model_directory, "entity-embeddings-smartdata"))
             logging.info(f"Loading {path}...")
-            self.entity_bert = BertEmbeddings(path)
+            self.bert = BertEmbeddings(path)
 
         if load in {"lstm", "all"}:
             if corpus == "gutenberg":
@@ -105,7 +105,7 @@ class Embeddings:
             else:
                 path = str(Path(model_directory, "similarity-lstm-smartdata", "best-model.pt"))
             model = EntitySimilarityLearner.load(path)
-            self.entity_bert = model.source_embeddings
+            self.bert = model.source_embeddings
 
         if load in {"gru", "all"}:
             if corpus == "gutenberg":
@@ -114,7 +114,7 @@ class Embeddings:
                 path = str(Path(model_directory, "similarity-gru-smartdata", "best-model.pt"))
             logging.info(f"Loading {path}...")
             model = EntitySimilarityLearner.load(path)
-            self.entity_bert = model.source_embeddings
+            self.bert = model.source_embeddings
 
     def vectorize(self, sentences, model, add_adj=False, return_str=False):
         X = list()
