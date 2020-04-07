@@ -120,8 +120,10 @@ class Embeddings:
         X = list()
         y = list()
         strs = list()
-        if isinstance(model, BertEmbeddings) or isinstance(model, EntityEmbeddings):
+        if isinstance(model, BertEmbeddings):
             _vectorize = self._bert_vectorization
+        elif isinstance(model, EntityEmbeddings):
+            _vectorize = self._entity_vectorization
         else:
             _vectorize = self._classic_vectorization
         for sentence in sentences:
@@ -151,6 +153,12 @@ class Embeddings:
         self._add_tokens(sentence, token_indices, add_adj)
         tokens = [token for i, token in enumerate(sentence_) if i in token_indices]
         return sum(self._get_bert_embedding(tokens)) / len(tokens)
+
+    def _entity_vectorization(self, sentence, token_indices, model, add_adj=False):
+        text = " ".join(token[0] for token in sentence)
+        sentence_ = Sentence(text, use_tokenizer=False)
+        model.embed(sentence_, token_indices)
+        return sentence_.embedding
 
     @staticmethod
     def _group_persons(sentence):
