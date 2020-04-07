@@ -113,6 +113,7 @@ class Embeddings:
             else:
                 path = str(Path(model_directory, "similarity-gru-smartdata", "best-model.pt"))
             logging.info(f"Loading {path}...")
+            from faktotum.research.similarity import EntitySimilarityLearner, EntityEmbeddings
             model = EntitySimilarityLearner.load(path)
             self.bert = model.source_embeddings
 

@@ -4,8 +4,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from faktotum.research.clustering.utils import Clustering, Embeddings
 from faktotum.research.similarity import EntitySimilarityLearner, EntityEmbeddings
+from faktotum.research.clustering.utils import Clustering, Embeddings
 
 logging.basicConfig(format="%(message)s", level=logging.INFO)
 
