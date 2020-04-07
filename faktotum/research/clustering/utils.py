@@ -158,7 +158,7 @@ class Embeddings:
         text = " ".join(token[0] for token in sentence)
         sentence_ = Sentence(text, use_tokenizer=False)
         model.embed(sentence_, [token_indices])
-        return sentence_.embedding
+        return sentence_.embedding.numpy()
 
     @staticmethod
     def _group_persons(sentence):
