@@ -8,6 +8,9 @@ from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, Pipeline, TaggedTokens
 
 
+JARO_WINKLER = JaroWinkler()
+
+
 def nel(text: str, kb: KnowledgeBase, domain: str = "literary-texts"):
     tagged_tokens = ner(text, domain)
     return ned(tagged_tokens, kb, domain)
