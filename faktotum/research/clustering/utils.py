@@ -101,11 +101,11 @@ class Embeddings:
 
         if load in {"lstm", "all"}:
             if corpus == "gutenberg":
-                path = str(Path(model_directory, "similarity-lstm-droc"))
+                path = str(Path(model_directory, "similarity-lstm-droc", "best-model.pt"))
             else:
-                path = str(Path(model_directory, "similarity-lstm-smartdata"))
-            logging.info(f"Loading {path}...")
-            self.bert = BertEmbeddings(path)
+                path = str(Path(model_directory, "similarity-lstm-smartdata", "best-model.pt"))
+            model = EntitySimilarityLearner.load(path)
+            self.entity_bert = model.source_embeddings
 
         if load in {"gru", "all"}:
             if corpus == "gutenberg":
@@ -113,9 +113,8 @@ class Embeddings:
             else:
                 path = str(Path(model_directory, "similarity-gru-smartdata", "best-model.pt"))
             logging.info(f"Loading {path}...")
-            from faktotum.research.similarity import EntitySimilarityLearner, EntityEmbeddings
             model = EntitySimilarityLearner.load(path)
-            self.bert = model.source_embeddings
+            self.entity_bert = model.source_embeddings
 
     def vectorize(self, sentences, model, add_adj=False, return_str=False):
         X = list()
