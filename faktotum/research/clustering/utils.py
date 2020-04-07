@@ -16,6 +16,7 @@ from gensim.models import Word2Vec
 from gensim.models.fasttext import FastText
 from sklearn import metrics
 from sklearn.cluster import KMeans, AgglomerativeClustering, SpectralClustering
+from faktotum.research.similarity import EntitySimilarityLearner, EntityEmbeddings
 
 logger = logging.getLogger("gensim")
 logger.setLevel(logging.ERROR)
@@ -108,11 +109,12 @@ class Embeddings:
 
         if load in {"gru", "all"}:
             if corpus == "gutenberg":
-                path = str(Path(model_directory, "similarity-gru-droc"))
+                path = str(Path(model_directory, "similarity-gru-droc", "best-model.pt"))
             else:
-                path = str(Path(model_directory, "similarity-gru-smartdata"))
+                path = str(Path(model_directory, "similarity-gru-smartdata", "best-model.pt"))
             logging.info(f"Loading {path}...")
-            self.bert = BertEmbeddings(path)
+            model = EntitySimilarityLearner.load(path)
+            self.bert = model.source_embeddings
 
     def vectorize(self, sentences, model, add_adj=False, return_str=False):
         X = list()
