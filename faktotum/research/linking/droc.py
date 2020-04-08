@@ -20,12 +20,8 @@ import torch
 from faktotum.research.similarity import EntitySimilarityLearner, EntityEmbeddings
 from strsimpy.jaro_winkler import JaroWinkler
 
-# EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/entity-embeddings-droc-all-masked")
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 JARO_WINKLER = JaroWinkler()
-model = EntitySimilarityLearner.load(
-    "/mnt/data/users/simmler/model-zoo/similarity-gru-droc/best-model.pt"
-)
-EMBEDDING = model.source_embeddings
 
 
 class EntityLinker:
@@ -40,7 +36,7 @@ class EntityLinker:
             for key, value in data.items():
                 self.dataset[f"{i}_{key}"] = value
         self.test = dict()
-        for i, data in enumerate([test, self.dev]):
+        for i, data in enumerate([test, self.dev, self.train]):
             for key, value in data.items():
                 self.test[f"{i}_{key}"] = value
 
