@@ -97,7 +97,7 @@ def compare_algorithms(model_directory, embedding):
     stats = list()
     index = list()
 
-    data = list(load_data(all_=False))
+    data = list(load_data(all_=True))
     embeddings = Embeddings(model_directory, "presse", load=embedding)
 
     X, y = embeddings.vectorize(data, embeddings.bert_ma)
