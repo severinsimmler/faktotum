@@ -214,7 +214,7 @@ class SemiSupervisedKMeans:
         X = pd.DataFrame(X)
         X["y"] = self.y
         for _, cluster in X.groupby("y"):
-            yield random.choice(X.iloc[:, :-1].values)
+            yield cluster.mean().values
 
 
 class Clustering:
