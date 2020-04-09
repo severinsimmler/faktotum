@@ -108,7 +108,7 @@ def compare_algorithms(model_directory, embedding):
         logging.info(algorithm)
         scores = list()
         for novel in data.values():
-            X, y = embeddings.vectorize(novel, embeddings.bert_ner)
+            X, y = embeddings.vectorize(novel, embeddings.bert)
             clustering = Clustering(algorithm, X, y)
             score = clustering.evaluate()
             scores.append(score)
