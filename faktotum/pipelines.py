@@ -23,13 +23,10 @@ JARO_WINKLER = JaroWinkler()
 
 
 def nel(
-    text: str,
-    kb: KnowledgeBase,
-    similarity_threshold: float = 0.9,
-    domain: str = "literary-texts",
+    text: str, kb: KnowledgeBase, domain: str = "literary-texts",
 ):
     tagged_tokens = ner(text, domain)
-    return ned(tagged_tokens, kb, similarity_threshold, domain)
+    return ned(tagged_tokens, kb, domain)
 
 
 def ner(text: str, domain: str = "literary-texts"):
@@ -49,10 +46,7 @@ def ner(text: str, domain: str = "literary-texts"):
 
 
 def ned(
-    tokens: TaggedTokens,
-    kb: KnowledgeBase = None,
-    similarity_threshold: float = 0.94,
-    domain: str = "literary-texts",
+    tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-texts",
 ):
     model_name = MODELS["ned"][domain]
     logging.info("Loading feature extraction model...")
@@ -67,9 +61,7 @@ def ned(
         for original_index, index, mention in _group_mentions(entities):
             aligned_index = align_index(index, index_mapping)
             mention_embedding = pool_tokens(aligned_index, features)
-            best_candidate, score = _get_best_candidate(
-                mention, mention_embedding, kb, similarity_threshold
-            )
+            best_candidate, score = _get_best_candidate(mention, mention_embedding, kb)
             identifiers.append((original_index, best_candidate))
     tokens["entity_id"] = np.nan
     for mention, candidate in identifiers:
@@ -92,7 +84,7 @@ def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Enti
     return entities
 
 
-def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
+def _get_best_candidate(mention, mention_embedding, kb):
     best_candidate = "NIL"
     best_score = 0.0
     logging.info("Searching in knowledge base for candidates...")
@@ -101,11 +93,7 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
             zip(values["ENTITY_INDICES"], values["CONTEXTS"], values["EMBEDDINGS"])
         ):
             candidate = " ".join(context[i] for i in index)
-            if (
-                mention.lower() == candidate.lower()
-                #or JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold
-            ):
-                print("ok")
+            if mention.lower() == candidate.lower():
                 if candidate_embedding is None:
                     candidate_embedding = _vectorize_context(
                         kb.pipeline, context, index
