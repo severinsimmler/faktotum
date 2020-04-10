@@ -135,6 +135,7 @@ class EntityLinker:
         for sentence in tqdm.tqdm(self.test):
             spans = self.get_entity_spans(sentence)
             for identifier, entity in spans:
+                TOP3 = dict()
                 max_score = 0.0
                 best_identifier = None
                 text = " ".join([token[0] for token in entity])
