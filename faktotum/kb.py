@@ -8,7 +8,7 @@ class KnowledgeBase:
     def __init__(self, data, domain):
         self.data = data
         self._model_name = MODELS["ned"][domain]
-        self._pipeline = transformers.pipeline(
+        self.pipeline = transformers.pipeline(
             "feature-extraction", model=self._model_name, tokenizer=self._model_name
         )
         self._vectorize_contexts()
@@ -18,9 +18,10 @@ class KnowledgeBase:
             for entity_indices, context in zip(
                 value["ENTITY_INDICES"], value["CONTEXTS"]
             ):
-                index_mapping, features = extract_features(self._pipeline, context)
-                aligned_indices = align_index(entity_indices, index_mapping)
-                embeddings = pool_tokens(aligned_indices, features)
+                # index_mapping, features = extract_features(self._pipeline, context)
+                # aligned_indices = align_index(entity_indices, index_mapping)
+                # embeddings = pool_tokens(aligned_indices, features)
+                embeddings = None
                 if "EMBEDDINGS" not in self.data[key]:
                     self.data[key]["EMBEDDINGS"] = [embeddings]
                 else:

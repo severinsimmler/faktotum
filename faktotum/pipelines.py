@@ -92,16 +92,27 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
     best_score = 0.0
     logging.info("Searching in knowledge base for candidates...")
     for identifier, values in tqdm.tqdm(kb.items()):
-        for index, context, candidate_embedding in zip(
-            values["ENTITY_INDICES"], values["CONTEXTS"], values["EMBEDDINGS"]
+        for i, (index, context, candidate_embedding) in enumerate(
+            zip(values["ENTITY_INDICES"], values["CONTEXTS"], values["EMBEDDINGS"])
         ):
             candidate = " ".join(context[i] for i in index)
             if JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold:
+                if not candidate_embedding:
+                    candidate_embedding = _vectorize_context(
+                        kb.pipeline, context, index
+                    )
+                    values["EMBEDDINGS"][i] = candidate_embedding
                 score = _cosine_similarity(mention_embedding, candidate_embedding)
                 if score > best_score:
                     best_score = score
                     best_candidate = identifier
     return best_candidate, best_score
+
+
+def _vectorize_context(pipeline, context, index):
+    index_mapping, features = extract_features(pipeline, context)
+    aligned_indices = align_index(index, index_mapping)
+    return pool_tokens(aligned_indices, features)
 
 
 def _cosine_similarity(x, y):
