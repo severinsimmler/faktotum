@@ -20,8 +20,7 @@ import torch
 from faktotum.research.similarity import EntitySimilarityLearner, EntityEmbeddings
 from strsimpy.jaro_winkler import JaroWinkler
 
-m = EntitySimilarityLearner.load("/mnt/data/users/simmler/model-zoo/similarity-lstm-droc/best-model.pt")
-EMBEDDING = m.source_embeddings
+EMBEDDING = BertEmbeddings("/mnt/data/users/simmler/model-zoo/ner-droc")
 JARO_WINKLER = JaroWinkler()
 
 
