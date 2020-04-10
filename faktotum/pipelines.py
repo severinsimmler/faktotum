@@ -16,15 +16,16 @@ from strsimpy.jaro_winkler import JaroWinkler
 import logging
 
 
-logging.basicConfig(format="%(asctime)s %(level)s: %(message)s", level=logging.INFO)
+logging.basicConfig(format="%(asctime)s %(level)s: %(message)s")
+logging.setLevel(logging.INFO)
 
 
 JARO_WINKLER = JaroWinkler()
 
 
-def nel(text: str, kb: KnowledgeBase, domain: str = "literary-texts"):
+def nel(text: str, kb: KnowledgeBase, similarity_threshold=0.94, domain: str = "literary-texts"):
     tagged_tokens = ner(text, domain)
-    return ned(tagged_tokens, kb, domain)
+    return ned(tagged_tokens, kb, similarity_threshold, domain)
 
 
 def ner(text: str, domain: str = "literary-texts"):
