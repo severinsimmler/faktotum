@@ -105,6 +105,7 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
                 mention.lower() in candidate.lower()
                 or JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold
             ):
+                print(mention, candidate)
                 if candidate_embedding is None:
                     candidate_embedding = _vectorize_context(
                         kb.pipeline, context, index
