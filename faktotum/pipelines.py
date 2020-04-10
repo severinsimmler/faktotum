@@ -102,8 +102,8 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
         ):
             candidate = " ".join(context[i] for i in index)
             if (
-                mention.lower() in candidate.lower()
-                or JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold
+                mention.lower() == candidate.lower()
+                #or JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold
             ):
                 if candidate_embedding is None:
                     candidate_embedding = _vectorize_context(
