@@ -302,6 +302,7 @@ class EntityLinker:
                         best_candidate = None
                         best_mention = None
                         best_sent = None
+                        TOP3 = dict()
                         for person, contexts in kb.items():
                             for context, candidate_vector, mention in zip(
                                 contexts["CONTEXTS"],
@@ -310,13 +311,14 @@ class EntityLinker:
                             ):
                                 if context != sentence:
                                     score = JARO_WINKLER.similarity(name, mention)
+                                    TOP3[f"pred: {mention} ({person}) vs. gold: {name} ({identifier})"] = float(score[0][0]) 
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
                                         best_mention = mention
                                         best_sent = context
 
-                        prediction.append({"pred": best_candidate, "gold": identifier})
+                        prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
                         if best_candidate == identifier:
                             tp += 1
                             tps.append(

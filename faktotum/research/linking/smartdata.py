@@ -145,10 +145,11 @@ class EntityLinker:
                 for key, value in kb.items():
                     for mention in value["MENTIONS"]:
                         score = self._string_similarity(mention, text)
+                        TOP3[f"pred: {mention} ({key}) vs. gold: {text} ({identifier})"] = float(score) 
                         if score > max_score:
                             max_score = score
                             best_identifier = key
-                prediction.append({"pred": best_identifier, "gold": identifier})
+                prediction.append({"pred": best_identifier, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
                 if identifier == best_identifier:
                     tp += 1
                 else:
