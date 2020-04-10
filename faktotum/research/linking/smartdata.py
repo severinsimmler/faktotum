@@ -271,6 +271,7 @@ class EntityLinker:
                     )
                 )
                 for identifier, type_, mention, mention_vector in mention_vectors:
+                    TOP3 = dict()
                     max_score = 0.0
                     best_candidate = None
                     best_context = None
@@ -315,16 +316,15 @@ class EntityLinker:
                                     1, -1
                                 )
 
-                            score = cosine_similarity(mention_vector, candidate_vector)[
-                                0
-                            ][0]
+                            score = cosine_similarity(mention_vector, candidate_vector)[0][0]
+                            TOP3[f"pred: {context} ({candidate}) vs. gold: {mention} ({identifier})"] = float(score[0][0]) 
                             if score > max_score:
                                 max_score = score
                                 best_candidate = candidate
                                 best_context = context
                                 best_sent = text
 
-                    prediction.append({"pred": best_candidate, "gold": identifier})
+                    prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
                     if best_candidate == identifier:
                         tp += 1
                         tps.append(

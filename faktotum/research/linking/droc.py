@@ -218,7 +218,7 @@ class EntityLinker:
                                     score = cosine_similarity(
                                         mention_vector, candidate_vector
                                     )
-                                    TOP3[json.dumps({"pred": mention, "gold": name}, ensure_ascii=False)] = float(score[0][0]) 
+                                    TOP3[f"pred: {mention} ({person}) vs. gold: {name} ({identifier})"] = float(score[0][0]) 
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
