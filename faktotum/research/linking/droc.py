@@ -21,7 +21,7 @@ from faktotum.research.similarity import EntitySimilarityLearner, EntityEmbeddin
 from strsimpy.jaro_winkler import JaroWinkler
 
 m = EntitySimilarityLearner.load("/mnt/data/users/simmler/model-zoo/similarity-gru-droc/best-model.pt")
-EMBEDDINGS = m.source_embeddings
+EMBEDDING = m.source_embeddings
 JARO_WINKLER = JaroWinkler()
 
 
