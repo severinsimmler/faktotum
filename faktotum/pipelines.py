@@ -46,7 +46,7 @@ def ner(text: str, domain: str = "literary-texts"):
 def ned(
     tokens: TaggedTokens,
     kb: KnowledgeBase = None,
-    similarity_threshold: flaot = 0.94,
+    similarity_threshold: float = 0.94,
     domain: str = "literary-texts",
 ):
     model_name = MODELS["ned"][domain]
