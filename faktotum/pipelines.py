@@ -16,9 +16,7 @@ from strsimpy.jaro_winkler import JaroWinkler
 import logging
 
 
-logging.basicConfig(format="%(asctime)s %(level)s: %(message)s")
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
 
 JARO_WINKLER = JaroWinkler()
@@ -31,13 +29,13 @@ def nel(text: str, kb: KnowledgeBase, similarity_threshold=0.94, domain: str = "
 
 def ner(text: str, domain: str = "literary-texts"):
     model_name = MODELS["ner"][domain]
-    logger.info("Loading named entity recognition model...")
+    logging.info("Loading named entity recognition model...")
     pipeline = transformers.pipeline(
         "ner", model=model_name, tokenizer=model_name, ignore_labels=[]
     )
     sentences = [(i, sentence) for i, sentence in enumerate(sentencize(text))]
     predictions = list()
-    logger.info("Start processing sentences through NER pipeline...")
+    logging.info("Start processing sentences through NER pipeline...")
     for i, sentence in tqdm.tqdm(sentences):
         sentence = "".join(str(token) for token in sentence)
         prediction = _predict_labels(pipeline, sentence, i)
@@ -52,12 +50,12 @@ def ned(
     domain: str = "literary-texts",
 ):
     model_name = MODELS["ned"][domain]
-    logger.info("Loading feature extraction model...")
+    logging.info("Loading feature extraction model...")
     pipeline = transformers.pipeline(
         "feature-extraction", model=model_name, tokenizer=model_name
     )
     identifiers = list()
-    logger.info("Start processing sentences through NEL pipeline...")
+    logging.info("Start processing sentences through NEL pipeline...")
     for sentence_id, sentence in tqdm.tqdm(tokens.groupby("sentence_id")):
         entities = sentence.dropna()
         index_mapping, features = extract_features(pipeline, sentence.loc[:, "word"])
@@ -92,13 +90,13 @@ def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Enti
 def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
     best_candidate = "NIL"
     best_score = 0.0
-    logger.info("Searching in knowledge base for candidates...")
+    logging.info("Searching in knowledge base for candidates...")
     for identifier, values in tqdm.tqdm(kb.items()):
         for i, (index, context, candidate_embedding) in enumerate(
             zip(values["ENTITY_INDICES"], values["CONTEXTS"], values["EMBEDDINGS"])
         ):
             candidate = " ".join(context[i] for i in index)
-            if JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold:
+            if mention.lower() in candidate.lower() or JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold:
                 if not candidate_embedding:
                     candidate_embedding = _vectorize_context(
                         kb.pipeline, context, index
