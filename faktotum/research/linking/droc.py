@@ -311,7 +311,7 @@ class EntityLinker:
                             ):
                                 if context != sentence:
                                     score = JARO_WINKLER.similarity(name, mention)
-                                    TOP3[f"pred: {mention} ({person}) vs. gold: {name} ({identifier})"] = float(score[0][0]) 
+                                    TOP3[f"pred: {mention} ({person}) vs. gold: {name} ({identifier})"] = float(score) 
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
