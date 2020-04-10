@@ -1,7 +1,7 @@
 import tqdm
 import transformers
 
-from faktotum.utils import MODELS, extract_features, pool_tokens, align_index
+from faktotum.utils import MODELS, align_index, extract_features, pool_tokens
 
 
 class KnowledgeBase:
@@ -14,13 +14,11 @@ class KnowledgeBase:
         self._vectorize_contexts()
 
     def _vectorize_contexts(self):
-        for key, value in tqdm.tqdm(self.data.items()):
+        for key, value in self.data.items():
             for entity_indices, context in zip(
                 value["ENTITY_INDICES"], value["CONTEXTS"]
             ):
-                # index_mapping, features = extract_features(self._pipeline, context)
-                # aligned_indices = align_index(entity_indices, index_mapping)
-                # embeddings = pool_tokens(aligned_indices, features)
+                # Lazy load embeddings on inference
                 embeddings = None
                 if "EMBEDDINGS" not in self.data[key]:
                     self.data[key]["EMBEDDINGS"] = [embeddings]

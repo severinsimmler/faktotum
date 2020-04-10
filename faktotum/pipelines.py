@@ -1,20 +1,20 @@
+import logging
+
 import numpy as np
 import pandas as pd
 import tqdm
 import transformers
+from strsimpy.jaro_winkler import JaroWinkler
 
-from faktotum.utils import (
-    sentencize,
-    MODELS,
-    pool_tokens,
-    extract_features,
-    align_index,
-)
 from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, Pipeline, TaggedTokens
-from strsimpy.jaro_winkler import JaroWinkler
-import logging
-
+from faktotum.utils import (
+    MODELS,
+    align_index,
+    extract_features,
+    pool_tokens,
+    sentencize,
+)
 
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
@@ -22,7 +22,12 @@ logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=loggi
 JARO_WINKLER = JaroWinkler()
 
 
-def nel(text: str, kb: KnowledgeBase, similarity_threshold=0.94, domain: str = "literary-texts"):
+def nel(
+    text: str,
+    kb: KnowledgeBase,
+    similarity_threshold: float = 0.9,
+    domain: str = "literary-texts",
+):
     tagged_tokens = ner(text, domain)
     return ned(tagged_tokens, kb, similarity_threshold, domain)
 
@@ -35,7 +40,7 @@ def ner(text: str, domain: str = "literary-texts"):
     )
     sentences = [(i, sentence) for i, sentence in enumerate(sentencize(text))]
     predictions = list()
-    logging.info("Start processing sentences through NER pipeline...")
+    logging.info("Processing sentences through NER pipeline...")
     for i, sentence in tqdm.tqdm(sentences):
         sentence = "".join(str(token) for token in sentence)
         prediction = _predict_labels(pipeline, sentence, i)
@@ -55,7 +60,7 @@ def ned(
         "feature-extraction", model=model_name, tokenizer=model_name
     )
     identifiers = list()
-    logging.info("Start processing sentences through NEL pipeline...")
+    logging.info("Processing sentences through NEL pipeline...")
     for sentence_id, sentence in tqdm.tqdm(tokens.groupby("sentence_id")):
         entities = sentence.dropna()
         index_mapping, features = extract_features(pipeline, sentence.loc[:, "word"])
@@ -91,12 +96,16 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
     best_candidate = "NIL"
     best_score = 0.0
     logging.info("Searching in knowledge base for candidates...")
-    for identifier, values in tqdm.tqdm(kb.items()):
+    pbar = tqdm.tqdm(total=len(kb))
+    for identifier, values in kb.items():
         for i, (index, context, candidate_embedding) in enumerate(
             zip(values["ENTITY_INDICES"], values["CONTEXTS"], values["EMBEDDINGS"])
         ):
             candidate = " ".join(context[i] for i in index)
-            if mention.lower() in candidate.lower() or JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold:
+            if (
+                mention.lower() in candidate.lower()
+                or JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold
+            ):
                 if not candidate_embedding:
                     candidate_embedding = _vectorize_context(
                         kb.pipeline, context, index
@@ -106,6 +115,8 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
                 if score > best_score:
                     best_score = score
                     best_candidate = identifier
+        pbar.update()
+    pbar.finish()
     return best_candidate, best_score
 
 
