@@ -225,7 +225,7 @@ class EntityLinker:
                                         best_mention = mention
                                         best_sent = context
 
-                        prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{json.loads(key): value} for key, value in Counter(TOP3).most_common(5)]})
+                        prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
                         print(prediction)
                         if best_candidate == identifier:
                             tp += 1
