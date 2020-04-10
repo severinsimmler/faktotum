@@ -4,7 +4,7 @@ import torch
 flair.device = torch.device("cpu")
 
 from pathlib import Path
-from collections import defaultdict
+from collections import defaultdict, Counter
 import json
 import re
 import pandas as pd
@@ -207,6 +207,7 @@ class EntityLinker:
                         best_candidate = None
                         best_mention = None
                         best_sent = None
+                        TOP3 = dict()
                         for person, contexts in kb.items():
                             for context, candidate_vector, mention in zip(
                                 contexts["CONTEXTS"],
@@ -217,13 +218,15 @@ class EntityLinker:
                                     score = cosine_similarity(
                                         mention_vector, candidate_vector
                                     )
+                                    TOP3[json.dumps({"pred": mention, "gold": name}, ensure_ascii=False)] = float(score[0][0]) 
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
                                         best_mention = mention
                                         best_sent = context
 
-                        prediction.append({"pred": best_candidate, "gold": identifier})
+                        prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{json.loads(key): value} for key, value in Counter(TOP3).most_common(5)]})
+                        print(prediction)
                         if best_candidate == identifier:
                             tp += 1
                             tps.append(
