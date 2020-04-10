@@ -41,7 +41,7 @@ def ner(text: str, domain: str = "literary-texts"):
     sentences = [(i, sentence) for i, sentence in enumerate(sentencize(text))]
     predictions = list()
     logging.info("Processing sentences through NER pipeline...")
-    for i, sentence in tqdm.tqdm(sentences):
+    for i, sentence in sentences:
         sentence = "".join(str(token) for token in sentence)
         prediction = _predict_labels(pipeline, sentence, i)
         predictions.extend(prediction)
@@ -61,7 +61,7 @@ def ned(
     )
     identifiers = list()
     logging.info("Processing sentences through NEL pipeline...")
-    for sentence_id, sentence in tqdm.tqdm(tokens.groupby("sentence_id")):
+    for sentence_id, sentence in tokens.groupby("sentence_id"):
         entities = sentence.dropna()
         index_mapping, features = extract_features(pipeline, sentence.loc[:, "word"])
         for original_index, index, mention in _group_mentions(entities):
@@ -105,7 +105,7 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
                 mention.lower() in candidate.lower()
                 or JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold
             ):
-                if not candidate_embedding:
+                if candidate_embedding is None:
                     candidate_embedding = _vectorize_context(
                         kb.pipeline, context, index
                     )
