@@ -36,7 +36,7 @@ class EntityLinker:
             for key, value in data.items():
                 self.dataset[f"{i}_{key}"] = value
         self.test = dict()
-        for i, data in enumerate([test, self.dev, self.train]):
+        for i, data in enumerate([test, self.dev]):
             for key, value in data.items():
                 self.test[f"{i}_{key}"] = value
 
@@ -226,7 +226,6 @@ class EntityLinker:
                                         best_sent = context
 
                         prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
-                        print(prediction)
                         if best_candidate == identifier:
                             tp += 1
                             tps.append(
