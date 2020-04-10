@@ -17,7 +17,8 @@ import logging
 
 
 logging.basicConfig(format="%(asctime)s %(level)s: %(message)s")
-logging.setLevel(logging.INFO)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 JARO_WINKLER = JaroWinkler()
@@ -30,13 +31,13 @@ def nel(text: str, kb: KnowledgeBase, similarity_threshold=0.94, domain: str = "
 
 def ner(text: str, domain: str = "literary-texts"):
     model_name = MODELS["ner"][domain]
-    logging.info("Loading named entity recognition model...")
+    logger.info("Loading named entity recognition model...")
     pipeline = transformers.pipeline(
         "ner", model=model_name, tokenizer=model_name, ignore_labels=[]
     )
     sentences = [(i, sentence) for i, sentence in enumerate(sentencize(text))]
     predictions = list()
-    logging.info("Start processing sentences through NER pipeline...")
+    logger.info("Start processing sentences through NER pipeline...")
     for i, sentence in tqdm.tqdm(sentences):
         sentence = "".join(str(token) for token in sentence)
         prediction = _predict_labels(pipeline, sentence, i)
@@ -51,12 +52,12 @@ def ned(
     domain: str = "literary-texts",
 ):
     model_name = MODELS["ned"][domain]
-    logging.info("Loading feature extraction model...")
+    logger.info("Loading feature extraction model...")
     pipeline = transformers.pipeline(
         "feature-extraction", model=model_name, tokenizer=model_name
     )
     identifiers = list()
-    logging.info("Start processing sentences through NEL pipeline...")
+    logger.info("Start processing sentences through NEL pipeline...")
     for sentence_id, sentence in tqdm.tqdm(tokens.groupby("sentence_id")):
         entities = sentence.dropna()
         index_mapping, features = extract_features(pipeline, sentence.loc[:, "word"])
@@ -91,7 +92,7 @@ def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Enti
 def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
     best_candidate = "NIL"
     best_score = 0.0
-    logging.info("Searching in knowledge base for candidates...")
+    logger.info("Searching in knowledge base for candidates...")
     for identifier, values in tqdm.tqdm(kb.items()):
         for i, (index, context, candidate_embedding) in enumerate(
             zip(values["ENTITY_INDICES"], values["CONTEXTS"], values["EMBEDDINGS"])
