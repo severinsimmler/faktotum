@@ -28,3 +28,6 @@ class KnowledgeBase:
     def items(self):
         for key, value in self.data.items():
             yield key, value
+
+    def __len__(self):
+        return len(self.data)
