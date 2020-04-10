@@ -96,7 +96,7 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
     best_candidate = "NIL"
     best_score = 0.0
     logging.info("Searching in knowledge base for candidates...")
-    pbar = tqdm.tqdm(total=len(kb))
+    pbar = None
     for identifier, values in kb.items():
         for i, (index, context, candidate_embedding) in enumerate(
             zip(values["ENTITY_INDICES"], values["CONTEXTS"], values["EMBEDDINGS"])
@@ -115,8 +115,10 @@ def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
                 if score > best_score:
                     best_score = score
                     best_candidate = identifier
+        if not pbar:
+            pbar = tqdm.tqdm(total=len(kb))
         pbar.update()
-    pbar.finish()
+    pbar.close()
     return best_candidate, best_score
 
 
