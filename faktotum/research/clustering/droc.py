@@ -36,9 +36,7 @@ def ward(model_directory, load):
     embeddings = Embeddings(model_directory, "gutenberg", load=load)
     scores = list()
     for i, novel in enumerate(data.values()):
-        X, y, strs = embeddings.vectorize(
-            novel, embeddings.bert, return_str=True
-        )
+        X, y, strs = embeddings.vectorize(novel, embeddings.bert, return_str=True)
         print(X.shape)
         clustering = Clustering("ward", X, y)
         score = clustering.evaluate(i=i, strs=strs)

@@ -101,17 +101,25 @@ class Embeddings:
 
         if load in {"lstm", "all"}:
             if corpus == "gutenberg":
-                path = str(Path(model_directory, "similarity-lstm-droc", "best-model.pt"))
+                path = str(
+                    Path(model_directory, "similarity-lstm-droc", "best-model.pt")
+                )
             else:
-                path = str(Path(model_directory, "similarity-lstm-smartdata", "best-model.pt"))
+                path = str(
+                    Path(model_directory, "similarity-lstm-smartdata", "best-model.pt")
+                )
             model = EntitySimilarityLearner.load(path)
             self.bert = model.source_embeddings
 
         if load in {"gru", "all"}:
             if corpus == "gutenberg":
-                path = str(Path(model_directory, "similarity-gru-droc", "best-model.pt"))
+                path = str(
+                    Path(model_directory, "similarity-gru-droc", "best-model.pt")
+                )
             else:
-                path = str(Path(model_directory, "similarity-gru-smartdata", "best-model.pt"))
+                path = str(
+                    Path(model_directory, "similarity-gru-smartdata", "best-model.pt")
+                )
             logging.info(f"Loading {path}...")
             model = EntitySimilarityLearner.load(path)
             self.bert = model.source_embeddings

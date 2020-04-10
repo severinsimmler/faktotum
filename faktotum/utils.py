@@ -57,7 +57,7 @@ def sentencize(text: str) -> Generator[str, None, None]:
             yield sentence
 
 
-def pool_entity(indices, features):
+def pool_tokens(indices, features):
     entity = features[indices[0]]
     for index in indices[1:]:
         entity += features[index]
@@ -69,7 +69,9 @@ def extract_features(pipeline: Pipeline, sentence: List[str]) -> Entities:
     text = " ".join(sentence)
     index = dict()
     for i, token in enumerate(sentence):
-        subtokens = [t for t in pipeline.tokenizer.tokenize(token) if not t.startswith("##")]
+        subtokens = [
+            t for t in pipeline.tokenizer.tokenize(token) if not t.startswith("##")
+        ]
         index[i] = subtokens
     for token, vector in zip(
         pipeline.tokenizer.tokenize(text), np.squeeze(pipeline(text))
@@ -83,5 +85,5 @@ def align_index(original_indices, subtoken_indices):
     aligned_indices = list()
     for i in original_indices:
         for j, subtokens in enumerate(subtoken_indices[i]):
-            aligned_indices.append(i+j)
+            aligned_indices.append(i + j)
     return aligned_indices

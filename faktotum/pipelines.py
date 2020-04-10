@@ -3,10 +3,21 @@ import pandas as pd
 import tqdm
 import transformers
 
-from faktotum.utils import sentencize, MODELS, pool_entity, extract_features, align_index
+from faktotum.utils import (
+    sentencize,
+    MODELS,
+    pool_tokens,
+    extract_features,
+    align_index,
+)
 from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, Pipeline, TaggedTokens
 from strsimpy.jaro_winkler import JaroWinkler
+import logging
+
+
+logging.basicConfig(format="%(asctime)s %(level)s: %(message)s", level=logging.INFO)
+
 
 JARO_WINKLER = JaroWinkler()
 
@@ -18,11 +29,13 @@ def nel(text: str, kb: KnowledgeBase, domain: str = "literary-texts"):
 
 def ner(text: str, domain: str = "literary-texts"):
     model_name = MODELS["ner"][domain]
+    logging.info("Loading named entity recognition model...")
     pipeline = transformers.pipeline(
         "ner", model=model_name, tokenizer=model_name, ignore_labels=[]
     )
     sentences = [(i, sentence) for i, sentence in enumerate(sentencize(text))]
     predictions = list()
+    logging.info("Start processing sentences through NER pipeline...")
     for i, sentence in tqdm.tqdm(sentences):
         sentence = "".join(str(token) for token in sentence)
         prediction = _predict_labels(pipeline, sentence, i)
@@ -30,20 +43,29 @@ def ner(text: str, domain: str = "literary-texts"):
     return pd.DataFrame(predictions).loc[:, ["sentence_id", "word", "entity"]]
 
 
-def ned(tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-texts"):
+def ned(
+    tokens: TaggedTokens,
+    kb: KnowledgeBase = None,
+    similarity_threshold: flaot = 0.94,
+    domain: str = "literary-texts",
+):
     model_name = MODELS["ned"][domain]
+    logging.info("Loading feature extraction model...")
     pipeline = transformers.pipeline(
         "feature-extraction", model=model_name, tokenizer=model_name
     )
     identifiers = list()
-    for sentence_id, sentence in tokens.groupby("sentence_id"):
+    logging.info("Start processing sentences through NEL pipeline...")
+    for sentence_id, sentence in tqdm.tqdm(tokens.groupby("sentence_id")):
         entities = sentence.dropna()
         index_mapping, features = extract_features(pipeline, sentence.loc[:, "word"])
-        for indices, mention in _group_mentions(entities):
-            aligned_indices = align_index(mention, index_mapping)
-            vector = pool_entity(aligned_indices, features)
-            best_candidate, score = _get_best_candidate(vector, kb)
-            identifiers.append((indices, best_candidate))
+        for original_index, index, mention in _group_mentions(entities):
+            aligned_index = align_index(index, index_mapping)
+            mention_embedding = pool_tokens(aligned_index, features)
+            best_candidate, score = _get_best_candidate(
+                mention, mention_embedding, kb, similarity_threshold
+            )
+            identifiers.append((original_index, best_candidate))
     tokens["entity_id"] = np.nan
     for mention, candidate in identifiers:
         tokens.iloc[mention, -1] = candidate
@@ -65,38 +87,46 @@ def _predict_labels(pipeline: Pipeline, sentence: str, sentence_id: int) -> Enti
     return entities
 
 
-def _get_best_candidate(vector, kb):
+def _get_best_candidate(mention, mention_embedding, kb, similarity_threshold):
     best_candidate = "NIL"
     best_score = 0.0
-    for identifier, values in kb.items():
-        for candidate in values["EMBEDDINGS"]:
-            score = _cosine_similarity(vector, candidate)
-            if score > best_score:
-                best_score = score
-                best_candidate = identifier
+    logging.info("Searching in knowledge base for candidates...")
+    for identifier, values in tqdm.tqdm(kb.items()):
+        for index, context, candidate_embedding in zip(
+            values["ENTITY_INDICES"], values["CONTEXTS"], values["EMBEDDINGS"]
+        ):
+            candidate = " ".join(context[i] for i in index)
+            if JARO_WINKLER.similarity(mention, candidate) >= similarity_threshold:
+                score = _cosine_similarity(mention_embedding, candidate_embedding)
+                if score > best_score:
+                    best_score = score
+                    best_candidate = identifier
     return best_candidate, best_score
 
 
 def _cosine_similarity(x, y):
-    return np.dot(x, y)/(np.linalg.norm(x)*np.linalg.norm(y))
+    return np.dot(x, y) / (np.linalg.norm(x) * np.linalg.norm(y))
 
 
 def _group_mentions(entities):
     mention = list()
     indices = list()
-    rows = entities.reset_index().iterrows()
-    for index, (row, token) in zip(entities.index, rows):
+    original_indices = list()
+    tokens = entities.reset_index().iterrows()
+    for i, (j, token) in zip(entities.index, tokens):
         if token["entity"].startswith("B"):
             if mention:
-                yield indices, mention
+                yield original_indices, indices, " ".join(mention)
                 mention = list()
                 indices = list()
-            mention.append(row)
-            indices.append(index)
+                original_indices = list()
+            indices.append(j)
+            original_indices.append(i)
+            mention.append(token["word"])
         elif token["entity"].startswith("I"):
-            if mention:
-                if mention[-1] == row - 1:
-                    mention.append(row)
-                    indices.append(index)
+            if mention[-1] == j - 1:
+                indices.append(j)
+                original_indices.append(i)
+                mention.append(token["word"])
     if mention:
-        yield indices, mention
+        yield original_indices, indices, " ".join(mention)
