@@ -28,7 +28,7 @@ from strsimpy.jaro_winkler import JaroWinkler
 random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
-m = EntitySimilarityLearner.load("/mnt/data/users/simmler/model-zoo/similarity-gru-smartdata")
+m = EntitySimilarityLearner.load("/mnt/data/users/simmler/model-zoo/similarity-gru-smartdata/best-model.pt")
 EMBEDDINGS = m.source_embeddings
 
 class EntityLinker:
