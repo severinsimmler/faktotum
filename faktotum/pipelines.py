@@ -144,7 +144,7 @@ def _group_mentions(entities):
             original_indices.append(i)
             mention.append(token["word"])
         elif token["entity"].startswith("I"):
-            if mention[-1] == j - 1:
+            if indices[-1] == j - 1:
                 indices.append(j)
                 original_indices.append(i)
                 mention.append(token["word"])
