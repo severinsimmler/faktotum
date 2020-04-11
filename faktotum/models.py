@@ -19,7 +19,7 @@ class NamedEntityRecognition:
         self._press = MODEL_NAMES["ner"]["press-texts"]
 
     def __getitem__(self, domain):
-        if doman == "literary-texts":
+        if domain == "literary-texts":
             if not hasattr(self, "literary_pipeline"):
                 logging.info("Loading named entity recognition model...")
                 self.literary_pipeline = transformers.pipeline("ner", model=self._literary, tokenizer=self._literary, ignore_labels=[])
@@ -36,7 +36,7 @@ class NamedEntityDisambiguation:
         self._press = MODEL_NAMES["ned"]["press-texts"]
 
     def __getitem__(self, domain):
-        if doman == "literary-texts":
+        if domain == "literary-texts":
             if not hasattr(self, "literary_pipeline"):
                 logging.info("Loading named entity disambiguation model...")
                 self.literary_pipeline = transformers.pipeline("feature-extraction", model=self._literary, tokenizer=self._literary)
