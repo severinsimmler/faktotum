@@ -32,7 +32,7 @@ def nel(
 
 
 def ner(text: str, domain: str = "literary-texts"):
-    pipeline = NER_MODEL[domain]
+    pipeline = NER_MODELS[domain]
     sentences = [(i, sentence) for i, sentence in enumerate(sentencize(text))]
     predictions = list()
     logging.info("Processing sentences through NER pipeline...")
@@ -46,7 +46,7 @@ def ner(text: str, domain: str = "literary-texts"):
 def ned(
     tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-texts",
 ):
-    pipeline = NED_MODEL[domain]
+    pipeline = NED_MODELS[domain]
     identifiers = list()
     logging.info("Processing sentences through NED pipeline...")
     for sentence_id, sentence in tokens.groupby("sentence_id"):
