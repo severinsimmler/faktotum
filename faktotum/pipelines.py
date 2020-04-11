@@ -6,10 +6,10 @@ import tqdm
 import transformers
 from strsimpy.jaro_winkler import JaroWinkler
 
+from faktotum.models import NamedEntityRecognition, NamedEntityDisambiguation
 from faktotum.kb import KnowledgeBase
 from faktotum.typing import Entities, Pipeline, TaggedTokens
 from faktotum.utils import (
-    MODELS,
     align_index,
     extract_features,
     pool_tokens,
@@ -19,6 +19,8 @@ from faktotum.utils import (
 logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
 
 
+NER_MODELS = NamedEntityRecognition()
+NED_MODELS = NamedEntityDisambiguation()
 JARO_WINKLER = JaroWinkler()
 
 
@@ -30,11 +32,7 @@ def nel(
 
 
 def ner(text: str, domain: str = "literary-texts"):
-    model_name = MODELS["ner"][domain]
-    logging.info("Loading named entity recognition model...")
-    pipeline = transformers.pipeline(
-        "ner", model=model_name, tokenizer=model_name, ignore_labels=[]
-    )
+    pipeline = NER_MODEL[domain]
     sentences = [(i, sentence) for i, sentence in enumerate(sentencize(text))]
     predictions = list()
     logging.info("Processing sentences through NER pipeline...")
@@ -48,13 +46,9 @@ def ner(text: str, domain: str = "literary-texts"):
 def ned(
     tokens: TaggedTokens, kb: KnowledgeBase = None, domain: str = "literary-texts",
 ):
-    model_name = MODELS["ned"][domain]
-    logging.info("Loading feature extraction model...")
-    pipeline = transformers.pipeline(
-        "feature-extraction", model=model_name, tokenizer=model_name
-    )
+    pipeline = NED_MODEL[domain]
     identifiers = list()
-    logging.info("Processing sentences through NEL pipeline...")
+    logging.info("Processing sentences through NED pipeline...")
     for sentence_id, sentence in tokens.groupby("sentence_id"):
         entities = sentence.dropna()
         index_mapping, features = extract_features(pipeline, sentence.loc[:, "word"])

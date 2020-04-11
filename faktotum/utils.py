@@ -14,16 +14,6 @@ import syntok.tokenizer
 from faktotum.typing import Entities, KnowledgeBase, Pipeline, TaggedTokens
 
 TOKENIZER = syntok.tokenizer.Tokenizer()
-MODELS = {
-    "ner": {
-        "literary-texts": "severinsimmler/literary-german-bert",
-        "press-texts": "severinsimmler/german-press-bert",
-    },
-    "ned": {
-        "literary-texts": "severinsimmler/literary-german-bert",
-        "press-texts": "severinsimmler/bert-adapted-german-press",
-    },
-}
 
 
 def tokenize(text: str) -> Generator[str, None, None]:
