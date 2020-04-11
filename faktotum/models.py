@@ -1,5 +1,5 @@
 import transformers
-
+import logging
 
 MODEL_NAMES = {
     "ner": {
