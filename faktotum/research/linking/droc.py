@@ -266,6 +266,7 @@ class EntityLinker:
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
+            break
         with open("vanilla.json", "w", encoding="utf-8") as f:
             json.dump(predictions, f, ensure_ascii=False, indent=4)
         return pd.DataFrame(stats).describe()
