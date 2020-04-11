@@ -14,7 +14,7 @@ MODEL_NAMES = {
 
 
 class NamedEntityRecognition:
-    def __init__():
+    def __init__(self):
         self._literary = MODEL_NAMES["ner"]["literary-texts"]
         self._press = MODEL_NAMES["ner"]["press-texts"]
 
@@ -31,7 +31,7 @@ class NamedEntityRecognition:
             return self.press_pipeline
 
 class NamedEntityDisambiguation:
-    def __init__():
+    def __init__(self):
         self._literary = MODEL_NAMES["ned"]["literary-texts"]
         self._press = MODEL_NAMES["ned"]["press-texts"]
 
