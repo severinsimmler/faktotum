@@ -1,3 +1,31 @@
+"""
+faktotum.pipelines
+~~~~~~~~~~~~~~~~~~
+
+This module provides high-level functions to process text data through multiple data pipelines.
+
+
+```
+>>> import faktotum
+>>> text = "Er hieß Eduard. Ihr Name war Klara, manchmal auch Klärchen."
+>>> faktotum.ner(text, domain="literary-texts")
+    sentence_id      word entity
+0             0        Er    NaN
+1             0      hieß    NaN
+2             0    Eduard  B-PER
+3             0         .    NaN
+4             1       Ihr    NaN
+5             1      Name    NaN
+6             1       war    NaN
+7             1     Klara  B-PER
+8             1         ,    NaN
+9             1  manchmal    NaN
+10            1      auch    NaN
+11            1  Klärchen  B-PER
+12            1         .    NaN
+```
+"""
+
 import logging
 
 import numpy as np

@@ -36,3 +36,12 @@ def smartdata():
                     token[2] = "NIL"
                 token[1] = tag
     e.similarities()
+
+
+if __name__ == "__main__":
+    import sys
+
+    if sys.argv[1] == "droc":
+        droc()
+    else:
+        smartdata()
