@@ -16,7 +16,7 @@ def droc():
                     if tag == "O":
                         token[2] = "-"
                     if tag != "O" and token[2] == "-":
-                        token[2] = "NIL"
+                        tag = "O"
                     token[1] = tag
     e.similarities()
 
@@ -33,7 +33,7 @@ def smartdata():
                 if tag == "O":
                     token[2] = "-"
                 if tag != "O" and token[2] == "-":
-                    token[2] = "NIL"
+                    tag = "O"
                 token[1] = tag
     e.similarities()
 
