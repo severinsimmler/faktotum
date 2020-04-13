@@ -3,7 +3,6 @@ from faktotum.research.linking.droc import EntityLinker as DROC
 from faktotum.research.linking.smartdata import EntityLinker as SMARTDATA
 
 
-
 def droc():
     e = DROC()
 
@@ -20,6 +19,7 @@ def droc():
                         token[2] = "NIL"
                     token[1] = tag
     e.similarities()
+
 
 def smartdata():
     e = SMARTDATA("/mnt/data/users/simmler/kb")

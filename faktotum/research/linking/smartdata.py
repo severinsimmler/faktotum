@@ -146,11 +146,21 @@ class EntityLinker:
                 for key, value in kb.items():
                     for mention in value["MENTIONS"]:
                         score = self._string_similarity(mention, text)
-                        TOP3[f"pred: {mention} ({key}) vs. gold: {text} ({identifier})"] = float(score) 
+                        TOP3[
+                            f"pred: {mention} ({key}) vs. gold: {text} ({identifier})"
+                        ] = float(score)
                         if score > max_score:
                             max_score = score
                             best_identifier = key
-                prediction.append({"pred": best_identifier, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
+                prediction.append(
+                    {
+                        "pred": best_identifier,
+                        "gold": identifier,
+                        "top3": [
+                            {key: value} for key, value in Counter(TOP3).most_common(5)
+                        ],
+                    }
+                )
                 if identifier == best_identifier:
                     tp += 1
                 else:
@@ -318,15 +328,28 @@ class EntityLinker:
                                     1, -1
                                 )
 
-                            score = cosine_similarity(mention_vector, candidate_vector)[0][0]
-                            TOP3[f"pred: {context} ({candidate}) vs. gold: {mention} ({identifier})"] = float(score) 
+                            score = cosine_similarity(mention_vector, candidate_vector)[
+                                0
+                            ][0]
+                            TOP3[
+                                f"pred: {context} ({candidate}) vs. gold: {mention} ({identifier})"
+                            ] = float(score)
                             if score > max_score:
                                 max_score = score
                                 best_candidate = candidate
                                 best_context = context
                                 best_sent = text
 
-                    prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
+                    prediction.append(
+                        {
+                            "pred": best_candidate,
+                            "gold": identifier,
+                            "top3": [
+                                {key: value}
+                                for key, value in Counter(TOP3).most_common(5)
+                            ],
+                        }
+                    )
                     if best_candidate == identifier:
                         tp += 1
                         tps.append(

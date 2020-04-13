@@ -218,14 +218,25 @@ class EntityLinker:
                                     score = cosine_similarity(
                                         mention_vector, candidate_vector
                                     )
-                                    TOP3[f"pred: {mention} ({person}) vs. gold: {name} ({identifier})"] = float(score[0][0]) 
+                                    TOP3[
+                                        f"pred: {mention} ({person}) vs. gold: {name} ({identifier})"
+                                    ] = float(score[0][0])
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
                                         best_mention = mention
                                         best_sent = context
 
-                        prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
+                        prediction.append(
+                            {
+                                "pred": best_candidate,
+                                "gold": identifier,
+                                "top3": [
+                                    {key: value}
+                                    for key, value in Counter(TOP3).most_common(5)
+                                ],
+                            }
+                        )
                         if best_candidate == identifier:
                             tp += 1
                             tps.append(
@@ -266,7 +277,6 @@ class EntityLinker:
             stats.append(
                 {"accuracy": self.accuracy(tp, fp), "precision": self.precision(tp, fp)}
             )
-            break
         with open("vanilla.json", "w", encoding="utf-8") as f:
             json.dump(predictions, f, ensure_ascii=False, indent=4)
         return pd.DataFrame(stats).describe()
@@ -312,14 +322,25 @@ class EntityLinker:
                             ):
                                 if context != sentence:
                                     score = JARO_WINKLER.similarity(name, mention)
-                                    TOP3[f"pred: {mention} ({person}) vs. gold: {name} ({identifier})"] = float(score) 
+                                    TOP3[
+                                        f"pred: {mention} ({person}) vs. gold: {name} ({identifier})"
+                                    ] = float(score)
                                     if score > max_score:
                                         max_score = score
                                         best_candidate = person
                                         best_mention = mention
                                         best_sent = context
 
-                        prediction.append({"pred": best_candidate, "gold": identifier, "top3": [{key: value} for key, value in Counter(TOP3).most_common(5)]})
+                        prediction.append(
+                            {
+                                "pred": best_candidate,
+                                "gold": identifier,
+                                "top3": [
+                                    {key: value}
+                                    for key, value in Counter(TOP3).most_common(5)
+                                ],
+                            }
+                        )
                         if best_candidate == identifier:
                             tp += 1
                             tps.append(

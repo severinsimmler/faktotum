@@ -1,20 +1,34 @@
-class KnowledgeBase:
-    def __init__(self, data, domain):
-        self.data = data
-        for key, value in self.data.items():
-            for entity_indices, context in zip(
-                value["ENTITY_INDICES"], value["CONTEXTS"]
-            ):
-                # Lazy load embeddings on inference
-                embeddings = None
-                if "EMBEDDINGS" not in self.data[key]:
-                    self.data[key]["EMBEDDINGS"] = [embeddings]
-                else:
-                    self.data[key]["EMBEDDINGS"].append(embeddings)
+"""
+faktotum.kb
+~~~~~~~~~~~
 
-    def items(self):
-        for key, value in self.data.items():
-            yield key, value
+This module implements a basic class for knowledge bases.
+"""
+
+import logging
+from pathlib import Path
+from typing import Union
+
+from faktotum.typing import KnowledgeBaseDump
+
+
+class KnowledgeBase:
+    def __init__(self, data: KnowledgeBaseDump):
+        self.data = data
+        for identifier, knowledge in self.data.items():
+            for context in knowledge["CONTEXTS"]:
+                if "EMBEDDINGS" not in self.data[identifier]:
+                    self.data[identifier]["EMBEDDINGS"] = [None]
+                else:
+                    self.data[identifier]["EMBEDDINGS"].append(None)
 
     def __len__(self):
         return len(self.data)
+
+    @classmethod
+    def from_dump(cls, filepath: Union[str, Path]):
+        filepath = Path(filepath)
+        logging.info(f"Loading knowledge base from {filepath.name}...")
+        with filepath.open("r", encoding="utf-8") as dump:
+            data = json.load(dump)
+            return cls(data)
