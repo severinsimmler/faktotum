@@ -23,9 +23,6 @@ from faktotum.utils import (
     sentencize,
 )
 
-logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s", level=logging.INFO)
-
-
 NER_MODELS = NamedEntityRecognition()
 NED_MODELS = NamedEntityDisambiguation()
 JARO_WINKLER = JaroWinkler()

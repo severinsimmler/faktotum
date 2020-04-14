@@ -36,7 +36,7 @@ class EntityLinker:
             for key, value in data.items():
                 self.dataset[f"{i}_{key}"] = value
         self.test = dict()
-        for i, data in enumerate([test, self.dev]):
+        for i, data in enumerate([test, self.dev, self.train]):
             for key, value in data.items():
                 self.test[f"{i}_{key}"] = value
 

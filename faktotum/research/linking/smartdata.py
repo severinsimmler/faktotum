@@ -29,7 +29,7 @@ random.seed(23)
 
 JARO_WINKLER = JaroWinkler()
 EMBEDDING = BertEmbeddings(
-    "/mnt/data/users/simmler/model-zoo/bert-multi-presse-adapted"
+    "/mnt/data/users/simmler/model-zoo/entity-embeddings-smartdata"
 )
 
 
@@ -40,7 +40,7 @@ class EntityLinker:
         module_folder = Path(__file__).resolve().parent.parent
         self.corpus_folder = Path(module_folder, "data", "smartdata", "linking")
         self.train = list(self._load_corpus("train"))
-        self.test = list(self._load_corpus("test"))
+        self.test = list(self._load_corpus("test")) + self.train
         self.dataset = self.train + self.test
         self.humans = json.loads(
             Path(kb_dir, "humans.json").read_text(encoding="utf-8")
