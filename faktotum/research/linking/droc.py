@@ -379,7 +379,7 @@ class EntityLinker:
                         except Exception:
                             pass
                             print("oops")
-                            
+
             predictions[i] = prediction
             with open(f"droc-{i}.json", "w", encoding="utf-8") as f:
                 json.dump({"tps": tps, "fps": fps}, f, ensure_ascii=False, indent=4)

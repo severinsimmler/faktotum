@@ -11,7 +11,6 @@ import transformers
 
 from faktotum.typing import Pipeline
 
-
 MODEL_NAMES = {
     "ner": {
         "literary-texts": "severinsimmler/literary-german-bert",
