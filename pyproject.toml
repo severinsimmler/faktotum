@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "faktotum"
-version = "0.1.0"
+version = "1.0.0"
 description = "Extracting information from unstructured text."
 authors = ["Severin Simmler <severin.simmler@stud-mail.uni-wuerzburg.de>"]
 license = "MIT"
