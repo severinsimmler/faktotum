@@ -31,7 +31,7 @@ You can use pre-trained models for both literary texts (`literary-texts`) and pr
 ```
 
 ### Named Entity Linking
-You have provide a knowledge base in a JSON file like:
+You have to provide a knowledge base in a JSON file like:
 
 ```json
 {
