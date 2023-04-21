@@ -17,7 +17,7 @@ tqdm = "^4.41.1"
 torch = "^1.4.0"
 seqeval = { version = "^0.0.12", optional = true }
 sklearn-crfsuite = { version = "^0.3.6", optional = true }
-joblib = { version = "^0.14.1", optional = true }
+joblib = { version = ">=0.14.1,<1.2.0", optional = true }
 tensorboard = { version = "^2.1.0", optional = true }
 statsmodels = { version = "^0.11.0", optional = true }
 flair = { version = "^0.4.5", optional = true }
